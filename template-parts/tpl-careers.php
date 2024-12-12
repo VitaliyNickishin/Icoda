@@ -89,7 +89,7 @@ get_header();
                             <?php endif; ?>
                         </ul>
                         <p class="h5"><?php echo __('Please email your CV to', 'icoda'); ?></p>
-                        <a target="_blank" href="mailto:job@icoda.io" class="btn btn-blue ico-btn ico-mail"><span></span>job@icoda.io</a>
+                        <a target="_blank" href="mailto:post@icoda.io" class="btn btn-blue ico-btn ico-mail"><span></span>post@icoda.io</a>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-6">
@@ -115,7 +115,7 @@ get_header();
                                     <input type="text" name="name" class="form-control req" placeholder="<?php echo __('Your name', 'icoda'); ?>" required>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <input type="text" name="telegram" class="form-control req" placeholder="<?php echo __('WhatsApp / Telegram', 'icoda'); ?>" required>
+                                    <input type="text" name="telegram" class="form-control req" placeholder="<?php echo __('WhatsApp / Telegram / Skype', 'icoda'); ?>" required>
                                 </div>
                                 <div class="col-12">
                                     <input type="email" name="email" class="form-control req" placeholder="<?php echo __('Email', 'icoda'); ?>" required>

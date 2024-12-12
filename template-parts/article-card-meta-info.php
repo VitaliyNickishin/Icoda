@@ -1,5 +1,5 @@
 <?php
-$post_id = get_the_ID();
+$post_id = !empty($args['top_post_id']) ? $args['top_post_id'] : get_the_ID();
 $current_shares = get_post_meta($post_id, 'shares_count', true);
 $current_views = get_post_meta($post_id, 'views_count', true);
 if (empty($current_shares)) {

@@ -14,14 +14,14 @@
             </div>
             <div class="col-md-12 col-lg-6">
                 <div class="wr-form">
-                    <form class="form-default form-default-desctop form-with-captcha" action="submit.php" method="post">
+                    <form class="form-default form-default-desctop <?php /* ?>form-with-captcha<?php */ ?>" action="submit.php" method="post">
                         <input type="hidden" name="lang-source" value="<?php echo ICL_LANGUAGE_CODE; ?>" />
                         <div class="form-row">
                             <div class="col-12 col-md-6">
                                 <input type="text" name="name" class="form-control req" placeholder="<?php _e( 'Your name', 'icoda' ); ?>" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <input type="text" name="telegram" class="form-control req" placeholder="<?php _e( 'WhatsApp / Telegram', 'icoda' ); ?>" required>
+                                <input type="text" name="telegram" class="form-control req" placeholder="<?php _e( 'WhatsApp / Telegram / Skype', 'icoda' ); ?>" required>
                             </div>
                             <div class="col-12">
                                 <input type="email" name="email" class="form-control req" placeholder="<?php _e( 'Email', 'icoda' ); ?>" required>
@@ -29,9 +29,11 @@
                             <div class="col-12">
                                 <textarea name="message" class="form-control" placeholder="<?php _e( 'Text message', 'icoda' ); ?>"></textarea>
                             </div>
+                            <?php /* ?>
                             <div class="col-12">
-                            <div id="icoda-recaptcha" class="g-recaptcha"></div>
+                                <div id="icoda-recaptcha" class="g-recaptcha"></div>
                             </div>
+                            <?php */ ?>
                             <div class="col-12">
                                 <div class="wr-btn">
                                     <button type="submit" class="btn btn-blue"><?php _e( 'Apply now', 'icoda' ); ?></button>

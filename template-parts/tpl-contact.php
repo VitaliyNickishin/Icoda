@@ -51,7 +51,7 @@ $front_page_id = get_option('page_on_front');
                                 <input type="text" name="name" class="form-control req" placeholder="<?php echo __('Your name', 'icoda'); ?>" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <input type="text" name="telegram" class="form-control req" placeholder="<?php echo __('WhatsApp / Telegram', 'icoda'); ?>" required>
+                                <input type="text" name="telegram" class="form-control req" placeholder="<?php echo __('WhatsApp / Telegram / Skype', 'icoda'); ?>" required>
                             </div>
                             <div class="col-12">
                                 <input type="email" name="email" class="form-control req" placeholder="<?php echo __('Email', 'icoda'); ?>" required>

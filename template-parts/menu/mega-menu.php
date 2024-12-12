@@ -2,6 +2,7 @@
 
 $header_one = icoda_get_items_tree_menu('header-one');
 $header_two = icoda_get_items_tree_menu('header-two');
+$header_two_two = icoda_get_items_tree_menu('header-two-two');
 $header_three_one = icoda_get_items_tree_menu('header-three-one');
 $header_three_two = icoda_get_items_tree_menu('header-three-two');
 $header_three_three = icoda_get_items_tree_menu('header-three-three');
@@ -14,205 +15,263 @@ $header_five = icoda_get_items_tree_menu('header-five');
     <div class="col-12">
       <div class="mega-menu-inner">
         <div class="col-one menu-wrap">
-          <ul>
 
-            <?php foreach ($header_one[0]->childs as $key => $item) : ?>
+          <?php if(!empty($header_one) && !empty($header_one[0])) : ?>
 
-              <li class="menu-item menu-item-has-children">
-                <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
-                <i class="custom-arrow" data-action="arrow"></i>
+            <ul>
 
-                <?php if (isset($header_one[$item['ID']]) && $header_one[$item['ID']]) : ?>
+              <?php foreach ($header_one[0]->childs as $key => $item) : ?>
 
-                  <ul class="sub-menu">
+                <li class="menu-item menu-item-has-children">
+                  <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                  <i class="custom-arrow" data-action="arrow"></i>
 
-                    <?php foreach ($header_one[$item['ID']]->childs as $item2) : ?>
-                      <?php if (trim($item2['title']) !== '') : ?>
+                  <?php if (isset($header_one[$item['ID']]) && $header_one[$item['ID']]) : ?>
 
-                        <li class="menu-item">
-                          <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
-                        </li>
+                    <ul class="sub-menu">
 
-                      <?php endif; ?>
-                    <?php endforeach; ?>
-                  </ul>
+                      <?php foreach ($header_one[$item['ID']]->childs as $item2) : ?>
+                        <?php if (trim($item2['title']) !== '') : ?>
+
+                          <li class="menu-item">
+                            <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
+                          </li>
+
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                    </ul>
 
 
-                <?php endif; ?>
+                  <?php endif; ?>
 
-              </li>
-            <?php endforeach; ?>
+                </li>
+              <?php endforeach; ?>
 
-          </ul>
+            </ul>
+
+          <?php endif; ?>
         </div>
         <div class="col-two menu-wrap">
-          <ul>
+          <?php if(!empty($header_two_two) && !empty($header_two_two[0])) : ?>
 
-            <?php foreach ($header_two[0]->childs as $key => $item) : ?>
+            <ul>
 
-              <li class="menu-item menu-item-has-children">
-                <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
-                <i class="custom-arrow" data-action="arrow"></i>
+              <?php foreach ($header_two_two[0]->childs as $key => $item) : ?>
 
-                <?php if (isset($header_two[$item['ID']]) && $header_two[$item['ID']]) : ?>
+                <li class="menu-item menu-item-has-children">
+                  <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                  <i class="custom-arrow" data-action="arrow"></i>
 
-                  <ul class="sub-menu">
+                  <?php if (isset($header_two_two[$item['ID']]) && $header_two_two[$item['ID']]) : ?>
 
-                    <?php foreach ($header_two[$item['ID']]->childs as $item2) : ?>
-                      <?php if (trim($item2['title']) !== '') : ?>
+                    <ul class="sub-menu">
 
-                        <li class="menu-item">
-                          <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
-                        </li>
+                      <?php foreach ($header_two_two[$item['ID']]->childs as $item2) : ?>
+                        <?php if (trim($item2['title']) !== '') : ?>
 
-                      <?php endif; ?>
-                    <?php endforeach; ?>
-                  </ul>
+                          <li class="menu-item">
+                            <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
+                          </li>
+
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                    </ul>
 
 
-                <?php endif; ?>
+                  <?php endif; ?>
 
-              </li>
-            <?php endforeach; ?>
-
-          </ul>
+                </li>
+              <?php endforeach; ?>
+            </ul>
+          <?php endif; ?>
         </div>
         <div class="col-three menu-wrap">
-          <ul>
 
-            <?php foreach ($header_three_one[0]->childs as $key => $item) : ?>
+          <?php if(!empty($header_two)  && !empty($header_two[0])) : ?>
+            <ul>
 
-              <li class="menu-item menu-item-has-children">
-                <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
-                <i class="custom-arrow" data-action="arrow"></i>
+              <?php foreach ($header_two[0]->childs as $key => $item) : ?>
 
-                <?php if (isset($header_three_one[$item['ID']]) && $header_three_one[$item['ID']]) : ?>
+                <li class="menu-item menu-item-has-children">
+                  <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                  <i class="custom-arrow" data-action="arrow"></i>
 
-                  <ul class="sub-menu">
+                  <?php if (isset($header_two[$item['ID']]) && $header_two[$item['ID']]) : ?>
 
-                    <?php foreach ($header_three_one[$item['ID']]->childs as $item2) : ?>
-                      <?php if (trim($item2['title']) !== '') : ?>
+                    <ul class="sub-menu">
 
-                        <li class="menu-item">
-                          <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
-                        </li>
+                      <?php foreach ($header_two[$item['ID']]->childs as $item2) : ?>
+                        <?php if (trim($item2['title']) !== '') : ?>
 
-                      <?php endif; ?>
-                    <?php endforeach; ?>
-                  </ul>
+                          <li class="menu-item">
+                            <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
+                          </li>
+
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                    </ul>
 
 
-                <?php endif; ?>
+                  <?php endif; ?>
 
-              </li>
-            <?php endforeach; ?>
+                </li>
+              <?php endforeach; ?>
 
-          </ul>
+            </ul>
+          <?php endif; ?>
 
-          <ul>
-            <?php foreach ($header_three_two[0]->childs as $key => $item) : ?>
-              <li class="menu-item">
-                <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
-                <i class="custom-arrow" data-action="arrow"></i>
-              </li>
-            <?php endforeach; ?>
-          </ul>
+          <?php if(!empty($header_three_one)  && !empty($header_three_one[0])) : ?>
+            <ul>
+
+              <?php foreach ($header_three_one[0]->childs as $key => $item) : ?>
+
+                <li class="menu-item menu-item-has-children">
+                  <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                  <i class="custom-arrow" data-action="arrow"></i>
+
+                  <?php if (isset($header_three_one[$item['ID']]) && $header_three_one[$item['ID']]) : ?>
+
+                    <ul class="sub-menu">
+
+                      <?php foreach ($header_three_one[$item['ID']]->childs as $item2) : ?>
+                        <?php if (trim($item2['title']) !== '') : ?>
+
+                          <li class="menu-item">
+                            <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
+                          </li>
+
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                    </ul>
+
+
+                  <?php endif; ?>
+
+                </li>
+              <?php endforeach; ?>
+
+            </ul>
+
+          <?php endif; ?>
+
+          <?php if(!empty($header_three_two)  && !empty($header_three_two[0])) : ?>
+            <ul>
+              <?php if (!empty($header_three_two[0]->childs)) : ?>
+                <?php foreach ($header_three_two[0]->childs as $key => $item) : ?>
+                  <li class="menu-item">
+                    <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                    <i class="custom-arrow" data-action="arrow"></i>
+                  </li>
+                <?php endforeach; ?>
+              <?php endif; ?>
+            </ul>
+          <?php endif; ?>
+
         </div>
         <div class="col-four menu-wrap">
-          <ul>
 
-            <?php foreach ($header_four[0]->childs as $key => $item) : ?>
+          <?php if(!empty($header_four)  && !empty($header_four[0])) : ?>
+            <ul>
 
-              <li class="menu-item menu-item-has-children">
-                <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
-                <i class="custom-arrow" data-action="arrow"></i>
+              <?php foreach ($header_four[0]->childs as $key => $item) : ?>
 
-                <?php if (isset($header_four[$item['ID']]) && $header_four[$item['ID']]) : ?>
+                <li class="menu-item menu-item-has-children">
+                  <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                  <i class="custom-arrow" data-action="arrow"></i>
 
-                  <ul class="sub-menu">
+                  <?php if (isset($header_four[$item['ID']]) && $header_four[$item['ID']]) : ?>
 
-                    <?php foreach ($header_four[$item['ID']]->childs as $item2) : ?>
-                      <?php if (trim($item2['title']) !== '') : ?>
+                    <ul class="sub-menu">
 
-                        <li class="menu-item">
-                          <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
-                        </li>
+                      <?php foreach ($header_four[$item['ID']]->childs as $item2) : ?>
+                        <?php if (trim($item2['title']) !== '') : ?>
 
-                      <?php endif; ?>
-                    <?php endforeach; ?>
-                  </ul>
+                          <li class="menu-item">
+                            <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
+                          </li>
 
-
-                <?php endif; ?>
-
-              </li>
-            <?php endforeach; ?>
-
-          </ul>
-
-          <ul>
-
-            <?php foreach ($header_three_three[0]->childs as $key => $item) : ?>
-
-              <li class="menu-item menu-item-has-children">
-                <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
-                <i class="custom-arrow" data-action="arrow"></i>
-
-                <?php if (isset($header_three_three[$item['ID']]) && $header_three_three[$item['ID']]) : ?>
-
-                  <ul class="sub-menu">
-
-                    <?php foreach ($header_three_three[$item['ID']]->childs as $item2) : ?>
-                      <?php if (trim($item2['title']) !== '') : ?>
-
-                        <li class="menu-item">
-                          <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
-                        </li>
-
-                      <?php endif; ?>
-                    <?php endforeach; ?>
-                  </ul>
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                    </ul>
 
 
-                <?php endif; ?>
+                  <?php endif; ?>
 
-              </li>
-            <?php endforeach; ?>
+                </li>
+              <?php endforeach; ?>
 
-          </ul>
+            </ul>
+          <?php endif; ?>
+
+          <?php if(!empty($header_three_three)  && !empty($header_three_three[0])) : ?>
+            <ul>
+
+              <?php foreach ($header_three_three[0]->childs as $key => $item) : ?>
+
+                <li class="menu-item menu-item-has-children">
+                  <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                  <i class="custom-arrow" data-action="arrow"></i>
+
+                  <?php if (isset($header_three_three[$item['ID']]) && $header_three_three[$item['ID']]) : ?>
+
+                    <ul class="sub-menu">
+
+                      <?php foreach ($header_three_three[$item['ID']]->childs as $item2) : ?>
+                        <?php if (trim($item2['title']) !== '') : ?>
+
+                          <li class="menu-item">
+                            <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
+                          </li>
+
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                    </ul>
+
+
+                  <?php endif; ?>
+
+                </li>
+              <?php endforeach; ?>
+
+            </ul>
+          <?php endif; ?>
+
         </div>
         <div class="col-five menu-wrap">
 
-          <ul class="menu-information">
+          <?php if(!empty($header_five)  && !empty($header_five[0])) : ?>
+            <ul class="menu-information">
 
-            <?php foreach ($header_five[0]->childs as $key => $item) : ?>
+              <?php foreach ($header_five[0]->childs as $key => $item) : ?>
 
-              <li class="menu-item menu-item-has-children">
-                <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
-                <i class="custom-arrow" data-action="arrow"></i>
+                <li class="menu-item menu-item-has-children">
+                  <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
+                  <i class="custom-arrow" data-action="arrow"></i>
 
-                <?php if (isset($header_five[$item['ID']]) && $header_five[$item['ID']]) : ?>
+                  <?php if (isset($header_five[$item['ID']]) && $header_five[$item['ID']]) : ?>
 
-                  <ul class="sub-menu">
+                    <ul class="sub-menu">
 
-                    <?php foreach ($header_five[$item['ID']]->childs as $item2) : ?>
-                      <?php if (trim($item2['title']) !== '') : ?>
+                      <?php foreach ($header_five[$item['ID']]->childs as $item2) : ?>
+                        <?php if (trim($item2['title']) !== '') : ?>
 
-                        <li class="menu-item">
-                          <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
-                        </li>
+                          <li class="menu-item">
+                            <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
+                          </li>
 
-                      <?php endif; ?>
-                    <?php endforeach; ?>
-                  </ul>
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                    </ul>
 
 
-                <?php endif; ?>
+                  <?php endif; ?>
 
-              </li>
-            <?php endforeach; ?>
+                </li>
+              <?php endforeach; ?>
 
-          </ul>
+            </ul>
+          <?php endif; ?>
+
         </div>
 
       </div>

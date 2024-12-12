@@ -21,8 +21,8 @@ $need_post_id = !empty($args['need_post_id']) ? $args['need_post_id'] : get_the_
 
                             </div>
                             <div class="input-wrap form-group">
-                                <label for="telegram" class="form-label"><?php _e('Enter your Phone', 'icoda'); ?></label>
-                                <input id="telegram" type="text" name="telegram" placeholder="<?php _e('Enter your Phone', 'icoda'); ?>">
+                                <label for="telegram" class="form-label"><?php _e('Your Telegram/WhatsApp/Skype', 'icoda'); ?></label>
+                                <input id="telegram" type="text" name="telegram" placeholder="<?php _e('Telegram/WhatsApp/Skype', 'icoda'); ?>">
 
                             </div>
                             <div class="input-wrap form-group">

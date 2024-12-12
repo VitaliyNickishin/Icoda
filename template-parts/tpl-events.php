@@ -43,5 +43,4 @@ get_header();
     </header>
     <?php the_content(); ?>
 <?php
-// get_sidebar();
 get_footer(); ?>

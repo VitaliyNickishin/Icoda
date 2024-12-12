@@ -5,11 +5,11 @@ if (!empty($_GET['tags'])) {
 }
 ?>
 <div class="tags">
-    <p class="tags-title mb-3 pb-1"><?php echo __('Tags', 'icoda'); ?></p>
-    <ul class="tags-list">
+<?php /* <p class="tags-title mb-3 pb-1"><?php echo __('Tags', 'icoda'); ?></p> */ ?>
+    <ul class="tags-list tags-list-blog">
         <?php foreach ($tags as $tag) : ?>
             <li>
-                <input type="checkbox" name="tags" value="<?php echo $tag->term_id; ?>" id="checkbox-<?php echo $tag->term_id; ?>" <?php checked(in_array($tag->term_id, $selected_tags)); ?> />
+                <input type="checkbox" name="tags" value="<?php echo $tag->term_id; ?>" id="checkbox-<?php echo $tag->term_id; ?>" <?php checked(!empty($selected_tags) && in_array($tag->term_id, $selected_tags)); ?> />
                 <label for="checkbox-<?php echo $tag->term_id; ?>"><?php echo $tag->name; ?></label>
             </li>
         <?php endforeach; ?>
