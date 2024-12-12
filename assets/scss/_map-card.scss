@@ -1,0 +1,101 @@
+.map-card{
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid $color-light-gray;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.map-card-1{
+  .map-card-header{
+    background: url("../images/map-1.jpg") center 0 / cover no-repeat;
+  }
+  .map-card-body{
+    background: url("../images/bg-map-1.svg") right bottom / 179px 89px no-repeat;
+  }
+}
+.map-card-2{
+  .map-card-header{
+    background: url("../images/map-2.jpg") center 0 / cover no-repeat;
+  }
+  .map-card-body{
+    background: url("../images/bg-map-2.svg") right bottom / 238px 119px no-repeat;
+  }
+}
+.map-card-header{
+  height: 245px;
+}
+.map-card-body{
+  position: relative;
+  padding: 37px 35px 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  .wr-link{
+    height: 27px;
+  }
+}
+.map-address-box{
+  .h6{
+    line-height: 135%;
+  }
+  .text{
+    margin-top: 30px;
+    p{
+      font-size: 13px;
+      line-height: 170%;
+      color: #383737;
+    }
+  }
+}
+.map-card-body-link{
+  font-size: 11px;
+  line-height: 100%;
+  font-family: $f-sto-r;
+  position: relative;
+  padding-right: 38px;
+  color: $color-dark-gray;
+  margin-top: -10px;
+  &:after{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url("../images/ico-map.png") center no-repeat;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+// media
+
+
+@include media-breakpoint-down(sm) {
+  .map-card{
+    margin-top: 40px;
+  }
+}
+@include media-breakpoint-only(xs) {
+  .map-card-header {
+    height: 200px;
+  }
+  .map-card-body{
+    padding: 30px 20px 42px;
+    flex-direction: column;
+    .wr-link{
+      margin-top: 15px;
+    }
+  }
+}
+@include media-breakpoint-only(md) {
+  .map-card-header {
+    height: 200px;
+  }
+  .map-card-body{
+    padding: 30px 20px 42px;
+    flex-direction: column;
+    .wr-link{
+      margin-top: 15px;
+    }
+  }
+}

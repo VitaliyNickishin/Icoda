@@ -1,0 +1,229 @@
+.section-fonts {
+  .fonts-name {
+    @include mediaMax(991) {
+      margin-top: 80px;
+      margin-bottom: 130px;
+    }
+
+    p {
+      font-family: $f-gilroy-sb;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 80px;
+      line-height: 120%;
+
+      @include mediaMax(991) {
+        font-size: 48px;
+      }
+    }
+
+    .text-gradient {
+      background: -webkit-linear-gradient(180deg, #cccccc 50%, #2D344D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-box-decoration-break: clone;
+
+      @include mediaMax(991) {
+        background: -webkit-linear-gradient(180deg, #cccccc 80%, #2D344D 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+      }
+    }
+  }
+
+  .list-alphabet {
+    margin-left: auto;
+    width: 304px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 16px;
+    font-family: $f-gilroy-b;
+    line-height: 140%;
+    color: #111522;
+    text-transform: uppercase;
+
+    @include mediaMax(991) {
+      margin: 0;
+    }
+
+    li {
+      width: 16px;
+      padding: 9px 19px;
+    }
+  }
+
+  .has-circle {
+    &::after {
+      left: 145px;
+      top: -75px;
+
+      @include mediaMax(991) {
+        left: 35px;
+      }
+    }
+  }
+
+  &-multiple {
+    .fonts-name {
+      @include mediaMax(991) {
+        margin-top: 20px;
+        margin-bottom: 80px;
+      }
+      .first-font {
+        font-size: 38px;
+        line-height: 120%;
+        font-family: $f-druke-wide;
+        @include mediaMin(370) {
+          font-size: 44px;
+        }
+        @include mediaMin(768) {
+          font-size: 48px;
+        }
+        @include mediaMin(992) {
+          width: 300px;
+          font-size: 64px;
+        }
+      }
+      .symbol {
+        margin-left: 150px;
+        font-size: 38px;
+        line-height: 120%;
+        font-family: $f-druke-wide;
+        @include mediaMin(370) {
+          margin-left: 180px;
+        }
+        @include mediaMin(768) {
+          margin-left: 200px;
+          font-size: 44px;
+        }
+        @include mediaMin(992) {
+          margin-left: 250px;
+          font-size: 80px;
+        }
+        @include mediaMin(1100) {
+          margin-left: 290px;
+        }
+      }
+      .second-font {
+        margin-left: 170px;
+        font-size: 38px;
+        line-height: 120%;
+        font-family: $f-gilroy-sb;
+        @include mediaMin(370) {
+          margin-left: 210px;
+          font-size: 44px;
+        }
+        @include mediaMin(768) {
+          margin-left: 230px;
+        }
+        @include mediaMin(992) {
+          margin-left: 330px;
+          font-size: 80px;
+          font-family: $f-gilroy-black;
+        }
+        @include mediaMin(1100) {
+          margin-left: 370px;
+        }
+        
+      }
+      .text-gradient {
+        background: -webkit-linear-gradient(315deg, #2D344D 50%, #ddd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-box-decoration-break: clone;
+
+        @include mediaMax(991) {
+          background: -webkit-linear-gradient(140deg, #fff 0%, #2D344D 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -webkit-box-decoration-break: clone;
+        }
+      }
+
+    }
+    .second-row {
+      @include mediaMin(992) {
+        margin-top: -160px;
+      }
+    }
+    .has-circle:after {
+      left: 25px;
+      top: -45px;
+      z-index: 1;
+      @include mediaMin(370) {
+        left: 85px;
+      }
+      @include mediaMin(768) {
+        left: 125px;
+      }
+      @include mediaMin(992) {
+        left: 85px;
+        top: -105px;
+      }
+    }
+    .list-title-main {
+      color: #37384F;
+      font-family: $f-druke-wide;
+      li {
+        &:first-child {
+          font-size: 36px;
+          line-height: 100%;
+        }
+        &:nth-child(2) {
+          font-size: 24px;
+          line-height: 130%;
+        }
+        &:nth-child(3) {
+          font-size: 18px;
+          line-height: 130%;
+        }
+        &:nth-child(4) {
+          font-size: 14px;
+          line-height: 130%;
+        }
+        &+li {
+          margin-top: 27px;
+        }
+      }
+    }
+    .list-title-second {
+      color: #37384F;
+      font-family: $f-gilroy-b;
+
+      li {
+        &:first-child {
+          font-size: 34px;
+          line-height: 115%;
+        }
+
+        &:nth-child(2) {
+          font-size: 24px;
+          line-height: 100%;
+        }
+
+        &:nth-child(3) {
+          font-size: 18px;
+          line-height: 130%;
+        }
+
+        &:nth-child(4) {
+          font-size: 16px;
+          line-height: 130%;
+        }
+        &:nth-child(5) {
+          font-size: 14px;
+          line-height: 130%;
+        }
+
+        &+li {
+          margin-top: 25px;
+        }
+      }
+    }
+    
+    
+  }
+
+}

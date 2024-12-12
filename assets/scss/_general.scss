@@ -1,0 +1,46 @@
+body.loading {
+	overflow: hidden;
+}
+
+.preloader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background-color: #FFF;
+	.loader-text {		
+		display: flex;
+		height: 100%;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+
+		p {
+			text-transform: uppercase;
+			font-weight: 500;
+			font-family: Stolzl-Medium,sans-serif;
+			font-size: 38px;
+			line-height: 115%;
+			color: #2d344d;
+			letter-spacing: .06em;
+  			background: linear-gradient(to right, #3c61e2, #3c61e2 50%, #2d344d 50%);
+			background-size: 200% 100%;
+  			background-position: 100%;
+  			-webkit-background-clip: text;
+  			-webkit-text-fill-color: transparent;
+			transition: background-position 275ms ease;
+			animation: fillText 1s linear 1 forwards;
+		}
+	}
+
+}
+
+
+@keyframes fillText {
+	to {
+		background-position:0% 100%;
+	}
+}

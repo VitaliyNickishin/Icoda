@@ -1,0 +1,236 @@
+.page-portfolio {
+  .description {
+    font-size: 18px;
+    line-height: 24px;
+    width: 425px;
+    @include mediaMax(767) {
+      font-size: 14px;
+      line-height: 18px;
+      width: 100%;
+    }
+  }
+  .section-hero {
+    padding-bottom: 320px;
+    background: url("../images/portfolio/bg-cloud.png") no-repeat center right;
+    @include mediaMax(1440) {
+      background: none;
+    }
+    @include mediaMax(991) {
+      padding-bottom: 85px;
+    }
+    .description {
+      padding-right: 0;
+      color: #37384F;
+      font-family: 'ProximaNova-Reg';
+    }
+    p {
+      strong {
+        font-size: 15px;
+        line-height: 26px;
+        font-family: $f-sto-m;
+        @include mediaMax(767) {
+          font-size: 14px;
+        }
+      }
+    }
+    .img-hero {
+      top: -100px;
+      right: 0;
+      left: 0;
+      @include mediaMax(991) {
+        top: 0;
+      }
+    }
+  }
+
+  .section-portfolio-filters {
+    
+    .container {
+      padding-right: 0;
+    }
+    
+    .portfolio-filters-slider {
+      
+      a {
+        padding-right: 25px;
+        color: #37384F;
+        font-size: 18px;
+        &:hover {
+          color: $color-blue;
+        }
+        &.active {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+  .section-portfolio {
+    padding-top: 130px;
+    padding-bottom: 80px;
+    @include mediaMax(991) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    &-even {
+      background-color: $color-light-white;
+    }
+    .row {
+      @include mediaMax(1100) {
+        flex-direction: column;
+      }
+    }
+    .content {
+      padding-top: 70px;
+      @include mediaMax(1100) {
+        padding-top: 0;
+      }
+    }
+    .wr-slider {
+      height: 420px;
+      @include mediaMax(1100) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      @include mediaMax(767) {
+        height: 230px;
+        margin-right: -15px;
+      }
+    }
+    .description {
+      &-descktop {
+        @include mediaMax(1100) {
+          display: none;
+        }
+      }
+      &-mobile {
+        padding-top: 50px;
+        @include mediaMin(1101) {
+          display: none;
+        }
+        @include mediaMax(374) {
+          padding-top: 25px;
+        }
+        
+        
+      }
+    }
+    
+    .portfolio-slider-main {
+      position: absolute;
+      @include mediaMax(767) {
+        position: relative;
+      }
+      a {
+        padding-right: 40px;
+        @include mediaMax(767) {
+          padding-right: 20px;
+        }
+      }
+    }
+
+    .slick-slide {
+      img {
+        @include mediaMax(767) {
+          width: 325px;
+        }
+        @include mediaMax(374) {
+          width: 280px;
+        }
+      }
+    }
+    //arrow
+    .slider-control {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: auto;
+      .slick-prev {
+        left: 17px;
+      }
+      .slick-next {
+        right: -29%;
+        @include mediaMax(1730) {
+          right: -19%;
+        }
+        @include mediaMax(1590) {
+          right: -10%;
+        }
+        @include mediaMax(1439) {
+          right: 0;
+        }
+      }
+      .slick-arrow {
+        width: 56px;
+        height: 56px;
+        background-color: rgba(255, 255, 255, 0.85);
+        padding-left: 20px;
+
+        &:before {
+          width: 18px;
+          height: 15px;
+        }
+      }
+    }
+    
+    //dots
+    .slick-dots {
+      bottom: -45px;
+      text-align: left;
+      z-index: 2;
+      @include mediaMax(1100) {
+        bottom: -35px;
+      }
+      @include mediaMax(767) {
+        text-align: center;
+      }
+      li {
+        height: 12px;
+        width: 12px;
+        margin: 0 4px;
+        button {
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+          background: $color-light-gray;
+          text-indent: -9999px;
+        }
+        &.slick-active {
+          button {
+            &:before {
+              width: 6px;
+              height: 6px;
+              background: $color-blue;
+              opacity: 1;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+        }
+      }
+    }
+
+    .portfolio-filters-slider-bottom-category {
+      padding-top: 70px;
+      @include mediaMax(1100) {
+        padding-top: 25px;
+      }
+      a {
+        padding-right: 25px;
+        color: #37384f;
+        font-size: 14px;
+      }
+    }
+    
+  }
+
+  .form-contact {
+    padding-top: 180px;
+    @include mediaMax(767) {
+      padding-top: 140px;
+    }
+  }
+}

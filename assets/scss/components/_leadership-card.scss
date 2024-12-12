@@ -1,0 +1,138 @@
+/* section leadership(team) */
+.list-leadership {
+  position: relative;
+
+  @include mediaMax(991) {
+    margin-right: -15px;
+  }
+
+  &-desktop {
+    @include mediaMax(991) {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    @include mediaMin(992) {
+      display: none;
+    }
+  }
+
+  &-item {
+    @include mediaMax(991) {
+      margin-top: 16px;
+      width: 275px;
+      padding-right: 7px;
+    }
+
+    &:hover {
+      .leadership-contact-icons {
+        i {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+  .leadership-item-avatar {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f6f8fe;
+    display: block;
+    transition: all 0.3s;
+    height: 200px;
+  }
+
+  .title-wrap {
+    margin-bottom: 0;
+
+    .h6 {
+      color: $color-dark-blue;
+    }
+  }
+
+  .leadership-item-des {
+    background: #ffffff;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    transition: all 0.3s;
+    flex: 1 0 auto;
+
+    span {
+      transition: all 0.3s;
+    }
+  }
+
+  .leadership-contact-icons {
+    i {
+      margin-right: 0;
+      margin-left: 5px;
+
+      &.fa-linkedin {
+        position: relative;
+        top: 2px;
+        color: $color-blue;
+        font-size: 16px;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      &.fa-user {
+        font-size: 14px;
+        position: relative;
+        top: 1px;
+        color: #2d344d;
+      }
+    }
+  }
+
+  .leadership-item-des {
+    position: relative;
+    border: 1px solid #e0e7ff;
+    padding: 33px;
+
+    @include mediaMax(1440) {
+      padding: 33px 18px;
+    }
+    @include mediaMax(1200) {
+      padding: 20px;
+    }
+
+    @include mediaMax(991) {
+      background: #fff;
+    }
+  }
+
+  .leadership-des-position {
+    position: relative;
+    font-size: 12px;
+    line-height: 22px;
+    flex: 0 0 auto;
+    margin: 5px 0 0;
+    color: $color-dark-gray;
+
+    @include mediaMax(991) {
+      margin: 0;
+    }
+  }
+
+  .leadership-des-text {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 22px;
+    color: $main-color-text;
+    min-height: 180px;
+    @include mediaMax(1919) {
+      min-height: 160px;
+    }
+
+    @include mediaMax(991) {
+      display: none;
+    }
+  }
+}

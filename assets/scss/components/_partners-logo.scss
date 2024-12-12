@@ -1,0 +1,58 @@
+/* section our partners */
+.list-logo {
+  background: transparent;
+
+  &-item {
+    padding-bottom: 0;
+    width: 285px;
+    height: 224px;
+
+    @include mediaMax(1340) {
+      height: 200px;
+    }
+
+    @include mediaMax(991) {
+      height: 120px;
+    }
+  }
+
+  &-desktop {
+    @include mediaMax(767) {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    @include mediaMin(768) {
+      display: none;
+    }
+  }
+
+  //rows: 2
+  .slick-slide {
+    &>div {
+      padding: 40px 25px;
+      width: 135px;
+      height: 106px;
+      border: 1px solid #e7edff;
+
+    }
+
+    .text {
+      @include mediaMax(767) {
+        text-align: center;
+        line-height: 10px;
+
+        .h2 {
+          font-size: 16px;
+          color: #5C7DEF;
+        }
+
+        .sub-text {
+          font-size: 10px;
+          color: #8A9AB5;
+        }
+      }
+    }
+  }
+}

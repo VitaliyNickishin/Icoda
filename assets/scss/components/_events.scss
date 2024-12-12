@@ -1,0 +1,49 @@
+.card-event {
+	@include mediaMin(992) {
+		height: 150px;
+	}
+	.link-img {
+		// text-align: center;
+		img {
+			@include mediaMin(992) {
+				height: 150px;
+				max-width: 290px;
+			}
+		}
+	}
+	.city {
+		@include mediaMin(992) {
+			font-size: 18px;
+		}
+	}
+	.day {
+		@include mediaMin(992) {
+			font-size: 44px;
+		}
+	}
+	.year {
+		@include mediaMin(992) {
+			font-size: 15px;
+		}
+	}
+}
+
+.wr-top-banner-event {
+    background-color: #fff;
+    @include mediaMin(1199) {
+    	display: flex;
+		align-items: center;
+		min-height: 240px;
+    }
+	.top-banner-event {
+		@include mediaMin(1199) {
+			padding-left: 45px;
+			padding-right: 45px;
+		}
+		img {
+			@include mediaMin(1199) {
+				max-width: 550px;
+			}
+		}
+	}
+}

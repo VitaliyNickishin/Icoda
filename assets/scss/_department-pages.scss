@@ -1,0 +1,233 @@
+// .section {
+	.section-department-title {
+		padding-bottom: 40px;
+		background-color: #FAFBFD;
+		color: #000;
+		&+.section-grid-title-content {
+			background-color: #FAFBFD;
+		}
+		h2 {
+			margin-top: 70px;
+			margin-bottom: 15px;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 38px;
+			line-height: 130%;
+			color: #2D344D;
+		}
+		p {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 175%;
+			color: #54658D;
+		}
+	}
+	.section-service-title {
+		padding-top: 30px;
+		padding-bottom: 20px;
+		text-align: center;
+		h1 {
+			color: #000;
+		}
+	}
+	.section-block-editor {
+		ul {
+			max-width: 417px;
+			list-style: disc;
+			padding-left: 19px;
+			li {
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.section-cases-department {
+		margin-bottom: 48px;
+	}
+	.department-form {
+		.callback-form {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+			background-color: #fafbfd;
+			>.container {
+				>.row {
+				// justify-content: center;
+				}
+			}
+			.form-default-header {
+				margin-bottom: 25px;
+				flex-direction: column;
+				align-items: flex-start;
+				.ttl {
+					font: 32px/42px 'Stolzl-Regular',sans-serif;
+					color: #2d344d;
+					padding: 0 0 12px;
+				}
+			}
+
+			.form-success {
+				padding: 5.734em 0;
+				.wr-ico-check {
+					position: relative;
+					display: inline-block;
+					padding-top: 6px;
+					width: 50px;
+					height: 37px;
+					background: #3c61e2;
+					color: #fff;
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: -8px;
+						width: 8px;
+						height: 8px;
+						background: url(../images/arr-label-item.svg) 0 0 no-repeat;
+					}
+				}
+				.ttl {
+					padding-top: 33px;
+					padding-bottom: 10px;
+					font: 32px/42px 'Stolzl-Regular',sans-serif;
+					color: #2d344d;
+				}
+			}
+		}
+	}
+// }
+
+.section-department-header {
+	padding-bottom: 80px;
+	.section-title {
+		margin-bottom: 35px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 42px;
+		color: #2D344D;
+		line-height: 120%;
+	}
+	.text {
+		margin-top: 42px;
+	}
+	.sub-text {
+		h2 {
+			margin-top: 40px;
+			margin-bottom: 20px;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 25px;
+			color: #2D344D;
+			line-height: 100%;
+		}
+		p {
+			margin-bottom: 15px;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			line-height: 170%;
+			color: #54658D;
+		}
+	}
+	.btn {
+		min-width: 350px;
+	}
+	.display-image {
+		text-align: center;
+	}
+}
+
+.section-our-projects {
+	margin-top: 80px;
+	margin-bottom: 80px;
+	.section-title {
+		margin-bottom: 18px;
+		font-size: 38px;
+		line-height: 130%;
+		color: #2D344D;
+	}
+	.section-content {
+		margin-bottom: 30px;
+		p {
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			line-height: 165%;
+			color: #8A9AB5;
+		}
+	}
+	.our-projects-list-wrap {
+		padding-left: 63px;
+		padding-top: 20px;
+		padding-bottom: 90px;
+		border-left: 1px solid #E7EDFF;
+	}
+	.wr-control-projects {
+		position: absolute;
+		bottom: 20px;
+		left: 63px;
+		width: 73px;
+		height: 20px;
+		.slick-next, .slick-prev{
+			width: 24px;
+			height: 20px;
+			bottom: 0;
+			z-index: 4;
+			&:before{
+				content: '';
+				display: block;
+				width: 24px;
+				height: 20px;
+				background: url("../images/arrow-link-card.svg") 0 0 no-repeat;
+				background-size: cover;
+			}
+			&:hover{
+				&:before{
+					background: url("../images/arrow-link-card-hover.svg") 0 0 no-repeat;
+					background-size: cover;
+				}
+			}
+		}
+		.slick-next{
+			right: 0;
+		}
+		.slick-prev{
+			left: 0;
+			&:before{
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
+.section-image-grid {
+	margin-top: 80px;
+	margin-bottom: 30px;
+	.block-image-grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		.image-item {
+			margin-bottom: 50px;
+			flex: 0 0 25%;
+			width: 28%;
+			text-align: center;
+		}
+	}
+}
+
+.project-item {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	.slider-default-item-header {
+		flex: 0 0 100%;
+		width: 100%;
+		margin-bottom: 43px;
+	}
+	.content-default-item {
+		p {
+			line-height: 175%;
+			color: #54658D;
+		}
+	}
+}

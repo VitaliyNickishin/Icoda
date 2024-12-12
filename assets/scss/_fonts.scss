@@ -1,0 +1,251 @@
+@font-face {
+  font-family: "Stolzl-Regular";
+  src: url("../font/Stolzl-Regular.eot");
+  src: url("../font/Stolzl-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../font/Stolzl-Regular.woff") format("woff"),
+    url("../font/Stolzl-Regular.ttf") format("truetype"),
+    url("../font/Stolzl-Regular.svg#FontName") format("svg");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl-Medium";
+  src: url("../font/Stolzl-Medium.eot");
+  src: url("../font/Stolzl-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../font/Stolzl-Medium.woff") format("woff"),
+    url("../font/Stolzl-Medium.ttf") format("truetype"),
+    url("../font/Stolzl-Medium.svg#FontName") format("svg");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stolzl-Book";
+  src: url("../font/Stolzl-Book.eot");
+  src: url("../font/Stolzl-Book.eot?#iefix") format("embedded-opentype"),
+    url("../font/Stolzl-Book.woff") format("woff"),
+    url("../font/Stolzl-Book.ttf") format("truetype"),
+    url("../font/Stolzl-Book.svg#FontName") format("svg");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ProximaNova-Reg";
+  src: url("../font/ProximaNova-Reg.eot");
+  src: url("../font/ProximaNova-Reg.eot?#iefix") format("embedded-opentype"),
+    url("../font/ProximaNova-Reg.woff") format("woff"),
+    url("../font/ProximaNova-Reg.ttf") format("truetype"),
+    url("../font/ProximaNova-Reg.svg#FontName") format("svg");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("../font/gilroy/Gilroy-SemiBold.eot");
+  src: url("../font/gilroy/Gilroy-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../font/gilroy/Gilroy-SemiBold.woff") format("woff"),
+    url("../font/gilroy/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("../font/gilroy/Gilroy-Bold.eot");
+  src: url("../font/gilroy/Gilroy-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../font/gilroy/Gilroy-Bold.woff") format("woff"),
+    url("../font/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-Black";
+  src: url("../font/gilroy/Gilroy-Black.eot");
+  src: url("../font/gilroy/Gilroy-Black.eot?#iefix") format("embedded-opentype"),
+    url("../font/gilroy/Gilroy-Black.woff") format("woff"),
+    url("../font/gilroy/Gilroy-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Druk-Wide-Medium";
+  src: url("../font/druk-wide/Druk-Wide-Medium.ttf") format("truetype");
+}
+
+/*!
+ * Font Awesome Pro 5.0.4 by @fontawesome - http://fontawesome.com
+ * License - http://fontawesome.com/license (Commercial License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/font-awesome/fa-brands-400.eot");
+  src: url("../font/font-awesome/fa-brands-400.eot?#iefix")
+      format("embedded-opentype"),
+    url("../font/font-awesome/fa-brands-400.woff2") format("woff2"),
+    url("../font/font-awesomes/fa-brands-400.woff") format("woff"),
+    url("../font/font-awesome/fa-brands-400.ttf") format("truetype"),
+    url("../font/font-awesome/fa-brands-400.svg#fontawesome") format("svg");
+}
+.fab {
+  font-family: "Font Awesome 5 Brands";
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/font-awesome/fa-light-300.eot");
+  src: url("../font/font-awesome/fa-light-300.eot?#iefix")
+      format("embedded-opentype"),
+    url("../font/font-awesome/fa-light-300.woff2") format("woff2"),
+    url("../font/font-awesome/fa-light-300.woff") format("woff"),
+    url("../font/font-awesome/fa-light-300.ttf") format("truetype"),
+    url("../font/font-awesome/fa-light-300.svg#fontawesome") format("svg");
+}
+.fal {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/font-awesome/fa-regular-400.eot");
+  src: url("../font/font-awesome/fa-regular-400.eot?#iefix")
+      format("embedded-opentype"),
+    url("../font/font-awesome/fa-regular-400.woff2") format("woff2"),
+    url("../font/font-awesome/fa-regular-400.woff") format("woff"),
+    url("../font/font-awesome/fa-regular-400.ttf") format("truetype"),
+    url("../font/font-awesome/fa-regular-400.svg#fontawesome") format("svg");
+}
+.far {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../font/font-awesome/fa-solid-900.eot");
+  src: url("../font/font-awesome/fa-solid-900.eot?#iefix")
+      format("embedded-opentype"),
+    url("../font/font-awesome/fa-solid-900.woff2") format("woff2"),
+    url("../font/font-awesome/fa-solid-900.woff") format("woff"),
+    url("../font/font-awesome/fa-solid-900.ttf") format("truetype"),
+    url("../font/font-awesome/fa-solid-900.svg#fontawesome") format("svg");
+}
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?87999132#fontello') format('svg');
+  }
+}
+*/
+@font-face {
+  font-family: "fontello";
+  src: url("../font/fontello.eot?87999132");
+  src: url("../font/fontello.eot?87999132#iefix") format("embedded-opentype"),
+    url("../font/fontello.woff2?87999132") format("woff2"),
+    url("../font/fontello.woff?87999132") format("woff"),
+    url("../font/fontello.ttf?87999132") format("truetype"),
+    url("../font/fontello.svg?87999132#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fontello";
+  src: url("../font/fontello/fontello-new.eot?68043066");
+  src: url("../font/fontello/fontello-new.eot?68043066#iefix")
+      format("embedded-opentype"),
+    url("../font/fontello/fontello-new.woff2?68043066") format("woff2"),
+    url("../font/fontello/fontello-new.woff?68043066") format("woff"),
+    url("../font/fontello/fontello-new.ttf?68043066") format("truetype"),
+    url("../font/fontello/fontello-new.svg?68043066#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  //width: 1em;
+  //margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  //margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-ico-media-1:before {
+  content: "\e800";
+} /* '' */
+.icon-ico-media-2:before {
+  content: "\e801";
+} /* '' */
+.icon-ico-media-3:before {
+  content: "\e802";
+} /* '' */
+.icon-ico-media-4:before {
+  content: "\e803";
+} /* '' */
+.icon-ico-arr-main-menu:before {
+  content: "\e804";
+} /* '' */
+.icon-ico-check:before {
+  content: "\e805";
+} /* '' */
+.icon-ico-close:before {
+  content: "\e806";
+} /* '' */
+
+.icon-twitter:before {
+  content: "\f099";
+} /* '' */

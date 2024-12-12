@@ -1,0 +1,64 @@
+.bc-block {
+  margin-top: 60px;
+  margin-bottom: 10px;
+  
+  &-inner {
+    padding: 50px 80px;
+    border: 1px solid #E7EDFF;
+    overflow: hidden;
+    background: url('../images/bg-bc-block-grey.png') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: 100% 60%;
+    @include mediaMax(991) {
+      background: none;
+      width: auto;
+      padding: 30px 20px;
+    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   right: 0;
+    //   top: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   z-index: -1;
+    //   background: url('../images/bg-bc-block-line.png') no-repeat top;
+    //   background-size: 100%;
+    //   @include mediaMax(991) {
+    //     display: none;
+    //   }
+    // }
+    
+  }
+  .wrap-logo {
+    img {
+      transition: all .2s ease-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+      
+    }
+  }
+  &__video {
+    width: 520px;
+    max-width: 100%;
+    margin: auto;
+    @include mediaMin(991) {
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      z-index: -1;
+    }
+    @include mediaMin(1200) {
+      width: 620px;
+    }
+    
+  }
+  video {
+    width: 100%;
+  }
+}

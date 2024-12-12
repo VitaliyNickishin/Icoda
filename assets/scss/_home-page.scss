@@ -1,0 +1,386 @@
+.section-1 {
+  padding-top: 20px;
+  padding-bottom: 180px;
+  overflow: hidden;
+  .text {
+    position: relative;
+    z-index: 1;
+  }
+  .sub-text {
+    margin-top: 20px;
+    margin-bottom: 39px;
+  }
+  .btn {
+    position: relative;
+    z-index: 1;
+  }
+}
+.anim-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .v-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-124px, 28px);
+    width: 622px;
+    height: 622px;
+    background: url("../images/v1.svg") 0 0 no-repeat;
+  }
+  .v-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(140px, -37px);
+    width: 604px;
+    height: 558px;
+    background: url("../images/v2.svg") 0 0 no-repeat;
+    @include mediaMax(1199) {
+      transform: translate(99px, -37px);
+    }
+  }
+  .v-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-6px, 26px);
+    width: 648px;
+    height: 536px;
+    background: url("../images/v3.svg") 0 0 no-repeat;
+    @include mediaMax(1199) {
+      transform: translate(-41px, 12px);
+    }
+  }
+  .bg-computer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 639px;
+    height: 388px;
+    transform: translate(-3px, 91px);
+    background: url("../images/computer.png") 0 0 no-repeat;
+    @include mediaMax(1199) {
+      width: 510px;
+      height: 308px;
+      background-size: cover;
+    }
+    @include mediaMax(991) {
+      width: 385px;
+      height: 233px;
+      transform: translate(-3px, 160px);
+    }
+  }
+  .bg-service {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 492px;
+    height: 518px;
+    transform: translate(80px, 0);
+    background-repeat: no-repeat;
+    @include mediaMax(1199) {
+      width: 510px;
+      height: 308px;
+      background-size: cover;
+    }
+    @include mediaMax(991) {
+      width: 385px;
+      height: 233px;
+      transform: translate(-3px, 160px);
+    }
+  }
+  .bg-phone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(382px, 141px);
+    width: 255px;
+    height: 438px;
+    background: url("../images/phone.png") 0 0 no-repeat;
+    @include mediaMax(1199) {
+      transform: translate(319px, 127px);
+      width: 190px;
+      height: 327px;
+      background-size: cover;
+    }
+    @include mediaMax(991) {
+      transform: translate(240px, 189px);
+      width: 140px;
+      height: 240px;
+    }
+  }
+}
+
+.section-2 {
+  padding-top: 112px;
+  padding-bottom: 80px;
+  .text {
+    max-width: 301px;
+  }
+  .sub-text {
+    margin-top: 20px;
+  }
+  .wr-btn {
+    margin-top: 12px;
+  }
+}
+
+.grid-masonry {
+  .grid-item-hide {
+    display: none;
+  }
+  &.show-elem {
+    .grid-item-hide {
+      display: block;
+    }
+  }
+}
+
+.home-page {
+  .section-3 {
+    padding-top: 100px;
+    overflow: hidden;
+    margin-top: -100px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 100px;
+      background: $color-light-white;
+    }
+    .text-box {
+      background: $color-light-blue;
+      padding: 110px 95px 95px;
+    }
+    .h3 {
+      max-width: 227px;
+      margin-bottom: 15px;
+    }
+    .text {
+      max-width: 301px;
+    }
+    .label-list {
+      margin-top: 35px;
+    }
+    .bg-section {
+      position: absolute;
+      left: 631px;
+      top: -100px;
+      background: url("../images/bg-home-s3.jpg") 0 0 no-repeat;
+      background-size: cover;
+      width: 795px;
+      height: 535px;
+    }
+  }
+}
+
+.section-4 {
+  padding-top: 105px;
+  padding-bottom: 70px;
+  .h3 {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .list-logo {
+    margin-top: 47px;
+  }
+}
+
+.section-6 {
+  padding-top: 40px;
+  padding-bottom: 149px;
+  .wr-slider {
+    padding-top: 39px;
+  }
+}
+
+.section-7 {
+  border-top: 1px solid #d6e0ff;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.section-8 {
+  padding-top: 85px;
+  padding-bottom: 115px;
+}
+
+// media
+
+@include media-breakpoint-down(sm) {
+  .section-1 {
+    padding-bottom: 40px;
+  }
+  .section-2 {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    .text {
+      max-width: 100%;
+    }
+  }
+  .home-page {
+    .section-3 {
+      margin-top: 0;
+      padding-top: 20px;
+      background: url("../images/bg-home-s3.jpg") 0 0 no-repeat;
+      background-size: cover;
+      &:before {
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+      }
+      .bg-section {
+        display: none;
+      }
+      .text-box {
+        background: 0 0;
+        padding: 60px 0 65px;
+      }
+      .text,
+      .h3 {
+        color: #ffffff;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .section-4 {
+    padding: 80px 0 40px;
+  }
+  .section-5 {
+    padding: 40px 0 0;
+    .text {
+      margin: 0 0 40px;
+      max-width: 100%;
+    }
+    .col-sm-6 {
+      display: flex;
+    }
+  }
+  .section-6 {
+    padding: 40px 0 80px;
+  }
+  .list-leadership {
+    .col-sm-6 {
+      display: flex;
+    }
+  }
+  .section-7 {
+    padding-bottom: 40px;
+  }
+  .section-8 {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+}
+@include media-breakpoint-only(md) {
+  .section-1 {
+    padding-bottom: 196px;
+  }
+  .home-page {
+    .section-3 {
+      margin-top: 0;
+      padding-top: 20px;
+      background: url("../images/bg-home-s3.jpg") center 0 no-repeat;
+      background-size: cover;
+      &:before {
+        background: rgba(0, 0, 0, 0.5);
+        top: 0;
+      }
+      .bg-section {
+        display: none;
+      }
+      .text-box {
+        background: 0 0;
+        padding: 60px 0 65px;
+      }
+      .text,
+      .h3 {
+        color: #ffffff;
+      }
+      .h3 {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .section-5 {
+    .text {
+      margin-top: 0;
+    }
+    .col-sm-6 {
+      display: flex;
+    }
+  }
+  .list-leadership {
+    .col-sm-6 {
+      display: flex;
+    }
+  }
+}
+@include media-breakpoint-only(lg) {
+  .section-1 {
+    padding-bottom: 196px;
+    // .sub-text {
+    //   p {
+    //     font-size: 16px;
+    //     line-height: 160%;
+    //   }
+    // }
+  }
+
+  .section-2 {
+    .text {
+      max-width: 288px;
+    }
+  }
+
+  .home-page {
+    .section-3 {
+      .text-box {
+        padding: 60px 60px 65px;
+      }
+      .bg-section {
+        left: 540px;
+        top: -68px;
+        width: 650px;
+        height: 437px;
+      }
+      .h3 {
+        max-width: 180px;
+      }
+    }
+  }
+
+  .section-4 {
+    .h3 {
+      max-width: 380px;
+    }
+  }
+}
+
+.page-id-16789 .section-1,
+.page-id-19901 .section-1,
+.page-id-30749 .section-1,
+.page-id-22079 .section-1,
+.postid-16966 .section-1,
+.postid-17023 .section-1,
+//https://icoda.io/de/services/
+.page-id-3823 .section-1,
+.page-id-22068 .section-1,
+.page-id-5720 .section-1,
+.page-id-8397 .section-1,
+.page-id-9154 .section-1,
+.single .section-1 {
+  padding-bottom: 0;
+}
+.postid-17023 .section-1 {
+  padding-top: 50px;
+}
+
+.postid-17023 .fin-promotion-page .section-masonry-gray {
+  padding-top: 75px;
+}

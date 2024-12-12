@@ -1,0 +1,112 @@
+//-------------bootstrap----------------
+
+@import "../sources/bootstrap-4.1.1/scss/bootstrap-reboot";
+@import "../sources/bootstrap-4.1.1/scss/bootstrap-grid";
+@import "../sources/bootstrap-4.1.1/scss/bootstrap";
+
+//-------------slider slick-------------
+
+@import "slick";
+@import "slick-theme";
+
+//-------------ui kit-------------------
+@import "mixins";
+@import "vars";
+@import "fonts";
+@import "typography";
+@import "button";
+@import "form";
+
+//-------------module-------------------
+
+@import "header";
+@import "service-card";
+@import "project-card";
+@import "map-card";
+@import "table";
+@import "modal";
+@import "slider";
+@import "footer";
+@import "temp"; //my create
+@import "common";
+
+//-------------blocks-------------------
+@import "blocks";
+
+//-------------pages--------------------
+
+@import "about-page";
+@import "article-page";
+@import "author-page";
+@import "careers-page";
+@import "case-page";
+@import "contact-page";
+@import "custom";
+@import "department-pages";
+@import "download-page";
+@import "events-page";
+@import "general";
+@import "home-page";
+
+@import "pages/fin-promotion-page"; //my
+@import "for-delete"; //my
+@import "redesign";
+@import "pages/page-about";
+@import "pages/page-partners";
+@import "pages/single-post";
+@import "pages/single-portfolio-case";
+@import "pages/page-partfolio";
+@import "pages/template-default";
+@import "pages/archive";
+@import "pages/page-404";
+@import "pages/faq";
+@import "pages/page-feedback";
+
+//-------------templates-parts--------------------
+@import "template-parts/section-fonts";
+@import "template-parts/section-color-styles";
+@import "template-parts/section-logotypes";
+@import "template-parts/section-steps";
+@import "template-parts/section-form";
+@import "template-parts/first-section";
+@import "template-parts/section-seo";
+@import "template-parts/section-partners";
+@import "template-parts/section-tech";
+@import "template-parts/section-icons";
+@import "template-parts/crypto-exchanges";
+@import "template-parts/bc-block";
+@import "template-parts/sidebar-blog";
+@import "template-parts/sidebar-single";
+
+//-------------components--------------------
+@import "components/article"; //second-main
+@import "components/banner";
+@import "components/base"; //second-main
+@import "components/burger";
+@import "components/cases-new";
+@import "components/companies-page"; //second-main
+@import "components/company-card"; //second-main
+@import "components/company"; //second-main
+@import "components/error-companies"; //second-main
+@import "components/events"; //second-main
+@import "components/form-contact";
+@import "components/home"; //second-main
+@import "components/leadership-card";
+@import "components/meet-up";
+@import "components/mega-menu";
+@import "components/news"; //second-main
+@import "components/partners-logo";
+@import "components/products"; //second-main
+@import "components/reliable-resources";
+@import "components/search"; //second-main
+@import "components/section-hero";
+@import "components/section-reward";
+@import "components/section-testimonials";
+@import "components/services-home-section"; //second-main
+@import "components/sitemap"; //second-main
+@import "components/social-chanels";
+@import "components/paginate-container";
+@import "components/accordion";
+@import "components/list-social";
+@import "components/tags";
+@import "components/tooltips";

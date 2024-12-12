@@ -1,0 +1,22 @@
+/*  crypto_exchanges    */
+.crypto_exchanges {
+    display: flex;
+    flex-direction: column;
+}
+
+.crypto_exchanges table thead th:nth-child(2) {
+    max-width: 133px;
+    min-width: 130px;
+}
+.crypto_exchanges table thead th:nth-child(5) {
+    max-width: 137px;
+    min-width: 130px;
+}
+
+.table.table--lite thead tr {
+    border-bottom: none;
+}
+
+.table.table--lite tbody tr:nth-of-type(2n) {
+    background-color: transparent;
+}

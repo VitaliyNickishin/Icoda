@@ -1,0 +1,118 @@
+.section-steps {
+	padding: 80px 0;
+	.wr-line-steps {
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+    justify-content: space-between;
+    @include mediaMax(768) {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 30px;
+    }
+    @include mediaMin(768) {
+      &:before {
+        content: '';
+        width: 775px;
+        height: 42px;
+        background: url(../images/bg-section-steps.svg) 0 0 no-repeat;
+        position: absolute;
+        bottom: 35px;
+        left: 50%;
+        -ms-transform: translate(-50%,0);
+        transform: translate(-50%,0);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        width: 1920px;
+        height: 2px;
+        bottom: 35px;
+        left: 50%;
+        transform: translate(-50%,0);
+        background: linear-gradient(90deg,rgba(60,97,226,0) 15.63%,#3c61e2 50.01%,rgba(60,97,226,0) 85.08%);
+      }
+    }
+	}
+	.des-step {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    position: relative;
+    @include mediaMax(768) {
+      text-align: left;
+    }
+    @include mediaMin(768) {
+      
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 38px;
+        -ms-transform: translate(-50%,0);
+        transform: translate(-50%,0);
+        width: 3px;
+        background: linear-gradient(180deg,rgba(60,97,226,0) 0,#3c61e2 100%);
+      }
+    }
+	}
+	.num-step {
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 2px;
+    white-space: nowrap;
+    @include mediaMax(768) {
+      position: relative;
+      top: -11px;
+    }
+	}
+	.step-item {
+		display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    @include mediaMax(768) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    &:nth-of-type(2n) {
+      @include mediaMax(768) {
+        padding-top: 40px;
+      }
+      .des-step {
+        padding-bottom: 185px;
+        @include mediaMax(768) {
+          padding-bottom: 0;
+        }
+        &:before {
+          height: 128px;
+        }
+      }
+    } 
+		&:nth-of-type(2n+1) {
+      padding-top: 86px;
+      @include mediaMax(768) {
+        padding-top: 40px;
+      }
+      .des-step {
+        padding-bottom: 99px;
+        @include mediaMax(768) {
+          padding-bottom: 0;
+        }
+        &:before {
+          height: 42px;
+        }
+      }
+    }
+		// &:nth-of-type(4) {
+		// 	.num-step {
+		// 		position: relative;
+		// 		top: -11px;
+		// 	}
+		// }
+	}
+}

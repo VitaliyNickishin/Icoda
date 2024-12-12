@@ -1,0 +1,79 @@
+
+.paginateContainer {
+  margin-top: 16px;
+  display: block;
+  text-align: center;
+  order: 2;
+  
+  li {
+    display: inline-block;
+  }
+  .paginateAnchor {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 20px;
+    padding: 4px 12px;
+    background-color: #ddd;
+    color: #08c;
+    font-size: 16px;
+    min-width: 16px;
+    float: left;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:hover {
+      color: #fff;
+      background-color: #2ae;
+      border-top: 1px solid #2ae;
+      border-bottom: 1px solid #2ae
+    }
+  }
+  .paginatePrevious {
+    .paginateAnchor {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border: 1px solid #3c61e2;
+      font-size: 18px;
+      font-weight: bold;
+      &:hover {
+        border: 1px solid #2ae;
+      }
+    }
+  }
+  .paginateNext {
+    .paginateAnchor {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border: 1px solid #3c61e2;
+      font-size: 18px;
+      font-weight: bold;
+      &:hover {
+        border: 1px solid #2ae;
+      }
+    }
+  }
+  .paginateShowAllList {
+    display: none;
+  }
+  .paginateActive .paginateAnchor,
+  .paginateActive .paginateAnchor:hover {
+    color: #fff;
+    cursor: default;
+    background-color: #08c;
+    border-top: 1px solid #08c;
+    border-bottom: 1px solid #08c
+  }
+  .paginateDisabled .paginateAnchor,
+  .paginateDisabled .paginateAnchor:hover {
+    color: #bbb;
+    background-color: #eee;
+    cursor: default;
+    border: 1px solid #ddd
+  }
+}

@@ -1,0 +1,191 @@
+.popular-news-box {
+	// padding-bottom: 0;
+}
+
+#sitemap_authors {
+	display: none;
+}
+#sitemap_posts {
+	display: none;
+}
+
+.ttl-archive {
+	font: 700 60px/60px ProximaNova-Bold;
+    text-transform: uppercase;
+}
+
+.content-tab-pane {
+	.list-company-item {
+		align-items: unset;
+	}
+}
+//-------------blocks-------------------
+.title-descr_block {
+  table {
+    th, td {
+      font-size: 18px;
+    }
+  }
+	.post-negative-comments {
+		ol {
+			padding-left: 40px;
+			list-style-type: decimal;
+		}
+	}
+}
+.postid-3810 {
+	.article-page {
+		.section-grid-title-content {
+			margin-top: 0 !important;
+		}
+	}
+}
+
+
+.pb-10 {
+	padding-bottom: 96px;
+}
+//-------------_reser-bootstrap.scss-------------------
+dl, ol, ul{
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6{
+  margin: 0;
+}
+
+p{
+  margin-bottom: 0;
+}
+.btn{
+  outline: none;
+  &:focus{
+    outline: none;
+    box-shadow: none;
+  }
+}
+.card{
+  margin-top: 30px;
+}
+//-------------main.min.css-------------------
+
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+  }
+}
+
+//
+// Tabs
+//
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    @include border-radius($nav-pills-border-radius);
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}

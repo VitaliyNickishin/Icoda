@@ -1,0 +1,55 @@
+.error-companies {
+	.bg-section-1,
+	.bg-section-2,
+	.bg-section-3,
+	.bg-section-4,
+	.bg-section-5,
+	.bg-section-6,
+	.bg-section-7,
+	.bg-section-8 {
+		z-index: -1;
+	}
+	// .inner-box {
+	// 	@include mediaMin(992) {
+	// 		max-width: none;
+	// 	}
+	// }
+	.companies-list {
+		p {
+			&.ttl {
+				font: 300 24px/26px "ProximaNova-Light";
+				color: #000;
+				@include mediaMax(390) {
+					font-size: 22px;
+				}
+			}
+			text-align: left;
+		}
+		.related-companies-list {
+			@include mediaMax(1199) {
+				ul {
+					flex-wrap: wrap;
+				}
+			}
+		}
+		.post-item {
+			.post-item_inner {
+				overflow: hidden;
+				@include mediaMax(1199) {
+					max-width: 400px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+			@include mediaMax(1199) {
+				flex: 0 0 100%;
+				width: 100%;
+				max-width: 100%;
+				margin-bottom: 25px;
+			}
+		}
+	}
+	.section-title {
+		text-align: center;
+	}
+}

@@ -1,0 +1,48 @@
+.section-form {
+  padding-bottom: 80px;
+	.row-vert {
+    align-items: center;
+	}
+	.l-box {
+    display: flex;
+    max-width: 412px;
+    min-height: 360px;
+    padding-left: 8.333333333333%;
+		@include mediaMax(768) {
+			padding-left: 0;
+			min-height: auto;
+			padding-bottom: 40px;	
+		}
+		.text-vert {
+			display: flex;
+			flex-direction: column;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+		.h4 {
+			max-width: 233px;
+			padding-bottom: 25px;
+		}
+
+	}
+	.bg-line-left {
+    height: 360px;
+		@include mediaMax(768) {
+			display: none;
+		}
+	}
+	.wr-form {
+    padding-left: 50px;
+		@include mediaMax(768) {
+			padding-left: 0;
+		}
+	}
+	.form-default {
+		textarea.form-control {
+			min-height: 100px;
+			padding: 12px 15px 15px 15px;
+		}
+
+	}
+
+}

@@ -1,0 +1,51 @@
+.marketing-page,
+.fin-promotion-page {
+  .section-partners {
+    padding-bottom: 50px;
+    @include mediaMax(768) {
+      padding-bottom: 20px;
+    }
+    .vert-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      .text {
+        display: flex;
+        align-items: center;
+      }
+      .sub-text {
+        color: $color-dark-gray;
+        margin-left: 25px;
+        line-height: 145%;
+        @include mediaMax(768) {
+          margin-left: 15px;
+          font-size: 12px;
+        }
+      }
+    }
+    .list-logo {
+      padding: 0;
+      background: 0 0;
+      .list-logo-item {
+        flex: 1 0 25%;
+        width: 25%;
+        border: none;
+        display: flex;
+        margin-top: 50px;
+        padding: 0 10px;
+        @include mediaMax(768) {
+          width: 50%;
+          flex: 1 0 50%;
+        }
+      }
+      img {
+        margin: auto;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+}

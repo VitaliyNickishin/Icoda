@@ -1,0 +1,204 @@
+.events-page{
+  .section{
+    margin: 0;
+    padding: 0;
+  }
+  .section-1{
+    .bg-events{
+      background: url("../images/bg-event-s1.jpg") center 0 no-repeat;
+      background-size: cover;
+      width: 975px;
+      height: 700px;
+      transform: translate(0, -22px);
+    }
+    .breadcrumb{
+      margin: 0;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 93px;
+      background: $color-light-white;
+    }
+    .text {
+      margin-top: 57px;
+      max-width: 490px;
+    }
+    .h2{
+      max-width: 375px;
+    }
+    .sub-text {
+      margin-top: 27px;
+      margin-bottom: 0;
+      p{
+        padding-top: 10px;
+        &.bold{
+          padding-top: 38px;
+        }
+      }
+    }
+  }
+  .section-2{
+    padding-top: 43px;
+  }
+  .section-3{
+    margin-top: 80px;
+    overflow: hidden;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 45px;
+      left: 0;
+      right: 0;
+      bottom: 80px;
+      background: $color-light-white;
+    }
+    .l-box{
+      margin-top: 45px;
+      padding: 45px 65px;
+      width: 570px;
+      .h3{
+        padding: 10px 0;
+        & + p{
+          width: 235px;
+        }
+      }
+      .l-box-footer{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-top: 25px;
+        .btn{
+          margin-right: 25px;
+          min-width: 220px;
+        }
+      }
+    }
+    .bg-events{
+      background: url("../images/bg-event-s3.jpg") center 0 no-repeat;
+      background-size: cover;
+      width: 670px;
+      height: 447px;
+    }
+  }
+  .section-4{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    .h3{
+      margin: 0;
+      max-width: 260px;
+    }
+    .table{
+      margin-top: 16px;
+    }
+  }
+}
+
+
+
+// media
+
+@include media-breakpoint-down(sm) {
+  .events-page{
+    .section-1{
+      background: $color-light-white;
+      padding-bottom: 80px;
+      &:before {
+        display: none;
+      }
+      .text{
+        max-width: 100%;
+      }
+    }
+    .section-3{
+      background: url("../images/bg-event-s3.jpg") center 0 no-repeat;
+      background-size: cover;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .5);
+      }
+      .l-box{
+        width: 100%;
+        padding: 80px 0;
+        background: transparent;
+        margin: 0;
+        p{
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-only(xs) {
+  .events-page{
+    .section-3{
+      .l-box{
+        .l-box-footer{
+          align-items: flex-start;
+          flex-direction: column;
+          .btn{
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .theme-media-list {
+        padding: 22px 46px;
+      }
+    }
+  }
+}
+@include media-breakpoint-only(md) {
+  .events-page{
+    .section-3{
+      background: url("../images/bg-event-s3.jpg") center 0 no-repeat;
+      background-size: cover;
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .5);
+      }
+      .l-box{
+        width: 100%;
+        padding: 80px 0;
+        background: transparent;
+        margin: 0;
+        p{
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-only(lg) {
+  .events-page{
+    .section-1{
+      .bg-events{
+        width: 800px;
+        height: 576px;
+      }
+    }
+    .section-3{
+      &:before {
+        bottom: 93px;
+        background: $color-light-blue;
+      }
+      .l-box{
+        width: 480px;
+        padding: 45px 0;
+      }
+    }
+  }
+}

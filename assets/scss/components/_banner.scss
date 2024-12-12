@@ -1,0 +1,51 @@
+.section-banner {
+  padding: 142px 0 80px;
+  @include mediaMax(768) {
+    padding: 50px 0;
+  }
+  //old banner
+  .banner-box {
+    position: relative;
+    padding: 44px 47px;
+    padding-left: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    :before {
+      content: '';
+      position: absolute;
+      left: 51px;
+      bottom: 0;
+      background: url(../images/image-banner.svg) 0 0 no-repeat;
+      width: 296px;
+      height: 221px;
+    }
+  }
+  //update banner
+  .banner {
+    margin: auto;
+    padding: 44px 47px 44px 30px;
+    width: 920px;
+    max-width: 100%;
+    @include mediaMax(768) {
+      padding: 30px;
+    }
+    
+    &-img {
+      position: absolute;
+      left: 16px;
+      bottom: -60px;
+      @include mediaMax(768) {
+        position: relative;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    .btn.btn-blue {
+      @include mediaMax(991) {
+        min-width: 200px;
+      }
+    }
+    
+  }
+}

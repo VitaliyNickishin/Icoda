@@ -1,0 +1,86 @@
+.page-about {
+  
+  .section-team,
+  .section-partners,
+  .section-media {
+    padding-top: 120px;
+    @include mediaMax(991) {
+      padding-top: 60px;
+    }
+  }
+
+  .section-team {
+    .under-title {
+      max-width: 730px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .section-media {
+    .media-box {
+      display: flex;
+      align-items: center;
+      width: 645px;
+      margin-right: 130px;
+      @include mediaMax(767) {
+        width: 400px;
+        margin-right: 0;
+      }
+      @include mediaMax(550) {
+        width: 270px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    .media-img {
+      flex-shrink: 0;
+      max-width: 245px;
+      @include mediaMax(767) {
+       max-width: 155px;
+      }
+    }
+    .media-description {
+      padding: 30px 0 30px 30px;
+      font-size: 24px;
+      line-height: 130%;
+      color: $color-dark-blue;
+      @include mediaMax(767) {
+        padding: 20px;
+        font-size: 14px;
+      }
+      @include mediaMax(550) {
+        padding-left: 0;
+      }
+
+    }
+    .wr-control {
+      top: -57px;
+      @include mediaMax(767) {
+        top: -42px;
+      }
+    }
+  }
+
+  .meet-up {
+    padding-top: 200px;
+    @include mediaMax(767) {
+      padding-top: 60px;
+    }
+  }
+
+  .form-contact {
+    padding-top: 50px;
+    padding-bottom: 120px;
+    @include mediaMax(767) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .col-right {
+    @include mediaMax(767) {
+      padding-right: 0;
+    }
+  }
+}
+

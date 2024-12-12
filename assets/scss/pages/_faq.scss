@@ -1,0 +1,105 @@
+.faq-section {
+  padding-bottom: 90px;
+  @include mediaMax(991) {
+    padding-bottom: 50px;
+  }
+  // .title {
+  //   @include mediaMax(991) {
+  //     font-size: 1.5rem; //24px;  
+  //   }
+  // }
+  //input
+  .form-control {
+    padding: 12px 50px 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #E3DEF0;
+    // font-size: $small-font-size;
+    &:focus {
+      border: 2px solid #9f9eb1
+    }
+  }
+  .list-link {
+    line-height: 30px;
+  }
+  .search-btn {
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+  }
+  .codyshop-ajax-search {
+    p:first-child {
+      padding-top: 16px;
+    }
+  }
+  
+}
+.faq-form {
+  &>p {
+    font-size: 1.125rem;
+  }
+}
+
+.faq-block {
+  .title {
+    font-size: 1.5rem; //24px
+    color: #37384F;
+    @include mediaMax(768) {
+      font-size: .875rem; //14px
+    }
+  }
+}
+
+.support-card {
+  padding: 57px 10px 46px;
+  border: 1px solid #E3DEF0;
+  border-radius: 10px;
+  background: rgba(244, 246, 250, 0.5);
+  @include mediaMax(575) {
+    border-radius: 0;
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+  .title {
+    font-size: 3rem; //48px;
+    @include mediaMax(1440) {
+      font-size: 2.6rem; //42px;
+    }
+    @include mediaMax(1200) {
+      font-size: 2.2rem; //35px;
+    }
+    @include mediaMax(991) {
+      font-size: 1.5rem; //24px;
+      line-height: 1.5rem; //24px;
+    }
+  }
+  .wrap-img {
+    width: 326px;
+    @include mediaMax(991) {
+      width: 150px;
+    }
+  }
+}
+
+.r-0 {
+  right: 0
+}
+.t-0 {
+  top: 0;
+}
+.has-square-list {
+  @extend .d-flex;
+  @extend .align-items-center;
+  &:before {
+    content: "";
+    display: inline-block;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    background: $color-blue;
+    @include mediaMax(768) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

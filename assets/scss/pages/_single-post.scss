@@ -1,0 +1,513 @@
+.first-section .text .sub-text p,
+.section-1 .sub-text p,
+.section-with-gutenberg p,
+.section-with-gutenberg ul,
+.section-with-gutenberg ol {
+  font-size: 18px;
+  line-height: 170%;
+  color: $color-dark-blue;
+}
+
+.section-description {
+  .section-description-inner {
+    .text {
+      p {
+        @include mediaMax(991) {
+          padding-left: 0 !important;
+        }
+      }
+      img {
+        @include mediaMax(767) {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  &_padding-top {
+    padding-top: 20px;
+    &.section-description {
+      .h3 {
+        margin-bottom: 30px;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}
+.section-5 {
+  &.show-part {
+    .sub-text {
+      margin-top: 20px;
+    }
+  }
+}
+
+/* https://icoda.io/services/ieo-on-exchange/ */
+.postid-6898 {
+  .section-description {
+    .h3 {
+      @include mediaMax(767) {
+        padding-bottom: 0;
+      }
+    }
+    .section-description-inner {
+      &.bg-color-light-white {
+        @include mediaMax(767) {
+          background-color: transparent;
+        }
+      }
+      .text {
+        @include mediaMax(767) {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.section-banner {
+  .banner-box {
+    @include mediaMax(767) {
+      padding: 20px;
+    }
+    .h4 {
+      @include mediaMax(767) {
+        background: rgba(255, 255, 255, 0.4);
+        padding: 5px;
+      }
+      @include mediaMax(375) {
+        font-size: 19px;
+      }
+    }
+  }
+}
+
+.single-post {
+  .custom-table {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  table {
+    h3 {
+      margin: 0;
+    }
+  }
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid #8a9ab5;
+  }
+
+  .list-of-exchanges {
+    .text {
+      margin-left: -10px;
+      margin-right: -10px;
+      max-width: 100%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      @include mediaMax(991) {
+        justify-content: start;
+      }
+      img {
+        margin: 10px;
+        width: 140px;
+        // height: 50px;
+        // @include mediaMax(767) {
+        //   width: 90px;
+        //   height: auto;
+        // }
+      }
+    }
+    .section-description-inner {
+      @include mediaMax(767) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  //redisign single post
+  .article-date {
+    margin-top: 10px;
+    color: #aabde7;
+  }
+  .article-main-content {
+    a {
+      color: $color-blue;
+    }
+  }
+  &__list-social {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    @include mediaMax(991) {
+      margin-top: 0;
+    }
+  }
+  &__sidebar {
+    margin-bottom: 100px;
+    @include mediaMax(991) {
+      margin-bottom: 0;
+    }
+  }
+  .title-descr_block {
+    @include mediaMin(992) {
+      padding-top: 40px;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $color-dark-blue;
+      line-height: 165%;
+      @include mediaMax(991) {
+        line-height: 130%;
+      }
+    }
+    h1 {
+      font-size: 2.25rem;
+      @include mediaMax(991) {
+        font-size: 1.875rem;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  .section-with-gutenberg {
+    padding-top: 20px;
+  }
+  .related-articles {
+    background-color: transparent;
+
+    // .articles-list {
+    //   @include mediaMax(768) {
+    //     margin-left: -1rem;
+    //     margin-right: -1rem;
+    //   }
+    // }
+    .author-article {
+      @include mediaMax(768) {
+        padding: 0;
+      }
+      .cases-card-content {
+        @include mediaMax(768) {
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}
+
+//table for single post
+.single-table {
+  @extend .bg-light;
+  padding: 20px;
+  td {
+    padding: 3px;
+  }
+  th,
+  td {
+    @extend .border-0;
+    font-size: 1.125rem;
+    color: $color-dark-blue;
+  }
+  tr {
+    &:first-child {
+      td {
+        font-size: 0.875rem;
+        color: $color-dark-gray;
+      }
+    }
+    td {
+      &:first-child {
+        width: 60px;
+      }
+    }
+  }
+}
+
+.section-with-gutenberg {
+  h1 {
+    margin-bottom: 10px;
+    font-size: 2.25rem;
+    @include mediaMax(991) {
+      font-size: 1.875rem;
+    }
+  }
+  h2 {
+    margin-top: 80px;
+    font-size: 2rem;
+    @include mediaMax(991) {
+      margin-top: 60px;
+    }
+  }
+  h3 {
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $f-sto-r;
+    color: $color-dark-blue;
+    line-height: 165%;
+    @include mediaMax(991) {
+      line-height: 130%;
+    }
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .wp-block-table,
+  p {
+    margin-bottom: 20px;
+  }
+  .counting-title {
+    counter-reset: counter-title;
+    h2,
+    h3 {
+      &:not(:first-child) {
+        margin-top: 40px;
+      }
+      &::before {
+        counter-increment: counter-title;
+        content: counter(counter-title);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 58px;
+        font-size: 2.75rem;
+        background-color: $color-blue;
+        color: $white;
+        margin-right: 30px;
+      }
+      &.without-number {
+        &::before {
+          content: "";
+          display: inline-flex;
+          align-items: center;
+        }
+      }
+    }
+
+    // .wp-block-image {
+    //   margin-bottom: 40px;
+    // }
+  }
+  > img {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  dl,
+  ol,
+  ul {
+    margin: 20px 0 40px;
+    list-style-type: initial;
+    padding-left: 20px;
+  }
+  strong {
+    font-family: $f-sto-m;
+  }
+  .wp-block-group {
+    p {
+      margin-bottom: 0;
+      + p {
+        margin-top: 10px;
+      }
+    }
+  }
+  .wp-block-group,
+  .wp-block-embed {
+    margin-bottom: 40px;
+  }
+  .wp-block-embed {
+    iframe {
+      width: 100%;
+    }
+  }
+  .is-type-video {
+    iframe {
+      @include mediaMin(991) {
+        height: 400px;
+      }
+    }
+  }
+
+  .wp-block-image {
+    margin: 20px 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .wp-block-quote {
+    border-left: 13px solid $color-blue;
+    padding-left: 40px;
+    font-weight: 400;
+    margin: 60px 10px 60px 40px;
+    @include mediaMax(991) {
+      margin: 40px 0;
+    }
+    p {
+      font-family: inherit;
+      font-size: inherit;
+      font-style: inherit;
+      line-height: 130%;
+    }
+    &.short-quote {
+      max-width: 375px;
+    }
+  }
+  .has-bg-padding {
+    padding: 40px;
+    @extend .bg-light;
+    @include mediaMax(991) {
+      padding: 20px;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+    }
+    .has-bg-padding {
+      padding: 0;
+    }
+  }
+}
+//autohor's banner
+.speak-to-an-expert-banner {
+  border-radius: 10px;
+  background-color: $color-light-white;
+  padding: 40px 25px;
+  margin-bottom: 50px;
+  @at-root .sidebar-single & {
+    padding: 30px 20px 30px 30px;
+  }
+}
+
+.speak-to-an-expert__title {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+  font-family: $f-sto-r;
+  @at-root .sidebar-single & {
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
+.arrow-speak {
+  color: $color-blue;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  height: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  padding-left: 25px;
+  &:hover {
+    color: #3c4cd7;
+  }
+  .arrow-speak-icon {
+    position: relative;
+    top: -1px;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+  }
+  .icon-ico-media-4 {
+    margin-right: 10px;
+  }
+}
+
+.section-description,
+.section-list,
+.section-5 {
+  padding-bottom: 50px;
+}
+
+.pb-10 {
+  padding-bottom: 96px;
+}
+
+//https://icoda.io/services/bc-custom-blockchain-development/(en,ru,es,de)
+.postid-28804,
+.postid-8680,
+.postid-8534,
+.postid-2221,
+.postid-33357 {
+  .section {
+    .btn,
+    .marker-list li:before {
+      background-color: $accent;
+      border-color: $accent;
+    }
+  }
+  .first-section {
+    .text {
+      .t-section-1 {
+        @include mediaMax(1440) {
+          margin-top: 0;
+        }
+      }
+      .h5 {
+        @include mediaMax(1440) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .fin-promotion-page {
+    .section-masonry-gray {
+      .service-card {
+        min-height: auto;
+      }
+    }
+  }
+}
+//https://icoda.io/services/dedicated-marketing-team/(en,)
+.postid-35300 {
+  .section-masonry-gray {
+    .grid-item {
+      position: relative !important;
+      left: 0 !important;
+      top: 0 !important;
+    }
+  }
+  .service-card {
+    a {
+      color: $color-blue;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .grid-masonry {
+    margin-top: 0;
+    .col-second {
+      margin-top: 0;
+    }
+  }
+  .grid-sizer {
+    display: none;
+  }
+}

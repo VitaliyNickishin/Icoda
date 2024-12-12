@@ -1,0 +1,71 @@
+/*  Technologies We Work With   */
+/*  blog/blockchain-development-for-businesses-crypto-startups/   */
+.section-icons {
+  .nav-link {
+    font-size: 15px;
+    line-height: 100%;
+    color: $main-color-text;
+    opacity: 0.5;
+    padding-bottom: 12px;
+  }
+  img {
+    max-width: 70px;
+    max-height: 70px;
+    cursor: pointer;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    @include mediaMax(767) {
+      margin: 25px;
+    }
+    @include mediaMax(400) {
+      margin: 18px;
+    }
+    @include mediaMax(358) {
+      margin: 12px;
+    }
+    &:hover {
+      -webkit-filter: none;
+      filter: none
+    }
+    
+    @include mediaMin(992) {
+      margin-right: 3em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @include media(768, 991) {
+      margin-right: 0.9em;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  
+  }
+  .nav-link {
+    &.active {
+      color: $main-color-text;
+      opacity: 1;
+      background-color: transparent;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: $color-blue;
+        border-radius: 3px;
+      }
+    }
+  }
+  .tab-pane {
+    @include mediaMax(525) {
+      min-height: 335px;
+    }
+    @include mediaMax(325) {
+      min-height: 395px;
+    }
+  }
+} 

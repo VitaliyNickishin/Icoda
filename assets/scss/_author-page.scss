@@ -1,0 +1,139 @@
+.profile-box {
+	.profile-box_wrapper {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-top: 30px;
+		padding-bottom: 65px;
+		@include mediaMax(575) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.profile-avatar {
+			@include mediaMax(767) {
+				flex: 0 0 100%;
+    			max-width: 100%;
+    			margin-bottom: 35px;
+			}
+			img {
+				border-radius: 50%;
+				@include mediaMax(1199) {
+					width: 100% !important;
+					height: auto !important;
+				}
+				@include mediaMax(767) {
+					width: 255px !important;
+				}
+				@include mediaMax(575) {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+		.author-meta {
+			@include mediaMax(767) {
+				flex: 0 0 100%;
+    			max-width: 100%;
+			}
+		}
+		.author-name {
+			margin-bottom: 10px;
+			font-size: 28px;
+			line-height: 100%;
+			color: #2D344D;
+			font-weight: 600;
+
+		}
+		.position {
+			color: #8A9AB5;
+			font-size: 13px;
+			line-height: 100%;
+		}
+		.additional-meta-items {
+			margin-top: 25px;
+			.item-conferences {
+
+			}
+			.additional-field {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				margin-bottom: 20px;
+				@include mediaMax(767) {
+					flex-direction: column;
+				}
+				&.item-description {
+					p {
+						margin-bottom: 10px;
+					}
+				}
+			}
+			.item-name {
+				flex: 0 0 15%;
+				width: 15%;
+				font-size: 13px;
+				line-height: 150%;
+				color: #8A9AB5;
+				@include mediaMax(767) {
+					flex: 0 0 100%;
+					width: 100%;
+				}
+			}
+			.item-value {
+				flex: 0 0 85%;
+				width: 85%;
+				font-size: 13px;
+				color: #383737;
+				line-height: 150%;
+				@include mediaMax(767) {
+					flex: 0 0 100%;
+					width: 100%;
+				}
+			}
+			.item-conferences {
+				.item-value {
+					font-weight: 600;
+					.nav-item {
+						&:after {
+							position: relative;
+							display: inline-block;
+							margin-right: 6px;
+							content: ', ';
+						}
+						&:last-child {
+							&:after {
+								content: "";
+							}
+						}
+					}
+				}
+			}
+			.item-social-media {
+				.item-name {
+					@include mediaMax(767) {
+						margin-bottom: 8px;
+					}
+				}
+				.item-value {
+					line-height: 100%;
+					a {
+						padding-top: 0;
+						font-size: 19px;
+						color: #8A9AB5;
+						transition: 0.3s;
+						&:hover {
+							color: #3C61E2;
+						}
+					}
+					.nav-item {
+						&:first-child {
+							a {
+								padding-left: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

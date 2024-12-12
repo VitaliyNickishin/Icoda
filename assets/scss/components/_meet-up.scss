@@ -1,0 +1,652 @@
+/* Let's meet up in */
+.meet-up {
+  .row {
+    padding: 0 80px;
+
+    @include mediaMax(1440) {
+      padding: 0;
+    }
+  }
+
+  .section-title {
+    font-size: 34px;
+    margin-bottom: 50px;
+    text-align: center;
+
+    @include mediaMax(767) {
+      font-size: 20px;
+      margin-bottom: 17px;
+    }
+    @include mediaMax(575) {
+      text-align: left;
+    }
+  }
+
+  // .list-countrys {
+  //   font-size: 18px;
+  //   line-height: 30px;
+  //   color: #18232F;
+
+  //   @include mediaMax(991) {
+  //     column-count: 2;
+  //     // -moz-column-count: 2;/* Firefox */
+  //     // -webkit-column-count: 2;/* Safari and Chrome */
+  //   }
+
+  //   @include mediaMax(767) {
+  //     font-size: 14px;
+  //     line-height: 18px;
+  //   }
+
+  //   li {
+  //     padding-bottom: 18px;
+  //   }
+
+  //   strong {
+  //     font-family: $f-sto-m;
+  //   }
+  // }
+
+  .map {
+    position: absolute;
+    margin-top: -330px;
+    z-index: -1;
+    @include mediaMax(1340) {
+      margin-top: -250px;
+    }
+    @include mediaMax(1100) {
+      margin-top: -190px;
+    }
+    @include mediaMax(767) {
+      margin-top: -90px;
+    }
+    @include mediaMax(540) {
+      left: -70px;
+    }
+    @include mediaMax(460) {
+      left: -120px;
+    }
+  }
+  &-inner {
+    position: relative;
+    height: 400px;
+    width: 1300px;
+    @include mediaMax(1340) {
+      width: 1100px;
+    }
+    @include mediaMax(991) {
+      height: 300px;
+      width: 700px;
+    }
+    @include mediaMax(767) {
+      width: 600px;
+    }
+    @include mediaMax(460) {
+      width: 530px;
+    }
+    @include mediaMax(374) {
+      width: 500px;
+    }
+  }
+}
+
+.location-info {
+  padding: 8px 20px;
+  position: absolute;
+  background-color: $white;
+  border-radius: 8px;
+  @include mediaMax(1440) {
+    padding: 6px 12px;
+  }
+  @include mediaMax(991) {
+    padding: 3px;
+    border-radius: 3px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    border: 5px solid transparent;
+    border-bottom-color: $white;
+  }
+
+  .title-city {
+    font-size: 16px;
+    line-height: 135%;
+    color: $color-dark-blue;
+    @include mediaMax(1440) {
+      font-size: 12px;
+    }
+    @include mediaMax(991) {
+      font-size: 8px;
+    }
+  }
+
+  .title-country {
+    font-size: 12px;
+    line-height: 135%;
+    color: $color-dark-gray;
+    @include mediaMax(1440) {
+      font-size: 10px;
+    }
+    @include mediaMax(991) {
+      font-size: 7px;
+    }
+  }
+
+  &-venezuela {
+    top: 255px;
+    left: 345px;
+    &::before {
+      left: 25px;
+      top: -10px;
+      @include mediaMax(460) {
+        left: 5px;
+        top: -9px;
+      }
+    }
+    @include mediaMax(1440) {
+      top: 255px;
+      left: 346px;
+    }
+
+    @include mediaMax(1340) {
+      top: 245px;
+      left: 289px;
+    }
+    @include mediaMax(1100) {
+      top: 305px;
+      left: 290px;
+    }
+    @include mediaMax(991) {
+      top: 128px;
+      left: 173px;
+    }
+    @include mediaMax(767) {
+      top: 188px;
+      left: 145px;
+    }
+    @include mediaMax(540) {
+      top: 185px;
+      left: 74px;
+    }
+    @include mediaMax(460) {
+      top: 150px;
+      left: 24px;
+    }
+    @include mediaMax(374) {
+      top: 138px;
+      left: 15px;
+    }
+    // svg {
+    //   position: absolute;
+    //   top: -33px;
+    //   left: 22px;
+    // }
+  }
+  &-poland-war {
+    top: 0px;
+    left: 705px;
+    &::before {
+      left: -10px;
+      bottom: 7px;
+      border: 5px solid transparent;
+      border-right-color: $white;
+      @include mediaMax(991) {
+        display: none;
+      }
+    }
+    @include mediaMax(1440) {
+      top: 10px;
+    }
+
+    @include mediaMax(1340) {
+      top: 35px;
+      left: 598px;
+    }
+    @include mediaMax(1100) {
+      top: 95px;
+    }
+    @include mediaMax(991) {
+      top: -10px;
+      left: 380px;
+    }
+    @include mediaMax(767) {
+      top: 62px;
+      left: 325px;
+    }
+    @include mediaMax(540) {
+      left: 255px;
+    }
+    @include mediaMax(460) {
+      top: 40px;
+      left: 167px;
+    }
+    @include mediaMax(374) {
+      top: 30px;
+      left: 151px;
+    }
+  }
+  &-poland-wro {
+    top: 56px;
+    right: 610px;
+    &::before {
+      right: 10px;
+      top: -10px;
+      border: 5px solid transparent;
+      border-bottom-color: #fff;
+      @include mediaMax(1440) {
+        right: 10px;
+        top: -10px;
+      }
+      @include mediaMax(1340) {
+        display: none;
+      }
+    }
+
+    // @include mediaMax(1440) {
+    //   top: 59px;
+    //   right: 610px;
+    // }
+
+    @include mediaMax(1340) {
+      top: 79px;
+      right: 517px;
+    }
+    @include mediaMax(1100) {
+      bottom: 220px;
+      top: auto;
+    }
+    @include mediaMax(991) {
+      bottom: 255px;
+      right: 330px;
+    }
+    @include mediaMax(767) {
+      bottom: 185px;
+      right: 280px;
+    }
+    @include mediaMax(540) {
+      right: 350px;
+    }
+    @include mediaMax(460) {
+      bottom: 205px;
+      right: 365px;
+    }
+    @include mediaMax(374) {
+      bottom: 215px;
+      right: 355px;
+    }
+  }
+  &-germany {
+    top: -30px;
+    left: 560px;
+    &::before {
+      left: 82px;
+      bottom: -9px;
+      border-top-color: #fff;
+      border-bottom-color: transparent;
+      @include mediaMax(1340) {
+        left: 52px;
+      }
+      @include mediaMax(991) {
+        left: 23px;
+      }
+    }
+
+    @include mediaMax(1440) {
+      left: 588px;
+      top: -20px;
+    }
+
+    @include mediaMax(1340) {
+      top: 10px;
+      left: 490px;
+    }
+    @include mediaMax(1100) {
+      top: 70px;
+    }
+    @include mediaMax(991) {
+      top: -26px;
+      left: 320px;
+    }
+    @include mediaMax(767) {
+      top: 46px;
+      left: 270px;
+    }
+    @include mediaMax(540) {
+      left: 200px;
+    }
+    @include mediaMax(460) {
+      top: 27px;
+      left: 110px;
+    }
+    @include mediaMax(374) {
+      top: 18px;
+      left: 100px;
+    }
+    // svg {
+    //   position: absolute;
+    //   top: -30px;
+    //   left: 20px;
+    // }
+  }
+  &-israel {
+    top: 130px;
+    left: 750px;
+
+    &::before {
+      left: -10px;
+      top: 7px;
+      border: 5px solid transparent;
+      border-right-color: $white;
+
+      @include mediaMax(991) {
+        left: -8px;
+      }
+
+      @include mediaMax(767) {
+        display: none;
+      }
+    }
+
+    @include mediaMax(1440) {
+      left: 750px;
+    }
+
+    @include mediaMax(1340) {
+      top: 137px;
+      left: 635px;
+    }
+
+    @include mediaMax(1100) {
+      top: 195px;
+    }
+
+    @include mediaMax(991) {
+      top: 52px;
+      left: 405px;
+    }
+
+    @include mediaMax(767) {
+      top: 126px;
+      left: 343px;
+    }
+
+    @include mediaMax(540) {
+      left: 273px;
+    }
+
+    @include mediaMax(460) {
+      top: 100px;
+      left: 185px;
+    }
+
+    @include mediaMax(374) {
+      top: 90px;
+      left: 167px;
+    }
+    // svg {
+    //   position: absolute;
+    //   top: -29px;
+    //   left: 59px;
+
+    // }
+  }
+  &-georgia {
+    top: 60px;
+    left: 780px;
+    &::before {
+      left: -10px;
+      bottom: 15px;
+      border: 5px solid transparent;
+      border-right-color: $white;
+
+      @include mediaMax(991) {
+        display: none;
+      }
+    }
+
+    @include mediaMax(1440) {
+      top: 70px;
+    }
+
+    @include mediaMax(1340) {
+      top: 85px;
+      left: 660px;
+    }
+    @include mediaMax(1100) {
+      top: 145px;
+    }
+    @include mediaMax(991) {
+      top: 18px;
+      left: 420px;
+    }
+    @include mediaMax(767) {
+      top: 95px;
+      left: 360px;
+    }
+    @include mediaMax(540) {
+      left: 290px;
+    }
+    @include mediaMax(460) {
+      top: 70px;
+      left: 200px;
+    }
+    @include mediaMax(374) {
+      top: 57px;
+      left: 180px;
+    }
+    // svg {
+    //   position: absolute;
+    //   top: 65px;
+    //   left: 9px;
+    //   @include mediaMax(374) {
+    //     top: 37px;
+    //     left: -22px;
+    //     width: 7px;
+    //   }
+    // }
+  }
+  &-japan {
+    top: 133px;
+    right: 180px;
+    &::before {
+      left: 74px;
+      top: -10px;
+      @include mediaMax(1340) {
+        left: 44px;
+      }
+    }
+
+    @include mediaMax(1340) {
+      top: 143px;
+      right: 150px;
+    }
+    @include mediaMax(1100) {
+      top: 203px;
+    }
+    @include mediaMax(991) {
+      top: 63px;
+      right: 80px;
+    }
+    @include mediaMax(767) {
+      top: 126px;
+      right: 76px;
+    }
+    @include mediaMax(540) {
+      right: 146px;
+    }
+    @include mediaMax(460) {
+      top: 102px;
+      right: 186px;
+    }
+    @include mediaMax(374) {
+      top: 92px;
+      right: 178px;
+    }
+    // svg {
+    //   position: absolute;
+    //   top: -28px;
+    //   left: 69px;
+    // }
+  }
+  &-antalya {
+    top: 113px;
+    left: 615px;
+    &::before {
+      left: 93px;
+      bottom: 40px;
+      border: 5px solid transparent;
+      border-left-color: #fff;
+      @include mediaMax(1440) {
+        left: 70px;
+        bottom: 25px;
+      }
+      @include mediaMax(1340) {
+        left: 71px;
+        bottom: 28px;
+      }
+      @include mediaMax(1100) {
+        display: none;
+      }
+    }
+    &.location-info {
+      @include mediaMin(1440) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    @include mediaMax(1440) {
+      top: 105px;
+      left: 633px;
+    }
+
+    @include mediaMax(1340) {
+      top: 122px;
+      left: 530px;
+    }
+    @include mediaMax(1100) {
+      top: 180px;
+      left: 530px;
+    }
+    @include mediaMax(991) {
+      top: 45px;
+      left: 343px;
+    }
+    @include mediaMax(767) {
+      top: 115px;
+      left: 290px;
+    }
+    @include mediaMax(540) {
+      left: 218px;
+    }
+    @include mediaMax(460) {
+      top: 96px;
+      left: 134px;
+    }
+    @include mediaMax(374) {
+      top: 85px;
+      left: 119px;
+    }
+  }
+
+  &-bali {
+    bottom: 40px;
+    right: 250px;
+    &::before {
+      left: 75px;
+      bottom: 55px;
+      border: 5px solid transparent;
+      border-bottom-color: #fff;
+      @include mediaMax(1440) {
+        left: 58px;
+        bottom: 42px;
+      }
+      @include mediaMax(1340) {
+        display: none;
+      }
+    }
+
+    @include mediaMax(1440) {
+      bottom: 50px;
+      right: 260px;
+    }
+
+    @include mediaMax(1340) {
+      bottom: 70px;
+      right: 220px;
+    }
+    @include mediaMax(1100) {
+      bottom: 10px;
+    }
+    @include mediaMax(991) {
+      bottom: 120px;
+      right: 140px;
+    }
+    @include mediaMax(767) {
+      bottom: 70px;
+      right: 120px;
+    }
+    @include mediaMax(540) {
+      right: 190px;
+    }
+    @include mediaMax(460) {
+      bottom: 103px;
+      right: 220px;
+    }
+    @include mediaMax(374) {
+      bottom: 118px;
+      right: 220px;
+    }
+  }
+  &-thailand {
+    bottom: 150px;
+    right: 350px;
+    &::before {
+      left: 98px;
+      bottom: 15px;
+      border: 5px solid transparent;
+      border-left-color: #fff;
+      @include mediaMax(1440) {
+        left: 68px;
+        bottom: 15px;
+      }
+      @include mediaMax(1340) {
+        display: none;
+      }
+    }
+
+    @include mediaMax(1440) {
+      bottom: 155px;
+      right: 350px;
+    }
+
+    @include mediaMax(1340) {
+      bottom: 155px;
+      right: 300px;
+    }
+    @include mediaMax(1100) {
+      bottom: 95px;
+    }
+    @include mediaMax(991) {
+      bottom: 175px;
+      right: 190px;
+    }
+    @include mediaMax(767) {
+      bottom: 120px;
+      right: 160px;
+    }
+    @include mediaMax(540) {
+      bottom: 120px;
+      right: 230px;
+    }
+    @include mediaMax(460) {
+      bottom: 150px;
+      right: 263px;
+    }
+    @include mediaMax(374) {
+      bottom: 160px;
+      right: 255px;
+    }
+  }
+}

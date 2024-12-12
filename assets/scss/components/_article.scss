@@ -1,0 +1,47 @@
+.article-inner {
+	&.article-inner-common {
+		p {
+			color: #333;
+		}
+	}
+	ul {
+		li {
+			color: #333;
+		}
+	}
+}
+.layout-col-2 {
+	.article-section-body {
+		.text {
+			p {
+				color: #333;
+			}
+		}
+	}
+}
+
+.layout-col-1 {
+	.article-section-body {
+		.text {
+			p {
+				color: #333;
+			}
+		}
+	}
+}
+.article-section-body {
+	.text {
+		p {
+			color: #333;
+		}
+	}
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 20px;
+		color: #333;
+	}
+}
+.article-section-footer {
+	.kksr-legend {
+		display: none;
+	}
+}

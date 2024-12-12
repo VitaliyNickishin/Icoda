@@ -1,0 +1,248 @@
+.home-section-1 {
+	.title__h1 {
+		font: 700 60px/60px 'ProximaNova-Bold';
+    	text-transform: uppercase;
+	}
+	.title__h1,
+	.h2 {
+		// max-width: 640px;
+		max-width: 620px;
+		margin-bottom: 22px;
+		font-size: 52px;
+		@include mediaMax(767.98) {
+			line-height: 1;
+			margin-bottom: 12px;
+			font-size: 46px;
+		}
+	}
+	.ttl {
+		@include mediaMax(767.98) {
+			// margin-top: 205px;
+		}
+	}
+	.container {
+		@include mediaMax(767.98) {
+			background-position: center;
+		}
+	}
+	.form-search-card {
+		@include mediaMax(767.98) {
+			margin-top: 320px;
+		}
+	}
+}
+.home-section-3 {
+	.container {
+		@include mediaMax(767.98) {
+			padding-top: 200px;
+		}
+	}
+}
+
+.form-search-header {
+	position: relative;
+	.budget-dropdown {
+		display: none;
+		position: absolute;
+		top: 41px;
+		left: 32%;
+		flex-direction: column;
+		width: 355px;
+		padding: 18px 16px;
+		background-color: #fff;
+		border: 1px solid #d8e1fc;
+		z-index: 2;
+		@include mediaMax(991) {
+			top: 122px;
+			left: 0;
+		}
+		@include mediaMax(767) {
+			top: 133px;
+		}
+		@include mediaMax(515) {
+			width: 100%;
+		}
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+		  -webkit-appearance: none;
+		  margin: 0;
+		}
+		/* Firefox */
+		input[type=number] {
+		  -moz-appearance: textfield;
+		}
+
+		.range-bar {
+			padding: 0 20px;
+		}
+		.prive-nav-fields {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 16px;
+		}
+		.price-values {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 8px;
+			span {
+				font-size: 12px;
+				color: #b8b8b8;
+			}
+		}
+		.price-range-field{
+			width:20%; 
+			min-width: 16%;
+			background-color:#fff; 
+			color: #000; 
+			height:26px; 
+			padding:5px;
+			font-size: 14px;
+			text-align: center;
+		}
+		.ui-widget-header {
+			background: #E50000;
+		}
+		.ui-widget {
+			font-size: 0.3em;
+		}
+		.ui-widget-content {
+			background: #000;
+		}
+		.ui-state-default, 
+		.ui-widget-content .ui-state-default, 
+		.ui-widget-header .ui-state-default, 
+		.ui-button, 
+		.ui-button.ui-state-disabled:hover, 
+		.ui-button.ui-state-disabled:active {
+			font-size: 2.78em;
+			top: -7px;
+			border: 1px solid #fff;
+			background: #E50000;
+			border-radius: 50%; 
+		}
+		.ui-slider-handle:hover,
+		.ui-slider-handle:active,
+		.ui-slider-handle:focus {
+			outline: 0;
+		}
+	}
+	.service-dropdown {
+		display: none;
+		position: absolute;
+		top: 41px;
+		left: 0;
+		flex-direction: column;
+		width: 100%;
+		padding: 33px;
+		background-color: #fff;
+		border: 1px solid #d8e1fc;
+		z-index: 999;
+		@include mediaMax(991) {
+			padding: 20px;
+		}
+		.service-dropdown_inner {
+			.services-dropdown-list {
+				columns: 4;
+				@include mediaMax(991) {
+					columns: 2;
+				}
+				@include mediaMax(462) {
+					columns: 1;
+				}
+				.service-parent {
+					margin-bottom: 20px;
+					@include mediaMax(991) {
+						margin-bottom: 12px;
+					}
+					.service-parent-ttl {
+						margin-bottom: 8px;
+						font-family: 'ProximaNova-Bold';
+						font-size: 20px;
+						text-transform: uppercase;
+						@include mediaMax(991) {
+							margin-bottom: 5px;
+							font-size: 18px;
+						}
+					}
+					ul.children {
+						> li {
+							margin-bottom: 5px;
+							@include mediaMax(991) {
+								margin-bottom: 2px;
+							}
+						}
+					}
+					a {
+						position: relative;
+						display: inline-block;
+						padding-left: 28px;
+						color: #000;
+						@include mediaMax(991) {
+							font-size: 15px;
+						}
+						&:before {
+							position: absolute;
+							left: 0;
+							top: 3px;
+							height: 18px;
+							width: 18px;
+							padding: 1px 2px 0;
+							font-size: 11px;
+							display: block;
+							content: " ";
+							background-color: #fff;
+							font-family: "Font Awesome 5 Pro";
+							font-weight: 700;
+							border: 2px solid #cfdbed;
+							color: #fff;
+							line-height: 1;
+						}
+						&:hover {
+							@include mediaMin(992) {
+								&:before {
+									content: "\f00c";
+									background-color: #e60000;
+									border-color: #e60000;
+								}
+							}
+						}
+						&.active {
+							&:before {
+								content: "\f00c";
+								background-color: #e60000;
+								border-color: #e60000;
+							}
+						}
+						&:hover,
+						&:focus,
+						&:active {
+							text-decoration: none;
+							outline: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.home-section-5 {
+	.container {
+		@include media(768,991) {
+			margin-top: 55px;
+			padding-top: 75px;
+		}
+		@include mediaMax(767) {
+			padding-top: 240px;
+		}
+		@include mediaMax(572) {
+			padding-top: 50vw;
+		}
+	}
+}
+
+@include mediaMax(991) {
+	.form-search-card {
+
+	}
+}

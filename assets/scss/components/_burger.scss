@@ -1,0 +1,82 @@
+.burger {
+  min-width: 88px;
+  padding: 14px 12px 14px 24px;
+  height: 32px;
+  position: relative;
+  z-index: 3;
+  // @at-root .lang-ru & {
+  //   width: 105px;
+  // }
+  @include mediaMax(991) {
+    min-width: 36px;
+    padding: 7px;
+    @at-root .lang-ru & {
+      width: 36px;
+    }
+  }
+  .line {
+    left: 12px;
+    @include mediaMax(991) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .line,
+  .line:before,
+  .line:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    width: 14px;
+    height: 2px;
+    background-color: $main-color-text;
+    @include mediaMax(991) {
+      width: 18px;
+    }
+  }
+
+  .line::before,
+  .line::after {
+    content: '';
+    display: block;
+    transition: 0.2s;
+  }
+
+  .line::before {
+    transform: translateY(-5px);
+  }
+
+  .line::after {
+    transform: translateY(5px);
+  }
+
+  .text-menu {
+    font-family: $f-sto-m;
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $main-color-text;
+    @include mediaMax(991) {
+      display: none;
+    }
+  }
+
+  &_active {
+    .line {
+      height: 0;
+
+      &:before {
+        transform: rotate(-45deg);
+        transform-origin: center;
+      }
+
+      &:after {
+        transform: rotate(45deg);
+        transform-origin: center;
+      }
+    }
+  }
+}

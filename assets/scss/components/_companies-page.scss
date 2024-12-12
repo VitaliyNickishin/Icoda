@@ -1,0 +1,81 @@
+.wpcf7-form {
+	div.service-list {
+		a.dropdown-item {
+			padding: 6px 17px;
+		}
+	}
+	div.country-list {
+		.dropdown-menu {
+			min-width: unset !important;
+			@include mediaMax(575) {
+				overflow: hidden;
+				max-width: 260px !important;
+			}
+			a.dropdown-item {
+				padding: 6px 17px;
+			}
+		}
+	}
+}
+
+.services-list {
+	margin-bottom: 20px;
+	margin-left: -5px;
+	margin-right: -5px;
+	a {
+		position: relative;
+		display: inline-block;
+		margin: 0 5px 7px;
+		padding: 4px 14px 5px 35px;
+		background-color: #fff;
+		color: #000;
+		border: 2px solid #d8e2ee;
+		border-radius: 30px;
+		@include mediaMax(1199) {
+			margin: 0 0px 5px;
+			padding: 3px 12px 4px 30px;
+			font-size: 0.87rem;
+		}
+		@include mediaMax(525) {
+			font-size: 0.8rem;
+		}
+		&:before {
+			position: absolute;
+			left: 10px;
+			top: 7px;
+			height: 19px;
+			width: 19px;
+			padding: 2px 3px 0;
+			font-size: 12px;
+			display: block;
+			content: " ";
+			background-color: #f2f5fe;
+			font-family: "Font Awesome 5 Pro";
+			border: 1px solid #cfdbed;
+			color: #fff;
+			border-radius: 50%;
+			line-height: 1;
+			@include mediaMax(1199) {
+				left: 9px;
+				top: 6px;
+				height: 15px;
+				width: 15px;
+				font-size: 9px;
+			}
+		}
+		&:hover,
+		&.active {
+			border-color: #f0a1a5;
+			&:before {
+				content: "\f00c";
+				background-color: #e60000;
+			}
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			text-decoration: none;
+			outline: 0;
+		}
+	}
+}

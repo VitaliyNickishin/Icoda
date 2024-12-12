@@ -1,0 +1,21 @@
+.post-template-default {
+  .section {
+    ol {
+      list-style-type: auto;
+      padding-left: revert;
+    }
+
+  }
+}
+
+.section-block-editor {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  p {
+    span {
+      font-size: 15px;
+      line-height: 170%;
+      font-family: $f-sto-b;
+    }
+  }
+}

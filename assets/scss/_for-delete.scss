@@ -1,0 +1,36 @@
+.marketing-page,.content-production-page{
+  .section-masonry-gray{
+    .service-card{
+      height: 260px;
+    }
+    .service-card-footer{
+      margin-top: auto;
+    }
+  }
+}
+@include media-breakpoint-down(sm){
+  .marketing-page,.content-production-page{
+    .section-masonry-gray{
+      .service-card{
+        height: 289px;
+      }
+    }
+  }
+}
+@include media-breakpoint-only(xs){
+  .marketing-page,.content-production-page{
+    .section-masonry-gray{
+      .service-card{
+        height: auto;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-only(md){
+  .marketing-page{
+    .section-6{
+      padding-bottom: 80px;
+    }
+  }
+}

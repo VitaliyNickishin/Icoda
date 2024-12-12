@@ -1,0 +1,40 @@
+#wpseo_sitemap {
+	div {
+		> h3 {
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+	}
+	div:not(#sitemap_xml) {
+		> h3 {
+			background-color: #c9d1ea;
+			padding: 8px 20px 6px;
+			font-family: 'Roboto-Regular';
+			font-size: 18px;
+			text-transform: uppercase;
+			color: #000;
+			border-radius: 2px;
+			font-weight: 500;
+			a {
+				margin-top: 0;
+				font-family: 'Roboto-Regular';
+				color: #000;
+				font-size: 18px;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: 500;
+			}
+		}
+	}
+	ul {
+		padding: 15px;
+		li {
+			display: block;
+			margin-bottom: 15px;
+			a {
+				margin-top: 0;
+			}
+		}
+
+	}
+}

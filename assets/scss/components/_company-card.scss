@@ -1,0 +1,572 @@
+.company-card {
+	flex-direction: column;
+	padding: 35px 40px;
+	@include mediaMax(767) {
+		padding: 0px 15px;
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+	.company-card-box {
+		width: 100%;
+	}
+	.wr-img {
+		img {
+			max-width: 120px;
+		}
+	}
+	.company-card-logo {
+		margin-right: 42px;
+		padding: 8px 0 0 0;
+		@include mediaMax(767) {
+			margin-right: 20px;
+		}
+		.wr-img {
+			min-height: 133px;
+		}
+	}
+	.company-card-des {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.company-card-left {
+		flex: 0 0 calc( 100% - 280px );
+		width: calc( 100% - 280px );
+		@include mediaMax(991) {
+			flex: 0 0 100%;
+			width: 100%;
+		}
+	}
+	.company-profile {
+		display: flex;
+		flex: 0 0 260px;
+		width: 260px;
+		flex-direction: column;
+		align-items: center;
+		// justify-content: center;
+		justify-content: flex-end;
+		@include mediaMax(991) {
+			flex: 0 0 100%;
+			width: 100%;
+			justify-content: unset;
+			margin: 14px 0;
+		}
+		@include mediaMax(767) {
+			margin: 23px 0 15px;
+		}
+		a {
+			display: block;
+			width: 100%;
+			padding: 18px 15px;
+			background-color: #e60000;
+			color: #fff;
+			font-weight: 600;
+			text-align: center;
+			text-transform: uppercase;
+			line-height: 1;
+			@include mediaMax(767) {
+				padding: 15px;
+				font-size: 14px;
+			}
+			&:hover {
+				background-color: #ff0303;
+			}
+			&:hover,
+			&:active,
+			&:focus {
+				outline: 0;
+				text-decoration: none;
+			}
+		}
+	}
+	.company-card-meta {
+		padding-top: 6px;
+		@include mediaMax(767) {
+			display: block;
+			width: 100%;
+			padding-top: 15px;
+			padding-bottom: 2px;
+		}
+		>.info-row {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			@include mediaMax(767) {
+				margin-bottom: 10px;
+				justify-content: flex-start;
+				ul {
+					line-height: 0;
+				}
+			}
+		}
+		.company-headquarters {
+			margin-bottom: 10px;
+		}
+		p.header-ttl {
+			// width: 125px;
+			margin-right: 20px;
+			font-family: 'ProximaNova-Light';
+			font-size: 18px;
+			text-align: left;
+			@include mediaMax(767) {
+				font-size: 16px;
+				// font-weight: 600;
+				font-family: 'Roboto-Regular';
+			}
+		}
+		.flag-img {
+			margin-right: 0;
+		}
+		ul {
+			li {
+				display: inline-block;
+				margin-right: 7px;
+				&:last-child {
+					margin-right: 0;
+				}
+				.flag-img {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	.company-card-right {
+		display: flex;
+		// flex-direction: column;
+		flex-wrap: wrap;
+		flex: 0 0 280px;
+		width: 280px;
+		// align-items: flex-end;
+		// justify-content: space-between;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		line-height: 1;
+		@include mediaMax(991) {
+			flex: 0 0 100%;
+			width: 100%;
+			align-items: flex-start;
+		}
+	}
+	.company-item-country {
+		margin-bottom: 3px;
+		@include mediaMax(991) {
+			display: flex;
+		    flex: 0 0 33.33%;
+			margin-right: 0 !important;
+			margin-bottom: 10px;
+			justify-content: normal;
+		}
+		@include mediaMax(435) {
+			display: flex;
+		    flex: 0 0 50%;
+		}
+		&.country-select {
+			
+			
+	 	}
+	}
+	.company-meta {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-top: 5px;
+		@include mediaMax(767) {
+			margin-top: 2px;
+		}
+		@include mediaMax(465) {
+			flex-direction: column;
+			align-items: baseline;
+		}
+	}
+	.company-des-header {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		// justify-content: start;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 15px;
+		@include mediaMax(767) {
+			margin-bottom: 0;
+		}
+		ul.company-des-dop {
+			width: 100%;
+		}
+		.company-title {
+			margin-top: 5px;
+		}
+		.review {
+			position: relative;
+			margin-top: 21px;
+			padding-left: 45px;
+			@include mediaMax(767) {
+				margin-top: 14px;
+				padding-left: 35px;
+    			font-size: 14px;
+			}
+			&.status-reviewed {
+				&:before {
+					content: " ";
+					background-image: url(../images/finarm_reviews.png);
+					background-repeat: no-repeat;
+					width: 34px;
+					height: 34px;
+					line-height: 0;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					-webkit-transform: translate(0,-50%);
+					-ms-transform: translate(0,-50%);
+					transform: translate(0,-50%);
+					@include mediaMax(767) {
+						width: 24px;
+						height: 24px;
+						background-size: cover;
+					}
+				}
+			}
+		}
+		.status {
+			margin-top: 7px;
+			margin-left: 14px;
+			position: relative;
+			font: 14px 'Roboto-Regular';
+			padding-left: 32px;
+			@include mediaMax(767) {
+				padding-left: 25px;
+			}
+			@include mediaMax(465) {
+				margin-top: 10px;
+				margin-left: 0;
+			}
+			&.status-verified {
+				color: #688bef;
+				&:before {
+					content: "\f0a3";
+					font-family: "Font Awesome 5 Pro";
+					font-weight: 900;
+					font-size: 24px;
+					line-height: 0;
+					color: #688bef;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					-webkit-transform: translate(0,-50%);
+					-ms-transform: translate(0,-50%);
+					transform: translate(0,-50%);
+					@include mediaMax(767) {
+						font-size: 20px;
+					}
+				}
+				&:after {
+					content: "\f00c";
+					font-family: "Font Awesome 5 Pro";
+					font-weight: 900;
+					font-size: 12px;
+					line-height: 0;
+					color: #fff;
+					position: absolute;
+					left: 6px;
+					top: 50%;
+					-webkit-transform: translate(0,-50%);
+					-ms-transform: translate(0,-50%);
+					transform: translate(0,-50%);
+					@include mediaMax(767) {
+						font-size: 8px;
+					}
+				}
+			}
+		}
+		.company-rating {
+			margin-top: 7px;
+			span {
+				font-size: 20px;
+				@include mediaMax(767) {
+					font-size: 16px;
+				}
+			}
+			i {
+				margin-right: 2px;
+				&.fas {
+					color: #ffbc08;
+				}
+				&.far {
+					color: #d4d9e9;
+				}
+			}
+		}
+	}
+	.company-card-hdescr {
+		position: relative;
+		display: flex;
+		// width: calc(100% - 183px);
+		flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-between;
+		@include mediaMax(767) {
+			width: 100%;
+		}
+		.company-card-hleft {
+			display: block;
+			width: 100%;
+		}
+		.company-card-hright {
+			padding-top: 6px;
+			>.info-row {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				align-items: center;
+				@include mediaMax(767) {
+					margin-bottom: 10px;
+				}
+			}
+			.company-headquarters {
+				margin-bottom: 10px;
+			}
+			p.header-ttl {
+				width: 125px;
+				font-family: 'ProximaNova-Light';
+				font-size: 18px;
+				text-align: left;
+			}
+			ul {
+				li {
+					display: inline-block;
+					margin-right: 7px;
+					&:last-child {
+						margin-right: 0;
+					}
+					.flag-img {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	.company-des-body {
+		color: #a6a6a6;
+		font: 16px 'Roboto-Regular';
+		line-height: 26px;
+		@include mediaMax(767) {
+			padding-top: 0;
+			font-size: 15px;
+		}
+		p {
+			font-size: 16px;
+    		line-height: 26px;
+			margin-bottom: 0;
+				@include mediaMax(767) {
+				font-size: 15px;
+			}
+		}
+	}
+	li.service-item {
+		.service-label {
+			margin-bottom: 3px;
+			font-family: 'Roboto-Regular';
+			font-size: 15px;
+			color: #000;
+			text-decoration: none;
+			@include media(992, 1199) {
+				font-size: 13px;
+			}
+			@include mediaMax(991) {
+				font-size: 14px;
+			}
+			@include mediaMax(460) {
+				font-size: 12px;
+			}
+			&:before {
+				position: relative;
+				top: 1px;
+				margin-right: 6px;
+				font-size: 16px;
+				display: inline-block;
+				content: "\f00c";
+				font-family: Font Awesome\ 5 Pro;
+				color: #e60000;
+				font-weight: 700;
+				@include media(992,1199) {
+					font-size: 14px;
+				}
+				@include mediaMax(991) {
+					font-size: 15px;
+				}
+				@include mediaMax(460) {
+					font-size: 12px;
+				}
+			}
+		}
+		.service-budget {
+			@include mediaMax(1199) {
+				line-height: 1.2;
+			}
+			@include mediaMax(460) {
+				line-height: 0.9;
+			}
+		}
+	}
+	.link-bar {
+		@include mediaMax(767) {
+			margin-bottom: 25px;
+			padding-top: 2px;
+		}
+	}
+	.company-key-services {
+		display: flex;
+		flex-direction: column;
+		// flex-wrap: wrap;
+		flex: 0 0 100%;
+		width: 100%;
+		p.ttl {
+			margin-top: 20px;
+			margin-bottom: 5px;
+			font-family: 'ProximaNova-Bold';
+			font-size: 18px;
+			color: #000;
+			@include mediaMax(767) {
+				margin-top: 15px;
+				font-size: 16px;
+			}
+		}
+		ul {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			// columns: 4;
+			padding-right: 0;
+			.service-label {
+				margin-right: 22px;
+				// min-width: 45%;
+				// margin-bottom: 8px;
+				white-space: nowrap;
+				font-weight: 700;
+				@include mediaMax(1199) {
+					margin-right: 9px;
+				}
+				@include mediaMax(991) {
+					margin-bottom: 0;
+				}
+			}
+			li {
+				display: flex;
+				flex-direction: row;
+				margin-top: 0;
+				margin-bottom: 0;
+				// flex: 0 0 33.33%;
+				// width: 33.33%;
+				flex: 0 0 50%;
+				width: 50%;
+				@include media(992, 1199) {
+					flex: 0 0 calc(50% - 20px);
+					width: calc(50% - 20px);
+					margin-right: 20px;
+				}
+				@include mediaMax(991) {
+					flex: 0 0 calc(100% - 20px);
+					width: calc(100% - 20px);
+					margin-right: 20px;
+				}
+				@include mediaMax(767) {
+					flex: 0 0 100%;
+					width: 100%;
+					margin-right: 0;
+				}
+				@include mediaMax(460) {
+					margin-bottom: 5px;
+				}
+			}
+			a {
+				text-decoration: none;
+				font-size: 15px;
+				@include mediaMax(991) {
+					margin-bottom: 14px;
+				}
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			span {
+				font-size: 15px;
+				@include media(992, 1199) {
+					font-size: 13px;
+				}
+				@include mediaMax(991) {
+					font-size: 14px;
+				}
+				@include mediaMax(460) {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.company-des-footer {
+		padding-top: 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex: 0 0 100%;
+		width: 100%;
+		.company-key-services {
+			flex: 0 0 calc(100% - 260px);
+			width: calc(100% - 260px);
+			@include mediaMax(767) {
+				flex: 0 0 100%;
+				width: 100%;
+			}
+		}
+		.company-card-bottom {
+			flex: 0 0 260px;
+			width: 260px;
+			@include mediaMax(767) {
+				flex: 0 0 100%;
+				width: 100%;
+				margin-top: 0;
+			}
+		}
+	}
+	.company-card-bottom {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 20px;
+	}
+}
+
+.wr-flags {
+	@include mediaMax(991) {
+		display: flex;
+    	flex-wrap: wrap;
+    	margin-top: 12px;
+	}
+	ul.company-des-dop {
+		width: 100%;
+	}
+	.flag-img {
+		margin-right: 5px;
+	}
+	.company-item-country {
+		margin-right: 15px;
+		font-weight: 500;
+		font-size: 14px;
+		@include mediaMax(991) {
+			display: flex;
+		    flex: 0 0 50%;
+			margin-right: 0 !important;
+			margin-bottom: 10px;
+			justify-content: normal;
+		}
+		@include mediaMax(410) {
+			flex: 0 0 100%;
+		}
+	}
+}
+
+ul.company-des-dop {
+	list-style: none;
+}

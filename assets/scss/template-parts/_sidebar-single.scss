@@ -1,0 +1,122 @@
+.sidebar-single {
+  @include mediaMax(991) {
+    margin-top: 60px;
+  }
+  .table-of-content {
+    padding: 1.875rem;
+    li {
+      + li {
+        margin-top: 15px;
+      }
+    }
+    a {
+      font-size: 1rem;
+      color: $color-blue;
+      text-decoration: underline;
+    }
+    ol {
+      padding-left: 20px;
+      list-style-type: decimal;
+      // list-style-position: inside;
+      color: $color-blue;
+    }
+    ul {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      list-style-type: disc;
+      a {
+        color: $color-dark-blue;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__tags,
+  &__table,
+  &__rate,
+  &__editors-pick {
+    margin-top: 60px;
+  }
+
+  .tag-list {
+    margin-left: -3px;
+    margin-right: -3px;
+    li {
+      padding: 3px;
+    }
+    a {
+      // margin: 0;
+      padding: 12px;
+      font-size: 14px;
+      line-height: 100%;
+      background-color: $color-light-white;
+      color: $color-dark-blue;
+      border: 1px solid #e7edff;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      // border-radius: 3px;
+      // padding: 14px;
+      // border: 1px solid $color-light-gray;
+      // font-size: 14px;
+      // display: inline-block;
+      // color: $color-dark-gray;
+      // font-weight: 600;
+      &:hover {
+        color: #5a6a9b;
+      }
+    }
+  }
+
+  //stars
+  .kk-star-ratings {
+    display: flex;
+    flex-direction: column;
+    @include mediaMin(991) {
+      align-items: start;
+    }
+  }
+  //number of votes
+  .kksr-legend {
+    margin: 1.5rem 0 0;
+    color: #aabde7;
+  }
+
+  //editor's pick
+  .editors-pick-articles {
+    background-color: transparent;
+    .cases-card-content {
+      padding: 20px;
+      min-height: auto;
+      background-color: $color-light-white;
+    }
+    .articles-list {
+      .blog-img {
+        img {
+          height: 180px;
+        }
+      }
+    }
+    .author-article {
+      &:not(:last-child) {
+        margin-bottom: 1.25rem;
+      }
+      .cases-card-content {
+        .article-title {
+          a {
+            font-size: 20px;
+            color: $color-dark-blue;
+          }
+        }
+      }
+      .article-date {
+        margin-top: 0.75rem;
+        p {
+          color: #aabde7;
+        }
+      }
+    }
+  }
+}

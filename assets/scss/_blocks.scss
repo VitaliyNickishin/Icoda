@@ -1,0 +1,245 @@
+/* =WordPress Core
+-------------------------------------------------------------- */
+
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+  @include mediaMax(575) {
+    float: none;
+  }
+}
+
+a img {
+  &.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+  }
+  &.alignnone {
+    margin: 5px 20px 20px 0;
+  }
+  &.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+  }
+  &.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btn.btn-light-1 {
+  min-width: 255px;
+  max-width: 100%;
+  white-space: inherit;
+  background: transparent;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8a9ab5;
+  padding: 19px 44px;
+  border: 1px solid #c3d0f4;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.btn.btn-light-1:hover {
+  border: 1px solid #3c61e2;
+}
+
+img {
+  max-width: 100%;
+}
+
+.section-description-inner.bg-color-light-white img {
+  max-width: none;
+}
+/* END WordPress Core
+-------------------------------------------------------------- */
+
+.article-page .section.section-block-image {
+  margin-bottom: 50px;
+  background: #fafbfd;
+}
+
+ul.technologies-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include mediaMax(767) {
+    // justify-content: center;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 35px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include media(768, 991) {
+      margin-right: 23px;
+    }
+    @include mediaMax(767) {
+      // width: calc(122px - 15px);
+      // margin: 0 15px 12px 0;
+      width: 107px;
+      margin: 0 17px 40px 0;
+    }
+    @include mediaMax(515) {
+      width: 92px;
+      margin-right: 22px;
+      // width: calc( 122px - 30px );
+    }
+    .technology-image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.section-blockchain {
+  .title {
+    @include mediaMax(575) {
+      width: 250px;
+    }
+  }
+  .item-blockchain {
+    width: 485px;
+    @include mediaMax(1440) {
+      width: 445px;
+    }
+    @include mediaMax(1340) {
+      width: 365px;
+    }
+    @include mediaMax(1200) {
+      width: 315px;
+    }
+    @include mediaMax(991) {
+      width: 245px;
+    }
+  }
+  .cases-card {
+    min-height: 605px;
+  }
+  // .slick-track {
+  // 	width: auto!important;
+  // }
+  .cases-card-content {
+    min-height: 280px;
+    @include mediaMax(1340) {
+      min-height: 330px;
+    }
+    // @include mediaMax(991) {
+    // 	min-height: 450px;
+    // }
+  }
+}
+
+//-------------blocks-------------------
+
+.title-descr_block {
+  &.section-1 {
+    @at-root .single & {
+      padding-bottom: 50px;
+    }
+  }
+  table {
+    th,
+    td {
+      font-size: 18px;
+    }
+  }
+  .post-negative-comments {
+    ol {
+      padding-left: 40px;
+      list-style-type: decimal;
+    }
+  }
+  .sub-text {
+    & > p {
+      @include mediaMax(575) {
+        padding-left: 0 !important;
+      }
+    }
+  }
+  .wp-caption {
+    @extend .w-100;
+  }
+  img {
+    width: auto;
+    margin: auto;
+    display: block;
+  }
+  iframe {
+    max-width: 100%;
+  }
+}
+.postid-3810 {
+  .article-page {
+    .section-grid-title-content {
+      margin-top: 0 !important;
+    }
+  }
+}
+
+.perelinks {
+  &.section-1 {
+    @at-root .single & {
+      padding: 45px 65px 55px;
+      @include mediaMax(768) {
+        padding: 20px;
+      }
+    }
+    .sub-text {
+      margin-bottom: 0;
+    }
+  }
+  background: $color-light-white;
+  border: 1px solid #eee;
+
+  a {
+    color: $color-blue;
+  }
+  h3 {
+    font-size: 2.125rem;
+    line-height: 3.375rem;
+    color: $color-dark-blue;
+    @include mediaMax(768) {
+      font-size: 1.875rem;
+    }
+  }
+}
+
+.post-rate {
+  &-inner {
+    border: 2px solid #e8edfe;
+    min-height: 89px;
+  }
+  .kksr-legend {
+    // display: none;
+    font-size: 13px !important;
+  }
+}

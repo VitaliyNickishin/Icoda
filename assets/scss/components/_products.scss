@@ -1,0 +1,96 @@
+.home-section-2 {
+	.tab-content-common {
+		padding-top: 15px;
+	}
+	.content-tab-pane {
+		padding: 40px 40px 45px;
+		@include mediaMax(768) {
+			padding: 0;
+		}
+		.wr-btn {
+			margin-top: 30px;
+			padding-left: 0;
+			text-align: center;
+		}
+	}
+	.list-company-item {
+		.company-item-logo {
+			height: 96px;
+		}
+	}
+}
+
+.wr-nav-tab-common {
+	@include mediaMax(768) {
+		margin-right: 0;
+	}
+}
+
+.tabs-product {
+	.nav-tab-common {
+		@include mediaMax(768) {
+			margin-right: 0;
+		}
+		li {
+			margin-left: 0;
+		}
+		.nav-link {
+			display: inline-block;
+		    margin-right: 28px;
+		    margin-bottom: 5px;
+		    padding: 0;
+			background: none;
+		    color: #e60000;
+		    // text-decoration: underline;
+		    text-transform: unset;
+		    transition: 0.3s;
+		    border-bottom: 1px dotted #e60000;
+			>span {
+				// text-decoration: underline;
+			}
+		    @include mediaMax( 991 ) {
+				font-size: 14px;
+				margin-right: 14px;
+		    }
+			&.active {
+				background: none;
+				color: #e60000;
+			}
+			&:hover,
+			&:active,
+			&:focus {
+				color: #e60000;
+			}
+		}
+	}
+}
+.wr-product-tabs {
+	.company-item-logo {
+		-webkit-flex-grow: 0;
+		-ms-flex-positive: 0;
+		flex-grow: 0;
+		-webkit-flex-shrink: 0;
+		-ms-flex-negative: 0;
+		flex-shrink: 0;
+		-webkit-flex-basis: 92px;
+		-ms-flex-preferred-size: 92px;
+		flex-basis: 92px;
+		height: 96px;
+		border: 2px solid #e1e7f9;
+		background: #fff;
+	}
+	.company-item-des {
+	    padding-left: 14px;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: baseline;
+	    a.h5 {
+	    	font: 300 20px/22px 'ProximaNova-Light';
+	    }
+	    p:not([class]) {
+	    	color: #a6a6a6;
+		    font: 14px 'Roboto-Regular';
+		    padding-top: 12px;
+	    }
+	}
+}

@@ -1,0 +1,244 @@
+footer.footer {
+	z-index: 0;
+}
+.overlay-layer {
+	z-index: 1048;
+}
+@include mediaMax(991) {
+	.finarm_companies-template-default {
+		.overlay-layer {
+			z-index: 9999;
+			.wr-content {
+				z-index: 9999;
+			}
+			.finarm-loader {
+				display: none !important;
+			}
+		}
+		.modal-backdrop {
+			display: none !important;
+		}
+	}
+}
+.modal {
+	z-index: 99999;
+}
+.country-select {
+	.country-list {
+		max-height: 400px;
+		min-width: 255px;
+	}
+}
+.page-item.active .page-link {
+	z-index: 0;
+}
+.btn.btn-black {
+	width: auto;
+	min-width: 276px;
+	@include mediaMax(991) {
+		display: block;
+		max-width: 100%;
+    	overflow: hidden;
+		white-space: nowrap;
+    	text-overflow: ellipsis;
+	}
+	@include mediaMax(405) {
+		min-width: unset;
+	}
+}
+
+.wr-article-rating {
+	.article-rating {
+		> span {
+			padding-right: 15px;
+		}
+	}
+}
+
+.social-media-contacts {
+	padding-top: 15px;
+}
+
+@include mediaMin(1200) {
+	.wr-search {
+		left: 600px;
+	}
+}
+
+ul.country-list {
+	li {
+		&:first-child {
+			display: none;
+		}
+	}
+	.divider + li {
+		// display: none;
+		&:after {
+		    position: relative;
+		    top: 2px;
+		    content: "Select country";
+		}
+	}
+}
+p.red {
+	color: #e60000;
+}
+
+input#country {
+	padding-left: 45px;
+}
+
+.article-section-body {
+	img {
+		height: auto !important;
+	}
+}
+
+.news-card {
+	.card-text {
+		color: #333;
+	}
+}
+
+.company-card {
+	.company-des-body {
+		p {
+			color: #333;
+		}
+	}
+}
+.company-item-body {
+	.text {
+		p {
+			color: #333;
+		}
+	}
+}
+.wr-content-error {
+	.inner-box {
+		.wr-btn {
+			text-align: center;
+			a {
+				margin-bottom: 10px !important;
+			}
+		}
+	}
+}
+
+.content .first-screen:before,
+.bg-dots {
+	z-index: -1;
+}
+
+.tax-finarm_service .content {
+	padding-bottom: 80px;
+}
+
+.price-range-slider {
+	width:100%;
+	float:left;
+	padding:10px 20px;
+	.range-value {
+		margin:0;
+		input {
+			width:100%;
+			background:none;
+			color: #000;
+			font-size: 16px;
+			font-weight: initial;
+			box-shadow: none;
+			border: none;
+			margin: 20px 0 20px 0;
+		}
+	}
+	.range-bar {
+		border: none;
+		background: #000;
+		height: 3px;	
+		width: 96%;
+		margin-left: 8px;
+		.ui-slider-range {
+			background:#E50000;
+		}		
+		.ui-slider-handle {
+			border:none;
+			border-radius:25px;
+			background:#E50000;
+			border:0 !important;
+			height:17px;
+			width:17px;
+			top: -0.52em;
+			cursor:pointer;
+			&:hover,
+			&:active,
+			&:focus {
+				border: 0 !important;
+				outline: 0;
+				box-shadow: none;
+			}
+		}
+		.ui-slider-handle + span {
+			background:#E50000;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.wr-filter-companies .bootstrap-select .btn {
+		padding: 8px 17px; 
+		border-width: 2px;
+	}
+	.wr-filter-companies input,
+	.wr-filter-companies .bootstrap-select .btn {
+		background-color: #d8e1fc;
+	}
+	.wr-filter-companies .form-field {
+		margin-left: 0;
+	}
+}
+
+.container {
+	&.first-screen {
+		h1 {
+			margin: 0;
+			font: 700 60px/60px 'ProximaNova-Bold';
+    		text-transform: uppercase;
+    		@include mediaMax(767) {
+    			font-size: 30px;
+    			line-height: 0.9;
+    		}
+		}
+	}
+}
+
+.country-select {
+	.country-list { 
+		.country {
+			@include mediaMax(767) {
+				padding: 12px 10px;
+			}
+		}
+		.flag {
+			@include mediaMax(767) {
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+.wpcf7 {
+	.service-list {
+		.dropdown-menu,
+		.dropdown {
+			max-width: 330px;
+			min-width: 330px !important;
+			max-height: 331px !important;
+			@include mediaMax(1199) {
+				min-width: auto !important;
+			}
+			@include mediaMax(767) {
+				max-width: 100%;
+			}
+		}
+	}
+}

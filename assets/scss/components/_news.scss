@@ -1,0 +1,30 @@
+.home-section-4 {
+	.list-card {
+		margin-bottom: 30px;
+	}
+	.btn-list-event {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+}
+
+.wr-article {
+	#disqus_thread {
+		margin-top: 20px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.education-parent {
+	margin-top: 35px;
+	margin-bottom: 20px;
+}
+
+.wr-news-tabs {
+	.wr-nav-tab-common {
+		@include mediaMax(767) {
+			margin-right: 0;
+		}
+	}
+}

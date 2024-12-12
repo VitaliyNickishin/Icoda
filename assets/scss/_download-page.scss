@@ -1,0 +1,107 @@
+.download-page {
+  .section-1 {
+    padding-bottom: 97px;
+    .h2 {
+      line-height: 125%;
+    }
+    .sub-text {
+      margin-top: 25px;
+      margin-bottom: 35px;
+    }
+    .wr-btn {
+      display: flex;
+      align-items: center;
+      .onp-sl .onp-sl-social-buttons {
+        padding: 23px 17px;
+      }
+      .onp-sl .onp-sl-header,
+      .onp-sl .onp-sl-text .onp-sl-strong {
+        font-size: 16px;
+      }
+    }
+    .des-text-btn {
+      flex: 0 0 250px;
+      margin-left: 20px;
+      p {
+        font-size: 13px;
+        line-height: 21px;
+        opacity: 0.8;
+        color: $color-dark-gray;
+      }
+    }
+    .wr-img {
+      margin-top: 42px;
+      margin-left: -27px;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 785px;
+        height: 350px;
+        background: $color-light-white;
+        top: 50%;
+        left: 185px;
+        transform: translate(0, -50%);
+      }
+    }
+    ul {
+      @extend .marker-list;
+    }
+  }
+  .bg-book {
+    position: relative;
+    z-index: 1;
+    background: url("../images/img-book.png") 0 0 no-repeat;
+    background-size: cover;
+    width: 480px;
+    height: 507px;
+  }
+}
+
+// media
+
+@include media-breakpoint-down(sm) {
+  .download-page {
+    .section-1 {
+      padding-bottom: 80px;
+      .text {
+        margin-top: 80px;
+      }
+      .wr-btn {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .des-text-btn {
+        flex: 0 0 auto;
+        margin: 35px 0 0;
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .download-page {
+    .section-1 {
+      padding-bottom: 80px;
+      background: none;
+      .wr-btn {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .des-text-btn {
+        flex: 0 0 auto;
+        margin: 35px 0 0;
+      }
+      .wr-img {
+        &:after {
+          height: 300px;
+        }
+      }
+    }
+    .bg-book {
+      width: 400px;
+      height: 423px;
+    }
+  }
+}

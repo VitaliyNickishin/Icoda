@@ -1,0 +1,247 @@
+.page-feedback {
+  .breadcrumb {
+    margin-bottom: 2.5rem;
+    @include mediaMax(1440) {
+      margin-bottom: 1.25rem;
+    }
+  }
+  .title-main {
+    margin-bottom: 3.75rem;
+    @include mediaMax(1440) {
+      font-size: 1.75rem;
+      margin-bottom: 2.1875rem;
+    }
+    @include mediaMax(991) {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.section-feedback {
+  padding: 60px 0 150px;
+  background-color: $color-light-white;
+  @include mediaMax(1440) {
+    padding: 40px 0 100px;
+  }
+  @include mediaMax(991) {
+    padding: 24px 0 70px;
+  }
+  .question-list {
+    li {
+      + li {
+        @extend %set-indent;
+      }
+    }
+    label {
+      font-size: 1.125rem;
+      line-height: 140%;
+      color: #37384f;
+      margin-bottom: 1.25rem;
+      // @include media(991,1440) {
+      //   font-size: 1rem;
+      //   margin-bottom: 1rem;
+      // }
+      @include mediaMax(1440) {
+        font-size: 0.875rem;
+        margin-bottom: 0.625rem;
+      }
+    }
+    input,
+    textarea {
+      padding: 1rem 1.5rem;
+      width: 100%;
+      background: $white;
+      border: 1px solid #dfe5fa;
+      border-radius: 2px;
+      font-size: 0.75rem;
+      line-height: 150%;
+      @include media(991, 1440) {
+        padding: 0.625rem;
+      }
+      @include mediaMax(991) {
+        padding: 0.875rem;
+      }
+      &::placeholder {
+        color: #8a9ab5;
+      }
+    }
+  }
+  .recommendation,
+  .thanks,
+  .btn-wrap {
+    @extend %set-indent;
+  }
+  .recommendation,
+  .goal {
+    p {
+      font-size: 1.125rem;
+      @include mediaMax(991) {
+        font-size: 0.875rem;
+      }
+    }
+  }
+  .thanks {
+    font-size: 1.5rem;
+    color: $color-dark-blue;
+  }
+  .btn {
+    @include mediaMax(575) {
+      width: 100%;
+    }
+  }
+}
+
+.feedback-block {
+  border: 2px solid #dfe5fa;
+  border-radius: 3px;
+  padding: 2.5rem 3.75rem;
+  background-color: $color-light-white;
+  margin-bottom: 4.375rem;
+  @include media(991, 1440) {
+    padding: 1.25rem 1.75rem;
+    margin-bottom: 3.125rem;
+  }
+  @include mediaMax(991) {
+    margin-bottom: 1.875rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-color: $color-blue;
+  }
+  .chat-img {
+    margin-right: 4.375rem;
+    width: 100px;
+    @include media(991, 1440) {
+      width: 70px;
+      margin-right: 3.125rem;
+    }
+    @include mediaMax(991) {
+      width: 90px;
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+  }
+  .chat-text {
+    .title {
+      font-size: 1.5rem;
+      color: #2d344d;
+      @include media(991, 1440) {
+        font-size: 1.125rem;
+      }
+      @include mediaMax(991) {
+        font-size: 1.25rem;
+      }
+    }
+    .text {
+      @include media(991, 1440) {
+        font-size: 0.75rem;
+      }
+      @include mediaMax(991) {
+        font-size: 0.875rem;
+      }
+    }
+    p {
+      line-height: 170%;
+      @include mediaMax(991) {
+        line-height: 150%;
+        &:last-child {
+          line-height: 130%;
+        }
+      }
+    }
+  }
+}
+
+%set-indent {
+  margin-top: 3rem;
+  @include media(991, 1440) {
+    margin-top: 1.5rem;
+  }
+  @include mediaMax(1440) {
+    margin-top: 2rem;
+  }
+  @include mediaMax(991) {
+    margin-top: 1.875rem;
+  }
+}
+.goal {
+  @extend %set-indent;
+  &-list {
+    li {
+      + li {
+        margin-left: 1.25rem;
+        @include mediaMax(991) {
+          margin-left: 0.625rem;
+        }
+      }
+    }
+  }
+}
+.radio-toolbar {
+  input {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    &:checked + label {
+      background-color: $color-blue;
+      color: $white;
+    }
+    &:focus + label {
+      background-color: $color-blue;
+      color: $white;
+    }
+  }
+  label {
+    width: 240px;
+    max-width: 100%;
+    display: inline-block;
+    line-height: 100%;
+    background-color: $color-light-white;
+    padding: 23px;
+    font-size: 15px;
+    border: 2px solid #3c61e2;
+    border-radius: 3px;
+    transition: all 0.2s ease-out;
+    margin-bottom: 0;
+    text-align: center;
+    cursor: pointer;
+    @include mediaMax(991) {
+      width: 103px;
+      padding: 20px 10px;
+    }
+    @include mediaMax(374) {
+      width: 90px;
+      padding: 10px;
+    }
+    &:hover {
+      background-color: $color-blue;
+      color: $white;
+    }
+  }
+}
+.recommend-list {
+  li {
+    &:not(:last-child) {
+      margin-right: 1.875rem;
+    }
+  }
+  input {
+    &:checked + label {
+      background-color: transparent;
+      color: $color-blue;
+    }
+    &:focus + label {
+      background-color: transparent;
+      color: $color-blue;
+    }
+  }
+  label {
+    width: auto;
+    border: 0;
+    padding: 0;
+    color: #606060;
+    &:hover {
+      background-color: transparent;
+      color: $color-blue;
+    }
+  }
+}

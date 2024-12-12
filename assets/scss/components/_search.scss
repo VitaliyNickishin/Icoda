@@ -1,0 +1,59 @@
+body.search {
+	.card {
+		&.news-card {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin-bottom: 19px;
+			padding: 0;
+			.news-card-left {
+				flex: 0 0 25%;
+				width: 25%;
+				@include media(992,1199) {
+					flex: 0 0 35%;
+					width: 35%;
+				}
+				@include media(768,991) {
+					flex: 0 0 45%;
+					width: 45%;
+				}
+				@include mediaMax(767) {
+					flex: 0 0 100%;
+					width: 100%;
+				}
+			}
+			.card-des {
+				flex: 0 0 75%;
+    			width: 75%;
+    			padding-left: 20px;
+    			padding-right: 20px;
+    			@include media(992,1199) {
+					flex: 0 0 65%;
+					width: 65%;
+				}
+				@include media(768,991) {
+					flex: 0 0 55%;
+					width: 55%;
+				}
+				@include mediaMax(767) {
+					flex: 0 0 100%;
+					width: 100%;
+				}
+    			.card-footer {
+    				padding-bottom: 18px;
+    			}
+			}
+		}
+	}
+}
+
+.card-event { 
+	.card-event-body {
+		@include mediaMax(767.98) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

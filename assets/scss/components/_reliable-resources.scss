@@ -1,0 +1,13 @@
+.reliable-resources {
+  @include mediaMax(991) {
+    margin-right: -15px;
+  }
+  .social-chanels {
+    @include mediaMax(1200) {
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
