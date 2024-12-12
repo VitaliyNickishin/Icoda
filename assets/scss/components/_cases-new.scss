@@ -3,6 +3,24 @@
   @include mediaMax(991) {
     padding-bottom: 45px;
   }
+  .case-list {
+    sup {
+      font-size: 14px;
+      right: -1em;
+      top: -1.5rem;
+      color: #000000;
+    }
+    p {
+      font-size: 16px;
+      line-height: 180%;
+      color: #000000;
+      @include mediaMax(991) {
+        margin-top: 6px;
+        font-size: 14px;
+        line-height: 140%;
+      }
+    }
+  }
   &-descktop {
     @include mediaMax(991) {
       display: none;
@@ -13,71 +31,72 @@
         border-top: 1px solid rgba(45, 52, 77, 0.1);
         border-bottom: 1px solid rgba(45, 52, 77, 0.1);
 
+        &:hover {
+          .case-img {
+            top: -100%;
+          }
+        }
         &:first-child {
           border-top: 0;
 
-          &:hover {
-            .case-img-banxe {
-              top: -70px;
-            }
-          }
+          
         }
 
-        &:nth-child(2) {
-          &:hover {
-            .case-img-qube {
-              top: -155px;
-            }
-          }
-        }
+        // &:nth-child(2) {
+        //   &:hover {
+        //     .case-img-qube {
+        //       top: -155px;
+        //     }
+        //   }
+        // }
 
-        &:nth-child(3) {
-          &:hover {
-            .case-img-starly {
-              top: -245px;
-            }
-          }
-        }
+        // &:nth-child(3) {
+        //   &:hover {
+        //     .case-img-starly {
+        //       top: -245px;
+        //     }
+        //   }
+        // }
 
-        &:nth-child(4) {
-          &:hover {
-            .case-img-bot {
-              top: -330px;
-            }
-          }
-        }
+        // &:nth-child(4) {
+        //   &:hover {
+        //     .case-img-bot {
+        //       top: -330px;
+        //     }
+        //   }
+        // }
 
-        &:nth-child(5) {
-          &:hover {
-            .case-img-eno {
-              top: -425px;
-            }
-          }
-        }
+        // &:nth-child(5) {
+        //   &:hover {
+        //     .case-img-eno {
+        //       top: -425px;
+        //     }
+        //   }
+        // }
 
-        &:nth-child(6) {
-          &:hover {
-            .case-img-finarm {
-              top: -510px;
-            }
-          }
-        }
+        // &:nth-child(6) {
+        //   &:hover {
+        //     .case-img-finarm {
+        //       top: -510px;
+        //     }
+        //   }
+        // }
 
-        &:nth-child(7) {
-          &:hover {
-            .case-img-gmeez {
-              top: -592px;
-            }
-          }
-        }
+        // &:nth-child(7) {
+        //   &:hover {
+        //     .case-img-gmeez {
+        //       top: -592px;
+        //     }
+        //   }
+        // }
 
-        &:nth-child(8) {
-          &:hover {
-            .case-img {
-              top: -675px;
-            }
-          }
-        }
+        // &:nth-child(8) {
+        //   &:hover {
+        //     .case-img {
+        //       top: -675px;
+        //     }
+        //   }
+        // }
 
         &:hover {
           border-color: $color-blue;
@@ -86,16 +105,18 @@
           .case-img {
             opacity: 1;
             visibility: visible;
+            font-size: initial;
+            cursor: url("../images/cases/explore-lg.png"), auto;
           }
 
           a {
             color: $color-blue;
-            padding: 42px 0;
+            // padding: 42px 0;
+            padding: 30px 0;
           }
 
           sup {
             color: $color-blue;
-            top: -1.5em;
             
           }
         }
@@ -107,22 +128,27 @@
         font-size: 32px;
         line-height: 130%;
         color: $color-dark-blue;
+        span {
+          width: 50%;
+          display: inline-block;
+        }
       }
 
       p {
         opacity: 0;
         visibility: hidden;
-        position: absolute;
-        left: 29%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 275px;
-        max-width: 100%;
+        font-size: 0;
+        // position: absolute;
+        // left: 29%;
+        // top: 50%;
+        // transform: translateY(-50%);
+        // width: 275px;
+        // max-width: 100%;
         transition: all 0.3s ease-out;
 
-        @include mediaMax(1440) {
-          left: 26%;
-        }
+        // @include mediaMax(1440) {
+        //   left: 26%;
+        // }
       }
 
       .case-img {
@@ -134,7 +160,8 @@
         right: 7%;
         top: 0;
         transition: all 0.3s ease-out;
-        cursor: url("../images/cases/explore-lg.png"), auto;
+        @include border-radius(8px);
+        
 
         @include mediaMax(1440) {
           right: 3%;
@@ -146,7 +173,9 @@
         }
 
         img {
+          @include border-radius(8px);
           box-shadow: 7px -7px 0px 0px rgb(60, 97, 226);
+          cursor: url("../images/cases/explore-lg.png"), auto;
         }
 
       }
@@ -163,23 +192,7 @@
 
     }
   }
-  .case-list {
-    sup {
-      font-size: 14px;
-      right: -1em;
-      color: #000000;
-    }
-    p {
-      font-size: 16px;
-      line-height: 180%;
-      color: #000000;
-      @include mediaMax(991) {
-        margin-top: 6px;
-        font-size: 14px;
-        line-height: 140%;
-      }
-    }
-  }
+  
 
   &-mobile {
     @include mediaMin(992) {

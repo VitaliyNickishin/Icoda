@@ -1,11 +1,5 @@
 .page-template-template-home-2-0 {
-  //special due David
   .header.navbar {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    padding: 0;
     &.header_fixed {
       position: fixed;
     }
@@ -16,121 +10,12 @@
     }
   }
 
-  .section-1 {
-    padding-top: 100px;
-    .wrap-img {
-      position: absolute;
-      top: -103px;
-      right: 276px;
-      @include mediaMax(1350) {
-        position: relative;
-        top: 0;
-        right: 0;
-      }
-    }
-  }
-  //end special due David
-  h3 {
-    @include mediaMax(767) {
-      font-size: 20px;
-    }
-  }
   .col-custom {
     padding-right: 0;
     padding-left: 0;
   }
 
-  /* section hero */
-  .section-1 {
-    padding-bottom: 150px;
-
-    @include mediaMax(1350) {
-      padding-bottom: 0;
-    }
-    @include mediaMax(991) {
-      padding-bottom: 45px;
-      .col-mobile {
-        padding-left: 0;
-        padding-right: 0;
-        .section-title {
-          padding: 0 15px;
-        }
-      }
-    }
-    .wrap-img {
-      width: 455px;
-      margin: auto;
-      @include mediaMin(1920) {
-        width: 526px;
-      }
-
-      @include mediaMax(991) {
-        display: none !important;
-      }
-      .img-hero {
-        max-width: 438px;
-        margin: auto;
-      }
-    }
-    .section-title {
-      color: $color-dark-blue;
-      font-size: 44px;
-      line-height: 58px;
-      @include mediaMax(991) {
-        font-size: 30px;
-        line-height: 36px;
-      }
-      span {
-        display: block;
-      }
-    }
-    .text {
-      margin-top: 108px;
-      @include mediaMax(991) {
-        margin-top: 0;
-      }
-      @include mediaMax(991) {
-        text-align: center;
-      }
-    }
-    .sub-text {
-      margin-bottom: 55px;
-      @include mediaMax(991) {
-        margin-bottom: 30px;
-      }
-      p {
-        font-size: 16px;
-        line-height: 18px;
-        display: inline-block;
-        @include mediaMin(1920) {
-          font-size: 18px;
-        }
-        @include mediaMax(991) {
-          font-size: 14px;
-          display: block;
-        }
-      }
-    }
-    .btn-wrap {
-      display: flex;
-      flex-direction: column;
-      width: 255px;
-      max-width: 100%;
-      align-items: center;
-      @include mediaMax(991) {
-        margin: auto;
-      }
-      .link-hover-underline {
-        margin-top: 10px;
-      }
-    }
-
-    .img-mobile {
-      @include mediaMin(992) {
-        display: none;
-      }
-    }
-  }
+  
   /* section Featured in */
   .featured-in {
     padding-bottom: 87px;
@@ -222,198 +107,6 @@
       @include mediaMax(991) {
         margin-top: 65px;
         text-align: center;
-      }
-    }
-  }
-
-  /* section Recent cases */
-  .cases {
-    padding-bottom: 200px;
-    @include mediaMax(991) {
-      padding-bottom: 100px;
-    }
-    .col-item {
-      padding-left: 7px;
-      padding-right: 7px;
-    }
-    .section-title {
-      @include mediaMin(1100) {
-        margin-bottom: 30px;
-      }
-    }
-    .slick-list {
-      padding-top: 80px !important;
-      padding-left: 0 !important;
-    }
-    .slick-slide {
-      img {
-        width: auto;
-        margin: auto;
-      }
-    }
-    .service-card {
-      padding: 36px;
-      align-items: center;
-      margin: 0;
-
-      @include mediaMax(1340) {
-        padding: 25px;
-      }
-      @include mediaMax(375) {
-        padding: 15px;
-      }
-
-      p {
-        margin-top: 18px;
-        line-height: 26px;
-        // min-height: 78px;
-        @include mediaMax(767) {
-          margin-top: 0px;
-        }
-      }
-    }
-    .blog-img {
-      margin-top: -100px;
-      @include mediaMax(767) {
-        margin-top: -80px;
-      }
-    }
-    .text-center {
-      height: 105px;
-    }
-    .cases-logo {
-      margin: 30px auto 0;
-      display: flex;
-      min-width: 95px;
-      max-width: 150px;
-      height: 50px;
-      // img {
-      //   height: 30px;
-      // }
-    }
-    .slider-control {
-      @include mediaMax(767) {
-        top: -21px;
-      }
-    }
-  }
-  /* For whom do we works? */
-  .section-3 {
-    overflow: initial;
-    background-color: $color-light-white;
-    @include media-breakpoint-down(sm) {
-      background-image: none;
-      &:before {
-        background: none;
-      }
-    }
-    @include media-breakpoint-only(md) {
-      background-image: none;
-      &:before {
-        background: none;
-      }
-    }
-
-    .text-box {
-      background: none;
-      padding: 110px 0 90px 0;
-      @include mediaMax(991) {
-        padding: 80px 0 10px;
-      }
-      @include mediaMax(768) {
-        padding-top: 20px;
-      }
-    }
-    .text {
-      @include mediaMax(991) {
-        max-width: 100%;
-      }
-    }
-    .sub-text {
-      margin-top: 15px;
-      @include mediaMax(991) {
-        max-width: 300px;
-        margin-top: 35px;
-        font-size: 14px;
-        color: $main-color-text;
-      }
-    }
-    .img-block {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      img {
-        max-width: 967px;
-        height: 650px;
-      }
-
-      @include mediaMax(991) {
-        position: relative;
-        // top: -30px;
-        // left: 30px;
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-      }
-      @include mediaMax(1100) {
-        top: -20px;
-      }
-
-      @include mediaMax(1100) {
-        top: 160px;
-      }
-      @include mediaMax(991) {
-        top: 0;
-        left: 0;
-        text-align: center;
-      }
-    }
-
-    .label-list {
-      @include mediaMax(991) {
-        margin-top: 20px;
-      }
-    }
-
-    .label-list-desktop {
-      @include mediaMax(991) {
-        display: none;
-      }
-    }
-    .label-list-mobile {
-      @include mediaMin(992) {
-        display: none;
-      }
-    }
-  }
-
-  /* Direct access to most reliable resources */
-  .section-4 {
-    padding-bottom: 0;
-    @include mediaMax(767) {
-      padding-top: 60px;
-    }
-    .section-title {
-      max-width: 500px;
-      margin-bottom: 70px;
-      @include mediaMax(767) {
-        max-width: 300px;
-        margin-bottom: 30px;
-      }
-    }
-    .col-right {
-      @include mediaMax(767) {
-        padding-right: 0;
-      }
-    }
-    .list-logo {
-      margin-top: 50px;
-      @include mediaMax(991) {
-        margin-top: 16px;
-      }
-      &-mobile {
-        margin-right: -15px;
       }
     }
   }
@@ -547,8 +240,8 @@
       justify-content: center;
       align-items: center;
       height: 40px;
-      background: $color-light-white;
-      border: 1px solid $color-light-gray;
+      background: rgba(255, 255, 255, 0.50);
+      border: 1px solid $border-color;
       cursor: pointer;
       @include mediaMax(991) {
         height: 36px;
@@ -577,21 +270,6 @@
         }
       }
     }
-  }
-}
-
-//general set for slick sleder when load
-.custom-slider {
-  overflow: hidden;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s linear;
-
-  &.slick-initialized {
-    height: auto;
-    overflow: inherit;
-    visibility: visible;
-    opacity: 1;
   }
 }
 
@@ -643,7 +321,7 @@ body {
         display: none;
       }
     }
-    .btn-blue {
+    .btn {
       margin-left: 12px;
       padding: 12px;
       min-width: 153px;
@@ -667,13 +345,26 @@ body {
         }
       }
     }
-
+    .lang-select,
     .burger {
       margin-left: 12px;
-      @extend .btn-mob-wrap;
+      height: 40px;
       @include mediaMax(991) {
         margin-left: 8px;
+         height: 36px;
       }
+    }
+    @include mediaMax(991) {
+     
+    }
+
+    .burger {
+      border: 1px solid $border-color;
+      color: $color-dark-blue;
+    }
+    .navbar-light .navbar-toggler {
+      border: 1px solid $border-color;
+      color: inherit;
     }
     .btn-blue {
       @include mediaMax(991) {
@@ -683,24 +374,12 @@ body {
     //contact icon
     .mobile-icon {
       @extend .btn-mob-wrap;
+      border: 1px solid $border-color;
+      color: $color-dark-blue;
+      background: rgba(255, 255, 255, 0.50);
       @include mediaMin(992) {
         display: none;
       }
-    }
-  }
-  //for mobile lang
-  .lang-select {
-    margin-left: 590px;
-    @include mediaMin(1920) {
-      margin-left: 690px;
-    }
-
-    @include mediaMax(1350) {
-      margin-left: 120px;
-    }
-    @include mediaMax(991) {
-      margin-left: 0;
-      margin-right: 8px;
     }
   }
 
@@ -825,47 +504,7 @@ body {
   padding: 10px 7px;
 }
 
-.bg-gradient {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 620px;
-  z-index: -1;
-  overflow: hidden;
-  @include mediaMax(1440) {
-    left: 0;
-  }
-  .item {
-    width: 120%;
-    height: 100px;
-    position: absolute;
-    left: -80px;
-    transform: skew(10deg, -30deg);
-    &:nth-child(odd) {
-      background: linear-gradient(90deg, #3266ee 0%, #32eeaa 100%);
-      animation: gradient 5s ease infinite;
-      background-size: 200% 200%;
-    }
-    &:nth-child(even) {
-      background: linear-gradient(242.44deg, #e8e8e8 0%, #f7f7f7 100%);
-      animation: gradient 5s ease infinite;
-      background-size: 200% 200%;
-    }
-    &-first {
-      top: 0px;
-    }
-    &-second {
-      top: 190px;
-    }
-    &-third {
-      top: 380px;
-    }
-    &-fourth {
-      top: 570px;
-    }
-  }
-}
+
 //for section Leadership
 .leadership-social {
   display: flex;
@@ -922,18 +561,5 @@ body {
         }
       }
     }
-  }
-}
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
   }
 }

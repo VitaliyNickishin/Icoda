@@ -25,6 +25,7 @@
 @import "map-card";
 @import "table";
 @import "modal";
+@import "nav";
 @import "slider";
 @import "footer";
 @import "temp"; //my create
@@ -61,25 +62,40 @@
 @import "pages/page-404";
 @import "pages/faq";
 @import "pages/page-feedback";
+@import "pages/brand-assets";
+@import "pages/page-calculator";
 
 //-------------templates-parts--------------------
-@import "template-parts/section-fonts";
-@import "template-parts/section-color-styles";
-@import "template-parts/section-logotypes";
-@import "template-parts/section-steps";
-@import "template-parts/section-form";
-@import "template-parts/first-section";
-@import "template-parts/section-seo";
-@import "template-parts/section-partners";
-@import "template-parts/section-tech";
-@import "template-parts/section-icons";
-@import "template-parts/crypto-exchanges";
 @import "template-parts/bc-block";
+@import "template-parts/crypto-exchanges";
+@import "template-parts/dropdown-filters";
+@import "template-parts/first-section";
+@import "template-parts/info-counter";
+@import "template-parts/section-agency";
+@import "template-parts/section-color-styles";
+@import "template-parts/section-fonts";
+@import "template-parts/section-form";
+@import "template-parts/section-hero-new";
+@import "template-parts/section-hero";
+@import "template-parts/section-icons";
+@import "template-parts/section-logotypes";
+@import "template-parts/section-partners";
+@import "template-parts/section-seo";
+@import "template-parts/section-services-slider";
+@import "template-parts/section-solutions";
+@import "template-parts/section-steps";
+@import "template-parts/section-tech";
 @import "template-parts/sidebar-blog";
 @import "template-parts/sidebar-single";
 
+
+
+
 //-------------components--------------------
 @import "components/article"; //second-main
+@import "components/accordion";
+@import "components/article-card";
+@import "components/article";
 @import "components/banner";
 @import "components/base"; //second-main
 @import "components/burger";
@@ -91,10 +107,13 @@
 @import "components/events"; //second-main
 @import "components/form-contact";
 @import "components/home"; //second-main
+@import "components/label-hot";
 @import "components/leadership-card";
+@import "components/list-social";
 @import "components/meet-up";
 @import "components/mega-menu";
 @import "components/news"; //second-main
+@import "components/paginate-container";
 @import "components/partners-logo";
 @import "components/products"; //second-main
 @import "components/reliable-resources";
@@ -105,8 +124,7 @@
 @import "components/services-home-section"; //second-main
 @import "components/sitemap"; //second-main
 @import "components/social-chanels";
-@import "components/paginate-container";
-@import "components/accordion";
-@import "components/list-social";
 @import "components/tags";
+@import "components/_title-animated";
 @import "components/tooltips";
+@import "components/youtube-chanels";

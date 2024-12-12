@@ -1,5 +1,8 @@
 .first-section {
 	padding-bottom: 80px;
+	@include mediaMax(991) {
+		padding-bottom: 40px;
+	}
 	.pt-row {
     padding-top: 25px;
 	}

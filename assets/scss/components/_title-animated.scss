@@ -1,0 +1,47 @@
+.title-animated {
+  position: relative;
+  z-index: 1;
+
+  // height: 50px;
+  // height: 60px;
+  // @include mq(tablet-wide) {
+  //   // height: 70px;
+  //   height: 85px; //with line
+  // }
+  // @include mq(desktop-wide) {
+  //   height: 95px;
+  // }
+}
+
+//(Zoom)
+.cd-words-wrapper {
+  b {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+.cd-headline {
+  &.zoom {
+    .cd-words-wrapper {
+      display: inline-block;
+      position: relative;
+      perspective: 300px;
+    }
+    b {
+      opacity: 0;
+      color: transparent;
+      &.is-visible {
+        opacity: 1;
+        color: $color-dark-blue;
+        animation: zoom-in 0.8s;
+        position: relative;
+      }
+      &.is-hidden {
+        animation: zoom-out 0.8s;
+      }
+      
+    }
+  }
+}

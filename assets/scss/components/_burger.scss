@@ -1,7 +1,13 @@
 .burger {
   min-width: 88px;
   padding: 14px 12px 14px 24px;
-  height: 32px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $border-color;
+  background: rgba(255, 255, 255, 0.50);
+  border-radius: 4px;
   position: relative;
   z-index: 3;
   // @at-root .lang-ru & {
@@ -30,7 +36,7 @@
     margin-top: -1px;
     width: 14px;
     height: 2px;
-    background-color: $main-color-text;
+    background-color: $color-dark-blue;
     @include mediaMax(991) {
       width: 18px;
     }
@@ -58,7 +64,7 @@
     line-height: 13px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: $main-color-text;
+    color: $color-dark-blue;
     @include mediaMax(991) {
       display: none;
     }

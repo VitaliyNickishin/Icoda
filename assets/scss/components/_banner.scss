@@ -3,22 +3,45 @@
   @include mediaMax(768) {
     padding: 50px 0;
   }
+  &--blog-post {
+    padding: 0;
+  }
   //old banner
   .banner-box {
     position: relative;
-    padding: 44px 47px;
-    padding-left: 150px;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    :before {
-      content: '';
-      position: absolute;
-      left: 51px;
-      bottom: 0;
-      background: url(../images/image-banner.svg) 0 0 no-repeat;
-      width: 296px;
-      height: 221px;
+    @include mediaMin(768) {
+      padding: 44px 47px 44px 230px;
+    }
+    @include mediaMin(991) {
+      padding: 44px 47px 44px 270px;
+    }
+    @include mediaMin(1024) {
+      padding: 44px 47px 44px 320px;
+    }
+    @include mediaMin(1440) {
+      padding: 44px 47px 44px 360px;
+    }
+    @include mediaMin(768) {
+      :before {
+        content: '';
+        position: absolute;
+        left: 51px;
+        bottom: 0;
+        background: url(../images/image-banner.svg) 0 0 no-repeat;
+        width: 296px;
+        height: 221px;
+      }
+    }
+    
+  }
+  .btn {
+    margin-left: 20px;
+    @include media-breakpoint-down(sm) {
+      margin: 30px 0 0;
     }
   }
   //update banner
@@ -46,6 +69,21 @@
         min-width: 200px;
       }
     }
-    
   }
+  .title {
+    font-size: 2rem;
+    line-height: 120%;
+    font-family: $f-sto-bold;
+    @include mediaMax(991) {
+      font-size: 1.5rem;
+    }
+  }
+  .discription {
+      p {
+        @include mediaMax(768) {
+          margin-bottom: 0;
+          font-size: 1rem;
+        }
+      }
+    }
 }

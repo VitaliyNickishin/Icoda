@@ -152,6 +152,15 @@ body.modal-open {
       }
     }
   }
+  .img-top {
+    img {
+      @include mediaMax(600) {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+  }
   .btn.btn-blue {
     min-width: 160px;
     padding: 18px 0;
@@ -159,6 +168,9 @@ body.modal-open {
     @include mediaMax(768) {
       padding: 20px 0;
       font-size: 1rem;
+    }
+    @include mediaMax(600) {
+      min-width: 100%;
     }
   }
   .btn-wrap {
@@ -182,9 +194,9 @@ body.modal-open {
     }
   }
   .box-person {
-    width: 100px;
+    // width: 100px;
     &:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 20px;
     }
   }
   .modal-bottom {
@@ -209,11 +221,8 @@ body.modal-open {
   }
 
   .title {
-    margin-left: 25px;
     font-size: 1.5rem;
-    @include mediaMax(991) {
-      margin-left: 0;
-    }
+
     @include mediaMax(768) {
       text-align: center;
     }

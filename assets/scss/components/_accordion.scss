@@ -32,4 +32,68 @@
       font-size: .875rem; //14px
     }
   }
+  //block-post-faq
+   &-faq {
+    @at-root .single-post & {
+      margin-bottom: 1.25rem;
+      @include mediaMin(991) {
+        margin-bottom: 2.5rem;
+      }
+    }
+    .tab {
+      @extend .w-100;
+      margin-bottom: 0.625rem;
+      padding: 1.25rem; //20px
+      @include border-radius(1rem);
+      border: 1px solid #efeeee;
+      input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+
+        /* :checked */
+        &:checked ~ .tab-content {
+          max-height: 100%;
+        }
+        &[type="checkbox"]:checked + label::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      label {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        padding-right: 40px;
+        font-size: 1.125rem;
+        font-family: $f-sto-m;
+        margin-bottom: 0;
+        color: $color-dark-blue;
+        @extend .position-relative;
+        
+        &::after {
+          content: "";
+          background: center / contain no-repeat url("../images/arrow-down.svg");
+          position: absolute;
+          top: 5px;
+          right: 0;
+          width: 18px;
+          height: 8px;
+          transition: all 0.2s ease-out;
+          transform-origin: center;
+        }
+      }
+      &-content {
+        max-height: 0;
+        overflow: hidden;
+        padding-right: 1.25rem; //20px
+
+        p {
+          margin-top: 12px;
+          font-size: 1rem;
+          line-height: 140%;
+        }
+      }
+    }
+  }
 }

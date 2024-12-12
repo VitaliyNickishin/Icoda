@@ -8,6 +8,16 @@
   color: $color-dark-blue;
 }
 
+.section-with-gutenberg {
+  ul {
+    li {
+      +li {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
 .section-description {
   .section-description-inner {
     .text {

@@ -437,3 +437,20 @@ a.logo {
 .text-black {
   color: $black;
 }
+.text-primary {
+  color: $primary;
+}
+
+.title-opacity {
+  opacity: .8;
+}
+
+.ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  &-content {
+    cursor: pointer;
+  }
+}

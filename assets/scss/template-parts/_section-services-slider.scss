@@ -1,0 +1,43 @@
+.section-services-slider {
+	padding-bottom: 4.375rem;
+	@include mediaMin(991) {
+		padding-bottom: 5rem;
+	}
+	.slick-dots {
+		bottom: -20px;
+		@include mediaMax(1440) {
+			bottom: -40px;
+		}
+	}
+}
+
+.service-box {
+	margin-right: 15px;
+	@include border-radius(1rem);
+	border: 1px solid $color-light-blue;
+	padding: 35px 30px;
+	background-color: $white;
+
+	@include mediaMin(991) {
+		margin-right: 30px;
+	}
+	&.slick-current {
+		border-color: $color-blue;
+	}
+	&__title {
+		font-size: 18px;
+		font-family: $f-sto-m;
+		color: $color-dark-blue;
+	}
+	&__description {
+		margin-top: 10px;
+		color: $main-color-text;
+		font-size: 15px;
+	}
+	&.hot {
+    .label-hot {
+      display: block;
+    }
+  }
+	
+}

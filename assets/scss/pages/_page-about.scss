@@ -59,6 +59,12 @@
         top: -42px;
       }
     }
+    .slick-track {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      min-height: 240px;
+    }
   }
 
   .meet-up {

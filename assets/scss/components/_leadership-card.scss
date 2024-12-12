@@ -42,6 +42,7 @@
     display: block;
     transition: all 0.3s;
     height: 200px;
+    @include border-radius( 1rem 1rem 0 0);
   }
 
   .title-wrap {
@@ -49,6 +50,7 @@
 
     .h6 {
       color: $color-dark-blue;
+      font-family: $f-sto-m;
     }
   }
 
@@ -60,6 +62,7 @@
     align-items: baseline;
     transition: all 0.3s;
     flex: 1 0 auto;
+    @include border-radius( 0 0 1rem 1rem);
 
     span {
       transition: all 0.3s;

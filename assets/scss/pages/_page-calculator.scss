@@ -1,0 +1,266 @@
+.page-calculator {
+    .btn.btn-blue, .btn {
+        min-width: auto;
+        padding: 15px 40px;
+        @include mediaMin(991) {
+            padding: 19px 54px;
+        }
+    }
+    .btn.btn-prew {
+        padding: 16px 20px;
+        background: #F0F0F0;
+    }
+}
+
+.calculator-section {
+    .article-card-full {
+        padding: 1.25rem .625rem;
+        @include mediaMin(991) {
+            padding-top: 5.625rem;
+            padding-bottom: 5.625rem;
+        }
+    }
+    .title {
+        // font-size: 2.625rem;
+        line-height: 120%;
+        margin-bottom: .625rem;
+    }
+    .undertitle {
+        color: $color-dark-blue;
+        font-size: 1rem;
+        line-height: 120%;
+        margin-bottom: .9375rem;
+        @include mediaMin(991) {
+            margin-bottom: 1.875rem;
+            font-size: 1.375rem;
+        }
+        @include mediaMin(1440) {
+            width: 550px;
+        }
+    }
+    .description {
+        font-size: .875rem;
+        line-height: 137%;
+        color: $color-dark-gray;
+        @include mediaMin(991) {
+            font-size: 1rem;
+        }
+        @include mediaMin(1440) {
+            width: 500px;
+        }
+        p + p {
+            margin-top: .625rem;
+        }
+    }
+    
+}
+
+.calculator-hero {
+    padding-top: .25rem;
+    padding-bottom: 1.875rem;
+    @include mediaMin(991) {
+        padding-bottom: 2.5rem;
+    }
+}
+.calculator-questions {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+    @include mediaMin(991) {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .title {
+        @include mediaMax(768) {
+            font-size: 1.25rem;
+        }
+    }
+}
+.calculator-consultation {
+    padding-bottom: 3.75rem;
+    padding-top: 1.875rem;
+    @include mediaMin(991) {
+        padding-top: 2.5rem;
+    }
+    .article-card-full {
+        @include mediaMin(991) {
+            padding-left: 5.625rem;
+            padding-right: 5.625rem;
+        }
+    }
+    .img-hero {
+        
+        @include mediaMin(991) {
+            position: absolute;
+            width: 700px;
+            left: -110px;
+            @at-root .lang-ar & {
+                width: 600px;
+                left: -110px;
+            }
+        }
+        @include mediaMin(1341) {
+            width: 830px;
+            left: -140px;
+            @at-root .lang-ar & {
+                width: 670px;
+                left: -80px;
+            }
+        }
+        @include mediaMin(1441) {
+            width: 900px;
+            @at-root .lang-ar & {
+                width: 750px;
+                left: -80px;
+            }
+        }
+    }
+}
+
+.steps-box {
+    @include border-radius(20px);
+    border: 2px solid #F6F6F6;
+    background: $white;
+
+    &__main {
+        padding: 25px 10px;
+        width: 100%;
+        @include mediaMin(991) {
+            padding: 25px;
+        }
+        @include mediaMin(1100) {
+            padding: 40px 50px;
+        }
+    }
+    //image
+    &__aside {
+        width: 300px;
+        flex-shrink: 0;
+    }
+    &__footer {
+        @at-root .lang-ar & {
+            flex-direction: row-reverse;
+        }
+    }
+    .step-title {
+        font-size: 1rem;
+        color: $color-dark-blue;
+        @include mediaMin(991) {
+            font-size: 1.375rem;
+        }
+    }
+    
+    .steps-count {
+        font-size: .75rem;
+        color: $color-dark-gray;
+        @include mediaMin(991) {
+            font-size: .875rem;
+        }
+    }
+    ul {
+        @include mediaMin(991) {
+            height: 315px;
+            overflow: auto;
+        }
+    }
+    
+    .progress-bar {
+        width: 16.6%;
+        background-color: $color-blue;
+    }
+    .text-done {
+        margin-top: 60px;
+        margin-bottom: 30px;
+        @include mediaMin(991) {
+            margin-top: 112px;
+            margin-bottom: 60px;
+        }
+        
+    }
+    textarea {
+        border-color: #F6F6F6;
+        margin-bottom: 10px;
+    }
+}
+
+.custom-checkbox {
+    &.active {
+        textarea {
+            display: block;
+            width: 100%;
+        }
+    }
+    input[type=checkbox] {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &:checked {
+            + label:before {
+                background-image: url("../images/check-active.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 40px 40px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    textarea {
+        display: none;
+    }
+    label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+        width: 100%;
+        line-height: 130%;
+        @include border-radius(6px);
+        background: $color-light-white;
+        padding: 12px 10px;
+        font-size: .875rem;
+        margin-bottom: .625rem;
+        @include mediaMin(1341) {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            padding: 12px 20px;
+        }
+        
+
+        &:before {
+            content: "";
+            margin-right: 15px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            @include border-radius(50%);
+            flex-shrink: 0;
+            flex-grow: 0;
+            
+            background-image: url("../images/check-disabled.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 40px 40px;
+            width: 40px;
+            height: 40px;
+
+        }
+    }
+}
+.step-first {
+    ul {
+        @include mediaMin(991) {
+            width: 450px;
+            margin: auto;
+        }
+    }
+}
+.step-second,
+.step-fifth {
+    ul {
+        @include mediaMin(991) {
+            height: 245px;
+            overflow: auto;
+        }
+    }
+    
+}

@@ -57,3 +57,44 @@ body.search {
 		}
 	}
 }
+
+//blog
+.searchform {
+	width: 100%;
+	&>div {
+		position: relative;
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.6'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.9358 17.509C14.555 18.6337 12.8047 19.3061 10.9005 19.3061C6.4397 19.3061 2.82349 15.6164 2.82349 11.0649C2.82349 6.51343 6.4397 2.82373 10.9005 2.82373C15.3614 2.82373 18.9776 6.51343 18.9776 11.0649C18.9776 13.0125 18.3154 14.8023 17.2083 16.2127L21.1764 19.8071L19.9848 21.1767L15.9358 17.509ZM17.1827 11.0649C17.1827 14.6049 14.3701 17.4747 10.9005 17.4747C7.431 17.4747 4.61838 14.6049 4.61838 11.0649C4.61838 7.52487 7.431 4.6551 10.9005 4.6551C14.3701 4.6551 17.1827 7.52487 17.1827 11.0649Z' fill='%238A9AB5'/%3E%3C/g%3E%3C/svg%3E%0A");
+		// &:after {
+		// 	// content: url('../images/examples/fire.png');
+		// 	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.6'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.9358 17.509C14.555 18.6337 12.8047 19.3061 10.9005 19.3061C6.4397 19.3061 2.82349 15.6164 2.82349 11.0649C2.82349 6.51343 6.4397 2.82373 10.9005 2.82373C15.3614 2.82373 18.9776 6.51343 18.9776 11.0649C18.9776 13.0125 18.3154 14.8023 17.2083 16.2127L21.1764 19.8071L19.9848 21.1767L15.9358 17.509ZM17.1827 11.0649C17.1827 14.6049 14.3701 17.4747 10.9005 17.4747C7.431 17.4747 4.61838 14.6049 4.61838 11.0649C4.61838 7.52487 7.431 4.6551 10.9005 4.6551C14.3701 4.6551 17.1827 7.52487 17.1827 11.0649Z' fill='%238A9AB5'/%3E%3C/g%3E%3C/svg%3E%0A");
+		// }
+	}
+	input[type="text"] {
+		padding: 1rem 4.5rem 1rem 2.625rem;
+		width: 100%;
+		border-radius: 16px;
+		border: 1px solid #F4F6F9;
+		background: $white;
+		box-shadow: 0px 2px 10.9px 0px rgba(231, 237, 255, 0.25);
+	}
+	&:placeholder {
+		color: #F4F6F9;
+		font-size: 15px;
+	}
+	button {
+		padding: 0 1rem;
+		margin: 1rem 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		cursor: pointer;
+	    border: 0;
+	    background: transparent;
+	    border-left: 1px solid #F4F6F9;
+	    // font-size: 0;
+	}
+}

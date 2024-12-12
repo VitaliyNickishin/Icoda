@@ -42,7 +42,7 @@ a{
   display: block;
 }
 .bold{
-  font-family: $f-sto-r;
+  font-family: $f-sto-b;
 }
 h2.section-title,
 .h2{
@@ -50,9 +50,16 @@ h2.section-title,
   line-height: 58px;
 }
 h3.section-title,
-.h3{
+.h3.section-title,
+{
   font-size: 38px;
   line-height: 130%;
+  @include mediaMax(1440) {
+      font-size: 1.875rem;
+    }
+  @include mediaMax(991) {
+    font-size: 32px;
+  }
 }
 .h4{
   font-size: 28px;
@@ -133,4 +140,8 @@ h3.section-title,
   .h6{
     font-size: 16px;
   }
+}
+
+.font-weight-bold {
+  font-family: $f-sto-bold;
 }

@@ -6,9 +6,26 @@
   &-list {
     margin-left: -3px;
     margin-right: -3px;
+
+    //uncomment after removed <?php if ( !empty($_GET['show_new_blocks'])) : ?>tags-list-blog<?php endif; ?> in tags.php
+
+    // @at-root .category-blog & {
+    //   display: flex;
+    //   overflow-x: auto;
+    //   flex-wrap: nowrap;
+    // }
+
+    //removed after uncomment
+    &-blog {
+      display: flex;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+    //end
     li {
       display: inline-flex;
       margin: 3px;
+      flex-shrink: 0;
     }
     input {
       position: absolute;

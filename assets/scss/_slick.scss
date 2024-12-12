@@ -97,3 +97,18 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+//general set for slick sleder when load
+.custom-slider {
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    
+    &.slick-initialized {
+        height: auto;
+        overflow: inherit;
+        visibility: visible;
+        opacity: 1;
+    }
+}

@@ -131,6 +131,14 @@
       animation: ripple 4s linear infinite;
     }
   }
+  &-outline-blue {
+    border: 1px solid $color-blue;
+    color: $color-blue;
+    &:hover {
+      background-color: $color-blue;
+      color: $white;
+    }
+  }
 }
 //btn with auto highlight
 .has-highlight {

@@ -96,6 +96,12 @@
       &::placeholder {
         color: #fff;
       }
+      @include mediaMax(1440) {
+        font-size: 12px;
+      }
+      @include mediaMax(991) {
+        font-size: 15px;
+      }
     }
 
     label.error {

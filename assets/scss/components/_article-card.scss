@@ -1,0 +1,56 @@
+.article-card {
+    .title {
+        line-height: 130%;
+        @include mediaMin(768) {
+            font-size: 2.25rem;
+        }
+    }
+    img {
+        @include border-radius(10px);
+    }
+    .excerpt {
+        color: $color-dark-gray;
+        line-height: 140%;
+        font-size: 15px;
+        @include mediaMin(992) {
+            font-size: 1rem;
+            line-height: 165%;
+        }
+    }
+    &-content,
+    .btn-wrap {
+        @include mediaMax(576) {
+            padding: 0 1rem;
+        }
+    }
+    
+    .btn.btn-blue {
+        min-width: 120px;
+        @include mediaMin(992) {
+            min-width: 150px;
+        }
+    }
+    &-meta {
+        font-size: 15px;
+        color: #aabde7;
+        // @at-root .archive & {
+        //     @include mediaMin(992) {
+        //         margin-bottom: 1.875rem;
+        //     } 
+        // }
+    }
+    &-full {
+        @include border-radius(10px);
+        background: #F8F9FF;
+        padding: 5px 5px 30px;
+        @include mediaMin(576) {
+            padding: 1.25rem;
+        }
+        .excerpt {
+            @include mediaMin(992) {
+                font-size: 1.125rem;
+                line-height: 165%;
+            }
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.dropdown-filters {
+  .dropdown__list {
+    
+    @include mediaMin(768) {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      display: flex;
+      align-items: center;
+    }
+    @include mediaMax(768) {
+      position: absolute;
+      left: 0;
+      top: 42px;
+      // box-shadow: 0px 0px 0px 10px $white;
+      // border: 1px solid #e6eaed;
+      // border-radius: 4px;
+      background: $white;
+      width: 100%;
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      transition: 200ms ease;
+      &_visible {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    
+    li {
+      background: $color-light-white;
+      flex-shrink: 0;
+      &:hover,
+      &.dropdown__list-item_active {
+        background-color: $color-blue;
+        a,
+        svg {
+          color: $white;
+        }
+      }
+      + li {
+        @include mediaMin(992) {
+          margin-left: 15px;
+        }
+        
+      }
+    }
+    svg {
+      color: #aabde7;
+      width: 1rem;
+    }
+    a {
+      font-size: 0.875rem;
+      padding: 10px 20px;
+      color: $color-dark-blue;
+    }
+    
+  }
+  .dropdown__button {
+    @include mediaMax(768) {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background-color: $color-light-white;
+      color: $color-dark-blue;
+      width: 100%;
+      border: 0;
+      padding: 7px 40px 7px 15px;
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        background: url("../images/drop-arrow.svg") 100% 100% no-repeat;
+        pointer-events: none;
+        transition: 200ms ease;
+      }
+      &_active {
+        &::after {
+          transform: translateY(-50%) rotate(-180deg);
+        }
+      }
+    }
+  }
+  // &__input {
+  //   &_hidden {
+  //     display: none;
+  //   }
+  // }
+  
+}
+
+.has-blur {
+  background: rgba(255, 255, 255, 0.51);
+  filter: blur(2px);
+}

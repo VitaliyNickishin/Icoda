@@ -20,9 +20,7 @@
       padding-top: 50px;
       padding-bottom: 50px;
     }
-    .h3 {
-      width: 552px;
-    }
+    
     .grid-item {
       &:last-child {
         .service-card {
@@ -63,7 +61,22 @@
       padding: 0;
     }
     .n-list {
-      padding: 80px 0;
+      @include mediaMin(991) {
+        padding: 80px 0;
+      }
+    }
+    .r-list {
+      .marker-list {
+      li {
+        &:first-child {
+          @include mediaMax(991) {
+            margin-top: 0;
+          }
+        }
+        
+      }
+    }
+
     }
     .title {
       padding-bottom: 40px;
@@ -74,6 +87,7 @@
       }
       @include mediaMax(991) {
         height: auto;
+        min-height: auto;
       }
     }
     .marker-list {
@@ -199,9 +213,6 @@
         display: none;
       }
     }
-    .btn {
-      margin: 30px 0 0;
-    }
   }
   .section-description {
     .h3 {
@@ -249,9 +260,6 @@
   }
   .section-banner {
     padding-top: 90px;
-    .btn {
-      margin-left: 50px;
-    }
   }
   .section-description {
     .h3 {
@@ -268,11 +276,6 @@
   }
 }
 @include media-breakpoint-only(lg) {
-  .section-banner {
-    .btn {
-      margin-left: 70px;
-    }
-  }
   .fin-promotion-page {
     .section-masonry-gray {
       padding-top: 131px;
@@ -280,9 +283,6 @@
       @at-root .single & {
         padding-top: 25px;
         padding-bottom: 25px;
-      }
-      .h3 {
-        width: 452px;
       }
     }
   }

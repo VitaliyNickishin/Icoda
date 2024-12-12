@@ -22,6 +22,7 @@
 
   .slider-default-item {
     width: 540px;
+    @include border-radius(1rem);
 
     @include mediaMax(550) {
       width: 340px;
@@ -32,7 +33,7 @@
         flex-direction: column;
       }
     }
-
+    
     @include mediaMax(400) {
       width: 320px;
     }
@@ -44,7 +45,12 @@
 
   .slider-logo-box {
     width: 80px;
+    height: 80px;
+    display: flex;
     align-items: center;
+    @include mediaMax(575) {
+      display: none;
+    }
   }
 
   .slider-default-item-body {
@@ -67,3 +73,4 @@
     padding-top: 80px;
   }
 }
+

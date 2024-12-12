@@ -1,0 +1,96 @@
+.info-counter {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0 0;
+	@include mediaMin(992) {
+		padding: 10px;
+		justify-content: left;
+		@include border-radius(1rem);
+		background-color: $white;
+		
+	}
+	@include mediaMin(1341) {
+		padding: 25px 27px;
+	}
+	.item {
+		margin: 10px;
+		font-size: 22px;
+		color: $color-dark-blue;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid #C5D0EC;
+		width: 133px;
+		text-align: center;
+		
+		@include mediaMin(992) {
+			margin: 10px 13px;
+			text-align: left;
+			font-size: 34px;
+			width: 185px;
+		}
+		
+	}
+	.number {
+		font-family: $f-sto-m;
+		line-height: 130%;
+	}
+	.symbol {
+		color: $color-blue;
+		font-family: $f-sto-r;
+	}
+	.text {
+		margin-top: 2px;
+		color: #8B8B8B;
+		font-size: 14px;
+		line-height: 130%;
+		@include mediaMin(992) {
+			font-size: 1rem;
+		}
+	}
+	@at-root .section-hero & {
+		@include mediaMin(992) {
+			position: absolute;
+			// bottom: 20px;
+			width: auto;
+			z-index: 1;
+		}
+	}
+	@at-root .first-section & {
+		@extend .px-0;
+		@include mediaMin(992) {
+			justify-content: space-between;
+		}
+	}
+}
+//redesign
+.info-about-us {
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	@include mediaMin(1024) {
+		flex-direction: row;
+	}
+	@include mediaMin(1130) {
+		gap: 40px;
+	}
+}
+.info-block {
+	gap: .625rem;
+	.avatar {
+		&:not(:first-child) {
+			margin-left: -18px;
+		}
+	}
+	&__digital {
+		line-height: 100%;
+	}
+	.number {
+		font-size: 1.125rem;
+		color: $color-blue;
+		font-family: $f-sto-m;
+	}
+	.text {
+		font-size: .875rem;
+	}
+}

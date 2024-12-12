@@ -11,16 +11,12 @@
 }
 
 // navigation bar
-.header.navbar {
+nav.navbar{
   position: relative;
-  z-index: 1;
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
   transition: all 0.3s ease-out;
-  border-bottom: 1px solid #D5DBF1;
-  background: rgba(255, 255, 255, 0.20);
-  backdrop-filter: blur(4px);
   
   & >.container,
   & >.container-fluid{
@@ -201,9 +197,9 @@
 
   .navbar-toggler{
     margin-left: 25px;
-    // border: 2px solid $color-blue;
+    border: 2px solid $color-blue;
     // padding: 3px 10px;
-    // border-radius: 2px;
+    border-radius: 2px;
     outline: none;
     z-index: 101;
   }
@@ -227,7 +223,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .header.navbar{
+  nav.navbar{
     .col-12{
       position: inherit;
     }
@@ -314,7 +310,7 @@
       padding-right: 15px;
     }
   }
-  .header.navbar .navbar-nav .nav-item .nav-link.dropdown-toggle{
+  nav.navbar .navbar-nav .nav-item .nav-link.dropdown-toggle{
     &:hover{
       &:after {
         color: $color-dark-blue;
@@ -332,13 +328,13 @@
       }
     }
   }
-  .header.navbar .navbar-nav .dropdown-item.dropdown-toggle:after{
+  nav.navbar .navbar-nav .dropdown-item.dropdown-toggle:after{
     font-size: 8px;
     width: 14px;
     height: 9px;
     right: 8px;
   }
-  .header.navbar .navbar-nav {
+  nav.navbar .navbar-nav {
     .dropdown-item.dropdown-toggle:hover:after{
       transform: translate(0,-13%);
     }
@@ -373,7 +369,7 @@
 }
 
 @include media-breakpoint-only(md) {
-  .header.navbar{
+  nav.navbar{
     .col-12{
       position: inherit;
     }
@@ -450,7 +446,7 @@
     }
   }
 
-  .header.navbar .navbar-nav .nav-item .nav-link.dropdown-toggle{
+  nav.navbar .navbar-nav .nav-item .nav-link.dropdown-toggle{
     &:hover{
       &:after {
         color: $color-dark-blue;
@@ -468,13 +464,13 @@
       }
     }
   }
-  .header.navbar .navbar-nav .dropdown-item.dropdown-toggle:after{
+  nav.navbar .navbar-nav .dropdown-item.dropdown-toggle:after{
     font-size: 8px;
     width: 14px;
     height: 9px;
     right: 8px;
   }
-  .header.navbar .navbar-nav {
+  nav.navbar .navbar-nav {
     .dropdown-item.dropdown-toggle:hover:after{
       transform: translate(0,-13%);
     }

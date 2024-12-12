@@ -1,0 +1,43 @@
+.youtube-chanels {
+  padding-bottom: 150px;
+  @include mediaMax(768) {
+    padding-bottom: 55px;
+  }
+  .youtube-item {
+    display: flex;
+    .img-wrap {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      flex-shrink: 0;
+      &>img {
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+    .icon {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      img {
+        transition: all 0.2s ease-out;
+        &:hover {
+          transform: scale(1.1)
+        }
+      }
+    }
+  }
+  .content {
+    margin-left: 45px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-dark-blue;
+    a {
+      color: $color-dark-blue;
+      &:hover {
+        color: darken($color: $color-dark-blue, $amount: 20%)
+      }
+    }
+  }
+}

@@ -5,11 +5,9 @@
         width: 100%;
         height: 260px;
         object-fit: cover;
+        @include border-radius(10px);
         @include mediaMax(450) {
           height: auto;
-        }
-        @include mediaMin(991) {
-          border-radius: 10px 10px 0 0;
         }
       }
     }
@@ -33,8 +31,13 @@
       margin: 12px 0;
       p {
         color: $color-dark-gray;
-        line-height: 175%;
+        line-height: 140%;
         font-size: 15px;
+        @include mediaMin(992) {
+          font-size: 1rem;
+          line-height: 165%;
+        }
+        
       }
     }
     .blog-card-footer {
@@ -46,11 +49,7 @@
     }
 
     .has-big-card {
-      .blog-img {
-        img {
-          border-radius: 0;
-        }
-      }
+      
       .blog-card-content {
         padding: 1.5rem; //24px
         @include mediaMin(992) {
