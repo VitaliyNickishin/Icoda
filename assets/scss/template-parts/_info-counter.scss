@@ -80,10 +80,20 @@
 	.avatar {
 		&:not(:first-child) {
 			margin-left: -18px;
+			@at-root .lang-ar & {
+				margin-right: -18px;
+				margin-left: auto;
+			}
 		}
+	}
+	&__img {
+		flex-shrink: 0;
 	}
 	&__digital {
 		line-height: 100%;
+		@at-root .lang-ar & {
+			text-align: right;
+		}
 	}
 	.number {
 		font-size: 1.125rem;

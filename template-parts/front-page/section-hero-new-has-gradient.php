@@ -7,7 +7,7 @@
                         <span class="title-gradient"><?php the_field('home_gradient_title'); ?></span>
                         <span class="d-md-block undertitle"><?php the_field('home_gradient_subtitle'); ?></span>
                     </h1>
-                    <p class="subtitle pr-lg-5">
+                    <p class="subtitle">
                         <?php the_field('home_gradient_text'); ?>
                     </p>
                     <div class="section-hero-new__info mt-3 pt-3 mt-lg-5 pt-lg-0">

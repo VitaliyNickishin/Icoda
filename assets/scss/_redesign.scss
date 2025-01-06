@@ -275,6 +275,11 @@
 
 /* new: header, footer, container */
 body {
+  &.lang-ar {
+    .header.navbar .burger {
+      margin-left: 0;
+    }
+  }
   .container {
     @include mediaMin(576) {
       max-width: 540px;
@@ -353,9 +358,6 @@ body {
         margin-left: 8px;
          height: 36px;
       }
-    }
-    @include mediaMax(991) {
-     
     }
 
     .burger {
