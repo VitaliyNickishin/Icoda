@@ -142,6 +142,8 @@ h3.section-title,
   }
 }
 
-.font-weight-bold {
+.font-weight-bold,
+strong,
+b {
   font-family: $f-sto-bold;
 }
