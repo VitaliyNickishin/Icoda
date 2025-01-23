@@ -21,6 +21,16 @@
     line-height: 0;
     z-index: 3;
     bottom: -57px;
+    @at-root .section-stories & {
+      @include mediaMax(1024) {
+        bottom: -40px;
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 10;
+      }
+      
+    }
     li {
       width: 12px;
       height: 12px;
@@ -54,28 +64,28 @@
   position: absolute;
   top: -37px;
   right: 15px;
-  width: 73px;
+  width: 88px;
   height: 20px;
   .slick-next,
   .slick-prev {
-    width: 24px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     bottom: 0;
     z-index: 4;
     &:before {
       content: "";
       display: block;
-      width: 24px;
-      height: 20px;
-      background: url("../images/arrow-link-card.svg") 0 0 no-repeat;
+      width: 40px;
+      height: 40px;
+      background: url("../images/arrow-circle-blue.svg") 0 0 no-repeat;
       background-size: cover;
     }
-    &:hover {
-      &:before {
-        background: url("../images/arrow-link-card-hover.svg") 0 0 no-repeat;
-        background-size: cover;
-      }
-    }
+    // &:hover {
+    //   &:before {
+    //     background: url("../images/arrow-link-card-hover.svg") 0 0 no-repeat;
+    //     background-size: cover;
+    //   }
+    // }
   }
   .slick-next {
     right: 0;
@@ -87,6 +97,66 @@
     }
   }
 }
+//redesign arrow
+.arrow-control {
+  margin-top: 13px;
+  position: absolute;
+  top: 100%;
+  left: 15px;
+  right: 15px;
+  height: 40px;
+  z-index: 9;
+  @at-root .section-path & {
+    right: auto;
+    width: 88px;
+    @include mediaMax(992) {
+      left: 50%;
+      transform: translate(-50%);
+    }
+    
+  }
+  @at-root .section-stories & {
+    @include mediaMax(1024) {
+      width: auto;
+    }
+    
+  }
+  
+  .slick-next,
+  .slick-prev {
+    width: 40px;
+    height: 40px;
+    z-index: 4;
+    
+    &:before {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url("../images/arrow-circle-blue.svg") 0 0 no-repeat;
+      background-size: cover;
+      @at-root .section-path & {
+        background: url("../images/arrow-circle-pink.svg") 0 0 no-repeat;
+      }
+    }
+    // &:hover {
+    //   &:before {
+    //     background: url("../images/arrow-link-card-hover.svg") 0 0 no-repeat;
+    //     background-size: cover;
+    //   }
+    // }
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+    &:before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
 .slider-default-item {
   position: relative;
   display: flex;
@@ -146,7 +216,7 @@
     }
   }
   .wr-control {
-    top: -26px;
+    top: -32px;
   }
 }
 @include media-breakpoint-only(xs) {

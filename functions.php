@@ -37,6 +37,7 @@ register_nav_menus(array(
     'main-menu-inner' => esc_html__('Main-Inner-Page', 'icoda'),
     'main-mobile-menu' => esc_html__('Main Mobile', 'icoda'),
     'footer-left' => esc_html__('Footer left', 'icoda'),
+    'footer-two-two' => esc_html__('Footer two two', 'icoda'),
     'footer-center' => esc_html__('Footer center', 'icoda'),
     'footer-center-down' => esc_html__('Footer center down', 'icoda'),
     'footer-right-up' => esc_html__('Footer right up', 'icoda'),
@@ -44,7 +45,8 @@ register_nav_menus(array(
     'footer-right-down-2' => esc_html__('Footer right down 2', 'icoda'),
 
     'header-one' => esc_html__('Header one', 'icoda'),
-    'header-two' => esc_html__('Header two', 'icoda'),
+    'header-two' => esc_html__('Header two one', 'icoda'),
+    'header-two-two' => esc_html__('Header two two', 'icoda'),
     'header-three-one' => esc_html__('Header three one', 'icoda'),
     'header-three-two' => esc_html__('Header three two', 'icoda'),
     'header-three-three' => esc_html__('Header three three', 'icoda'),
@@ -143,11 +145,17 @@ function ip_user_country_save() {
 	}
 
 	if(!empty($ip)) {
-        $geoData = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=' . $ip));
-        if (!empty($geoData['geoplugin_request']) && !empty($geoData['geoplugin_countryName'])) {
-            $country = $geoData['geoplugin_countryName'];
-            setcookie( 'user_country_ip_detected', $country, 0, '/' );
-        }
+        // $geoData = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=' . $ip));
+        // if (!empty($geoData['geoplugin_request']) && !empty($geoData['geoplugin_countryName'])) {
+        //     $country = $geoData['geoplugin_countryName'];
+        //     setcookie( 'user_country_ip_detected', $country, 0, '/' );
+        // }
+
+        // $geoData = unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
+        // if (!empty($geoData['status']) && $geoData['status'] === 'success' && !empty($geoData['country'])) {
+        //     $country = $geoData['country'];
+        //     setcookie( 'user_country_ip_detected', $country, 0, '/' );
+        // }
 
 		// $ip_data = @json_decode(wp_remote_retrieve_body(wp_remote_get( "http://ip-api.com/json/".$ip)));
         // $user_data = !empty( $ip_data ) ? $ip_data->country : '';
@@ -189,18 +197,32 @@ function ip_user_country_save_head() {
 	}
 
 	if(!empty($ip)) {
-        $geoData = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=' . $ip));
-        if (!empty($geoData['geoplugin_request']) && !empty($geoData['geoplugin_countryName'])) {
-            $country = $geoData['geoplugin_countryName'];
-            echo '<input type="hidden" value="'.$country.'" name="head_user_country_ip_detected" />';
-        }
+        // $geoData = unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=' . $ip));
+        // if (!empty($geoData['geoplugin_request']) && !empty($geoData['geoplugin_countryName'])) {
+        //     $country = $geoData['geoplugin_countryName'];
+        //     echo '<input type="hidden" value="'.$country.'" name="head_user_country_ip_detected" />';
+        // }
+
+
+        echo '<input type="hidden" value="'.$ip.'" name="head_user_ip_detected" />';
+        echo '<input type="hidden" value="" name="head_user_country_ip_detected" />';
+        // $geoData = unserialize(file_get_contents('http://ip-api.com/php/' . $ip));
+        // if (!empty($geoData) && !empty($geoData['status']) && $geoData['status'] === 'success' && !empty($geoData['country'])) {
+        //     $country = $geoData['country'];
+        //     echo '<input type="hidden" value="'.$country.'" name="head_user_country_ip_detected" />';
+        // } else {
+        //     $geoData = json_decode(file_get_contents('https://reallyfreegeoip.org/json/' . $ip), true);
+        //     if (!empty($geoData) && !empty($geoData['country_name'])) {
+        //         $country = $geoData['country_name'];
+        //         echo '<input type="hidden" value="'.$country.'" name="head_user_country_ip_detected" />';
+        //     }
+        // }
 
 		// $ip_data = @json_decode(wp_remote_retrieve_body(wp_remote_get( "http://ip-api.com/json/".$ip)));
 		// $user_data = !empty( $ip_data ) ? $ip_data->country : '';
 		// echo '<input type="hidden" value="'.$user_data.'" name="head_user_country_ip_detected" />';
 	}
 }
-
 
 function the_breadcrumbs()
 {
@@ -315,10 +337,16 @@ function get_class_wrap($class = '')
 function icoda_styles()
 {
     global $wp_query;
-    $stylesheet_directory = get_stylesheet_directory();
 
     $assets_uri = get_stylesheet_directory_uri() . '/assets';
-    $scripts_version = '0000003';
+    $scripts_version = '0000021';
+
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', ("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"), false);
+        wp_enqueue_script('jquery');
+    }
+    
 
     wp_enqueue_style('icoda-fontawesome', $assets_uri . '/sources/fontawesome-all.min.css');
     wp_enqueue_style('icoda-style-main', $assets_uri . '/css/main.css');
@@ -388,19 +416,27 @@ function icoda_styles()
         array('jquery'), '', true
     );
 
-    wp_register_script('main', $assets_uri.'/js/main.js', array('jquery', 'jquery.parallax.min'), $scripts_version, true);
-    wp_localize_script( 'main', 'icoda_loadmore_params', array(
-        'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
-        'posts' => json_encode( $wp_query->query_vars ), // everything about your loop is here
-        'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
-        'max_page' => $wp_query->max_num_pages,
-        'current_language' => apply_filters( 'wpml_current_language', NULL ),
+    wp_register_script('main', $assets_uri.'/js/main.js', array('jquery'), $scripts_version, ['strategy'=> 'defer', 'in_footer' => true]);
+    wp_localize_script( 'main', 'icoda_main_params', array(
         'menu_open_label' => __('Menu', 'icoda'),
         'menu_close_label' => __('Close', 'icoda'),
-        'btn_text' => strtoupper(__('Load more', 'icoda')),
-        'btn_text_loading' => __('Loading...', 'icoda'),
+        'current_language' => apply_filters( 'wpml_current_language', NULL ),
     ) );
     wp_enqueue_script('main');
+
+    if( ! is_front_page(  ) ) {
+        wp_register_script('general', $assets_uri.'/js/general.js', array('jquery', 'jquery.parallax.min'), $scripts_version, ['strategy'=> 'defer', 'in_footer' => true]);
+        wp_localize_script( 'general', 'icoda_loadmore_params', array(
+            'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+            'posts' => json_encode( $wp_query->query_vars ), // everything about your loop is here
+            'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
+            'max_page' => $wp_query->max_num_pages,
+            'current_language' => apply_filters( 'wpml_current_language', NULL ),
+            'btn_text' => strtoupper(__('Load more', 'icoda')),
+            'btn_text_loading' => __('Loading...', 'icoda'),
+        ) );
+        wp_enqueue_script('general');
+    }
 
     if( is_singular('post') ) {
         wp_register_script('article-share', $assets_uri.'/js/share.js', array('jquery'), $scripts_version, true);
@@ -418,7 +454,42 @@ function icoda_styles()
         );
     }
 
+    if( is_page_template('template-pages/template-calculator.php') ) {
+        wp_enqueue_script(
+            'icoda-calculator',
+            $assets_uri . '/js/calculator.js',
+            array('jquery'), '', true
+        );
+    }
 
+    if( is_front_page(  ) ) {
+        wp_enqueue_script(
+            'icoda-load-parts-1',
+            $assets_uri . '/js/load-content-1.js',
+            array('jquery'), $scripts_version, ['strategy'=> 'defer', 'in_footer' => true]
+        );
+        wp_enqueue_script(
+            'icoda-load-parts-2',
+            $assets_uri . '/js/load-content-2.js',
+            array('jquery'), $scripts_version, ['strategy'=> 'defer', 'in_footer' => true]
+        );
+        wp_enqueue_script(
+            'icoda-load-parts-3',
+            $assets_uri . '/js/load-content-3.js',
+            array('jquery'), $scripts_version, ['strategy'=> 'defer', 'in_footer' => true]
+        );
+        wp_enqueue_script(
+            'icoda-load-parts-4',
+            $assets_uri . '/js/load-content-4.js',
+            array('jquery'), $scripts_version, ['strategy'=> 'defer', 'in_footer' => true]
+        );
+        wp_enqueue_script(
+            'icoda-load-parts-5',
+            $assets_uri . '/js/load-content-5.js',
+            array('jquery'), $scripts_version, ['strategy'=> 'defer', 'in_footer' => true]
+        );
+    }
+    
     if( is_page_template( 'template-pages/template-feedback.php' ) ) {
         wp_enqueue_script(
             'icoda-feedback',
@@ -432,6 +503,17 @@ function icoda_styles()
             'error' => __('Something went wrong. Try again later', 'icoda'),
         ));
     }
+
+    wp_enqueue_script(
+        'confetti',
+        $assets_uri . '/js/confetti.js',
+        array('jquery'), '', true
+    );
+    wp_enqueue_script(
+        'drawsvg',
+        $assets_uri . '/js/jquery.drawsvg.min.js',
+        array('jquery'), '', true
+    );
 }
 
 add_action('wp_enqueue_scripts', 'icoda_styles');
@@ -489,8 +571,8 @@ function icoda_loadmore_ajax_handler(){
                 $excerpt = get_the_excerpt(get_the_ID());
 
                 if( $index == 1 || $index == 2 || $index == 6 || $index == 7 ) {
-                    $lg_class = 'col-lg-6 has-big-card';
-                    $title = mb_strimwidth($title, 0, 90, "...");
+                    // $lg_class = 'col-lg-6 has-big-card';
+                    // $title = mb_strimwidth($title, 0, 90, "...");
                 } else {
                     $title = mb_strimwidth($title, 0, 45, "...");
                 }
@@ -560,7 +642,7 @@ function icoda_loadmore_ajax_handler(){
                                     <div class="author-meta">
                                         <span class="author-name">
                                             <?php
-                                            echo !in_array($author_id, [21, 22, 8, 9, 10, 6, 24]) ? 'ICODA' : apply_filters(
+                                            echo !in_array($author_id, [8, 9, 10, 6, 24, 21, 22, 28, 27, 29, 31]) ? 'ICODA' : apply_filters(
                                                 'wpml_translate_single_string',
                                                 get_the_author_meta('display_name', $author_id),
                                                 'Authors',
@@ -751,6 +833,8 @@ add_filter('wp_footer', function () {
  */
 require get_template_directory() . '/inc/acf.php';
 
+require get_template_directory() . '/inc/load-content.php';
+
 /**
  * Custom template tags for this theme.
  */
@@ -762,12 +846,15 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 require get_template_directory() . '/inc/api-for-amocrm.php';
+require get_template_directory() . '/inc/api-for-bitrix.php';
 require get_template_directory() . '/inc/api-for-clone.php';
+require get_template_directory() . '/inc/calendly.php';
 include_once get_template_directory() . '/inc/portfolio/portfolio.php';
 include_once get_template_directory() . '/inc/faq/faq.php';
 include_once get_template_directory() . '/inc/export-strings.php';
 include_once get_template_directory() . '/inc/bitrix/bitrix.php';
 include_once get_template_directory() . '/inc/api-v1.php';
+include_once get_template_directory() . '/inc/export-posts.php';
 
 
 add_action('admin_menu', 'icoda_spam_request_settings', 1);
@@ -872,8 +959,15 @@ function true_301_redirect()
         array('old' => '/es/services/es/services/listing-on-the-coingecko-exchange/', 'new' => '/es/services/listing-on-the-coingecko-exchange/'), // страница
         array('old' => '/es/services/es/services/listing-on-coinmarketcap-exchange/', 'new' => '/es/services/listing-on-coinmarketcap-exchange/'), // страница
         array('old' => '/es/services/es/services/crypto-pr/', 'new' => '/es/services/crypto-pr/'), // страница
-
-
+        array('old' => '/es/services/listing-on-the-coingecko-exchange/', 'new' => '/es/listing-on-the-coingecko-exchange/'), // страница
+        array('old' => '/es/services/listing-on-coinmarketcap-exchange/', 'new' => '/es/listing-on-coinmarketcap-exchange/'), // страница
+        
+        // array('old' => 'LINK', 'new' => 'LINK'),
+        array('old' => '/zh-hans/services/listing-on-the-coingecko-exchange/', 'new' => '/zh-hans/listing-on-the-coingecko-exchange/'),
+        array('old' => '/zh-hans/services/russian-marketing/', 'new' => '/zh-hans/russian-marketing/'),
+        array('old' => '/zh-hans/services/crypto-pr/', 'new' => '/zh-hans/crypto-pr/'),
+        array('old' => '/zh-hans/services/korean-marketing/', 'new' => '/zh-hans/korean-marketing/'),
+        
 
     );
     foreach ($rules as $rule) :
@@ -890,6 +984,15 @@ function true_301_redirect()
             wp_redirect( $redirect_url );
             exit();
         }
+    }
+
+    if(is_page(94787)) {
+        wp_redirect(add_query_arg(['utm_source' => 'partner', 'utm_medium' => 'referral', 'utm_campaign' => 'global_treand' ], get_home_url()));
+        exit();
+    }
+    if(is_page(96425)) {
+        wp_redirect(add_query_arg(['utm_source' => 'partner', 'utm_medium' => 'referral', 'utm_campaign' => 'influxjuice' ], get_home_url()));
+        exit();
     }
 }
 
@@ -1226,11 +1329,11 @@ function icodaRemoveEmptyParagraphs($content) {
 function disalow_index_ru_and_es_pages($robots_string) {
     global $post;
     $exclude_posts = array(
-        8493,
-        8503,
-        8497,
-        8500,
-        8489,
+        // 8493,
+        // 8503,
+        // 8497,
+        // 8500,
+        // 8489,
     );
 
     $current_queried_object = ( function_exists('get_queried_object') ) ? get_queried_object() : false;
@@ -1365,11 +1468,22 @@ function icoda_add_rate_schema( $graph, $context ) {
         }
     }
 
-
     return $graph;
 }
 add_filter( 'wpseo_schema_graph', 'icoda_add_rate_schema', 100, 2 );
 
+
+function icoda_wpseo_breadcrumb_single_link_info($link_info, $index, $crumbs){
+    if( $index == 1 && !empty($link_info['term_id']) && is_singular( 'post' )
+        && ( has_term( 'services', 'category', get_the_ID() )
+            || has_term( 'services-zh-hans', 'category', get_the_ID() ) ) ) {
+        $term_obj = get_term_by('term_id', $link_info['term_id'], 'category');
+        $link_info['url'] = get_term_link($link_info['term_id']);
+        $link_info['text'] = $term_obj->name;
+    }
+    return $link_info;
+}
+add_filter( 'wpseo_breadcrumb_single_link_info', 'icoda_wpseo_breadcrumb_single_link_info' , 10, 3 );
 
 
 add_filter( 'body_class','icoda_body_class_filter' );
@@ -1488,8 +1602,10 @@ add_filter( 'wpml_hreflangs_html', function( $hreflang ) {
         ];
         foreach( $separated_langs as $lang ) {
 
-            foreach( $lang_countries[$lang['code']] as $lang_country_postfix ) {
-                $hreflang .= '<link rel="alternate" hreflang="' . esc_attr( $lang['code'] . '-' . strtoupper($lang_country_postfix[1]) ) . '" href="' . esc_url( $lang['url'] ) . '" />' . PHP_EOL;
+            if(!empty($lang_countries[$lang['code']])) {
+                foreach( $lang_countries[$lang['code']] as $lang_country_postfix ) {
+                    $hreflang .= '<link rel="alternate" hreflang="' . esc_attr( $lang['code'] . '-' . strtoupper($lang_country_postfix[1]) ) . '" href="' . esc_url( $lang['url'] ) . '" />' . PHP_EOL;
+                }
             }
 
             if('en' == $lang['code']) {
@@ -1869,11 +1985,13 @@ function icoda_pre_get_posts($query)
             ];
         }
         $query->set('tax_query', $tax_query);
-		$query->set('posts_per_page', 10);
+		$query->set('posts_per_page', 12);
 		$query->set('orderby', 'date');
 		$query->set('order', 'DESC');
 		$query->set('is_home_request', 'yes');
 
+        $top_post = icoda_get_top_post_for_blog_pages();
+        $query->set('post__not_in', [$top_post->ID]);
 	}
 
     if (!is_admin() && $query->is_main_query() && (is_category( 'blog') || is_category( 'blog-zh-hans') || is_category( 'top') || is_category( 'top-zh-hans')|| is_category( 'top-es')|| is_category( 'academy') || is_category( 'academy-zh-hans')|| is_category( 'academy-es')) ) {
@@ -1890,7 +2008,9 @@ function icoda_pre_get_posts($query)
             ];
             $query->set('tax_query', $tax_query);
         }
-		$query->set('posts_per_page', 10);
+		$query->set('posts_per_page', 12);
+        $top_post = icoda_get_top_post_for_blog_pages();
+        $query->set('post__not_in', [$top_post->ID]);
 	}
 }
 
@@ -2239,4 +2359,69 @@ add_action('template_redirect', function () {
         var_export($post_ids);
         die;
     }
+
+    if( ! empty( $_GET['test_get_p'] ) ) {
+        $page = get_page_by_path('/icoda-agency-2-0');
+        var_export($page);
+        die;
+    }
+
+    
 }, 200);
+
+add_filter( 'wpseo_opengraph_site_name', function( $open_graph_site_name, $presentation ) {
+    return 'ICODA';
+} , 10 ,2);
+
+
+add_action('admin_menu', function () {
+    if( is_user_logged_in() ) {
+        $user = wp_get_current_user();
+        $roles = ( array ) $user->roles;
+        if( in_array('editor', $roles) ) {
+            remove_menu_page('users.php');
+        }
+      }
+});
+
+add_action('admin_head', function () {
+    if( is_user_logged_in() ) {
+        $screen = get_current_screen(  );
+        if( $screen->id === 'users' ) {
+            $user = wp_get_current_user();
+            $roles = ( array ) $user->roles;
+            if( in_array('editor', $roles) ) {
+                wp_die( __( 'Sorry, you are not allowed to import content into this site.' ) );
+            }
+        }
+    }
+});
+
+add_filter('wpml_override_is_translator', function ($is_translator, $user_id, $args){
+    $user = get_user_by('id', $user_id);
+ 
+    if (in_array('editor', (array) $user->roles, true)) {
+        return true;
+    }
+ 
+    return $is_translator;
+}, 10, 3);
+
+function icoda_get_featured_image_url($post_id, $size = 'full') {
+    $image_url = get_field('post_image_blog_card', $post_id);
+    if(empty($image_url)) {
+        $image_url = get_the_post_thumbnail_url($post_id, $size);
+    }
+    return $image_url;
+}
+
+function icoda_get_top_post_for_blog_pages() {
+    $q = new WP_Query( array(
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'posts_per_page' => 1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+    ) );
+    return !empty($q->posts) ? $q->posts[0] : false;
+}

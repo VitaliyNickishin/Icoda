@@ -1,6 +1,7 @@
 .section-hero-new {
   margin-bottom: 60px;
-  .h1 {
+  .h1,
+  .tilte {
     opacity: 1;
     font-family: $f-sto-m;
     font-size: 1.5rem;
@@ -23,6 +24,7 @@
     }
 
   }
+  
   .title-gradient {
     background: linear-gradient(90deg, #5C66F3 0%, #3946F4 70%);
     -webkit-background-clip: text;
@@ -61,29 +63,23 @@
     }
   }
   &__inner {
-    background-image: url("../images/bg-hero-mob.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 3rem;
     padding-bottom: 3.25rem;
-    margin-right: 5px;
-    margin-left: 5px;
-    @include border-radius(10px);
-
-    @include mediaMin(576) {
-      background-image: url("../images/bg-hero.png");
-    }
+    
     @include mediaMin(992) {
       padding-bottom: 5rem;
       padding-top: 5rem;
-      margin-right: 1rem;
-      margin-left: 1rem;
-      @include border-radius(15px);
     }
-    @include mediaMin(1600) {
-      margin-right: 60px;
-      margin-left: 60px;
+  }
+  &-service {
+    .title {
+      font-size: 2rem;
+      @include mediaMin(1441) {
+        font-size: 3rem;
+      }
+
     }
+    
   }
   
   
@@ -132,21 +128,58 @@
       display: block;
     }
   }
-  &-has-gradient {
+  
+  .bg-wrap {
     
-    .section-hero-new__inner {
-      background-image: none;
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin: 0;
-      @include border-radius(0);
-
-      @include mediaMin(576) {
-        background-image: none;
+    img {
+      position: absolute;
+      
+    }
+    .bg-image-1 {
+      left: -90px;
+      top: -50px;
+      width: 450px;
+      max-width: 450px;
+      @include mediaMin(768) {
+        left: 90px;
+        top: -60px;
+        width: 450px;
+        max-width: 450px;
+      }
+      @include mediaMin(991) {
+        left: -70px;
+        top: -100px;
+        width: 490px;
+        max-width: 490px;
+      }
+      @include mediaMin(1340) {
+        top: -130px;
+        left: -10px;
+        width: auto;
+        max-width: 100%;
       }
     }
+    .bg-image-2 {
+      left: 60px;
+      bottom: -60px;
+      @include mediaMin(768) {
+        left: 110px;
+        bottom: -130px;
+      }
+      @include mediaMin(991) {
+        left: 20px;
+        bottom: -70px;
+      }
+      @include mediaMin(1340) {
+        bottom: -110px;
+        left: 20px;
+      }
+    }
+    // background-image: url('../images/hero_img_1.png');
   }
 }
+
+
 .has-gradient {
   position: absolute;
   right: 0;
@@ -177,29 +210,54 @@
       justify-content: end;
     }
   }
-  .serv-box {
+  
+}
+
+.serv-box {
+  
+  @include border-radius(12px);
+  border: 1px solid $border-color;
+  color: $color-dark-blue;
+
+  @at-root .services-box & {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.50);
+    font-size: 10px;
+    font-family: $f-sto-m;
     margin: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
-    border-radius: 12px;
-    border: 1px solid $border-color;
-    background: rgba(255, 255, 255, 0.50);    ;
-    font-size: 10px;
-    font-family: $f-sto-m;
-    color: $color-dark-blue;
     @include mediaMin(1340) {
       width: 115px;
       height: 115px;
       font-size: 1rem;
     }
-    &.hidden {
-      opacity: 0;
-      visibility: hidden;
+  }
+  @at-root .bg-wrap & {
+    margin: 5px;
+    width: 267px;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(4px);
+    font-size: 1rem;
+    p {
+      line-height: 115%;
     }
-    
   }
   
-}
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .number {
+		font-size: 2rem;
+		color: $color-blue;
+		font-family: $f-sto-m;
+    display: block;
+    margin: 4px 0;
+	}
+  
+}  

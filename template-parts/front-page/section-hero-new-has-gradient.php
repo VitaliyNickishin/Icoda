@@ -1,14 +1,14 @@
-<section class="section section-hero-new section-hero-new-has-gradient">
+<section class="section section-hero-new">
     <div class="section-hero-new__inner">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-8 pr-lg-0">
                     <h1 class="h1 mb-3 mb-lg-4">
-                        <span class="title-gradient"><?php the_field('home_gradient_title'); ?></span>
-                        <span class="d-md-block undertitle"><?php the_field('home_gradient_subtitle'); ?></span>
+                        <span class="title-gradient"><?php echo get_field('home_gradient_title'); ?></span>
+                        <span class="d-md-block undertitle"><?php echo get_field('home_gradient_subtitle'); ?></span>
                     </h1>
                     <p class="subtitle">
-                        <?php the_field('home_gradient_text'); ?>
+                        <?php echo get_field('home_gradient_text'); ?>
                     </p>
                     <div class="section-hero-new__info mt-3 pt-3 mt-lg-5 pt-lg-0">
                         <?php get_template_part('template-parts/_partials/info-about-us'); ?>

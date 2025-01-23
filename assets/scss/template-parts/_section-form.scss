@@ -1,46 +1,40 @@
 .section-form {
   padding-bottom: 80px;
-	.row-vert {
-    align-items: center;
-	}
-	.l-box {
-    display: flex;
-    max-width: 412px;
-    min-height: 360px;
-    padding-left: 8.333333333333%;
-		@include mediaMax(768) {
-			padding-left: 0;
-			min-height: auto;
-			padding-bottom: 40px;	
+  &-inner {
+	background-color: $gray-300;
+	padding: 40px 0;
+		@include border-radius(1.25rem);
+		
+		@include mediaMin(991) {
+			padding: 60px 70px;
 		}
-		.text-vert {
-			display: flex;
-			flex-direction: column;
-			margin-top: auto;
-			margin-bottom: auto;
-		}
-		.h4 {
-			max-width: 233px;
-			padding-bottom: 25px;
-		}
-
-	}
-	.bg-line-left {
-    height: 360px;
-		@include mediaMax(768) {
-			display: none;
+		@include mediaMin(1441) {
+			padding: 80px 100px;
 		}
 	}
-	.wr-form {
-    padding-left: 50px;
-		@include mediaMax(768) {
-			padding-left: 0;
-		}
-	}
+	
 	.form-default {
+		.form-control {
+			padding: 14px 20px;
+			height: auto;
+			color: $color-dark-blue;
+			@include mediaMin(1441) {
+				font-size: 18px;
+			}
+			&::placeholder {
+				color: $placeholder;
+			}
+		}
 		textarea.form-control {
-			min-height: 100px;
-			padding: 12px 15px 15px 15px;
+			min-height: 118px;
+			padding: 14px 20px;
+		}
+		.wr-btn {
+			margin-top: 0;
+			text-align: left;
+		}
+		button.btn.btn-blue {
+			min-width: 163px;
 		}
 
 	}
