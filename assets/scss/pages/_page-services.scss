@@ -33,6 +33,20 @@
     }
 }
 
+.section-hero-new-service {
+    &.section-hero-new {
+        .slick-track {
+            gap: 0;
+        }
+    }
+    
+    .media-logo {
+        + .media-logo {
+            margin-left: 12px;
+        }
+    }
+}
+
 .section-services-cases {
     .slick-slide {
         img {
@@ -75,7 +89,10 @@
             padding: 20px 32px;
         }
         &:hover {
-            box-shadow: 0px 4px 20px 0px rgba(8, 34, 101, 0.15);
+            @include mediaMin(991) {
+                box-shadow: 0px 4px 20px 0px rgba(8, 34, 101, 0.15);
+            }
+            
         }
         // @at-root .section-path & {
         //     padding: 1.125rem 1.25rem;
@@ -98,9 +115,9 @@
 
     @at-root .section-services-cases & {
         width: 300px;
-        margin-right: 12px;
+        margin-right: 1rem;
         @include mediaMin(1024) {
-            margin-right: 30px;
+            margin-right: 1.875rem;
             width: auto;
         }
     }
@@ -121,7 +138,7 @@
     }
     &-header {
         @at-root .section-services-list & {
-            @extend.align-items-start;
+            @extend.align-items-center;
             @extend .d-flex;
             @extend .justify-content-between;
         }
@@ -201,9 +218,12 @@
 }
 
 .section-services-list {
-    background-image: url('../images/bg-service-list.png');
-    background-position: 0 50%;
-    background-repeat: no-repeat;
+    @include mediaMin(991) {
+        background-image: url('../images/bg-service-list.png');
+        background-position: 0 50%;
+        background-repeat: no-repeat;
+    }
+    
     
     .title,
     .undertitle {
@@ -221,6 +241,44 @@
     }
     .btn.btn-blue {
         min-width: 170px;
+    }
+    .custom-slider {
+        @include mediaMin(991) {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    
+    .slick-track {
+        @include mediaMax(992) {
+            display: flex !important;
+            padding-left: 1rem;
+            
+        }
+    }
+    .slick-slide {
+        //align all slide with the same height
+        @include mediaMax(992) {
+            flex-grow: 0;
+            height: inherit!important;
+        }
+        
+        img {
+            width: auto;
+        }
+    }
+    .services-card {
+        @include mediaMax(992) {
+            width: 300px;
+        }
+        
+        
+        // + .services-card {
+        //     margin-left: 12px;
+        //     @include mediaMin(768) {
+        //         margin-left: 40px;
+        //     }
+        // }
     }
 }
 //4
@@ -290,6 +348,10 @@
         @include mediaMin(991) {
             margin-top: 7.0625rem;
             padding: 2rem 6.25rem;
+            margin-right: 70px;
+        }
+        @include mediaMin(1441) {
+            margin-right: 100px;
         }
         
         .title {
@@ -395,7 +457,6 @@
     }
 }
 
-//9
-.section-form {
-
+.has-white-font {
+    background-color: $black;
 }

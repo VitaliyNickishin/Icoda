@@ -180,7 +180,7 @@ get_header();
                                 </div>
 
                                 <div class="mt-3 pt-3 pt-lg-4 text-center text-lg-left">
-                                    <a href="#" class="btn btn-blue"><?php echo _e('See All Cases', 'icoda') ?></a>
+                                    <a href="/cases" class="btn btn-blue"><?php echo _e('See All Cases', 'icoda') ?></a>
                                 </div>
                             </div>
                         </div>
@@ -200,8 +200,8 @@ get_header();
                                 
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-12 col-md-6 col-lg-4 py-lg-3 my-lg-0 py-2 my-1">
+                        <div class="row slider-services-grid custom-slider pl-3 pl-lg-0">
+                            <div class="col col-lg-4 px-2 p-lg-3">
                                 <a href="#" class="services-card card-has-rotate-arrow">
                                     <div class="services-card-header">
                                         <span class="h4 title pr-3">
@@ -214,7 +214,7 @@ get_header();
                                     </div>
                                 </a> 
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 py-lg-3 my-lg-0 py-2 my-1">
+                            <div class="col col-lg-4 px-2 p-lg-3">
                                 <a href="#" class="services-card card-has-rotate-arrow">
                                     <div class="services-card-header">
                                         <span class="h4 title pr-3">
@@ -227,7 +227,7 @@ get_header();
                                     </div>
                                 </a> 
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 py-lg-3 my-lg-0 py-2 my-1">
+                            <div class="col col-lg-4 px-2 p-lg-3">
                                 <a href="#" class="services-card card-has-rotate-arrow">
                                     <div class="services-card-header">
                                         <span class="h4 title pr-3">
@@ -241,7 +241,7 @@ get_header();
                                 </a> 
                             </div>
 
-                            <div class="col-12 col-md-6 col-lg-4 py-lg-3 my-lg-0 py-2 my-1">
+                            <div class="col col-lg-4 px-2 p-lg-3">
                                 <a href="#" class="services-card card-has-rotate-arrow">
                                     <div class="services-card-header">
                                         <span class="h4 title pr-3">
@@ -255,7 +255,7 @@ get_header();
                                 </a> 
                             </div>
 
-                            <div class="col-12 col-md-6 col-lg-4 py-lg-3 my-lg-0 py-2 my-1">
+                            <div class="col col-lg-4 px-2 p-lg-3">
                                 <a href="#" class="services-card card-has-rotate-arrow">
                                     <div class="services-card-header">
                                         <span class="h4 title pr-3">
@@ -268,7 +268,7 @@ get_header();
                                     </div>
                                 </a> 
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 py-lg-3 my-lg-0 py-2 my-1">
+                            <div class="col col-lg-4 px-2 p-lg-3">
                                 <a href="#" class="services-card card-has-rotate-arrow">
                                     <div class="services-card-header">
                                         <span class="h4 title pr-3">
@@ -281,7 +281,7 @@ get_header();
                                     </div>
                                 </a> 
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4 py-lg-3 my-lg-0 py-2 my-1">
+                            <div class="col col-lg-4 px-2 p-lg-3">
                                 <a href="#" class="services-card card-has-rotate-arrow">
                                     <div class="services-card-header">
                                         <span class="h4 title pr-3">
@@ -295,7 +295,7 @@ get_header();
                                 </a> 
                             </div>
 
-                            <div class="col-12 col-md-6 col-lg-4 py-lg-3 my-lg-0 py-2 my-1">
+                            <div class="col col-lg-4 px-2 p-lg-3">
                                 <a href="#" class="services-card card-has-rotate-arrow">
                                     <div class="services-card-header">
                                         <span class="h4 title pr-3">
@@ -309,7 +309,7 @@ get_header();
                                 </a> 
                             </div>
 
-                            <div class="col-12 col-md-6 col-lg-4 py-lg-3 my-lg-0 py-2 my-1">
+                            <div class="col col-lg-4 px-2 p-lg-3">
                                 <a href="#" class="services-card card-has-rotate-arrow">
                                     <div class="services-card-header">
                                         <span class="h4 title pr-3">
@@ -324,8 +324,13 @@ get_header();
                             </div>
 
                         </div>
-                        <div class="row mt-5 pt-4">
-                            <div class="col-12 text-center">
+                        <div class="row mb-5 pb-2 mb-md-0 pb-md-0">
+                            <div class="col-12">
+                                <div class="arrow-control arrow-control-service-grid"></div>
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-12 text-center mt-5">
                                 <h4 class="h4 mb-0 title">
                                     <?php echo _e('Let us help you win big!', 'icoda') ?>
                                 </h4>
@@ -333,7 +338,7 @@ get_header();
                                     <?php echo _e('Don’t gamble with your iGaming marketing success.', 'icoda') ?>
                                 </span>
                                 <div class="pt-lg-2 m-auto">
-                                    <a href="#" class="btn btn-blue mt-4"><?php echo _e('Contact us', 'icoda') ?></a>
+                                    <a href="/contact-us" class="btn btn-blue mt-4"><?php echo _e('Contact us', 'icoda') ?></a>
                                 </div>
                             </div>
                             
@@ -422,7 +427,7 @@ get_header();
                                         <?php echo _e('⚡️ Let’s Work Together', 'icoda') ?>
                                     </h4>
                                     <div class="pt-1 m-auto">
-                                        <a href="#" class="btn btn-pink mt-3"><?php echo _e('Talk to Us', 'icoda') ?></a>
+                                        <a href="/contact-us" class="btn btn-pink mt-3"><?php echo _e('Talk to Us', 'icoda') ?></a>
                                     </div>
                                 </div>
                                 
@@ -465,8 +470,9 @@ get_header();
                                         <img src="/wp-content/uploads/2025/01/cp-logo.png" alt="Coin Poker" />
                                     </picture>
                                 </div>
+                                <!-- @todo add extra class in acf-field to manage background logo with white font -->
                                 <div
-                                    class="media-logo">
+                                    class="media-logo has-white-font">
                                     <picture>
                                         <img src="/wp-content/uploads/2025/01/playbet.png" alt="Playbet" />
                                     </picture>
@@ -478,7 +484,7 @@ get_header();
                                     </picture>
                                 </div>
                                 <div
-                                    class="media-logo">
+                                    class="media-logo has-white-font">
                                     <picture>
                                         <img src="/wp-content/uploads/2025/01/huge.png" alt="Huge" />
                                     </picture>
@@ -488,8 +494,8 @@ get_header();
                                 
                         </div>
                         <div class="col-12">
-                                <div class="arrow-control arrow-control-stories"></div>
-                            </div>
+                            <div class="arrow-control arrow-control-stories"></div>
+                        </div>
                     </div>
                 </div>
             </section>
