@@ -1,8 +1,11 @@
 <?php
 $disable_block = block_value('disable-block');
-if($disable_block) {
+if ($disable_block) {
     return;
 }
+
+$button_text = block_value('button-text');
+$button_link = block_value('button-link');
 ?>
 
 <?php
@@ -17,10 +20,10 @@ if (!block_rows('row') && empty($general_testimonials)) {
     <div class="container">
         <div class="row">
             <?php
-                $title = block_field('title', false);
-                if( empty( $title ) ) {
-                    $title = __('Testimonials', 'icoda');
-                }
+            $title = block_field('title', false);
+            if (empty($title)) {
+                $title = __('Testimonials', 'icoda');
+            }
             ?>
             <?php if ($title) : ?>
                 <div class="col-12">
@@ -80,48 +83,48 @@ if (!block_rows('row') && empty($general_testimonials)) {
                         <?php if (!empty($general_testimonials)) : ?>
                             <?php foreach ($general_testimonials as $general_testimonials_item) : ?>
                                 <?php
-                                    $queried_object_id = get_queried_object_id();
-                                        if( (
-                                                $queried_object_id == 10351 
-                                                || $queried_object_id == 10612 
-                                                || $queried_object_id == 10610 
-                                                || $queried_object_id == 10611
-                                                || $queried_object_id == 22149
-                                            ) 
-                                            && empty( $general_testimonials_item['youtube'] ) 
-                                        ) {
-                                            continue;
-                                        }
+                                $queried_object_id = get_queried_object_id();
+                                if ((
+                                        $queried_object_id == 10351
+                                        || $queried_object_id == 10612
+                                        || $queried_object_id == 10610
+                                        || $queried_object_id == 10611
+                                        || $queried_object_id == 22149
+                                    )
+                                    && empty($general_testimonials_item['youtube'])
+                                ) {
+                                    continue;
+                                }
 
-                                        if( (
-                                            $queried_object_id != 10351 
-                                            && $queried_object_id != 10612 
-                                            && $queried_object_id != 10610 
-                                            && $queried_object_id != 10611
-                                            && $queried_object_id != 22149
-                                        ) 
-                                            && !empty( $general_testimonials_item['youtube'] ) 
-                                        ) {
-                                            continue;
-                                        }
+                                if ((
+                                        $queried_object_id != 10351
+                                        && $queried_object_id != 10612
+                                        && $queried_object_id != 10610
+                                        && $queried_object_id != 10611
+                                        && $queried_object_id != 22149
+                                    )
+                                    && !empty($general_testimonials_item['youtube'])
+                                ) {
+                                    continue;
+                                }
 
-                                    if( (
-                                            $queried_object_id == 10351 
-                                            || $queried_object_id == 10612 
-                                            || $queried_object_id == 10610 
-                                            || $queried_object_id == 10611
-                                            || $queried_object_id == 22149
-                                        ) 
-                                        && ! empty( $general_testimonials_item['youtube'] ) 
-                                    ) {
-                                        $general_testimonials_item['hide_testimonial'] = false;
-                                    }
-                                    ?>
+                                if ((
+                                        $queried_object_id == 10351
+                                        || $queried_object_id == 10612
+                                        || $queried_object_id == 10610
+                                        || $queried_object_id == 10611
+                                        || $queried_object_id == 22149
+                                    )
+                                    && ! empty($general_testimonials_item['youtube'])
+                                ) {
+                                    $general_testimonials_item['hide_testimonial'] = false;
+                                }
+                                ?>
 
                                 <?php
-                                    if( $general_testimonials_item['hide_testimonial'] ) {
-                                        continue;
-                                    }
+                                if ($general_testimonials_item['hide_testimonial']) {
+                                    continue;
+                                }
                                 ?>
                                 <div class="wr-slider-default-item">
                                     <div class="slider-default-item">
@@ -172,6 +175,13 @@ if (!block_rows('row') && empty($general_testimonials)) {
                 </div>
             </div>
 
+            <?php if (!empty($button_text) && !empty($button_link)) : ?>
+                <div class="col-12 text-center mt-5">
+                    <div class="pt-lg-2 m-auto">
+                        <a href="<?php echo $button_link; ?>" class="btn btn-blue mt-4"><?php echo $button_text; ?></a>
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

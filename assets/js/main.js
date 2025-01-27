@@ -1519,7 +1519,7 @@ const initSliderHeroServices = () => {
 };
 
 const initSliderServicesList = () => {
-  if ($(window).width() < 1024) {
+  if ($(window).width() < 991) {
     $(".slider-services-list:not(.slick-initialized)").slick({
       slidesToShow: 3,
       slidesToScroll: 1,

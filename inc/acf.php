@@ -475,6 +475,106 @@ add_action('acf/init', function () {
             'align' => array('full', 'wide', 'center')
         ),
     ));
+
+    acf_register_block(array(
+        'name'              => 'post-logos-grid',
+        'title'             => __('Post Logos Grid'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('grid', 'logos', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+
+    acf_register_block(array(
+        'name'              => 'post-faq',
+        'title'             => __('Post FAQ'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('faq', 'question', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+
+    acf_register_block(array(
+        'name'              => 'post-header-v2',
+        'title'             => __('Post Header V2'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('header', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+
+    acf_register_block(array(
+        'name'              => 'post-background-cases',
+        'title'             => __('Post Background with Cases'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('background', 'cases', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-services',
+        'title'             => __('Post Services'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('service', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-success-path',
+        'title'             => __('Post Success Path'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('path', 'success', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-success-stories',
+        'title'             => __('Post Success Stories'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('story', 'success', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-challenge',
+        'title'             => __('Post Challenge'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('challenge', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
 });
 
 function icoda_acf_block_render_callback($block)
@@ -507,17 +607,17 @@ if (!function_exists('icoda_acf_add_options_page')) {
 function  icoda_custom_add_block_categories($categories, $post)
 {
     return array_merge(
-        $categories,
         array(
-            array(
-                'slug'  => 'icoda-portfolio',
-                'title' => esc_html__('Icoda Portfolio Blocks'),
-            ),
             array(
                 'slug'  => 'icoda-posts',
                 'title' => esc_html__('Icoda Posts Blocks'),
             ),
-        )
+            array(
+                'slug'  => 'icoda-portfolio',
+                'title' => esc_html__('Icoda Portfolio Blocks'),
+            ),
+        ),
+        $categories
     );
 }
 add_filter('block_categories_all', 'icoda_custom_add_block_categories', 10, 2);
