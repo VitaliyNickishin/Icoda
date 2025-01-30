@@ -81,7 +81,6 @@
     display: block;
     &:not(.card-cases) {
         padding: 20px 24px;
-        
         border: 1px solid $border-color;
         height: 100%;
         @extend %set-bg;
@@ -137,7 +136,7 @@
     }
     &-header {
         @at-root .section-services-list & {
-            @extend.align-items-center;
+            @extend.align-items-start;
             @extend .d-flex;
             @extend .justify-content-between;
         }
@@ -206,7 +205,7 @@
         }
         @at-root .section-services-cases & {
             margin-top: 10px;
-            @extend.align-items-center;
+            @extend .align-items-start;
             @extend .d-flex;
             @extend .justify-content-between;
         }

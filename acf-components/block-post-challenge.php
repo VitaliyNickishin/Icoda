@@ -1,8 +1,3 @@
-<?php
-if (!empty($_GET['post-redesign2'])) :
-?>
-
-
     <?php
     $items = get_field('items');
     ?>
@@ -42,6 +37,3 @@ if (!empty($_GET['post-redesign2'])) :
             </div>
         </div>
     </section>
-<?php
-endif;
-?>

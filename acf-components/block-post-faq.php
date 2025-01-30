@@ -45,7 +45,7 @@ $style = get_field('_post_faq_style');
   </section>
 
 
-<?php elseif(!empty($_GET['post-redesign2'])): ?>
+<?php else : ?>
 
   <section class="section section-faq-service">
     <div class="container">

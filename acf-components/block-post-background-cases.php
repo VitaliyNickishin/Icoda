@@ -1,8 +1,3 @@
-<?php
-if (!empty($_GET['post-redesign2'])) :
-?>
-
-
     <?php
     $cases = get_field('cases');
     $template_directory_uri = get_template_directory_uri();
@@ -49,8 +44,3 @@ if (!empty($_GET['post-redesign2'])) :
 
 
     </section>
-
-
-<?php
-endif;
-?>

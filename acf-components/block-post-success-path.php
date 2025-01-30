@@ -1,8 +1,3 @@
-<?php
-if (!empty($_GET['post-redesign2'])) :
-?>
-
-
     <?php
     $items = get_field('items');
     $bottom_title = get_field('bottom_title');
@@ -46,7 +41,7 @@ if (!empty($_GET['post-redesign2'])) :
                                 <?php echo $bottom_title; ?>
                             </h4>
                             <div class="pt-1 m-auto">
-                                <a href="<?php echo $bottom_link['url']; ?>" class="btn btn-pink mt-3"><?php echo $bottom_link['title']; ?></a>
+                                <a href="<?php echo $bottom_link['url']; ?>" data-modal="#callback" class="btn btn-pink mt-3 open-modal"><?php echo $bottom_link['title']; ?></a>
                             </div>
                         </div>
                     </div>
@@ -54,7 +49,3 @@ if (!empty($_GET['post-redesign2'])) :
             </div>
         </div>
     </section>
-
-<?php
-endif;
-?>

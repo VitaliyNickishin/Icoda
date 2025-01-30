@@ -1,8 +1,3 @@
-<?php
-if (!empty($_GET['post-redesign2'])) :
-?>
-
-
     <?php
     $services = get_field('services');
     $help_title = get_field('help_title');
@@ -61,7 +56,3 @@ if (!empty($_GET['post-redesign2'])) :
         </div>
 
     </section>
-
-<?php
-endif;
-?>

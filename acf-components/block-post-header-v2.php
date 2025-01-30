@@ -1,7 +1,3 @@
-<?php
-if (!empty($_GET['post-redesign2'])) :
-?>
-
     <?php
     $background_image_1 = get_field('background_image_1');
     $background_image_2 = get_field('background_image_2');
@@ -98,7 +94,3 @@ if (!empty($_GET['post-redesign2'])) :
         </div>
 
     </section>
-
-<?php
-endif;
-?>
