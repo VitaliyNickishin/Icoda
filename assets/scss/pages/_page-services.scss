@@ -6,8 +6,9 @@
     .subtitle {
         font-size: 15px;
         color: $color-dark-blue;
+        line-height: 150%;
         
-        @include mediaMin(1441) {
+        @include mediaMin(1024) {
             font-size: 18px;
         }
     
@@ -23,7 +24,8 @@
     .section-title {
         font-size: 1.5rem;//24px;
         font-family: $f-sto-m;
-        @include mediaMin(1441) {
+        line-height: 110%;
+        @include mediaMin(1024) {
             font-size: 2rem; //32px
         }
     }
@@ -65,7 +67,7 @@
     
 }
 .card-has-rotate-arrow {
-    transition: transform ease-out .2s;
+    transition: all ease-in-out .2s;
     &:hover {
         .btn-arrow {
             transform: rotate(-45deg);
@@ -88,12 +90,7 @@
         @include mediaMin(991) {
             padding: 20px 32px;
         }
-        &:hover {
-            @include mediaMin(991) {
-                box-shadow: 0px 4px 20px 0px rgba(8, 34, 101, 0.15);
-            }
-            
-        }
+        
         // @at-root .section-path & {
         //     padding: 1.125rem 1.25rem;
         //     @extend .position-relative;
@@ -117,6 +114,14 @@
         width: 300px;
         @include mediaMin(1024) {
             width: auto;
+        }
+    }
+    @at-root .section-services-list & {
+        &:hover {
+            @include mediaMin(991) {
+                box-shadow: 0px 4px 20px 0px rgba(8, 34, 101, 0.15);
+            }
+            
         }
     }
     @at-root .section-path & {
@@ -151,8 +156,8 @@
     .number-step {
         color: $white;
         @extend .position-absolute;
-        left: -5%;
-        top: -10%;
+        left: -3%;
+        top: -7%;
         width: 2rem;
         height: 2rem;
         background-color: $pink-900;
@@ -163,6 +168,8 @@
         @extend .justify-content-center;
 
         @include mediaMin(991) {
+            left: -5%;
+            top: -10%;
             width: 3rem;
             height: 3rem;
             font-size: 1.5rem;
@@ -320,6 +327,12 @@
     //         margin-right: -100px;
     //     }
     // }
+    .slider-path-list {
+        margin-left: -1rem;
+        @include mediaMin(991) {
+            margin-left: -1.25rem;
+        }
+    }
     .slick-list {
         // overflow: inherit;
         padding: 0 16px;
@@ -345,11 +358,11 @@
     }
     &-bottom {
         @extend %set-bg;
-        margin-top: 5.3125rem;
+        margin-top: 55px;
         padding: 2rem 1.25rem 1.5rem;
         border: 3px solid $white;
         @include mediaMin(991) {
-            margin-top: 7.0625rem;
+            margin-top: 82px;
             padding: 2rem 6.25rem;
             margin-right: 70px;
         }
@@ -462,4 +475,12 @@
 
 .has-white-font {
     background-color: $black;
+}
+
+.service-v2 {
+    //footer
+    .section-9 {
+        background-color: $gray-300;
+    }
+    
 }

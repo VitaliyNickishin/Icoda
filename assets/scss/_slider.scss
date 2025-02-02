@@ -29,7 +29,9 @@
         transform: translate(-50%);
         z-index: 10;
       }
-      
+    }
+    @at-root .section-testimonials & {
+      bottom: -36px;
     }
     @at-root .section-services-list & {
       @include mediaMax(1024) {
@@ -76,6 +78,9 @@
   right: 15px;
   width: 88px;
   height: 20px;
+  @at-root .section-testimonials & {
+    top: -20px;
+  }
   .slick-next,
   .slick-prev {
     width: 40px;
@@ -117,6 +122,7 @@
   height: 40px;
   z-index: 9;
   @at-root .section-path & {
+    margin-top: -16px;
     right: auto;
     width: 88px;
     @include mediaMax(992) {
@@ -227,6 +233,9 @@
   }
   .wr-control {
     top: -32px;
+    @at-root .section-testimonials & {
+      top: -25px;
+    }
   }
 }
 @include media-breakpoint-only(xs) {

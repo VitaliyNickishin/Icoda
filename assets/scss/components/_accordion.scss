@@ -48,6 +48,9 @@
       border: 1px solid #efeeee;
 
       @at-root .section-faq-service & {
+        &:first-child {
+          @extend .pt-lg-0;
+        }
         padding: 1.125rem 0;
         margin-bottom: 0;
         @include border-radius(0);

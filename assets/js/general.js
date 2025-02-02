@@ -167,12 +167,12 @@ jQuery(document).ready(function ($) {
                             slidesToShow: 2,
                         },
                     },
-                    {
-                        breakpoint: 550,
-                        settings: {
-                            dots: false,
-                        },
-                    },
+                    // {
+                    //     breakpoint: 550,
+                    //     settings: {
+                    //         dots: false,
+                    //     },
+                    // },
                 ],
             });
         }

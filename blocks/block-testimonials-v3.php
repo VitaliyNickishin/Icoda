@@ -70,7 +70,7 @@ if (!block_rows('row') && empty($general_testimonials)) {
                                             </div>
                                         <?php endif; ?>
                                     </div>
-                                    <div class="slider-default-item-body">
+                                    <div class="slider-default-item-body testimonials-content ellipsis ellipsis-content">
                                         <?php block_sub_field('content'); ?>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@ if (!block_rows('row') && empty($general_testimonials)) {
                                                 </div>
                                             <?php endif; ?>
                                         </div>
-                                        <div class="slider-default-item-body">
+                                        <div class="slider-default-item-body testimonials-content ellipsis ellipsis-content">
                                             <?php echo $general_testimonials_item['content']; ?>
                                         </div>
                                     </div>

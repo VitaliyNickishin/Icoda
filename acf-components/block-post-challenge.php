@@ -2,7 +2,7 @@
     $items = get_field('items');
     ?>
 
-    <section class="section section-businesses my-5 py-5">
+    <section class="section section-businesses mt-5 my-lg-5 pb-2 py-lg-5">
         <div class="section-businesses-inner mx-lg-5 mx-sm-4 position-relative">
             <div class="container">
                 <div class="row">

@@ -22,7 +22,7 @@
                         <p class="subtitle">
                             <?php the_field('post_header_v2_subtitle'); ?>
                         </p>
-                        <div class="mt-lg-4 mt-3 pt-3 pt-lg-0">
+                        <div class="mt-4 pt-2">
                             <?php get_template_part('template-parts/_partials/btn-hero'); ?>
                         </div>
 

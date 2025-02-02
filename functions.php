@@ -1494,6 +1494,11 @@ function icoda_body_class_filter( $classes ) {
     if(is_home(  )) {
         $classes[] = 'archive';
     }
+
+    if( is_page_template( 'template-posts/igaming.php' ) ) {
+        $classes[] = 'service-v2';
+    }
+
 	return $classes;
 }
 
