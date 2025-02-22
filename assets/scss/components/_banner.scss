@@ -79,11 +79,42 @@
     }
   }
   .discription {
-      p {
-        @include mediaMax(768) {
-          margin-bottom: 0;
-          font-size: 1rem;
-        }
+    p {
+      @include mediaMax(768) {
+        margin-bottom: 0;
+        font-size: 1rem;
       }
     }
+  }
+  &-review {
+    @include border-radius(20px);
+    border: 1px solid $border-color;
+    padding: 2rem;
+    @include mediaMin(991) {
+      padding: 3.75rem;
+    }
+    .btn {
+      margin:0;
+    }
+    .banner-img {
+      width: 264px;
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      width: 264px;
+      max-width: 100%;
+      @include mediaMin(1341) {
+        position: absolute;
+        right: 60px;
+        bottom: 40px;
+      }
+    }
+    .btn.btn-blue {
+      font-size: 1rem;
+      @include mediaMax(575) {
+        min-width: 100%;
+      }
+    }
+  }
 }

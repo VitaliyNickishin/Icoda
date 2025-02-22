@@ -1,5 +1,4 @@
 <?php $title = block_value('title'); ?>
-<?php $title = explode("\n", $title); ?>
 <?php $button_url = empty(block_value('link')) ? '/' : block_value('link'); ?>
 <?php $button_label = empty(block_value('button_text')) ? __('Home', 'icoda') : block_value('button_text'); ?>
 

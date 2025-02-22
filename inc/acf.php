@@ -575,6 +575,18 @@ add_action('acf/init', function () {
             'align' => array('full', 'wide', 'center')
         ),
     ));
+    // acf_register_block(array(
+    //     'name'              => 'block-post-banner-review',
+    //     'title'             => __('Block banner review'),
+    //     'description'       => __(''),
+    //     'render_callback' => 'icoda_acf_block_render_callback',
+    //     'category'            => 'icoda-posts',
+    //     'keywords'            => array('banner', 'block banner', 'icoda'),
+    //     'align'             => 'full',
+    //     'supports'          => array(
+    //         'align' => array('full', 'wide', 'center')
+    //     ),
+    // ));
 });
 
 function icoda_acf_block_render_callback($block)
