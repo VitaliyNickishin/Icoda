@@ -1,0 +1,14 @@
+
+.box {
+    padding: 1rem 1.5rem;
+    @include border-radius(.75rem);
+    background-color: $white;
+    border: 1px solid $border-color;
+    @at-root .card-company-about & {
+
+    }
+    .title {
+        font-size: 1.125rem;
+    }
+
+}

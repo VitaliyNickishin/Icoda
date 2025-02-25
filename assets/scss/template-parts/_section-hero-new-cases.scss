@@ -1,0 +1,121 @@
+.section-hero-new-cases {
+    .title {
+        font-family: $f-sto-m;
+        font-size: 2rem;
+        line-height: 110%;
+        
+        @include mediaMin(768) {
+            line-height: 100%;
+            font-size: 2.25rem;
+        }
+        
+        @include mediaMin(1441) {
+            font-size: 2.5rem;
+        }
+    }
+    .subtitle {
+        font-size: .9375rem;
+        color: $color-dark-blue;
+        line-height: 150%;
+        @include mediaMin(1441) {
+            font-size: 1.125rem;
+        }
+
+    }
+    .bg-hero {
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @include border-radius(1.25rem);
+        
+        &-mobile {
+            @include mediaMin(430) {
+                bottom: -180px;
+            }
+        }
+    }
+    &__inner {
+        background: #f9f9f9;
+        padding: 40px 0 80px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        @include border-radius(1.25rem);
+        
+        @include mediaMin(768) {
+            padding: 40px 10px 20px 30px;
+            background-size: 415px;
+        }
+        @include mediaMin(992) {
+            padding: 30px 40px 20px 40px;
+            box-shadow: none;
+        }
+        @include mediaMin(1441) {
+            padding: 80px 100px 50px;
+        }
+    }
+    .cases-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 8px;
+        @include mediaMin(445) {
+            grid-template-columns: repeat(2, 178px);
+        }
+        
+        @include mediaMin(1340) {
+            grid-template-columns: repeat(2, 200px);
+            gap: 10px;
+            justify-content: end;
+        }
+    }
+    
+}
+
+.cases-category {
+    overflow: auto;
+    margin-right: -15px;
+    &-title {
+        color: $color-dark-blue;
+        font-size: .875rem;
+    }
+    &-list {
+        gap: 10px;
+
+    }
+    &-item {
+        padding: .375rem .875rem;
+        @include border-radius(.375rem);
+        border: 1px solid $pink-900;
+        background: rgba(255, 255, 255, 0.70);
+        color: $pink-900;
+        font-size: .875rem;
+    }
+}
+
+.with-gradient {
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 400px;
+        height: 400px;
+        z-index: 0;
+        @at-root .section-hero-new-cases & {
+            bottom: -130px
+        }
+    }
+    
+    &-pink {
+        &:before {
+            background-color: rgba(255, 57, 123, 0.10); 
+            filter: blur(130px);
+        }
+        
+    }
+}

@@ -438,11 +438,16 @@ a.logo {
   color: $black;
 }
 .text-primary {
-  color: $primary;
+  color: $color-blue !important;
 }
 
 .title-opacity {
   opacity: .8;
+}
+.d-lg-none {
+  @include mediaMin(992) {
+    display: none !important;
+  }
 }
 
 .ellipsis {
