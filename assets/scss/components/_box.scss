@@ -4,11 +4,64 @@
     @include border-radius(.75rem);
     background-color: $white;
     border: 1px solid $border-color;
-    @at-root .card-company-about & {
-
+    @at-root .box-company-about & {
+        padding: 1.125rem 1rem;
+        color: $color-dark-blue;
+        @include mediaMin(992) {
+            padding: 1.5rem 1rem;
+        }
     }
     .title {
         font-size: 1.125rem;
+    }
+    &-company-about {
+        a {
+            color: $color-blue;
+        }
+        .box-body {
+            line-height: 150%;
+            a {
+                text-decoration: underline;
+            }
+        }
+        .list-services-perfomed {
+            li {
+                margin-bottom: 6px;
+                display: inline-block;
+            }
+            a {
+                display: block;
+                padding: .375rem .875rem;
+                @include border-radius(6px);
+                border: 1px solid $color-blue;
+                background: rgba(255, 255, 255, 0.66);
+                transition: box-shadow .3s ease-out;
+                line-height: 115%;
+                &:hover {
+                    box-shadow: 0 4px 20px 0 rgba(8, 34, 101, .15);
+                }
+            }
+            
+        }
+
+    }
+    &-feedback {
+        padding: 1.5rem 1.125rem;
+        @include mediaMin(992) {
+            padding: 1.25rem 1.5rem;
+        }
+        @include border-radius(12px);
+        background: linear-gradient(297deg, #5C66F3 26.41%, #3946F4 89.1%);
+        p {
+            line-height: 150%;
+            @include mediaMin(992) {
+                font-size: 1rem;
+            }
+
+        }
+        .btn {
+            padding: 1rem 2.5rem;
+        }
     }
 
 }
