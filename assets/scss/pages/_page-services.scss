@@ -295,39 +295,35 @@
 //4
 .section-path {
     &-inner {
-        // overflow: hidden;
-        background: $pink url('../images/bg-path.png') no-repeat;
-        background-position: 570% 120%;
-        background-size: 365px;
+        background-color: $pink;
         padding: 40px 0;
         @include border-radius(1.25rem);
+        
+        @include mediaMin(991) {
+            padding: 60px 0 60px 70px;
+        }
+        @include mediaMin(1441) {
+            padding: 80px 0 80px 100px;
+        }
+    }
+    .has-bg-coins {
+        background-image: url('../images/bg-path.png');
+        background-repeat: no-repeat;
+        background-position: 570% 120%;
+        background-size: 365px;
         @include mediaMin(565) {
             background-position: 100% 100%;
             background-size: 415px;
         }
-        // @include mediaMin(768) {
-        //     background-position: 100% 100%;
-        //     background-size: 415px;
-        // }
         @include mediaMin(991) {
-            padding: 60px 0 60px 70px;
             background-position: 103% 70%;
             background-size: 500px;
         }
         @include mediaMin(1441) {
-            padding: 80px 0 80px 100px;
             background-position: 100% 0;
             background-size: contain;
         }
     }
-    // .slider-path-list {
-    //     @include mediaMin(991) {
-    //         margin-right: -70px;
-    //     }
-    //     @include mediaMin(1441) {
-    //         margin-right: -100px;
-    //     }
-    // }
     .slider-path-list {
         margin-left: -1rem;
         @include mediaMin(991) {

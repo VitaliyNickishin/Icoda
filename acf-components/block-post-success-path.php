@@ -5,13 +5,13 @@
     ?>
 
     <section class="section section-path my-3 py-4 my-lg-5 py-lg-2">
-        <div class="section-path-inner mx-lg-5 mx-sm-4">
+        <div class="section-path-inner mx-lg-5 mx-sm-4 has-bg-coins">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="section-title mb-3 mb-lg-4">
+                        <h2 class="section-title mb-3 mb-lg-4">
                             <?php the_field('title'); ?>
-                        </h3>
+                        </h2>
                     </div>
 
                     <div class="col-12 pr-0">
@@ -37,9 +37,9 @@
 
                     <div class="col-12">
                         <div class="section-path-bottom text-center">
-                            <h4 class="h4 mb-0 title fw-semibold">
+                            <h3 class="h4 mb-0 title fw-semibold">
                                 <?php echo $bottom_title; ?>
-                            </h4>
+                            </h3>
                             <div class="pt-1 m-auto">
                                 <a href="<?php echo $bottom_link['url']; ?>" data-modal="#callback" class="btn btn-pink mt-3 open-modal"><?php echo $bottom_link['title']; ?></a>
                             </div>
