@@ -81,7 +81,6 @@
   .discription {
     p {
       @include mediaMax(768) {
-        margin-bottom: 0;
         font-size: 1rem;
       }
     }
@@ -115,6 +114,53 @@
       @include mediaMax(575) {
         min-width: 100%;
       }
+    }
+  }
+}
+
+.section-case-cta {
+  text-align: center;
+  @at-root .post-template-new-case & {
+    margin: 3rem 0;
+    @include mediaMin(992) {
+      margin: 2.5rem 0;
+    }
+  }
+  .banner {
+    background-color: $gray-300;
+    @include border-radius(20px);
+    width: 100%;
+    padding: 1.5rem 1.125rem;
+    @include mediaMin(992) {
+      padding: 1.75rem 1.125rem;
+    }
+  }
+  .title {
+    font-family: $f-sto-m;
+    margin-bottom: .75rem;
+    @include mediaMin(992) {
+      margin-bottom: .5rem;
+      font-size: 1.5rem;
+      color: $color-blue;
+      line-height: 110%;
+    }
+  }
+  .discription {
+    font-size: .9375rem;
+    line-height: 150%;
+    color: $color-dark-blue;
+    @include mediaMin(992) {
+      font-size: 1rem;
+    }
+  }
+  .btn {
+    margin-top: 0;
+    margin-left: 0;
+    // @include mediaMin(992) {
+    //   margin-top: 0;
+    // }
+    &.btn-blue {
+      min-width: 193px;
     }
   }
 }

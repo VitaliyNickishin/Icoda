@@ -6,6 +6,11 @@ if ($disable_block) {
 
 $button_text = block_value('button-text');
 $button_link = block_value('button-link');
+
+if(!empty($args['case_data'])) {
+    $button_text = $args['case_data']['button_text'];
+    $button_link = $args['case_data']['button_link'];
+}
 ?>
 
 <?php

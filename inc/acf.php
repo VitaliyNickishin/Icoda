@@ -575,18 +575,45 @@ add_action('acf/init', function () {
             'align' => array('full', 'wide', 'center')
         ),
     ));
-    // acf_register_block(array(
-    //     'name'              => 'block-post-banner-review',
-    //     'title'             => __('Block banner review'),
-    //     'description'       => __(''),
-    //     'render_callback' => 'icoda_acf_block_render_callback',
-    //     'category'            => 'icoda-posts',
-    //     'keywords'            => array('banner', 'block banner', 'icoda'),
-    //     'align'             => 'full',
-    //     'supports'          => array(
-    //         'align' => array('full', 'wide', 'center')
-    //     ),
-    // ));
+
+
+
+    acf_register_block(array(
+        'name'              => 'post-case-project-goals',
+        'title'             => __('Case project goals'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('case', 'goals', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-case-results',
+        'title'             => __('Case results'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('case', 'result', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-case-cta',
+        'title'             => __('Case CTA'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('case', 'cta', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
 });
 
 function icoda_acf_block_render_callback($block)
