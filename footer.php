@@ -35,6 +35,10 @@
                                         <div class="footer-list">
                                             <?php the_view('menu__footer', ['location' => 'footer-center']); ?>
                                         </div>
+
+                                        <div class="footer-list">
+                                            <?php the_view('menu__footer', ['location' => 'footer-two-two']); ?>
+                                        </div>
                                     </div>
                                 </div>
                             <?php endif; ?>
@@ -42,44 +46,51 @@
                         <div class="center-col wr-m-col">
                             <div class="wr-footer-list-col">
                                 <div class="wr-footer-list">
+                                    <?php /* ?>
                                     <div class="footer-list listing">
                                         <?php the_view('menu__footer', ['location' => 'footer-center-down']); ?>
                                     </div>
                                     <div class="footer-list">
                                         <?php the_view('menu__footer', ['location' => 'footer-right-up']); ?>
                                     </div>
+                                    <?php */ ?>
+
                                     <div class="footer-list">
                                         <?php the_view('menu__footer', ['location' => 'footer-right-down']); ?>
                                     </div>
+
+                                    <?php /* ?>
                                     <div class="footer-list">
                                         <?php the_view('menu__footer', ['location' => 'footer-right-down-2']); ?>
                                     </div>
+                                    <?php */ ?>
+
                                 </div>
                             </div>
                             <div class="media">
                                 <div class="wr-media-list">
                                     <a href="<?php echo get_permalink(icl_object_id(2908, 'page', 1, ICL_LANGUAGE_CODE)); ?>" class="ttl"><?php _e('Contact Us', 'icoda'); ?></a>
+                                    <p>POLSKA, WROCŁAW, 50-202, ul. <br/> KSIĘCIA WITOLDA, nr 49, lok. 15</p>
                                     <ul class="media-list">
                                         <li><a class="icon-ico-media-1" target="_blank" href="https://www.linkedin.com/company/icoda-ico-marketing-solutions/"></a></li>
                                         <li><a class="icon-ico-media-2" target="_blank" href="https://www.facebook.com/icodaagency/"></a></li>
                                         <li><a class="icon-ico-media-3" target="_blank" href="mailto:post@icoda.io"></a></li>
                                         <li><a class="icon-ico-media-4" target="_blank" href="https://t.me/icoda"></a></li>
-                                        <li><a class="icon-twitter" target="_blank" href="https://twitter.com/icoda_io"></a></li>
+                                        <li><a class="icon-ico-x" target="_blank" href="https://twitter.com/icoda_io"></a></li>
                                     </ul>
                                 </div>
 
-                                <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js"></script> <div class="clutch-widget" data-nofollow="true" data-url="https://widget.clutch.co" data-widget-type="1" data-height="40" data-clutchcompany-id="695144"></div>
+                                <div class="clutch-widget" data-nofollow="true" data-url="https://widget.clutch.co" data-widget-type="1" data-height="40" data-clutchcompany-id="695144"></div>
 
                                 <?php  ?>
-                                <div class="techreviewer-widget"><a href="https://techreviewer.co/companies/icoda" target="_blank"><img src="/wp-content/uploads/2022/07/badge-white-nobackground-2.svg" alt="techreviewer"></a></div>
+                                <div class="techreviewer-widget"><a href="https://techreviewer.co/companies/icoda" target="_blank"><img data-aload="/wp-content/uploads/2022/07/badge-white-nobackground-2.svg" alt="techreviewer"></a></div>
                                 <?php  ?>
 
                                 <div class="icoda-clutch-widget">
                                     <a href="https://clutch.co/profile/icoda-digital-agency" target="_blank">
-                                        <iframe width="135" height="135" src="https://shareables.clutch.co/share/badges/695144/8393?utm_source=clutch_top_company_badge&utm_medium=image_embed" title="Top Clutch Digital Strategy Company Miami 2023"></iframe>
+                                    <iframe width="135" height="135" src="https://shareables.clutch.co/share/badges/695144/42033?utm_source=clutch_top_company_badge&utm_medium=image_embed" title="Top Clutch Crypto Marketing 2025"></iframe>
                                     </a>
                                 </div>
-
                             </div>
                         </div>
 
@@ -209,7 +220,7 @@
                 <input type="text" name="name" class="form-control req" placeholder="<?php _e('Your name', 'icoda'); ?>" required>
             </div>
             <div class="col-12 col-md-6">
-                <input type="text" name="telegram" class="form-control req" placeholder="<?php _e('WhatsApp / Telegram', 'icoda'); ?>" required>
+                <input type="text" name="telegram" class="form-control req" placeholder="<?php _e('WhatsApp / Telegram / Skype', 'icoda'); ?>" required>
             </div>
             <div class="col-12">
                 <input type="email" name="email" class="form-control req" placeholder="<?php _e('Email', 'icoda'); ?>" required>
@@ -240,6 +251,7 @@
         <p class="ttl"><?php _e('Thank you!', 'icoda'); ?></p>
         <p><?php _e('Your request has been sent successfully!', 'icoda'); ?></p>
     </div>
+    <canvas id="congrats-confetti" width="300" height="150"></canvas>
 </div>
 
 <!-- Modal Video-->
@@ -260,18 +272,19 @@
 
 <?php wp_footer(); ?>
 
-<?php if (is_page(11717) || is_page(11751)) : ?>
-    <style>
-        body.page-id-11717 .anim-box .bg-computer,
-        body.page-id-11751 .anim-box .bg-computer {
-            background: url(/wp-content/uploads/2021/04/1.png) 0 0 no-repeat;
-        }
+<?php get_template_part('template-parts/inline-css'); ?>
 
-        body.page-id-11717 .anim-box .bg-phone,
-        body.page-id-11751 .anim-box .bg-phone {
-            background: url(/wp-content/uploads/2021/04/2.png) 0 0 no-repeat;
-        }
-    </style>
+<script src="https://widget.clutch.co/static/js/widget.js"></script>
+<script>
+  function aload(t){"use strict";var e="data-aload";return t=t||window.document.querySelectorAll("["+e+"]"),void 0===t.length&&(t=[t]),[].forEach.call(t,function(t){t["LINK"!==t.tagName?"src":"href"]=t.getAttribute(e),t.removeAttribute(e)}),t}
+  // Onload
+window.onload = function () {
+  aload();
+};
+</script>
+
+<?php if(is_front_page() || is_singular('post') || is_page_template('template-pages/template-calculator.php')) : ?>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <?php endif; ?>
 
 </body>

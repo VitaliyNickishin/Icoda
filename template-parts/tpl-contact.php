@@ -42,7 +42,7 @@ $front_page_id = get_option('page_on_front');
                                     <li><a class="icon-ico-media-2" target="_blank" href="https://www.facebook.com/icodaagency/"></a></li>
                                     <li><a class="icon-ico-media-3" target="_blank" href="mailto:post@icoda.io"></a></li>
                                     <li><a class="icon-ico-media-4" target="_blank" href="https://t.me/icoda"></a></li>
-                                    <li><a class="icon-twitter" target="_blank" href="https://twitter.com/icoda_io"></a></li>
+                                    <li><a class="icon-ico-x" target="_blank" href="https://twitter.com/icoda_io"></a></li>
                                 </ul>
                             </div>
                         </div>

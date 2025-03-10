@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2025 by original authors @ fontello.com</metadata>
 <defs>
 <font id="fontello" horiz-adv-x="1000" >
 <font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
@@ -19,6 +19,8 @@
 <glyph glyph-name="ico-check" unicode="&#xe805;" d="M1195 584l-650-667c-48-50-126-50-174 0l-335 344c-48 50-48 130 0 179 48 50 126 50 174 0l248-255 563 578c48 49 126 49 174 0 48-49 48-130 0-179z" horiz-adv-x="1231" />
 
 <glyph glyph-name="ico-close" unicode="&#xe806;" d="M625 350l349 349c17 17 26 39 26 63 0 23-9 45-26 62-16 17-39 26-62 26-24 0-46-9-63-26l-349-349-349 349c-17 17-39 26-63 26-23 0-45-9-62-26-17-16-26-39-26-62 0-24 9-46 26-63l349-349-349-349c-17-17-26-39-26-63 0-23 9-46 26-62 17-17 39-26 62-26 24 0 46 9 63 26l349 349 349-349c17-17 39-26 63-26 23 0 46 9 62 26 17 16 26 39 26 62 0 24-9 46-26 63l-349 349z" horiz-adv-x="1000" />
+
+<glyph glyph-name="ico-x" unicode="&#xe807;" d="M595 427l372 423h-88l-323-368-258 368h-298l390-556-390-444h88l341 388 273-388h297m-879 935h135l624-873h-136" horiz-adv-x="999" />
 </font>
 </defs>
 </svg>
