@@ -176,35 +176,20 @@
 }
 
 .resault-boxes {
-    display: grid;
-    grid-template-columns: repeat(1, auto);
-    gap: 12px;
-
-    @include mediaMin(768) {
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "a b" "c c";
-        gap: 20px;
-    }
-    .serv-box {
+    &.row {
+        margin-right: -6px;
+        margin-left: -6px;
         @include mediaMin(768) {
-            &:first-child {
-                grid-area: a;
-            }
-            &:nth-child(2) {
-                grid-area: b;
-            }
-            &:last-child {
-                grid-area: c;
-            }
+            margin-right: -10px;
+            margin-left: -10px;
         }
-        
     }
-    
-    // .first-line {
-        
-    // }
-    
+    .col {
+        padding: 6px;
+        @include mediaMin(768) {
+            padding: 10px;
+        }
+    }
 }
 
 .row {

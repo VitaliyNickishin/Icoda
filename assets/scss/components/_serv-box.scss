@@ -60,6 +60,7 @@
         padding: 1rem 1.125rem;
         background: $gray-300;
         border: 0;
+        height: 100%;
         p {
             line-height: 150%;
             @include mediaMin(992) {
