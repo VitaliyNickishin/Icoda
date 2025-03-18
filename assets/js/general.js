@@ -650,6 +650,31 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    function make_sticky() {
+        $("[data-sticky-sidebar-case]").stick_in_parent({
+            offset_top: 240,
+        });
+    }
+
+    if ($(window).width() < 991) {
+        $("[data-sticky-sidebar-case]").trigger("sticky_kit:detach");
+    } else {
+        make_sticky();
+    }
+    $(window).on("load resize", function () {
+        if ($(window).width() < 991) {
+            $("[data-sticky-sidebar-case]").trigger("sticky_kit:detach");
+        } else {
+            make_sticky();
+        }
+
+    })
+
+
+    // if ($(window).width() > 991) {
+        
+    // }
+
     initParallax();
     initTestimonialsSlider();
     initSliderPortfolioFilters();
