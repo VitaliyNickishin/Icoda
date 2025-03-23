@@ -6,12 +6,11 @@
 
 <div class="section section-banner section-banner-review has-bg-gradient my-4" style="background: center right / cover no-repeat url(<?php echo block_field('banner_bg_gradient'); ?>)">
     <p class="title mb-2"><?php echo $title; ?></p>
-    <p class="description"><?php echo $description; ?></p>
-    <div class="banner-img mt-3 mt-lg-0">
+    <p class="description mb-0"><?php echo $description; ?></p>
+    <div class="banner-img">
         <img src="<?php echo block_field('image'); ?>" alt="<?php echo $image_alt; ?>">
     </div>
 
-    <div class="mt-xl-4 pt-3">
-        <a href="<?php echo $button_url; ?>" data-modal="#callback" class="btn btn-blue open-modal text-white"><?php echo $button_label; ?></a>
-    </div>
+    <a href="<?php echo $button_url; ?>" data-modal="#callback" class="btn btn-blue open-modal text-white"><?php echo $button_label; ?></a>
+
 </div>

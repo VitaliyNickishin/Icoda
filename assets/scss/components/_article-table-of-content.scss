@@ -1,0 +1,28 @@
+.table-of-content {
+    @at-root .box-company-about & {
+        .list-table {
+            
+            line-height: 140%;
+        }
+        li {
+            
+            a {
+                color: $color-dark-blue;
+                font-size: 1rem;
+            }
+            ol {
+                margin: 0;
+                padding: 0;
+                list-style-type: decimal;
+            // list-style-position: inside;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: disc;
+        
+            }
+        }
+    
+    }
+}

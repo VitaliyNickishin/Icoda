@@ -1,0 +1,67 @@
+//autohor's banner
+.speak-to-an-expert-banner {
+    border-radius: 10px;
+    background-color: $color-light-white;
+    padding: 40px 25px;
+    margin-bottom: 50px;
+    @at-root .sidebar-single & {
+        padding: 30px 20px 30px 30px;
+    }
+}
+
+.speak-to-an-expert__title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+    font-family: $f-sto-r;
+    @at-root .sidebar-single & {
+        font-size: 14px;
+        line-height: 100%;
+    }
+}
+.arrow-speak {
+    color: $color-blue;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+    height: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    padding-left: 25px;
+    &:hover {
+        color: #3c4cd7;
+    }
+    .arrow-speak-icon {
+        position: relative;
+        top: -1px;
+        transition: transform 0.3s ease;
+        vertical-align: middle;
+    }
+    .icon-ico-media-4 {
+        margin-right: 10px;
+    }
+}
+
+//redesign blog single post
+.article-author {
+    .author-meta {
+        line-height: 120%;
+    }
+    .avatar {
+        width: 54px;
+        margin-right: .75rem;
+    }
+    .name {
+        font-size: 1rem;
+        @extend .fw-semibold;
+        color: $color-dark-blue;
+        @include mediaMin(992) {
+            font-size: 1.125rem;
+        }
+    }
+    .position {
+        color: $color-dark-gray;
+        font-size: .875rem;
+    }
+}

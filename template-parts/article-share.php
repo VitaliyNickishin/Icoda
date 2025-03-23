@@ -1,4 +1,5 @@
-<div data-sticky-single="social-box" class="social-box align-items-center align-items-lg-start d-flex flex-column">
+<!-- @todo remove after redesign single post -->
+<div data-sticky-single="social-box" class="article-share-social align-items-center align-items-lg-start d-flex flex-column">
     <p class="text-uppercase mb-4 small text-black"><?php echo __('share', 'icoda'); ?></p>
     <ul class="list-social  d-flex flex-lg-column">
         <li>

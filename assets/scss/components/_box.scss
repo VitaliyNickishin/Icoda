@@ -11,6 +11,18 @@
             padding: 1.5rem 1rem;
         }
     }
+    @at-root .article-author & {
+        padding: 1.125rem 1rem;
+        @include mediaMin(992) {
+            padding: 1rem 1.5rem;
+        }
+    }
+    @at-root .table-of-content & {
+        padding: 1.125rem 1rem;
+        @include mediaMin(992) {
+            padding: 1rem 1.5rem;
+        }
+    }
     .title {
         font-size: 1.125rem;
     }

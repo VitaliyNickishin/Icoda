@@ -19,12 +19,25 @@ $blog_url = get_post_type_archive_link('post');
                         </a>
                     </div>
                     <div class="author-meta">
-                        <?php
-                        $fname = get_the_author_meta('first_name');
-                        $lname = get_the_author_meta('last_name');
+                        <?php                    
+                            $fname = get_the_author_meta('first_name');
+                            $acf_fname_user_id = 'acf-fname--user_' . $post->post_author;
+                            do_action('wpml_register_single_string', 'Authors', $acf_fname_user_id, $fname);
+                            $fname = apply_filters('wpml_translate_single_string', $fname, 'Authors', $acf_fname_user_id);
+
+                            $lname = get_the_author_meta('last_name');
+                            $acf_lname_user_id = 'acf-lname--user_' . $post->post_author;
+                            do_action('wpml_register_single_string', 'Authors', $acf_lname_user_id, $lname);
+                            $lname = apply_filters('wpml_translate_single_string', $lname, 'Authors', $acf_lname_user_id);
+                            
+                            
+                            $position = get_the_author_meta('position');
+                            $acf_position_user_id = 'acf-position--user_' . $post->post_author;
+                            do_action('wpml_register_single_string', 'Authors', $acf_position_user_id, $position);
+                            $position = apply_filters('wpml_translate_single_string', $position, 'Authors', $acf_position_user_id);
                         ?>
                         <p class="author-name"><a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php echo $fname . ' ' . $lname; ?></a></p>
-                        <p class="position"><?php the_author_meta('position'); ?></p>
+                        <p class="position"><?php echo $position; ?></p>
                     </div>
                 </div>
 
@@ -39,11 +52,27 @@ $blog_url = get_post_type_archive_link('post');
         </div>
     <?php endif; ?>
 
+    <?php if( is_singular( 'post' ) && empty( get_field( 'icoda_disable_sidebar_navigation', get_the_ID() ) ) ) : ?>
+    <?php
+        $overwrite_table_of_content = get_field('overwrite_table_of_content', get_the_ID());
+    ?>
     <div class="sidebar-single__table table-of-content border d-none d-lg-block" style="display: none;">
         <p class="text-uppercase mb-4 text-black"><?php _e('Table of Content', 'icoda'); ?></p>
-        <ol class="list-table">
-        </ol>
+        <?php if($overwrite_table_of_content) : ?>
+            <?php
+                $custom_table_of_content = get_field('custom_table_of_content', get_the_ID());
+            ?>
+            <ol class="list-table is-overwritten">
+                <?php foreach($custom_table_of_content as $item_data): ?>
+                    <li><a href="#<?php echo $item_data['anchor']; ?>"><?php echo $item_data['title']; ?></a></li>
+                <?php endforeach; ?>
+            </ol>
+        <?php else : ?>
+            <ol class="list-table">
+            </ol>
+        <?php endif; ?>
     </div>
+    <?php endif; ?>
 
     <?php if (!empty($current_tags)) : ?>
         <div class="sidebar-single__tags">
@@ -62,18 +91,7 @@ $blog_url = get_post_type_archive_link('post');
 
     <?php if (!(has_category('services') || has_category('services-es') || has_category('services-zh-hans') || has_category('services-ru'))) : ?>
         <div class="sidebar-single__rate">
-            <?php if (function_exists("kk_star_ratings")) : ?>
-                <section class="post-rate">
-                    <div class="post-rate-inner d-flex flex-column p-4">
-                        <p class="mb-4 text-uppercase text-black text-lg-left text-center">
-                            <?php _e('Rate the article', 'icoda'); ?>
-                        </p>
-                        <div class="sub-text">
-                            <?php echo kk_star_ratings(get_the_ID()); ?>
-                        </div>
-                    </div>
-                </section>
-            <?php endif; ?>
+            <?php get_template_part('template-parts/article-rate'); ?>
         </div>
     <?php endif; ?>
 
@@ -82,14 +100,15 @@ $blog_url = get_post_type_archive_link('post');
     <?php
     $args = array(
         'posts_per_page' => 2,
-        'orderby' => 'rand',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'post_tag',
-                'field' => 'id',
-                'terms' => wp_list_pluck($current_tags, 'term_id'),
-            )
-        ),
+        'orderby' => 'date',
+        'order' => 'desc',
+        // 'tax_query' => array(
+        //     array(
+        //         'taxonomy' => 'post_tag',
+        //         'field' => 'id',
+        //         'terms' => wp_list_pluck($current_tags, 'term_id'),
+        //     )
+        // ),
         'post__not_in' => array(get_the_ID()),
     );
     $retaled_posts_query = new WP_Query($args);

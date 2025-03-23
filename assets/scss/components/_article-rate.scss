@@ -1,0 +1,80 @@
+.article-rate {
+    @at-root .sidebar-single & {
+        @extend .p-4;
+        @extend .d-flex;
+        @extend .flex-column;
+        border: 2px solid #e8edfe;
+        min-height: 89px;
+    }
+    @at-root .post-template-new-blog-post & {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid $separator-color;
+        padding: 1.25rem 0 1.5rem;
+        @include mediaMin(992) {
+            padding: 2rem 0;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+    
+    .title {
+        @at-root .sidebar-single & {
+            @extend .text-black;
+            @extend .mb-4;
+            text-transform: uppercase;
+            text-align: center;
+            @include mediaMin(992) {
+                text-align: left;
+            }
+        }
+        @at-root .post-template-new-blog-post & {
+            display: flex;
+            flex-shrink: 0;
+            font-size: 1.125rem;
+            margin-bottom: .875rem;
+            @extend .fw-semibold;
+            color: $color-dark-blue;
+            @include mediaMin(992) {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .sub-text {
+        @at-root .post-template-new-blog-post & {
+            width: 100%;
+        }
+    }
+    .kk-star-ratings {
+        @at-root .post-template-new-blog-post & {
+            
+            flex-direction: column-reverse;
+            @include mediaMin(992) {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+        }
+    }
+    .kksr-legend,
+    .kksr-muted {
+        @at-root .sidebar-single & {
+            font-size: 13px !important;
+        }
+        @at-root .post-template-new-blog-post & {
+            font-size: 1rem !important;
+            color: $color-blue;
+            @include mediaMin(992) {
+                font-size: 1.125rem !important;
+            }
+        }
+        
+    }
+    .kksr-icon {
+        @at-root .post-template-new-blog-post & {
+            width: 42px !important;
+            height: 42px !important;
+        }
+    }
+}

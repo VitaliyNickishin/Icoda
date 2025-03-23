@@ -11,6 +11,7 @@
                     <p class="subtitle pr-lg-5 mr-lg-5">
                         <?php the_field('post_case_hero_subtitle'); ?>
                     </p>
+                    <!-- @todo  add condition to hide this block when fields empty-->
                     <div class="mt-4 pt-lg-3">
                         <p class="fw-semibold mb-1 cases-category-title"><?php the_field('post_case_hero_category_title'); ?></p>
                         <ul class="cases-category-list d-flex">
@@ -27,10 +28,19 @@
                             <?php endif; ?>
                         </ul>
                     </div>
+                    <!-- @todo  end-->
 
+                    <!-- @todo  add block article-date -->
+
+                        <?php/* get_template_part('template-parts/article-date'); */?>
+                        <!-- Published: March 5, 2025 - Updated: March 12, 2025 -->
+                        <!-- 8 minutes to read -->
+                
+                    <!-- end -->
                 </div>
 
                 <div class="col-12 col-lg-5 col-xl-4 offset-xl-1 mt-4 pt-4 mt-lg-0 pt-lg-0">
+                    <!-- @todo  add condition to hide this block when fields empty -->
                     <div class="cases-box">
                         <?php
                         if (have_rows('post_case_hero_info_items')):
@@ -43,6 +53,10 @@
                             <?php endwhile; ?>
                         <?php endif; ?>
                     </div>
+                    <!-- @todo  end-->
+                    
+                    <!-- @todo  add block article-author with condition -->
+
                 </div>
 
             </div>

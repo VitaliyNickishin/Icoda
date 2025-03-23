@@ -1,0 +1,50 @@
+.article-share-social {
+  @at-root .post-template-new-blog-post & {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid $separator-color;
+    border-bottom: 1px solid $separator-color;
+    padding: 1.25rem 0 1.5rem;
+    @include mediaMin(992) {
+      padding: 2rem 0;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+  .title {
+    font-size: 1.125rem;
+    margin-bottom: .875rem;
+    @extend .fw-semibold;
+    color: $color-dark-blue;
+    @include mediaMin(992) {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+  ul {
+    li {
+      + li {
+        margin-top: 0.5rem;
+        @at-root .post-template-new-blog-post & {
+          margin-top: 0;
+          margin-left: 8px;
+        }
+        @include mediaMax(991) {
+          margin-top: 0;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+    img {
+      transition: transform 0.2s linear;
+      width: 40px;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    a {
+      transition: color 0.2s linear;
+    }
+  }
+}

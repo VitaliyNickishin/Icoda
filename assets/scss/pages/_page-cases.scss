@@ -1,3 +1,4 @@
+//redesign single case
 .post-template-new-case {
     .section-6.section-testimonials {
         padding-bottom: 30px;
@@ -21,6 +22,10 @@
         }
         
     }
+}
+//redesign blog single article
+.post-template-new-blog-post {
+  
 }
 
 .section-cases-content {
@@ -86,6 +91,10 @@
         @include mediaMin(992) {
             font-size: 1rem;
         }
+        a {
+          color: $color-dark-blue;
+          text-decoration: underline;
+        }
       }
       .wp-block-group {
         p {
@@ -124,7 +133,8 @@
         text-align: center;
       }
       .wp-block-separator {
-        border-color: #C5D0EC;
+        border-width: 1px;
+        border-color: $separator-color;
       }
     
       

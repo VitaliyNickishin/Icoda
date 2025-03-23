@@ -403,50 +403,6 @@
     }
   }
 }
-//autohor's banner
-.speak-to-an-expert-banner {
-  border-radius: 10px;
-  background-color: $color-light-white;
-  padding: 40px 25px;
-  margin-bottom: 50px;
-  @at-root .sidebar-single & {
-    padding: 30px 20px 30px 30px;
-  }
-}
-
-.speak-to-an-expert__title {
-  color: #000000;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 150%;
-  font-family: $f-sto-r;
-  @at-root .sidebar-single & {
-    font-size: 14px;
-    line-height: 100%;
-  }
-}
-.arrow-speak {
-  color: $color-blue;
-  cursor: pointer;
-  text-decoration: underline;
-  font-size: 14px;
-  height: 18px;
-  font-weight: 600;
-  line-height: 18px;
-  padding-left: 25px;
-  &:hover {
-    color: #3c4cd7;
-  }
-  .arrow-speak-icon {
-    position: relative;
-    top: -1px;
-    transition: transform 0.3s ease;
-    vertical-align: middle;
-  }
-  .icon-ico-media-4 {
-    margin-right: 10px;
-  }
-}
 
 .section-description,
 .section-list,
