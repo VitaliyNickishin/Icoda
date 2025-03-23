@@ -1294,6 +1294,22 @@ function icoda_services(){
 // add_action( 'init', 'icoda_services' );
 
 
+add_shortcode( 'icoda_post_rate_template', 'icoda_post_rate_template' );
+
+function icoda_post_rate_template() {
+	ob_start();
+    get_template_part('template-parts/article-share-social');
+	return ob_get_clean();
+}
+
+add_shortcode( 'icoda_post_share_template', 'icoda_post_share_template' );
+
+function icoda_post_share_template() {
+	ob_start();
+	get_template_part('template-parts/article-rate');
+	return ob_get_clean();
+}
+
 add_shortcode( 'icoda_list_of_exchanges', 'icoda_list_of_exchanges_callback' );
 
 function icoda_list_of_exchanges_callback() {
@@ -2429,4 +2445,12 @@ function icoda_get_top_post_for_blog_pages() {
         'order' => 'DESC',
     ) );
     return !empty($q->posts) ? $q->posts[0] : false;
+}
+
+function icoda_get_time_to_read() {
+    global $post;
+    $content = get_the_content( null, false, $post );
+    $word_count = str_word_count( strip_tags( $content ) );
+    $readingtime = ceil($word_count / 200);
+    return $readingtime;
 }
