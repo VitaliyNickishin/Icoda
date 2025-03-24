@@ -1,28 +1,17 @@
 .table-of-content {
-    @at-root .box-company-about & {
+    @at-root .section-cases-sidebar & {
+        .title {
+            @extend .fw-semibold;
+        }
         .list-table {
-            
+            margin: 0;
+            list-style-type: decimal;
             line-height: 140%;
         }
-        li {
-            
-            a {
-                color: $color-dark-blue;
-                font-size: 1rem;
-            }
-            ol {
-                margin: 0;
-                padding: 0;
-                list-style-type: decimal;
-            // list-style-position: inside;
-            }
-            ul {
-                margin: 0;
-                padding: 0;
-                list-style-type: disc;
-        
-            }
+        a {
+            color: $color-dark-blue;
+            font-size: 1rem;
         }
-    
+        
     }
 }

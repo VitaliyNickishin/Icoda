@@ -77,6 +77,20 @@
       textCopiedToClipboard();
     });
 
+    $('body').on("click", "a.copy-link-to-heading", function (event) {
+      event.preventDefault();
+      const tmpTarget = document.createElement("textarea");
+      tmpTarget.style.position = "absolute";
+      tmpTarget.style.left = "-9999px";
+      tmpTarget.style.top = "0";
+      document.body.appendChild(tmpTarget);
+      tmpTarget.textContent = $(this).attr('href');
+      tmpTarget.select();
+      document.execCommand("copy");
+      $(tmpTarget).remove();
+      textCopiedToClipboard();
+    });
+
     function textCopiedToClipboard() {
       const textCopied = $("[data-text-copied]");
       textCopied.addClass("show");
@@ -87,102 +101,138 @@
 
     /* Table of content for single post */
     const $tableOfContent = jQuery(".table-of-content .list-table");
-    const $headings = jQuery(".article-main-content").find(
-      "h1, h2, h3, h4, h5, h6"
-    );
-
-    const tmpStack = [{ tag: "H0", children: [] }];
-
-    $headings.each(function () {
-      const $heading = jQuery(this);
-      const text = $heading.text().trim();
-      if (text.length) {
-        const id = get_UID();
-        $heading.prop("id", id);
-
-        const tag = $heading.prop("tagName");
-        const node = {
-          tag,
-          text,
-          id,
-        };
-
-        let last = tmpStack.at(-1);
-
-        while (last.tag >= node.tag) {
-          tmpStack.pop();
-          last = tmpStack.at(-1);
-        }
-
-        last.children = last.children || [];
-        last.children.push(node);
-        tmpStack.push(node);
+    let $headings = [];
+    let addLink = false;
+    if( ! $tableOfContent.hasClass('is-overwritten') ) {
+      if( jQuery(".new-blog-post-main-content").length ) {
+        $headings = jQuery(".new-blog-post-main-content").find(
+          "h1, h2, h3, h4, h5, h6"
+        );
+        addLink = true;
+      } else {
+        $headings = jQuery(".article-main-content").find(
+          "h1, h2, h3, h4, h5, h6"
+        );  
       }
-    });
-    const headingsList = tmpStack[0].children;
-
-    let html = "";
-    if (headingsList.length) {
-      // Level 1
-      headingsList.forEach(function (element1) {
-        html += `<li> <a href="#${element1.id}">${element1.text}</a>`;
-
-        /*
-        if (element1.children) {
-          html += `<ul class="">`;
-          // Level 2
-          element1.children.forEach(function (element2) {
-            html += `<li> <a href="#${element2.id}">${element2.text}</a>`;
-
-            if (element2.children) {
-              html += `<ul class="">`;
-              // Level 3
-              element2.children.forEach(function (element3) {
-                html += `<li> <a href="#${element3.id}">${element3.text}</a>`;
-
-                if (element3.children) {
-                  html += `<ul class="">`;
-                  // Level 4
-                  element3.children.forEach(function (element4) {
-                    html += `<li> <a href="#${element4.id}">${element4.text}</a>`;
-
-                    if (element4.children) {
-                      html += `<ul class="">`;
-                      // Level 5
-                      element4.children.forEach(function (element5) {
-                        html += `<li> <a href="#${element5.id}">${element5.text}</a>`;
-
-                        if (element5.children) {
-                          html += `<ul class="">`;
-                          // Level 6
-                          element5.children.forEach(function (element6) {
-                            html += `<li> <a href="#${element6.id}">${element6.text}</a>`;
-                          });
-                          html += `</ul>`;
-                        }
-                      });
-                      html += `</ul>`;
-                    }
-                  });
-                  html += `</ul>`;
-                }
-              });
-              html += `</ul>`;
-            }
-          });
-
-          html += `</ul>`;
+  
+      const tmpStack = [{ tag: "H0", children: [] }];
+  
+      $headings.each(function () {
+        const $heading = jQuery(this);
+        const text = $heading.text().trim();
+        if (text.length) {
+          let isStateID = false;
+          if( $heading.prop("id") ) {
+            isStateID = true;
+          }
+          const id = $heading.prop("id") ? $heading.prop("id") : get_UID();
+          $heading.prop("id", id);
+          
+          if(addLink && isStateID) {
+            const toHeadingLink = window.location.origin + window.location.pathname + window.location.search + '#' + id;
+            $heading.append(`<a class="copy-link-to-heading" href="${toHeadingLink}"></a>`);
+          }
+  
+          const tag = $heading.prop("tagName");
+          const node = {
+            tag,
+            text,
+            id,
+          };
+  
+          let last = tmpStack.at(-1);
+  
+          while (last.tag >= node.tag) {
+            tmpStack.pop();
+            last = tmpStack.at(-1);
+          }
+  
+          last.children = last.children || [];
+          last.children.push(node);
+          tmpStack.push(node);
         }
-        */
-
-        html += `</li>`;
       });
-
-      $tableOfContent.append(html);
-      $tableOfContent.closest(".table-of-content").show();
+      const headingsList = tmpStack[0].children;
+  
+      let html = "";
+      if (headingsList.length) {
+        // Level 1
+        headingsList.forEach(function (element1) {
+          html += `<li> <a href="#${element1.id}">${element1.text}</a>`;
+  
+          /*
+          if (element1.children) {
+            html += `<ul class="">`;
+            // Level 2
+            element1.children.forEach(function (element2) {
+              html += `<li> <a href="#${element2.id}">${element2.text}</a>`;
+  
+              if (element2.children) {
+                html += `<ul class="">`;
+                // Level 3
+                element2.children.forEach(function (element3) {
+                  html += `<li> <a href="#${element3.id}">${element3.text}</a>`;
+  
+                  if (element3.children) {
+                    html += `<ul class="">`;
+                    // Level 4
+                    element3.children.forEach(function (element4) {
+                      html += `<li> <a href="#${element4.id}">${element4.text}</a>`;
+  
+                      if (element4.children) {
+                        html += `<ul class="">`;
+                        // Level 5
+                        element4.children.forEach(function (element5) {
+                          html += `<li> <a href="#${element5.id}">${element5.text}</a>`;
+  
+                          if (element5.children) {
+                            html += `<ul class="">`;
+                            // Level 6
+                            element5.children.forEach(function (element6) {
+                              html += `<li> <a href="#${element6.id}">${element6.text}</a>`;
+                            });
+                            html += `</ul>`;
+                          }
+                        });
+                        html += `</ul>`;
+                      }
+                    });
+                    html += `</ul>`;
+                  }
+                });
+                html += `</ul>`;
+              }
+            });
+  
+            html += `</ul>`;
+          }
+          */
+  
+          html += `</li>`;
+        });
+  
+        $tableOfContent.append(html);
+        $tableOfContent.closest(".table-of-content").show();
+      } else {
+        $tableOfContent.closest(".table-of-content").remove();
+      }
     } else {
-      $tableOfContent.closest(".table-of-content").remove();
+      $tableOfContent.closest(".table-of-content").show();
     }
+    $('.table-of-content a[href*="#"]').on('click', function(e) {
+
+      e.preventDefault();
+      // var target = this.hash,
+    	// 	$target = $(target);
+  
+      $('html, body').animate({
+  
+          scrollTop: $($headings).offset().top - 400
+  
+      }, 1000);
+  
+  });
+  
 
     function get_UID() {
       return String(

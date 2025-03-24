@@ -988,6 +988,12 @@ jQuery(document).ready(function ($) {
       });
   })
   
+  $("body").on("click", ".ellipsis-content", function (e) {
+    $(".ellipsis-content").each(function () {
+        $(e.currentTarget).toggleClass("ellipsis");
+    });
+})
+  
   initSliderFeatured();
   initServiceSlider();
   initSliderVcs();
@@ -1422,6 +1428,7 @@ $(window).on("load resize", function () {
   initSliderServicesList();
   initSliderServicesGrid();
   initSliderStories();
+  initSliderRelatedArticles();
 });
 
 $(function () {
@@ -1515,6 +1522,36 @@ const initSliderHeroServices = () => {
     });
   } else {
     $(".hero-slider-services.slick-initialized").slick("unslick");
+  }
+};
+
+const initSliderRelatedArticles = () => {
+  if (jQuery(".slider-related-articles").length > 0) {
+    $(".slider-related-articles").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      swipeToSlide: true,
+      infinite: true,
+      dots: true,
+      appendArrows: $(".slider-control-related-articles"),
+      speed: 500,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
   }
 };
 

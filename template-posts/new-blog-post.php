@@ -47,10 +47,10 @@ get_header();
                 <div class="container">
                     <div class="row">
                         <div class="col-12 mu-md-4">
-                            <h2 class="recent-articles">
+                            <h2 class="h3 title">
                                 <?php echo __('Related articles', 'icoda'); ?>
                             </h2>
-                            <div class="articles-list">
+                            <div class="articles-list slider-related-articles custom-slider">
                                 <?php
                                 while ($related_wp_query->have_posts()) {
                                     $related_wp_query->the_post();
@@ -67,7 +67,7 @@ get_header();
 
                                     $tags = get_the_terms($related_post, 'post_tag');
                                 ?>
-                                    <div class="author-article col-4">
+                                    <div class="author-article">
                                         <?php if (has_post_thumbnail()) : ?>
                                             <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>
                                             <?php
@@ -84,27 +84,27 @@ get_header();
 
                                         <?php endif; ?>
 
-                                        <?php if (!empty($tags)): ?>
-                                            <div class="tags">
-                                                <ul class="d-flex">
-                                                    <?php foreach ($tags as $tag_term): ?>
-                                                        <li class="">
-                                                            <a href="<?php echo get_term_link($tag_term, 'post_tag'); ?>">
-                                                                <?php echo $tag_term->name; ?>
-                                                            </a>
-                                                        </li>
-                                                    <?php endforeach; ?>
-                                                </ul>
-                                            </div>
-                                        <?php endif; ?>
-
+                                    
                                         <div class="cases-card-content d-flex justify-content-between flex-column" style="min-height:unset">
                                             <div class="blog-card-body">
+                                                <?php if (!empty($tags)): ?>
+                                                    <div class="tags">
+                                                        <ul class="d-flex">
+                                                            <?php foreach ($tags as $tag_term): ?>
+                                                                <li class="">
+                                                                    <a href="<?php echo get_term_link($tag_term, 'post_tag'); ?>">
+                                                                        <?php echo $tag_term->name; ?>
+                                                                    </a>
+                                                                </li>
+                                                            <?php endforeach; ?>
+                                                        </ul>
+                                                    </div>
+                                                <?php endif; ?>
                                                 <div class="article-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
                                                 <div class="article-except"><?php the_excerpt(); ?></div>
                                             </div>
                                             <div class="article-date">
-                                                <p><?php echo $fname . ' ' . $lname; ?> | <?php echo get_the_date('d F, Y', get_the_ID()); ?></p>
+                                                <p><?php echo $fname . ' ' . $lname; ?> <span class="dote"></span> <?php echo get_the_date('d F, Y', get_the_ID()); ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -113,6 +113,7 @@ get_header();
                                 wp_reset_postdata();
                                 ?>
                             </div>
+                            <div class="slider-control slider-control-related-articles"></div>
                         </div>
                     </div>
                 </div>

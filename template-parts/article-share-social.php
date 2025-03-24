@@ -24,7 +24,7 @@
         </li>
         <li>
             <a class="link-twitter article-share-item" href="#" data-socialname="twitter" title="Share on Twitter">
-                <img skip_lazy src="/wp-content/uploads/2025/03/X.svg" alt="twitter">
+                <img skip_lazy src="/wp-content/uploads/2025/03/x-button.svg" alt="twitter">
             </a>
         </li>
         

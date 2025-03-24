@@ -3,10 +3,10 @@
         .title {
             font-family: $f-sto-m;
             font-size: 2rem;
-            line-height: 110%;
+            line-height: 120%;
             
             @include mediaMin(768) {
-                line-height: 100%;
+                line-height: 110%;
                 font-size: 2.25rem;
             }
             
@@ -22,6 +22,35 @@
                 font-size: 1.125rem;
             }
     
+        }
+        .published-article,
+        .updated-article,
+        .time-read {
+            font-size: .875rem;
+            line-height: 150%;
+            @extend .fw-semibold;
+        }
+        .published-article,
+        .updated-article {
+            color: $color-dark-blue;
+        }
+        .separator {
+            display: none;
+            @include mediaMin(992) {
+                display: block;
+            }
+        }
+        .updated-article {
+            display: block;
+            @include mediaMin(992) {
+                display: inline;
+            }
+        }
+        .time-read {
+            color: $color-blue;
+            @include mediaMin(992) {
+                margin-top: .25rem;
+            }
         }
         .bg-hero {
             background-repeat: no-repeat;

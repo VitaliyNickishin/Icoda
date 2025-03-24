@@ -45,19 +45,39 @@
 
 //redesign blog single post
 .article-author {
+    @at-root .post-template-new-blog-post & {
+        @include mediaMin(992) {
+            margin-bottom: 26px;
+            width: 330px;
+            max-width: 100%;
+            margin-left: auto;
+        }
+        @include mediaMin(1200) {
+            width: 415px;
+        }
+    }
     .author-meta {
         line-height: 120%;
+        margin-left: .75rem;
     }
     .avatar {
-        width: 54px;
-        margin-right: .75rem;
+        @extend .d-flex;
+        a {
+            flex-shrink: 0;
+        }
+        img {
+            @include border-radius(50%);
+        }
     }
     .name {
         font-size: 1rem;
         @extend .fw-semibold;
-        color: $color-dark-blue;
+        
         @include mediaMin(992) {
             font-size: 1.125rem;
+        }
+        a {
+            color: $color-dark-blue;
         }
     }
     .position {

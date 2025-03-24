@@ -25,11 +25,36 @@
 }
 //redesign blog single article
 .post-template-new-blog-post {
-  
+  .copy-link-to-heading {
+    margin-left: 1rem;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    &:after {
+      // margin-left: 1rem;
+      display: inline-block;
+      content: '';
+      background-image: url(../images/link-border.svg);
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+    }
+  }
 }
 
 .section-cases-content {
     color: $color-dark-blue;
+
+    .new-blog-post-main-content {
+      .wp-block-heading:first-child {
+        margin-top: 0;
+        @include mediaMin(992) {
+          margin-top: 0;
+        }
+        
+      }
+    }
+    
     h2:not(.section-title) {
         margin-top: 3rem;
         font-size: 1.5rem;
