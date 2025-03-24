@@ -66,6 +66,8 @@ get_header();
                                     $lname = apply_filters('wpml_translate_single_string', $lname, 'Authors', $acf_lname_user_id);
 
                                     $tags = get_the_terms($related_post, 'post_tag');
+
+                                    $excerpt = mb_strimwidth(get_the_excerpt($related_post->ID), 0, 110, "...");
                                 ?>
                                     <div class="author-article">
                                         <?php if (has_post_thumbnail()) : ?>
@@ -101,7 +103,7 @@ get_header();
                                                     </div>
                                                 <?php endif; ?>
                                                 <div class="article-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
-                                                <div class="article-except"><?php the_excerpt(); ?></div>
+                                                <div class="article-except"><?php echo $excerpt; ?></div>
                                             </div>
                                             <div class="article-date">
                                                 <p><?php echo $fname . ' ' . $lname; ?> <span class="dote"></span> <?php echo get_the_date('d F, Y', get_the_ID()); ?></p>

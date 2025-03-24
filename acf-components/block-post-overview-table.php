@@ -14,12 +14,13 @@
     foreach ($items as $key => $item):
         $add_class = '';
         $add_class_rank = '';
-        if (!isset($items[($key + 1)])) {
-            $add_class = 'low';
-        }
         if ($key < 3) {
             $add_class = 'top';
             $add_class_rank .= ' has-rank ';
+        }
+
+        if (!empty($item['mark_as_red'])) {
+            $add_class = 'low';
         }
 
         if ($key === 0) {

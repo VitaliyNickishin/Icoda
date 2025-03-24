@@ -77,19 +77,19 @@
       textCopiedToClipboard();
     });
 
-    $('body').on("click", "a.copy-link-to-heading", function (event) {
-      event.preventDefault();
-      const tmpTarget = document.createElement("textarea");
-      tmpTarget.style.position = "absolute";
-      tmpTarget.style.left = "-9999px";
-      tmpTarget.style.top = "0";
-      document.body.appendChild(tmpTarget);
-      tmpTarget.textContent = $(this).attr('href');
-      tmpTarget.select();
-      document.execCommand("copy");
-      $(tmpTarget).remove();
-      textCopiedToClipboard();
-    });
+    // $('body').on("click", "a.copy-link-to-heading", function (event) {
+    //   event.preventDefault();
+    //   const tmpTarget = document.createElement("textarea");
+    //   tmpTarget.style.position = "absolute";
+    //   tmpTarget.style.left = "-9999px";
+    //   tmpTarget.style.top = "0";
+    //   document.body.appendChild(tmpTarget);
+    //   tmpTarget.textContent = $(this).attr('href');
+    //   tmpTarget.select();
+    //   document.execCommand("copy");
+    //   $(tmpTarget).remove();
+    //   textCopiedToClipboard();
+    // });
 
     function textCopiedToClipboard() {
       const textCopied = $("[data-text-copied]");
@@ -128,9 +128,9 @@
           const id = $heading.prop("id") ? $heading.prop("id") : get_UID();
           $heading.prop("id", id);
           
-          if(addLink && isStateID) {
-            const toHeadingLink = window.location.origin + window.location.pathname + window.location.search + '#' + id;
-            $heading.append(`<a class="copy-link-to-heading" href="${toHeadingLink}"></a>`);
+          if(addLink && isStateID && $heading.find('.copy-link-to-heading').length == 0) {
+            // const toHeadingLink = window.location.origin + window.location.pathname + window.location.search + '#' + id;
+            // $heading.append(`<a class="copy-link-to-heading" href="${toHeadingLink}"></a>`);
           }
   
           const tag = $heading.prop("tagName");

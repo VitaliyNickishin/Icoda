@@ -587,6 +587,18 @@ add_action('acf/init', function () {
             'align' => array('full', 'wide', 'center')
         ),
     ));
+    acf_register_block(array(
+        'name'              => 'post-heading-link',
+        'title'             => __('Post Heading Link'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('heading', 'link', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
 
 
 
@@ -724,7 +736,7 @@ add_action('acf/init', function () {
     ));
 });
 
-function icoda_acf_block_render_callback($block)
+function icoda_acf_block_render_callback($block, $content = '', $is_preview = false, $post_id = 0, $wp_block = false, $context = false)
 {
     $name = str_replace('acf/', '', $block['name']);
 
