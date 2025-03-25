@@ -14,6 +14,10 @@
     bottom: -48px;
     left: -15px;
   }
+  @at-root .post-template-new-blog-post & {
+    bottom: -43px;
+    left: -15px;
+  }
   &:before {
     content: "";
     background-color: #263646;
@@ -26,6 +30,10 @@
     left: -3px;
     @include mediaMax(991) {
       top: -5px;
+      left: 30px;
+    }
+    @at-root .post-template-new-blog-post & {
+      top: 0;
       left: 30px;
     }
   }

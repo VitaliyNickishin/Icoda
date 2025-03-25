@@ -1010,7 +1010,20 @@ jQuery(document).ready(function ($) {
   initSliderListLeadership();
   initAccordionFaq();
   initSliderPathList();
+  scrollToHeading();
 });
+var scrollToHeading = function () {
+  $(".table-of-content").on("click", "a", function () {
+    var elem = $(this).attr("href");
+    var sectionPos = $(elem).offset().top - 140;
+    $("html, body").animate(
+      {
+        scrollTop: sectionPos,
+      },
+      500
+    );
+  });
+};
 
 let initAccordionFaq = () => {
   const check = $('.accordion-faq input[type="checkbox"]');

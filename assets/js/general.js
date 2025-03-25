@@ -656,13 +656,9 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    if ($(window).width() < 991) {
-        $("[data-sticky-sidebar-case]").trigger("sticky_kit:detach");
-    } else {
-        make_sticky();
-    }
     $(window).on("load resize", function () {
         if ($(window).width() < 991) {
+            $("[data-sticky-sidebar-case]").trigger("sticky_kit:detach");
             $("[data-sticky-sidebar-case]").trigger("sticky_kit:detach");
         } else {
             make_sticky();

@@ -37,7 +37,7 @@
         .separator {
             display: none;
             @include mediaMin(992) {
-                display: block;
+                display: inline-block;
             }
         }
         .updated-article {

@@ -1,5 +1,6 @@
 (function ($) {
   jQuery(document).ready(function () {
+
     function share__fb(url) {
       window.open(
         "https://www.facebook.com/sharer/sharer.php?u=" +
@@ -219,20 +220,7 @@
     } else {
       $tableOfContent.closest(".table-of-content").show();
     }
-    $('.table-of-content a[href*="#"]').on('click', function(e) {
 
-      e.preventDefault();
-      // var target = this.hash,
-    	// 	$target = $(target);
-  
-      $('html, body').animate({
-  
-          scrollTop: $($headings).offset().top - 400
-  
-      }, 1000);
-  
-  });
-  
 
     function get_UID() {
       return String(
