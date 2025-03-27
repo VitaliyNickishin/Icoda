@@ -1,5 +1,8 @@
 .table-of-content {
     @at-root .section-cases-sidebar & {
+        height: 380px;
+        min-height: 200px;
+        overflow: auto;
         .title {
             @extend .fw-semibold;
         }

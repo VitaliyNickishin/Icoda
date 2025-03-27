@@ -107,7 +107,7 @@
     if( ! $tableOfContent.hasClass('is-overwritten') ) {
       if( jQuery(".new-blog-post-main-content").length ) {
         $headings = jQuery(".new-blog-post-main-content").find(
-          "h1, h2, h3, h4, h5, h6"
+          "h1:not(.exclude-title-from-table), h2:not(.exclude-title-from-table), h3:not(.exclude-title-from-table), h4:not(.exclude-title-from-table), h5:not(.exclude-title-from-table), h6:not(.exclude-title-from-table)"
         );
         addLink = true;
       } else {
