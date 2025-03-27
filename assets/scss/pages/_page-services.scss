@@ -134,9 +134,14 @@
         }
     }
     &-img {
-        @at-root .section-services-cases & {
-            // border: 1px solid $border-color;
-            @include border-radius(.5rem);
+        img {
+            @at-root .section-services-cases & {
+                height: 190px;
+                width: 100%;
+                object-fit: cover;
+                @include border-radius(.5rem);
+                border: 1px solid $border-color;
+            }
         }
         
     }
