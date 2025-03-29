@@ -50,6 +50,7 @@
     @at-root .goals-boxes & {
         padding: 1rem 1.125rem;
         p {
+            margin-bottom: 0;
             line-height: 150%;
             @include mediaMin(992) {
                 font-size: 1rem;
@@ -62,6 +63,7 @@
         border: 0;
         height: 100%;
         p {
+            margin-bottom: 0;
             line-height: 150%;
             @include mediaMin(992) {
                 font-size: 1rem;

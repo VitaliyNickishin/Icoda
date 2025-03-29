@@ -40,7 +40,7 @@ $is_blog_post = is_page_template('template-posts/new-blog-post.php');
 
                 <div class="col-12 col-lg-5 col-xl-4 offset-xl-1 mt-4 pt-4 mt-lg-0 pt-lg-0">
                     <?php if (have_rows('post_case_hero_info_items')): ?>
-                        <div class="cases-box">
+                        <div class="cases-box mt-lg-2 pt-lg-1">
                             <?php
                             while (have_rows('post_case_hero_info_items')) : the_row();
                             ?>
