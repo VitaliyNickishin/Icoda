@@ -1171,13 +1171,21 @@ if (jQuery("#waves-second").length) {
 
 /* sticky header */
 function headerFixed() {
-  let nav = jQuery("[data-header]");
+  let header = $("[data-header]");
 
-  jQuery(window).scroll(function () {
-    if (jQuery(this).scrollTop() > 50) {
-      nav.addClass("header_fixed");
+  if (header.length > 0) {
+    let headerSpaceH = header.outerHeight(true);
+    header.before('<div class="headerSpace d-none" style="height: ' + headerSpaceH + 'px;" ></div>');
+  }
+  $(window).scroll(function () {
+    let headerSpaceH = header.outerHeight();
+
+    if ($(this).scrollTop() > headerSpaceH ) {
+        header.addClass("header_fixed");
+        $('.headerSpace').removeClass("d-none");
     } else {
-      nav.removeClass("header_fixed");
+        header.removeClass("header_fixed");
+        $(".headerSpace").addClass("d-none");
     }
   });
 }

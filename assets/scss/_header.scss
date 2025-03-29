@@ -30,11 +30,15 @@
   }
   &.header_fixed {
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.39);
     z-index: 9999;
+    animation-duration: 1s;
+    animation-fill-mode: inherit;
+    animation-name: fadeInsTicky;
   }
   .top-line{
     height: 100px;
@@ -508,10 +512,16 @@
   }
 }
 
-
-
-
-
+@keyframes fadeInsTicky {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 
 
 
