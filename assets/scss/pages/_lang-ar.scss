@@ -1,0 +1,62 @@
+.lang-ar {
+    &.rtl {
+        text-align: right;
+    }
+    &.post-template-new-blog-post {
+        .article-author {
+            @include mediaMin(992) {
+                margin-left: 0;
+            }
+            @include mediaMax(1200) {
+                margin-right: auto;
+            }
+        }
+        // .slick-slider .slick-track {
+        //     transform: translateZ(0)!important;
+        // }
+    }
+    ul {
+        padding-right: 0;
+    }
+    .section-cases-hero-new {
+        .offset-xl-1 {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+    
+    
+    .published-article,
+    .time-read {
+        text-align: right;
+    }
+    
+    .section-overview-table {
+        .pl-lg-4 {
+            padding-right: 1.5rem !important;
+        }
+    }
+    
+    .table-of-content {
+        .list-table {
+            padding-right: 20px;
+        }
+    }
+    .box-feedback {
+        @include mediaMin(992) {
+            text-align: right !important;
+        }
+    }
+    .copy-link-to-heading {
+        margin-right: 1rem;
+        margin-left: 0;
+    }
+    .slider-control {
+        right: auto;
+        left: 15px;
+        .slick-prev {
+            right: auto;
+        }
+    }
+    
+}

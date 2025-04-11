@@ -1,7 +1,15 @@
 <?php
 $args = array(
     'posts_per_page' => 10,
-    'orderby' => 'RAND',
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'category',
+            'field' => 'id',
+            'terms' => array('38'),
+        )
+    ),
     'post__not_in' => array(get_the_ID()),
 );
 $related_wp_query = new WP_Query($args);
@@ -14,7 +22,7 @@ if ($related_wp_query->have_posts()) :
                     <h2 class="h3 title">
                         <?php echo __('Related articles', 'icoda'); ?>
                     </h2>
-                    <div class="articles-list slider-related-articles custom-slider">
+                    <div class="articles-list slider-related-articles<?php echo is_rtl() ? '-rtl' : ''; ?> custom-slider">
                         <?php
                         while ($related_wp_query->have_posts()) {
                             $related_wp_query->the_post();

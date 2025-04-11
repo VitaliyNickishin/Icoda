@@ -79,6 +79,36 @@
   
   <?php get_template_part('template-parts/schemas/general'); ?>
   <?php get_template_part('template-parts/schemas/faq'); ?>
+  <?php
+    if(is_single( 51760 )) {
+      get_template_part('template-parts/schemas/51760');
+    }
+    if(is_single( 101038 )) {
+      get_template_part('template-parts/schemas/101038');
+    }
+    if(is_single( 81394 )) {
+      get_template_part('template-parts/schemas/81394');
+    }
+    if(is_single( 123218 )) {
+      get_template_part('template-parts/schemas/123218');
+    }
+    if(is_single( 126333 )) {
+      get_template_part('template-parts/schemas/126333');
+    }
+    if(is_single( 135081 )) {
+      get_template_part('template-parts/schemas/135081');
+    }
+    if(is_single( 135466 )) {
+      get_template_part('template-parts/schemas/135466');
+    }
+    
+    
+
+    if(is_front_page(  )) {
+      get_template_part('template-parts/schemas/front_page', ICL_LANGUAGE_CODE);
+    }
+    
+  ?>
 
 
   <?php if(is_front_page() || is_singular('post') || is_page_template('template-pages/template-calculator.php')) : ?>

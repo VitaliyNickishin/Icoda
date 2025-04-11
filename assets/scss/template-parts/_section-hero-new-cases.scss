@@ -62,6 +62,10 @@
             right: 0;
             bottom: 0;
             @include border-radius(1.25rem);
+
+            @at-root .rtl & {
+                transform: scale(-1) rotateX(-180deg);
+            }
             
             &-mobile {
                 @include mediaMin(430) {
@@ -156,6 +160,10 @@
         z-index: 0;
         @at-root .section-hero-new-cases & {
             bottom: -130px
+        }
+        @at-root .rtl & {
+            right: auto;
+            left: 0;
         }
     }
     

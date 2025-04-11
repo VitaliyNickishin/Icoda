@@ -306,6 +306,17 @@ jQuery(document).ready(function ($) {
       $("body").addClass("modal-open");
     }
     var div = $(this).attr("data-modal");
+    var initedFromBannerReviewBlock = 'no';
+    if($(this).hasClass('is-banner-review-block')) {
+      initedFromBannerReviewBlock = 'yes';
+    }
+
+    if( $(div).find('form').find('input[name="is-banner-review-block"]').length ) {
+      $(div).find('form').find('input[name="is-banner-review-block"]').val(initedFromBannerReviewBlock);
+    } else {
+      $(div).find('form').append(`<input type="hidden" name="is-banner-review-block" value="${initedFromBannerReviewBlock}" />`);
+    }
+
     overlay.fadeIn(400, function () {
       $(div)
         .css({
@@ -1011,6 +1022,7 @@ jQuery(document).ready(function ($) {
   initAccordionFaq();
   initSliderPathList();
   scrollToHeading();
+  initSliderRelatedArticlesRtl();
 });
 var scrollToHeading = function () {
   $(".table-of-content").on("click", "a", function () {
@@ -1450,6 +1462,7 @@ $(window).on("load resize", function () {
   initSliderServicesGrid();
   initSliderStories();
   initSliderRelatedArticles();
+
 });
 
 $(function () {
@@ -1553,6 +1566,36 @@ const initSliderRelatedArticles = () => {
       slidesToScroll: 1,
       swipeToSlide: true,
       infinite: true,
+      dots: true,
+      appendArrows: $(".slider-control-related-articles"),
+      speed: 500,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  }
+};
+const initSliderRelatedArticlesRtl = () => {
+  if (jQuery(".slider-related-articles-rtl").length > 0) {
+    $(".slider-related-articles-rtl").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      swipeToSlide: true,
+      infinite: true,
+      rtl: true,
       dots: true,
       appendArrows: $(".slider-control-related-articles"),
       speed: 500,
