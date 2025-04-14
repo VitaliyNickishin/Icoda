@@ -100,6 +100,27 @@
       }, 800);
     }
 
+    /* copy referral code for overview table */
+    let area = document.createElement('textarea');
+    document.body.appendChild( area );
+    area.style.display = "none";
+    
+    let content = document.querySelectorAll('.referral-code');
+    let copy    = document.querySelectorAll('.referral-copy');
+    
+    for( let i = 0; i < copy.length; i++ ){
+      copy[i].addEventListener('click', function(){
+        area.style.display = "block";
+        area.value = content[i].innerHTML.toUpperCase();
+        area.select();
+        document.execCommand('copy');   
+        area.style.display = "none";
+    
+        this.innerHTML = 'Copied';
+        setTimeout( () => this.innerHTML = "Copy", 2000 );
+      });
+    }
+
     /* Table of content for single post */
     const $tableOfContent = jQuery(".table-of-content .list-table");
     let $headings = [];

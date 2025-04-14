@@ -47,6 +47,15 @@
             display: block;
         }
     }
+    &__content {
+        @include mediaMin(992) {
+            padding-left: 1.5rem;
+        }
+        @at-root .rtl & {
+            padding-right: 1.5rem;
+            padding-left: 0;
+        }
+    }
     &__logo {
         padding: 1rem;
         border-radius: 12px;
@@ -59,12 +68,15 @@
             line-height: 150%;
         }
     }
+    &__btn {
+        gap: 8px;
+    }
     
     &__body {
         font-size: .875rem;
         .column {
             &:not(:first-child) {
-                margin-top: 20px;
+                margin-top: 12px;
                 @include mediaMin(992) {
                     margin-top: 0;
                     padding-left: 20px;
@@ -164,8 +176,7 @@
         align-self: flex-start;
         font-size: 12px;
         @include mediaMax(991) {
-            background-color: transparent;
-            padding: 4px;
+            padding: 11px;
             @include border-radius(6px);
             flex-shrink: 0;
         }

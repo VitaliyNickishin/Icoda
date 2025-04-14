@@ -9,7 +9,7 @@
     .hot - show icon fire
     -->
     <?php
-    $link_svg = get_template_directory_uri() . '/assets/images/link.svg';
+    $link_svg = get_template_directory_uri() . '/assets/images/link-white.svg';
     $items = get_field('post_overview_items');
     foreach ($items as $key => $item):
         $add_class = '';
@@ -35,7 +35,7 @@
             <div class="overview-table__logo d-none d-lg-block">
                 <img class="logo" src="<?php echo $item['icon']['url']; ?>" alt="<?php echo $item['icon']['alt']; ?>" />
             </div>
-            <div class="overview-table__content pl-lg-4 w-100">
+            <div class="overview-table__content w-100">
                 <div class="overview-table__header d-flex justify-content-between">
                     <div class="overview-table__logo d-lg-none">
                         <img class="logo" src="<?php echo $item['icon']['url']; ?>" alt="<?php echo $item['icon']['alt']; ?>" />
@@ -51,16 +51,47 @@
                                 <?php echo $item['subtitle']; ?>
                             </span>
                         </div>
-                        <?php if (!empty($item['website'])): ?>
-                            <a href="<?php echo $item['website']; ?>" class="btn btn-blue" target="_blank">
-                                <img class="d-lg-none" src="<?php echo $link_svg; ?>" alt="Link" />
-                                <span class="d-none d-lg-block"><?php _e('Visit website', 'icoda'); ?></span>
-                            </a>
-                        <?php endif; ?>
+                        <div class="d-lg-flex d-none overview-table__btn">
+                            <?php if ( !empty($item['referral_code'])) : ?>
+                                <div class="btn-copy-code">
+                                    <div class="referral-field">
+                                        <span class="referral-label">
+                                            <?php _e('Use referral code:', 'icoda'); ?>
+                                        </span>
+                                        <span class="referral-code"><?php echo $item['referral_code']; ?></span>
+                                    </div>
+                                    
+                                    <button type="button" class="btn-copy referral-copy"><?php _e('Copy', 'icoda'); ?></button>
+                                </div>
+                            <?php endif; ?>
+                            <?php if (!empty($item['website'])): ?>
+                                <a href="<?php echo $item['website']; ?>" class="btn btn-blue" target="_blank">
+                                    <img class="d-lg-none" src="<?php echo $link_svg; ?>" alt="Link" />
+                                    <span class="d-none d-lg-block"><?php echo empty($item['visit_website_button_name']) ? __('Visit website', 'icoda') : $item['visit_website_button_name']; ?></span>
+                                </a>
+                            <?php endif; ?>
+                        </div>
                     </div>
-
                 </div>
-
+                <!-- mobile -->
+                <div class="d-lg-none d-flex mt-3 mt-lg-0 overview-table__btn">
+                    <?php if ( !empty($item['referral_code'])) : ?>
+                        <div class="btn-copy-code">
+                            <div class="referral-field">
+                                <span class=" -label">
+                                    <?php _e('Use referral code:', 'icoda'); ?>
+                                </span>
+                                <span class="referral-code"><?php echo $item['referral_code']; ?></span>
+                            </div>
+                            <button type="button" class="btn-copy referral-copy"><?php _e('Copy', 'icoda'); ?></button>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty($item['website'])): ?>
+                        <a href="<?php echo $item['website']; ?>" class="btn btn-blue" target="_blank">
+                            <img src="<?php echo $link_svg; ?>" alt="Link" />
+                        </a>
+                    <?php endif; ?>
+                </div>
                 <?php if (!empty($item['meta_info'])) : ?>
                     <div class="overview-table__body d-lg-flex mt-3 mt-lg-4">
                         <?php foreach ($item['meta_info'] as $meta_info): ?>
@@ -77,9 +108,7 @@
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
-
             </div>
-
         </div>
     <?php endforeach; ?>
 

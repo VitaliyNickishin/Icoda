@@ -8,4 +8,54 @@
             }
         }
     }
+    &-copy-code {
+        position: relative;
+        height: 42px;
+        width: 100%;
+        @include mediaMin(576) {
+            width: 184px;
+        }
+        .referral-field {
+            color: $color-dark-gray;
+            font-size: 10px;
+            font-family: $f-sto-m;
+            line-height: 115%;
+            border: 1px solid $gray-500;
+            background: #FFF;
+            padding: 6px 64px 6px 14px;
+            @include border-radius(4px);
+            margin-bottom: 0;
+            height: 100%;
+        }
+        
+        .referral-code {
+            display: block;
+            margin-top: 2px;
+            color: $color-dark-blue;
+            font-family: $f-sto-m;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 115%;
+            width: 100%;
+            border: 0;
+            
+        }
+        .btn-copy {
+            border: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 0;
+            font-size: 12px;
+            font-family: $f-sto-m;
+            @include border-radius(4px);
+            background: $gray-500;
+            color: $color-dark-blue;
+            line-height: 115%;
+            height: 100%;
+            z-index: 1;
+            cursor: pointer;
+            width: 57px;
+        }
+    }
 }

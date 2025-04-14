@@ -3,17 +3,20 @@
   padding: 0 14px;
   line-height: 27px;
   position: absolute;
-  bottom: -8px;
-  left: 45px;
   border-radius: 4px;
   z-index: 100;
   color: #fff;
   font-size: 12px;
   transition: all 0.2s ease-in-out;
-  @include mediaMax(991) {
-    bottom: -48px;
-    left: -15px;
+  @at-root .single-post__list-social & {
+    bottom: -8px;
+    left: 45px;
+    @include mediaMax(991) {
+      bottom: -48px;
+      left: -15px;
+    }
   }
+  
   @at-root .post-template-new-blog-post & {
     bottom: -43px;
     left: -15px;
@@ -26,12 +29,15 @@
     display: block;
     position: absolute;
     transform: rotate(45deg);
-    top: 8px;
-    left: -3px;
-    @include mediaMax(991) {
-      top: -5px;
-      left: 30px;
+    @at-root .single-post__list-social & {
+      top: 8px;
+      left: -3px;
+      @include mediaMax(991) {
+        top: -5px;
+        left: 30px;
+      }
     }
+    
     @at-root .post-template-new-blog-post & {
       top: 0;
       left: 30px;
