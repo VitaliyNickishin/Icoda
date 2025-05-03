@@ -11,10 +11,11 @@
     <?php
     $link_svg = get_template_directory_uri() . '/assets/images/link-white.svg';
     $items = get_field('post_overview_items');
+    $count_items = count($items);
     foreach ($items as $key => $item):
         $add_class = '';
         $add_class_rank = '';
-        if ($key < 3) {
+        if ($key < 3 && $count_items > 3) {
             $add_class = 'top';
             $add_class_rank .= ' has-rank ';
         }
@@ -28,7 +29,9 @@
         }
     ?>
         <div class="overview-table d-flex position-realative mt-4 <?php echo $add_class; ?>">
-            <div class="position badge d-flex <?php echo $add_class_rank; ?>"><span class="rank"><?php _e('Rank', 'icoda'); ?>&nbsp;</span>#<?php echo $key + 1; ?></div>
+            <?php if(empty($item['remove_badge'])) : ?>
+                <div class="position badge d-flex <?php echo $add_class_rank; ?>"><span class="rank"><?php _e('Rank', 'icoda'); ?>&nbsp;</span>#<?php echo $key + 1; ?></div>
+            <?php endif; ?>
             <?php if (!empty($item['is_sponsored'])) : ?>
                 <div class="sponsored badge"><?php _e('Sponsored', 'icoda'); ?></div>
             <?php endif; ?>
