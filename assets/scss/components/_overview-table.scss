@@ -5,6 +5,12 @@
     background: rgba(255, 255, 255, 0.80);
     backdrop-filter: blur(4px);
     color: $color-dark-blue;
+    @at-root .section-featured-events & {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        backdrop-filter: none;
+    }
     &.top {
         border-color: $green;
         .badge:not(.badge-body) {
@@ -165,20 +171,28 @@
         color: $color-dark-blue;
         width: auto;
         height: auto;
+        &-role {
+            background: $pink-900;
+            color: $white;
+        }
     }
     .rank {
         display: none;
     }
-    .btn.btn-blue {
+    .btn.btn-blue,
+    .btn-book-meeting {
         padding: 13px 20px;
         min-width: auto;
         height: auto;
         align-self: flex-start;
         font-size: 12px;
         @include mediaMax(991) {
-            padding: 11px;
-            @include border-radius(6px);
-            flex-shrink: 0;
+            @at-root .section-overview-table & {
+                padding: 11px;
+                @include border-radius(6px);
+                flex-shrink: 0;
+            }
+            
         }
     }
 }

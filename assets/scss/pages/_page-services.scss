@@ -1,40 +1,4 @@
-.section-hero-new-service,
-.section-services-cases,
-.section-businesses,
-.section-faq-service,
-.section-form {
-    .subtitle {
-        font-size: 15px;
-        color: $color-dark-blue;
-        line-height: 150%;
-        
-        @include mediaMin(1024) {
-            font-size: 18px;
-        }
-    
-    }
-}
-.section-services-cases,
-.section-services-list,
-.section-path,
-.section-stories,
-.section-businesses,
-.section-faq-service,
-.section-form,
-.section-cases-content {
-    .section-title {
-        font-size: 1.5rem;//24px;
-        font-family: $f-sto-m;
-        line-height: 110%;
-        @include mediaMin(1024) {
-            font-size: 2rem; //32px
-        }
-    }
-    .btn.btn-blue {
-        padding: 1rem 2.5rem;
-        line-height: 115%;
-    }
-}
+
 
 .section-hero-new-service {
     &.section-hero-new {

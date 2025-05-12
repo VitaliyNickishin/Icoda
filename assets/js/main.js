@@ -1023,6 +1023,12 @@ jQuery(document).ready(function ($) {
   initSliderPathList();
   scrollToHeading();
   initSliderRelatedArticlesRtl();
+  initSliderHero(); 
+  initSliderHeroServices();
+  initSliderServicesList();
+  initSliderServicesGrid();
+  initSliderStories();
+  initSliderRelatedArticles();
 });
 var scrollToHeading = function () {
   $(".table-of-content").on("click", "a", function () {
@@ -1456,13 +1462,14 @@ $(window).on("load resize", function () {
   });
   svgLineWave.drawsvg("animate");
   }
-  initSliderHero(); 
-  initSliderHeroServices();
-  initSliderServicesList();
-  initSliderServicesGrid();
-  initSliderStories();
-  initSliderRelatedArticles();
 
+  
+  
+  
+  
+
+  
+  
 });
 
 $(function () {
@@ -1509,7 +1516,141 @@ $(function () {
     $oldWord.removeClass("is-visible").addClass("is-hidden");
     $newWord.removeClass("is-hidden").addClass("is-visible");
   }
+
+  // https://icoda.io/events/   changed info with hover
+  // if ($(window).width() > 991) {
+  //   function hideAll() {
+  //     $('.card-event__img, .card-event__footer').stop(true, true).fadeOut(200);
+  //   }
+  
+  //   function showCard(index) {
+  //     hideAll();
+  //     const card = $('.card-event').eq(index);
+  //     card.find('.card-event__img, .card-event__footer').stop(true, true).fadeIn(300);
+  //   }
+  
+  //   showCard(0);
+  
+  //   $('.card-event').on('mouseenter', function() {
+  //     const index = $(this).data('index');
+  //     showCard(index);
+  //   });
+  
+  //   $('.card-event-list').on('mouseleave', function() {
+  //     showCard(0);
+  //   });
+  // }
+
 });
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  //switch images in featured events with timer
+  if (window.innerWidth > 991) {
+    const cards = document.querySelectorAll('.card-event');
+    const cardsList = document.querySelector('.card-event-list');
+    let currentIndex = 0;
+    let autoSwitchInterval;
+
+    if(cards && cardsList) {
+      function showCard(index) {
+        cards.forEach(card => card.classList.remove('active'));
+        cards[index].classList.add('active');
+        currentIndex = index;
+      }
+    
+      function showNextCard() {
+        const nextIndex = (currentIndex + 1) % cards.length;
+        showCard(nextIndex);
+      }
+    
+      function startAutoSwitch() {
+        autoSwitchInterval = setInterval(showNextCard, 10000);
+      }
+    
+      function stopAutoSwitch() {
+        clearInterval(autoSwitchInterval);
+      }
+    
+      cards.forEach((card, index) => {
+        card.addEventListener('mouseenter', () => {
+          stopAutoSwitch();
+          showCard(index);
+        });
+      });
+    
+      cardsList.addEventListener('mouseleave', () => {
+        startAutoSwitch();
+        showCard(0);
+      });
+    
+      // Инициализация
+      showCard(0);
+      startAutoSwitch();
+    }
+  
+    
+  }
+
+  //switch images in featured events without timer
+  // const cards = document.querySelectorAll('.card-event');
+  // const cardsList = document.querySelector('.card-event-list');
+  // if(cards && cardsList) {
+  //   cards.forEach((card, index) => {
+  //     card.addEventListener('mouseenter', () => {
+  //       cards.forEach(c => c.classList.remove('active'));
+  //       card.classList.add('active');
+  //     });
+  //   });
+  
+  //   cardsList.addEventListener('mouseleave', () => {
+  //     cards.forEach(c => c.classList.remove('active'));
+  //     cards[0].classList.add('active');
+  //   });
+  // }
+
+
+  //switch checkbox for event filters
+  document.querySelector('#event-filters-form')?.addEventListener('change', function(evt){
+    // evt.target.parentNode.parentNode.classList.remove('active');
+    if (evt.target.classList.contains('checkbox') && evt.target.checked) {
+      [].slice.call(document.querySelectorAll('.checkbox')).forEach(c=>c.checked=false)
+      evt.target.checked = true;
+      // evt.target.parentNode.parentNode.classList.add('active');
+    }
+  })
+
+  document.querySelector('.undertitle-wrap')?.addEventListener('change', function(evt){
+    // evt.target.parentNode.parentNode.classList.remove('active');
+    if (evt.target.classList.contains('read-more') && evt.target.checked) {
+      [].slice.call(document.querySelectorAll('.read-more')).forEach(c=>c.parentNode.classList.add('open'))
+      
+    } else {
+      [].slice.call(document.querySelectorAll('.read-more')).forEach(c=>c.parentNode.classList.remove('open'))
+    }
+  })
+
+  //event page(btn mbile filters)
+  let btnMobileFilter = document.querySelector('.button-mobile-filter');
+  let eventFilters = document.querySelector('.event-filters');
+  
+  if (btnMobileFilter && eventFilters) {
+    btnMobileFilter.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      evt.target.parentNode.classList.toggle('active');
+      eventFilters.classList.toggle("d-none");
+      if (evt.target !== btnMobileFilter) {
+        console.log('click outside');
+        
+        evt.target.parentNode.classList.toggle('active');
+        eventFilters.classList.toggle("d-none");
+      }
+    });  
+  }
+  
+});
+
+
 
 const initSliderHero = () => {
   if ($(window).width() < 1024) {
@@ -1669,27 +1810,28 @@ const initSliderServicesGrid = () => {
 };
 
 const initSliderPathList = () => {
-  $(".slider-path-list").slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    swipeToSlide: true,
-    infinite: true,
-    variableWidth: true,
-    adaptiveHeight: true,
-    appendArrows: $(".arrow-control-path"),
-    speed: 500,
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+  if (jQuery(".slider-path-list").length > 0) {
+    $(".slider-path-list").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      swipeToSlide: true,
+      infinite: true,
+      variableWidth: true,
+      adaptiveHeight: true,
+      appendArrows: $(".arrow-control-path"),
+      speed: 500,
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
         },
-      },
-    ],
-  });
-};
-
+      ],
+    });
+  };
+}
 // const initSliderStories = () => {
 //   $(".slider-stories").slick({
 //     slidesToShow: 6,
@@ -1761,3 +1903,4 @@ const initSliderStories = () => {
     $(".slider-stories.slick-initialized").slick("unslick");
   }
 };
+
