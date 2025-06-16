@@ -1,6 +1,7 @@
 <?php
 global $post;
 $is_blog_post = is_page_template('template-posts/new-blog-post.php');
+$is_new_case = is_page_template('template-posts/new-case.php');
 ?>
 <section class="section section-cases-hero-new mt-3">
     <div class="section-cases-hero-new__inner position-relative with-gradient with-gradient-pink">
@@ -53,7 +54,22 @@ $is_blog_post = is_page_template('template-posts/new-blog-post.php');
                     <?php endif; ?>
 
                     <?php if ($is_blog_post) : ?>
-                        <?php get_template_part('template-parts/article-author'); ?>
+                        <div class="d-none d-lg-block">
+                            <?php get_template_part('template-parts/article-author'); ?>
+                        </div>
+                        <!-- only mobile -->
+                        <div class="d-lg-none">
+                            <div class="box-feedback text-lg-left text-center">
+                                <h2 class="mb-2 pb-1 section-title text-white"><?php _e('Have a question?', 'icoda'); ?></p>
+                                </h2>
+                                <p class="text-white">
+                                    <?php _e('Chat with a team that understands well-developed full-service marketing.', 'icoda'); ?>
+                                </p>
+                                <div class="btn-wrap mt-3 pt-1">
+                                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/oy--5/talk-to-our-expert'});return false;" class="btn btn-outline-white"><?php echo __('Book Intro Call', 'icoda'); ?></a>
+                                </div>
+                            </div>
+                        </div>
                     <?php endif; ?>
 
 

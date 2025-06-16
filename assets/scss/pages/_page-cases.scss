@@ -42,6 +42,11 @@
       background-size: 100%;
     }
   }
+  .wrap-sticky {
+    @include mediaMax(991) {
+      display: none;
+    }
+  }
 }
 
 .section-cases-content {
