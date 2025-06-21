@@ -505,3 +505,10 @@ a.logo {
         line-height: 115%;
     }
 }
+
+.mx-lg-n2 {
+  @include mediaMin(991) {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
