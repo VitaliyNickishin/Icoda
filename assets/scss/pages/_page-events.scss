@@ -179,17 +179,17 @@
 
 //read more, read less(card-event)
 .undertitle-full,
-label[for="read-more"] span:nth-child(2),
-#read-more:checked~label[for="read-more"] span:nth-child(1) {
+label[for^="read-more-"] span:nth-child(2),
+input[id^="read-more-"]:checked~label[for^="read-more-"] span:nth-child(1) {
     display: none;
 }
 
-#read-more:checked+.undertitle-full,
-#read-more:checked~label[for="read-more"] span:nth-child(2) {
+input[id^="read-more-"]:checked+.undertitle-full,
+input[id^="read-more-"]:checked~label[for^="read-more-"] span:nth-child(2) {
     display: inline;
 }
 
-label[for="read-more"] {
+label[for^="read-more-"] {
     cursor: pointer;
     font-size: .875rem;
     color: $color-blue;

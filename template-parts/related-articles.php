@@ -1,5 +1,6 @@
 <?php
-$args = array(
+$title = !empty($args['title']) ? $args['title'] : __('Related articles', 'icoda');
+$args_q = array(
     'posts_per_page' => 10,
     'orderby' => 'date',
     'order' => 'DESC',
@@ -12,7 +13,7 @@ $args = array(
     ),
     'post__not_in' => array(get_the_ID()),
 );
-$related_wp_query = new WP_Query($args);
+$related_wp_query = new WP_Query($args_q);
 if ($related_wp_query->have_posts()) :
 ?>
     <div class="related-articles">
@@ -20,7 +21,7 @@ if ($related_wp_query->have_posts()) :
             <div class="row">
                 <div class="col-12 mu-md-4">
                     <h2 class="h3 title">
-                        <?php echo __('Related articles', 'icoda'); ?>
+                        <?php echo $title; ?>
                     </h2>
                     <div class="articles-list slider-related-articles<?php echo is_rtl() ? '-rtl' : ''; ?> custom-slider">
                         <?php

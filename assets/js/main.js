@@ -1620,6 +1620,19 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   })
 
+  // document.addEventListener('change', function(evt){
+  // const readMore = document.querySelectorAll('.read-more');
+  // readMore.forEach((card, index) => {
+  //   if (evt.target.checked) {
+  //     card.parentNode.classList.add('open');
+  //   } else {
+  //     card.parentNode.classList.remove('open')
+  //   }
+      
+  // })
+  // })
+  
+
   document.querySelector('.undertitle-wrap')?.addEventListener('change', function(evt){
     // evt.target.parentNode.parentNode.classList.remove('active');
     if (evt.target.classList.contains('read-more') && evt.target.checked) {
