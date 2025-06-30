@@ -1620,28 +1620,18 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // document.addEventListener('change', function(evt){
-  // const readMore = document.querySelectorAll('.read-more');
-  // readMore.forEach((card, index) => {
-  //   if (evt.target.checked) {
-  //     card.parentNode.classList.add('open');
-  //   } else {
-  //     card.parentNode.classList.remove('open')
-  //   }
-      
-  // })
-  // })
-  
-
-  document.querySelector('.undertitle-wrap')?.addEventListener('change', function(evt){
-    // evt.target.parentNode.parentNode.classList.remove('active');
-    if (evt.target.classList.contains('read-more') && evt.target.checked) {
-      [].slice.call(document.querySelectorAll('.read-more')).forEach(c=>c.parentNode.classList.add('open'))
-      
-    } else {
-      [].slice.call(document.querySelectorAll('.read-more')).forEach(c=>c.parentNode.classList.remove('open'))
+  //Read more / read less event-overview-table.php
+  document.querySelectorAll('.undertitle-wrap').forEach(function(wrap) {
+  wrap.addEventListener('change', function(evt) {
+    if (evt.target.classList.contains('read-more')) {
+      if (evt.target.checked) {
+        wrap.classList.add('open');
+      } else {
+        wrap.classList.remove('open');
+      }
     }
-  })
+  });
+});
 
   //event page(btn mbile filters)
   let btnMobileFilter = document.querySelector('.button-mobile-filter');
