@@ -30,34 +30,37 @@ get_header();
 
         <div class="row mt-3 pt-3 mt-lg-4 pt-lg-0">
             <div class="col-12 pr-0">
-                <?php get_template_part('template-parts/tags'); ?>
+                <?php get_template_part('template-parts/tags', '', ['crypto-presale' => 1]); ?>
             </div>
         </div>
 
         <div class="row mt-4 mt-lg-5 mx-lg-n2">
-            <?php /*
+
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                     <?php
                     $title = get_the_title(get_the_ID());
                     $excerpt = get_the_excerpt(get_the_ID());
-                    */?>
-                    
+                    $tag = get_the_terms(get_the_ID(), 'post_tag');
+                    ?>
+
                     <div class="col-12 col-lg-6 mb-3 px-lg-2">
                         <div class="card-presale">
 
                             <div class="card-presale-body">
-                                <span class="h6 mb-2 text-uppercase d-block title"><?php /* echo $title; */?>Floki</span>
+                                <span class="h6 mb-2 text-uppercase d-block title"><?php echo $title; ?></span>
                                 <div class="sub-text">
-                                    <p><?php /*echo $excerpt; */?>A meme coin with surprising utility — bridging the gap between community fun and serious DeFi tools.</p>
+                                    <p><?php echo $excerpt; ?></p>
                                 </div>
                             </div>
 
                             <div class="card-presale-footer mt-4 d-flex justify-content-between align-items-center">
                                 <div class="tag">
-                                    DeFi Tokens
+                                    <?php if (!empty($tag)) : ?>
+                                        <?php echo $tag[0]->name; ?>
+                                    <?php endif; ?>
                                 </div>
-                                
+
                                 <a class="link-arrow d-flex" href="<?php the_permalink(); ?>">
                                     <span class="d-none d-lg-block">
                                         <?php _e('Learn more', 'icoda'); ?>
@@ -70,62 +73,10 @@ get_header();
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-6 mb-3 px-lg-2">
-                        <div class="card-presale">
-
-                            <div class="card-presale-body">
-                                <span class="h6 mb-2 text-uppercase d-block title"><?php /* echo $title; */?>Floki</span>
-                                <div class="sub-text">
-                                    <p><?php /*echo $excerpt; */?>A meme coin with surprising utility — bridging the gap between community fun and serious DeFi tools.</p>
-                                </div>
-                            </div>
-
-                            <div class="card-presale-footer mt-4 d-flex justify-content-between align-items-center">
-                                <div class="tag">
-                                    DeFi Tokens
-                                </div>
-                                
-                                <a class="link-arrow d-flex" href="<?php the_permalink(); ?>">
-                                    <span class="d-none d-lg-block">
-                                        <?php _e('Learn more', 'icoda'); ?>
-                                    </span>
-                                    <span class="d-lg-none">
-                                        <?php _e('More', 'icoda'); ?>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-6 mb-3 px-lg-2">
-                        <div class="card-presale">
-
-                            <div class="card-presale-body">
-                                <span class="h6 mb-2 text-uppercase d-block title"><?php /* echo $title; */?>Floki</span>
-                                <div class="sub-text">
-                                    <p><?php /*echo $excerpt; */?>A meme coin with surprising utility — bridging the gap between community fun and serious DeFi tools.</p>
-                                </div>
-                            </div>
-
-                            <div class="card-presale-footer mt-4 d-flex justify-content-between align-items-center">
-                                <div class="tag">
-                                    DeFi Tokens
-                                </div>
-                                
-                                <a class="link-arrow d-flex" href="<?php the_permalink(); ?>">
-                                    <span class="d-none d-lg-block">
-                                        <?php _e('Learn more', 'icoda'); ?>
-                                    </span>
-                                    <span class="d-lg-none">
-                                        <?php _e('More', 'icoda'); ?>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <?php /*
                 <?php endwhile; ?>
-            <?php endif; */?>
+            <?php else : ?>
+            <p><?php _e('Nothing was found for these criteria.', 'icoda'); ?></p>
+        <?php endif; ?>
         </div>
     </div>
 </section>
