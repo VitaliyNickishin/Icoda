@@ -15,9 +15,9 @@ get_header();
         <div class="row">
             <div class="col-sm-12 col-md-5">
                 <div class="text">
-                    <h1 class="section-title"><?php the_field('section_1_name_form_block-en'); ?></h1>
+                    <h1 class="section-title"><?php echo get_field('section_1_name_form_block-en'); ?></h1>
                     <div class="sub-text">
-                        <?php the_field('section_1_subtitle_block-en'); ?>
+                        <?php echo get_field('section_1_subtitle_block-en'); ?>
                     </div>
                     <a href="#" data-modal="#callback" class="btn btn-blue open-modal"><?php echo __('Get Your Proposal', 'icoda'); ?></a>
                 </div>
@@ -64,7 +64,7 @@ get_header();
                         <a href="<?php echo get_sub_field('section_2_link-en'); ?>" class="service-card hot">
                             <span class="h6"><?php the_sub_field('section_2_title-en'); ?></span>
                             <span class="sub-text">
-                                <span class="p"><?php the_sub_field('section_2_desc-en'); ?></span>
+                                <span class="p"><?php echo get_sub_field('section_2_desc-en'); ?></span>
                             </span>
                             <span class="service-card-footer">
                                 <span class="link-arrow"><?php echo __('Learn more', 'icoda'); ?></span>
@@ -238,7 +238,7 @@ get_header();
             <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                 <div class="text">
                     <h3 class="section-title"><?php the_field('section_8_title-en'); ?></h3>
-                    <p class="sub-text"><?php the_field('section_8_subtitle-en'); ?></p>
+                    <p class="sub-text"><?php echo get_field('section_8_subtitle-en'); ?></p>
                     <a data-toggle="collapse" href="#" class="link-arrow" role="button" data-target=".multi-collapse-project-card" aria-expanded="false"><?php echo __('Show all brands', 'icoda'); ?></a>
                 </div>
             </div>
@@ -374,7 +374,7 @@ get_header();
                                         </div>
                                     </div>
                                     <div class="slider-default-item-body">
-                                        <p><?php the_sub_field('testimonials_desc'); ?></p>
+                                        <p><?php echo get_sub_field('testimonials_desc'); ?></p>
                                     </div>
                                 </div>
                             </div>

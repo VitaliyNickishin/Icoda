@@ -40,6 +40,83 @@ $front_page_id = get_option('page_on_front');
 		</div>
 	</section>
 
+	<?php
+	$builder = get_field('portfolio_archive_builder', 'option');
+	?>
+	<?php $index = 0; ?>
+	<?php if (!empty($builder)) : ?>
+		<?php foreach ($builder as $builder_data) : ?>
+
+			<section class="section-portfolio" style="padding: 0;">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="content">
+								<h2 class="h4"><?php echo $builder_data['heading']; ?></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<?php foreach ($builder_data['posts'] as $portfolio_post_id) : ?>
+				<?php $section_class = $index % 2 == 0 ? 'odd' : 'even'; ?>
+				<?php $slider_images = get_field('portfolio_slider', $portfolio_post_id); ?>
+				<?php $services = get_field('portfolio_services_list', $portfolio_post_id); ?>
+				<?php $portfolio_item_link = get_the_permalink($portfolio_post_id); ?>
+				<?php $main_description = get_field('portfolio_main_description', $portfolio_post_id); ?>
+				<section class="section-portfolio section-portfolio-<?php echo $section_class; ?>" data-case-cat="">
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-lg-5">
+								<div class="content">
+									<h2 class="h4"><?php echo get_the_title($portfolio_post_id); ?></h2>
+									<div class="description description-descktop">
+										<?php echo !empty($main_description) ? $main_description  : get_the_excerpt($portfolio_post_id); ?>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-lg-7">
+								<div class="wr-slider">
+									<div class="portfolio-slider-<?php echo ($index + 1); ?> portfolio-slider-main custom-slider">
+										<?php foreach ($slider_images as $slider_image_url) : ?>
+											<a href="<?php echo $portfolio_item_link; ?>">
+												<img src="<?php echo $slider_image_url; ?>" alt="slider-image">
+											</a>
+										<?php endforeach; ?>
+									</div>
+									<div class="slider-control wr-control-portfolio-slider-<?php echo ($index + 1); ?>"></div>
+								</div>
+								<div class="description description-mobile">
+									<?php echo !empty($main_description) ? $main_description  : get_the_excerpt($portfolio_post_id); ?>
+								</div>
+							</div>
+						</div>
+
+						<?php if (!empty($services)) : ?>
+							<?php $services = explode("\n", $services); ?>
+							<div class="row">
+								<div class="col-12 col-lg-6 pr-0">
+									<div class="portfolio-filters-slider-bottom-<?php echo ($index + 1); ?> portfolio-filters-slider-bottom-category custom-slider">
+										<a href="<?php echo $portfolio_item_link; ?>"><?php echo strtoupper(__('Project services', 'icoda')); ?></a>
+										<?php foreach ($services as $service_name) : ?>
+											<a href="<?php echo $portfolio_item_link; ?>"><?php echo $service_name; ?></a>
+										<?php endforeach; ?>
+									</div>
+								</div>
+							</div>
+						<?php endif; ?>
+					</div>
+
+				</section>
+				<?php $index++; ?>
+			<?php endforeach; ?>
+		<?php endforeach; ?>
+	<?php else : ?>
+		<?php _e('Nothing found', 'icoda'); ?>
+	<?php endif; ?>
+
+	<?php /* ?>
 	<?php $index = 0; ?>
 	<?php if (have_posts()) : ?>
 		<?php while (have_posts()) : ?>
@@ -63,14 +140,14 @@ $front_page_id = get_option('page_on_front');
 						</div>
 						<div class="col-12 col-lg-7">
 							<div class="wr-slider">
-								<div class="portfolio-slider-<?php echo ($index+1); ?> portfolio-slider-main custom-slider">
+								<div class="portfolio-slider-<?php echo ($index + 1); ?> portfolio-slider-main custom-slider">
 									<?php foreach ($slider_images as $slider_image_url) : ?>
 										<a href="<?php echo $portfolio_item_link; ?>">
 											<img src="<?php echo $slider_image_url; ?>" alt="slider-image">
 										</a>
 									<?php endforeach; ?>
 								</div>
-								<div class="slider-control wr-control-portfolio-slider-<?php echo ($index+1); ?>"></div>
+								<div class="slider-control wr-control-portfolio-slider-<?php echo ($index + 1); ?>"></div>
 							</div>
 							<div class="description description-mobile">
 								<?php the_excerpt(); ?>
@@ -82,7 +159,7 @@ $front_page_id = get_option('page_on_front');
 						<?php $services = explode("\n", $services); ?>
 						<div class="row">
 							<div class="col-12 col-lg-6 pr-0">
-								<div class="portfolio-filters-slider-bottom-<?php echo ($index+1); ?> portfolio-filters-slider-bottom-category custom-slider">
+								<div class="portfolio-filters-slider-bottom-<?php echo ($index + 1); ?> portfolio-filters-slider-bottom-category custom-slider">
 									<a href="<?php echo $portfolio_item_link; ?>"><?php echo strtoupper(__('Project services', 'icoda')); ?></a>
 									<?php foreach ($services as $service_name) : ?>
 										<a href="<?php echo $portfolio_item_link; ?>"><?php echo $service_name; ?></a>
@@ -99,6 +176,7 @@ $front_page_id = get_option('page_on_front');
 	<?php else : ?>
 		<?php _e('Nothing found', 'icoda'); ?>
 	<?php endif; ?>
+	<?php */ ?>
 
 	<?php get_template_part('template-parts/sections/contact-us', '', ['need_post_id' => $front_page_id]); ?>
 

@@ -70,12 +70,12 @@ if (!empty($post_v3)) :
             ),
             'post__not_in' => array(get_the_ID()),
         );
-        $wp_query = new WP_Query($args);
+        $related_wp_query = new WP_Query($args);
 
         $fname = get_the_author_meta('first_name');
         $lname = get_the_author_meta('last_name');
 
-        if ($wp_query->have_posts()) :
+        if ($related_wp_query->have_posts()) :
         ?>
             <div class="related-articles">
                 <div class="container">
@@ -86,8 +86,8 @@ if (!empty($post_v3)) :
                             </h2>
                             <div class="articles-list">
                                 <?php
-                                    while ($wp_query->have_posts()) {
-                                        $wp_query->the_post();
+                                    while ($related_wp_query->have_posts()) {
+                                        $related_wp_query->the_post();
                                 ?>
                                         <div class="author-article col-4">
                                             <?php if (has_post_thumbnail()) : ?>
@@ -106,10 +106,10 @@ if (!empty($post_v3)) :
                                                 </div>
 
                                             <?php endif; ?>
-                                            <div class="cases-card-content d-flex justify-content-between flex-column">
+                                            <div class="cases-card-content d-flex justify-content-between flex-column" style="min-height:unset">
                                                 <div class="blog-card-body">
                                                     <div class="article-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
-                                                    <div class="article-except"><?php the_excerpt(); ?></div>
+                                                    <?php /* ?><div class="article-except"><?php the_excerpt(); ?></div><?php */ ?>
                                                 </div>
                                                 <div class="article-date">
                                                     <p><?php echo get_the_date('d F, Y', get_the_ID()); ?></p>
@@ -229,12 +229,24 @@ if (!empty($post_v3)) :
                             </a>
                         </div>
                         <div class="author-meta">
-                            <?php
-                            $fname = get_the_author_meta('first_name');
-                            $lname = get_the_author_meta('last_name');
+                            <?php                    
+                                $fname = get_the_author_meta('first_name');
+                                $acf_fname_user_id = 'acf-fname--user_' . $post->post_author;
+                                do_action('wpml_register_single_string', 'Authors', $acf_fname_user_id, $fname);
+                                $fname = apply_filters('wpml_translate_single_string', $fname, 'Authors', $acf_fname_user_id);
+
+                                $lname = get_the_author_meta('last_name');
+                                $acf_lname_user_id = 'acf-lname--user_' . $post->post_author;
+                                do_action('wpml_register_single_string', 'Authors', $acf_lname_user_id, $lname);
+                                $lname = apply_filters('wpml_translate_single_string', $lname, 'Authors', $acf_lname_user_id);
+                                
+                                $position = get_the_author_meta('position');
+                                $acf_position_user_id = 'acf-position--user_' . $post->post_author;
+                                do_action('wpml_register_single_string', 'Authors', $acf_position_user_id, $position);
+                                $position = apply_filters('wpml_translate_single_string', $position, 'Authors', $acf_position_user_id);
                             ?>
                             <p class="author-name h6"><a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php echo $fname . ' ' . $lname; ?></a></p>
-                            <p class="position"><?php the_author_meta('position'); ?></p>
+                            <p class="position"><?php echo $position; ?></p>
                         </div>
                     </div>
 
@@ -264,9 +276,9 @@ if (!empty($post_v3)) :
                 ),
                 'post__not_in' => array(get_the_ID()),
             );
-            $wp_query = new WP_Query($args);
+            $related_wp_query = new WP_Query($args);
 
-            if ($wp_query->have_posts()) :
+            if ($related_wp_query->have_posts()) :
             ?>
                 <div class="related-articles">
                     <div class="container">
@@ -277,8 +289,8 @@ if (!empty($post_v3)) :
                                 </h2>
                                 <div class="articles-list">
                                     <?php
-                                        while ($wp_query->have_posts()) {
-                                            $wp_query->the_post();
+                                        while ($related_wp_query->have_posts()) {
+                                            $related_wp_query->the_post();
                                     ?>
                                             <div class="author-article col-4">
                                                 <?php if (has_post_thumbnail()) : ?>
@@ -297,10 +309,10 @@ if (!empty($post_v3)) :
                                                     </div>
 
                                                 <?php endif; ?>
-                                                <div class="cases-card-content d-flex justify-content-between flex-column">
+                                                <div class="cases-card-content d-flex justify-content-between flex-column" style="min-height:unset">
                                                     <div class="blog-card-body">
                                                         <div class="article-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
-                                                        <div class="article-except"><?php the_excerpt(); ?></div>
+                                                        <?php /* ?><div class="article-except"><?php the_excerpt(); ?></div><?php */ ?>
                                                     </div>
                                                     <div class="article-date">
                                                         <p><?php echo get_the_date('d F, Y', get_the_ID()); ?></p>

@@ -9,6 +9,20 @@
  *
  * @package icoda
  */
+  
+ $addresses = [
+    'en' => 'Poland, Wrocław, 50-202,<br/> Księcia Witolda Street, No. 49, Apt. 15',
+    'zh-hans' => '波兰，弗罗茨瓦夫，50-202，<br/>Księcia Witolda 街，49号，15室',
+    'es' => 'Polonia, Wrocław, 50-202,<br/> calle Księcia Witolda, Nº 49, Apartamento 15',
+    'de' => 'Polen, Wrocław, 50-202, <br/>Księcia Witolda Straße, Nr. 49, Wohnung 15',
+    'ru' => 'Польша, Вроцлав, 50-202,<br/> ул. Ксенжеця Витольда, д. 49, кв. 15',
+    'it' => 'Polonia, Wrocław, 50-202,<br/> Via Knyaz Witold, No. 49, Apt. 15',
+    'fr' => 'Pologne, Wrocław, 50-202,<br/> rue Księcia Witolda, No. 49, Appartement 15',
+    'ko' => '폴란드, 브로츠와프, 50-202,<br/> Księcia Witolda 거리, 49번지, 15호',
+    'pt-pt' => 'Polônia, Wrocław, 50-202,<br/> rua Księcia Witolda, Nº 49, Apartamento 15',
+    'ar' => 'بولندا، فروتسواف، 50-202، شارع <br/>Księcia Witolda، رقم 49، الشقة 15',
+    'ja' => 'ポーランド、ヴロツワフ、50-202、<br/>Księcia Witolda 通り、49番、15号室',
+ ];
 ?>
 
 <footer class="footer section section-9">
@@ -70,7 +84,7 @@
                             <div class="media">
                                 <div class="wr-media-list">
                                     <a href="<?php echo get_permalink(icl_object_id(2908, 'page', 1, ICL_LANGUAGE_CODE)); ?>" class="ttl"><?php _e('Contact Us', 'icoda'); ?></a>
-                                    <p>POLSKA, WROCŁAW, 50-202, ul. <br/> KSIĘCIA WITOLDA, nr 49, lok. 15</p>
+                                    <p><?php echo !empty($addresses[ICL_LANGUAGE_CODE]) ? $addresses[ICL_LANGUAGE_CODE] : $addresses['en']; ?></p>
                                     <ul class="media-list">
                                         <li><a class="icon-ico-media-1" target="_blank" href="https://www.linkedin.com/company/icoda-ico-marketing-solutions/"></a></li>
                                         <li><a class="icon-ico-media-2" target="_blank" href="https://www.facebook.com/icodaagency/"></a></li>
@@ -220,7 +234,7 @@
                 <input type="text" name="name" class="form-control req" placeholder="<?php _e('Your name', 'icoda'); ?>" required>
             </div>
             <div class="col-12 col-md-6">
-                <input type="text" name="telegram" class="form-control req" placeholder="<?php _e('WhatsApp / Telegram / Skype', 'icoda'); ?>" required>
+                <input type="text" name="telegram" class="form-control req" placeholder="<?php _e('WhatsApp / Telegram', 'icoda'); ?>" required>
             </div>
             <div class="col-12">
                 <input type="email" name="email" class="form-control req" placeholder="<?php _e('Email', 'icoda'); ?>" required>
@@ -283,7 +297,7 @@ window.onload = function () {
 };
 </script>
 
-<?php if(is_front_page() || is_singular('post') || is_page_template('template-pages/template-calculator.php')) : ?>
+<?php if(is_front_page() || is_singular('post') || is_page_template('template-pages/template-calculator.php') || is_page_template('template-parts/tpl-events.php')) : ?>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <?php endif; ?>
 

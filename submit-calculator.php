@@ -2,14 +2,6 @@
 include '../../../wp-load.php';
 include_once dirname(__DIR__, 2) . '/plugins/ApTch/inc/ApTchBOT.class.php';
 
-$origin = get_http_origin();
-$allowed_origins = array('https://gh-marketing-services.com');
-if ($origin && in_array($origin, $allowed_origins)) {
-   header('Access-Control-Allow-Origin: ' . esc_url_raw($origin));
-   header('Access-Control-Allow-Methods: POST');
-   header('Access-Control-Allow-Credentials: true');
-}
-
 function icodaGetIPAddress()
 {
    $ip = '';
@@ -26,8 +18,8 @@ function icodaGetIPAddress()
 $TGbot = new ApTchBOT;
 
 $name = $_POST["name"];
-$telegram = $_POST["telegram"];
 $email = trim($_POST["email"]);
+$telegram = $_POST["telegram"];
 
 $ipAddress = icodaGetIPAddress();
 
@@ -43,12 +35,7 @@ foreach ($blockIpAddresses as $blockIpAddress) {
    }
 }
 
-
-if (!empty($_POST['email_mob'])) {
-   $email = trim($_POST['email_mob']);
-}
-
-if (strlen($_POST["email"]) == 0 && strlen($_POST["email_mob"]) == 0) {
+if (strlen($_POST["email"]) == 0) {
    echo 'You aren\'t able submit form!';
    exit;
 }
@@ -117,23 +104,11 @@ if (
    exit;
 }
 
-if (isset($_POST["submit"]) && strlen($_POST["submit"]) > 0) {
-   // echo 'You aren\'t able submit form!';
-   _e('You aren\'t able submit form!', 'icoda');
-   exit;
-}
-if (isset($_POST["dop"])) {
-   $dop = $_POST["dop"];
-} else {
-   $dop = '-';
-};
-
-
 $email_body = "";
 $email_body = $email_body . "<h2>Name:</h2><p>" . $name . "</p><h2>WhatsApp / Telegram:</h2><p>" . $telegram . "</p><h2>Email:</h2><p>" . $email . "</p>";
 
-if (!empty($_POST['message']) || !empty($_POST['message_mob'])) {
-   $message = !empty($_POST['message']) ? $_POST['message'] : $_POST['message_mob'];
+if (!empty($_POST['message'])) {
+   $message = $_POST['message'];
    $email_body .= '<h2>Message:</h2><p>' . $message . '</p>';
 }
 
@@ -165,7 +140,7 @@ if (function_exists('wp_mail')) {
    $headers = array(
       'content-type: text/html',
    );
-   $res_mail_send = wp_mail('post@icoda.io', 'ICODA - Request', $email_body, $headers);
+   $res_mail_send = wp_mail('post@icoda.io', 'ICODA - Calculator Request', $email_body, $headers);
 
    $res_mail_to_user_send = wp_mail($email, 'Successful Request', $email_body_to_user, $headers);
 } else {
@@ -188,8 +163,6 @@ if (function_exists('wp_mail')) {
       $res_mail_send = $mail->ErrorInfo;
    }
 
-   // include_once get_stylesheet_directory() . "/amocrm_api/handler.php";
-
    $mail_to_user = new PHPMailer(true);
    try {
       $mail_to_user->DKIM_private = '/root/dkim/icoda.io.private';
@@ -210,13 +183,13 @@ if (function_exists('wp_mail')) {
 }
 
 file_put_contents(
-   get_stylesheet_directory() . '/submit-logs.txt',
+   get_stylesheet_directory() . '/submit-calculator-logs.txt',
    print_r(date('Y-m-d H:i:s'), true) . "\n",
    FILE_APPEND
 );
 
 file_put_contents(
-   get_stylesheet_directory() . '/submit-logs.txt',
+   get_stylesheet_directory() . '/submit-calculator-logs.txt',
    print_r(array('res_email' => $email, 'res_mail_to_user_send' => $res_mail_to_user_send, 'res_mail_send' => $res_mail_send), true) . "\n\n",
    FILE_APPEND
 );
@@ -227,19 +200,13 @@ if (false && !$res_mail_send) {
    exit;
 } else {
    echo '1';
-   $tg_body = "New request from icoda.io 💪 \n";
-
-   if(!empty($_POST['is-banner-review-block']) && $_POST['is-banner-review-block'] === 'yes') {
-      $tg_body = "LISTING\nNew request from icoda.io 💪 \n";
-   }
-   
+   $tg_body = "New calculator request from icoda.io 💪 \n";
    $tg_body .= "Name: " . $name . " \n";
    $tg_body .= "WhatsApp / Telegram: " . $telegram . " \n";
    $tg_body .= "Email: " . $email . " \n";
    if (!empty($ipAddress)) {
       $tg_body .= "IP: " . $ipAddress . " \n";
    }
-
 
    foreach ($utm_keys as $row) {
       $utm_name = 'utm-' . $row;
@@ -265,7 +232,6 @@ if (false && !$res_mail_send) {
       });
    }
 
-
    if ($_POST['lang-source'] == 'de') {
       add_filter("option_botTokenDB", function ($value) {
          return '5271971463:AAFvacGB5TqmjKVfgFU51lbhuw8ePrT6S60';
@@ -274,8 +240,6 @@ if (false && !$res_mail_send) {
          return '-1001565276769';
       });
    }
-
-
 
 
    $TGbot->sendPost($tg_body);

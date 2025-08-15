@@ -1,4 +1,19 @@
 <?php
+
+
+add_action('template_redirect', function() {
+    if(!empty($_GET['set-dtaft-to-korean'])) {
+        $my_post = array(
+            'ID'            => 149937,
+            'post_status'   => 'draft',
+        );
+       $res = wp_update_post( $my_post );
+       var_dump($res);
+       die;
+    }
+});
+
+
 /**
  * icoda functions and definitions
  *
@@ -462,6 +477,14 @@ function icoda_styles()
         );
     }
 
+    if( is_page_template('template-parts/tpl-events.php') ) {
+        wp_enqueue_script(
+            'icoda-events-filter',
+            $assets_uri . '/js/events-filter.js',
+            array('jquery'), '', true
+        );
+    }
+
     if( is_front_page(  ) ) {
         wp_enqueue_script(
             'icoda-load-parts-1',
@@ -850,6 +873,7 @@ require get_template_directory() . '/inc/api-for-bitrix.php';
 require get_template_directory() . '/inc/api-for-clone.php';
 require get_template_directory() . '/inc/calendly.php';
 include_once get_template_directory() . '/inc/portfolio/portfolio.php';
+include_once get_template_directory() . '/inc/events/events.php';
 include_once get_template_directory() . '/inc/faq/faq.php';
 include_once get_template_directory() . '/inc/export-strings.php';
 include_once get_template_directory() . '/inc/bitrix/bitrix.php';
@@ -967,8 +991,11 @@ function true_301_redirect()
         array('old' => '/zh-hans/services/russian-marketing/', 'new' => '/zh-hans/russian-marketing/'),
         array('old' => '/zh-hans/services/crypto-pr/', 'new' => '/zh-hans/crypto-pr/'),
         array('old' => '/zh-hans/services/korean-marketing/', 'new' => '/zh-hans/korean-marketing/'),
-        
-
+        array('old' => '/best-crypto-presales/', 'new' => '/best-crypto-presale/'),
+        array('old' => '/upcoming-crypto-presales/', 'new' => '/upcoming-crypto-presale/'),
+        array('old' => '/top-crypto-presale-list/', 'new' => '/best-crypto-presale-list/'),
+        array('old' => '/best-crypto-presales-to-buy-now/', 'new' => '/top-crypto-presales-to-buy-now/'),
+        array('old' => '/top-crypto-presale-projects/', 'new' => '/best-crypto-presale-projects/'),
     );
     foreach ($rules as $rule) :
         // если URL совпадает с одним из указанных в массиве, то редиректим
@@ -1298,7 +1325,7 @@ add_shortcode( 'icoda_post_rate_template', 'icoda_post_rate_template' );
 
 function icoda_post_rate_template() {
 	ob_start();
-    get_template_part('template-parts/article-share-social');
+	get_template_part('template-parts/article-rate', '', ['size' => 42]);
 	return ob_get_clean();
 }
 
@@ -1306,7 +1333,7 @@ add_shortcode( 'icoda_post_share_template', 'icoda_post_share_template' );
 
 function icoda_post_share_template() {
 	ob_start();
-	get_template_part('template-parts/article-rate');
+    get_template_part('template-parts/article-share-social');
 	return ob_get_clean();
 }
 
@@ -2015,7 +2042,7 @@ function icoda_pre_get_posts($query)
         $query->set('post__not_in', [$top_post->ID]);
 	}
 
-    if (!is_admin() && $query->is_main_query() && (is_category( 'blog') || is_category( 'blog-zh-hans') || is_category( 'top') || is_category( 'top-zh-hans')|| is_category( 'top-es')|| is_category( 'academy') || is_category( 'academy-zh-hans')|| is_category( 'academy-es')) ) {
+    if (!is_admin() && $query->is_main_query() && (is_category( 'crypto-presales') || is_category( 'blog') || is_category( 'blog-zh-hans') || is_category( 'top') || is_category( 'top-zh-hans')|| is_category( 'top-es')|| is_category( 'academy') || is_category( 'academy-zh-hans')|| is_category( 'academy-es')) ) {
         if( !empty($_GET['tags']) ) {
             $tax_query = $query->get('tax_query');
             if( !is_array($tax_query) ) {
@@ -2030,8 +2057,13 @@ function icoda_pre_get_posts($query)
             $query->set('tax_query', $tax_query);
         }
 		$query->set('posts_per_page', 12);
-        $top_post = icoda_get_top_post_for_blog_pages();
-        $query->set('post__not_in', [$top_post->ID]);
+        if(is_category( 'crypto-presales')) {
+		    $query->set('posts_per_page', -1);
+        }
+        if(!is_category( 'crypto-presales')) {
+            $top_post = icoda_get_top_post_for_blog_pages();
+            $query->set('post__not_in', [$top_post->ID]);
+        }
 	}
 }
 
@@ -2454,3 +2486,6 @@ function icoda_get_time_to_read() {
     $readingtime = ceil($word_count / 200);
     return $readingtime;
 }
+
+
+
