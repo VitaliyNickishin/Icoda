@@ -1,27 +1,26 @@
 //redesign single case
 .post-template-new-case {
-    .section-6.section-testimonials {
-        padding-bottom: 30px;
-        .h3 {
-            font-family: $f-sto-m;
-            color: $color-dark-blue;
-            margin-top: 3rem;
-            font-size: 1.5rem;
-            @include mediaMin(992) {
-                font-size: 2rem;
-                margin-top: 2.5rem;
-            }
-        }
-        .btn.btn-blue {
-            min-width: 153px;
-          }
+  .section-6.section-testimonials {
+    padding-bottom: 30px;
+    .h3 {
+      font-family: $f-sto-m;
+      color: $color-dark-blue;
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      @include mediaMin(992) {
+        font-size: 2rem;
+        margin-top: 2.5rem;
+      }
     }
-    .section-form .form-default .wr-btn {
-        @include mediaMax(991) {
-            text-align: center;
-        }
-        
+    .btn.btn-blue {
+      min-width: 153px;
     }
+  }
+  .section-form .form-default .wr-btn {
+    @include mediaMax(991) {
+      text-align: center;
+    }
+  }
 }
 //redesign blog single article
 .post-template-new-blog-post {
@@ -34,7 +33,7 @@
     &:after {
       // margin-left: 1rem;
       display: inline-block;
-      content: '';
+      content: "";
       background-image: url(../images/link-border.svg);
       background-repeat: no-repeat;
       width: 100%;
@@ -50,144 +49,140 @@
 }
 
 .section-cases-content {
-    color: $color-dark-blue;
+  color: $color-dark-blue;
 
-    .new-blog-post-main-content {
-      .wp-block-heading:first-child {
+  .new-blog-post-main-content {
+    .wp-block-heading:first-child {
+      margin-top: 0;
+      @include mediaMin(992) {
         margin-top: 0;
-        @include mediaMin(992) {
-          margin-top: 0;
-        }
-        
       }
     }
-    
-    h2:not(.section-title) {
-        margin-top: 3rem;
-        font-size: 1.5rem;
-        @include mediaMin(992) {
-            font-size: 2rem;
-            margin-top: 2.5rem;
-        }
+  }
+
+  h2:not(.section-title) {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    @include mediaMin(992) {
+      font-size: 2rem;
+      margin-top: 2.5rem;
     }
-    h3:not(.section-title) {
-        margin-top: 1.25rem;
-        font-size: 1.25rem;
-        @include mediaMin(992) {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-        }
+  }
+  h3:not(.section-title) {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+    @include mediaMin(992) {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
     }
-    h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: $f-sto-m;
-        color: $color-dark-blue;
-        line-height: 165%;
-        @include mediaMin(992) {
-          line-height: 115%;
-        }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    line-height: 165%;
+    @include mediaMin(992) {
+      line-height: 115%;
+    }
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .wp-block-table,
+  p {
+    margin-bottom: 20px;
+  }
+  > img {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    @include mediaMin(992) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+  dl,
+  ol,
+  ul {
+    margin: 20px 0 40px;
+    list-style-type: initial;
+    padding-left: 20px;
+  }
+  strong {
+    font-family: $f-sto-m;
+  }
+  p {
+    font-size: 0.9375rem;
+    @include mediaMin(992) {
+      font-size: 1rem;
+    }
+    a {
+      color: $color-dark-blue;
+      text-decoration: underline;
+    }
+  }
+  .wp-block-group {
+    p {
+      margin-bottom: 0;
+      + p {
+        margin-top: 10px;
       }
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      .wp-block-table,
-      p {
-        margin-bottom: 20px;
+    }
+  }
+  .wp-block-group,
+  .wp-block-embed {
+    margin-bottom: 40px;
+  }
+  .wp-block-embed {
+    iframe {
+      width: 100%;
+    }
+  }
+  .is-type-video {
+    iframe {
+      @include mediaMin(992) {
+        height: 400px;
       }
-      > img {
-        margin-top: 48px;
-        margin-bottom: 48px;
-        @include mediaMin(992) {
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-      }
-      dl,
-      ol,
-      ul {
-        margin: 20px 0 40px;
-        list-style-type: initial;
-        padding-left: 20px;
-      }
-      strong {
-        font-family: $f-sto-m;
-      }
-      p {
-        font-size: .9375rem;
-        @include mediaMin(992) {
-            font-size: 1rem;
-        }
-        a {
-          color: $color-dark-blue;
-          text-decoration: underline;
-        }
-      }
-      .wp-block-group {
-        p {
-          margin-bottom: 0;
-          + p {
-            margin-top: 10px;
-          }
-        }
-      }
-      .wp-block-group,
-      .wp-block-embed {
-        margin-bottom: 40px;
-      }
-      .wp-block-embed {
-        iframe {
-          width: 100%;
-        }
-      }
-      .is-type-video {
-        iframe {
-          @include mediaMin(992) {
-            height: 400px;
-          }
-        }
-      }
-    
-      .wp-block-image {
-        margin: 20px 0;
-        img {
-            width: 100%;
-            height: auto;
-            @include border-radius(8px);
-          }
-      }
-      .wp-element-caption {
-        text-align: center;
-      }
-      .wp-block-separator {
-        border-width: 1px;
-        border-color: $separator-color;
-      }
-    
-      
-    
-      .wp-block-quote {
-        border-left: 13px solid $color-blue;
-        padding-left: 40px;
-        font-weight: 400;
-        margin: 60px 10px 60px 40px;
-        @include mediaMax(991) {
-          margin: 40px 0;
-        }
-        p {
-          font-family: inherit;
-          font-size: inherit;
-          font-style: inherit;
-          line-height: 130%;
-        }
-        &.short-quote {
-          max-width: 375px;
-        }
-      }
+    }
+  }
+
+  .wp-block-image {
+    margin: 20px 0;
+    img {
+      width: 100%;
+      height: auto;
+      @include border-radius(8px);
+    }
+  }
+  .wp-element-caption {
+    text-align: center;
+  }
+  .wp-block-separator {
+    border-width: 1px;
+    border-color: $separator-color;
+  }
+
+  .wp-block-quote {
+    border-left: 13px solid $color-blue;
+    padding-left: 40px;
+    font-weight: 400;
+    margin: 60px 10px 60px 40px;
+    @include mediaMax(991) {
+      margin: 40px 0;
+    }
+    p {
+      font-family: inherit;
+      font-size: inherit;
+      font-style: inherit;
+      line-height: 130%;
+    }
+    &.short-quote {
+      max-width: 375px;
+    }
+  }
 }
-    

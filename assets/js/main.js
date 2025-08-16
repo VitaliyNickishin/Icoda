@@ -1623,6 +1623,7 @@ window.addEventListener("DOMContentLoaded", () => {
   //Read more / read less event-overview-table.php
   document.querySelectorAll('.undertitle-wrap').forEach(function(wrap) {
   wrap.addEventListener('change', function(evt) {
+    console.log('undertitle-wrap - undertitle-wrap');
     if (evt.target.classList.contains('read-more')) {
       if (evt.target.checked) {
         wrap.classList.add('open');

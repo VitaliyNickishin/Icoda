@@ -159,7 +159,6 @@ body.modal-open {
         height: auto;
       }
     }
-    
   }
   .btn.btn-blue {
     min-width: 160px;
@@ -312,5 +311,66 @@ body.modal-open {
     &.modal-default-full-size {
       max-width: 960px;
     }
+  }
+}
+
+//modal for Template Name: New Blog Post (mobile)
+.modal-table-of-content {
+  &.modal {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    &.fade {
+      .modal-dialog {
+        transform: translateY(100%);
+      }
+    }
+  }
+  .table-of-content {
+    .box {
+      padding: 0 20px 20px;
+    }
+  }
+  .close {
+    opacity: 1;
+  }
+  ol {
+    padding-left: 20px;
+  }
+  .modal-header {
+    padding: 20px 20px 24px;
+    border-bottom: 0;
+  }
+  .modal-body {
+    padding: 0px;
+  }
+  .modal-dialog {
+    margin: 0;
+    @include mediaMin(576) {
+      min-width: 100%;
+    }
+  }
+  .modal-content {
+    border-radius: 20px 20px 0 0;
+    border: 0;
+  }
+  .box {
+    border: 0;
+  }
+  .title {
+    display: none;
+  }
+  .modal-title {
+    @extend .fw-semibold;
+    font-size: 1.125rem;
+    color: $color-dark-blue;
+  }
+  .list-table {
+    margin: 0;
+    list-style-type: decimal;
+    line-height: 140%;
+  }
+  a {
+    color: $color-dark-blue;
+    font-size: 1rem;
   }
 }

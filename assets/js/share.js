@@ -1,10 +1,9 @@
 (function ($) {
   jQuery(document).ready(function () {
-
     function share__fb(url) {
       window.open(
         "https://www.facebook.com/sharer/sharer.php?u=" +
-        encodeURIComponent(url),
+          encodeURIComponent(url),
         "facebooksharedialog",
         "width=626,height=436"
       );
@@ -22,7 +21,7 @@
     function share__linkedin(url) {
       window.open(
         "https://www.linkedin.com/sharing/share-offsite/?url=" +
-        encodeURIComponent(url),
+          encodeURIComponent(url),
         "",
         "width=626,height=436"
       );
@@ -45,9 +44,9 @@
           action: "share_count",
           id: jQuery("#share_article_id").val(),
         },
-        success: function (response) { },
-        error: function (error) { },
-        complete: function () { },
+        success: function (response) {},
+        error: function (error) {},
+        complete: function () {},
       });
     }
 
@@ -101,23 +100,23 @@
     }
 
     /* copy referral code for overview table */
-    let area = document.createElement('textarea');
-    document.body.appendChild( area );
+    let area = document.createElement("textarea");
+    document.body.appendChild(area);
     area.style.display = "none";
-    
-    let content = document.querySelectorAll('.referral-code');
-    let copy    = document.querySelectorAll('.referral-copy');
-    
-    for( let i = 0; i < copy.length; i++ ){
-      copy[i].addEventListener('click', function(){
+
+    let content = document.querySelectorAll(".referral-code");
+    let copy = document.querySelectorAll(".referral-copy");
+
+    for (let i = 0; i < copy.length; i++) {
+      copy[i].addEventListener("click", function () {
         area.style.display = "block";
         area.value = content[i].innerHTML.toUpperCase();
         area.select();
-        document.execCommand('copy');   
+        document.execCommand("copy");
         area.style.display = "none";
-    
-        this.innerHTML = 'Copied';
-        setTimeout( () => this.innerHTML = "Copy", 2000 );
+
+        this.innerHTML = "Copied";
+        setTimeout(() => (this.innerHTML = "Copy"), 2000);
       });
     }
 
@@ -125,8 +124,8 @@
     const $tableOfContent = jQuery(".table-of-content .list-table");
     let $headings = [];
     let addLink = false;
-    if( ! $tableOfContent.hasClass('is-overwritten') ) {
-      if( jQuery(".new-blog-post-main-content").length ) {
+    if (!$tableOfContent.hasClass("is-overwritten")) {
+      if (jQuery(".new-blog-post-main-content").length) {
         $headings = jQuery(".new-blog-post-main-content").find(
           "h1:not(.exclude-title-from-table), h2:not(.exclude-title-from-table), h3:not(.exclude-title-from-table), h4:not(.exclude-title-from-table), h5:not(.exclude-title-from-table), h6:not(.exclude-title-from-table)"
         );
@@ -134,54 +133,58 @@
       } else {
         $headings = jQuery(".article-main-content").find(
           "h1, h2, h3, h4, h5, h6"
-        );  
+        );
       }
-  
+
       const tmpStack = [{ tag: "H0", children: [] }];
-  
+
       $headings.each(function () {
         const $heading = jQuery(this);
         const text = $heading.text().trim();
         if (text.length) {
           let isStateID = false;
-          if( $heading.prop("id") ) {
+          if ($heading.prop("id")) {
             isStateID = true;
           }
           const id = $heading.prop("id") ? $heading.prop("id") : get_UID();
           $heading.prop("id", id);
-          
-          if(addLink && isStateID && $heading.find('.copy-link-to-heading').length == 0) {
+
+          if (
+            addLink &&
+            isStateID &&
+            $heading.find(".copy-link-to-heading").length == 0
+          ) {
             // const toHeadingLink = window.location.origin + window.location.pathname + window.location.search + '#' + id;
             // $heading.append(`<a class="copy-link-to-heading" href="${toHeadingLink}"></a>`);
           }
-  
+
           const tag = $heading.prop("tagName");
           const node = {
             tag,
             text,
             id,
           };
-  
+
           let last = tmpStack.at(-1);
-  
+
           while (last.tag >= node.tag) {
             tmpStack.pop();
             last = tmpStack.at(-1);
           }
-  
+
           last.children = last.children || [];
           last.children.push(node);
           tmpStack.push(node);
         }
       });
       const headingsList = tmpStack[0].children;
-  
+
       let html = "";
       if (headingsList.length) {
         // Level 1
         headingsList.forEach(function (element1) {
-          html += `<li> <a href="#${element1.id}">${element1.text}</a>`;
-  
+          html += `<li> <a data-dismiss="modal" href="#${element1.id}">${element1.text}</a>`;
+
           /*
           if (element1.children) {
             html += `<ul class="">`;
@@ -229,10 +232,10 @@
             html += `</ul>`;
           }
           */
-  
+
           html += `</li>`;
         });
-  
+
         $tableOfContent.append(html);
         $tableOfContent.closest(".table-of-content").show();
       } else {
@@ -241,7 +244,6 @@
     } else {
       $tableOfContent.closest(".table-of-content").show();
     }
-
 
     function get_UID() {
       return String(
