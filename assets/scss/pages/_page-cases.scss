@@ -24,6 +24,13 @@
 }
 //redesign blog single article
 .post-template-new-blog-post {
+  .section-cases-hero-new {
+    .subtitle {
+      @include mediaMax(991) {
+        font-size: 0.875rem;
+      }
+    }
+  }
   .copy-link-to-heading {
     margin-left: 1rem;
     width: 24px;
