@@ -242,8 +242,9 @@ function ip_user_country_save_head() {
 function the_breadcrumbs()
 {
     global $post;
+    $separate_mobile_breadcrumbs = get_field('add_separate_breadcrumbs_for_mobile');
     $res = '<nav aria-label="breadcrumb">';
-    $res .= '<ol class="breadcrumb">';
+    $res .= '<ol class="breadcrumb '. (!empty($separate_mobile_breadcrumbs) ? 'desktop-breadcrumb' : '') .'">';
     $res .= '<li class="breadcrumb-item"><a href="' . get_home_url() . '" rel="nofollow">'. __('Main', 'icoda') .'</a></li>';
     if( is_post_type_archive('portfolio-case') || is_singular('portfolio-case') ) {
         if( is_post_type_archive('portfolio-case') ) {
@@ -302,7 +303,24 @@ function the_breadcrumbs()
         $res .= '<li class="breadcrumb-item" aria-current="page">'. __('Author', 'icoda') . '</li>';
     }
     $res .= '</ol>';
+
+
+    if(!empty($separate_mobile_breadcrumbs)){
+        $additional_crumbs = '';
+        if (is_single()) {
+            $additional_crumbs .= '<li class="breadcrumb-item"><a href="' . get_home_url() . '" rel="nofollow">'. __('Main', 'icoda') .'</a></li>';
+            $additional_crumbs .= '<li class="breadcrumb-item"><span>...</span></li>';
+            $additional_crumbs .= '<li class="breadcrumb-item" aria-current="page">' . wp_trim_words( get_the_title(), 5, '...' ) . '</li>';
+        }
+
+        if(!empty($additional_crumbs)) {
+            $res .= '<ol class="breadcrumb  mobile-breadcrumb" style="display:none;">' . $additional_crumbs . '</ol>';
+        }
+    }
+
     $res .= '</nav>';
+
+
 
     echo $res;
 }
@@ -593,11 +611,12 @@ function icoda_loadmore_ajax_handler(){
                 $title = get_the_title( get_the_ID() );
                 $excerpt = get_the_excerpt(get_the_ID());
 
+                $title = mb_strimwidth($title, 0, 45, "...");
                 if( $index == 1 || $index == 2 || $index == 6 || $index == 7 ) {
                     // $lg_class = 'col-lg-6 has-big-card';
                     // $title = mb_strimwidth($title, 0, 90, "...");
                 } else {
-                    $title = mb_strimwidth($title, 0, 45, "...");
+                    // $title = mb_strimwidth($title, 0, 45, "...");
                 }
                 $excerpt = mb_strimwidth($excerpt, 0, 100, "...");
             ?>

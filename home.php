@@ -34,7 +34,9 @@ get_header();
     <?php get_template_part('template-parts/tags'); ?>
 
     <div class="row mt-4 pt-3 mt-lg-5 pt-lg-1 blog-post_list">
-        <?php if (have_posts()) : ?>
+        <?php
+        $index = 1;
+        if (have_posts()) : ?>
 
             <?php while (have_posts()) : the_post(); ?>
                 <?php
@@ -44,6 +46,11 @@ get_header();
                 $excerpt = get_the_excerpt(get_the_ID());
                 // $title = mb_strimwidth($title, 0, 45, "...");
                 $excerpt = mb_strimwidth($excerpt, 0, 100, "...");
+
+                if( $index == 1 || $index == 2 || $index == 6 || $index == 7 ) {
+                } else {
+                    $title = mb_strimwidth($title, 0, 45, "...");
+                }
                 ?>
                 <div class="col-12 col-md-6 mb-lg-5 mb-3 <?php echo $lg_class; ?>">
                     <a href="<?php the_permalink(); ?>" class="service-card cases-card hot">
@@ -96,6 +103,9 @@ get_header();
                         </div>
                     </a>
                 </div>
+            <?php
+                $index++;
+            ?>
             <?php endwhile; ?>
 
 
