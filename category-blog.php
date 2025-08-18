@@ -34,9 +34,7 @@ get_header();
     <?php get_template_part('template-parts/tags'); ?>
 
     <div class="row mt-4 pt-3 mt-lg-5 pt-lg-1 blog-post_list">
-        <?php
-        $index = 1;
-        if (have_posts()) : ?>
+        <?php if (have_posts()) : ?>
 
             <?php while (have_posts()) : the_post(); ?>
                 <?php
@@ -98,9 +96,6 @@ get_header();
                         </div>
                     </a>
                 </div>
-            <?php
-                $index++;
-            ?>
             <?php endwhile; ?>
 
 

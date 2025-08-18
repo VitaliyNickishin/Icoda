@@ -244,7 +244,7 @@ function the_breadcrumbs()
     global $post;
     $separate_mobile_breadcrumbs = get_field('add_separate_breadcrumbs_for_mobile');
     $res = '<nav aria-label="breadcrumb">';
-    $res .= '<ol class="breadcrumb '. (!empty($separate_mobile_breadcrumbs) ? 'desktop-breadcrumb' : '') .'">';
+    $res .= '<ol class="breadcrumb '. (!empty($separate_mobile_breadcrumbs) ? 'desktop-breadcrumb d-none d-sm-flex' : '') .'">';
     $res .= '<li class="breadcrumb-item"><a href="' . get_home_url() . '" rel="nofollow">'. __('Main', 'icoda') .'</a></li>';
     if( is_post_type_archive('portfolio-case') || is_singular('portfolio-case') ) {
         if( is_post_type_archive('portfolio-case') ) {
@@ -314,7 +314,7 @@ function the_breadcrumbs()
         }
 
         if(!empty($additional_crumbs)) {
-            $res .= '<ol class="breadcrumb  mobile-breadcrumb" style="display:none;">' . $additional_crumbs . '</ol>';
+            $res .= '<ol class="breadcrumb mobile-breadcrumb d-sm-none">' . $additional_crumbs . '</ol>';
         }
     }
 

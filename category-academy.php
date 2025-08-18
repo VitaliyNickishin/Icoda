@@ -40,7 +40,7 @@ get_header();
                 $lg_class = 'col-lg-4';
                 $title = get_the_title(get_the_ID());
                 $excerpt = get_the_excerpt(get_the_ID());
-                // $title = mb_strimwidth($title, 0, 45, "...");
+                $title = mb_strimwidth($title, 0, 45, "...");
                 $excerpt = mb_strimwidth($excerpt, 0, 100, "...");
                 ?>
                 <div class="col-12 col-md-6 mb-lg-5 mb-3 <?php echo $lg_class; ?>">
