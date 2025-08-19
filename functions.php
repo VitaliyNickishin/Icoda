@@ -242,7 +242,7 @@ function ip_user_country_save_head() {
 function the_breadcrumbs()
 {
     global $post;
-    $separate_mobile_breadcrumbs = get_field('add_separate_breadcrumbs_for_mobile');
+    $separate_mobile_breadcrumbs = get_field('add_separate_breadcrumbs_for_mobile') || is_singular('post');
     $res = '<nav aria-label="breadcrumb">';
     $res .= '<ol class="breadcrumb '. (!empty($separate_mobile_breadcrumbs) ? 'desktop-breadcrumb d-none d-sm-flex' : '') .'">';
     $res .= '<li class="breadcrumb-item"><a href="' . get_home_url() . '" rel="nofollow">'. __('Main', 'icoda') .'</a></li>';

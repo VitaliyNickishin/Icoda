@@ -42,11 +42,7 @@
       font-size: 52px;
       min-height: 132px;
     }
-    // @include mediaMin(1341) {
-    //   // font-size: 74px;
-    //   font-size: 58px;
-    //   // min-height: 176px;
-    // }
+
     @include mediaMin(1441) {
       font-size: 86px;
     }
@@ -73,25 +69,25 @@
       }
     }
   }
-   .btn-wrap {
+  .btn-wrap {
     display: inline-flex;
     flex-direction: column;
     max-width: 100%;
-    
+
     .btn.btn-blue {
       min-width: 260px;
     }
-   }
-   
-   &__info-counter {
+  }
+
+  &__info-counter {
     @include mediaMin(992) {
-        margin-top: 40px;
-      }
-      @include mediaMin(1341) {
-        margin-top: 80px;
-      }
-      // @include mediaMin(1441) {
-      //   margin-top: 80px;
-      // }
-   }
+      margin-top: 40px;
+    }
+    @include mediaMin(1341) {
+      margin-top: 80px;
+    }
+    // @include mediaMin(1441) {
+    //   margin-top: 80px;
+    // }
+  }
 }

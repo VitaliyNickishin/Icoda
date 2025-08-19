@@ -25,10 +25,29 @@
 //redesign blog single article
 .post-template-new-blog-post {
   .section-cases-hero-new {
+    &__inner {
+      @include mediaMax(991) {
+        padding-bottom: 0;
+      }
+    }
+    .bg-hero-mobile {
+      @include mediaMax(991) {
+        bottom: 0;
+      }
+    }
+    .title {
+      @include mediaMax(991) {
+        font-size: 1.5rem;
+      }
+    }
     .subtitle {
       @include mediaMax(991) {
         font-size: 0.875rem;
       }
+    }
+    label[for="read-more-subtitle"] {
+      font-family: $f-sto-m;
+      font-weight: initial;
     }
   }
   .copy-link-to-heading {
