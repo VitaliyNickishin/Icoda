@@ -181,13 +181,13 @@ function ip_user_country_save() {
 }
 
 function ip_user_country_save_head() {
-    $client  = @$_SERVER["HTTP_CF_CONNECTING_IP"];
-    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-    $a = @$_SERVER['HTTP_X_FORWARDED'];
-    $b = @$_SERVER['HTTP_FORWARDED_FOR'];
-    $c = @$_SERVER['HTTP_FORWARDED'];
-	$d = @$_SERVER['HTTP_CLIENT_IP'];
-    $remote  = @$_SERVER['REMOTE_ADDR'];
+    $client = $_SERVER['HTTP_CF_CONNECTING_IP'] ?? null;
+    $forward = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? null;
+    $a = $_SERVER['HTTP_X_FORWARDED'] ?? null;
+    $b = $_SERVER['HTTP_FORWARDED_FOR'] ?? null;
+    $c = $_SERVER['HTTP_FORWARDED'] ?? null;
+    $d = $_SERVER['HTTP_CLIENT_IP'] ?? null;
+    $remote = $_SERVER['REMOTE_ADDR'] ?? null;
 
     if(filter_var($client, FILTER_VALIDATE_IP)){
        $ip = $client;
@@ -372,7 +372,7 @@ function icoda_styles()
     global $wp_query;
 
     $assets_uri = get_stylesheet_directory_uri() . '/assets';
-    $scripts_version = '0000021';
+    $scripts_version = '0000024';
 
     if (!is_admin()) {
         wp_deregister_script('jquery');
@@ -393,7 +393,8 @@ function icoda_styles()
     wp_enqueue_script(
         'lazyloadxt.bg',
         $assets_uri.'/js/jquery.lazyloadxt.bg.js',
-        array('jquery-lazyloadxt-extend'), $scripts_version, true
+    //    array('jquery-lazyloadxt-extend'),
+        $scripts_version, false
     );
 
     wp_enqueue_script(
@@ -869,6 +870,7 @@ add_filter('wp_footer', function () {
     <?php
 }, 100);
 
+require get_template_directory() . '/inc/redirects.php';
 
 /**
  * ACF
@@ -2494,6 +2496,7 @@ function icoda_get_top_post_for_blog_pages() {
         'posts_per_page' => 1,
         'orderby' => 'date',
         'order' => 'DESC',
+        // 'category__not_in' => array(35)
     ) );
     return !empty($q->posts) ? $q->posts[0] : false;
 }
