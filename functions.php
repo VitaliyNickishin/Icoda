@@ -496,6 +496,14 @@ function icoda_styles()
         );
     }
 
+    if( is_page_template('template-pages/template-calculator-defi.php') ) {
+        wp_enqueue_script(
+            'icoda-calculator-defi',
+            $assets_uri . '/js/calculator-defi.js',
+            array('jquery'), '', true
+        );
+    }
+
     if( is_page_template('template-parts/tpl-events.php') ) {
         wp_enqueue_script(
             'icoda-events-filter',
