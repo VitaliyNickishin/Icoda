@@ -98,7 +98,7 @@ $calculator_data = get_field('calculator_section_3');
 													</div>
 												</li>
 											<?php endforeach; ?>
-											<li class="col-12 col-md-9 px-0">
+											<li class="col-12 col-md-9 px-0"> 
 												<div class="custom-checkbox">
 													<input type="checkbox" id="step_1_99" class="checkbox" name="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" value="other" />
 													<label for="step_1_99">
