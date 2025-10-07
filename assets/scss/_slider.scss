@@ -130,14 +130,25 @@
   }
   .slick-next {
     right: 0;
+    @at-root .rtl & {
+      right: unset;
+      left: 0;
+      &:before {
+        transform: scale(-1);
+      }
+    }
   }
   .slick-prev {
     left: 0;
     @at-root .rtl & {
-      right: unset;
+      right: 0;
+      left: unset;
     }
     &:before {
       transform: rotate(180deg);
+      @at-root .rtl & {
+        transform: rotate(0deg);
+      }
     }
   }
 }
@@ -200,28 +211,25 @@
   }
   .slick-next {
     right: 0;
+    @at-root .rtl & {
+      right: unset;
+      left: 0;
+      &:before {
+        transform: scale(-1);
+      }
+    }
   }
   .slick-prev {
     left: 0;
     @at-root .rtl & {
-      right: unset;
+      right: 0;
+      left: unset;
     }
     &:before {
       transform: rotate(180deg);
-    }
-  }
-}
-.arrow-control-path {
-  .slick-next {
-    @at-root .rtl & {
-      right: 0;
-      left: auto;
-    }
-  }
-  .slick-prev {
-    @at-root .rtl & {
-      left: 0;
-      right: auto;
+      @at-root .rtl & {
+        transform: rotate(0deg);
+      }
     }
   }
 }
@@ -314,13 +322,5 @@
 @include media-breakpoint-only(md) {
   .wr-control {
     top: -26px;
-  }
-}
-
-[dir="rtl"] {
-  .arrow-control-path {
-    .slick-prev {
-      right: auto;
-    }
   }
 }
