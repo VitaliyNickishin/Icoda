@@ -1,107 +1,105 @@
 .serv-box {
-    @include border-radius(12px);
-    border: 1px solid $border-color;
-    color: $color-dark-blue;
-    p {
-        line-height: 115%;
+  @include border-radius(12px);
+  border: 1px solid $border-color;
+  color: $color-dark-blue;
+  p {
+    line-height: 115%;
+  }
+
+  @at-root .services-box & {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+    font-family: $f-sto-m;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include mediaMin(1340) {
+      width: 115px;
+      height: 115px;
+      font-size: 1rem;
+    }
+  }
+  @at-root .cases-box & {
+    padding: 14px 7px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+
+    @include mediaMin(400) {
+      padding: 14px 12px;
     }
 
-    @at-root .services-box & {
-        width: 80px;
-        height: 80px;
-        background: rgba(255, 255, 255, 0.50);
-        font-size: 10px;
-        font-family: $f-sto-m;
-        margin: 3px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include mediaMin(1340) {
-            width: 115px;
-            height: 115px;
-            font-size: 1rem;
-        }
+    @include mediaMin(1340) {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  }
+  @at-root .bg-wrap & {
+    margin: 5px;
+    width: 267px;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    font-size: 1rem;
+  }
+  @at-root .goals-boxes & {
+    padding: 1rem 1.125rem;
+    p {
+      margin-bottom: 0;
+      line-height: 150%;
+      @include mediaMin(992) {
+        font-size: 1rem;
+      }
+    }
+  }
+  @at-root .resault-boxes & {
+    padding: 1rem 1.125rem;
+    background: $gray-300;
+    border: 0;
+    height: 100%;
+    p {
+      margin-bottom: 0;
+      line-height: 150%;
+      @include mediaMin(992) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .number {
+    color: $color-blue;
+    font-family: $f-sto-m;
+    display: block;
+    @at-root .bg-wrap & {
+      font-size: 2rem;
+    }
+    @at-root .section-hero-new-service & {
+      margin: 4px 0;
     }
     @at-root .cases-box & {
-        padding: 14px 7px;
-        background: rgba(255, 255, 255, 0.80);
-        font-size: 15px;
-
-        @include mediaMin(400) {
-            padding: 14px 12px;
-        }
-    
-        @include mediaMin(1340) {
-            padding: 1rem;
-            font-size: 1rem;
-        }
-        
-    }
-    @at-root .bg-wrap & {
-        margin: 5px;
-        width: 267px;
-        max-width: 100%;
-        padding: 1rem 2rem;
-        background: rgba(255, 255, 255, 0.80);
-        backdrop-filter: blur(4px);
-        font-size: 1rem;
-        
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+      line-height: 110%;
+      @include mediaMin(1340) {
+        font-size: 1.5rem;
+      }
     }
     @at-root .goals-boxes & {
-        padding: 1rem 1.125rem;
-        p {
-            margin-bottom: 0;
-            line-height: 150%;
-            @include mediaMin(992) {
-                font-size: 1rem;
-            }
-        }
+      font-size: 1.125rem;
     }
     @at-root .resault-boxes & {
-        padding: 1rem 1.125rem;
-        background: $gray-300;
-        border: 0;
-        height: 100%;
-        p {
-            margin-bottom: 0;
-            line-height: 150%;
-            @include mediaMin(992) {
-                font-size: 1rem;
-            }
-        }
+      font-size: 1.125rem;
+      @include mediaMin(1340) {
+        font-size: 1.5rem;
+      }
     }
-
-    &.hidden {
-        opacity: 0;
-        visibility: hidden;
-    }
-    .number {
-        color: $color-blue;
-        font-family: $f-sto-m;
-        display: block;
-        @at-root .bg-wrap & {
-            font-size: 2rem;
-        }
-        @at-root .section-hero-new-service & {
-            margin: 4px 0;
-        }
-        @at-root .cases-box & {
-            font-size: 1.25rem;
-            margin-bottom: .25rem;
-            line-height: 110%;
-            @include mediaMin(1340) {
-                font-size: 1.5rem;
-            }
-        }
-        @at-root .goals-boxes & {
-            font-size: 1.125rem;
-        }
-        @at-root .resault-boxes & {
-            font-size: 1.125rem;
-            @include mediaMin(1340) {
-                font-size: 1.5rem;
-            }
-        }
-    }
-
-}  
+  }
+}

@@ -101,6 +101,11 @@ a.logo {
     height: 15px;
     background: url("../images/arrow-link-card.svg") 0 0 no-repeat;
     transition: all 0.3s;
+    @at-root .rtl & {
+      margin-left: 0;
+      margin-right: 10px;
+      transform: scaleX(-1);
+    }
   }
   &:hover {
     color: $color-blue;
@@ -442,7 +447,7 @@ a.logo {
 }
 
 .title-opacity {
-  opacity: .8;
+  opacity: 0.8;
 }
 .d-lg-none {
   @include mediaMin(992) {
@@ -469,16 +474,15 @@ a.logo {
 .section-businesses,
 .section-faq-service,
 .section-form {
-    .subtitle {
-        font-size: 15px;
-        color: $color-dark-blue;
-        line-height: 150%;
-        
-        @include mediaMin(1024) {
-            font-size: 18px;
-        }
-    
+  .subtitle {
+    font-size: 15px;
+    color: $color-dark-blue;
+    line-height: 150%;
+
+    @include mediaMin(1024) {
+      font-size: 18px;
     }
+  }
 }
 .section-services-cases,
 .section-services-list,
@@ -492,18 +496,18 @@ a.logo {
 .section-all-events,
 .section-worldwide,
 .box-feedback {
-    .section-title {
-        font-size: 1.5rem;//24px;
-        font-family: $f-sto-m;
-        line-height: 110%;
-        @include mediaMin(1024) {
-            font-size: 2rem; //32px
-        }
+  .section-title {
+    font-size: 1.5rem; //24px;
+    font-family: $f-sto-m;
+    line-height: 110%;
+    @include mediaMin(1024) {
+      font-size: 2rem; //32px
     }
-    .btn.btn-blue {
-        padding: 1rem 2.5rem;
-        line-height: 115%;
-    }
+  }
+  .btn.btn-blue {
+    padding: 1rem 2.5rem;
+    line-height: 115%;
+  }
 }
 
 .mx-lg-n2 {

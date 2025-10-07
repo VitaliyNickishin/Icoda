@@ -38,7 +38,7 @@ if (!block_rows('row') && empty($general_testimonials)) {
 
             <div class="col-12">
                 <div class="wr-slider">
-                    <div class="slider-default custom-slider">
+                    <div class="slider-default custom-slider slider-tesimonials">
 
                         <?php while (block_rows('row')) :
                             block_row('row'); ?>

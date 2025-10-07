@@ -2,10 +2,11 @@
     $items = get_field('items');
     $bottom_title = get_field('bottom_title');
     $bottom_link = get_field('bottom_link');
+    $disable_coins_background = get_field('disable_coins_background');
     ?>
 
     <section class="section section-path my-3 py-4 my-lg-5 py-lg-2">
-        <div class="section-path-inner mx-lg-5 mx-sm-4 has-bg-coins">
+        <div class="section-path-inner mx-lg-5 mx-sm-4 <?php echo empty($disable_coins_background) ? ' has-bg-coins ' : ''; ?>">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -14,8 +15,8 @@
                         </h2>
                     </div>
 
-                    <div class="col-12 pr-0">
-                        <div class="slider-path-list custom-slider d-flex">
+                    <div class="col-12 <?php echo is_rtl() ? 'pl-0' : 'pr-0'; ?>">
+                        <div class="slider-path-list <?php echo is_rtl() ? 'slider-rtl' : ''; ?> custom-slider d-flex">
                             <?php foreach ($items as $key => $item_info): ?>
                                 <div class="services-card">
                                     <div class="services-card-header">

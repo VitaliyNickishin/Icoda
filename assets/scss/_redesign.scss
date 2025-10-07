@@ -15,7 +15,6 @@
     padding-left: 0;
   }
 
-  
   /* section Featured in */
   .featured-in {
     padding-bottom: 87px;
@@ -240,7 +239,7 @@
       justify-content: center;
       align-items: center;
       height: 40px;
-      background: rgba(255, 255, 255, 0.50);
+      background: rgba(255, 255, 255, 0.5);
       border: 1px solid $border-color;
       cursor: pointer;
       @include mediaMax(991) {
@@ -356,7 +355,7 @@ body {
       height: 40px;
       @include mediaMax(991) {
         margin-left: 8px;
-         height: 36px;
+        height: 36px;
       }
     }
 
@@ -378,7 +377,7 @@ body {
       @extend .btn-mob-wrap;
       border: 1px solid $border-color;
       color: $color-dark-blue;
-      background: rgba(255, 255, 255, 0.50);
+      background: rgba(255, 255, 255, 0.5);
       @include mediaMin(992) {
         display: none;
       }
@@ -502,17 +501,24 @@ body {
   padding: 10px 7px;
 }
 
-
 //for section Leadership
 .leadership-social {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
-  div {
-    margin-right: 8px;
-    &:last-child {
-      margin-right: 0;
+  width: 100%;
+  div + div {
+    margin-left: 8px;
+    @at-root .rtl & {
+      margin-left: 0;
+      margin-right: 8px;
     }
+    // &:last-child {
+    //   margin-right: 0;
+    //   @at-root .rtl & {
+    //     margin-left: 0;
+    //   }
+    // }
   }
   .btn {
     margin: 5px 0;

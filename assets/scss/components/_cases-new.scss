@@ -38,8 +38,6 @@
         }
         &:first-child {
           border-top: 0;
-
-          
         }
 
         // &:nth-child(2) {
@@ -117,7 +115,6 @@
 
           sup {
             color: $color-blue;
-            
           }
         }
       }
@@ -160,16 +157,28 @@
         right: 7%;
         top: 0;
         transition: all 0.3s ease-out;
+        @at-root .rtl & {
+          left: 7%;
+          right: auto;
+        }
+
         @include border-radius(8px);
-        
 
         @include mediaMax(1440) {
           right: 3%;
+          @at-root .rtl & {
+            left: 3%;
+            right: auto;
+          }
         }
 
         @include mediaMax(1340) {
           width: 426px;
           right: 1%;
+          @at-root .rtl & {
+            left: 1%;
+            right: auto;
+          }
         }
 
         img {
@@ -177,22 +186,19 @@
           box-shadow: 7px -7px 0px 0px rgb(60, 97, 226);
           cursor: url("../images/cases/explore-lg.png"), auto;
         }
-
       }
 
       //for parallax
       .card {
-        transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
         &-active {
-          transition: transform .4s cubic-bezier(0, 0, .2, 1),
-            filter .15s cubic-bezier(0, 0, .2, 1);
+          transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1),
+            filter 0.15s cubic-bezier(0, 0, 0.2, 1);
         }
       }
-
     }
   }
-  
 
   &-mobile {
     @include mediaMin(992) {
@@ -213,7 +219,7 @@
         top: -10px;
       }
     }
-    
+
     .case-title {
       margin-top: 13px;
       display: block;
@@ -225,7 +231,7 @@
       padding-top: 5px;
     }
     .slick-current {
-      .case-title, 
+      .case-title,
       sup {
         color: $color-blue;
       }
@@ -243,6 +249,4 @@
       margin-bottom: 15px;
     }
   }
-  
 }
-

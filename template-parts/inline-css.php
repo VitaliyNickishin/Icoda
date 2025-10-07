@@ -232,10 +232,6 @@ if (is_front_page()) :
         position: inherit;
     }
 
-    [dir=rtl] #testimonials .slick-prev {
-        right: unset;
-    }
-
     body.rtl .lang-select {
         margin-left: 10px;
     }
