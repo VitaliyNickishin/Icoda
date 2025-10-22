@@ -480,6 +480,14 @@ function icoda_styles()
         wp_enqueue_script('article-share');
     }
 
+    if( is_category('referral-codes') ) {
+       wp_enqueue_script(
+            'icoda-copy-text',
+            $assets_uri . '/js/copy-text.js',
+            array('jquery'), '', true
+        );
+    }
+
     if( is_post_type_archive('post_faq') ) {
         wp_enqueue_script(
             'icoda-faq',
@@ -929,6 +937,7 @@ function icoda_spam_request_settings()
 function icoda_spam_request_settings_register()
 {
     register_setting('icoda_spam_request_settings-group', 'icoda_spam_request_block_ips');
+    register_setting('icoda_spam_request_settings-group', 'icoda_spam_request_block_emails');
 }
 
 function icoda_spam_request_settings_output()
@@ -947,6 +956,13 @@ function icoda_spam_request_settings_output()
                         <td>
                             <textarea style="width:100%;" rows="20" name="icoda_spam_request_block_ips"><?php echo esc_attr(get_option('icoda_spam_request_block_ips')); ?></textarea>
                             <p>If you want to block several IPs enter every IP from new line</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <th scope="row">Block Emails</th>
+                        <td>
+                            <textarea style="width:100%;" rows="20" name="icoda_spam_request_block_emails"><?php echo esc_attr(get_option('icoda_spam_request_block_emails')); ?></textarea>
+                            <p>If you want to block several Emails enter every Email from new line</p>
                         </td>
                     </tr>
                 </table>
@@ -2516,6 +2532,10 @@ function icoda_get_time_to_read() {
     $readingtime = ceil($word_count / 200);
     return $readingtime;
 }
+
+add_filter('wpml_format_date', function($format, $timestamp) {
+    return wp_date($format, $timestamp);
+}, 10, 2);
 
 
 

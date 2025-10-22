@@ -75,8 +75,15 @@ get_header();
 
                 <?php endwhile; ?>
             <?php else : ?>
-            <p><?php _e('Nothing was found for these criteria.', 'icoda'); ?></p>
-        <?php endif; ?>
+                <p><?php _e('Nothing was found for these criteria.', 'icoda'); ?></p>
+            <?php endif; ?>
+
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <?php get_template_part('template-parts/category-parts/crypto-presales'); ?>
+            </div>
         </div>
     </div>
 </section>

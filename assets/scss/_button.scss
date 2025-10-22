@@ -155,6 +155,20 @@
       bottom: 3px;
     }
   }
+  &-copy-promo {
+    font-size: 14px;
+    color: $color-blue;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      color: $color-dark-gray;
+      text-decoration: none;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
 }
 //btn with auto highlight
 .has-highlight {
