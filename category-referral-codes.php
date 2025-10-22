@@ -9,9 +9,6 @@ get_header();
     };
 </script>
 <?php global $wp_query; ?>
-<?php
-$referral_code = get_field('category_extra_field_with_referral_code');
-?>
 
 <div class="container section-content">
 
@@ -36,6 +33,7 @@ $referral_code = get_field('category_extra_field_with_referral_code');
 
             <?php while (have_posts()) : the_post(); ?>
                 <?php
+                $referral_code = get_field('category_extra_field_with_referral_code', get_the_ID());
                 $author_id = get_the_author_meta('ID');
                 $lg_class = 'col-lg-4';
                 $title = get_the_title(get_the_ID());
