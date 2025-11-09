@@ -33,7 +33,7 @@
     @include border-radius(1rem);
     width: 100%;
     max-width: 100%;
-    
+
     @include mediaMin(650) {
       margin: 4px;
       width: 330px;
@@ -48,7 +48,7 @@
     @include mediaMin(1200) {
       width: 250px;
     }
-  
+
     @include mediaMin(1441) {
       width: 344px;
     }
@@ -58,26 +58,25 @@
 
       img {
         @include mediaMax(991) {
-         width: 170px;
+          width: 170px;
         }
       }
     }
-    
   }
 
   .tab-content {
     margin-right: 19px;
-      margin-left: -4px;
+    margin-left: -4px;
     @include mediaMin(991) {
       margin-right: 24px;
       margin-left: -8px;
     }
-    
+
     & > .tab-panel {
-      display: none
+      display: none;
     }
     & > .active {
-      display: block
+      display: block;
     }
   }
 }
@@ -96,10 +95,10 @@
       + .nav-item {
         @include mediaMin(991) {
           &:before {
-          content: "";
+            content: "";
             width: 4px;
             height: 4px;
-            background-color: #D9D9D9;
+            background-color: #d9d9d9;
             @include border-radius(50%);
             position: absolute;
             left: 0;
@@ -107,11 +106,9 @@
             transform: translateY(-50%);
           }
         }
-        
       }
-      
     }
-    
+
     @include mediaMin(991) {
       padding: 32px 0;
       @include border-radius(500px);
@@ -130,12 +127,12 @@
       @include border-radius(8px);
       background-color: transparent;
       text-transform: uppercase;
-      @include mediaMin(991)  {
+      @include mediaMin(991) {
         color: $color-dark-blue;
         font-size: 1.375rem; //22px
         padding: 0px 30px;
         font-family: $f-sto-r;
-        opacity: .48;
+        opacity: 0.48;
       }
       @include mediaMin(1340) {
         padding: 0px 48px;
@@ -145,26 +142,27 @@
         background-color: $color-blue;
         opacity: 1;
         @include mediaMin(991) {
-          color: #4460DA;
+          color: #4460da;
           background-color: transparent;
         }
-        
       }
     }
   }
-  
-  
-  
+  .social-chanels-vcs {
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
 }
 
-
-
-::-webkit-scrollbar { /* Webkit */
-    width      : 0;  /* ширина scrollbar'a */
-    background : transparent  /* опционально */
+::-webkit-scrollbar {
+  /* Webkit */
+  width: 0; /* ширина scrollbar'a */
+  background: transparent; /* опционально */
 }
- 
+
 html {
-    -ms-overflow-style : none;  /* IE 10+ */
-    scrollbar-width    : none /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
 }

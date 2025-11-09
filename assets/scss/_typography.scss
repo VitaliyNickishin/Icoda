@@ -2,14 +2,16 @@ html.fonts-loaded {
   font-family: Arial, sans-serif;
 }
 
-body{
+body {
   font-size: 15px;
   line-height: 175%;
   font-family: $f-sto-b;
   color: $main-color-text;
 }
 
-dl, ol, ul{
+dl,
+ol,
+ul {
   margin: 0;
   list-style-type: none;
   padding-left: 0;
@@ -17,59 +19,71 @@ dl, ol, ul{
 
 h2.section-title,
 h3.section-title,
-.h1, .h2, .h3, .h4, .h5, .h6{
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   margin: 0;
   color: $color-dark-blue;
   font-family: $f-sto-r;
 }
 
-p{
+p {
   margin-bottom: 0;
 }
-a{
+a {
   text-decoration: none;
-  transition: all .3s;
+  transition: all 0.3s;
   outline: none;
-  &:hover{
+  &:hover {
     text-decoration: none;
     outline: none;
   }
-  &:focus{
+  &:focus {
     outline: none;
   }
 }
-.br{
+.br {
   display: block;
 }
-.bold{
+.bold {
   font-family: $f-sto-b;
 }
 h2.section-title,
-.h2{
+.h2 {
   font-size: 44px;
   line-height: 58px;
+  @include mediaMax(1440) {
+    font-size: 1.875rem;
+  }
+  @include mediaMax(991) {
+    font-size: 1.5rem;
+    line-height: 115%;
+  }
 }
 h3.section-title,
-.h3.section-title,
-{
+.h3.section-title {
   font-size: 38px;
   line-height: 130%;
   @include mediaMax(1440) {
-      font-size: 1.875rem;
-    }
+    font-size: 1.875rem;
+  }
   @include mediaMax(991) {
-    font-size: 32px;
+    font-size: 1.5rem;
+    line-height: 115%;
   }
 }
-.h4{
+.h4 {
   font-size: 28px;
   line-height: 130%;
 }
-.h5{
+.h5 {
   font-size: 22px;
   line-height: 135%;
 }
-.h6{
+.h6 {
   font-size: 20px;
   line-height: 150%;
 }
@@ -83,61 +97,59 @@ h3.section-title,
   line-height: 1.6;
 }
 
-
 // media
 
-
 @include media-breakpoint-down(sm) {
-  .h2{
+  .h2 {
     font-size: 30px;
     line-height: 130%;
   }
-  .h3{
+  .h3 {
     font-size: 24px;
   }
-  .h4{
+  .h4 {
     font-size: 22px;
   }
-  .h5{
+  .h5 {
     font-size: 18px;
   }
-  .h6{
+  .h6 {
     font-size: 16px;
   }
 }
 @include media-breakpoint-only(md) {
-  .h2{
+  .h2 {
     font-size: 30px;
     line-height: 130%;
   }
-  .h3{
+  .h3 {
     font-size: 24px;
   }
-  .h4{
+  .h4 {
     font-size: 22px;
   }
-  .h5{
+  .h5 {
     font-size: 18px;
   }
-  .h6{
+  .h6 {
     font-size: 16px;
   }
 }
 @include media-breakpoint-only(lg) {
-  .h2{
+  .h2 {
     font-size: 38px;
     line-height: 130%;
   }
-  .h3{
+  .h3 {
     font-size: 28px;
   }
-  .h4{
+  .h4 {
     font-size: 22px;
   }
-  .h5{
+  .h5 {
     font-size: 18px;
   }
-  .h6{
+  .h6 {
     font-size: 16px;
   }
 }

@@ -170,6 +170,9 @@
   }
 
   @at-root .section-hero-new & {
+    img {
+      height: 40px;
+    }
     @include mediaMin(1340) {
       padding-left: 45px;
       padding-right: 45px;

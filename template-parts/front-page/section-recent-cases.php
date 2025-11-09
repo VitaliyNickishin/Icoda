@@ -14,7 +14,7 @@ $show = get_field('recent_cases_show');
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="section-title"><?php the_field('recent_cases_title'); ?></h3>
+                        <h2 class="section-title mb-3"><?php the_field('recent_cases_title'); ?></h2>
                     </div>
                 </div>
                 <div class="row">

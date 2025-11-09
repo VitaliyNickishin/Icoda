@@ -1,4 +1,7 @@
 .section-hero-new-service {
+  @include mediaMax(992) {
+    margin-bottom: 0;
+  }
   &.section-hero-new {
     .slick-track {
       gap: 0;
@@ -406,6 +409,7 @@
     width: 203px;
     img {
       width: auto;
+      height: 40px;
     }
 
     + .media-logo {
