@@ -264,15 +264,28 @@ function the_breadcrumbs()
             $blog_page_id = get_option('page_for_posts');
             $res .= '<li class="breadcrumb-item" aria-current="page">' . get_the_title( $blog_page_id ) . '</li>';
     } elseif (is_category() || is_single()) {
-        $cats = get_the_category();
-        $cat = ! empty( $cats ) ? $cats[0] : false;
-        // if (!is_single('about-us')) {
-            if( empty( $cat ) ) {
-                $cat = get_queried_object(  );
-            }
-            $res .= '<li class="breadcrumb-item"><a href="' . get_category_link($cat->term_id) . '">' . $cat->name . '</a></li>';
-        // }
+        // $cats = get_the_category();
+        // $cat = ! empty( $cats ) ? $cats[0] : false;
+        // // if (!is_single('about-us')) {
+        //     if( empty( $cat ) ) {
+        //         $cat = get_queried_object(  );
+        //     }
+        //     $res .= '<li class="breadcrumb-item"><a href="' . get_category_link($cat->term_id) . '">' . $cat->name . '</a></li>';
+        // // }
+        if(is_category()) {
+            $cat = get_queried_object(  );
+            $res .= '<li class="breadcrumb-item" aria-current="page">' . $cat->name . '</li>';
+
+        }
         if (is_single()) {
+
+            $cats = get_the_category();
+            $cat = ! empty( $cats ) ? $cats[0] : false;
+            if( !empty( $cat ) ) {
+                $res .= '<li class="breadcrumb-item"><a href="' . get_category_link($cat->term_id) . '">' . $cat->name . '</a></li>';
+            }
+
+
             $res .= '<li class="breadcrumb-item" aria-current="page">' . get_the_title() . '</li>';
         }
     } elseif (is_page()) {
@@ -2536,6 +2549,8 @@ function icoda_get_time_to_read() {
 add_filter('wpml_format_date', function($format, $timestamp) {
     return wp_date($format, $timestamp);
 }, 10, 2);
+
+   
 
 
 
