@@ -1,0 +1,67 @@
+//used for page book
+.block-video-content {
+  &-inner {
+    background-color: $gray-300;
+    @include border-radius(1.25rem);
+    padding: 24px 0;
+    @include mediaMin(991) {
+      padding: 0;
+    }
+  }
+  &__info {
+    @include mediaMin(991) {
+      padding: 30px 0;
+    }
+    @include mediaMin(1441) {
+      padding: 40px 0;
+    }
+  }
+  .author-meta,
+  .description {
+    color: $color-dark-blue;
+    font-size: 1rem;
+    line-height: 150%;
+  }
+  .avatar {
+    @include border-radius(50%);
+    border: 2px solid #fff;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  }
+  iframe {
+    border: 0;
+    width: 100%;
+    height: 200px;
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    z-index: 10;
+    @include border-radius(10px);
+  }
+}
+.poster {
+  // &-img {
+  //   img {
+
+  //   }
+  // }
+  img {
+    @include border-radius(12px);
+  }
+  .play-icon {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &.removed {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}

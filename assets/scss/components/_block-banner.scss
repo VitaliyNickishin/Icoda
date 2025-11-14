@@ -1,0 +1,12 @@
+//block banner (btn with price)
+.block-banner {
+  .banner-title {
+    font-size: 1.5rem;
+    line-height: 110%;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    @include mediaMin(991) {
+      font-size: 28px;
+    }
+  }
+}

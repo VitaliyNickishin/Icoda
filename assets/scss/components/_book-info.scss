@@ -1,0 +1,86 @@
+.book {
+  // &-info {
+  //   img {
+  //     @include mediaMax(991) {
+  //       width: 160px;
+  //       height: auto;
+  //     }
+  //   }
+  // }
+  &-image {
+    display: flex;
+    justify-content: center;
+    @at-root .section-hero-book & {
+      @include mediaMin(992) {
+        justify-content: flex-end;
+      }
+    }
+  }
+  &-quote {
+    position: static;
+    margin: -50px auto;
+    padding: 16px 20px;
+    font-size: 1.125rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    color: $color-dark-blue;
+    line-height: 120%;
+    font-family: $f-sto-m;
+    @include border-radius(8px);
+    width: 340px;
+    max-width: 100%;
+    // @include mediaMin(650) {
+    //   width: 340px;
+    // }
+    @include mediaMin(992) {
+      margin-top: 0;
+      position: absolute;
+      bottom: -25px;
+      right: 90px;
+    }
+    @include mediaMin(1341) {
+      bottom: -65px;
+
+      font-size: 1.375rem;
+    }
+    .quote {
+      padding: 16px 0 0 8px;
+      &::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDYiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCA0NiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjM5MjUgMEgyMS4xOTMyTDEzLjA3ODcgMTZDMTYuNDUwOSAxNy4xNjM2IDE4Ljc2OTQgMTkuNzgxOCAxOC43Njk0IDIzLjU2MzZDMTguNzY5NCAyOC42MDYxIDE0LjY1OTQgMzIgOS4zOTAyNCAzMkM1LjU5NjQ0IDMyIDAuMDExMTE0NyAzMC4xNTc2IDAuMDExMTE0NyAyMi45ODE4Qy0wLjA5NDI2ODkgMjAuODQ4NSAwLjMyNzI2NSAxNy40NTQ1IDExLjM5MjUgMFpNMzcuMjExNSAxNkM0MC41ODM3IDE3LjE2MzYgNDIuNzk2OCAxOS43ODE4IDQyLjc5NjggMjMuNTYzNkM0Mi43OTY4IDI4LjYwNjEgMzguNzkyMiAzMiAzMy41MjMgMzJDMjkuNjIzOCAzMiAyNC4wMzg1IDMwLjE1NzYgMjQuMDM4NSAyMi45ODE4QzI0LjAzODUgMjAuODQ4NSAyNC40NjAxIDE3LjQ1NDUgMzUuNDE5OSAwSDQ1LjIyMDZMMzcuMjExNSAxNloiIGZpbGw9IiNDNUQwRUMiLz4KPC9zdmc+Cg==);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -1;
+      }
+    }
+  }
+  &-price {
+    display: flex;
+    align-items: center;
+    border: 1px solid $color-blue;
+    color: $color-blue;
+    font-size: 0.9375rem;
+    padding: 0 8px 0 16px;
+    @include border-radius(4px 0 0 4px);
+  }
+  &-action {
+    display: flex;
+    @at-root .section-hero-book & {
+      justify-content: center;
+      margin-top: 1.5rem;
+      @include mediaMin(992) {
+        justify-content: flex-start;
+      }
+    }
+    .btn.btn-blue {
+      padding: 1rem;
+      min-width: auto;
+      @include border-radius(0 4px 4px 0);
+    }
+  }
+}

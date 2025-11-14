@@ -1,0 +1,56 @@
+//block banner (btn with price)
+.block-content-slider {
+  color: $color-dark-blue;
+  .content-list {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 0.875rem;
+      }
+    }
+  }
+  .tag-undertitle {
+    color: $pink-900;
+    padding: 6px 14px;
+    @include border-radius(6px);
+    border: 1px solid $pink-900;
+    background: rgba(255, 255, 255, 0.7);
+    line-height: 115%;
+  }
+  .slider-image {
+    padding: 0 15px;
+    // width: 335px;
+
+    img {
+      @include border-radius(8px);
+      object-fit: cover;
+      height: 193px;
+
+      @include mediaMin(991) {
+        // width: 445px;
+        height: 256px;
+      }
+    }
+  }
+  .slider-title {
+    font-size: 0.9375rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    @include mediaMin(991) {
+      font-size: 1.375rem;
+    }
+  }
+  .arrow-control {
+    margin-top: 0;
+    top: unset;
+    z-index: 2;
+  }
+  .slick-dots {
+    bottom: -26px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+}

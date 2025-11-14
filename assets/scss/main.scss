@@ -69,6 +69,7 @@
 @import "pages/lang-ar";
 @import "pages/page-events";
 @import "pages/page-category";
+@import "pages/page-book";
 
 //-------------templates-parts--------------------
 @import "template-parts/bc-block";
@@ -95,9 +96,6 @@
 @import "template-parts/section-hero-new-cases";
 @import "template-parts/related-articles";
 @import "template-parts/event-filters";
-
-
-
 
 //-------------components--------------------
 @import "components/article"; //second-main
@@ -143,4 +141,9 @@
 @import "components/article-rate";
 @import "components/article-author-banner";
 @import "components/category-list";
-@import "components/article-table-of-content"
+@import "components/article-table-of-content";
+@import "components/book-info";
+@import "components/block-banner";
+@import "components/block-content-slider";
+@import "components/block-content-two-columns";
+@import "components/block-video-content";

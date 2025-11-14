@@ -16,6 +16,13 @@
       padding-bottom: 3.5rem;
     }
   }
+  @at-root .page-book & {
+    padding-top: 0;
+    background-color: transparent;
+    @include mediaMin(992) {
+      padding-bottom: 3.5rem;
+    }
+  }
   h2.recent-articles {
     margin-bottom: 30px;
     font-size: 24px;
@@ -46,6 +53,10 @@
       margin-left: -8px;
       margin-right: -8px;
     }
+    @at-root .page-book & {
+      margin-left: -8px;
+      margin-right: -8px;
+    }
   }
 
   .author-article {
@@ -56,6 +67,10 @@
       padding-right: 8px;
     }
     @at-root .events-page & {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    @at-root .page-book & {
       padding-left: 8px;
       padding-right: 8px;
     }
@@ -73,6 +88,9 @@
         margin-bottom: 0;
       }
       @at-root .events-page & {
+        margin-bottom: 0;
+      }
+      @at-root .page-book & {
         margin-bottom: 0;
       }
       .blog-img img {
@@ -94,6 +112,11 @@
         border-top-right-radius: 8px;
         height: 194px;
       }
+      @at-root .page-book & {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        height: 194px;
+      }
       @include mediaMax(450) {
         height: auto;
       }
@@ -104,6 +127,9 @@
         padding: 12px 8px;
       }
       @at-root .events-page & {
+        padding: 12px 8px;
+      }
+      @at-root .page-book & {
         padding: 12px 8px;
       }
       .tags {
@@ -151,6 +177,13 @@
             color: $color-dark-blue;
             line-height: 150%;
           }
+          @at-root .page-book & {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 20px;
+            color: $color-dark-blue;
+            line-height: 150%;
+          }
         }
       }
       .article-except {
@@ -163,6 +196,9 @@
         @at-root .events-page & {
           margin-bottom: 12px;
         }
+        @at-root .page-book & {
+          margin-bottom: 12px;
+        }
         p {
           font-size: 15px;
           line-height: 150%;
@@ -172,6 +208,10 @@
             color: $color-dark-gray;
           }
           @at-root .events-page & {
+            line-height: 175%;
+            color: $color-dark-gray;
+          }
+          @at-root .page-book & {
             line-height: 175%;
             color: $color-dark-gray;
           }
@@ -190,6 +230,11 @@
             color: #aabde7;
           }
           @at-root .events-page & {
+            font-size: 15px;
+            line-height: 175%;
+            color: #aabde7;
+          }
+          @at-root .page-book & {
             font-size: 15px;
             line-height: 175%;
             color: #aabde7;

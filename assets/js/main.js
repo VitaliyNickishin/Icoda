@@ -1052,6 +1052,7 @@ jQuery(document).ready(function ($) {
   initSliderPathList();
   scrollToHeading();
   initSliderHero();
+  initBoxContentSlider();
   initSliderHeroServices();
   initSliderServicesList();
   initSliderServicesGrid();
@@ -1059,6 +1060,7 @@ jQuery(document).ready(function ($) {
   initSliderRelatedArticles();
   initSliderRelatedArticlesRtl();
   initSliderTestimonials();
+  initSlideLlm();
 });
 var scrollToHeading = function () {
   $(".table-of-content").on("click", "a", function () {
@@ -1686,6 +1688,7 @@ const initSliderHero = () => {
       slidesToScroll: 1,
       swipeToSlide: true,
       infinite: true,
+      rtl: $("body").hasClass("rtl") ? true : false,
       variableWidth: true,
       speed: 500,
       responsive: [
@@ -1700,6 +1703,25 @@ const initSliderHero = () => {
     });
   } else {
     $(".hero-slider.slick-initialized").slick("unslick");
+  }
+};
+const initBoxContentSlider = () => {
+  if (jQuery(".box-content-slider").length > 0) {
+    if ($(window).width() < 768) {
+      $(".box-content-slider:not(.slick-initialized)").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        swipeToSlide: true,
+        infinite: true,
+        rtl: $("body").hasClass("rtl") ? true : false,
+        variableWidth: true,
+        cssEase: "linear",
+        speed: 500,
+      });
+    } else {
+      $(".box-content-slider.slick-initialized").slick("unslick");
+    }
   }
 };
 
@@ -1976,5 +1998,22 @@ const initSliderStories = () => {
     });
   } else {
     $(".slider-stories.slick-initialized").slick("unslick");
+  }
+};
+
+const initSlideLlm = () => {
+  if (jQuery(".slider-llm").length > 0) {
+    $(".slider-llm:not(.slick-initialized)").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      swipeToSlide: $("body").hasClass("rtl") ? false : true,
+      appendArrows: $(".arrow-control-llm"),
+      dots: true,
+      infinite: true,
+      variableWidth: false,
+      rtl: $("body").hasClass("rtl") ? true : false,
+      cssEase: "linear",
+      speed: 500,
+    });
   }
 };

@@ -107,6 +107,12 @@
       top: 13px;
     }
   }
+  @at-root .page-book & {
+    top: 3px;
+    @include mediaMin(992) {
+      top: 13px;
+    }
+  }
   .slick-next,
   .slick-prev {
     width: 40px;
