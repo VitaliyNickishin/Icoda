@@ -4,15 +4,31 @@ $args_q = array(
     'posts_per_page' => 10,
     'orderby' => 'date',
     'order' => 'DESC',
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'category',
-            'field' => 'id',
-            'terms' => array('38'),
-        )
-    ),
-    'post__not_in' => array(get_the_ID()),
 );
+
+if(!empty($args['tag'])) {
+    $args_q['tax_query'] = array(
+        array(
+            'taxonomy' => 'post_tag',
+            'field' => 'id',
+            'terms' => array($args['tag']),
+        )
+    );
+}
+
+if(is_singular( 'post' )) {
+    $args_q['post__not_in'] = array(get_the_ID());
+    if(empty($args['tag'])) {
+        $args_q['tax_query'] = array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'id',
+                'terms' => array('38'),
+            )
+        );
+    }
+}
+
 $related_wp_query = new WP_Query($args_q);
 if ($related_wp_query->have_posts()) :
 ?>

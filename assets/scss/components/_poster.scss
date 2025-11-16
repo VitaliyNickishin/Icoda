@@ -1,0 +1,36 @@
+//used for page book
+.poster {
+  &-image {
+    @at-root .page-book & {
+      @include border-radius(12px);
+      @include mediaMax(991) {
+        height: 217px;
+        object-fit: cover;
+      }
+    }
+  }
+  .play-icon {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    transition: 0.3s;
+    width: 56px;
+    height: 56px;
+    @include mediaMin(991) {
+      width: 66px;
+      height: 66px;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &.removed {
+    transition: opacity ease-out 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}

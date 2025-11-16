@@ -2,18 +2,18 @@
 $video_set = get_field('video_set');
 $content_set = get_field('content_set');
 ?>
-<section class="block-video-content mx-lg-5 mx-sm-4">
+<section class="block-video-content mx-lg-5 mx-sm-4 py-lg-5 py-4">
     <div class="block-video-content-inner">
         <div class="container">
             <div class="row flex-column-reverse flex-lg-row align-items-center">
                 <div class="col-12 col-md-8 col-lg-4 mt-4 mt-lg-0">
-                    <div class="block-video-content__iframe video m-auto position-relative">
+                    <div class="block-video-content__iframe video">
                         <div id="player-1"></div>
 
                         <div
                             class="poster"
                             data-id="player-1"
-                            data-video-en="<?php echo $video_set['video_code']; ?>"
+                            data-video="<?php echo $video_set['video_code']; ?>"
                         >
                             <div class="poster-img">
                             <picture>
@@ -22,7 +22,7 @@ $content_set = get_field('content_set');
                                     data-src="<?php echo $video_set['poster_desktop']['url']; ?>" 
                                     alt="<?php echo $video_set['poster_alt']; ?>" 
                                     src="<?php echo $video_set['poster_desktop']['url']; ?>" 
-                                    class="lazyloaded"
+                                    class="lazyloaded poster-image"
                                     width="515" height="314"
                                     >
                             </picture>
@@ -47,7 +47,7 @@ $content_set = get_field('content_set');
                         <div class="d-flex align-items-center">
                             <div class="avatar">
                             <picture>
-                                    <img src="<?php echo $content_set['avatar']['url']; ?>" alt="<?php echo $content_set['author']; ?>" />
+                                    <img src="<?php echo $content_set['avatar']['url']; ?>" alt="<?php echo $content_set['author']; ?>" width="60" height="60" />
                                 </picture>
                             </div>
                             <div class="author-meta ml-3">

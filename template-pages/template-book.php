@@ -87,15 +87,7 @@ $icoda_gb_book_info = get_field('icoda_gb_book_info', 'option');
 		</div>
 	</section>
 
-	
-
-	<div class="wrap">
-		<?php
-			the_content();
-		?>
-	</div>
-
-	<?php get_template_part('template-parts/related-articles', '', ['title' => __('AI SEO Knowledge Base', 'icoda')]); ?>
+	<?php the_content(); ?>
 
 	<?php echo do_shortcode('[contact-form-new]'); ?>
 </main>

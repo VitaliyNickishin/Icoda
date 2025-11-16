@@ -17,10 +17,11 @@
     }
   }
   @at-root .page-book & {
-    padding-top: 0;
     background-color: transparent;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
     @include mediaMin(992) {
-      padding-bottom: 3.5rem;
+      padding-bottom: 3rem;
     }
   }
   h2.recent-articles {

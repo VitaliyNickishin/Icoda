@@ -1711,7 +1711,6 @@ const initBoxContentSlider = () => {
       $(".box-content-slider:not(.slick-initialized)").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: true,
         swipeToSlide: true,
         infinite: true,
         rtl: $("body").hasClass("rtl") ? true : false,

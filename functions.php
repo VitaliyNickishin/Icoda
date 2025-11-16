@@ -1428,6 +1428,14 @@ function perelinks_callback($attrs, $content = '') {
 	return ob_get_clean();
 }
 
+add_shortcode( 'icoda_related_articles', 'icoda_related_articles_callback' );
+
+function icoda_related_articles_callback($attrs, $content = '') {
+	ob_start();
+    get_template_part('template-parts/related-articles', '', $attrs);
+	return ob_get_clean();
+}
+
 function icodaRemoveEmptyParagraphs($content) {
     $content = force_balance_tags( $content );
     $content = preg_replace( '#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content );
