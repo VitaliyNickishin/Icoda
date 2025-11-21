@@ -315,16 +315,6 @@ body {
   }
   // navigation bar (header)
   .header.navbar {
-    .img-desktop {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      max-width: 400px;
-      display: none;
-      @include mediaMax(1350) {
-        display: none;
-      }
-    }
     .btn {
       margin-left: 12px;
       padding: 12px;
@@ -367,11 +357,7 @@ body {
       border: 1px solid $border-color;
       color: inherit;
     }
-    .btn-blue {
-      @include mediaMax(991) {
-        display: none;
-      }
-    }
+
     //contact icon
     .mobile-icon {
       @extend .btn-mob-wrap;

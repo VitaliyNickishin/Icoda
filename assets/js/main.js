@@ -193,6 +193,14 @@ jQuery(document).ready(function ($) {
     }
   );
 
+  // $(".menu-item-has-children").on("mouseenter", (e) => {
+  //   $(e.currentTarget).addClass("opened");
+  // });
+
+  // $(".menu-item-has-children").on("mouseleave", (e) => {
+  //   $(e.currentTarget).removeClass("opened");
+  // });
+
   $('a[id="5884"]').removeAttr("href");
   $('a[id="5885"]').removeAttr("href");
   $('a[id="5886"]').removeAttr("href");
@@ -1248,7 +1256,6 @@ function initMegaMenu() {
   jQuery(".burger").on("click", function () {
     const text = jQuery(this).parent().find('[data-text="menu"]');
     const menu = jQuery('[data-action="mega-menu"]');
-    const img = jQuery("[data-main-img]");
     const body = jQuery("body");
     jQuery(this).toggleClass("burger_active");
     menu.toggleClass("opened");
@@ -1259,23 +1266,48 @@ function initMegaMenu() {
     }
     if (jQuery(this).hasClass("burger_active")) {
       text.text(icoda_main_params.menu_close_label);
-      img.hide();
+
       body.addClass("no-scroll");
     } else {
       text.text(icoda_main_params.menu_open_label);
-      img.show();
+
       body.removeClass("no-scroll");
     }
   });
 }
 // show mobile submenu
 function showMobileSubmenu() {
-  jQuery('[data-action="arrow"]').on("click", function () {
+  jQuery('[data-action="arrow"]').on("click", function (e) {
+    e.preventDefault();
+
     const parent = jQuery(this).parent();
-    const subMenu = jQuery(this).parent().children(".sub-menu");
-    parent.toggleClass("opened");
-    subMenu.toggleClass("opened");
+    const subMenu = parent.children(".sub-menu"); // <ul>
+
+    // Если уже открыт — закроем
+    if (parent.hasClass("opened")) {
+      parent.removeClass("opened");
+      subMenu.removeClass("opened");
+      return;
+    }
+
+    // Закрываем все остальные открытые меню
+    jQuery(".menu-item-has-children.opened")
+      .not(parent)
+      .removeClass("opened")
+      .children(".sub-menu")
+      .removeClass("opened");
+
+    // Открываем текущий
+    parent.addClass("opened");
+    subMenu.addClass("opened");
   });
+
+  // jQuery('[data-action="arrow"]').on("click", function (e) {
+  //   const parent = jQuery(this).parent();
+  //   const subMenu = jQuery(this).parent().children(".sub-menu");
+  //   parent.toggleClass("opened");
+  //   subMenu.toggleClass("opened");
+  // });
 }
 
 //form contact us

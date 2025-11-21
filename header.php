@@ -166,37 +166,22 @@
     <header data-header class="header navbar navbar-light btco-hover-menu">
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-12 position-static">
             <div class="top-line">
               <a href="<?php echo !is_front_page() ? home_url() : '#'; ?>" class="logo">
                 <img src="/wp-content/uploads/2024/06/logo-icoda.svg" width="108" height="28" alt="Icoda">
               </a>
+              <div class="mega-menu" data-action="mega-menu">
+                <?php get_template_part('template-parts/menu/mega-menu-new'); ?>
+              </div>
               <div class="r-bar">
-                <div class="mega-menu" data-action="mega-menu">
-                  <?php get_template_part('template-parts/menu/mega-menu'); ?>
-                </div>
-                <?php if (is_front_page()) : ?>
-                  <div class="img-desktop">
-                    <img src="<?php the_field('section_1_background_desctop'); ?>" alt="bg-home">
-                  </div>
-                <?php endif; ?>
-                
-                <div class="wr-btn d-flex">
+                <div class="wr-btn d-none d-lg-flex">
                   <a href="<?php echo home_url('/contact-us/'); ?>" class="btn btn-blue"><?php _e('Contact Us', 'icoda'); ?></a>
-                  <a href="<?php echo home_url('/contact-us/'); ?>" class="mobile-icon email-icon">
-                    <svg width="20" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 0H20C20.2652 0 20.5196 0.105357 20.7071 0.292893C20.8946 0.48043 21 0.734784 21 1V15C21 15.2652 20.8946 15.5196 20.7071 15.7071C20.5196 15.8946 20.2652 16 20 16H2C1.73478 16 1.48043 15.8946 1.29289 15.7071C1.10536 15.5196 1 15.2652 1 15V1C1 0.734784 1.10536 0.48043 1.29289 0.292893C1.48043 0.105357 1.73478 0 2 0ZM19 4.238L11.072 11.338L3 4.216V14H19V4.238ZM3.511 2L11.061 8.662L18.502 2H3.511Z" fill="#333333" stroke="white" stroke-width="0.7" />
-                    </svg>
-                  </a>
-                  <a href="<?php echo home_url('/calculator/'); ?>" class="btn btn-outline-blue d-none d-lg-block"><?php _e('Pricing', 'icoda'); ?></a>
-                  <a href="<?php echo home_url('/calculator/'); ?>" class="mobile-icon dollar-icon text-dark p-2 ml-2">
-                    $
-                  </a>
                 </div>
                 <div class="lang-select">
                   <?php do_action('wpml_add_language_selector'); ?>
                 </div>
-                <button class="navbar-toggler burger" type="button">
+                <button class="navbar-toggler burger d-lg-none" type="button">
                   <span class="line"></span>
                   <span class="text-menu" data-text="menu"><?php _e('Menu', 'icoda'); ?></span>
                 </button>
