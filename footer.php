@@ -47,10 +47,6 @@
                                 <div class="wr-footer-list-col">
                                     <div class="wr-footer-list">
                                         <div class="footer-list">
-                                            <?php the_view('menu__footer', ['location' => 'footer-center']); ?>
-                                        </div>
-
-                                        <div class="footer-list">
                                             <?php the_view('menu__footer', ['location' => 'footer-two-two']); ?>
                                         </div>
                                     </div>
