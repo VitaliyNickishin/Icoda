@@ -667,6 +667,8 @@ function icoda_loadmore_ajax_handler(){
                     // $title = mb_strimwidth($title, 0, 45, "...");
                 }
                 $excerpt = mb_strimwidth($excerpt, 0, 100, "...");
+
+                $referral_code = get_field('category_extra_field_with_referral_code', get_the_ID());
             ?>
                 <div class="col-12 col-md-6 mb-lg-5 mb-3 <?php echo $lg_class; ?>">
                     <a href="<?php the_permalink(); ?>" class="service-card cases-card hot">
@@ -718,6 +720,33 @@ function icoda_loadmore_ajax_handler(){
                                 </div>
 
                             </div>
+                        <?php elseif($args['category_name'] == 'referral-codes') : ?>
+                            <div class="blog-card-content">
+                                <div class="blog-card-body">
+                                    <span class="h6"><?php echo $title; ?></span>
+                                    <div class="sub-text">
+                                        <p><?php echo $excerpt; ?></p>
+                                    </div>
+                                </div>
+
+                                <div class="blog-card-footer">
+                                    <div class="author-meta d-flex justify-content-between align-items-center">
+                                        <?php if ( !empty($referral_code)) : ?>
+                                            <div class="btn btn-copy-promo d-flex align-items-center px-0">
+                                                <svg fill="currentColor" width="32px" height="32px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title>copy</title><path d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z" transform="translate(0)"/><path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)"/><rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32"/></svg>
+                                                
+                                                <span data-referral-value class="d-none"><?php echo $referral_code; ?></span>
+                                                <span data-btn-copy class="px-2 py-1 position-relative d-flex align-items-center" data-code-copied="<?php _e('Copied promo code', 'icoda'); ?>">
+                                                    <?php _e('Copy promo code', 'icoda'); ?>
+                                                </span>
+                                            </div>
+                                        <?php endif; ?>
+                                        
+                                        <span class="date-publish"><?php echo get_the_date('F j, Y', get_the_ID()); ?></span>
+                                    </div>
+                                </div>
+
+                            </div>
                         <?php elseif(!empty($args['is_home_request'])) : ?>
                             <div class="blog-card-content">
 
@@ -766,6 +795,9 @@ function icoda_loadmore_ajax_handler(){
 
     endif;
 
+    if($args['category_name'] === 'referral-codes') {
+        die;
+    }
     if( ( $_POST['page'] + 1 ) === 7 || $wp_query->max_num_pages <= ( $_POST['page'] + 1 ) ) {
         $add_service_id = 5770;
         if( ! empty( $_POST['lang'] ) ){
@@ -943,6 +975,7 @@ require get_template_directory() . '/inc/calendly.php';
 include_once get_template_directory() . '/inc/portfolio/portfolio.php';
 include_once get_template_directory() . '/inc/events/events.php';
 include_once get_template_directory() . '/inc/faq/faq.php';
+include_once get_template_directory() . '/inc/block-for-categories/block-for-categories.php';
 include_once get_template_directory() . '/inc/export-strings.php';
 include_once get_template_directory() . '/inc/bitrix/bitrix.php';
 include_once get_template_directory() . '/inc/api-v1.php';

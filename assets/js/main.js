@@ -1283,31 +1283,21 @@ function showMobileSubmenu() {
     const parent = jQuery(this).parent();
     const subMenu = parent.children(".sub-menu"); // <ul>
 
-    // Если уже открыт — закроем
     if (parent.hasClass("opened")) {
       parent.removeClass("opened");
       subMenu.removeClass("opened");
       return;
     }
 
-    // Закрываем все остальные открытые меню
     jQuery(".menu-item-has-children.opened")
       .not(parent)
       .removeClass("opened")
       .children(".sub-menu")
       .removeClass("opened");
 
-    // Открываем текущий
     parent.addClass("opened");
     subMenu.addClass("opened");
   });
-
-  // jQuery('[data-action="arrow"]').on("click", function (e) {
-  //   const parent = jQuery(this).parent();
-  //   const subMenu = jQuery(this).parent().children(".sub-menu");
-  //   parent.toggleClass("opened");
-  //   subMenu.toggleClass("opened");
-  // });
 }
 
 //form contact us
