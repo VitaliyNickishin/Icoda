@@ -7,7 +7,11 @@ get_header();
         app_id: "gdz549ih"
     };
 </script>
-<?php global $wp_query; ?>
+<?php 
+global $wp_query; 
+global $post;
+?>
+
 
 <section class="section-presales pb-5">
     <div class="container">
@@ -77,9 +81,21 @@ get_header();
             <?php else : ?>
                 <p><?php _e('Nothing was found for these criteria.', 'icoda'); ?></p>
             <?php endif; ?>
-
         </div>
-
+		<?php
+			$module_ids = get_field('choose_the_id_module_for_category',get_queried_object());
+			if ($module_ids) 
+			{
+				foreach ($module_ids as $module_id) 
+				{
+					$post_id = get_post($module_id);
+					if ($post_id) 
+					{
+						echo apply_filters('the_content', $post_id->post_content);
+					}
+				}
+		    }
+			?>
         <div class="row">
             <div class="col-12">
                 <?php get_template_part('template-parts/category-parts/crypto-presales'); ?>
