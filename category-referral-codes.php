@@ -23,7 +23,9 @@ get_header();
              <h1 class="h2 mb-1 mt-4 font-weight-bold title-opacity">
                 <?php single_cat_title(); ?>
             </h1>
-            <?php /* echo category_description(); */ ?>
+            <div class="undertitle">
+                <?php echo category_description(); ?>
+            </div>
         </div>
 
     </div>
