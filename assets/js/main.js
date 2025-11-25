@@ -1053,7 +1053,6 @@ jQuery(document).ready(function ($) {
   headerFixed();
   inputOnFocus();
   initMegaMenu();
-  showMobileSubmenu();
   scrollVerticalMenu();
   initSliderListLeadership();
   initAccordionFaq();
@@ -1275,6 +1274,13 @@ function initMegaMenu() {
     }
   });
 }
+//sleder Resent cases new mobile
+$(window).on("load resize", function () {
+  if ($(window).width() < 991) {
+    showMobileSubmenu();
+  }
+});
+
 // show mobile submenu
 function showMobileSubmenu() {
   jQuery('[data-action="arrow"]').on("click", function (e) {
@@ -1299,7 +1305,6 @@ function showMobileSubmenu() {
     subMenu.addClass("opened");
   });
 }
-
 //form contact us
 function inputOnFocus() {
   jQuery(".form-group input").on("focus blur", function (evt) {

@@ -21,6 +21,9 @@
 .section-reliable-resources {
   // padding-top: 55px;
   padding-bottom: 55px;
+  @include mediaMax(991) {
+    padding-top: 25px;
+  }
   .box {
     margin: 8px;
     display: flex;

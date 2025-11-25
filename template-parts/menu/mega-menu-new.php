@@ -1,27 +1,14 @@
 <?php
 
-// $header_one = icoda_get_items_tree_menu('header-one');
 $header_one = icoda_get_items_tree_menu('header-one-new');
-// $header_one_two = icoda_get_items_tree_menu('header-one-two');
 $header_one_two = icoda_get_items_tree_menu('header-one-two-new');
-// $header_two = icoda_get_items_tree_menu('header-two');
 $header_two = icoda_get_items_tree_menu('header-two-new');
-// $header_two_two = icoda_get_items_tree_menu('header-two-two');
-// $header_three_one = icoda_get_items_tree_menu('header-three-one');
 $header_three_one = icoda_get_items_tree_menu('header-three-one-new');
-// $header_three_two = icoda_get_items_tree_menu('header-three-two');
 $header_three_two = icoda_get_items_tree_menu('header-three-two-new');
-// $header_three_three = icoda_get_items_tree_menu('header-three-three');
-// $header_four = icoda_get_items_tree_menu('header-four');
 $header_four = icoda_get_items_tree_menu('header-four-new');
-// $header_four_two = icoda_get_items_tree_menu('header-four-two');
 $header_four_two = icoda_get_items_tree_menu('header-four-two-new');
 $header_five = icoda_get_items_tree_menu('header-five-new');
 
-// echo "<pre>";
-// var_dump($header_one);
-// var_dump($header_one_two);
-// echo "</pre>";
 ?>
 
 <nav>
@@ -108,8 +95,13 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
         <?php foreach ($header_three_one[0]->childs as $key => $item) : ?>
 
           <li class="menu-item menu-item-has-children">
-            <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
-            <i class="custom-arrow" data-action="arrow"></i>
+            <div class="menu-item-has-bg d-flex align-items-center">
+              <a href="<?php echo $item['url']; ?>" class="d-flex align-items-center">
+                <div class="has-icon"></div>
+                <?php echo $item['title']; ?>
+              </a>
+              <i class="custom-arrow" data-action="arrow"></i>
+            </div>
 
             <?php if (isset($header_three_one[$item['ID']]) && $header_three_one[$item['ID']]) : ?>
 
