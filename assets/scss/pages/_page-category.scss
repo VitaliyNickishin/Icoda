@@ -1,81 +1,88 @@
 .category {
-    &-crypto-presales {
-        .title {
-            font-size: 2rem; //32px;
-            font-family: $f-sto-r;
-            line-height: 38px;
-            letter-spacing: -.96px;
-            color: $color-dark-blue;
-            opacity: 1;
-            @include mediaMin(991) {
-                font-size: 2.5rem; //40px;
-                line-height: 50px; /* 116% */
-                letter-spacing: -1.5px;
-            }
-            
-            @include mediaMin(1200) {
-                font-size: 2.75rem; //44px;
-                line-height: 58px; /* 116% */
-            }
-            @include mediaMin(1340) {
-                font-size: 3.125rem; //50px;
-            }
-        }
-        .undertitle {
-            font-size: .875rem;
-            line-height: 160%; /* 25.6px */
-            letter-spacing: -0.16px;
-            @include mediaMin(1440) {
-                font-size: 1rem;
-                
-            }
-            
-        }
+  &-crypto-presales {
+    .title {
+      font-size: 2rem; //32px;
+      font-family: $f-sto-r;
+      line-height: 38px;
+      letter-spacing: -0.96px;
+      color: $color-dark-blue;
+      opacity: 1;
+      @include mediaMin(991) {
+        font-size: 2.5rem; //40px;
+        line-height: 50px; /* 116% */
+        letter-spacing: -1.5px;
+      }
+
+      @include mediaMin(1200) {
+        font-size: 2.75rem; //44px;
+        line-height: 58px; /* 116% */
+      }
+      @include mediaMin(1340) {
+        font-size: 3.125rem; //50px;
+      }
     }
+    .undertitle {
+      font-size: 0.875rem;
+      line-height: 160%; /* 25.6px */
+      letter-spacing: -0.16px;
+      @include mediaMin(1440) {
+        font-size: 1rem;
+      }
+    }
+  }
+  &-referral-codes {
+    .date-publish {
+      @include mediaMax(1341) {
+        font-size: 0.8125rem;
+      }
+    }
+  }
 }
 
 .card-presale {
-    @include border-radius(6px);
-    border: 1px solid $color-light-gray;
-    background: rgba(250, 251, 253, 0.50);
-    padding: 1.5rem;
-    @include mediaMin(1440) {
-        padding: 2rem;
-    }
-    .title {
-        font-size: 1.25rem;
-    }
-    .tag {
-        @include border-radius(4px);
-        border: 1px solid $color-light-blue;
-        background: radial-gradient(65.85% 65.85% at 50% 34.15%, #FFF 0%, #F1F6FB 100%);
-        padding: 1rem;
-        font-size: .75rem;
-        font-family: $f-sto-m;
-        color: $color-dark-blue;
-        line-height: 13px; /* 108.333% */
-        letter-spacing: 0.72px;
-        text-transform: uppercase;
-    }
-    .sub-text {
-        font-size: .875rem;
-        line-height: 140%;
-        color: $main-color-text;
-    }
-    .link-arrow {
-        color: $color-blue;
-        font-family: $f-sto-m;
-        
-        &:after {
-            transition: transform .2s ease-out;
-            background: url(../images/arrow-link-card-hover.svg) 0 0 no-repeat;
-        }
-        &:hover {
-            &:after {
-                transform: translateX(5px);
-            }
-        }
+  @include border-radius(6px);
+  border: 1px solid $color-light-gray;
+  background: rgba(250, 251, 253, 0.5);
+  padding: 1.5rem;
+  @include mediaMin(1440) {
+    padding: 2rem;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .tag {
+    @include border-radius(4px);
+    border: 1px solid $color-light-blue;
+    background: radial-gradient(
+      65.85% 65.85% at 50% 34.15%,
+      #fff 0%,
+      #f1f6fb 100%
+    );
+    padding: 1rem;
+    font-size: 0.75rem;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    line-height: 13px; /* 108.333% */
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+  }
+  .sub-text {
+    font-size: 0.875rem;
+    line-height: 140%;
+    color: $main-color-text;
+  }
+  .link-arrow {
+    color: $color-blue;
+    font-family: $f-sto-m;
 
+    &:after {
+      transition: transform 0.2s ease-out;
+      background: url(../images/arrow-link-card-hover.svg) 0 0 no-repeat;
     }
-
+    &:hover {
+      &:after {
+        transform: translateX(5px);
+      }
+    }
+  }
 }

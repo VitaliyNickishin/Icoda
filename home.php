@@ -46,7 +46,8 @@ get_header();
                 $excerpt = mb_strimwidth($excerpt, 0, 100, "...");
                 ?>
                 <div class="col-12 col-md-6 mb-lg-5 mb-3 <?php echo $lg_class; ?>">
-                    <a href="<?php the_permalink(); ?>" class="service-card cases-card hot">
+                    <article class="service-card cases-card hot">
+                    <a class="d-block h-100 position-absolute w-100" href="<?php the_permalink(); ?>"></a>
 
                         <?php if (has_post_thumbnail()) : ?>
                             <?php $featured_img_url = icoda_get_featured_image_url(get_the_ID()); ?>
@@ -94,7 +95,7 @@ get_header();
                             </div>
 
                         </div>
-                    </a>
+                    </article>
                 </div>
             <?php endwhile; ?>
 

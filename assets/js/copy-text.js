@@ -5,18 +5,13 @@ class CopyText {
 
   static create(selector) {
     const copyText = new CopyText(selector);
-    copyText.initVariables();
     copyText.registerEvents();
 
     return copyText;
   }
 
-  initVariables() {
-    this.$copyText = $(this.selector);
-  }
-
   registerEvents() {
-    this.$copyText.on("click", (e) => {
+    $(document).on("click", this.selector, (e) => {
       const $elCurrent = $(e.currentTarget);
       const $code = $elCurrent.parent().find("[data-referral-value]");
 

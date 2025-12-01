@@ -662,7 +662,8 @@ function icoda_loadmore_ajax_handler(){
                 $referral_code = get_field('category_extra_field_with_referral_code', get_the_ID());
             ?>
                 <div class="col-12 col-md-6 mb-lg-5 mb-3 <?php echo $lg_class; ?>">
-                    <a href="<?php the_permalink(); ?>" class="service-card cases-card hot">
+                    <article class="service-card cases-card hot">
+                    <a href="<?php the_permalink(); ?>" class="d-block h-100 position-absolute w-100"></a>
 
                         <?php if ( has_post_thumbnail()) : ?>
                             <?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
@@ -778,7 +779,8 @@ function icoda_loadmore_ajax_handler(){
                                 </div>
                         <?php endif; ?>
 
-                    </a>
+                    
+                    </article>
                 </div>
             <?php
         $index++;
