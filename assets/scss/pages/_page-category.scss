@@ -1,6 +1,6 @@
 .category {
   &-crypto-presales {
-    .title {
+    .section-title {
       font-size: 2rem; //32px;
       font-family: $f-sto-r;
       line-height: 38px;
@@ -22,11 +22,14 @@
       }
     }
     .undertitle {
-      font-size: 0.875rem;
-      line-height: 160%; /* 25.6px */
-      letter-spacing: -0.16px;
-      @include mediaMin(1440) {
-        font-size: 1rem;
+      p {
+        font-size: 0.875rem;
+        line-height: 160%; /* 25.6px */
+        letter-spacing: -0.16px;
+        margin-bottom: 0;
+        @include mediaMin(1440) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -67,9 +70,11 @@
     text-transform: uppercase;
   }
   .sub-text {
-    font-size: 0.875rem;
-    line-height: 140%;
-    color: $main-color-text;
+    p {
+      font-size: 0.875rem;
+      line-height: 140%;
+      color: $main-color-text;
+    }
   }
   .link-arrow {
     color: $color-blue;

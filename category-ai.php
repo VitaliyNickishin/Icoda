@@ -48,6 +48,7 @@ get_header();
                 $title = get_the_title(get_the_ID());
                 $excerpt = get_the_excerpt(get_the_ID());
                 $title = mb_strimwidth($title, 0, 45, "...");
+                $title = str_replace('&#...', '...', $title);
                 $excerpt = mb_strimwidth($excerpt, 0, 100, "...");
                 ?>
                 <div class="col-12 col-md-6 mb-lg-5 mb-3 <?php echo $lg_class; ?>">
@@ -103,23 +104,25 @@ get_header();
             <p class="mb-5"><?php _e('Nothing was found for these criteria.', 'icoda'); ?></p>
         <?php endif; ?>
 		</div>
-		<?php
+        <div class="has-content-guttenberg">
+            <?php
 
-			$module_ids = get_field('choose_the_id_module_for_category',get_queried_object());
-			if ($module_ids) 
-			{
-				foreach ($module_ids as $module_id) 
-				{
-					$post = get_post($module_id);
-					if ($post) 
-					{
-						setup_postdata($post);
-						echo apply_filters('the_content', $post->post_content);
-						wp_reset_postdata();
-					}
-				}
-		    }
-			?>
+                $module_ids = get_field('choose_the_id_module_for_category',get_queried_object());
+                if ($module_ids) 
+                {
+                    foreach ($module_ids as $module_id) 
+                    {
+                        $post = get_post($module_id);
+                        if ($post) 
+                        {
+                            setup_postdata($post);
+                            echo apply_filters('the_content', $post->post_content);
+                            wp_reset_postdata();
+                        }
+                    }
+                }
+                ?>
+        </div>
 </div>
 
 <?php

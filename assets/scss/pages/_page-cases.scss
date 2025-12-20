@@ -74,7 +74,8 @@
   }
 }
 
-.section-cases-content {
+.section-cases-content,
+.has-content-guttenberg {
   color: $color-dark-blue;
 
   .new-blog-post-main-content {
@@ -133,8 +134,8 @@
     }
   }
   dl,
-  ol,
-  ul {
+  ol:not(.breadcrumb),
+  ul:not(.breadcrumb):not(.tags-list):not(.badge-list):not(.list-social) {
     margin: 20px 0 40px;
     list-style-type: revert;
     padding-left: 20px;

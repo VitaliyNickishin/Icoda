@@ -7,10 +7,10 @@
     @extend %font-title;
   }
 }
-.category-cases h1, 
+.category-cases h1,
 .page-template h1,
 .archive h1 {
-    @extend %font-title;
+  @extend %font-title;
 }
 
 %font-title {
@@ -18,7 +18,7 @@
   line-height: 130%;
   margin-bottom: 20px;
   font-family: $f-sto-bold;
-  opacity: .8;
+  // opacity: .8;
 
   @include mediaMax(767) {
     font-size: 20px;
@@ -77,5 +77,4 @@
       right: 0;
     }
   }
-
 }

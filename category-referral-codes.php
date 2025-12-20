@@ -20,7 +20,7 @@ get_header();
             <div class="mb-4 mb-lg-5 pt-2 pt-lg-5">
                 <?php echo get_search_form(); ?>
             </div>
-             <h1 class="h2 mb-1 mt-4 font-weight-bold title-opacity">
+             <h1 class="h2 mb-1 mt-4 font-weight-bold">
                 <?php single_cat_title(); ?>
             </h1>
             <div class="undertitle">
@@ -107,21 +107,23 @@ get_header();
             <p class="mb-5"><?php _e('Nothing was found for these criteria.', 'icoda'); ?></p>
         <?php endif; ?>
 		</div>
-		<?php
+        <div class="has-content-guttenberg">
+            <?php
 
-			$module_ids = get_field('choose_the_id_module_for_category',get_queried_object());
-			if ($module_ids) 
-			{
-				foreach ($module_ids as $module_id) 
-				{
-					$post_id = get_post($module_id);
-					if ($post_id) 
-					{
-						echo apply_filters('the_content', $post_id->post_content);
-					}
-				}
-		    }
+                $module_ids = get_field('choose_the_id_module_for_category',get_queried_object());
+                if ($module_ids) 
+                {
+                    foreach ($module_ids as $module_id) 
+                    {
+                        $post_id = get_post($module_id);
+                        if ($post_id) 
+                        {
+                            echo apply_filters('the_content', $post_id->post_content);
+                        }
+                    }
+                }
 			?>
+        </div>
 </div>
 
 <?php

@@ -23,7 +23,7 @@ global $post;
                 </div>
             </div>
             <div class="col-12 col-sm-8 col-md-6 col-lg-5">
-                <h1 class="h2 mb-2 pb-1 mt-5 pt-lg-4 title">
+                <h1 class="h2 mb-2 pb-1 mt-5 pt-lg-4 section-title">
                     <?php single_cat_title(); ?>
                 </h1>
                 <div class="undertitle">
@@ -82,20 +82,22 @@ global $post;
                 <p><?php _e('Nothing was found for these criteria.', 'icoda'); ?></p>
             <?php endif; ?>
         </div>
-		<?php
-			$module_ids = get_field('choose_the_id_module_for_category',get_queried_object());
-			if ($module_ids) 
-			{
-				foreach ($module_ids as $module_id) 
-				{
-					$post_id = get_post($module_id);
-					if ($post_id) 
-					{
-						echo apply_filters('the_content', $post_id->post_content);
-					}
-				}
-		    }
+        <div class="has-content-guttenberg">
+            <?php
+                $module_ids = get_field('choose_the_id_module_for_category',get_queried_object());
+                if ($module_ids) 
+                {
+                    foreach ($module_ids as $module_id) 
+                    {
+                        $post_id = get_post($module_id);
+                        if ($post_id) 
+                        {
+                            echo apply_filters('the_content', $post_id->post_content);
+                        }
+                    }
+                }
 			?>
+        </div>
         <div class="row">
             <div class="col-12">
                 <?php get_template_part('template-parts/category-parts/crypto-presales'); ?>
