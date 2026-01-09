@@ -1,5 +1,9 @@
 .section-hero-new {
   margin-bottom: 60px;
+  //https://icoda.io/services/
+  @at-root .page-id-3823 & {
+    margin-bottom: 0;
+  }
   .h1,
   .tilte {
     opacity: 1;
@@ -68,6 +72,10 @@
     @include mediaMin(992) {
       padding-bottom: 5rem;
       padding-top: 5rem;
+      //https://icoda.io/services/
+      @at-root .page-id-3823 & {
+        padding-bottom: 0;
+      }
     }
   }
   &-service {
