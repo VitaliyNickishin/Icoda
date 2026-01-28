@@ -1,0 +1,217 @@
+.section-hero-ai-seo {
+  .abovetitle {
+    font-size: 0.875rem;
+    font-family: $f-sto-m;
+    @include mediaMin(992) {
+      font-size: 1.125rem;
+    }
+  }
+  .title {
+    font-size: 2rem;
+    line-height: 100%;
+    @include mediaMin(1024) {
+      font-size: 2.5rem;
+    }
+    @include mediaMin(1341) {
+      font-size: 3rem;
+    }
+  }
+  .undertitle {
+    font-size: 15px;
+    color: $color-dark-blue;
+    @include mediaMin(992) {
+      font-size: 1.125rem;
+    }
+  }
+  .llm-list-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+  .bg-wrap {
+    @include mediaMin(992) {
+      &::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        background-image: url("../images/bg-ai-seo.png");
+        background-size: contain;
+        right: -75px;
+        bottom: -120px;
+        width: 638px;
+        height: 416px;
+        display: block;
+        z-index: -1;
+      }
+    }
+    img {
+      @include mediaMax(991) {
+        width: 160px;
+        height: auto;
+      }
+    }
+  }
+  .btn-outline-blue {
+    @include mediaMax(575) {
+      background: rgba(255, 255, 255, 0.8);
+    }
+  }
+  .custom-slider {
+    @include mediaMin(1340) {
+      opacity: 1;
+      visibility: visible;
+      overflow: unset;
+    }
+    &.slick-initialized {
+      .slick-slide {
+        display: flex;
+      }
+    }
+  }
+  &__slider {
+    @include mediaMin(1340) {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .slick-track {
+      padding: 15px 0 0;
+      display: flex;
+      gap: 0.75rem;
+    }
+    .slick-slide {
+      img {
+        width: auto;
+      }
+    }
+  }
+  .media-logo {
+    width: 287px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    &:not(:first-child):not([data-slick-index="0"]):not(
+        [data-slick-index="4"]
+      ) {
+      margin-top: 10px;
+      align-items: start;
+      img {
+        // position: absolute;
+        // top: -15px;
+        // left: 20px;
+        margin-top: -30px;
+      }
+    }
+  }
+  .media-logo {
+    line-height: 115%;
+  }
+}
+
+.page-ai-seo {
+  .with-gradient {
+    //blue gradient
+    &:after {
+      content: "";
+      position: absolute;
+      right: 14%;
+      bottom: 0;
+      z-index: -2;
+      width: 400px;
+      height: 400px;
+    }
+    &-blue {
+      &:after {
+        background: rgba(57, 70, 244, 0.4);
+        filter: blur(150px);
+      }
+    }
+    &-pink {
+      &:before {
+        background-color: rgba(255, 57, 123, 0.4);
+        width: 300px;
+        height: 300px;
+        z-index: -2;
+        bottom: -60px;
+        filter: blur(150px);
+      }
+    }
+  }
+  .related-articles {
+    .title {
+      width: 250px;
+      max-width: 100%;
+      @include mediaMin(500) {
+        width: auto;
+      }
+    }
+  }
+  .block-banner {
+    @include mediaMin(992) {
+      position: relative;
+
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        z-index: -2;
+        left: 0;
+      }
+      //blue gradient
+      &:before {
+        background: rgba(57, 70, 244, 0.4);
+        filter: blur(150px);
+        width: 300px;
+        height: 300px;
+      }
+      //pink gradient
+      &:after {
+        background: rgba(255, 57, 123, 0.4);
+        filter: blur(150px);
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+  .block-content-slider {
+    margin-top: 1rem;
+    @include mediaMin(992) {
+      margin-top: 0;
+    }
+  }
+
+  .section-businesses {
+    padding-top: 1rem;
+    @include mediaMin(992) {
+      margin-top: 0 !important;
+    }
+    .btn.btn-blue {
+      min-width: auto;
+      @include mediaMax(1200) {
+        padding: 1rem 0.5rem;
+      }
+    }
+    .col-12 {
+      &:last-child {
+        .services-card-body {
+          @include mediaMax(992) {
+            display: block !important;
+          }
+        }
+      }
+    }
+  }
+  .related-articles {
+    .slick-dots {
+      position: relative;
+      bottom: 0;
+      margin-top: 1.5rem;
+    }
+  }
+  .section-faq-service {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    @include mediaMin(992) {
+      margin-top: 3rem;
+    }
+  }
+}

@@ -5,6 +5,29 @@
   p {
     line-height: 115%;
   }
+  @at-root .section-hero-ai-seo & {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 100%;
+    font-family: $f-sto-sb;
+
+    @include mediaMin(1024) {
+      width: 118px;
+      height: 118px;
+    }
+    @include mediaMax(1024) {
+      img {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
 
   @at-root .services-box & {
     width: 80px;
@@ -78,6 +101,13 @@
     color: $color-blue;
     font-family: $f-sto-m;
     display: block;
+    @at-root .section-hero-ai-seo & {
+      line-height: 100%;
+      font-size: 1.125rem;
+      @include mediaMin(1024) {
+        font-size: 1.5rem;
+      }
+    }
     @at-root .bg-wrap & {
       font-size: 2rem;
     }
@@ -99,6 +129,14 @@
       font-size: 1.125rem;
       @include mediaMin(1340) {
         font-size: 1.5rem;
+      }
+    }
+  }
+  .text {
+    @at-root .section-hero-ai-seo & {
+      font-size: 0.625rem;
+      @include mediaMin(1024) {
+        font-size: 13px;
       }
     }
   }

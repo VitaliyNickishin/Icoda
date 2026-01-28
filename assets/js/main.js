@@ -81,7 +81,7 @@ var onSubmitReCaptcha = function (token) {
             utm_key +
             '" value="' +
             decodeURIComponent(utm_value) +
-            '" />'
+            '" />',
         );
       }
     });
@@ -99,7 +99,7 @@ var onSubmitReCaptcha = function (token) {
       jQuery('input[name="head_user_country_ip_detected"]').length
     ) {
       user_country_ip_detected = jQuery(
-        'input[name="head_user_country_ip_detected"]'
+        'input[name="head_user_country_ip_detected"]',
       ).val();
       setCookie("user_country_ip_detected", user_country_ip_detected);
     }
@@ -111,7 +111,7 @@ var onSubmitReCaptcha = function (token) {
       $form.append(
         '<input type="hidden" name="user-country" value="' +
           decodeURIComponent(user_country_ip_detected) +
-          '" />'
+          '" />',
       );
     }
 
@@ -137,7 +137,7 @@ var onSubmitReCaptcha = function (token) {
             $form.find('button[type="submit"]').text(old_text);
           }, 200);
         }
-      }
+      },
     );
     $form.data("submit", "no");
     $form.removeClass("submitting-form");
@@ -154,7 +154,7 @@ jQuery(document).ready(function ($) {
   jQuery("[data-conference]").each(function () {
     const conferenceModalId = $(this).data("conferenceId");
     modalConferenceCookies[conferenceModalId] = getCookie(
-      "modal-conference-" + conferenceModalId
+      "modal-conference-" + conferenceModalId,
     );
   });
 
@@ -190,7 +190,7 @@ jQuery(document).ready(function ($) {
       if (!$parent.parent().hasClass("navbar-nav")) {
         $el.next().css({ top: $el[0].offsetTop, left: $parent.outerWidth() });
       }
-    }
+    },
   );
 
   // $(".menu-item-has-children").on("mouseenter", (e) => {
@@ -222,7 +222,7 @@ jQuery(document).ready(function ($) {
         $("body").css("overflow", "hidden");
         if (
           /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
+            navigator.userAgent,
           )
         ) {
         } else {
@@ -255,7 +255,7 @@ jQuery(document).ready(function ($) {
     $("body").css("overflow", "hidden");
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       )
     ) {
     } else {
@@ -286,7 +286,7 @@ jQuery(document).ready(function ($) {
       $("body").css("overflow", "hidden");
       if (
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
+          navigator.userAgent,
         )
       ) {
       } else {
@@ -308,7 +308,7 @@ jQuery(document).ready(function ($) {
     $("body").css("overflow", "hidden");
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       )
     ) {
     } else {
@@ -331,7 +331,7 @@ jQuery(document).ready(function ($) {
       $(div)
         .find("form")
         .append(
-          `<input type="hidden" name="is-banner-review-block" value="${initedFromBannerReviewBlock}" />`
+          `<input type="hidden" name="is-banner-review-block" value="${initedFromBannerReviewBlock}" />`,
         );
     }
 
@@ -350,7 +350,7 @@ jQuery(document).ready(function ($) {
     $("body").css("overflow", "inherit");
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       )
     ) {
     } else {
@@ -411,13 +411,13 @@ jQuery(document).ready(function ($) {
       while (elem.innerHTML.search(">wp<!-- start -->") !== -1) {
         elem.innerHTML = elem.innerHTML.replace(
           ">wp<!-- start -->",
-          "><!-- start -->"
+          "><!-- start -->",
         );
       }
       while (elem.innerHTML.search(">— wp:<!-- start -->") !== -1) {
         elem.innerHTML = elem.innerHTML.replace(
           ">— wp:<!-- start -->",
-          "><!-- start -->"
+          "><!-- start -->",
         );
       }
     }
@@ -481,7 +481,7 @@ jQuery(document).ready(function ($) {
         {
           scrollTop: sectionPos,
         },
-        500
+        500,
       );
     });
   };
@@ -596,7 +596,7 @@ jQuery(document).ready(function ($) {
           .length > 0
       ) {
         $(
-          '[data-action="youtube-chanels-slider"]:not(.slick-initialized)'
+          '[data-action="youtube-chanels-slider"]:not(.slick-initialized)',
         ).slick({
           variableWidth: true,
           // slidesToScroll: 1,
@@ -623,7 +623,7 @@ jQuery(document).ready(function ($) {
           .length > 0
       ) {
         $(
-          '[data-action="twitter-chanels-slider"]:not(.slick-initialized)'
+          '[data-action="twitter-chanels-slider"]:not(.slick-initialized)',
         ).slick({
           variableWidth: true,
           slidesToScroll: 1,
@@ -650,7 +650,7 @@ jQuery(document).ready(function ($) {
           .length > 0
       ) {
         $(
-          '[data-action="tik-tok-chanels-slider"]:not(.slick-initialized)'
+          '[data-action="tik-tok-chanels-slider"]:not(.slick-initialized)',
         ).slick({
           variableWidth: true,
           slidesToScroll: 1,
@@ -702,7 +702,7 @@ jQuery(document).ready(function ($) {
           .length > 0
       ) {
         $('[data-action="youtube-chanels-slider"].slick-initialized').slick(
-          "unslick"
+          "unslick",
         );
       }
       if (
@@ -710,7 +710,7 @@ jQuery(document).ready(function ($) {
           .length > 0
       ) {
         $('[data-action="twitter-chanels-slider"].slick-initialized').slick(
-          "unslick"
+          "unslick",
         );
       }
       if (
@@ -718,7 +718,7 @@ jQuery(document).ready(function ($) {
           .length > 0
       ) {
         $('[data-action="tik-tok-chanels-slider"].slick-initialized').slick(
-          "unslick"
+          "unslick",
         );
       }
       if (jQuery('[data-action="press-slider"].slick-initialized').length > 0) {
@@ -779,7 +779,7 @@ jQuery(document).ready(function ($) {
                 jQuery('input[name="head-utm-' + utm_key + '"]').length
               ) {
                 utm_value = jQuery(
-                  'input[name="head-utm-' + utm_key + '"]'
+                  'input[name="head-utm-' + utm_key + '"]',
                 ).val();
                 setCookie("utm-" + utm_key, utm_value);
               }
@@ -794,7 +794,7 @@ jQuery(document).ready(function ($) {
                     utm_key +
                     '" value="' +
                     decodeURIComponent(utm_value) +
-                    '" />'
+                    '" />',
                 );
               }
             });
@@ -805,7 +805,7 @@ jQuery(document).ready(function ($) {
               inputCountry.remove();
             }
             var user_country_ip_detected = getCookie(
-              "user_country_ip_detected"
+              "user_country_ip_detected",
             );
             if (
               (user_country_ip_detected === undefined ||
@@ -814,7 +814,7 @@ jQuery(document).ready(function ($) {
               jQuery('input[name="head_user_country_ip_detected"]').length
             ) {
               user_country_ip_detected = jQuery(
-                'input[name="head_user_country_ip_detected"]'
+                'input[name="head_user_country_ip_detected"]',
               ).val();
               setCookie("user_country_ip_detected", user_country_ip_detected);
             }
@@ -826,7 +826,7 @@ jQuery(document).ready(function ($) {
               $(form).append(
                 '<input type="hidden" name="user-country" value="' +
                   decodeURIComponent(user_country_ip_detected) +
-                  '" />'
+                  '" />',
               );
             }
 
@@ -856,7 +856,7 @@ jQuery(document).ready(function ($) {
                   }, 200);
                 } else {
                 }
-              }
+              },
             );
             $(form).data("submit", "no");
             $(form).removeClass("submitting-form");
@@ -917,7 +917,7 @@ jQuery(document).ready(function ($) {
                 jQuery('input[name="head-utm-' + utm_key + '"]').length
               ) {
                 utm_value = jQuery(
-                  'input[name="head-utm-' + utm_key + '"]'
+                  'input[name="head-utm-' + utm_key + '"]',
                 ).val();
                 setCookie("utm-" + utm_key, utm_value);
               }
@@ -932,7 +932,7 @@ jQuery(document).ready(function ($) {
                     utm_key +
                     '" value="' +
                     decodeURIComponent(utm_value) +
-                    '" />'
+                    '" />',
                 );
               }
             });
@@ -943,7 +943,7 @@ jQuery(document).ready(function ($) {
               inputCountry.remove();
             }
             var user_country_ip_detected = getCookie(
-              "user_country_ip_detected"
+              "user_country_ip_detected",
             );
             if (
               (user_country_ip_detected === undefined ||
@@ -952,7 +952,7 @@ jQuery(document).ready(function ($) {
               jQuery('input[name="head_user_country_ip_detected"]').length
             ) {
               user_country_ip_detected = jQuery(
-                'input[name="head_user_country_ip_detected"]'
+                'input[name="head_user_country_ip_detected"]',
               ).val();
               setCookie("user_country_ip_detected", user_country_ip_detected);
             }
@@ -964,7 +964,7 @@ jQuery(document).ready(function ($) {
               $(form).append(
                 '<input type="hidden" name="user-country" value="' +
                   decodeURIComponent(user_country_ip_detected) +
-                  '" />'
+                  '" />',
               );
             }
 
@@ -994,7 +994,7 @@ jQuery(document).ready(function ($) {
                   }, 200);
                 } else {
                 }
-              }
+              },
             );
             $(form).data("submit", "no");
             $(form).removeClass("submitting-form");
@@ -1061,6 +1061,7 @@ jQuery(document).ready(function ($) {
   initSliderHero();
   initBoxContentSlider();
   initSliderHeroServices();
+  initSliderHeroAiSeo();
   initSliderServicesList();
   initSliderServicesGrid();
   initSliderStories();
@@ -1077,7 +1078,7 @@ var scrollToHeading = function () {
       {
         scrollTop: sectionPos,
       },
-      500
+      500,
     );
   });
 };
@@ -1234,7 +1235,7 @@ function headerFixed() {
     header.before(
       '<div class="headerSpace d-none" style="height: ' +
         headerSpaceH +
-        'px;" ></div>'
+        'px;" ></div>',
     );
   }
   $(window).scroll(function () {
@@ -1337,7 +1338,7 @@ function move(x, y) {
   // в css
   $img.css(
     "transform",
-    "rotateY(" + trY + "deg) rotateX(" + trX + "deg) rotateZ(0deg) scale(1.05)"
+    "rotateY(" + trY + "deg) rotateX(" + trX + "deg) rotateZ(0deg) scale(1.05)",
   );
 }
 
@@ -1363,7 +1364,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropdownWrapper) {
   const dropdownList = dropdownWrapper.querySelector(".dropdown__list");
   const dropdownItems = dropdownList.querySelectorAll(".dropdown__list-item");
   const dropdownInput = dropdownWrapper.querySelector(
-    ".dropdown__input_hidden"
+    ".dropdown__input_hidden",
   );
 
   dropdownBtn.addEventListener("click", function () {
@@ -1384,7 +1385,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropdownWrapper) {
         .append(
           `${jQuery(this).find("svg")[0].outerHTML}<span class="ml-3">${
             this.innerText
-          }</span>`
+          }</span>`,
         );
       // dropdownBtn.innerText = this.innerText;
       dropdownInput.value = this.dataset.value;
@@ -1467,7 +1468,7 @@ window.congratsConfetti = function () {
     Promise.all([confettiPromise1, confettiPromise2, confettiPromise3]).then(
       () => {
         congratsContent.addClass("finished");
-      }
+      },
     );
 
     clearTimeout(celebrationTimeoutId);
@@ -1774,6 +1775,35 @@ const initSliderHeroServices = () => {
     });
   } else {
     $(".hero-slider-services.slick-initialized").slick("unslick");
+  }
+};
+$(window).on("load resize", function () {
+  initSliderHeroAiSeo();
+});
+const initSliderHeroAiSeo = () => {
+  if ($(window).width() < 1340) {
+    $(".hero-slider-ai-seo:not(.slick-initialized)").slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      swipeToSlide: true,
+      infinite: true,
+      arrows: false,
+      variableWidth: true,
+      cssEase: "linear",
+      rtl: $("body").hasClass("rtl") ? true : false,
+      speed: 500,
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  } else {
+    $(".hero-slider-ai-seo.slick-initialized").slick("unslick");
   }
 };
 
