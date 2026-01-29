@@ -128,6 +128,8 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <?php endif; ?>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/css/intlTelInput.css">
+
   <?php wp_head(); ?>
 </head>
 
@@ -158,7 +160,7 @@
   <div class="<?php get_class_wrap('wrap'); ?>">
 
     <?php if (ICL_LANGUAGE_CODE == 'zh-hans') : ?>
-      <a href="#" target="_blank" class="link-wechat-fix pulse"><img src="/wp-content/uploads/2021/03/qr.png"></a>
+      <a href="#" target="_blank" class="link-wechat-fix pulse"><img loading="lazy" src="/wp-content/uploads/2021/03/qr.png"></a>
     <?php else : ?>
       <a href="<?php the_field('telegram_link-all_lang', 'option'); ?>" target="_blank" class="link-telegram-fix pulse"><i class="icon-ico-media-4"></i></a>
     <?php endif; ?>
@@ -169,7 +171,7 @@
           <div class="col-12 position-static">
             <div class="top-line">
               <a href="<?php echo !is_front_page() ? home_url() : '#'; ?>" class="logo">
-                <img src="/wp-content/uploads/2024/06/logo-icoda.svg" width="108" height="28" alt="Icoda">
+                <img loading="lazy" src="/wp-content/uploads/2024/06/logo-icoda.svg" width="108" height="28" alt="Icoda">
               </a>
               <div class="mega-menu" data-action="mega-menu">
                 <?php get_template_part('template-parts/menu/mega-menu-new'); ?>

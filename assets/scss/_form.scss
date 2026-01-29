@@ -1,9 +1,11 @@
-button,input,textarea{
+button,
+input,
+textarea {
   padding: 0;
   margin: 0;
   transition: all 0.3s;
   outline: none;
-  &:focus{
+  &:focus {
     outline: none;
   }
 }
@@ -11,25 +13,27 @@ button,input,textarea{
   margin-right: -10px;
   margin-left: -10px;
 }
-.form-row>.col, .form-row>[class*=col-] {
+.form-row > .col,
+.form-row > [class*="col-"] {
   padding-right: 10px;
   padding-left: 10px;
 }
 
-.form-default{
+.form-default {
   position: relative;
-  
-  .form-control, input{
+
+  .form-control,
+  input {
     font: 12px/22px $f-sto-b;
     color: $color-dark-gray;
-    background: #FFFFFF;
-    border: 1px solid #DFE5FA;
+    background: #ffffff;
+    border: 1px solid #dfe5fa;
     border-radius: 2px;
     margin-bottom: 20px;
     height: 50px;
     padding: 0 15px;
     &:focus {
-      box-shadow: 0 0 0 1px rgba(0,123,255,.25);
+      box-shadow: 0 0 0 1px rgba(0, 123, 255, 0.25);
     }
     &::-webkit-input-placeholder {
       color: $color-dark-gray;
@@ -44,16 +48,16 @@ button,input,textarea{
       color: $color-dark-gray;
     }
   }
-  .wr-btn{
+  .wr-btn {
     margin-top: 15px;
     @include mediaMax(991) {
       text-align: center;
     }
   }
-  button.btn.btn-blue{
+  button.btn.btn-blue {
     min-width: 220px;
   }
-  label.error{
+  label.error {
     font-size: 11px;
     color: #b62b2f;
     position: absolute;
@@ -63,15 +67,16 @@ button,input,textarea{
   }
 }
 
-.form-default-header{
+.form-default-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
-  .h5{
+  .h5 {
     line-height: 34px;
   }
-  .h4, .h5{
+  .h4,
+  .h5 {
     padding-right: 15px;
   }
 }
@@ -79,8 +84,8 @@ button,input,textarea{
 // media
 
 @include media-breakpoint-down(sm) {
-  .form-default-header{
-    .h5{
+  .form-default-header {
+    .h5 {
       line-height: 28px;
     }
   }
@@ -89,22 +94,35 @@ button,input,textarea{
   .form-default-header {
     flex-direction: column;
     align-items: flex-start;
-    .h4, .h5{
+    .h4,
+    .h5 {
       padding-right: 0;
       margin-bottom: 20px;
     }
   }
 }
 @include media-breakpoint-only(md) {
-
 }
 @include media-breakpoint-only(lg) {
-  .form-default-header{
-    .h5{
+  .form-default-header {
+    .h5 {
       line-height: 28px;
     }
   }
 }
 
-
-
+.wr-form {
+  //intl-tel-input
+  .iti {
+    width: 100%;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+    }
+  }
+  .iti__search-icon {
+    top: 17px;
+  }
+  .iti__search-input {
+    padding-left: 30px;
+  }
+}

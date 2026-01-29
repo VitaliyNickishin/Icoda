@@ -32,7 +32,7 @@ $front_page_id = get_option('page_on_front');
             </div>
             <div class="col-md-12 col-lg-6">
                 <div class="wr-form">
-                    <form class="form-default form-default-desctop" action="submit.php" method="post">
+                    <form class="form-default form-default-desctop" method="post">
                         <input type="hidden" name="lang-source" value="<?php echo ICL_LANGUAGE_CODE; ?>" />
                         <div class="form-default-header">
                             <h1 class="h4"><?php echo __('Contact Us', 'icoda'); ?></h1>
@@ -47,14 +47,17 @@ $front_page_id = get_option('page_on_front');
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-12 col-md-6">
+                            <div class="col-12">
                                 <input type="text" name="name" class="form-control req" placeholder="<?php echo __('Your name', 'icoda'); ?>" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <input type="text" name="telegram" class="form-control req" placeholder="<?php echo __('WhatsApp / Telegram / Skype', 'icoda'); ?>" required>
+                                <input type="text" name="telegram" class="form-control req" placeholder="<?php echo __('WhatsApp / Telegram', 'icoda'); ?>" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input id="intlTel" type="tel" name="phone" inputmode="numeric" pattern="[0-9+ ]*" class="form-control req" placeholder="<?php echo __('Phone number', 'icoda'); ?>" required>
                             </div>
                             <div class="col-12">
-                                <input type="email" name="email" class="form-control req" placeholder="<?php echo __('Email', 'icoda'); ?>" required>
+                                <input name="email" class="form-control req" placeholder="<?php echo __('Email', 'icoda'); ?>" required>
                             </div>
                             <div class="col-12">
                                 <textarea name="message" class="form-control" rows="5" placeholder="<?php _e('Text message', 'icoda'); ?>"></textarea>
@@ -74,6 +77,14 @@ $front_page_id = get_option('page_on_front');
         </div>
     </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/js/intlTelInput.min.js"></script>
+<script>
+  const input = document.querySelector("#intlTel");
+  window.intlTelInput(input, {
+    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/js/utils.js"),
+  });
+</script>
 
 <?php get_template_part('template-parts/sections/meet-up', '', ['need_post_id' => $front_page_id]); ?>
 

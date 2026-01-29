@@ -1,0 +1,960 @@
+2024-10-21 14:15:31   ->   sha@icoda.io
+{"result":25993,"time":{"start":1729520117.65856,"finish":1729520118.1120639,"duration":0.45350384712219238,"processing":0.43116307258605957,"date_start":"2024-10-21T17:15:17+03:00","date_finish":"2024-10-21T17:15:18+03:00","operating_reset_at":1729520717,"operating":0.43114495277404785}}
+
+2024-10-21 14:29:49   ->   sha@icoda.io
+{"result":25995,"time":{"start":1729520975.7267389,"finish":1729520976.112963,"duration":0.38622403144836426,"processing":0.36867117881774902,"date_start":"2024-10-21T17:29:35+03:00","date_finish":"2024-10-21T17:29:36+03:00","operating_reset_at":1729521575,"operating":0.36864900588989258}}
+
+2024-10-22 12:07:22   ->   lushov95@gmail.com
+{"result":26011,"time":{"start":1729598828.8337941,"finish":1729598829.377841,"duration":0.54404687881469727,"processing":0.51362395286560059,"date_start":"2024-10-22T15:07:08+03:00","date_finish":"2024-10-22T15:07:09+03:00","operating_reset_at":1729599428,"operating":0.51359391212463379}}
+
+2024-10-23 10:46:54   ->   m.pullen@propchain.com
+{"result":26031,"time":{"start":1729680401.234664,"finish":1729680401.475111,"duration":0.24044704437255859,"processing":0.21797585487365723,"date_start":"2024-10-23T13:46:41+03:00","date_finish":"2024-10-23T13:46:41+03:00","operating_reset_at":1729681001,"operating":0.21796107292175293}}
+
+2024-10-24 12:05:02   ->   rajaram@cypherock.com
+{"result":26061,"time":{"start":1729771488.78827,"finish":1729771489.2279561,"duration":0.43968605995178223,"processing":0.41472697257995605,"date_start":"2024-10-24T15:04:48+03:00","date_finish":"2024-10-24T15:04:49+03:00","operating_reset_at":1729772088,"operating":0.41471219062805176}}
+
+2024-10-25 06:58:01   ->   arundas4496@outlook.com
+{"result":26079,"time":{"start":1729839467.7324269,"finish":1729839468.034555,"duration":0.30212807655334473,"processing":0.28042221069335938,"date_start":"2024-10-25T09:57:47+03:00","date_finish":"2024-10-25T09:57:48+03:00","operating_reset_at":1729840067,"operating":0.28040599822998047}}
+
+2024-10-26 09:16:31   ->   ayomide@0xpepper.com
+{"result":26095,"time":{"start":1729934177.5471859,"finish":1729934177.952239,"duration":0.40505313873291016,"processing":0.37435698509216309,"date_start":"2024-10-26T12:16:17+03:00","date_finish":"2024-10-26T12:16:17+03:00","operating_reset_at":1729934777,"operating":0.37433981895446777}}
+
+2024-10-29 17:33:00   ->   svetashiry@gmail.com
+{"result":26141,"time":{"start":1730223180.3893139,"finish":1730223181.0514159,"duration":0.66210198402404785,"processing":0.63563799858093262,"date_start":"2024-10-29T20:33:00+03:00","date_finish":"2024-10-29T20:33:01+03:00","operating_reset_at":1730223780,"operating":0.63562417030334473}}
+
+2024-11-01 09:22:42   ->   prashant@impt.io
+{"result":26189,"time":{"start":1730452962.540657,"finish":1730452962.856075,"duration":0.31541800498962402,"processing":0.29300999641418457,"date_start":"2024-11-01T12:22:42+03:00","date_finish":"2024-11-01T12:22:42+03:00","operating_reset_at":1730453562,"operating":0.29299688339233398}}
+
+2024-11-12 14:10:04   ->   vitalii.t@unoaffiliates.com
+{"result":26495,"time":{"start":1731420602.7539079,"finish":1731420602.971523,"duration":0.21761512756347656,"processing":0.1977078914642334,"date_start":"2024-11-12T17:10:02+03:00","date_finish":"2024-11-12T17:10:02+03:00","operating_reset_at":1731421202,"operating":0.8365321159362793}}
+
+2024-11-19 12:41:14   ->   steve.abu.dhabi365@gmail.com
+{"result":26591,"time":{"start":1732020074.1052649,"finish":1732020074.3713641,"duration":0.26609921455383301,"processing":0.25038504600524902,"date_start":"2024-11-19T15:41:14+03:00","date_finish":"2024-11-19T15:41:14+03:00","operating_reset_at":1732020674,"operating":0.58510398864746094}}
+
+2024-11-22 12:48:44   ->   alex@infera.org
+{"result":26677,"time":{"start":1732279723.202419,"finish":1732279723.516587,"duration":0.31416797637939453,"processing":0.29336786270141602,"date_start":"2024-11-22T15:48:43+03:00","date_finish":"2024-11-22T15:48:43+03:00","operating_reset_at":1732280323,"operating":0.2933499813079834}}
+
+2024-11-23 15:45:27   ->   listaraweb3@gmail.com
+{"result":26693,"time":{"start":1732376726.0571139,"finish":1732376726.8088951,"duration":0.75178122520446777,"processing":0.7173759937286377,"date_start":"2024-11-23T18:45:26+03:00","date_finish":"2024-11-23T18:45:26+03:00","operating_reset_at":1732377326,"operating":0.71735596656799316}}
+
+2024-11-23 17:43:02   ->   tolani_deinde@hotmail.co.uk
+{"result":26701,"time":{"start":1732383781.511579,"finish":1732383781.7070639,"duration":0.19548487663269043,"processing":0.17324614524841309,"date_start":"2024-11-23T20:43:01+03:00","date_finish":"2024-11-23T20:43:01+03:00","operating_reset_at":1732384381,"operating":0.74916887283325195}}
+
+2024-11-23 17:43:49   ->   tolani_deinde@hotmail.co.uk
+{"result":26703,"time":{"start":1732383827.8193779,"finish":1732383828.578656,"duration":0.7592780590057373,"processing":0.66443920135498047,"date_start":"2024-11-23T20:43:47+03:00","date_finish":"2024-11-23T20:43:48+03:00","operating_reset_at":1732384427,"operating":1.4135899543762207}}
+
+2024-11-25 16:59:25   ->   eduardocunha2@gmail.com
+{"result":26735,"time":{"start":1732553964.0779021,"finish":1732553964.2346931,"duration":0.15679097175598145,"processing":0.13638710975646973,"date_start":"2024-11-25T19:59:24+03:00","date_finish":"2024-11-25T19:59:24+03:00","operating_reset_at":1732554564,"operating":0.61781620979309082}}
+
+2024-11-26 20:53:07   ->   fadwa.albhaisi2@gmail.com
+{"result":26761,"time":{"start":1732654385.467206,"finish":1732654386.0590739,"duration":0.59186792373657227,"processing":0.56952595710754395,"date_start":"2024-11-26T23:53:05+03:00","date_finish":"2024-11-26T23:53:06+03:00","operating_reset_at":1732654985,"operating":0.56951212882995605}}
+
+2024-11-29 15:31:18   ->   nikkinick8888@gmail.com
+{"result":26833,"time":{"start":1732894276.3136799,"finish":1732894276.6699171,"duration":0.35623717308044434,"processing":0.33748579025268555,"date_start":"2024-11-29T18:31:16+03:00","date_finish":"2024-11-29T18:31:16+03:00","operating_reset_at":1732894876,"operating":0.33747315406799316}}
+
+2024-12-02 14:45:10   ->   ag@whattofarm.io
+{"result":26883,"time":{"start":1733150708.4794819,"finish":1733150708.718756,"duration":0.23927402496337891,"processing":0.21951699256896973,"date_start":"2024-12-02T17:45:08+03:00","date_finish":"2024-12-02T17:45:08+03:00","operating_reset_at":1733151308,"operating":0.21949911117553711}}
+
+2024-12-04 08:30:16   ->   ceo@bonex.net
+{"result":26925,"time":{"start":1733301014.9257369,"finish":1733301015.1015601,"duration":0.17582321166992188,"processing":0.1542201042175293,"date_start":"2024-12-04T11:30:14+03:00","date_finish":"2024-12-04T11:30:15+03:00","operating_reset_at":1733301614,"operating":0.37322211265563965}}
+
+2024-12-14 02:10:02   ->   hbarsolana8@gmail.com
+{"result":27081,"time":{"start":1734142199.673821,"finish":1734142200.1801469,"duration":0.50632596015930176,"processing":0.48330998420715332,"date_start":"2024-12-14T05:09:59+03:00","date_finish":"2024-12-14T05:10:00+03:00","operating_reset_at":1734142799,"operating":0.48329401016235352}}
+
+2024-12-14 11:37:10   ->   mrkj@arknet.io
+{"result":27085,"time":{"start":1734176227.369565,"finish":1734176227.835408,"duration":0.46584296226501465,"processing":0.44140100479125977,"date_start":"2024-12-14T14:37:07+03:00","date_finish":"2024-12-14T14:37:07+03:00","operating_reset_at":1734176827,"operating":0.44138216972351074}}
+
+2024-12-14 19:59:38   ->   joni.koivuneva@gmail.com
+{"result":27087,"time":{"start":1734206374.7585821,"finish":1734206375.338217,"duration":0.5796349048614502,"processing":0.55034089088439941,"date_start":"2024-12-14T22:59:34+03:00","date_finish":"2024-12-14T22:59:35+03:00","operating_reset_at":1734206974,"operating":0.55032682418823242}}
+
+2024-12-17 18:45:04   ->   johninvestmentuvs@protonmail.com
+{"result":27127,"time":{"start":1734461100.697892,"finish":1734461101.191458,"duration":0.49356603622436523,"processing":0.4586639404296875,"date_start":"2024-12-17T21:45:00+03:00","date_finish":"2024-12-17T21:45:01+03:00","operating_reset_at":1734461700,"operating":0.4586491584777832}}
+
+2024-12-18 10:55:53   ->   sireethorn@chillchat.me
+{"result":27133,"time":{"start":1734519337.0855081,"finish":1734519337.3113749,"duration":0.22586679458618164,"processing":0.20354914665222168,"date_start":"2024-12-18T13:55:37+03:00","date_finish":"2024-12-18T13:55:37+03:00","operating_reset_at":1734519937,"operating":0.20353412628173828}}
+
+2024-12-18 10:56:25   ->   sireethorn@chillchat.me
+{"result":27135,"time":{"start":1734519365.6172669,"finish":1734519382.6597021,"duration":17.042435169219971,"processing":10.856502056121826,"date_start":"2024-12-18T13:56:05+03:00","date_finish":"2024-12-18T13:56:22+03:00","operating_reset_at":1734519971,"operating":10.856476068496704}}
+
+2024-12-18 10:56:45   ->   sireethorn@chillchat.me
+{"result":27137,"time":{"start":1734519401.7806809,"finish":1734519402.122458,"duration":0.34177708625793457,"processing":0.30087399482727051,"date_start":"2024-12-18T13:56:41+03:00","date_finish":"2024-12-18T13:56:42+03:00","operating_reset_at":1734520001,"operating":11.157329082489014}}
+
+2024-12-18 11:14:21   ->   sha@icoda.io
+{"result":27139,"time":{"start":1734520458.139698,"finish":1734520458.3959379,"duration":0.25623989105224609,"processing":0.2181241512298584,"date_start":"2024-12-18T14:14:18+03:00","date_finish":"2024-12-18T14:14:18+03:00","operating_reset_at":1734521058,"operating":0.21810507774353027}}
+
+2024-12-18 11:15:17   ->   sha@icoda.io
+{"result":27141,"time":{"start":1734520514.572226,"finish":1734520514.7633049,"duration":0.19107890129089355,"processing":0.16393399238586426,"date_start":"2024-12-18T14:15:14+03:00","date_finish":"2024-12-18T14:15:14+03:00","operating_reset_at":1734521114,"operating":0.38200998306274414}}
+
+2024-12-18 17:48:28   ->   nate@helmcapitalgroup.com
+{"result":27151,"time":{"start":1734544105.09161,"finish":1734544105.4148271,"duration":0.32321715354919434,"processing":0.30239200592041016,"date_start":"2024-12-18T20:48:25+03:00","date_finish":"2024-12-18T20:48:25+03:00","operating_reset_at":1734544705,"operating":0.30236983299255371}}
+
+2024-12-21 14:18:48   ->   sergiomirandavaras@hotmail.com
+{"result":27203,"time":{"start":1734790724.480094,"finish":1734790725.170094,"duration":0.69000005722045898,"processing":0.60001301765441895,"date_start":"2024-12-21T17:18:44+03:00","date_finish":"2024-12-21T17:18:45+03:00","operating_reset_at":1734791324,"operating":0.59999203681945801}}
+
+2024-12-21 14:19:14   ->   sergiomirandavaras@hotmail.com
+
+
+2024-12-24 10:37:16   ->   jaime@oobit.com
+{"result":27239,"time":{"start":1735036632.8447969,"finish":1735036633.002728,"duration":0.15793108940124512,"processing":0.13776183128356934,"date_start":"2024-12-24T13:37:12+03:00","date_finish":"2024-12-24T13:37:13+03:00","operating_reset_at":1735037232,"operating":0.41284990310668945}}
+
+2024-12-24 23:47:46   ->   elise@buildwithtoki.com
+{"result":27265,"time":{"start":1735084061.8742089,"finish":1735084062.220762,"duration":0.34655308723449707,"processing":0.32405900955200195,"date_start":"2024-12-25T02:47:41+03:00","date_finish":"2024-12-25T02:47:42+03:00","operating_reset_at":1735084661,"operating":0.32403707504272461}}
+
+2024-12-26 13:46:01   ->   sonny@bitunix.com
+{"result":27283,"time":{"start":1735220757.7412059,"finish":1735220757.9077549,"duration":0.1665489673614502,"processing":0.14862608909606934,"date_start":"2024-12-26T16:45:57+03:00","date_finish":"2024-12-26T16:45:57+03:00","operating_reset_at":1735221357,"operating":0.57312703132629395}}
+
+2024-12-30 06:58:32   ->   elise@buildwithtoki.com
+{"result":27321,"time":{"start":1735541907.8816819,"finish":1735541908.160351,"duration":0.27866911888122559,"processing":0.25113201141357422,"date_start":"2024-12-30T09:58:27+03:00","date_finish":"2024-12-30T09:58:28+03:00","operating_reset_at":1735542507,"operating":0.25111699104309082}}
+
+2024-12-30 10:43:42   ->   test@dev.com
+{"result":27327,"time":{"start":1735555417.637254,"finish":1735555418.0826781,"duration":0.44542407989501953,"processing":0.40671896934509277,"date_start":"2024-12-30T13:43:37+03:00","date_finish":"2024-12-30T13:43:38+03:00","operating_reset_at":1735556017,"operating":0.40669798851013184}}
+
+2024-12-30 10:47:47   ->   sha@icoda.io
+{"result":27329,"time":{"start":1735555662.6577909,"finish":1735555662.8492341,"duration":0.19144320487976074,"processing":0.17252206802368164,"date_start":"2024-12-30T13:47:42+03:00","date_finish":"2024-12-30T13:47:42+03:00","operating_reset_at":1735556262,"operating":0.57920193672180176}}
+
+2024-12-31 12:17:27   ->   cynthia.w@mexc.com
+{"result":27347,"time":{"start":1735647443.07552,"finish":1735647443.412318,"duration":0.33679795265197754,"processing":0.31649398803710938,"date_start":"2024-12-31T15:17:23+03:00","date_finish":"2024-12-31T15:17:23+03:00","operating_reset_at":1735648043,"operating":0.31647896766662598}}
+
+2025-01-01 18:18:16   ->   elise@buildwithtoki.com
+{"result":27369,"time":{"start":1735755491.8302259,"finish":1735755491.9917569,"duration":0.16153097152709961,"processing":0.14348697662353516,"date_start":"2025-01-01T21:18:11+03:00","date_finish":"2025-01-01T21:18:11+03:00","operating_reset_at":1735756091,"operating":0.14347004890441895}}
+
+2025-01-04 12:14:15   ->   a.mattmatt@gmail.com
+{"result":27423,"time":{"start":1735992850.447876,"finish":1735992850.7157061,"duration":0.26783013343811035,"processing":0.24736809730529785,"date_start":"2025-01-04T15:14:10+03:00","date_finish":"2025-01-04T15:14:10+03:00","operating_reset_at":1735993450,"operating":0.24735093116760254}}
+
+2025-01-05 12:27:15   ->   info@asicgenesis.com
+{"result":27431,"time":{"start":1736080029.922545,"finish":1736080030.113457,"duration":0.19091200828552246,"processing":0.17195320129394531,"date_start":"2025-01-05T15:27:09+03:00","date_finish":"2025-01-05T15:27:10+03:00","operating_reset_at":1736080629,"operating":0.93525004386901855}}
+
+2025-01-05 12:28:08   ->   info@asicgenesis.com
+
+
+2025-01-05 12:28:58   ->   info@asicgenesis.com
+
+
+2025-01-05 12:29:46   ->   info@asicgenesis.com
+
+
+2025-01-05 12:37:10   ->   info@asicgenesis.com
+
+
+2025-01-05 12:40:24   ->   liamgreen0897@gmail.com
+{"result":27433,"time":{"start":1736080818.9806061,"finish":1736080819.136266,"duration":0.15565991401672363,"processing":0.13578081130981445,"date_start":"2025-01-05T15:40:18+03:00","date_finish":"2025-01-05T15:40:19+03:00","operating_reset_at":1736081419,"operating":0.13576483726501465}}
+
+2025-01-05 12:42:39   ->   liamgreen0897@gmail.com
+
+
+2025-01-05 12:43:08   ->   liamgreen0897@gmail.com
+
+
+2025-01-05 12:43:43   ->   liamgreen0897@gmail.com
+
+
+2025-01-05 12:47:28   ->   liamgreen0897@gmail.com
+
+
+2025-01-05 12:48:42   ->   info@asicgenesis.com
+
+
+2025-01-05 12:52:36   ->   liamgreen0897@gmail.com
+
+
+2025-01-05 13:03:40   ->   liamgreen0897@gmail.com
+
+
+2025-01-05 13:11:21   ->   info@asicgenesis.com
+
+
+2025-01-05 13:26:42   ->   liamgreen0897@gmail.com
+
+
+2025-01-05 13:46:53   ->   info@asicgenesis.com
+{"result":27437,"time":{"start":1736084808.2994449,"finish":1736084808.4823749,"duration":0.18292999267578125,"processing":0.15878510475158691,"date_start":"2025-01-05T16:46:48+03:00","date_finish":"2025-01-05T16:46:48+03:00","operating_reset_at":1736085408,"operating":0.15875411033630371}}
+
+2025-01-05 14:02:34   ->   liamgreen0897@gmail.com
+{"result":27439,"time":{"start":1736085749.7967451,"finish":1736085749.9541659,"duration":0.15742087364196777,"processing":0.13827085494995117,"date_start":"2025-01-05T17:02:29+03:00","date_finish":"2025-01-05T17:02:29+03:00","operating_reset_at":1736086349,"operating":0.13825201988220215}}
+
+2025-01-06 15:09:03   ->   elise@buildwithtoki.com
+{"result":27465,"time":{"start":1736176138.259464,"finish":1736176138.4259441,"duration":0.16648006439208984,"processing":0.14919590950012207,"date_start":"2025-01-06T18:08:58+03:00","date_finish":"2025-01-06T18:08:58+03:00","operating_reset_at":1736176738,"operating":0.14918303489685059}}
+
+2025-01-06 21:25:10   ->   andrea@ferveret.com
+{"result":27469,"time":{"start":1736198705.1986821,"finish":1736198705.85976,"duration":0.66107797622680664,"processing":0.63399791717529297,"date_start":"2025-01-07T00:25:05+03:00","date_finish":"2025-01-07T00:25:05+03:00","operating_reset_at":1736199305,"operating":0.63398289680480957}}
+
+2025-01-08 10:28:03   ->   pradhumnya@primevault.com
+{"result":27495,"time":{"start":1736332078.1845319,"finish":1736332078.330616,"duration":0.14608407020568848,"processing":0.12892389297485352,"date_start":"2025-01-08T13:27:58+03:00","date_finish":"2025-01-08T13:27:58+03:00","operating_reset_at":1736332678,"operating":0.30410003662109375}}
+
+2025-01-08 10:47:05   ->   albert.p@emei-group.ad
+{"result":27497,"time":{"start":1736333220.2689061,"finish":1736333220.4316659,"duration":0.16275978088378906,"processing":0.14603304862976074,"date_start":"2025-01-08T13:47:00+03:00","date_finish":"2025-01-08T13:47:00+03:00","operating_reset_at":1736333820,"operating":0.14601993560791016}}
+
+2025-01-08 20:15:01   ->   moniqsecrets22@gmail.com
+{"result":27505,"time":{"start":1736367296.163327,"finish":1736367296.5724721,"duration":0.40914511680603027,"processing":0.38948202133178711,"date_start":"2025-01-08T23:14:56+03:00","date_finish":"2025-01-08T23:14:56+03:00","operating_reset_at":1736367896,"operating":0.3894650936126709}}
+
+2025-01-10 01:41:46   ->   onlinegamingexpert08@gmail.com
+{"result":27529,"time":{"start":1736473301.110466,"finish":1736473301.2936721,"duration":0.18320608139038086,"processing":0.16555881500244141,"date_start":"2025-01-10T04:41:41+03:00","date_finish":"2025-01-10T04:41:41+03:00","operating_reset_at":1736473901,"operating":0.76035809516906738}}
+
+2025-01-10 13:16:14   ->   karthik.sperax@gmail.com
+{"result":27535,"time":{"start":1736514967.92975,"finish":1736514968.9150381,"duration":0.98528814315795898,"processing":0.95581698417663574,"date_start":"2025-01-10T16:16:07+03:00","date_finish":"2025-01-10T16:16:08+03:00","operating_reset_at":1736515567,"operating":0.95580387115478516}}
+
+2025-01-10 16:11:00   ->   nicolas@theharmonycollection.com
+{"result":27537,"time":{"start":1736525454.1437049,"finish":1736525454.620486,"duration":0.47678112983703613,"processing":0.45684003829956055,"date_start":"2025-01-10T19:10:54+03:00","date_finish":"2025-01-10T19:10:54+03:00","operating_reset_at":1736526054,"operating":0.45682692527770996}}
+
+2025-01-12 04:15:02   ->   kleossports@gmail.com
+{"result":27565,"time":{"start":1736655296.3567021,"finish":1736655296.9806859,"duration":0.62398386001586914,"processing":0.59646296501159668,"date_start":"2025-01-12T07:14:56+03:00","date_finish":"2025-01-12T07:14:56+03:00","operating_reset_at":1736655896,"operating":0.59644484519958496}}
+
+2025-01-15 07:49:36   ->   alberteli@mail.ru
+{"result":27617,"time":{"start":1736927369.936811,"finish":1736927370.136261,"duration":0.19945001602172852,"processing":0.17746496200561523,"date_start":"2025-01-15T10:49:29+03:00","date_finish":"2025-01-15T10:49:30+03:00","operating_reset_at":1736927969,"operating":0.17745113372802734}}
+
+2025-01-15 20:20:54   ->   mary.tchir@abfpay.com
+{"result":27631,"time":{"start":1736972448.342355,"finish":1736972448.9864581,"duration":0.64410305023193359,"processing":0.61918497085571289,"date_start":"2025-01-15T23:20:48+03:00","date_finish":"2025-01-15T23:20:48+03:00","operating_reset_at":1736973048,"operating":0.61916995048522949}}
+
+2025-01-16 07:00:07   ->   skinznicole@gmail.com
+{"result":27643,"time":{"start":1737010807.0383711,"finish":1737010807.1854801,"duration":0.14710903167724609,"processing":0.12784409523010254,"date_start":"2025-01-16T10:00:07+03:00","date_finish":"2025-01-16T10:00:07+03:00","operating_reset_at":1737011407,"operating":0.45055985450744629}}
+
+2025-01-16 10:22:31   ->   kudryavcsevnik@gmail.com
+{"result":27647,"time":{"start":1737022950.967654,"finish":1737022951.17871,"duration":0.21105599403381348,"processing":0.19133996963500977,"date_start":"2025-01-16T13:22:30+03:00","date_finish":"2025-01-16T13:22:31+03:00","operating_reset_at":1737023550,"operating":0.19132804870605469}}
+
+2025-01-16 11:35:16   ->   ahmadiab002@gmail.com
+{"result":27653,"time":{"start":1737027316.049726,"finish":1737027316.580384,"duration":0.53065800666809082,"processing":0.44297289848327637,"date_start":"2025-01-16T14:35:16+03:00","date_finish":"2025-01-16T14:35:16+03:00","operating_reset_at":1737027916,"operating":1.1327831745147705}}
+
+2025-01-17 06:33:00   ->   business@vyugmetaverse.com
+{"result":27671,"time":{"start":1737095580.544914,"finish":1737095580.7603371,"duration":0.2154231071472168,"processing":0.19764304161071777,"date_start":"2025-01-17T09:33:00+03:00","date_finish":"2025-01-17T09:33:00+03:00","operating_reset_at":1737096180,"operating":0.19763088226318359}}
+
+2025-01-20 07:15:05   ->   bhaaddinalkhewani@gmail.com
+{"result":27705,"time":{"start":1737357305.3463609,"finish":1737357305.5337989,"duration":0.18743801116943359,"processing":0.16418218612670898,"date_start":"2025-01-20T10:15:05+03:00","date_finish":"2025-01-20T10:15:05+03:00","operating_reset_at":1737357905,"operating":0.37907218933105469}}
+
+2025-01-20 13:18:25   ->   jakowicz@mail.com
+{"result":27713,"time":{"start":1737379104.500489,"finish":1737379104.83446,"duration":0.33397102355957031,"processing":0.3130648136138916,"date_start":"2025-01-20T16:18:24+03:00","date_finish":"2025-01-20T16:18:24+03:00","operating_reset_at":1737379704,"operating":0.31305408477783203}}
+
+2025-01-20 15:37:54   ->   test@test.com
+{"result":27717,"time":{"start":1737387473.5978589,"finish":1737387473.9211409,"duration":0.32328200340270996,"processing":0.29972314834594727,"date_start":"2025-01-20T18:37:53+03:00","date_finish":"2025-01-20T18:37:53+03:00","operating_reset_at":1737388073,"operating":0.29970693588256836}}
+
+2025-01-20 16:00:28   ->   test@test.com
+{"result":27719,"time":{"start":1737388827.5380681,"finish":1737388827.8362761,"duration":0.29820799827575684,"processing":0.28051400184631348,"date_start":"2025-01-20T19:00:27+03:00","date_finish":"2025-01-20T19:00:27+03:00","operating_reset_at":1737389427,"operating":0.28049612045288086}}
+
+2025-01-20 16:07:54   ->   test@test.com
+{"result":27721,"time":{"start":1737389273.967052,"finish":1737389274.1632459,"duration":0.19619393348693848,"processing":0.17650508880615234,"date_start":"2025-01-20T19:07:53+03:00","date_finish":"2025-01-20T19:07:54+03:00","operating_reset_at":1737389873,"operating":0.45698213577270508}}
+
+2025-01-20 16:08:26   ->   test@test.com
+{"result":27723,"time":{"start":1737389306.5269811,"finish":1737389306.709307,"duration":0.18232583999633789,"processing":0.16315698623657227,"date_start":"2025-01-20T19:08:26+03:00","date_finish":"2025-01-20T19:08:26+03:00","operating_reset_at":1737389906,"operating":0.62012124061584473}}
+
+2025-01-20 16:14:27   ->   barka8564@gmail.com
+{"result":27727,"time":{"start":1737389666.72365,"finish":1737389666.876663,"duration":0.15301299095153809,"processing":0.13620615005493164,"date_start":"2025-01-20T19:14:26+03:00","date_finish":"2025-01-20T19:14:26+03:00","operating_reset_at":1737390266,"operating":0.92420601844787598}}
+
+2025-01-21 03:48:14   ->   dimanzir@gmail.com
+{"result":27739,"time":{"start":1737431292.9273961,"finish":1737431293.6700389,"duration":0.74264287948608398,"processing":0.71993303298950195,"date_start":"2025-01-21T06:48:12+03:00","date_finish":"2025-01-21T06:48:13+03:00","operating_reset_at":1737431892,"operating":0.71991896629333496}}
+
+2025-01-22 09:48:16   ->   mantas@lithuaniahq.com
+{"result":27755,"time":{"start":1737539296.0966699,"finish":1737539296.2834461,"duration":0.18677616119384766,"processing":0.16587185859680176,"date_start":"2025-01-22T12:48:16+03:00","date_finish":"2025-01-22T12:48:16+03:00","operating_reset_at":1737539896,"operating":0.16585683822631836}}
+
+2025-01-22 09:48:21   ->   mantas@lithuaniahq.com
+{"result":27757,"time":{"start":1737539300.6561761,"finish":1737539300.8787129,"duration":0.22253680229187012,"processing":0.19890403747558594,"date_start":"2025-01-22T12:48:20+03:00","date_finish":"2025-01-22T12:48:20+03:00","operating_reset_at":1737539900,"operating":0.36474084854125977}}
+
+2025-01-23 15:31:46   ->   sid@socket.tech
+{"result":27789,"time":{"start":1737646306.4722309,"finish":1737646306.842314,"duration":0.37008309364318848,"processing":0.34520697593688965,"date_start":"2025-01-23T18:31:46+03:00","date_finish":"2025-01-23T18:31:46+03:00","operating_reset_at":1737646906,"operating":0.34519100189208984}}
+
+2025-01-27 13:14:07   ->   test1@dec.com
+{"result":27841,"time":{"start":1737983646.8470161,"finish":1737983647.187331,"duration":0.34031486511230469,"processing":0.30762481689453125,"date_start":"2025-01-27T16:14:06+03:00","date_finish":"2025-01-27T16:14:07+03:00","operating_reset_at":1737984246,"operating":0.30760502815246582}}
+
+2025-01-27 13:15:01   ->   test2@dec.com
+{"result":27843,"time":{"start":1737983701.10449,"finish":1737983701.2666121,"duration":0.16212201118469238,"processing":0.14086294174194336,"date_start":"2025-01-27T16:15:01+03:00","date_finish":"2025-01-27T16:15:01+03:00","operating_reset_at":1737984301,"operating":0.44844985008239746}}
+
+2025-01-27 13:28:52   ->   sha@icoda.io
+{"result":27845,"time":{"start":1737984532.4779749,"finish":1737984532.7613201,"duration":0.28334522247314453,"processing":0.23002099990844727,"date_start":"2025-01-27T16:28:52+03:00","date_finish":"2025-01-27T16:28:52+03:00","operating_reset_at":1737985132,"operating":0.23000097274780273}}
+
+2025-01-27 13:50:33   ->   sha@icoda.io
+{"result":27849,"time":{"start":1737985833.30195,"finish":1737985833.5539169,"duration":0.25196695327758789,"processing":0.2248990535736084,"date_start":"2025-01-27T16:50:33+03:00","date_finish":"2025-01-27T16:50:33+03:00","operating_reset_at":1737986433,"operating":0.224884033203125}}
+
+2025-01-27 14:00:30   ->   sha@icoda.io
+{"result":27851,"time":{"start":1737986430.3718469,"finish":1737986430.602176,"duration":0.23032903671264648,"processing":0.20821809768676758,"date_start":"2025-01-27T17:00:30+03:00","date_finish":"2025-01-27T17:00:30+03:00","operating_reset_at":1737987030,"operating":0.20820116996765137}}
+
+2025-01-28 11:46:30   ->   shankar.c@paycio.com
+{"result":27879,"time":{"start":1738064790.5700819,"finish":1738064790.996628,"duration":0.42654609680175781,"processing":0.40759110450744629,"date_start":"2025-01-28T14:46:30+03:00","date_finish":"2025-01-28T14:46:30+03:00","operating_reset_at":1738065390,"operating":0.40757608413696289}}
+
+2025-01-28 12:03:48   ->   support@seekprotocol.ai
+{"result":27881,"time":{"start":1738065828.0326459,"finish":1738065828.2620699,"duration":0.22942399978637695,"processing":0.20747709274291992,"date_start":"2025-01-28T15:03:48+03:00","date_finish":"2025-01-28T15:03:48+03:00","operating_reset_at":1738066428,"operating":0.20745301246643066}}
+
+2025-01-28 22:07:01   ->   piyush.aggarwal@gmail.com
+{"result":27889,"time":{"start":1738102020.5281179,"finish":1738102021.5298469,"duration":1.0017290115356445,"processing":0.97414398193359375,"date_start":"2025-01-29T01:07:00+03:00","date_finish":"2025-01-29T01:07:01+03:00","operating_reset_at":1738102620,"operating":0.97413015365600586}}
+
+2025-01-30 18:04:56   ->   keneksoft@gmail.com
+{"result":27933,"time":{"start":1738260294.9148891,"finish":1738260296.0891681,"duration":1.1742789745330811,"processing":1.151404857635498,"date_start":"2025-01-30T21:04:54+03:00","date_finish":"2025-01-30T21:04:56+03:00","operating_reset_at":1738260894,"operating":1.1513888835906982}}
+
+2025-02-01 12:12:20   ->   adachris@teddypufftoken.com
+{"result":27959,"time":{"start":1738411939.931458,"finish":1738411940.4412041,"duration":0.50974607467651367,"processing":0.49015903472900391,"date_start":"2025-02-01T15:12:19+03:00","date_finish":"2025-02-01T15:12:20+03:00","operating_reset_at":1738412539,"operating":0.49014186859130859}}
+
+2025-02-03 11:30:35   ->   info@my-projekt.at
+{"result":27997,"time":{"start":1738582234.9615519,"finish":1738582235.2389171,"duration":0.27736520767211914,"processing":0.24052309989929199,"date_start":"2025-02-03T14:30:34+03:00","date_finish":"2025-02-03T14:30:35+03:00","operating_reset_at":1738582834,"operating":0.24050211906433105}}
+
+2025-02-03 12:15:35   ->   info@my-projekt.at
+{"result":28001,"time":{"start":1738584934.148047,"finish":1738584935.1934831,"duration":1.0454361438751221,"processing":0.95100617408752441,"date_start":"2025-02-03T15:15:34+03:00","date_finish":"2025-02-03T15:15:35+03:00","operating_reset_at":1738585534,"operating":0.95097899436950684}}
+
+2025-02-04 10:33:12   ->   info@my-projekt.at
+{"result":28025,"time":{"start":1738665191.9934549,"finish":1738665192.389559,"duration":0.39610409736633301,"processing":0.34211087226867676,"date_start":"2025-02-04T13:33:11+03:00","date_finish":"2025-02-04T13:33:12+03:00","operating_reset_at":1738665792,"operating":0.34209108352661133}}
+
+2025-02-04 20:42:40   ->   chrissa@patientory.com
+{"result":28049,"time":{"start":1738701759.9712789,"finish":1738701760.2734351,"duration":0.30215620994567871,"processing":0.28204703330993652,"date_start":"2025-02-04T23:42:39+03:00","date_finish":"2025-02-04T23:42:40+03:00","operating_reset_at":1738702359,"operating":0.28203201293945312}}
+
+2025-02-05 05:25:25   ->   goldvargalina@gmail.com
+{"result":28059,"time":{"start":1738733124.1231339,"finish":1738733124.5092499,"duration":0.38611602783203125,"processing":0.36231112480163574,"date_start":"2025-02-05T08:25:24+03:00","date_finish":"2025-02-05T08:25:24+03:00","operating_reset_at":1738733724,"operating":0.3622899055480957}}
+
+2025-02-05 21:22:36   ->   juliokosta1@gmail.com
+{"result":28077,"time":{"start":1738790555.098412,"finish":1738790555.7590671,"duration":0.66065502166748047,"processing":0.63865780830383301,"date_start":"2025-02-06T00:22:35+03:00","date_finish":"2025-02-06T00:22:35+03:00","operating_reset_at":1738791155,"operating":0.63864612579345703}}
+
+2025-02-06 19:10:46   ->   kasra@wisdomise.com
+{"result":28099,"time":{"start":1738869045.6047339,"finish":1738869045.749934,"duration":0.14520001411437988,"processing":0.12928605079650879,"date_start":"2025-02-06T22:10:45+03:00","date_finish":"2025-02-06T22:10:45+03:00","operating_reset_at":1738869645,"operating":0.42148089408874512}}
+
+2025-02-06 21:24:00   ->   hola@4tuns.com
+{"result":28105,"time":{"start":1738877039.933187,"finish":1738877040.160177,"duration":0.2269899845123291,"processing":0.21170282363891602,"date_start":"2025-02-07T00:23:59+03:00","date_finish":"2025-02-07T00:24:00+03:00","operating_reset_at":1738877639,"operating":0.7473759651184082}}
+
+2025-02-09 04:02:48   ->   mf@odinsilver.com
+{"result":28145,"time":{"start":1739073767.1902139,"finish":1739073767.5625451,"duration":0.37233114242553711,"processing":0.35102701187133789,"date_start":"2025-02-09T07:02:47+03:00","date_finish":"2025-02-09T07:02:47+03:00","operating_reset_at":1739074367,"operating":0.35101413726806641}}
+
+2025-02-09 18:53:30   ->   kafayat.obanigba@digioutsource.com
+{"result":28161,"time":{"start":1739127209.4218791,"finish":1739127209.6941481,"duration":0.27226901054382324,"processing":0.24788808822631836,"date_start":"2025-02-09T21:53:29+03:00","date_finish":"2025-02-09T21:53:29+03:00","operating_reset_at":1739127809,"operating":0.24785518646240234}}
+
+2025-02-11 18:06:33   ->   sean.spaniol@sui.io
+{"result":28219,"time":{"start":1739297191.429605,"finish":1739297191.7300749,"duration":0.30046987533569336,"processing":0.28196310997009277,"date_start":"2025-02-11T21:06:31+03:00","date_finish":"2025-02-11T21:06:31+03:00","operating_reset_at":1739297791,"operating":0.28194499015808105}}
+
+2025-02-12 01:25:56   ->   contact@playaihub.com
+{"result":28223,"time":{"start":1739323554.906467,"finish":1739323555.2510321,"duration":0.34456515312194824,"processing":0.32404398918151855,"date_start":"2025-02-12T04:25:54+03:00","date_finish":"2025-02-12T04:25:55+03:00","operating_reset_at":1739324154,"operating":0.32402992248535156}}
+
+2025-02-12 17:14:21   ->   pokerislife@icloud.com
+{"result":28247,"time":{"start":1739380460.0156529,"finish":1739380460.3276989,"duration":0.31204605102539062,"processing":0.29169106483459473,"date_start":"2025-02-12T20:14:20+03:00","date_finish":"2025-02-12T20:14:20+03:00","operating_reset_at":1739381060,"operating":0.29167485237121582}}
+
+2025-02-13 08:12:58   ->   tummyxz11@gmail.com
+{"result":28255,"time":{"start":1739434376.4224851,"finish":1739434376.6521111,"duration":0.22962594032287598,"processing":0.20956707000732422,"date_start":"2025-02-13T11:12:56+03:00","date_finish":"2025-02-13T11:12:56+03:00","operating_reset_at":1739434976,"operating":0.20954704284667969}}
+
+2025-02-13 12:31:01   ->   smartnew20242024@gmail.com
+{"result":28267,"time":{"start":1739449860.2139699,"finish":1739449860.4305539,"duration":0.2165839672088623,"processing":0.20006108283996582,"date_start":"2025-02-13T15:31:00+03:00","date_finish":"2025-02-13T15:31:00+03:00","operating_reset_at":1739450460,"operating":0.2000420093536377}}
+
+2025-02-13 12:43:07   ->   c.ferentinos@helvetiachain.com
+{"result":28269,"time":{"start":1739450585.7059441,"finish":1739450586.0003669,"duration":0.29442286491394043,"processing":0.27050089836120605,"date_start":"2025-02-13T15:43:05+03:00","date_finish":"2025-02-13T15:43:06+03:00","operating_reset_at":1739451185,"operating":0.27046895027160645}}
+
+2025-02-13 12:44:04   ->   c.ferentinos@helvetiachain.com
+{"result":28271,"time":{"start":1739450642.6148961,"finish":1739450642.8602171,"duration":0.24532103538513184,"processing":0.20587611198425293,"date_start":"2025-02-13T15:44:02+03:00","date_finish":"2025-02-13T15:44:02+03:00","operating_reset_at":1739451242,"operating":0.47632598876953125}}
+
+2025-02-13 13:09:36   ->   erum@mmga.agency
+{"result":28273,"time":{"start":1739452174.5938499,"finish":1739452174.7731869,"duration":0.1793370246887207,"processing":0.16123104095458984,"date_start":"2025-02-13T16:09:34+03:00","date_finish":"2025-02-13T16:09:34+03:00","operating_reset_at":1739452774,"operating":0.16121792793273926}}
+
+2025-02-14 14:28:17   ->   hey@g-knot.io
+{"result":28301,"time":{"start":1739543295.7569261,"finish":1739543295.915271,"duration":0.15834498405456543,"processing":0.1421818733215332,"date_start":"2025-02-14T17:28:15+03:00","date_finish":"2025-02-14T17:28:15+03:00","operating_reset_at":1739543895,"operating":0.35329294204711914}}
+
+2025-02-17 00:46:13   ->   dhyaa14155@gmail.com
+{"result":28325,"time":{"start":1739753171.907232,"finish":1739753172.150516,"duration":0.24328398704528809,"processing":0.22349286079406738,"date_start":"2025-02-17T03:46:11+03:00","date_finish":"2025-02-17T03:46:12+03:00","operating_reset_at":1739753771,"operating":1.0847020149230957}}
+
+2025-02-18 12:47:02   ->   prince@prosperbet.com
+{"result":28361,"time":{"start":1739882819.702863,"finish":1739882820.1830561,"duration":0.48019313812255859,"processing":0.4543459415435791,"date_start":"2025-02-18T15:46:59+03:00","date_finish":"2025-02-18T15:47:00+03:00","operating_reset_at":1739883419,"operating":0.4543299674987793}}
+
+2025-02-19 21:29:34   ->   vtosheva@yahoo.com
+{"result":28395,"time":{"start":1740000571.8732629,"finish":1740000572.565805,"duration":0.69254207611083984,"processing":0.6607201099395752,"date_start":"2025-02-20T00:29:31+03:00","date_finish":"2025-02-20T00:29:32+03:00","operating_reset_at":1740001171,"operating":0.6607060432434082}}
+
+2025-02-21 23:00:09   ->   dailon@3bodylabs.ai
+{"result":28437,"time":{"start":1740178805.167429,"finish":1740178806.9694591,"duration":1.802030086517334,"processing":1.7723588943481445,"date_start":"2025-02-22T02:00:05+03:00","date_finish":"2025-02-22T02:00:06+03:00","operating_reset_at":1740179405,"operating":1.7723419666290283}}
+
+2025-02-24 22:15:16   ->   shashank@salesandprofits.co
+{"result":28467,"time":{"start":1740435313.1684079,"finish":1740435313.886054,"duration":0.71764612197875977,"processing":0.68408989906311035,"date_start":"2025-02-25T01:15:13+03:00","date_finish":"2025-02-25T01:15:13+03:00","operating_reset_at":1740435913,"operating":0.68407702445983887}}
+
+2025-02-25 08:47:46   ->   jamie@thebitcoinvisa.com
+{"result":28475,"time":{"start":1740473263.091028,"finish":1740473264.11761,"duration":1.0265820026397705,"processing":1.0017449855804443,"date_start":"2025-02-25T11:47:43+03:00","date_finish":"2025-02-25T11:47:44+03:00","operating_reset_at":1740473863,"operating":1.0017189979553223}}
+
+2025-02-25 16:05:10   ->   salman@uniramp.com
+{"result":28483,"time":{"start":1740499507.5532579,"finish":1740499508.3456841,"duration":0.79242610931396484,"processing":0.76766705513000488,"date_start":"2025-02-25T19:05:07+03:00","date_finish":"2025-02-25T19:05:08+03:00","operating_reset_at":1740500107,"operating":0.76764607429504395}}
+
+2025-02-28 06:46:50   ->   a.sumina@hwlt.io
+{"result":28553,"time":{"start":1740725206.8525419,"finish":1740725208.0507541,"duration":1.1982121467590332,"processing":1.1675100326538086,"date_start":"2025-02-28T09:46:46+03:00","date_finish":"2025-02-28T09:46:48+03:00","operating_reset_at":1740725806,"operating":1.1674919128417969}}
+
+2025-03-02 01:55:29   ->   beth@cannmanage.com
+{"result":28573,"time":{"start":1740880525.068141,"finish":1740880526.4355769,"duration":1.3674359321594238,"processing":1.3411898612976074,"date_start":"2025-03-02T04:55:25+03:00","date_finish":"2025-03-02T04:55:26+03:00","operating_reset_at":1740881125,"operating":1.3411738872528076}}
+
+2025-03-03 05:34:12   ->   aaron@aztraglobal.com
+{"result":28581,"time":{"start":1740980048.399981,"finish":1740980049.5722179,"duration":1.1722369194030762,"processing":1.1388049125671387,"date_start":"2025-03-03T08:34:08+03:00","date_finish":"2025-03-03T08:34:09+03:00","operating_reset_at":1740980648,"operating":1.1387898921966553}}
+
+2025-03-03 09:26:36   ->   memeagentio@gmail.com
+{"result":28591,"time":{"start":1740993993.2220421,"finish":1740993993.5180061,"duration":0.29596400260925293,"processing":0.27649497985839844,"date_start":"2025-03-03T12:26:33+03:00","date_finish":"2025-03-03T12:26:33+03:00","operating_reset_at":1740994593,"operating":0.27647709846496582}}
+
+2025-03-03 11:37:15   ->   kevin@tegro.com
+{"result":28593,"time":{"start":1741001831.47787,"finish":1741001832.079371,"duration":0.6015009880065918,"processing":0.56774401664733887,"date_start":"2025-03-03T14:37:11+03:00","date_finish":"2025-03-03T14:37:12+03:00","operating_reset_at":1741002431,"operating":0.56772279739379883}}
+
+2025-03-04 05:24:55   ->   elina.kujur@cifdaq.in
+{"result":28607,"time":{"start":1741065890.8099389,"finish":1741065892.131875,"duration":1.3219361305236816,"processing":1.2767548561096191,"date_start":"2025-03-04T08:24:50+03:00","date_finish":"2025-03-04T08:24:52+03:00","operating_reset_at":1741066490,"operating":1.2767319679260254}}
+
+2025-03-04 22:42:41   ->   info@tradx.website
+{"result":28623,"time":{"start":1741128157.339591,"finish":1741128157.7945261,"duration":0.45493507385253906,"processing":0.42835307121276855,"date_start":"2025-03-05T01:42:37+03:00","date_finish":"2025-03-05T01:42:37+03:00","operating_reset_at":1741128757,"operating":0.42833590507507324}}
+
+2025-03-05 07:29:50   ->   kevin@tegro.com
+{"result":28627,"time":{"start":1741159786.2521091,"finish":1741159787.1066189,"duration":0.85450983047485352,"processing":0.83349299430847168,"date_start":"2025-03-05T10:29:46+03:00","date_finish":"2025-03-05T10:29:47+03:00","operating_reset_at":1741160386,"operating":0.83347797393798828}}
+
+2025-03-10 14:39:11   ->   aditya.desai@cifdaq.in
+{"result":28713,"time":{"start":1741617547.174818,"finish":1741617547.7370989,"duration":0.56228089332580566,"processing":0.5191199779510498,"date_start":"2025-03-10T17:39:07+03:00","date_finish":"2025-03-10T17:39:07+03:00","operating_reset_at":1741618147,"operating":0.51910305023193359}}
+
+2025-03-11 16:23:53   ->   amine@sweepresort.com
+{"result":28737,"time":{"start":1741710228.9143829,"finish":1741710229.5834451,"duration":0.66906213760375977,"processing":0.61755490303039551,"date_start":"2025-03-11T19:23:48+03:00","date_finish":"2025-03-11T19:23:49+03:00","operating_reset_at":1741710828,"operating":0.6175389289855957}}
+
+2025-03-12 10:51:44   ->   aditya.desai@cifdaq.in
+{"result":28747,"time":{"start":1741776699.621511,"finish":1741776700.3636301,"duration":0.74211907386779785,"processing":0.70521402359008789,"date_start":"2025-03-12T13:51:39+03:00","date_finish":"2025-03-12T13:51:40+03:00","operating_reset_at":1741777299,"operating":0.70519518852233887}}
+
+2025-03-14 06:04:59   ->   rupali.borole@wize.games
+{"result":28781,"time":{"start":1741932294.507637,"finish":1741932294.9795239,"duration":0.47188687324523926,"processing":0.45088100433349609,"date_start":"2025-03-14T09:04:54+03:00","date_finish":"2025-03-14T09:04:54+03:00","operating_reset_at":1741932894,"operating":0.4508669376373291}}
+
+2025-03-17 12:15:28   ->   th448680@gmail.com
+{"result":28827,"time":{"start":1742213723.577682,"finish":1742213723.773874,"duration":0.19619202613830566,"processing":0.17780089378356934,"date_start":"2025-03-17T15:15:23+03:00","date_finish":"2025-03-17T15:15:23+03:00","operating_reset_at":1742214323,"operating":4.3579790592193604}}
+
+2025-03-17 21:36:05   ->   marlonl240608@gmail.com
+{"result":28839,"time":{"start":1742247360.5962319,"finish":1742247360.805927,"duration":0.20969510078430176,"processing":0.18824982643127441,"date_start":"2025-03-18T00:36:00+03:00","date_finish":"2025-03-18T00:36:00+03:00","operating_reset_at":1742247960,"operating":0.59852313995361328}}
+
+2025-03-18 15:02:01   ->   viraj@getsafle.com
+{"result":28859,"time":{"start":1742310116.8486841,"finish":1742310117.2441919,"duration":0.3955078125,"processing":0.37188291549682617,"date_start":"2025-03-18T18:01:56+03:00","date_finish":"2025-03-18T18:01:57+03:00","operating_reset_at":1742310716,"operating":0.37186598777770996}}
+
+2025-03-24 07:05:00   ->   eugeneloo@dtbcreation.com
+{"result":28959,"time":{"start":1742799894.704267,"finish":1742799895.364718,"duration":0.66045093536376953,"processing":0.53598713874816895,"date_start":"2025-03-24T10:04:54+03:00","date_finish":"2025-03-24T10:04:55+03:00","operating_reset_at":1742800494,"operating":1.5046441555023193}}
+
+2025-03-25 09:52:40   ->   the_commissar@restbet.com
+{"result":28987,"time":{"start":1742896355.029407,"finish":1742896355.275413,"duration":0.24600601196289062,"processing":0.1953728199005127,"date_start":"2025-03-25T12:52:35+03:00","date_finish":"2025-03-25T12:52:35+03:00","operating_reset_at":1742896955,"operating":0.47767901420593262}}
+
+2025-03-25 10:34:28   ->   ranbir25906@gmail.com
+{"result":28991,"time":{"start":1742898863.1922159,"finish":1742898863.3456421,"duration":0.15342617034912109,"processing":0.13555192947387695,"date_start":"2025-03-25T13:34:23+03:00","date_finish":"2025-03-25T13:34:23+03:00","operating_reset_at":1742899463,"operating":0.49224519729614258}}
+
+2025-03-25 13:15:11   ->   davidcullen6000000@outlook.com
+{"result":29003,"time":{"start":1742908505.300317,"finish":1742908505.7475719,"duration":0.44725489616394043,"processing":0.42425799369812012,"date_start":"2025-03-25T16:15:05+03:00","date_finish":"2025-03-25T16:15:05+03:00","operating_reset_at":1742909105,"operating":0.42424511909484863}}
+
+2025-03-26 10:01:09   ->   dnnyjulicm17@gmail.com
+{"result":29023,"time":{"start":1742983264.045012,"finish":1742983264.334868,"duration":0.28985595703125,"processing":0.26644110679626465,"date_start":"2025-03-26T13:01:04+03:00","date_finish":"2025-03-26T13:01:04+03:00","operating_reset_at":1742983864,"operating":0.26642704010009766}}
+
+2025-03-30 07:43:28   ->   cryptobyatefeh@gmail.com
+{"result":29077,"time":{"start":1743320601.9882431,"finish":1743320602.5577271,"duration":0.56948399543762207,"processing":0.53737092018127441,"date_start":"2025-03-30T10:43:21+03:00","date_finish":"2025-03-30T10:43:22+03:00","operating_reset_at":1743321202,"operating":0.53734993934631348}}
+
+2025-03-30 09:57:38   ->   jim@x49.global
+{"result":29081,"time":{"start":1743328652.605551,"finish":1743328652.7878001,"duration":0.18224906921386719,"processing":0.16399383544921875,"date_start":"2025-03-30T12:57:32+03:00","date_finish":"2025-03-30T12:57:32+03:00","operating_reset_at":1743329252,"operating":1.1141271591186523}}
+
+2025-03-30 12:43:07   ->   robi.uzan@coinmama.com
+{"result":29084,"time":{"start":1743338581.5882831,"finish":1743338581.929286,"duration":0.3410029411315918,"processing":0.3158109188079834,"date_start":"2025-03-30T15:43:01+03:00","date_finish":"2025-03-30T15:43:01+03:00","operating_reset_at":1743339181,"operating":1.6680741310119629}}
+
+2025-04-03 12:44:49   ->   s.dhillon@kuladao.io
+{"result":29149,"time":{"start":1743684287.730768,"finish":1743684289.439373,"duration":1.7086050510406494,"processing":1.6264150142669678,"date_start":"2025-04-03T15:44:47+03:00","date_finish":"2025-04-03T15:44:49+03:00","operating_reset_at":1743684887,"operating":1.6263971328735352}}
+
+2025-04-08 11:35:36   ->   marek.kostykowski@neoinstinct.com
+{"result":29195,"time":{"start":1744112135.2483871,"finish":1744112136.4969831,"duration":1.2485959529876709,"processing":1.2245638370513916,"date_start":"2025-04-08T14:35:35+03:00","date_finish":"2025-04-08T14:35:36+03:00","operating_reset_at":1744112735,"operating":1.2245509624481201}}
+
+2025-04-12 09:30:49   ->   itssujeetg@gmail.com
+{"result":29241,"time":{"start":1744450252.840838,"finish":1744450253.458755,"duration":0.61791706085205078,"processing":0.59254217147827148,"date_start":"2025-04-12T12:30:52+03:00","date_finish":"2025-04-12T12:30:53+03:00","operating_reset_at":1744450852,"operating":0.59253096580505371}}
+
+2025-04-13 20:28:04   ->   michael.invest365@gmail.com
+{"result":29265,"time":{"start":1744576090.8136561,"finish":1744576091.2751,"duration":0.46144390106201172,"processing":0.43690991401672363,"date_start":"2025-04-13T23:28:10+03:00","date_finish":"2025-04-13T23:28:11+03:00","operating_reset_at":1744576690,"operating":0.43689608573913574}}
+
+2025-04-15 13:53:09   ->   michael@randrbuyers.com
+{"result":29297,"time":{"start":1744725199.480958,"finish":1744725200.067095,"duration":0.58613705635070801,"processing":0.55224299430847168,"date_start":"2025-04-15T16:53:19+03:00","date_finish":"2025-04-15T16:53:20+03:00","operating_reset_at":1744725799,"operating":0.55222296714782715}}
+
+2025-04-18 20:07:54   ->   bd@solusgroup.io
+{"result":29355,"time":{"start":1745006891.5966711,"finish":1745006891.7783639,"duration":0.18169283866882324,"processing":0.16133403778076172,"date_start":"2025-04-18T23:08:11+03:00","date_finish":"2025-04-18T23:08:11+03:00","operating_reset_at":1745007491,"operating":0.74278521537780762}}
+
+2025-04-20 17:10:08   ->   robustmekong1@gmail.com
+{"result":29373,"time":{"start":1745169011.7094791,"finish":1745169012.933708,"duration":1.2242288589477539,"processing":1.1892390251159668,"date_start":"2025-04-20T20:10:11+03:00","date_finish":"2025-04-20T20:10:12+03:00","operating_reset_at":1745169611,"operating":1.1892240047454834}}
+
+2025-04-22 08:35:26   ->   anton.mosolov@gmail.com
+{"result":29399,"time":{"start":1745310934.064419,"finish":1745310934.4414511,"duration":0.37703204154968262,"processing":0.28929710388183594,"date_start":"2025-04-22T11:35:34+03:00","date_finish":"2025-04-22T11:35:34+03:00","operating_reset_at":1745311534,"operating":0.28927803039550781}}
+
+2025-04-23 04:38:26   ->   rupinsoni1095@gmail.com
+{"result":29423,"time":{"start":1745383115.105969,"finish":1745383115.757431,"duration":0.65146207809448242,"processing":0.61073684692382812,"date_start":"2025-04-23T07:38:35+03:00","date_finish":"2025-04-23T07:38:35+03:00","operating_reset_at":1745383715,"operating":0.6107180118560791}}
+
+2025-04-25 14:56:01   ->   joindomsfamily@gmail.com
+{"result":29481,"time":{"start":1745592975.027931,"finish":1745592975.707242,"duration":0.67931103706359863,"processing":0.64615702629089355,"date_start":"2025-04-25T17:56:15+03:00","date_finish":"2025-04-25T17:56:15+03:00","operating_reset_at":1745593575,"operating":0.64614295959472656}}
+
+2025-04-29 15:22:30   ->   groapavio@gmail.com
+{"result":29551,"time":{"start":1745940173.0530951,"finish":1745940174.0350871,"duration":0.98199200630187988,"processing":0.94505000114440918,"date_start":"2025-04-29T18:22:53+03:00","date_finish":"2025-04-29T18:22:54+03:00","operating_reset_at":1745940773,"operating":0.94503092765808105}}
+
+2025-04-30 14:14:34   ->   v.groapa@engc.club
+{"result":29571,"time":{"start":1746022499.6270471,"finish":1746022500.2263761,"duration":0.59932899475097656,"processing":0.56825995445251465,"date_start":"2025-04-30T17:14:59+03:00","date_finish":"2025-04-30T17:15:00+03:00","operating_reset_at":1746023099,"operating":0.56824707984924316}}
+
+2025-05-02 14:05:24   ->   fawaz@fm-bltd.co.uk
+{"result":29607,"time":{"start":1746194753.6731651,"finish":1746194754.133065,"duration":0.45989990234375,"processing":0.43290400505065918,"date_start":"2025-05-02T17:05:53+03:00","date_finish":"2025-05-02T17:05:54+03:00","operating_reset_at":1746195353,"operating":0.43288588523864746}}
+
+2025-05-05 08:12:24   ->   everylovesjulio@gmail.com
+{"result":29643,"time":{"start":1746432779.8059759,"finish":1746432780.3323171,"duration":0.52634119987487793,"processing":0.48809909820556641,"date_start":"2025-05-05T11:12:59+03:00","date_finish":"2025-05-05T11:13:00+03:00","operating_reset_at":1746433379,"operating":0.48807716369628906}}
+
+2025-05-06 19:59:20   ->   everylovesjulio@gmail.com
+{"result":29713,"time":{"start":1746561598.376842,"finish":1746561599.0753269,"duration":0.69848489761352539,"processing":0.63794112205505371,"date_start":"2025-05-06T22:59:58+03:00","date_finish":"2025-05-06T22:59:59+03:00","operating_reset_at":1746562198,"operating":0.63792705535888672}}
+
+2025-05-08 05:35:51   ->   dsinghal@gammastack.com
+{"result":29757,"time":{"start":1746682592.3410039,"finish":1746682593.1198361,"duration":0.77883219718933105,"processing":0.75513410568237305,"date_start":"2025-05-08T08:36:32+03:00","date_finish":"2025-05-08T08:36:33+03:00","operating_reset_at":1746683192,"operating":0.75511598587036133}}
+
+2025-05-08 16:02:49   ->   luke@flytask.com
+{"result":29779,"time":{"start":1746720211.1469619,"finish":1746720212.1067801,"duration":0.95981812477111816,"processing":0.92770099639892578,"date_start":"2025-05-08T19:03:31+03:00","date_finish":"2025-05-08T19:03:32+03:00","operating_reset_at":1746720811,"operating":0.92768383026123047}}
+
+2025-05-09 04:26:59   ->   gauravnarang88@gmail.com
+{"result":29785,"time":{"start":1746764862.5653861,"finish":1746764863.1883941,"duration":0.62300801277160645,"processing":0.59684300422668457,"date_start":"2025-05-09T07:27:42+03:00","date_finish":"2025-05-09T07:27:43+03:00","operating_reset_at":1746765462,"operating":0.59682488441467285}}
+
+2025-05-09 06:35:25   ->   weje@las-vegas.com
+{"result":29789,"time":{"start":1746772568.7281809,"finish":1746772569.387846,"duration":0.65966510772705078,"processing":0.61741280555725098,"date_start":"2025-05-09T09:36:08+03:00","date_finish":"2025-05-09T09:36:09+03:00","operating_reset_at":1746773168,"operating":0.61739397048950195}}
+
+2025-05-09 17:27:45   ->   krasterwallet@proton.me
+{"result":29813,"time":{"start":1746811709.890193,"finish":1746811710.038291,"duration":0.14809799194335938,"processing":0.12810206413269043,"date_start":"2025-05-09T20:28:29+03:00","date_finish":"2025-05-09T20:28:30+03:00","operating_reset_at":1746812309,"operating":0.64593887329101562}}
+
+2025-05-17 09:02:04   ->   donaldongili@gmail.com
+{"result":29957,"time":{"start":1747472584.349345,"finish":1747472585.633939,"duration":1.2845940589904785,"processing":1.2572579383850098,"date_start":"2025-05-17T12:03:04+03:00","date_finish":"2025-05-17T12:03:05+03:00","operating_reset_at":1747473184,"operating":1.2572379112243652}}
+
+2025-05-17 10:45:04   ->   gianniskastrinakis@proton.me
+{"result":29961,"time":{"start":1747478765.629345,"finish":1747478766.116182,"duration":0.48683714866638184,"processing":0.4615020751953125,"date_start":"2025-05-17T13:46:05+03:00","date_finish":"2025-05-17T13:46:06+03:00","operating_reset_at":1747479365,"operating":0.4614849090576172}}
+
+2025-05-19 08:03:59   ->   magaglobalpartners@gmail.com
+{"result":29975,"time":{"start":1747641904.240525,"finish":1747641904.721903,"duration":0.48137807846069336,"processing":0.45749402046203613,"date_start":"2025-05-19T11:05:04+03:00","date_finish":"2025-05-19T11:05:04+03:00","operating_reset_at":1747642504,"operating":0.45747900009155273}}
+
+2025-05-19 14:49:48   ->   donaldongili@gmail.com
+{"result":29997,"time":{"start":1747666253.798755,"finish":1747666254.447476,"duration":0.6487209796905518,"processing":0.614077091217041,"date_start":"2025-05-19T17:50:53+03:00","date_finish":"2025-05-19T17:50:54+03:00","operating_reset_at":1747666853,"operating":0.6140549182891846}}
+
+2025-05-21 07:31:21   ->   raja@holaprime.com
+{"result":30051,"time":{"start":1747812749.562361,"finish":1747812750.822497,"duration":1.2601358890533447,"processing":1.2294440269470215,"date_start":"2025-05-21T10:32:29+03:00","date_finish":"2025-05-21T10:32:30+03:00","operating_reset_at":1747813349,"operating":1.229416847229004}}
+
+2025-05-22 11:36:19   ->   nick@fun88.games
+{"result":30075,"time":{"start":1747913851.140186,"finish":1747913851.756722,"duration":0.6165359020233154,"processing":0.5747730731964111,"date_start":"2025-05-22T14:37:31+03:00","date_finish":"2025-05-22T14:37:31+03:00","operating_reset_at":1747914451,"operating":0.5747530460357666}}
+
+2025-05-23 05:29:27   ->   rupinsoni1095@gmail.com
+{"result":30097,"time":{"start":1747978240.274379,"finish":1747978241.17195,"duration":0.8975710868835449,"processing":0.8637270927429199,"date_start":"2025-05-23T08:30:40+03:00","date_finish":"2025-05-23T08:30:41+03:00","operating_reset_at":1747978840,"operating":0.863710880279541}}
+
+2025-05-25 04:04:40   ->   muhammad@chowmein.xyz
+{"result":30123,"time":{"start":1748145957.508074,"finish":1748145958.253312,"duration":0.7452380657196045,"processing":0.700247049331665,"date_start":"2025-05-25T07:05:57+03:00","date_finish":"2025-05-25T07:05:58+03:00","operating_reset_at":1748146557,"operating":0.7002298831939697}}
+
+2025-05-26 12:59:53   ->   mitesh@polycruz.io
+{"result":30161,"time":{"start":1748264472.60034,"finish":1748264473.646641,"duration":1.0463011264801025,"processing":0.9803929328918457,"date_start":"2025-05-26T16:01:12+03:00","date_finish":"2025-05-26T16:01:13+03:00","operating_reset_at":1748265072,"operating":0.9803729057312012}}
+
+2025-05-27 05:22:18   ->   saharasobug@gmail.com
+{"result":30169,"time":{"start":1748323419.325487,"finish":1748323420.537316,"duration":1.2118291854858398,"processing":1.1887459754943848,"date_start":"2025-05-27T08:23:39+03:00","date_finish":"2025-05-27T08:23:40+03:00","operating_reset_at":1748324019,"operating":1.1887338161468506}}
+
+2025-05-27 07:55:00   ->   mcharles@panopticmediaseo.com
+{"result":30173,"time":{"start":1748332582.169615,"finish":1748332582.49604,"duration":0.32642507553100586,"processing":0.3023250102996826,"date_start":"2025-05-27T10:56:22+03:00","date_finish":"2025-05-27T10:56:22+03:00","operating_reset_at":1748333182,"operating":0.3023049831390381}}
+
+2025-05-27 10:21:16   ->   adam@izunpartners.com
+{"result":30183,"time":{"start":1748341358.378465,"finish":1748341358.838699,"duration":0.4602341651916504,"processing":0.3842480182647705,"date_start":"2025-05-27T13:22:38+03:00","date_finish":"2025-05-27T13:22:38+03:00","operating_reset_at":1748341958,"operating":0.38422393798828125}}
+
+2025-05-29 00:44:22   ->   team@scattr.com
+{"result":30233,"time":{"start":1748479546.441599,"finish":1748479547.806323,"duration":1.3647241592407227,"processing":1.3087339401245117,"date_start":"2025-05-29T03:45:46+03:00","date_finish":"2025-05-29T03:45:47+03:00","operating_reset_at":1748480146,"operating":1.3087201118469238}}
+
+2025-05-29 11:13:26   ->   darius.bruner@gmail.com
+{"result":30253,"time":{"start":1748517292.258065,"finish":1748517292.713482,"duration":0.4554169178009033,"processing":0.42794108390808105,"date_start":"2025-05-29T14:14:52+03:00","date_finish":"2025-05-29T14:14:52+03:00","operating_reset_at":1748517892,"operating":0.42792701721191406}}
+
+2025-05-29 13:29:03   ->   ritika@smarthospitals.org
+{"result":30265,"time":{"start":1748525429.879632,"finish":1748525430.427605,"duration":0.5479729175567627,"processing":0.5262899398803711,"date_start":"2025-05-29T16:30:29+03:00","date_finish":"2025-05-29T16:30:30+03:00","operating_reset_at":1748526029,"operating":0.5262770652770996}}
+
+2025-05-29 19:32:07   ->   jesunioluwa14@gmail.com
+{"result":30267,"time":{"start":1748547214.571819,"finish":1748547215.155231,"duration":0.5834119319915771,"processing":0.5403099060058594,"date_start":"2025-05-29T22:33:34+03:00","date_finish":"2025-05-29T22:33:35+03:00","operating_reset_at":1748547814,"operating":0.5402698516845703}}
+
+2025-05-30 07:17:35   ->   danielgoldwin808@gmail.com
+{"result":30275,"time":{"start":1748589543.576427,"finish":1748589544.156315,"duration":0.579888105392456,"processing":0.5553429126739502,"date_start":"2025-05-30T10:19:03+03:00","date_finish":"2025-05-30T10:19:04+03:00","operating_reset_at":1748590143,"operating":0.5553309917449951}}
+
+2025-06-01 18:20:39   ->   chris.liu@davionlabs.com
+{"result":30317,"time":{"start":1748802132.76648,"finish":1748802133.339461,"duration":0.5729811191558838,"processing":0.5428640842437744,"date_start":"2025-06-01T21:22:12+03:00","date_finish":"2025-06-01T21:22:13+03:00","operating_reset_at":1748802732,"operating":0.5428469181060791}}
+
+2025-06-02 00:34:57   ->   fikretpasayev64@gmail.com
+{"result":30321,"time":{"start":1748824591.711739,"finish":1748824591.978394,"duration":0.26665496826171875,"processing":0.24237895011901855,"date_start":"2025-06-02T03:36:31+03:00","date_finish":"2025-06-02T03:36:31+03:00","operating_reset_at":1748825191,"operating":0.7746222019195557}}
+
+2025-06-03 10:14:59   ->   pablo@plopoker.com
+{"result":30361,"time":{"start":1748945796.233233,"finish":1748945796.6158,"duration":0.3825669288635254,"processing":0.3604710102081299,"date_start":"2025-06-03T13:16:36+03:00","date_finish":"2025-06-03T13:16:36+03:00","operating_reset_at":1748946396,"operating":0.8431861400604248}}
+
+2025-06-04 08:18:37   ->   post@icoda.io
+{"result":30383,"time":{"start":1749025215.38961,"finish":1749025216.708869,"duration":1.3192589282989502,"processing":1.2612159252166748,"date_start":"2025-06-04T11:20:15+03:00","date_finish":"2025-06-04T11:20:16+03:00","operating_reset_at":1749025815,"operating":1.2611968517303467}}
+
+2025-06-04 08:19:17   ->   post@icoda.io
+{"result":30385,"time":{"start":1749025256.335285,"finish":1749025256.497168,"duration":0.16188311576843262,"processing":0.14394307136535645,"date_start":"2025-06-04T11:20:56+03:00","date_finish":"2025-06-04T11:20:56+03:00","operating_reset_at":1749025856,"operating":1.4051249027252197}}
+
+2025-06-06 19:11:28   ->   info@ellecoin.co
+{"result":30439,"time":{"start":1749237191.959962,"finish":1749237192.62407,"duration":0.6641080379486084,"processing":0.6291770935058594,"date_start":"2025-06-06T22:13:11+03:00","date_finish":"2025-06-06T22:13:12+03:00","operating_reset_at":1749237791,"operating":0.6291630268096924}}
+
+2025-06-11 04:06:41   ->   brianswan1@gmail.com
+{"result":30511,"time":{"start":1749614913.195971,"finish":1749614914.766578,"duration":1.5706069469451904,"processing":1.529026985168457,"date_start":"2025-06-11T07:08:33+03:00","date_finish":"2025-06-11T07:08:34+03:00","operating_reset_at":1749615513,"operating":1.5290100574493408}}
+
+2025-06-16 14:24:09   ->   info@ellecoin.co
+{"result":30613,"time":{"start":1750083860.624867,"finish":1750083861.275994,"duration":0.6511270999908447,"processing":0.6168050765991211,"date_start":"2025-06-16T17:24:20+03:00","date_finish":"2025-06-16T17:24:21+03:00","operating_reset_at":1750084460,"operating":0.6167900562286377}}
+
+2025-06-18 16:26:52   ->   sp@movoapp.ca
+{"result":30663,"time":{"start":1750264028.839189,"finish":1750264029.094239,"duration":0.2550499439239502,"processing":0.23427891731262207,"date_start":"2025-06-18T19:27:08+03:00","date_finish":"2025-06-18T19:27:09+03:00","operating_reset_at":1750264628,"operating":0.7484610080718994}}
+
+2025-06-19 01:09:20   ->   binjabi.me@gmail.com
+{"result":30669,"time":{"start":1750295377.348729,"finish":1750295378.881051,"duration":1.5323221683502197,"processing":1.5056219100952148,"date_start":"2025-06-19T04:09:37+03:00","date_finish":"2025-06-19T04:09:38+03:00","operating_reset_at":1750295977,"operating":1.5056078433990479}}
+
+2025-06-24 09:35:11   ->   info@lunarbet.io
+{"result":30763,"time":{"start":1750757741.976858,"finish":1750757742.51782,"duration":0.5409619808197021,"processing":0.5152029991149902,"date_start":"2025-06-24T12:35:41+03:00","date_finish":"2025-06-24T12:35:42+03:00","operating_reset_at":1750758342,"operating":0.5151810646057129}}
+
+2025-06-24 12:30:26   ->   smartnew20242024@gmail.com
+{"result":30769,"time":{"start":1750768256.94406,"finish":1750768257.538548,"duration":0.5944879055023193,"processing":0.5596358776092529,"date_start":"2025-06-24T15:30:56+03:00","date_finish":"2025-06-24T15:30:57+03:00","operating_reset_at":1750768856,"operating":0.5596201419830322}}
+
+2025-06-25 01:31:12   ->   tarifa143360@gmail.com
+{"result":30783,"time":{"start":1750815104.193749,"finish":1750815105.433652,"duration":1.2399029731750488,"processing":1.1877391338348389,"date_start":"2025-06-25T04:31:44+03:00","date_finish":"2025-06-25T04:31:45+03:00","operating_reset_at":1750815704,"operating":1.1877200603485107}}
+
+2025-06-25 15:13:08   ->   majoyeogbeboluwatife@gmail.com
+{"result":30799,"time":{"start":1750864421.863819,"finish":1750864423.0801,"duration":1.2162811756134033,"processing":1.185025930404663,"date_start":"2025-06-25T18:13:41+03:00","date_finish":"2025-06-25T18:13:43+03:00","operating_reset_at":1750865021,"operating":1.185006856918335}}
+
+2025-06-27 16:10:08   ->   s3671715@gmail.com
+{"result":30823,"time":{"start":1751040646.921495,"finish":1751040647.586466,"duration":0.664971113204956,"processing":0.6276359558105469,"date_start":"2025-06-27T19:10:46+03:00","date_finish":"2025-06-27T19:10:47+03:00","operating_reset_at":1751041246,"operating":0.6276209354400635}}
+
+2025-06-29 16:01:28   ->   harry@carbon202.com
+{"result":30841,"time":{"start":1751212932.51086,"finish":1751212933.159113,"duration":0.6482529640197754,"processing":0.608212947845459,"date_start":"2025-06-29T19:02:12+03:00","date_finish":"2025-06-29T19:02:13+03:00","operating_reset_at":1751213532,"operating":0.60819411277771}}
+
+2025-06-30 16:25:08   ->   sylvesterok4@gmail.com
+{"result":30857,"time":{"start":1751300753.924703,"finish":1751300755.133246,"duration":1.208543062210083,"processing":1.1769609451293945,"date_start":"2025-06-30T19:25:53+03:00","date_finish":"2025-06-30T19:25:55+03:00","operating_reset_at":1751301353,"operating":1.1769471168518066}}
+
+2025-07-01 04:07:59   ->   ab@10xfun.io
+{"result":30865,"time":{"start":1751342927.317156,"finish":1751342927.789362,"duration":0.47220587730407715,"processing":0.45217299461364746,"date_start":"2025-07-01T07:08:47+03:00","date_finish":"2025-07-01T07:08:47+03:00","operating_reset_at":1751343527,"operating":1.1189119815826416}}
+
+2025-07-03 13:36:21   ->   dolg282@gmail.com
+{"result":30913,"time":{"start":1751549834.493384,"finish":1751549835.220437,"duration":0.727053165435791,"processing":0.6898279190063477,"date_start":"2025-07-03T16:37:14+03:00","date_finish":"2025-07-03T16:37:15+03:00","operating_reset_at":1751550434,"operating":0.6898090839385986}}
+
+2025-07-03 18:54:16   ->   neman29@gmail.com
+{"result":30919,"time":{"start":1751568910.722944,"finish":1751568911.438006,"duration":0.7150619029998779,"processing":0.6755461692810059,"date_start":"2025-07-03T21:55:10+03:00","date_finish":"2025-07-03T21:55:11+03:00","operating_reset_at":1751569510,"operating":0.6755309104919434}}
+
+2025-07-04 00:06:16   ->   jimb51484@gmail.com
+{"result":30925,"time":{"start":1751587631.218272,"finish":1751587631.826278,"duration":0.6080060005187988,"processing":0.5778729915618896,"date_start":"2025-07-04T03:07:11+03:00","date_finish":"2025-07-04T03:07:11+03:00","operating_reset_at":1751588231,"operating":0.5778539180755615}}
+
+2025-07-05 18:57:09   ->   benjamin.r.altman@gmail.com
+{"result":30949,"time":{"start":1751741887.745522,"finish":1751741888.411008,"duration":0.6654858589172363,"processing":0.620164155960083,"date_start":"2025-07-05T21:58:07+03:00","date_finish":"2025-07-05T21:58:08+03:00","operating_reset_at":1751742487,"operating":0.6201310157775879}}
+
+2025-07-07 14:36:38   ->   benjamin.r.altman@gmail.com
+{"result":30971,"time":{"start":1751899061.450294,"finish":1751899062.202295,"duration":0.7520010471343994,"processing":0.7215590476989746,"date_start":"2025-07-07T17:37:41+03:00","date_finish":"2025-07-07T17:37:42+03:00","operating_reset_at":1751899661,"operating":0.7215418815612793}}
+
+2025-07-11 15:12:30   ->   stephanie.rheingold@opensea.io
+{"result":31035,"time":{"start":1752246823.180987,"finish":1752246823.99558,"duration":0.8145930767059326,"processing":0.7719240188598633,"date_start":"2025-07-11T18:13:43+03:00","date_finish":"2025-07-11T18:13:43+03:00","operating_reset_at":1752247423,"operating":0.7719080448150635}}
+
+2025-07-13 11:04:42   ->   ofer@starkware.co
+{"result":31055,"time":{"start":1752404759.747689,"finish":1752404760.423824,"duration":0.6761350631713867,"processing":0.6491239070892334,"date_start":"2025-07-13T14:05:59+03:00","date_finish":"2025-07-13T14:06:00+03:00","operating_reset_at":1752405359,"operating":0.64910888671875}}
+
+2025-07-14 08:04:05   ->   zhangdi8669039@gamil.com
+{"result":31059,"time":{"start":1752480325.145665,"finish":1752480326.292556,"duration":1.1468911170959473,"processing":1.1235008239746094,"date_start":"2025-07-14T11:05:25+03:00","date_finish":"2025-07-14T11:05:26+03:00","operating_reset_at":1752480925,"operating":1.1234891414642334}}
+
+2025-07-15 00:44:08   ->   rd@toshi.bet
+{"result":31087,"time":{"start":1752540330.102849,"finish":1752540330.885258,"duration":0.7824089527130127,"processing":0.7369000911712646,"date_start":"2025-07-15T03:45:30+03:00","date_finish":"2025-07-15T03:45:30+03:00","operating_reset_at":1752540930,"operating":0.7368888854980469}}
+
+2025-07-17 06:36:57   ->   hooman.mot@hspholding.com
+{"result":31131,"time":{"start":1752734304.257108,"finish":1752734305.680472,"duration":1.4233639240264893,"processing":1.393259048461914,"date_start":"2025-07-17T09:38:24+03:00","date_finish":"2025-07-17T09:38:25+03:00","operating_reset_at":1752734904,"operating":1.3932440280914307}}
+
+2025-07-22 06:56:26   ->   support@neurolov.ai
+{"result":31185,"time":{"start":1753167484.517824,"finish":1753167486.833577,"duration":2.3157529830932617,"processing":2.1547000408172607,"date_start":"2025-07-22T09:58:04+03:00","date_finish":"2025-07-22T09:58:06+03:00","operating_reset_at":1753168084,"operating":2.1546809673309326}}
+
+2025-07-22 16:44:09   ->   jae@avonroadpartners.com
+{"result":31205,"time":{"start":1753202749.472377,"finish":1753202750.616194,"duration":1.1438169479370117,"processing":1.0947668552398682,"date_start":"2025-07-22T19:45:49+03:00","date_finish":"2025-07-22T19:45:50+03:00","operating_reset_at":1753203349,"operating":1.0947492122650146}}
+
+2025-07-23 07:04:11   ->   ntraikoudis@kumarbaz.com
+{"result":31213,"time":{"start":1753254353.456559,"finish":1753254353.708494,"duration":0.2519350051879883,"processing":0.23175501823425293,"date_start":"2025-07-23T10:05:53+03:00","date_finish":"2025-07-23T10:05:53+03:00","operating_reset_at":1753254953,"operating":0.6510570049285889}}
+
+2025-07-23 07:18:15   ->   support@neurolov.ai
+{"result":31215,"time":{"start":1753255197.922474,"finish":1753255198.696521,"duration":0.7740471363067627,"processing":0.7421529293060303,"date_start":"2025-07-23T10:19:57+03:00","date_finish":"2025-07-23T10:19:58+03:00","operating_reset_at":1753255797,"operating":0.7421379089355469}}
+
+2025-07-24 07:32:33   ->   diana@impt.io
+{"result":31233,"time":{"start":1753342457.88488,"finish":1753342458.380803,"duration":0.4959230422973633,"processing":0.47621607780456543,"date_start":"2025-07-24T10:34:17+03:00","date_finish":"2025-07-24T10:34:18+03:00","operating_reset_at":1753343057,"operating":1.87746000289917}}
+
+2025-07-24 16:53:03   ->   jkatiende@gmail.com
+{"result":31245,"time":{"start":1753376088.803625,"finish":1753376089.380733,"duration":0.5771079063415527,"processing":0.5559239387512207,"date_start":"2025-07-24T19:54:48+03:00","date_finish":"2025-07-24T19:54:49+03:00","operating_reset_at":1753376688,"operating":1.394852876663208}}
+
+2025-07-26 14:28:56   ->   liaqath@mqsala.com
+{"result":31275,"time":{"start":1753540246.342605,"finish":1753540247.16986,"duration":0.8272547721862793,"processing":0.7810502052307129,"date_start":"2025-07-26T17:30:46+03:00","date_finish":"2025-07-26T17:30:47+03:00","operating_reset_at":1753540846,"operating":0.781013011932373}}
+
+2025-07-29 16:54:09   ->   mute7440@gmail.com
+{"result":31327,"time":{"start":1753808168.136955,"finish":1753808168.51597,"duration":0.3790149688720703,"processing":0.35239386558532715,"date_start":"2025-07-29T19:56:08+03:00","date_finish":"2025-07-29T19:56:08+03:00","operating_reset_at":1753808768,"operating":1.4710807800292969}}
+
+2025-07-31 04:15:08   ->   amitnyc006@gmail.com
+{"result":31341,"time":{"start":1753935430.365115,"finish":1753935430.694581,"duration":0.3294661045074463,"processing":0.2996039390563965,"date_start":"2025-07-31T07:17:10+03:00","date_finish":"2025-07-31T07:17:10+03:00","operating_reset_at":1753936030,"operating":1.3936767578125}}
+
+2025-07-31 11:00:36   ->   admin@clearjournal.com
+{"result":31351,"time":{"start":1753959758.257806,"finish":1753959758.890183,"duration":0.6323769092559814,"processing":0.6004488468170166,"date_start":"2025-07-31T14:02:38+03:00","date_finish":"2025-07-31T14:02:38+03:00","operating_reset_at":1753960358,"operating":1.4094290733337402}}
+
+2025-07-31 20:53:27   ->   hhministry@pm.me
+{"result":31359,"time":{"start":1753995330.060872,"finish":1753995331.538987,"duration":1.4781148433685303,"processing":1.4376399517059326,"date_start":"2025-07-31T23:55:30+03:00","date_finish":"2025-07-31T23:55:31+03:00","operating_reset_at":1753995930,"operating":1.4376270771026611}}
+
+2025-08-01 07:47:48   ->   gauravnarang88@gmail.com
+{"result":31363,"time":{"start":1754034593.403843,"finish":1754034593.925079,"duration":0.5212361812591553,"processing":0.49138593673706055,"date_start":"2025-08-01T10:49:53+03:00","date_finish":"2025-08-01T10:49:53+03:00","operating_reset_at":1754035193,"operating":0.49137210845947266}}
+
+2025-08-01 14:23:01   ->   robert@6handshakes.online
+{"result":31379,"time":{"start":1754058306.412683,"finish":1754058306.831796,"duration":0.4191129207611084,"processing":0.39503002166748047,"date_start":"2025-08-01T17:25:06+03:00","date_finish":"2025-08-01T17:25:06+03:00","operating_reset_at":1754058906,"operating":2.0766329765319824}}
+
+2025-08-02 14:31:09   ->   hhministry@pm.me
+{"result":31391,"time":{"start":1754145070.224867,"finish":1754145071.808162,"duration":1.5832948684692383,"processing":1.5241529941558838,"date_start":"2025-08-02T17:31:10+03:00","date_finish":"2025-08-02T17:31:11+03:00","operating_reset_at":1754145670,"operating":1.5241329669952393}}
+
+2025-08-07 18:35:28   ->   info@halalcryptocapital.com
+{"result":31475,"time":{"start":1754591741.357516,"finish":1754591742.267882,"duration":0.9103660583496094,"processing":0.8567259311676025,"date_start":"2025-08-07T21:35:41+03:00","date_finish":"2025-08-07T21:35:42+03:00","operating_reset_at":1754592341,"operating":0.856713056564331}}
+
+2025-08-09 15:25:13   ->   adamanthonysmith@gmail.com
+{"result":31513,"time":{"start":1754753129.785875,"finish":1754753131.427235,"duration":1.641359806060791,"processing":0.7917571067810059,"date_start":"2025-08-09T18:25:29+03:00","date_finish":"2025-08-09T18:25:31+03:00","operating_reset_at":1754753730,"operating":0.7917380332946777}}
+
+2025-08-11 15:49:16   ->   e@death.fun
+{"result":31535,"time":{"start":1754927378.44929,"finish":1754927379.287265,"duration":0.837975025177002,"processing":0.7960259914398193,"date_start":"2025-08-11T18:49:38+03:00","date_finish":"2025-08-11T18:49:39+03:00","operating_reset_at":1754927978,"operating":0.7960119247436523}}
+
+2025-08-13 15:04:56   ->   mdrabbymolla258036@gmail.com
+{"result":31573,"time":{"start":1755097523.347874,"finish":1755097523.869786,"duration":0.5219120979309082,"processing":0.4823288917541504,"date_start":"2025-08-13T18:05:23+03:00","date_finish":"2025-08-13T18:05:23+03:00","operating_reset_at":1755098123,"operating":0.4823150634765625}}
+
+2025-08-15 19:42:50   ->   rachel@dpt.xyz
+{"result":31601,"time":{"start":1755287001.540881,"finish":1755287002.514699,"duration":0.9738180637359619,"processing":0.8088359832763672,"date_start":"2025-08-15T22:43:21+03:00","date_finish":"2025-08-15T22:43:22+03:00","operating_reset_at":1755287601,"operating":0.8088221549987793}}
+
+2025-08-16 19:49:56   ->   michael@wagmiventures.io
+{"result":31617,"time":{"start":1755373830.562907,"finish":1755373831.073569,"duration":0.5106620788574219,"processing":0.4754300117492676,"date_start":"2025-08-16T22:50:30+03:00","date_finish":"2025-08-16T22:50:31+03:00","operating_reset_at":1755374430,"operating":0.47540879249572754}}
+
+2025-08-19 02:01:32   ->   k13a26r@gmail.com
+{"result":31647,"time":{"start":1755568930.892964,"finish":1755568932.56296,"duration":1.6699960231781006,"processing":1.6401870250701904,"date_start":"2025-08-19T05:02:10+03:00","date_finish":"2025-08-19T05:02:12+03:00","operating_reset_at":1755569530,"operating":1.6401748657226562}}
+
+2025-08-19 02:05:22   ->   k13a26r@gmail.com
+{"result":31649,"time":{"start":1755569162.200024,"finish":1755569162.521002,"duration":0.32097816467285156,"processing":0.23594999313354492,"date_start":"2025-08-19T05:06:02+03:00","date_finish":"2025-08-19T05:06:02+03:00","operating_reset_at":1755569762,"operating":1.8761060237884521}}
+
+2025-08-21 10:12:20   ->   csushant@avatarlife.com
+{"result":31713,"time":{"start":1755771184.589768,"finish":1755771185.35363,"duration":0.763862133026123,"processing":0.6785769462585449,"date_start":"2025-08-21T13:13:04+03:00","date_finish":"2025-08-21T13:13:05+03:00","operating_reset_at":1755771784,"operating":0.6785609722137451}}
+
+2025-08-21 15:24:29   ->   operaciones@martinalbarracin.com
+{"result":31719,"time":{"start":1755789914.55633,"finish":1755789915.334101,"duration":0.77777099609375,"processing":0.7349739074707031,"date_start":"2025-08-21T18:25:14+03:00","date_finish":"2025-08-21T18:25:15+03:00","operating_reset_at":1755790514,"operating":0.7349600791931152}}
+
+2025-08-25 10:00:47   ->   info@suedeai.org
+{"result":31745,"time":{"start":1756116101.21617,"finish":1756116101.558383,"duration":0.3422129154205322,"processing":0.3179299831390381,"date_start":"2025-08-25T13:01:41+03:00","date_finish":"2025-08-25T13:01:41+03:00","operating_reset_at":1756116701,"operating":0.3179137706756592}}
+
+2025-08-27 21:25:52   ->   matt@rumable.com
+{"result":31779,"time":{"start":1756330011.903861,"finish":1756330012.766627,"duration":0.8627660274505615,"processing":0.8297610282897949,"date_start":"2025-08-28T00:26:51+03:00","date_finish":"2025-08-28T00:26:52+03:00","operating_reset_at":1756330611,"operating":0.8297429084777832}}
+
+2025-08-28 09:23:13   ->   peter@hhmediaglobal.com
+{"result":31789,"time":{"start":1756373053.466872,"finish":1756373054.212495,"duration":0.7456231117248535,"processing":0.692816972732544,"date_start":"2025-08-28T12:24:13+03:00","date_finish":"2025-08-28T12:24:14+03:00","operating_reset_at":1756373653,"operating":0.6927969455718994}}
+
+2025-08-30 06:10:54   ->   nitinv@rabblelabs.xyz
+{"result":31815,"time":{"start":1756534318.058492,"finish":1756534319.566684,"duration":1.5081920623779297,"processing":1.4459750652313232,"date_start":"2025-08-30T09:11:58+03:00","date_finish":"2025-08-30T09:11:59+03:00","operating_reset_at":1756534918,"operating":1.4459600448608398}}
+
+2025-09-01 10:06:20   ->   20lab@proton.me
+{"result":31823,"time":{"start":1756721249.898135,"finish":1756721250.713749,"duration":0.8156139850616455,"processing":0.7493791580200195,"date_start":"2025-09-01T13:07:29+03:00","date_finish":"2025-09-01T13:07:30+03:00","operating_reset_at":1756721849,"operating":0.7493600845336914}}
+
+2025-09-01 12:12:27   ->   i.belyaev@finflowsoft.com
+{"result":31827,"time":{"start":1756728816.8471,"finish":1756728818.360711,"duration":1.513611078262329,"processing":1.4721169471740723,"date_start":"2025-09-01T15:13:36+03:00","date_finish":"2025-09-01T15:13:38+03:00","operating_reset_at":1756729416,"operating":1.472100019454956}}
+
+2025-09-02 17:01:09   ->   nexoramining@protonmail.com
+{"result":31839,"time":{"start":1756832542.04668,"finish":1756832542.630656,"duration":0.5839760303497314,"processing":0.54410719871521,"date_start":"2025-09-02T20:02:22+03:00","date_finish":"2025-09-02T20:02:22+03:00","operating_reset_at":1756833142,"operating":1.2793231010437012}}
+
+2025-09-08 02:03:28   ->   support@blazium.xyz
+{"result":31917,"time":{"start":1757297093.513206,"finish":1757297094.191945,"duration":0.678739070892334,"processing":0.6361689567565918,"date_start":"2025-09-08T05:04:53+03:00","date_finish":"2025-09-08T05:04:54+03:00","operating_reset_at":1757297693,"operating":0.6361539363861084}}
+
+2025-09-10 03:25:18   ->   simon.hardy@tradable.app
+{"result":31951,"time":{"start":1757474716.687508,"finish":1757474718.162905,"duration":1.4753968715667725,"processing":1.4365508556365967,"date_start":"2025-09-10T06:25:16+03:00","date_finish":"2025-09-10T06:25:18+03:00","operating_reset_at":1757475316,"operating":1.4365348815917969}}
+
+2025-09-11 07:59:34   ->   philip.blazdell@fedrock.com
+{"result":31973,"time":{"start":1757577574.088152,"finish":1757577574.754796,"duration":0.6666440963745117,"processing":0.6437828540802002,"date_start":"2025-09-11T10:59:34+03:00","date_finish":"2025-09-11T10:59:34+03:00","operating_reset_at":1757578174,"operating":0.6437690258026123}}
+
+2025-09-11 08:13:50   ->   philip.blazdell@fedrock.com
+{"result":31975,"time":{"start":1757578430.028639,"finish":1757578430.729237,"duration":0.7005980014801025,"processing":0.6579248905181885,"date_start":"2025-09-11T11:13:50+03:00","date_finish":"2025-09-11T11:13:50+03:00","operating_reset_at":1757579030,"operating":0.6579070091247559}}
+
+2025-09-12 01:25:14   ->   simon.hardy@tradable.app
+{"result":31995,"time":{"start":1757640314.022443,"finish":1757640314.898969,"duration":0.87652587890625,"processing":0.8433520793914795,"date_start":"2025-09-12T04:25:14+03:00","date_finish":"2025-09-12T04:25:14+03:00","operating_reset_at":1757640914,"operating":0.8433279991149902}}
+
+2025-09-14 12:08:31   ->   peter@hhmediaglobal.com
+{"result":32013,"time":{"start":1757851710.830174,"finish":1757851711.378125,"duration":0.5479509830474854,"processing":0.5113840103149414,"date_start":"2025-09-14T15:08:30+03:00","date_finish":"2025-09-14T15:08:31+03:00","operating_reset_at":1757852310,"operating":0.5113718509674072}}
+
+2025-09-15 16:46:09   ->   shemarsadiq@gmail.com
+{"result":32039,"time":{"start":1757954768.635923,"finish":1757954769.779722,"duration":1.143799066543579,"processing":0.8438868522644043,"date_start":"2025-09-15T19:46:08+03:00","date_finish":"2025-09-15T19:46:09+03:00","operating_reset_at":1757955368,"operating":1.6458806991577148}}
+
+2025-09-17 12:53:37   ->   szinke@metawin.inc
+{"result":32069,"time":{"start":1758113615.889019,"finish":1758113617.459782,"duration":1.5707628726959229,"processing":1.5124680995941162,"date_start":"2025-09-17T15:53:35+03:00","date_finish":"2025-09-17T15:53:37+03:00","operating_reset_at":1758114215,"operating":1.512450933456421}}
+
+2025-09-20 19:53:47   ->   itmamager@famholding.com
+{"result":32133,"time":{"start":1758398026.230745,"finish":1758398027.091055,"duration":0.8603098392486572,"processing":0.8114721775054932,"date_start":"2025-09-20T22:53:46+03:00","date_finish":"2025-09-20T22:53:47+03:00","operating_reset_at":1758398626,"operating":0.8114511966705322}}
+
+2025-09-24 13:46:36   ->   connormacpherson@irongatesresearch.com
+{"result":32183,"time":{"start":1758721595.861039,"finish":1758721596.725608,"duration":0.8645691871643066,"processing":0.7813339233398438,"date_start":"2025-09-24T16:46:35+03:00","date_finish":"2025-09-24T16:46:36+03:00","operating_reset_at":1758722195,"operating":0.7813208103179932}}
+
+2025-09-25 20:13:23   ->   denis@betbolt.com
+{"result":32213,"time":{"start":1758831201,"finish":1758831203.357216,"duration":2.3572158813476562,"processing":2,"date_start":"2025-09-25T23:13:21+03:00","date_finish":"2025-09-25T23:13:23+03:00","operating_reset_at":1758831801,"operating":1.7388968467712402}}
+
+2025-10-01 17:15:10   ->   marketing@omnilabs.media
+{"result":32307,"time":{"start":1759338909,"finish":1759338910.216892,"duration":1.2168920040130615,"processing":1,"date_start":"2025-10-01T20:15:09+03:00","date_finish":"2025-10-01T20:15:10+03:00","operating_reset_at":1759339509,"operating":0.903872013092041}}
+
+2025-10-01 21:06:14   ->   m.tabbia@unicoin.com
+{"result":32313,"time":{"start":1759352773,"finish":1759352774.283723,"duration":1.2837231159210205,"processing":1,"date_start":"2025-10-02T00:06:13+03:00","date_finish":"2025-10-02T00:06:14+03:00","operating_reset_at":1759353373,"operating":0.7534060478210449}}
+
+2025-10-02 04:33:59   ->   shawn@sweepshub.us
+{"result":32317,"time":{"start":1759379638,"finish":1759379639.479063,"duration":1.4790630340576172,"processing":1,"date_start":"2025-10-02T07:33:58+03:00","date_finish":"2025-10-02T07:33:59+03:00","operating_reset_at":1759380238,"operating":1.3841290473937988}}
+
+2025-10-05 14:30:52   ->   dshpetim08@gmail.com
+{"result":32387,"time":{"start":1759674652,"finish":1759674652.458118,"duration":0.4581179618835449,"processing":0,"date_start":"2025-10-05T17:30:52+03:00","date_finish":"2025-10-05T17:30:52+03:00","operating_reset_at":1759675252,"operating":1.9407291412353516}}
+
+2025-10-09 14:30:37   ->   pers.atharva@gmail.com
+{"result":32633,"time":{"start":1760020236,"finish":1760020237.304559,"duration":1.3045589923858643,"processing":1,"date_start":"2025-10-09T17:30:36+03:00","date_finish":"2025-10-09T17:30:37+03:00","operating_reset_at":1760020836,"operating":0.6717729568481445}}
+
+2025-10-09 22:58:02   ->   shawn@sweepshub.us
+{"result":32641,"time":{"start":1760050681,"finish":1760050682.60725,"duration":1.6072499752044678,"processing":1,"date_start":"2025-10-10T01:58:01+03:00","date_finish":"2025-10-10T01:58:02+03:00","operating_reset_at":1760051281,"operating":0.7392101287841797}}
+
+2025-10-13 18:17:09   ->   penhossalo0@gmail.com
+{"result":32843,"time":{"start":1760379426,"finish":1760379429.097274,"duration":3.0972740650177,"processing":1,"date_start":"2025-10-13T21:17:06+03:00","date_finish":"2025-10-13T21:17:09+03:00","operating_reset_at":1760380028,"operating":0.9262950420379639}}
+
+2025-10-14 02:47:41   ->   dumbird@mux.network
+{"result":32913,"time":{"start":1760410060,"finish":1760410061.167149,"duration":1.1671490669250488,"processing":1,"date_start":"2025-10-14T05:47:40+03:00","date_finish":"2025-10-14T05:47:41+03:00","operating_reset_at":1760410660,"operating":0.26212191581726074}}
+
+2025-10-14 05:48:00   ->   inadtokin@gmail.com
+{"result":32917,"time":{"start":1760420879,"finish":1760420880.869448,"duration":1.869447946548462,"processing":0,"date_start":"2025-10-14T08:47:59+03:00","date_finish":"2025-10-14T08:48:00+03:00","operating_reset_at":1760421480,"operating":0.8032488822937012}}
+
+2025-10-15 17:08:22   ->   m@blend.money
+{"result":33047,"time":{"start":1760548102,"finish":1760548102.766421,"duration":0.7664210796356201,"processing":0,"date_start":"2025-10-15T20:08:22+03:00","date_finish":"2025-10-15T20:08:22+03:00","operating_reset_at":1760548702,"operating":0.3831000328063965}}
+
+2025-10-15 20:32:14   ->   jzh123456j@gmail.com
+{"result":33063,"time":{"start":1760560333,"finish":1760560334.435801,"duration":1.4358010292053223,"processing":1,"date_start":"2025-10-15T23:32:13+03:00","date_finish":"2025-10-15T23:32:14+03:00","operating_reset_at":1760560933,"operating":1.2719998359680176}}
+
+2025-10-16 14:27:06   ->   vp@arcticmonks.io
+{"result":33137,"time":{"start":1760624825,"finish":1760624826.160416,"duration":1.1604158878326416,"processing":1,"date_start":"2025-10-16T17:27:05+03:00","date_finish":"2025-10-16T17:27:06+03:00","operating_reset_at":1760625425,"operating":0.7206220626831055}}
+
+2025-10-17 12:10:32   ->   kruszywaszymborski@gnail.com
+{"result":33201,"time":{"start":1760703031,"finish":1760703032.290639,"duration":1.2906389236450195,"processing":1,"date_start":"2025-10-17T15:10:31+03:00","date_finish":"2025-10-17T15:10:32+03:00","operating_reset_at":1760703631,"operating":0.8542580604553223}}
+
+2025-10-18 12:55:20   ->   timnasdigital@gmail.com
+{"result":33259,"time":{"start":1760792119,"finish":1760792120.434064,"duration":1.4340639114379883,"processing":1,"date_start":"2025-10-18T15:55:19+03:00","date_finish":"2025-10-18T15:55:20+03:00","operating_reset_at":1760792719,"operating":0.9499390125274658}}
+
+2025-10-20 12:10:35   ->   becomethehive@gmail.com
+{"result":33361,"time":{"start":1760962234,"finish":1760962235.431611,"duration":1.4316110610961914,"processing":1,"date_start":"2025-10-20T15:10:34+03:00","date_finish":"2025-10-20T15:10:35+03:00","operating_reset_at":1760962834,"operating":2.2836930751800537}}
+
+2025-10-20 16:24:55   ->   juliusiza1@gmail.com
+{"result":33375,"time":{"start":1760977495,"finish":1760977495.709366,"duration":0.7093660831451416,"processing":0,"date_start":"2025-10-20T19:24:55+03:00","date_finish":"2025-10-20T19:24:55+03:00","operating_reset_at":1760978095,"operating":2.4520392417907715}}
+
+2025-10-22 05:54:37   ->   samella@onelabs.cc
+{"result":33411,"time":{"start":1761112477,"finish":1761112477.919632,"duration":0.9196319580078125,"processing":0,"date_start":"2025-10-22T08:54:37+03:00","date_finish":"2025-10-22T08:54:37+03:00","operating_reset_at":1761113077,"operating":0.752112865447998}}
+
+2025-10-23 14:15:54   ->   operation@goldenrockbc.com
+{"result":33465,"time":{"start":1761228954,"finish":1761228954.905452,"duration":0.9054520130157471,"processing":0,"date_start":"2025-10-23T17:15:54+03:00","date_finish":"2025-10-23T17:15:54+03:00","operating_reset_at":1761229554,"operating":0.7668731212615967}}
+
+2025-10-24 07:45:08   ->   daria@mf0.io
+{"result":33485,"time":{"start":1761291906,"finish":1761291908.124033,"duration":2.124032974243164,"processing":2,"date_start":"2025-10-24T10:45:06+03:00","date_finish":"2025-10-24T10:45:08+03:00","operating_reset_at":1761292506,"operating":1.5214309692382812}}
+
+2025-10-24 19:43:28   ->   mustafa.alsheikhpe.hm@gmail.com
+{"result":33519,"time":{"start":1761335007,"finish":1761335008.867882,"duration":1.8678820133209229,"processing":1,"date_start":"2025-10-24T22:43:27+03:00","date_finish":"2025-10-24T22:43:28+03:00","operating_reset_at":1761335607,"operating":1.412865161895752}}
+
+2025-10-27 12:22:02   ->   test@test.com
+{"result":33551,"time":{"start":1761567721,"finish":1761567722.254504,"duration":1.2545039653778076,"processing":1,"date_start":"2025-10-27T15:22:01+03:00","date_finish":"2025-10-27T15:22:02+03:00","operating_reset_at":1761568321,"operating":1.0051660537719727}}
+
+2025-10-28 06:44:32   ->   daria@mf0.io
+{"result":33561,"time":{"start":1761633871,"finish":1761633872.283407,"duration":1.2834069728851318,"processing":1,"date_start":"2025-10-28T09:44:31+03:00","date_finish":"2025-10-28T09:44:32+03:00","operating_reset_at":1761634471,"operating":0.7342259883880615}}
+
+2025-10-28 10:57:45   ->   atastic.shi@zoomex.com
+{"result":33567,"time":{"start":1761649064,"finish":1761649065.297197,"duration":1.2971971035003662,"processing":1,"date_start":"2025-10-28T13:57:44+03:00","date_finish":"2025-10-28T13:57:45+03:00","operating_reset_at":1761649664,"operating":0.6552729606628418}}
+
+2025-10-29 07:40:07   ->   daria@mf0.io
+{"result":33587,"time":{"start":1761723606,"finish":1761723606.989451,"duration":0.9894509315490723,"processing":0,"date_start":"2025-10-29T10:40:06+03:00","date_finish":"2025-10-29T10:40:06+03:00","operating_reset_at":1761724206,"operating":0.5880048274993896}}
+
+2025-10-30 19:00:31   ->   sofia@raraavis.org
+{"result":33613,"time":{"start":1761850830,"finish":1761850831.259562,"duration":1.2595620155334473,"processing":1,"date_start":"2025-10-30T22:00:30+03:00","date_finish":"2025-10-30T22:00:31+03:00","operating_reset_at":1761851430,"operating":0.7694518566131592}}
+
+2025-11-06 11:22:42   ->   tasha.sokolova@zillion.games
+{"result":33683,"time":{"start":1762428161,"finish":1762428162.311075,"duration":1.31107497215271,"processing":1,"date_start":"2025-11-06T14:22:41+03:00","date_finish":"2025-11-06T14:22:42+03:00","operating_reset_at":1762428761,"operating":0.5771341323852539}}
+
+2025-11-08 15:46:06   ->   degerangalexander@gmail.com
+{"result":33711,"time":{"start":1762616766,"finish":1762616766.661186,"duration":0.6611859798431396,"processing":0,"date_start":"2025-11-08T18:46:06+03:00","date_finish":"2025-11-08T18:46:06+03:00","operating_reset_at":1762617366,"operating":1.5790271759033203}}
+
+2025-11-13 08:35:51   ->   arnavatwork01@gmail.com
+{"result":33791,"time":{"start":1763022951,"finish":1763022951.948186,"duration":0.948185920715332,"processing":0,"date_start":"2025-11-13T11:35:51+03:00","date_finish":"2025-11-13T11:35:51+03:00","operating_reset_at":1763023551,"operating":0.5924098491668701}}
+
+2025-11-18 18:03:27   ->   filipmiric0604@gmail.com
+{"result":33873,"time":{"start":1763489006,"finish":1763489007.089595,"duration":1.089595079421997,"processing":1,"date_start":"2025-11-18T21:03:26+03:00","date_finish":"2025-11-18T21:03:27+03:00","operating_reset_at":1763489606,"operating":1.5784788131713867}}
+
+2025-11-21 04:47:38   ->   jeffpolkadot@proton.me
+{"result":33909,"time":{"start":1763700456,"finish":1763700458.320011,"duration":2.3200109004974365,"processing":2,"date_start":"2025-11-21T07:47:36+03:00","date_finish":"2025-11-21T07:47:38+03:00","operating_reset_at":1763701056,"operating":1.4539330005645752}}
+
+2025-11-21 08:09:12   ->   joann.h@okg.com
+{"result":33913,"time":{"start":1763712552,"finish":1763712552.733701,"duration":0.7337009906768799,"processing":0,"date_start":"2025-11-21T11:09:12+03:00","date_finish":"2025-11-21T11:09:12+03:00","operating_reset_at":1763713152,"operating":0.5674128532409668}}
+
+2025-11-26 01:22:29   ->   cerberaiml@gmail.com
+{"result":33967,"time":{"start":1764120148,"finish":1764120148.938903,"duration":0.9389030933380127,"processing":0,"date_start":"2025-11-26T04:22:28+03:00","date_finish":"2025-11-26T04:22:28+03:00","operating_reset_at":1764120748,"operating":2.127714157104492}}
+
+2025-11-26 11:03:28   ->   rusnaktrv@gmail.com
+{"result":33977,"time":{"start":1764155007,"finish":1764155007.993296,"duration":0.9932959079742432,"processing":0,"date_start":"2025-11-26T14:03:27+03:00","date_finish":"2025-11-26T14:03:27+03:00","operating_reset_at":1764155607,"operating":0.6796078681945801}}
+
+2025-11-26 16:40:16   ->   davinder.spall@ushur.com
+{"result":33983,"time":{"start":1764175214,"finish":1764175216.427301,"duration":2.4273009300231934,"processing":2,"date_start":"2025-11-26T19:40:14+03:00","date_finish":"2025-11-26T19:40:16+03:00","operating_reset_at":1764175814,"operating":1.4757030010223389}}
+
+2025-11-27 17:43:48   ->   jd@onekey.so
+{"result":34003,"time":{"start":1764265426,"finish":1764265428.559196,"duration":2.5591959953308105,"processing":2,"date_start":"2025-11-27T20:43:46+03:00","date_finish":"2025-11-27T20:43:48+03:00","operating_reset_at":1764266026,"operating":2.150399923324585}}
+
+2025-11-28 03:06:46   ->   vinayak.s1723@gmail.com
+{"result":34007,"time":{"start":1764299205,"finish":1764299206.04048,"duration":1.0404798984527588,"processing":1,"date_start":"2025-11-28T06:06:45+03:00","date_finish":"2025-11-28T06:06:46+03:00","operating_reset_at":1764299805,"operating":0.8689420223236084}}
+
+2025-11-28 04:03:02   ->   vinayak.s1723@gmail.com
+{"result":34009,"time":{"start":1764302581,"finish":1764302582.347532,"duration":1.347532033920288,"processing":1,"date_start":"2025-11-28T07:03:01+03:00","date_finish":"2025-11-28T07:03:02+03:00","operating_reset_at":1764303181,"operating":1.057102918624878}}
+
+2025-11-30 21:21:04   ->   jose@fundexprop.com
+{"result":34033,"time":{"start":1764537663,"finish":1764537664.449726,"duration":1.4497261047363281,"processing":1,"date_start":"2025-12-01T00:21:03+03:00","date_finish":"2025-12-01T00:21:04+03:00","operating_reset_at":1764538263,"operating":1.3988049030303955}}
+
+2025-12-01 06:03:16   ->   vinayak.s1723@gmail.com
+{"result":34039,"time":{"start":1764568995,"finish":1764568996.744709,"duration":1.7447090148925781,"processing":1,"date_start":"2025-12-01T09:03:15+03:00","date_finish":"2025-12-01T09:03:16+03:00","operating_reset_at":1764569595,"operating":1.273029088973999}}
+
+2025-12-02 11:45:24   ->   jelle2500@gmail.com
+{"result":34069,"time":{"start":1764675923,"finish":1764675924.532874,"duration":1.5328741073608398,"processing":1,"date_start":"2025-12-02T14:45:23+03:00","date_finish":"2025-12-02T14:45:24+03:00","operating_reset_at":1764676523,"operating":1.3946211338043213}}
+
+2025-12-02 14:07:15   ->   jose@fundexprop.com
+{"result":34071,"time":{"start":1764684433,"finish":1764684435.117618,"duration":2.1176180839538574,"processing":2,"date_start":"2025-12-02T17:07:13+03:00","date_finish":"2025-12-02T17:07:15+03:00","operating_reset_at":1764685033,"operating":1.569828987121582}}
+
+2025-12-03 08:08:53   ->   m.almunaikh@fatra.io
+{"result":34081,"time":{"start":1764749332,"finish":1764749333.542825,"duration":1.5428249835968018,"processing":1,"date_start":"2025-12-03T11:08:52+03:00","date_finish":"2025-12-03T11:08:53+03:00","operating_reset_at":1764749932,"operating":0.7297048568725586}}
+
+2025-12-03 08:53:30   ->   supriya@roosterpartners.com
+{"result":34083,"time":{"start":1764752009,"finish":1764752010.188312,"duration":1.18831205368042,"processing":1,"date_start":"2025-12-03T11:53:29+03:00","date_finish":"2025-12-03T11:53:30+03:00","operating_reset_at":1764752609,"operating":0.6069121360778809}}
+
+2025-12-05 12:25:17   ->   bitcazar@gmail.com
+{"result":34115,"time":{"start":1764937516,"finish":1764937517.905254,"duration":1.9052538871765137,"processing":1,"date_start":"2025-12-05T15:25:16+03:00","date_finish":"2025-12-05T15:25:17+03:00","operating_reset_at":1764938116,"operating":1.6722259521484375}}
+
+2025-12-09 09:36:04   ->   presa.shrestha@gl-net.com
+{"result":34139,"time":{"start":1765272963,"finish":1765272963.965889,"duration":0.9658889770507812,"processing":0,"date_start":"2025-12-09T12:36:03+03:00","date_finish":"2025-12-09T12:36:03+03:00","operating_reset_at":1765273563,"operating":0.6634910106658936}}
+
+2025-12-09 11:54:43   ->   alex.baychikov@edge-capital-fund.com
+{"result":34143,"time":{"start":1765281283,"finish":1765281283.923129,"duration":0.9231290817260742,"processing":0,"date_start":"2025-12-09T14:54:43+03:00","date_finish":"2025-12-09T14:54:43+03:00","operating_reset_at":1765281883,"operating":1.0561580657958984}}
+
+2025-12-09 15:02:06   ->   mario@mexiwin.com
+{"result":34149,"time":{"start":1765292525,"finish":1765292526.015815,"duration":1.015815019607544,"processing":1,"date_start":"2025-12-09T18:02:05+03:00","date_finish":"2025-12-09T18:02:06+03:00","operating_reset_at":1765293125,"operating":0.724005937576294}}
+
+2025-12-10 11:27:06   ->   mario@mexiwin.com
+{"result":34161,"time":{"start":1765366026,"finish":1765366026.868184,"duration":0.8681840896606445,"processing":0,"date_start":"2025-12-10T14:27:06+03:00","date_finish":"2025-12-10T14:27:06+03:00","operating_reset_at":1765366626,"operating":0.6666479110717773}}
+
+2025-12-10 14:09:47   ->   thebodyshapr@gmail.com
+{"result":34167,"time":{"start":1765375786,"finish":1765375787.217654,"duration":1.2176539897918701,"processing":1,"date_start":"2025-12-10T17:09:46+03:00","date_finish":"2025-12-10T17:09:47+03:00","operating_reset_at":1765376386,"operating":0.6958820819854736}}
+
+2025-12-12 09:57:34   ->   yvonne.guan@ultimamarkets.com
+{"result":34199,"time":{"start":1765533453,"finish":1765533454.393948,"duration":1.3939480781555176,"processing":1,"date_start":"2025-12-12T12:57:33+03:00","date_finish":"2025-12-12T12:57:34+03:00","operating_reset_at":1765534053,"operating":0.7014048099517822}}
+
+2025-12-15 19:18:52   ->   dannybinson@gmail.com
+{"result":34233,"time":{"start":1765826331,"finish":1765826332.273934,"duration":1.2739338874816895,"processing":1,"date_start":"2025-12-15T22:18:51+03:00","date_finish":"2025-12-15T22:18:52+03:00","operating_reset_at":1765826931,"operating":0.833949089050293}}
+
+2025-12-21 01:38:31   ->   sa@pumpchange.fun
+{"result":34283,"time":{"start":1766281111,"finish":1766281111.898247,"duration":0.8982470035552979,"processing":0,"date_start":"2025-12-21T04:38:31+03:00","date_finish":"2025-12-21T04:38:31+03:00","operating_reset_at":1766281711,"operating":0.6512091159820557}}
+
+2026-01-07 18:15:44   ->   admin@correkt.com
+{"result":34447,"time":{"start":1767809744,"finish":1767809744.282676,"duration":0.28267598152160645,"processing":0,"date_start":"2026-01-07T21:15:44+03:00","date_finish":"2026-01-07T21:15:44+03:00","operating_reset_at":1767810344,"operating":2.1039578914642334}}
+
+2026-01-12 01:19:07   ->   brayen.barleduc@gmail.com
+{"result":34481,"time":{"start":1768180746,"finish":1768180747.325355,"duration":1.325355052947998,"processing":1,"date_start":"2026-01-12T04:19:06+03:00","date_finish":"2026-01-12T04:19:07+03:00","operating_reset_at":1768181346,"operating":0.7229459285736084}}
+
+2026-01-12 09:24:59   ->   nasib@trading-buddy.io
+{"result":34487,"time":{"start":1768209898,"finish":1768209899.385336,"duration":1.385335922241211,"processing":1,"date_start":"2026-01-12T12:24:58+03:00","date_finish":"2026-01-12T12:24:59+03:00","operating_reset_at":1768210498,"operating":0.6619100570678711}}
+
+2026-01-12 14:56:13   ->   gregor.konrad@conceptagentur.at
+{"result":34497,"time":{"start":1768229773,"finish":1768229773.910816,"duration":0.910815954208374,"processing":0,"date_start":"2026-01-12T17:56:13+03:00","date_finish":"2026-01-12T17:56:13+03:00","operating_reset_at":1768230373,"operating":0.8361871242523193}}
+
+2026-01-13 11:40:44   ->   sanghita@solus.finance
+{"result":34507,"time":{"start":1768304442,"finish":1768304444.800657,"duration":2.800657033920288,"processing":2,"date_start":"2026-01-13T14:40:42+03:00","date_finish":"2026-01-13T14:40:44+03:00","operating_reset_at":1768305042,"operating":1.9408111572265625}}
+
+2026-01-13 15:27:49   ->   jmccarley@gic-information.com
+{"result":34517,"time":{"start":1768318068,"finish":1768318069.281415,"duration":1.2814149856567383,"processing":1,"date_start":"2026-01-13T18:27:48+03:00","date_finish":"2026-01-13T18:27:49+03:00","operating_reset_at":1768318668,"operating":0.9131698608398438}}
+
+2026-01-13 20:32:18   ->   matt@phenompoker.com
+{"result":34519,"time":{"start":1768336337,"finish":1768336338.113402,"duration":1.1134018898010254,"processing":1,"date_start":"2026-01-13T23:32:17+03:00","date_finish":"2026-01-13T23:32:18+03:00","operating_reset_at":1768336937,"operating":0.702768087387085}}
+
+2026-01-16 07:19:39   ->   anupam@biswanews.com
+{"result":34543,"time":{"start":1768547978,"finish":1768547979.162443,"duration":1.162442922592163,"processing":1,"date_start":"2026-01-16T10:19:38+03:00","date_finish":"2026-01-16T10:19:39+03:00","operating_reset_at":1768548578,"operating":2.051100254058838}}
+
+2026-01-19 20:17:49   ->   maytatty722@gmail.com
+{"result":34585,"time":{"start":1768853869,"finish":1768853869.906106,"duration":0.9061059951782227,"processing":0,"date_start":"2026-01-19T23:17:49+03:00","date_finish":"2026-01-19T23:17:49+03:00","operating_reset_at":1768854469,"operating":0.7789571285247803}}
+
+2026-01-20 15:14:00   ->   pr@thecoinrepublic.com
+{"result":34599,"time":{"start":1768922039,"finish":1768922040.655492,"duration":1.6554920673370361,"processing":1,"date_start":"2026-01-20T18:13:59+03:00","date_finish":"2026-01-20T18:14:00+03:00","operating_reset_at":1768922639,"operating":0.8318018913269043}}
+
+2026-01-20 22:06:49   ->   tomasramos@fairmatch.us
+{"result":34603,"time":{"start":1768946808,"finish":1768946809.344294,"duration":1.3442940711975098,"processing":1,"date_start":"2026-01-21T01:06:48+03:00","date_finish":"2026-01-21T01:06:49+03:00","operating_reset_at":1768947408,"operating":0.6976761817932129}}
+
+2026-01-22 07:10:33   ->   sania.javed@wanderon.in
+{"result":34625,"time":{"start":1769065832,"finish":1769065833.192856,"duration":1.1928560733795166,"processing":1,"date_start":"2026-01-22T10:10:32+03:00","date_finish":"2026-01-22T10:10:33+03:00","operating_reset_at":1769066432,"operating":0.42861485481262207}}
+
+2026-01-22 07:17:05   ->   sania.javed@wanderon.in
+{"result":34627,"time":{"start":1769066225,"finish":1769066225.774807,"duration":0.7748069763183594,"processing":0,"date_start":"2026-01-22T10:17:05+03:00","date_finish":"2026-01-22T10:17:05+03:00","operating_reset_at":1769066825,"operating":0.8144328594207764}}
+
+2026-01-22 11:31:29   ->   yalun.ban@nexifymedia.de
+{"result":34635,"time":{"start":1769081488,"finish":1769081489.746672,"duration":1.7466719150543213,"processing":1,"date_start":"2026-01-22T14:31:28+03:00","date_finish":"2026-01-22T14:31:29+03:00","operating_reset_at":1769082088,"operating":1.4694809913635254}}
+
+2026-01-22 16:09:14   ->   lukas@engain.io
+{"result":34643,"time":{"start":1769098153,"finish":1769098154.042486,"duration":1.0424859523773193,"processing":1,"date_start":"2026-01-22T19:09:13+03:00","date_finish":"2026-01-22T19:09:14+03:00","operating_reset_at":1769098753,"operating":0.6421120166778564}}
+
+2026-01-25 18:10:40   ->   toptricks786@gmail.com
+{"result":34695,"time":{"start":1769364640,"finish":1769364640.519033,"duration":0.5190329551696777,"processing":0,"date_start":"2026-01-25T21:10:40+03:00","date_finish":"2026-01-25T21:10:40+03:00","operating_reset_at":1769365240,"operating":1.5478236675262451}}
+
+2026-01-27 07:24:59   ->   eltubo48@gmail.com
+{"result":34709,"time":{"start":1769498699,"finish":1769498699.753123,"duration":0.7531230449676514,"processing":0,"date_start":"2026-01-27T10:24:59+03:00","date_finish":"2026-01-27T10:24:59+03:00","operating_reset_at":1769499299,"operating":0.8953461647033691}}
+
+2026-01-29 01:15:13   ->   mknezevic@ault.com
+{"result":34733,"time":{"start":1769649311,"finish":1769649313.430873,"duration":2.430872917175293,"processing":2,"date_start":"2026-01-29T04:15:11+03:00","date_finish":"2026-01-29T04:15:13+03:00","operating_reset_at":1769649911,"operating":1.4441609382629395}}
+

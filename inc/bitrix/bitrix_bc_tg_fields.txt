@@ -1,0 +1,881 @@
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Павлин Пенев - bc.team (https://easyweb30.com/)
+            [ASSIGNED_BY_ID] => 43
+            [NAME] => Павлин Пенев
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => chistaka@abv.bg
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +359894768589
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team (https://easyweb30.com/)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => smart contract creation
+            [TITLE] => Bally Cash - bc.team (finchaindev.com)
+            [ASSIGNED_BY_ID] => 27
+            [COMMENTS] => How can I develop a contract using the contract ownership to sign the transaction
+            [NAME] => Bally Cash
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => Ballycash0999@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +234 906 352 8348
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team (finchaindev.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => smart contract development company
+            [TITLE] => Parham Fakhri - bc.team (smart contract development company)
+            [ASSIGNED_BY_ID] => 43
+            [COMMENTS] => Hello. I'm looking for someone to develop a smart contract for our NFT project. But I needed some extra automatic processes involved.
+            [NAME] => Parham Fakhri
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => ldparham4ds@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +989107809530
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team (smart contract development company)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Test Bitrix - bc.team (example.com)
+            [ASSIGNED_BY_ID] => 27
+            [NAME] => Test Bitrix
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test@test.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => tg1231231
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team (example.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => nft development
+            [TITLE] => Jateni Daniel - bc.team (finchaindev.com/)
+            [ASSIGNED_BY_ID] => 27
+            [NAME] => Jateni Daniel
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => jatanidanielrko@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => -
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team (finchaindev.com/)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => smart contract creation
+            [TITLE] => Dzul - bc.team (finchaindev.com)
+            [ASSIGNED_BY_ID] => 43
+            [COMMENTS] => I want to make my own smart contract on BEP20
+            [NAME] => Dzul
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => papitossburger@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => https://t.me/Dzul_cat
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team (finchaindev.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => test - bc.team ()
+            [ASSIGNED_BY_ID] => 27
+            [NAME] => test
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test@test.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => tg123123
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team ()
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => test2 - icoda.io ()
+            [ASSIGNED_BY_ID] => 27
+            [NAME] => test2
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test@test.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => tg412323
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы icoda.io ()
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => fintech development
+            [TITLE] => Costar Mokwena - bc.team (https://bitsmartweb30.com)
+            [ASSIGNED_BY_ID] => 27
+            [COMMENTS] => Good day
+
+I would like to enquirer about some FinTech App development
+
+I have over 10+ App ideas to build however I’ve been struggling to find quality developers
+
+I want to build a FinTech crypto wallet that runs on binance network
+
+A trading strategy for all crypto using certain metaquote indicators but in an independent app
+
+Music App
+Pledge App
+Freelancing App
+Dating App
+Crypto Investment App
+
+Not that i will start at the same time but just to confirm if you can accommodate my ideas
+Confirm with me if the way people are dating online is safe and secure and real!
+And if web3 can be a possibility for all the apps to be built on!
+
+How can I get started
+            [NAME] => Costar Mokwena
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => kingsleycostar@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +27735914773
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team (https://bitsmartweb30.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Emre -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => Hello,
+I am Emre, I have project about crypto. My coin will be listed on some DEX and CEX soon so I need market making service provider. Do you provide this market making service? If yes, could you summarize your market making service's scope. Also could you give live demo video demo, we want to see your dashboard it is important for us.
+            [NAME] => Emre
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => etuncay@aizonatrading.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @emre_tu
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Antreas Panteli -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 27
+            [COMMENTS] => Hello,
+I am representing a crypto coin that is listed on traderjoe through dextools and I would like to ask for market making bot
+            [NAME] => Antreas Panteli
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => Antreas_pandeli@hotmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => The_machine333
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Tom Tanapat -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => https://trade.zipmex.com/th/trade/BTCTHB?_gl=1*15y83jf*_ga*NTA4NDIzNTcxLjE2Mjg2NTc0MzA.*_ga_7SRG4K124K*MTY2Mjk2NDI0My4yODguMS4xNjYyOTY0MjQ3LjU2LjAuMA
+            [NAME] => Tom Tanapat
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => tanapat.kn@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @tongtanapat
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Nik -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 43
+            [COMMENTS] => We have token project, ERW token. We listed on XT.com
+            [NAME] => Nik
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => nikitaklimishin@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => https://t.me/Kkkkklima
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Дмитрий -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 27
+            [COMMENTS] => CEX and DEX construction
+            [NAME] => Дмитрий
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => svdima5733@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @rhtt97
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => JC Rolison -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => Hello, We are looking for an automated Market maker company to assist our token on CEX. Thank you.
+            [NAME] => JC Rolison
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => JC@directoapp.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => https://t.me/Jaydist
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Joanna Ricci -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 43
+            [COMMENTS] => LODITECH & LODITECH USA is a Blockchain marketing and educational company based in the Philippines & US. We are dedicated in helping citizens living in countries with currency instability, by giving them access through tools, platforms and knowledge to level the global financial playing field and connecting them with citizens of more well-off countries, creating a level of economic equality.
+
+Our goal is to EMPOWER our users by providing education on crypto currency and the blockchain space, helping to provide a significant benefit by overcoming the lack of social trust issues in developing nations like the Philippines through blockchain while allowing access to financial rewards.
+            [NAME] => Joanna Ricci
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => joanna@lodicoins.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +639 163122984
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Fomba -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 27
+            [NAME] => Fomba
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mamadyfomba27@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 0022170076124
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Yass -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => Hi. at Giveth we would like to partner up with a MM who can get us listed on Gemini. Looking forward to sharing more info/our deck in case this is something you can help us with.
+thanks
+            [NAME] => Yass
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => yass@giveth.io
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @yass92
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Abel Sohajda -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 43
+            [COMMENTS] => Bitget is one of the most liquid crypto exchanges on the market with 5-10B in perpetuals and an institutional offering of 0 fees for both making and taking in spot trading./ We are currently looking to establish partnerships with market makers such as yourself.
+            [NAME] => Abel Sohajda
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => abel.sohajda@bitget.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Abel_inst
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => hamza -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 27
+            [COMMENTS] => We are a multichain bridge token and we would like a price sync bot
+            [NAME] => hamza
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => h.sahikh@metagols.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => https://t.me/GLOCLOADED
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => Pablo Reynes -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => We're searching a market making solution for NFT projects, we're an agency that has more than 10 projects and some of them wants to use this solution, i'll be happy to discuss about it on a call
+            [NAME] => Pablo Reynes
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => pablo@weareblackbear.io
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +33649512583
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_TERM] => market making
+            [TITLE] => DSBC -  (liquidityinfinite.com)
+            [ASSIGNED_BY_ID] => 43
+            [COMMENTS] => Looking for a liquidity provider market maker for our native token.
+            [NAME] => DSBC
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => sw@dsbc.io
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @dsbcglobal
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы  (liquidityinfinite.com)
+        )
+
+)
+
+
+test@test.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [UTM_TERM] => test_term
+            [TITLE] => test bc - bc.team (bc.team)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => test
+            [NAME] => test bc
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test@test.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team (bc.team)
+        )
+
+)
+
+
+test@test.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => test - bc.team 
+            [ASSIGNED_BY_ID] => 135
+            [NAME] => test
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test@test.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => Заявка с группы bc.team 
+        )
+
+)
+
+
