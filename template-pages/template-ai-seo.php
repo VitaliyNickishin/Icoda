@@ -19,7 +19,7 @@ $hero_section = get_field('hero_section');
 			</div>
 		</div>
 	</div>
-	<section class="section section-hero-ai-seo pb-4">
+	<section class="section section-hero-ai-seo pb-5">
 		<div class="section-hero-ai-seo__inner position-relative with-gradient with-gradient-pink with-gradient-blue">
 		
 			<div class="container">
@@ -31,11 +31,8 @@ $hero_section = get_field('hero_section');
 						<h1 class="h1 mb-4 title">
 							<?php echo $hero_section['title']; ?>
 						</h1>
-						<p class="subtitle">
-							<span class="undertitle">
-								<?php echo $hero_section['subtitle']; ?>
-							</span>
-							
+						<p class="undertitle">
+							<?php echo $hero_section['subtitle']; ?>
 						</p>
 						<div class="section-hero-new__btn d-flex flex-column flex-sm-row mt-4 mt-lg-4 pt-lg-2">
 							<a href="#" data-modal="#callback" class="btn btn-blue open-modal">

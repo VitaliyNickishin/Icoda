@@ -1,0 +1,162 @@
+.block-tabs {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include mediaMin(992) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .block-title {
+    font-size: 1.5rem;
+    line-height: 110%;
+    // @include mediaMin(1024) {
+    //   font-size: 2.5rem;
+    // }
+    @include mediaMin(1341) {
+      font-size: 2rem;
+    }
+  }
+  .subtitle {
+    font-size: 15px;
+    color: $color-dark-blue;
+    line-height: 150%;
+    @include mediaMin(992) {
+      font-size: 1.125rem;
+    }
+  }
+  .nav {
+    @include mediaMin(992) {
+      justify-content: center;
+    }
+    &-tabs {
+      gap: 4px;
+      border-bottom: 0;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      @include mediaMax(768) {
+        margin-right: -15px;
+      }
+    }
+    &-icon {
+      margin-right: 6px;
+      width: 24px;
+      height: 24px;
+      svg {
+        color: $color-blue;
+      }
+    }
+    &-link {
+      display: flex;
+      padding: 10px 24px;
+      color: $color-blue;
+      font-family: $f-sto-sb;
+      cursor: pointer;
+      @include border-radius(4px);
+      background-color: transparent;
+      border: 1px solid $color-blue;
+      flex-shrink: 0;
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: $color-blue;
+        border-color: $color-blue;
+        color: $white;
+        .nav-icon {
+          svg {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .tab {
+    &-content {
+      margin-top: 0.625rem;
+      min-height: 291px;
+      @include mediaMin(576) {
+        margin-top: 1.5rem;
+      }
+      @include mediaMin(992) {
+        width: 620px;
+        max-width: 100%;
+        margin: 1.125rem auto 0;
+        min-height: 236px;
+      }
+    }
+    &-pane {
+      padding: 1.5rem 1.75rem;
+      border-radius: 12px;
+      border: 1px solid $border-color;
+      background: $white;
+
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+      &-header {
+        @extend .d-flex;
+        @extend .align-items-center;
+        &-icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 1rem;
+          @include mediaMin(992) {
+            width: 48px;
+            height: 48px;
+          }
+          svg {
+            width: 40px;
+            height: 40px;
+            @include mediaMin(992) {
+              width: 48px;
+              height: 48px;
+            }
+          }
+        }
+        &-title {
+          font-size: 20px;
+          font-family: $f-sto-sb;
+          line-height: 110%;
+          color: $color-dark-blue;
+          @include mediaMin(992) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      &-body {
+        margin-top: 1rem;
+        font-size: 0.9375rem;
+        @include mediaMin(992) {
+          font-size: 1rem;
+        }
+        li {
+          line-height: 150%;
+          display: flex;
+          align-items: start;
+
+          + li {
+            border-top: 1px solid $border-color;
+            padding-top: 12px;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+    &-title {
+      font-size: 1.25rem;
+      font-family: $f-sto-sb;
+      line-height: 110%;
+      @include mediaMin(992) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .has-icon-check {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 12px;
+    background-image: url("../images/icon-check-round.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+  }
+}
