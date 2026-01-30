@@ -135,6 +135,37 @@
       }
     }
   }
+  // Adjustments for two-column content blocks
+  .block-content-two-columns {
+    @extend .my-lg-4;
+    .section-title {
+      @extend .text-lg-center;
+    }
+  }
+
+  // Adjustments for case study CTA section
+  .section-case-cta {
+    .banner {
+      background-color: transparent;
+      padding: 1.25rem;
+      @include mediaMin(992) {
+        padding: 0.5rem;
+      }
+    }
+    .title {
+      color: $color-dark-blue;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      @include mediaMin(992) {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+      }
+    }
+    .btn.btn-blue {
+      min-width: auto;
+      padding: 1rem 2.5rem;
+    }
+  }
   .related-articles {
     .title {
       width: 250px;
