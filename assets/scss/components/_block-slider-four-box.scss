@@ -1,0 +1,124 @@
+.block-slider-four-box {
+  .block-title {
+    font-family: $f-sto-sb;
+    font-size: 1.5rem;
+    line-height: 110%;
+    margin-bottom: 1.125rem;
+    color: $color-dark-blue;
+    @include mediaMin(992) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    @include mediaMin(1201) {
+      margin-bottom: 4.5rem;
+    }
+  }
+  //general settings for custom slider mobile
+  .custom-slider {
+    .slick-slide {
+      flex-grow: 0;
+      height: inherit !important;
+      img {
+        width: auto;
+      }
+    }
+    .slick-track {
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 15px;
+      @include mediaMin(992) {
+        padding-top: 40px;
+      }
+    }
+    @include mediaMin(1201) {
+      opacity: 1;
+      visibility: visible;
+      overflow: unset;
+    }
+  }
+  .box-card {
+    display: block;
+    border: 1px solid $border-color;
+    height: 100%;
+    transition: box-shadow 0.3s ease-out;
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    background: hsla(0, 0%, 100%, 0.8);
+    backdrop-filter: blur(4px);
+    width: 280px;
+    @include mediaMin(992) {
+      width: 340px;
+    }
+    @include mediaMin(1201) {
+      width: auto;
+    }
+    &:has(.box-icon) {
+      padding-top: 3rem;
+    }
+    @include mediaMin(992) {
+      &:has(.box-icon) {
+        padding-top: 3.5rem;
+      }
+    }
+    @include media(1200, 1341) {
+      padding: 1rem;
+    }
+    @include mediaMin(1341) {
+      padding: 2rem;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 20px 0 rgba(8, 34, 101, 0.15);
+    }
+    &-header {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .card-has-rotate-arrow {
+    &:hover {
+      .btn-arrow {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  .box-icon {
+    padding: 9px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    border: 1px solid $border-color;
+    background: $white;
+    @include mediaMin(992) {
+      padding: 12px;
+      width: 80px;
+      height: 80px;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .box-title {
+    font-family: $f-sto-sb;
+    font-size: 1.5rem;
+    line-height: 110%;
+    margin-bottom: 0.75rem;
+    color: $color-blue;
+    @include mediaMin(992) {
+      font-size: 1.5rem;
+    }
+  }
+  .box-description {
+    font-size: 0.9375rem;
+    line-height: 150%;
+    color: $color-dark-blue;
+    @include mediaMin(992) {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1069,6 +1069,7 @@ jQuery(document).ready(function ($) {
   initSliderRelatedArticlesRtl();
   initSliderTestimonials();
   initSlideLlm();
+  initSliderFourBox();
 });
 var scrollToHeading = function () {
   $(".table-of-content").on("click", "a", function () {
@@ -1780,6 +1781,7 @@ const initSliderHeroServices = () => {
 $(window).on("load resize", function () {
   initSliderHeroAiSeo();
   initBoxContentSlider();
+  initSliderFourBox();
 });
 const initSliderHeroAiSeo = () => {
   if ($(".hero-slider-ai-seo").length > 0) {
@@ -2074,5 +2076,33 @@ const initSlideLlm = () => {
       cssEase: "linear",
       speed: 500,
     });
+  }
+};
+
+const initSliderFourBox = () => {
+  if ($(window).width() < 1200) {
+    $(".slider-four-box:not(.slick-initialized)").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      swipeToSlide: $("body").hasClass("rtl") ? false : true,
+      infinite: true,
+      rtl: $("body").hasClass("rtl") ? true : false,
+      cssEase: "linear",
+      arrows: false,
+      variableWidth: true,
+      speed: 500,
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+            variableWidth: true,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  } else {
+    $(".slider-four-box.slick-initialized").slick("unslick");
   }
 };

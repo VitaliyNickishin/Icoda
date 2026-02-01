@@ -166,6 +166,14 @@
       padding: 1rem 2.5rem;
     }
   }
+
+  .block-slider-four-box {
+    margin-top: 1rem;
+    @include mediaMin(992) {
+      margin-top: 2.375rem;
+      margin-bottom: 2.875rem;
+    }
+  }
   .related-articles {
     .title {
       width: 250px;
