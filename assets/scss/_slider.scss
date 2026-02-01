@@ -168,7 +168,7 @@
   height: 40px;
   z-index: 9;
 
-  @at-root .section-path & {
+  @at-root .section-path-inner & {
     margin-top: -16px;
     right: auto;
     width: 88px;
@@ -184,6 +184,11 @@
         transform: translate(50%);
       }
     }
+  }
+  @at-root .block-post-two-sliders-in-wrap & {
+    margin-top: 0px;
+    right: auto;
+    width: 88px;
   }
   @at-root .section-stories & {
     @include mediaMax(1024) {
@@ -204,8 +209,11 @@
       height: 40px;
       background: url("../images/arrow-circle-blue.svg") 0 0 no-repeat;
       background-size: cover;
-      @at-root .section-path & {
+      @at-root .section-path-inner & {
         background: url("../images/arrow-circle-pink.svg") 0 0 no-repeat;
+      }
+      @at-root .block-post-two-sliders-in-wrap & {
+        background: url("../images/arrow-circle-blue.svg") 0 0 no-repeat;
       }
     }
     // &:hover {

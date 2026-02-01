@@ -1057,6 +1057,8 @@ jQuery(document).ready(function ($) {
   initSliderListLeadership();
   initAccordionFaq();
   initSliderPathList();
+  initSliderPathListFour();
+  initSliderPathListSecond();
   scrollToHeading();
   initSliderHero();
   initBoxContentSlider();
@@ -1937,6 +1939,58 @@ const initSliderPathList = () => {
       rtl: $("body").hasClass("rtl") ? true : false,
       adaptiveHeight: true,
       appendArrows: $(".arrow-control-path"),
+      speed: 500,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  }
+};
+//block-post-two-sliders-in-wrap (first)
+const initSliderPathListFour = () => {
+  if (jQuery(".slider-path-list-four").length > 0) {
+    $(".slider-path-list-four").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      swipeToSlide: $("body").hasClass("rtl") ? false : true,
+      infinite: true,
+      variableWidth: true,
+      rtl: $("body").hasClass("rtl") ? true : false,
+      adaptiveHeight: true,
+      appendArrows: $(".arrow-control-path"),
+      speed: 500,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  }
+};
+//block-post-two-sliders-in-wrap (second)
+const initSliderPathListSecond = () => {
+  if (jQuery(".slider-path-list-second").length > 0) {
+    $(".slider-path-list-second").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      swipeToSlide: $("body").hasClass("rtl") ? false : true,
+      infinite: true,
+      variableWidth: true,
+      rtl: $("body").hasClass("rtl") ? true : false,
+      adaptiveHeight: true,
+      arrows: false,
       speed: 500,
       cssEase: "linear",
       responsive: [

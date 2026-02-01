@@ -1,0 +1,203 @@
+.services-card {
+  display: block;
+  &:not(.card-cases) {
+    padding: 20px 24px;
+    border: 1px solid $border-color;
+    height: 100%;
+    @extend %set-bg;
+    transition: box-shadow 0.3s ease-out;
+    @at-root .block-post-two-sliders-in-wrap & {
+      padding: 1.25rem;
+    }
+    @include mediaMin(991) {
+      padding: 20px 32px;
+      @at-root .block-post-two-sliders-in-wrap & {
+        padding: 20px 32px;
+      }
+    }
+  }
+
+  @at-root .section-services-cases & {
+    width: 300px;
+    @include mediaMin(1024) {
+      width: auto;
+    }
+  }
+  @at-root .section-services-list & {
+    &:hover {
+      @include mediaMin(991) {
+        box-shadow: 0px 4px 20px 0px rgba(8, 34, 101, 0.15);
+      }
+    }
+  }
+  @at-root .section-path-inner & {
+    width: 300px;
+    margin-right: 12px;
+    @include mediaMin(1441) {
+      margin-right: 30px;
+      width: 450px;
+    }
+  }
+  @at-root .block-post-two-sliders-in-wrap & {
+    width: 280px;
+    margin: 0 10px;
+    @include mediaMin(992) {
+      margin: 0 15px;
+      width: 420px;
+    }
+  }
+  &-img {
+    img {
+      @at-root .section-services-cases & {
+        height: 190px;
+        width: 100%;
+        object-fit: cover;
+        @include border-radius(0.5rem);
+        border: 1px solid $border-color;
+      }
+    }
+  }
+  &-header {
+    @at-root .section-services-list & {
+      @extend.align-items-start;
+      @extend .d-flex;
+      @extend .justify-content-between;
+    }
+    @at-root .section-businesses & {
+      @extend .text-lg-left;
+      @extend .text-center;
+    }
+    .btn-arrow {
+      @at-root .rtl & {
+        transform: rotate(180deg);
+      }
+    }
+    @at-root .block-post-two-sliders-in-wrap & {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .number-step {
+    color: $white;
+    @extend .position-absolute;
+    left: -3%;
+    top: -7%;
+    width: 2rem;
+    height: 2rem;
+    background-color: $pink-900;
+    @at-root .block-post-two-sliders-in-wrap & {
+      background-color: $color-blue;
+    }
+    font-size: 1.125rem;
+    @include border-radius(50%);
+    @extend .align-items-center;
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @at-root .rtl & {
+      left: auto;
+      right: -3%;
+    }
+
+    @include mediaMin(991) {
+      left: -5%;
+      top: -10%;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+      @at-root .rtl & {
+        left: auto;
+        right: -5%;
+      }
+    }
+  }
+
+  .title {
+    line-height: 110%;
+    font-size: 1.25rem;
+    font-family: $f-sto-m;
+    @include mediaMin(1441) {
+      font-size: 1.5rem;
+    }
+    @at-root .block-post-two-sliders-in-wrap & {
+      font-family: $f-sto-sb;
+      color: $color-dark-blue;
+    }
+    @at-root .section-services-list & {
+      color: $color-blue;
+      line-height: 110%;
+      font-size: 1.25rem;
+      @include mediaMin(1441) {
+        font-size: 1.5rem;
+      }
+    }
+    @at-root .section-services-cases & {
+      font-size: 1rem;
+      line-height: 130%;
+
+      @include mediaMin(1441) {
+        line-height: 140%;
+        font-size: 1.125rem;
+      }
+    }
+  }
+  &-body {
+    margin-top: 8px;
+    font-size: 15px;
+    color: $color-dark-blue;
+    line-height: 140%;
+    @include mediaMin(1441) {
+      margin-top: 0.75rem;
+      font-size: 1rem;
+    }
+    @at-root .section-services-cases & {
+      margin-top: 10px;
+      @extend .align-items-start;
+      @extend .d-flex;
+      @extend .justify-content-between;
+    }
+    img {
+      @at-root .rtl & {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  ul {
+    @at-root .block-post-two-sliders-in-wrap & {
+      list-style-type: initial;
+      padding-left: 2rem;
+    }
+  }
+  .right-part {
+    @at-root .block-post-two-sliders-in-wrap & {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .right-text {
+    @at-root .block-post-two-sliders-in-wrap & {
+      font-size: 0.9375rem;
+      color: $color-blue;
+      @include mediaMin(992) {
+        font-size: 1rem;
+      }
+    }
+  }
+  .has-icon {
+    display: flex;
+    margin-right: 4px;
+  }
+  .has-image {
+    @at-root .block-post-two-sliders-in-wrap & {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+%set-bg {
+  @include border-radius(0.75rem);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+}
