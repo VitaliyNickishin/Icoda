@@ -67,6 +67,10 @@
     font-size: 0.9375rem;
     padding: 0 8px 0 16px;
     @include border-radius(4px 0 0 4px);
+    @at-root .services-card-second & {
+      font-size: 0.75rem;
+      padding: 0 10px 0 12px;
+    }
   }
   &-action {
     display: flex;

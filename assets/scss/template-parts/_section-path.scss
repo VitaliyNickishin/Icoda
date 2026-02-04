@@ -51,6 +51,23 @@
         margin-right: -1.25rem;
       }
     }
+    &-second {
+      .block-title-second {
+        margin-bottom: 0.5rem;
+        @include mediaMin(991) {
+          margin-bottom: 1.5rem;
+        }
+      }
+      .slick-track {
+        padding: 0 0 65px;
+        @include mediaMin(991) {
+          padding: 40px 0 80px;
+        }
+      }
+      .slick-list {
+        padding: 0;
+      }
+    }
   }
   .slick-list {
     // overflow: inherit;

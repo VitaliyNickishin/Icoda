@@ -1,6 +1,5 @@
 .dropdown-filters {
   .dropdown__list {
-    
     @include mediaMin(768) {
       overflow-x: auto;
       flex-wrap: nowrap;
@@ -25,7 +24,7 @@
         visibility: visible;
       }
     }
-    
+
     li {
       background: $color-light-white;
       flex-shrink: 0;
@@ -41,7 +40,6 @@
         @include mediaMin(992) {
           margin-left: 15px;
         }
-        
       }
     }
     svg {
@@ -53,7 +51,6 @@
       padding: 10px 20px;
       color: $color-dark-blue;
     }
-    
   }
   .dropdown__button {
     @include mediaMax(768) {
@@ -90,7 +87,6 @@
   //     display: none;
   //   }
   // }
-  
 }
 
 .has-blur {

@@ -1995,7 +1995,7 @@ const initSliderPathListSecond = () => {
       cssEase: "linear",
       responsive: [
         {
-          breakpoint: 576,
+          breakpoint: 1440,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -2160,3 +2160,58 @@ const initSliderFourBox = () => {
     $(".slider-four-box.slick-initialized").slick("unslick");
   }
 };
+//page ai-seo (block-post-two-sliders-in-wrap)
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .querySelectorAll(".dropdown-select-block")
+    .forEach(function (dropdown) {
+      const toggle = dropdown.querySelector(".dropdown-custom-toggle");
+      const menu = dropdown.querySelector(".dropdown-custom-menu");
+      const label = dropdown.querySelector(".dropdown-custom-label");
+      const button = dropdown.querySelector(".btn-get-report");
+      const hiddenInput = dropdown.querySelector(
+        ".dropdown-custom-selected-value",
+      );
+
+      // open / close
+      toggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        dropdown.classList.toggle("is-open");
+      });
+
+      // choose item
+      menu.querySelectorAll("li").forEach(function (item) {
+        item.addEventListener("click", function () {
+          const value = this.dataset.value;
+          const text = this.textContent;
+
+          hiddenInput.value = value;
+          label.textContent = text;
+          button.disabled = false;
+
+          dropdown.classList.remove("is-open");
+        });
+      });
+
+      // download pdf
+      button.addEventListener("click", function () {
+        if (!hiddenInput.value) return;
+
+        const link = document.createElement("a");
+        link.href = hiddenInput.value;
+        link.setAttribute("download", "");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    });
+
+  // close dropdown after click on body
+  document.addEventListener("click", function () {
+    document
+      .querySelectorAll(".dropdown-select-block.is-open")
+      .forEach(function (dropdown) {
+        dropdown.classList.remove("is-open");
+      });
+  });
+});

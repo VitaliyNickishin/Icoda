@@ -19,13 +19,7 @@ $icoda_gb_book_info = get_field('icoda_gb_book_info', 'option');
     </div>
     <div class="book-quote">
         <p class="quote position-relative"><?php echo $icoda_gb_book_info['book_quote']; ?></p>
-        <div class="book-action">
-            <span class="book-price fw-semibold">
-                $<?php echo $icoda_gb_book_info['book_price']; ?>
-            </span>
-            <button data-get-book type="button" class="btn btn-blue"><?php echo $icoda_gb_book_info['button_text']; ?></button>
-        </div>
-        
+        <?php get_template_part('template-parts/_partials/book-price'); ?>
     </div>
 
 </div>

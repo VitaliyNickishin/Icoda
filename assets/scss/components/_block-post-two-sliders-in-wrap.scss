@@ -3,13 +3,24 @@
     font-family: $f-sto-sb;
     font-size: 1.5rem;
     line-height: 110%;
-    margin-bottom: 1.5rem;
     color: $color-dark-blue;
     @include mediaMin(992) {
-      margin-bottom: 1.875rem;
       font-size: 2rem;
     }
+    &-first {
+      margin-bottom: 0.75rem;
+      @include mediaMin(992) {
+        margin-bottom: 1.875rem;
+      }
+    }
+    &-second {
+      margin-bottom: 8px;
+      @include mediaMin(992) {
+        margin-bottom: 1.5rem;
+      }
+    }
   }
+
   // .slick-track {
   //   padding-top: 23px;
   //   @include mediaMin(992) {
@@ -21,8 +32,11 @@
   }
   &-inner {
     position: relative;
-    padding: 80px 0;
+    padding-top: 40px;
     z-index: 1;
+    @include mediaMin(992) {
+      padding-top: 80px;
+    }
     &::before {
       content: "";
       position: absolute;
