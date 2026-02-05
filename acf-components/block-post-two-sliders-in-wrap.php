@@ -4,13 +4,9 @@
     $block_title_second = get_field('block_title_second');
     $second_slider = get_field('second_slider');
     $resources = get_field('resources');
-    // $resources_first_price = get_field('resources_first_price');
-    // $resources_first_btn_text = get_field('resources_first_btn_text');
-    // $resources_second_btn_text = get_field('resources_second_btn_text');
-    
     ?>
 
-    <section class="block-post-two-sliders-in-wrap section-path my-3 py-4 my-lg-5 py-lg-2">
+    <section class="block-post-two-sliders-in-wrap section-path mt-3 py-4 my-lg-5 py-lg-2">
         <div class="">
             <div class="container">
                 <div class="row block-post-two-sliders-in-wrap-inner">

@@ -1,0 +1,59 @@
+.block-post-checklist-two-columns {
+  .block-title {
+    @extend .text-center;
+    @extend %block-title;
+  }
+  .box {
+    &-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      background: $white;
+      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+      @include mediaMin(992) {
+        padding: 1.5rem 1.75rem;
+      }
+      &-wrap {
+        display: grid;
+        gap: 20px;
+        @include mediaMin(992) {
+          place-content: center;
+          grid-template-columns: repeat(2, 390px);
+        }
+      }
+    }
+    &-title {
+      color: $color-dark-blue;
+      font-size: 1.25rem;
+      font-family: $f-sto-sb;
+      line-height: 110%;
+      @include mediaMin(992) {
+        font-size: 1.5rem;
+      }
+    }
+    &-list {
+      font-size: 0.9375rem;
+      color: $color-blue;
+      font-family: $f-sto-sb;
+      margin-bottom: 1.5rem;
+      @include mediaMin(992) {
+        font-size: 1rem;
+      }
+      li {
+        line-height: 150%;
+        + li {
+          margin-top: 0.75rem;
+        }
+      }
+    }
+  }
+  .btn {
+    line-height: 115%;
+    padding: 1rem;
+    &.btn-blue {
+      min-width: auto;
+      width: 100%;
+    }
+  }
+}

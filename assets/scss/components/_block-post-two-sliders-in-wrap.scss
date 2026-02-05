@@ -1,12 +1,6 @@
 .block-post-two-sliders-in-wrap {
   .block-title {
-    font-family: $f-sto-sb;
-    font-size: 1.5rem;
-    line-height: 110%;
-    color: $color-dark-blue;
-    @include mediaMin(992) {
-      font-size: 2rem;
-    }
+    @extend %block-title;
     &-first {
       margin-bottom: 0.75rem;
       @include mediaMin(992) {
@@ -63,5 +57,15 @@
       // margin-right: calc(var(--bs-gutter-x) * -1);
       // margin-right: calc((100vw - 100%) / -2);
     }
+  }
+}
+
+%block-title {
+  font-family: $f-sto-sb;
+  font-size: 1.5rem;
+  line-height: 110%;
+  color: $color-dark-blue;
+  @include mediaMin(992) {
+    font-size: 2rem;
   }
 }

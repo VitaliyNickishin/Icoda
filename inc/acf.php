@@ -487,6 +487,18 @@ add_action('acf/init', function () {
         ),
     ));
     acf_register_block(array(
+        'name'              => 'post-checklist-two-columns',
+        'title'             => __('Checklist Two Columns'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('columns', 'checklist', 'content', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
         'name'              => 'icoda-content-slider',
         'title'             => __('Content with Slider'),
         'description'       => __(''),
