@@ -218,27 +218,6 @@
     }
   }
 
-  .section-businesses {
-    padding-top: 1rem;
-    @include mediaMin(992) {
-      margin-top: 0 !important;
-    }
-    .btn.btn-blue {
-      min-width: auto;
-      @include mediaMax(1200) {
-        padding: 1rem 0.5rem;
-      }
-    }
-    .col-12 {
-      &:last-child {
-        .services-card-body {
-          @include mediaMax(992) {
-            display: block !important;
-          }
-        }
-      }
-    }
-  }
   .related-articles {
     .slick-dots {
       position: relative;

@@ -24,6 +24,15 @@
       padding-bottom: 3rem;
     }
   }
+  @at-root .page-ai-seo & {
+    background-color: $white;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    @include mediaMin(992) {
+      padding-top: 6.875rem;
+      padding-bottom: 5rem;
+    }
+  }
   h2.recent-articles {
     margin-bottom: 30px;
     font-size: 24px;
@@ -58,6 +67,10 @@
       margin-left: -8px;
       margin-right: -8px;
     }
+    @at-root .page-ai-seo & {
+      margin-left: -8px;
+      margin-right: -8px;
+    }
   }
 
   .author-article {
@@ -75,6 +88,11 @@
       padding-left: 8px;
       padding-right: 8px;
     }
+    @at-root .page-ai-seo & {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
     // &:first-child {
     // padding-left: 0;
     // }
@@ -92,6 +110,9 @@
         margin-bottom: 0;
       }
       @at-root .page-book & {
+        margin-bottom: 0;
+      }
+      @at-root .page-ai-seo & {
         margin-bottom: 0;
       }
       .blog-img img {
@@ -118,6 +139,11 @@
         border-top-right-radius: 8px;
         height: 194px;
       }
+      @at-root .page-ai-seo & {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        height: 194px;
+      }
       @include mediaMax(450) {
         height: auto;
       }
@@ -131,6 +157,9 @@
         padding: 12px 8px;
       }
       @at-root .page-book & {
+        padding: 12px 8px;
+      }
+      @at-root .page-ai-seo & {
         padding: 12px 8px;
       }
       .tags {
@@ -185,6 +214,13 @@
             color: $color-dark-blue;
             line-height: 150%;
           }
+          @at-root .page-ai-seo & {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 20px;
+            color: $color-dark-blue;
+            line-height: 150%;
+          }
         }
       }
       .article-except {
@@ -200,6 +236,9 @@
         @at-root .page-book & {
           margin-bottom: 12px;
         }
+        @at-root .page-ai-seo & {
+          margin-bottom: 12px;
+        }
         p {
           font-size: 15px;
           line-height: 150%;
@@ -213,6 +252,10 @@
             color: $color-dark-gray;
           }
           @at-root .page-book & {
+            line-height: 175%;
+            color: $color-dark-gray;
+          }
+          @at-root .page-ai-seo & {
             line-height: 175%;
             color: $color-dark-gray;
           }
@@ -236,6 +279,11 @@
             color: #aabde7;
           }
           @at-root .page-book & {
+            font-size: 15px;
+            line-height: 175%;
+            color: #aabde7;
+          }
+          @at-root .page-ai-seo & {
             font-size: 15px;
             line-height: 175%;
             color: #aabde7;
