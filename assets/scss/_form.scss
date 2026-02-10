@@ -126,3 +126,9 @@ textarea {
     padding-left: 30px;
   }
 }
+
+.js-validate-contact-form {
+  .invalid-feedback {
+    margin-top: -1rem;
+  }
+}

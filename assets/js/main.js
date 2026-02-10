@@ -867,8 +867,13 @@ jQuery(document).ready(function ($) {
   };
 
   var formModalValidate = function () {
-    jQuery(".form-default-modal").validate({
+    jQuery(".js-validate-contact-form").validate({
       rules: {
+        "project-name": {
+          required: true,
+          minlength: 2,
+          maxlength: 100,
+        },
         name: {
           required: true,
           minlength: 2,
@@ -882,11 +887,37 @@ jQuery(document).ready(function ($) {
         email: {
           required: true,
           email: true,
-          minlength: 3,
-          maxlength: 50,
+        },
+        message: {
+          maxlength: 500,
         },
       },
-      messages: {},
+      messages: {
+        "project-name": {
+          required: "Project name is required",
+        },
+        name: {
+          required: "Please enter your name",
+        },
+        email: {
+          required: "Please enter your email",
+          email: "Please enter a valid email address",
+        },
+        telegram: {
+          required: "Please enter your contact",
+        },
+      },
+      errorElement: "div",
+      errorClass: "invalid-feedback",
+      highlight: function (element) {
+        $(element).addClass("is-invalid");
+      },
+      unhighlight: function (element) {
+        $(element).removeClass("is-invalid");
+      },
+      errorPlacement: function (error, element) {
+        error.insertAfter(element);
+      },
       submitHandler: function (form) {
         if ($(form).hasClass("form-with-captcha")) {
           grecaptcha.execute();
@@ -968,34 +999,6 @@ jQuery(document).ready(function ($) {
               );
             }
 
-            $.post(
-              "/wp-content/themes/icoda/submit.php",
-              $(form).serialize(),
-              function (data) {
-                if (data == 1) {
-                  window.dataLayer = window.dataLayer || [];
-                  dataLayer.push({ event: "form-successfuly-sent" });
-                  $(form)
-                    .find(".req")
-                    .each(function () {
-                      $(this).val("").next().detach();
-                    });
-                  $(form).find("textarea").val("");
-                  setTimeout(function () {
-                    $(".modal-box")
-                      .animate({ opacity: 0, top: "45%" }, 200)
-                      .css("display", "none");
-                    $("body").find(".success").css("opacity", "1").fadeIn(500);
-                    window.congratsConfetti();
-                    $(form)
-                      .find('button[type="submit"]')
-                      .prop("disabled", false);
-                    $(form).find('button[type="submit"]').text(old_text);
-                  }, 200);
-                } else {
-                }
-              },
-            );
             $(form).data("submit", "no");
             $(form).removeClass("submitting-form");
           }
@@ -1022,6 +1025,23 @@ jQuery(document).ready(function ($) {
         });
     });
   };
+  //calculator pages
+  let ValidateFields = function () {
+    jQuery(".validate-fields")
+      .closest("form")
+      .find('button[type="submit"]')
+      .on("click", function (e) {
+        var $form = $(this).closest("form");
+
+        if (!$form.valid()) {
+          e.preventDefault();
+          return false;
+        }
+
+        $form.data("submit", "yes");
+        $form.addClass("submitting-form");
+      });
+  };
 
   //testimonials section
   $("body").on("click", ".testimonials-content", function (e) {
@@ -1047,6 +1067,7 @@ jQuery(document).ready(function ($) {
   initSliderVcs();
   initMediaSlider();
   formBlock();
+  ValidateFields();
   formValidate();
   formModalValidate();
   footerAccordionMenu();

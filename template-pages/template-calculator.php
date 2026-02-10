@@ -78,7 +78,7 @@ $calculator_data = get_field('calculator_section_3');
 				<div class="col-12">
 					<div class="steps-box d-flex">
 						<div class="steps-box__main d-flex flex-column">
-							<form id="calculator-form" data-submit="yes">
+							<form id="calculator-form" data-submit="yes" class="js-validate-contact-form" novalidate>
 								<div class="steps-body mt-lg-5 mt-4 pt-3 pt-lg-3 pb-3 mb-4 pb-lg-5 mb-lg-3">
 									<div data-step="1" class="step-first">
 										<p class="mb-3 pb-lg-3 step-title">
@@ -197,25 +197,8 @@ $calculator_data = get_field('calculator_section_3');
 											<span class="text-primary mr-2">6.</span>
 											<?php echo $calculator_data['step_6_title']; ?>
 										</p>
-										<div class="form-default form-default-modal">
-											<div class="form-row">
-												<div class="col-12 col-md-6">
-													<input type="text" name="project-name" class="form-control req" placeholder="<?php _e('Project Name', 'icoda'); ?>" required>
-												</div>
-												<div class="col-12 col-md-6">
-													<input type="text" name="name" class="form-control req" placeholder="<?php _e('Your name', 'icoda'); ?>" required>
-												</div>
-												<div class="col-12 col-md-6">
-													<input type="email" name="email" class="form-control req" placeholder="<?php _e('Email', 'icoda'); ?>" required>
-												</div>
-												<div class="col-12 col-md-6">
-													<input type="text" name="telegram" class="form-control req" placeholder="<?php _e('WhatsApp / Telegram', 'icoda'); ?>" required>
-												</div>
-												
-												<div class="col-12">
-													<textarea name="message" class="form-control textarea-default" rows="5" placeholder="<?php _e('Additional Information', 'icoda'); ?>"></textarea>
-												</div>
-											</div>
+										<div class="form-default">
+											<?php get_template_part('template-parts/_partials/contact-form-validate-fields'); ?>
 										</div>
 									</div>
 									<div data-step="done" class="step-done text-center d-none">
