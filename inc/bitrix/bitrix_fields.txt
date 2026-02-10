@@ -489952,3 +489952,3053 @@ Array
 )
 
 
+Array
+(
+    [lang-source] => en
+    [name] => DianaDsouza
+    [telegram] => @DianaDsouza
+    [email] => partner@coinpedia.org
+    [message] => I\'m reaching out to inquire regarding media collaboration with the Icoda platform as a news portal. We are interested to feature coinpedia logo on your platforms. inreturn we would love to offer our standard partnership opportunity.
+
+please connect with the appropriate person or team to discuss further 
+    [user-country] => United States
+)
+
+
+2026-01-30 07:26:03   ->   partner@coinpedia.org
+partner@coinpedia.org
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - DianaDsouza - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => I\'m reaching out to inquire regarding media collaboration with the Icoda platform as a news portal. We are interested to feature coinpedia logo on your platforms. inreturn we would love to offer our standard partnership opportunity.
+
+please connect with the appropriate person or team to discuss further 
+            [NAME] => DianaDsouza
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => partner@coinpedia.org
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @DianaDsouza
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 630456031.1767352882
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Ninuri Nethmi
+    [telegram] => +94 76 769 3028
+    [email] => ninuri@lokkaads.com
+    [message] => We’re planning media amplification for an upcoming news announcement in India, tentatively scheduled for next month.
+
+To clarify upfront:
+
+-The news content is not created by us and we do not have the content yet.
+-The news will be released by other parties in India
+-We only need amplification (re-marketing / re-advertising / boosting)
+
+Once the news is live, we’d like agencies to:
+
+-Re-publish / re-write the news based on original coverage
+-Distribute it via your media platforms, publishers, or influencer channels
+-Help increase reach, visibility, and traffic
+
+At this stage, we don’t need content creation, as the news isn’t out yet.
+
+What we need now:
+
+-Media platforms / websites you can publish on
+-Available channels (media sites, social, influencers, etc.)
+-Estimated pricing / options
+
+Once aligned, we can pre-plan, so when the news comes out, we can execute immediately.
+(This is similar to a planted PR / leaked news scenario.)
+    [user-country] => United States
+)
+
+
+2026-01-30 11:24:55   ->   ninuri@lokkaads.com
+ninuri@lokkaads.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Ninuri Nethmi - icoda.io (en)
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => We’re planning media amplification for an upcoming news announcement in India, tentatively scheduled for next month.
+
+To clarify upfront:
+
+-The news content is not created by us and we do not have the content yet.
+-The news will be released by other parties in India
+-We only need amplification (re-marketing / re-advertising / boosting)
+
+Once the news is live, we’d like agencies to:
+
+-Re-publish / re-write the news based on original coverage
+-Distribute it via your media platforms, publishers, or influencer channels
+-Help increase reach, visibility, and traffic
+
+At this stage, we don’t need content creation, as the news isn’t out yet.
+
+What we need now:
+
+-Media platforms / websites you can publish on
+-Available channels (media sites, social, influencers, etc.)
+-Estimated pricing / options
+
+Once aligned, we can pre-plan, so when the news comes out, we can execute immediately.
+(This is similar to a planted PR / leaked news scenario.)
+            [NAME] => Ninuri Nethmi
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => ninuri@lokkaads.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +94 76 769 3028
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1175613137.1767685493
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Axel
+    [telegram] => +33620777023
+    [email] => axel.schapmann@gmail.com
+    [message] => Hi, I came across your agency while searching on Google for teams doing Reddit growth for clients. I\'m trying to understand how agencies handle Reddit monitoring day-to-day: do you rely on manual checks, keyword alerts, or a dedicated tool? To be honest, I built a product in this space called RedShip (https://redship.io). I\'m not trying to pitch you — I\'m mainly collecting honest feedback from people who do this for a living. It would be great to understand your needs! Thanks, Axel
+    [user-country] => United States
+)
+
+
+2026-01-30 14:41:32   ->   axel.schapmann@gmail.com
+axel.schapmann@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Axel - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Hi, I came across your agency while searching on Google for teams doing Reddit growth for clients. I\'m trying to understand how agencies handle Reddit monitoring day-to-day: do you rely on manual checks, keyword alerts, or a dedicated tool? To be honest, I built a product in this space called RedShip (https://redship.io). I\'m not trying to pitch you — I\'m mainly collecting honest feedback from people who do this for a living. It would be great to understand your needs! Thanks, Axel
+            [NAME] => Axel
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => axel.schapmann@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +33620777023
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1337887662.1769783858
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Md Ismail hossain 
+    [telegram] => +9660505893016
+    [email] => Mdismail70098@gmail.com
+    [message] => ​\"Hi Icoda Sales Team,
+
+​I am a developer with a portfolio of 80+ premium crypto utility bots (source codes available).
+
+​I noticed your agency works with top-tier Web3 projects. I am offering these bots for a white-label partnership or wholesale.
+
+​Demo Bots:
+​[ @Web3whalebot ]
+​[ @PortalChainbot ] 
+​Would you be interested in seeing my full list or a demo video?
+​Regards,
+[ Md Ismail Hossain]\"
+    [is-banner-review-block] => no
+    [user-country] => United States
+)
+
+
+2026-01-30 17:23:01   ->   Mdismail70098@gmail.com
+Mdismail70098@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Md Ismail hossain  - icoda.io (en)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => ​\"Hi Icoda Sales Team,
+
+​I am a developer with a portfolio of 80+ premium crypto utility bots (source codes available).
+
+​I noticed your agency works with top-tier Web3 projects. I am offering these bots for a white-label partnership or wholesale.
+
+​Demo Bots:
+​[ @Web3whalebot ]
+​[ @PortalChainbot ] 
+​Would you be interested in seeing my full list or a demo video?
+​Regards,
+[ Md Ismail Hossain]\"
+            [NAME] => Md Ismail hossain 
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => Mdismail70098@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +9660505893016
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 39548702.1769793622
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Muhammad Abubakr
+    [telegram] => +923298706446
+    [email] => rankbloomoutreach@gmail.com
+    [message] => Hi, this is Muhammad Abubakr, Owner & Manager at Rank Bloom Outreach.
+
+We help marketing agencies secure high-quality features and placements on authoritative websites to strengthen brand credibility and improve SEO performance.
+
+Would you be open to a quick discussion on how this could support your clients’ growth?
+    [user-country] => United States
+)
+
+
+2026-01-31 07:43:38   ->   rankbloomoutreach@gmail.com
+rankbloomoutreach@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Muhammad Abubakr - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => Hi, this is Muhammad Abubakr, Owner & Manager at Rank Bloom Outreach.
+
+We help marketing agencies secure high-quality features and placements on authoritative websites to strengthen brand credibility and improve SEO performance.
+
+Would you be open to a quick discussion on how this could support your clients’ growth?
+            [NAME] => Muhammad Abubakr
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => rankbloomoutreach@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +923298706446
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 234279700.1769845238
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Mihaela Nedyalkova
+    [telegram] => 0035796018497
+    [email] => mihaela_nedqlkova@abv.bg
+    [message] => I’m interested of available positions 
+    [is-banner-review-block] => no
+    [utm-utm_source] => google
+    [utm-utm_medium] => cpc
+    [utm-utm_campaign] => g
+    [utm-utm_content] => 768233227818
+    [utm-utm_term] => igaming company
+    [user-country] => Cyprus
+)
+
+
+2026-02-01 09:32:47   ->   mihaela_nedqlkova@abv.bg
+mihaela_nedqlkova@abv.bg
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => google
+            [UTM_MEDIUM] => cpc
+            [UTM_CAMPAIGN] => g
+            [UTM_CONTENT] => 768233227818
+            [UTM_TERM] => igaming company
+            [ADDRESS_COUNTRY] => Cyprus
+            [TITLE] => Mihaela Nedyalkova - icoda.io (en)
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => I’m interested of available positions 
+            [NAME] => Mihaela Nedyalkova
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mihaela_nedqlkova@abv.bg
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 0035796018497
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 664337746.1769938311
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Katie Buckley
+    [telegram] => @katieb_fxseo
+    [email] => katiefxseo@gmail.com
+    [message] => Hi Icoda outreach team, 
+
+I know agencies like yours are constantly juggling client deliverables while facing one recurring challenge: finding fresh, high-quality publishers to place content at scale.
+
+I help Crypto-focused agencies scale off-page SEO by providing access to verified, niche-relevant publishers across Crypto, DeFi, Web3, Blockchain, and related micro-niches.
+
+I work directly with site owners (not resellers) and already support agencies like Coinband, Coinpresso, and Coinbound with ongoing placements.
+
+Happy to share a quick sample list of publishers if you’re exploring this.
+
+Looking forward to your positive response soon. Thanks a lot!
+    [user-country] => United States
+)
+
+
+2026-02-02 11:46:22   ->   katiefxseo@gmail.com
+katiefxseo@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Katie Buckley - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Hi Icoda outreach team, 
+
+I know agencies like yours are constantly juggling client deliverables while facing one recurring challenge: finding fresh, high-quality publishers to place content at scale.
+
+I help Crypto-focused agencies scale off-page SEO by providing access to verified, niche-relevant publishers across Crypto, DeFi, Web3, Blockchain, and related micro-niches.
+
+I work directly with site owners (not resellers) and already support agencies like Coinband, Coinpresso, and Coinbound with ongoing placements.
+
+Happy to share a quick sample list of publishers if you’re exploring this.
+
+Looking forward to your positive response soon. Thanks a lot!
+            [NAME] => Katie Buckley
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => katiefxseo@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @katieb_fxseo
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 359475978.1770030832
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => fr
+    [name] => Sebastien Jaillard
+    [telegram] => 00664207185
+    [email] => contact@colette-evenementiel.fr
+    [message] => Bonjour, 
+
+Nous sommes l\'Agence COLETTE. 
+Spécialisée en événementiel B2B. 
+
+
+Nous aimerions développer notre référencement dans l\'IA. 
+
+Que, par exemple, si quelqu\'un demande à ChatGPT : 
+\"Quelle est la meilleure agence d\'évènementiel b2b ?\" 
+Nous apparaissions en premier... 
+
+
+Est-ce que cela est faisable ? 
+Est-ce votre domaine de compétence ? 
+
+
+Merci d\'avance pour votre retour, 
+
+Cordialement
+Sebastien Jaillard
+
+
+
+    [user-country] => United States
+)
+
+
+2026-02-02 12:43:08   ->   contact@colette-evenementiel.fr
+contact@colette-evenementiel.fr
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Sebastien Jaillard - icoda.io (fr)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => Bonjour, 
+
+Nous sommes l\'Agence COLETTE. 
+Spécialisée en événementiel B2B. 
+
+
+Nous aimerions développer notre référencement dans l\'IA. 
+
+Que, par exemple, si quelqu\'un demande à ChatGPT : 
+\"Quelle est la meilleure agence d\'évènementiel b2b ?\" 
+Nous apparaissions en premier... 
+
+
+Est-ce que cela est faisable ? 
+Est-ce votre domaine de compétence ? 
+
+
+Merci d\'avance pour votre retour, 
+
+Cordialement
+Sebastien Jaillard
+
+
+
+            [NAME] => Sebastien Jaillard
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => contact@colette-evenementiel.fr
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 00664207185
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1846875617.1770035794
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Kevin 
+    [telegram] => @Nivekz
+    [email] => montecinokevinyash@gmail.com
+    [message] => 
+    [utm-utm_source] => google
+    [utm-utm_medium] => cpc
+    [utm-utm_campaign] => g
+    [utm-utm_content] => 745363361513
+    [utm-utm_term] => igaming company
+    [user-country] => United States
+)
+
+
+2026-02-02 12:51:33   ->   montecinokevinyash@gmail.com
+montecinokevinyash@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => google
+            [UTM_MEDIUM] => cpc
+            [UTM_CAMPAIGN] => g
+            [UTM_CONTENT] => 745363361513
+            [UTM_TERM] => igaming company
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Kevin  - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => 
+            [NAME] => Kevin 
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => montecinokevinyash@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Nivekz
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 653224866.1770035917
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Alina Cabral
+    [telegram] => 03253198027
+    [email] => seoalinacabral@gmail.com
+    [message] => Hi there!
+
+Thank you for reaching out! We manage a portfolio of +150 websites in several niches / markets. In the sheet below, you\'ll find all our websites and a list with the prices that we charge. In the sheet you\'ll also find for which websites we accept casino / CBD / Crypto links.
+- https://docs.google.com/spreadsheets/d/12TvunXwEX5FHWdAT1DDTk4PDkN-fCznyi6zV95wcCrQ/edit?gid=0#gid=0
+
+For all the websites we have, we put a lot of time and energy in maintaining and improving the quality of our websites. We aim to add real SEO-content on a monthly basis to all our platforms, and we do invest in link building in order to improve the current domain authority and rankings of the domains. Therefore, you\'ll benefit now and in the future when purchasing an article / guest post on one of our websites.
+
+Our conditions are as follows:
+- Articles will say online permanent
+- 2 Do-follow links per article
+- The article\'s won\'t get a sponsored tag
+- We accept bank transfer and PayPal
+
+If you have any questions, don\'t hesitate to contact us.
+
+Greetings,
+    [user-country] => United States
+)
+
+
+2026-02-02 20:34:51   ->   seoalinacabral@gmail.com
+seoalinacabral@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Alina Cabral - icoda.io (en)
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => Hi there!
+
+Thank you for reaching out! We manage a portfolio of +150 websites in several niches / markets. In the sheet below, you\'ll find all our websites and a list with the prices that we charge. In the sheet you\'ll also find for which websites we accept casino / CBD / Crypto links.
+- https://docs.google.com/spreadsheets/d/12TvunXwEX5FHWdAT1DDTk4PDkN-fCznyi6zV95wcCrQ/edit?gid=0#gid=0
+
+For all the websites we have, we put a lot of time and energy in maintaining and improving the quality of our websites. We aim to add real SEO-content on a monthly basis to all our platforms, and we do invest in link building in order to improve the current domain authority and rankings of the domains. Therefore, you\'ll benefit now and in the future when purchasing an article / guest post on one of our websites.
+
+Our conditions are as follows:
+- Articles will say online permanent
+- 2 Do-follow links per article
+- The article\'s won\'t get a sponsored tag
+- We accept bank transfer and PayPal
+
+If you have any questions, don\'t hesitate to contact us.
+
+Greetings,
+            [NAME] => Alina Cabral
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => seoalinacabral@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 03253198027
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1850682814.1770062398
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => ru
+    [name] => Сюсюкин Матвей
+    [telegram] => @matvSu
+    [email] => matvsuzu@gmail.com
+    [message] => Интересна позиция Python-лида в вашей команде. Занимаюсь Python-разработкой около 6 лет, последние полтора года — в роли тимлида. До этого руководил командами в другой отросли Хочется пообщаться и понять, подойдём ли друг другу.
+    [utm-utm_source] => google
+    [utm-utm_medium] => cpc
+    [utm-utm_campaign] => g
+    [utm-utm_content] => 745244595252
+    [utm-utm_term] => igaming company
+    [user-country] => United States
+)
+
+
+2026-02-03 06:17:58   ->   matvsuzu@gmail.com
+matvsuzu@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => google
+            [UTM_MEDIUM] => cpc
+            [UTM_CAMPAIGN] => g
+            [UTM_CONTENT] => 745244595252
+            [UTM_TERM] => igaming company
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Сюсюкин Матвей - icoda.io (ru)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Интересна позиция Python-лида в вашей команде. Занимаюсь Python-разработкой около 6 лет, последние полтора года — в роли тимлида. До этого руководил командами в другой отросли Хочется пообщаться и понять, подойдём ли друг другу.
+            [NAME] => Сюсюкин Матвей
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => matvsuzu@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @matvSu
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1510685582.1770099079
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Moumita Dasgupta
+    [telegram] => 9051560199
+    [email] => moumita@myassetbridge.com
+    [message] => We want to know if your agency can help us to get our coin launched.
+    [user-country] => United States
+)
+
+
+2026-02-03 07:21:43   ->   moumita@myassetbridge.com
+moumita@myassetbridge.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Moumita Dasgupta - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => We want to know if your agency can help us to get our coin launched.
+            [NAME] => Moumita Dasgupta
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => moumita@myassetbridge.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 9051560199
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1465255952.1770103152
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Dinesh solera
+    [telegram] => 9166888514
+    [email] => Dineshseo47@gmail.com
+    [message] => Hello Dear, 
+
+If you are interested in my seo services, let me know.
+
+I understand how critical strong backlinks are for ranking in Google, but sourcing them can be a real challenge. That’s where I come in—I collaborate with people like you to deliver trusted backlinks that improve organic traffic and search visibility for your site.
+
+I\'m Dinesh solera, a link-building specialist with over 13 years of experience in off-page SEO, guest posting, and acquiring high-quality, niche-relevant backlinks that drive results. 
+
+If you\'re spending too much time on outreach, I can save you time and help improve your website rankings and traffic. I have 80K above website list with high traffic & all niche websites.
+
+Let’s connect and discuss how I can bring value to your business.
+
+Your best
+Dinesh
+
+    [user-country] => United States
+)
+
+
+2026-02-03 09:31:49   ->   Dineshseo47@gmail.com
+Dineshseo47@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Dinesh solera - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Hello Dear, 
+
+If you are interested in my seo services, let me know.
+
+I understand how critical strong backlinks are for ranking in Google, but sourcing them can be a real challenge. That’s where I come in—I collaborate with people like you to deliver trusted backlinks that improve organic traffic and search visibility for your site.
+
+I\'m Dinesh solera, a link-building specialist with over 13 years of experience in off-page SEO, guest posting, and acquiring high-quality, niche-relevant backlinks that drive results. 
+
+If you\'re spending too much time on outreach, I can save you time and help improve your website rankings and traffic. I have 80K above website list with high traffic & all niche websites.
+
+Let’s connect and discuss how I can bring value to your business.
+
+Your best
+Dinesh
+
+            [NAME] => Dinesh solera
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => Dineshseo47@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 9166888514
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 319810996.1770111017
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => ru
+    [name] => Мария
+    [telegram] => mariiashkuts
+    [email] => mariiaskrt@gmail.com
+    [message] => 
+    [is-banner-review-block] => no
+    [user-country] => Poland
+)
+
+
+2026-02-03 14:03:53   ->   mariiaskrt@gmail.com
+mariiaskrt@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Poland
+            [TITLE] => Мария - icoda.io (ru)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => 
+            [NAME] => Мария
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mariiaskrt@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mariiashkuts
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 220462523.1770127391
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => CryptoPatel
+    [telegram] => @TheCryptoPatel
+    [email] => cryptopatelofficial@gmail.com
+    [message] => Hi, I\'m a CryptoPatel KOL with 350K+ followers across Twitter, Telegram, and CoinMarketCap, Binance Square and TradingView. I create market analysis, news coverage, and alpha calls. Looking to join your KOL roster for paid promotions. Happy to share my media kit.  CryptoPatel ( https://linktr.ee/cryptopatel )
+    [message_mob] => 
+    [user-country] => United States
+)
+
+
+2026-02-03 18:12:12   ->   cryptopatelofficial@gmail.com
+cryptopatelofficial@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - CryptoPatel - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => Hi, I\'m a CryptoPatel KOL with 350K+ followers across Twitter, Telegram, and CoinMarketCap, Binance Square and TradingView. I create market analysis, news coverage, and alpha calls. Looking to join your KOL roster for paid promotions. Happy to share my media kit.  CryptoPatel ( https://linktr.ee/cryptopatel )
+            [NAME] => CryptoPatel
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => cryptopatelofficial@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @TheCryptoPatel
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1267685435.1770142171
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Luke
+    [telegram] => @Luke_7b
+    [email] => luke@hibachi.xyz
+    [message] => Looking to promote an announcement via PR in China
+    [user-country] => United States
+)
+
+
+2026-02-03 23:09:31   ->   luke@hibachi.xyz
+luke@hibachi.xyz
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Luke - icoda.io (en)
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => Looking to promote an announcement via PR in China
+            [NAME] => Luke
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => luke@hibachi.xyz
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Luke_7b
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1381103589.1770160128
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Nwabufor John
+    [telegram] => Udemezue01
+    [email] => johnzeus14@gmail.com
+    [message] => Hello,
+
+As an SEO specialist & content writer, I can help Digisphere drive more results for clients. 
+
+If you need skilled, additional support, I\'m available.
+
+Happy to discuss how I can contribute.
+
+Best,
+
+Udemezue John 
+
+    [is-banner-review-block] => no
+    [user-country] => Germany
+)
+
+
+2026-02-04 03:18:18   ->   johnzeus14@gmail.com
+johnzeus14@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Germany
+            [TITLE] => Nwabufor John - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Hello,
+
+As an SEO specialist & content writer, I can help Digisphere drive more results for clients. 
+
+If you need skilled, additional support, I\'m available.
+
+Happy to discuss how I can contribute.
+
+Best,
+
+Udemezue John 
+
+            [NAME] => Nwabufor John
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => johnzeus14@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => Udemezue01
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 742902272.1770175032
+        )
+
+)
+
+
+Array
+(
+    [industry] => Blockchain and Cryptocurrency Projects
+    [other_industry] => 
+    [achieve] => Attract New Users and Build a Community
+    [other_achieve] => 
+    [country] => Global
+    [other_country] => 
+    [service] => Array
+        (
+            [0] => Expert Recommendations: Let ICODA experts decide
+            [1] => Influencer Marketing / KOLs: YouTube Influencers, Twitter Influencers / Twitter Marketing, Telegram Influencers
+            [2] => Paid Traffic: Meta Ads, TikTok Ads, Crypto Networks, Google Ads
+            [3] => Community Building & Management
+        )
+
+    [long] => 1 month
+    [other_long] => 
+    [project-name] => evoz
+    [name] => Juan
+    [email] => juanrecover88@gmail.com
+    [telegram] => @cryptgamerz
+    [message] => 
+    [lang-source] => en
+    [is_calculator] => 1
+    [user-country] => Malta
+)
+
+
+2026-02-04 06:43:27   ->   juanrecover88@gmail.com
+juanrecover88@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Malta
+            [TITLE] => Juan - icoda.io (en)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => 
+
+ Project Name: evoz
+
+ Industry: Blockchain and Cryptocurrency Projects
+
+ Achieve: Attract New Users and Build a Community
+
+ Country: Global
+
+ Service: Expert Recommendations: Let ICODA experts decide, Influencer Marketing / KOLs: YouTube Influencers, Twitter Influencers / Twitter Marketing, Telegram Influencers, Paid Traffic: Meta Ads, TikTok Ads, Crypto Networks, Google Ads, Community Building & Management
+
+ Long: 1 month
+
+Additional Information: 
+
+            [NAME] => Juan
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => juanrecover88@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @cryptgamerz
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1407752259.1770152582
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Ale
+    [telegram] => m333mm75
+    [email] => info@tequilapay.com
+    [message] => Hi! We are planning on launching our platform. Based on CIS clients. What is the pricing for your solutions? And can you share demo please.
+
+Thank you
+    [is-banner-review-block] => no
+    [user-country] => United States
+)
+
+
+2026-02-04 09:04:22   ->   info@tequilapay.com
+info@tequilapay.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Ale - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => Hi! We are planning on launching our platform. Based on CIS clients. What is the pricing for your solutions? And can you share demo please.
+
+Thank you
+            [NAME] => Ale
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => info@tequilapay.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => m333mm75
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 221398182.1770152999
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => ru
+    [name] => Олег
+    [telegram] => +380503777720
+    [email] => oleg@vavryk.com
+    [message] => Добрый день. Увидел вашу компанию на ФБ. Интересует вопрос: токенизируете ли активы? и оказываете ли услугу по маркетингу, а именно продажа токенов и привлечение инвестиций? Спасибо
+    [is-banner-review-block] => no
+    [user-country] => Poland
+)
+
+
+2026-02-04 12:17:42   ->   oleg@vavryk.com
+oleg@vavryk.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Poland
+            [TITLE] => Олег - icoda.io (ru)
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => Добрый день. Увидел вашу компанию на ФБ. Интересует вопрос: токенизируете ли активы? и оказываете ли услугу по маркетингу, а именно продажа токенов и привлечение инвестиций? Спасибо
+            [NAME] => Олег
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => oleg@vavryk.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +380503777720
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1472995183.1770189699
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => tony
+    [telegram] => https://t.me/hehe7758
+    [email] => kimsunhye0615@gmail.com
+    [message] => 
+    [user-country] => United States
+)
+
+
+2026-02-04 16:19:31   ->   kimsunhye0615@gmail.com
+kimsunhye0615@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - tony - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => 
+            [NAME] => tony
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => kimsunhye0615@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => https://t.me/hehe7758
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 2094726349.1770221875
+        )
+
+)
+
+
+Array
+(
+    [industry] => Blockchain and Cryptocurrency Projects
+    [other_industry] => 
+    [achieve] => Attract New Users and Build a Community
+    [other_achieve] => 
+    [country] => Global
+    [other_country] => 
+    [service] => Array
+        (
+            [0] => Expert Recommendations: Let ICODA experts decide
+        )
+
+    [long] => 1 month
+    [other_long] => 
+    [project-name] => Soqucoin
+    [name] => Danna Wilson
+    [email] => danna@soqu.org
+    [telegram] => https://t.me/bananabengal
+    [message] => 
+    [lang-source] => en
+    [is_calculator] => 1
+    [user-country] => Malta
+)
+
+
+2026-02-04 20:54:31   ->   danna@soqu.org
+danna@soqu.org
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Malta
+            [TITLE] => Danna Wilson - icoda.io (en)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => 
+
+ Project Name: Soqucoin
+
+ Industry: Blockchain and Cryptocurrency Projects
+
+ Achieve: Attract New Users and Build a Community
+
+ Country: Global
+
+ Service: Expert Recommendations: Let ICODA experts decide
+
+ Long: 1 month
+
+Additional Information: 
+
+            [NAME] => Danna Wilson
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => danna@soqu.org
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => https://t.me/bananabengal
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 504344606.1770236784
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => es
+    [name] => dario danelli
+    [telegram] => +542284515442
+    [email] => dario2david10@gmail.com
+    [message] => Hola buenas tardes queriamos consultar sobre el servicio que ustedes brindan y el costo del mismo ya que nosotros estamos en la fase BETA de una MEME con un COPILOTO IA de trading con expacion mas adelante   de lanzar su token . Aguardo su informacion saludos cordiales D.D.D
+    [user-country] => United States
+)
+
+
+2026-02-04 22:43:02   ->   dario2david10@gmail.com
+dario2david10@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - dario danelli - icoda.io (es)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => Hola buenas tardes queriamos consultar sobre el servicio que ustedes brindan y el costo del mismo ya que nosotros estamos en la fase BETA de una MEME con un COPILOTO IA de trading con expacion mas adelante   de lanzar su token . Aguardo su informacion saludos cordiales D.D.D
+            [NAME] => dario danelli
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => dario2david10@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +542284515442
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Mosyi
+    [telegram] => Telegram @MosyiJohan
+    [email] => mosyi.johan@adxodus.com.my
+    [message] => iGaming advertising via DV360
+    [user-country] => Vietnam
+)
+
+
+2026-02-05 06:19:35   ->   mosyi.johan@adxodus.com.my
+mosyi.johan@adxodus.com.my
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Vietnam
+            [TITLE] => Mosyi - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => iGaming advertising via DV360
+            [NAME] => Mosyi
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mosyi.johan@adxodus.com.my
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => Telegram @MosyiJohan
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 596163192.1770264505
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Alex
+    [telegram] => litasio
+    [email] => alex@proxy-cheap.com
+    [message] => Hello,
+
+We’re evaluating data-driven SEO agencies for Proxy-Cheap.com, a global proxy infrastructure platform.
+
+We’re specifically looking for a partner that operates with strong analytics, testing, and clear ROI accountability, including AI search optimization.
+
+To assess fit:
+
+Relevant experience in proxy, VPN, hosting, SaaS, or infrastructure niches?
+
+Verifiable case studies with measurable outcomes?
+
+Typical experimentation framework, reporting cadence, and KPIs?
+
+AI search optimization strategy and tooling?
+
+If this matches your approach, let’s continue the conversation.
+
+Best regards,
+Alex
+    [user-country] => United States
+)
+
+
+2026-02-05 08:23:01   ->   alex@proxy-cheap.com
+alex@proxy-cheap.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Alex - icoda.io (en)
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => Hello,
+
+We’re evaluating data-driven SEO agencies for Proxy-Cheap.com, a global proxy infrastructure platform.
+
+We’re specifically looking for a partner that operates with strong analytics, testing, and clear ROI accountability, including AI search optimization.
+
+To assess fit:
+
+Relevant experience in proxy, VPN, hosting, SaaS, or infrastructure niches?
+
+Verifiable case studies with measurable outcomes?
+
+Typical experimentation framework, reporting cadence, and KPIs?
+
+AI search optimization strategy and tooling?
+
+If this matches your approach, let’s continue the conversation.
+
+Best regards,
+Alex
+            [NAME] => Alex
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => alex@proxy-cheap.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => litasio
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [industry] => Blockchain and Cryptocurrency Projects
+    [other_industry] => 
+    [achieve] => Increase Brand Awareness
+    [other_achieve] => 
+    [country] => Global
+    [other_country] => 
+    [service] => Array
+        (
+            [0] => Expert Recommendations: Let ICODA experts decide
+        )
+
+    [long] => 1 month
+    [other_long] => 
+    [project-name] => test
+    [name] => test
+    [email] => sha@icoda.io
+    [telegram] => test
+    [message] => 
+    [lang-source] => en
+    [is_calculator] => 1
+    [user-country] => United States
+)
+
+
+2026-02-05 09:11:40   ->   sha@icoda.io
+sha@icoda.io
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - test - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => 
+
+ Project Name: test
+
+ Industry: Blockchain and Cryptocurrency Projects
+
+ Achieve: Increase Brand Awareness
+
+ Country: Global
+
+ Service: Expert Recommendations: Let ICODA experts decide
+
+ Long: 1 month
+
+Additional Information: 
+
+            [NAME] => test
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => sha@icoda.io
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 2143317492.1766394931
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => zh-hans
+    [name] => Fion
+    [telegram] => 11
+    [email] => fion.xuan@lotuscars.com.cn
+    [message] => 莲花是一个有78年历史的英国跑车品牌，公司目前寻求和加密圈的合作，寻求破圈。公司计划邀请一些加密圈KOL参与我们的活动并协助宣传，增加公司曝光。也希望可以找一些加密机构来参与，双方有机会达成潜在合作可能。
+    [user-country] => United States
+)
+
+
+2026-02-05 09:47:40   ->   fion.xuan@lotuscars.com.cn
+fion.xuan@lotuscars.com.cn
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Fion - icoda.io (zh-hans)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => 莲花是一个有78年历史的英国跑车品牌，公司目前寻求和加密圈的合作，寻求破圈。公司计划邀请一些加密圈KOL参与我们的活动并协助宣传，增加公司曝光。也希望可以找一些加密机构来参与，双方有机会达成潜在合作可能。
+            [NAME] => Fion
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => fion.xuan@lotuscars.com.cn
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 11
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 308357554.1770284705
+        )
+
+)
+
+
+Array
+(
+    [Bridge] => Bridge
+    [other_industry] => 
+    [Scaling] => Scaling
+    [Up_to_$1M] => Up to $1M
+    [Increase_5-10x] => Increase 5-10x
+    [3-6_months] => 3-6 months
+    [USA/Europe] => USA/Europe
+    [Expert_Recommendations:_Let_ICODA_experts_decide] => Expert Recommendations: Let ICODA experts decide
+    [Influencer_Marketing_/_KOLs:_YouTube_Influencers,_Twitter_Influencers_/_Twitter_Marketing,_Telegram_Influencers] => Influencer Marketing / KOLs: YouTube Influencers, Twitter Influencers / Twitter Marketing, Telegram Influencers
+    [Paid_Traffic:_Meta_Ads,_TikTok_Ads,_Crypto_Networks,_Google_Ads] => Paid Traffic: Meta Ads, TikTok Ads, Crypto Networks, Google Ads
+    [SEO] => SEO
+    [ORM_(Online_Reputation_Management)] => ORM (Online Reputation Management)
+    [Telegram_Marketing] => Telegram Marketing
+    [Content_Creation] => Content Creation
+    [project-name] => deFi calc 2nd test
+    [name] => Maxi
+    [email] => mg@icoda.io
+    [telegram] => max_icoda
+    [message] => 2nd test
+    [lang-source] => en
+    [is_calculator] => 1
+    [user-country] => United States
+)
+
+
+2026-02-05 09:53:43   ->   mg@icoda.io
+mg@icoda.io
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Maxi - icoda.io (en)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => 
+
+ Project Name: deFi calc 2nd test
+
+Additional Information: 
+2nd test
+            [NAME] => Maxi
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mg@icoda.io
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => max_icoda
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1279094541.1770124748
+        )
+
+)
+
+
+Array
+(
+    [industry] => FinTech
+    [other_industry] => 
+    [achieve] => Increasing media mentions
+    [other_achieve] => 
+    [country] => Trustpilot
+    [other_country] => 
+    [service] => Array
+        (
+            [0] => Under $5,000
+            [1] => $5,000 – $10,000
+        )
+
+    [long] => Just exploring for now
+    [other_long] => 
+    [project-name] => ORM 2nd test
+    [name] => Maxi
+    [email] => glamaxi@mail.ru
+    [telegram] => max_icoda
+    [message] => ORM calc 2nd test
+    [lang-source] => en
+    [is_calculator] => 1
+    [user-country] => United States
+)
+
+
+2026-02-05 09:56:27   ->   glamaxi@mail.ru
+glamaxi@mail.ru
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Maxi - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => 
+
+ Project Name: ORM 2nd test
+
+ Industry: FinTech
+
+ Achieve: Increasing media mentions
+
+ Country: Trustpilot
+
+ Service: Under $5,000, $5,000 – $10,000
+
+ Long: Just exploring for now
+
+Additional Information: 
+ORM calc 2nd test
+            [NAME] => Maxi
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => glamaxi@mail.ru
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => max_icoda
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1279094541.1770124748
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Artem
+    [telegram] => @Artem_ro_affiliate_bdm
+    [email] => artem@rolly.info
+    [message] => Looking for Twitter KOLs pricelist 
+    [is-banner-review-block] => no
+    [user-country] => Lithuania
+)
+
+
+2026-02-05 12:03:16   ->   artem@rolly.info
+artem@rolly.info
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Lithuania
+            [TITLE] => Artem - icoda.io (en)
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => Looking for Twitter KOLs pricelist 
+            [NAME] => Artem
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => artem@rolly.info
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Artem_ro_affiliate_bdm
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 693114583.1770292392
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Alex Krivkel
+    [telegram] => @AlexKrikvel_Affilate
+    [email] => v03883487@gmail.com
+    [message] => Hello, my name is Alex, nice to meet you.
+I represent a large team of influencer managers.
+
+We offer influencers across numerous GEOs, from Europe to Africa.
+
+Are you interested in purchasing?
+    [user-country] => Pakistan
+)
+
+
+2026-02-05 12:30:36   ->   v03883487@gmail.com
+v03883487@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Pakistan
+            [TITLE] => Alex Krivkel - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Hello, my name is Alex, nice to meet you.
+I represent a large team of influencer managers.
+
+We offer influencers across numerous GEOs, from Europe to Africa.
+
+Are you interested in purchasing?
+            [NAME] => Alex Krivkel
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => v03883487@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @AlexKrikvel_Affilate
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 378867447.1770294564
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Divya Rajput
+    [telegram] => 9924987671
+    [email] => divya.k@elaunchinfotech.in
+    [message] => Need marketing service for a Crypto wallet.
+    [is-banner-review-block] => no
+    [user-country] => India
+)
+
+
+2026-02-05 12:45:49   ->   divya.k@elaunchinfotech.in
+divya.k@elaunchinfotech.in
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => India
+            [TITLE] => Divya Rajput - icoda.io (en)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => Need marketing service for a Crypto wallet.
+            [NAME] => Divya Rajput
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => divya.k@elaunchinfotech.in
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 9924987671
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 769630534.1770295470
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Krish karla
+    [telegram] => Tg- arlak1
+    [email] => arlakinfinity@gmail.com
+    [message] => Hi, I’m a Web3 community moderator professional with hands on experience working with crypto projects. I’m interested in exploring opportunities with your team (community moderation / growth / marketing support). I’ve previously worked with Web3 startups and understand Discord, Telegram, and crypto native communities well. Looking forward to discussing how I can contribute.
+    [message_mob] => 
+    [user-country] => Australia
+)
+
+
+2026-02-05 22:09:05   ->   arlakinfinity@gmail.com
+arlakinfinity@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Australia
+            [TITLE] => Krish karla - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => Hi, I’m a Web3 community moderator professional with hands on experience working with crypto projects. I’m interested in exploring opportunities with your team (community moderation / growth / marketing support). I’ve previously worked with Web3 startups and understand Discord, Telegram, and crypto native communities well. Looking forward to discussing how I can contribute.
+            [NAME] => Krish karla
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => arlakinfinity@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => Tg- arlak1
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => it
+    [name] => Axel
+    [telegram] => 3624812210
+    [email] => axel.bangher@growwer.com
+    [message] => Buongiorno,
+
+mi chiamo Axel e sono responsabile dell’area media di Growwer. Abbiamo un cliente interessato alla realizzazione di una pubblicazione sponsorizzata a tema Casino sul vostro sito web.
+
+Vorrei sapere se accettate questo tipo di contenuti sponsorizzati. In caso affermativo, potreste inviarmi maggiori informazioni su questo servizio (condizioni, tariffe, modalità, ecc.)?
+
+Resto in attesa di un vostro riscontro.
+
+Grazie in anticipo.
+
+Cordiali saluti,
+
+    [user-country] => Japan
+)
+
+
+2026-02-06 10:54:18   ->   axel.bangher@growwer.com
+axel.bangher@growwer.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Japan
+            [TITLE] => Axel - icoda.io (it)
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => Buongiorno,
+
+mi chiamo Axel e sono responsabile dell’area media di Growwer. Abbiamo un cliente interessato alla realizzazione di una pubblicazione sponsorizzata a tema Casino sul vostro sito web.
+
+Vorrei sapere se accettate questo tipo di contenuti sponsorizzati. In caso affermativo, potreste inviarmi maggiori informazioni su questo servizio (condizioni, tariffe, modalità, ecc.)?
+
+Resto in attesa di un vostro riscontro.
+
+Grazie in anticipo.
+
+Cordiali saluti,
+
+            [NAME] => Axel
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => axel.bangher@growwer.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 3624812210
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 197886080.1770375201
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => es
+    [name] => CRISTIAN PACHECO
+    [telegram] => WhatsApp 
+    [email] => cstianpacheco5372@gmail.com
+    [message] => 
+    [is-banner-review-block] => no
+    [user-country] => Japan
+)
+
+
+2026-02-06 11:21:12   ->   cstianpacheco5372@gmail.com
+cstianpacheco5372@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Japan
+            [TITLE] => CRISTIAN PACHECO - icoda.io (es)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => 
+            [NAME] => CRISTIAN PACHECO
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => cstianpacheco5372@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => WhatsApp 
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 2107024855.1770376787
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => ru
+    [name] => Брошован Ирина 
+    [telegram] => 0660708037
+    [email] => ibrosovan@gmail.com
+    [message] => Здравствуйте, команда ICODA!
+
+Мы — команда баеров, которая продвигает различные платформы казино. Сейчас мы ищем инфлюенсеров из Колумбии для продвижения наших продуктов, особенно на YouTube и Instagram.
+
+Подскажите, пожалуйста:  
+- есть ли у вас инфлюенсеры из Колумбии в сети?  
+- какие форматы кампаний вы можете предложить?  
+- как организован процесс работы и стоимость кампаний?
+
+Будем благодарны за ответ.
+
+    [user-country] => United States
+)
+
+
+2026-02-06 12:14:11   ->   ibrosovan@gmail.com
+ibrosovan@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Брошован Ирина  - icoda.io (ru)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Здравствуйте, команда ICODA!
+
+Мы — команда баеров, которая продвигает различные платформы казино. Сейчас мы ищем инфлюенсеров из Колумбии для продвижения наших продуктов, особенно на YouTube и Instagram.
+
+Подскажите, пожалуйста:  
+- есть ли у вас инфлюенсеры из Колумбии в сети?  
+- какие форматы кампаний вы можете предложить?  
+- как организован процесс работы и стоимость кампаний?
+
+Будем благодарны за ответ.
+
+            [NAME] => Брошован Ирина 
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => ibrosovan@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 0660708037
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 66059615.1770379663
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Herald Bonswani
+    [telegram] => +61236590394
+    [email] => dynamiteduo03@proton.me
+    [message] => Hello, I am currently working on a pre sale project for a new crypto token. I am about to create a twitter account on which I will set up my campaign. The project is still in an construction phase, that\'s why we don\'t want to bring out the idea yet.
+
+What kind of services does your company offer, I have several questions;
+
+- Can you contact an influencer to make a post about our project?
+- Do you have a standard pricing list for your services, eq. how much for 1 twitter post on an influencers page with 100K followers? 
+- Can you help us to get more followers in a short time?
+
+Please contact me on my E-mail adress, I\'m looking forward to your information.
+
+Kind regards,
+Herald Bonswani
+    [user-country] => Pakistan
+)
+
+
+2026-02-06 15:35:06   ->   dynamiteduo03@proton.me
+dynamiteduo03@proton.me
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Pakistan
+            [TITLE] => Herald Bonswani - icoda.io (en)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => Hello, I am currently working on a pre sale project for a new crypto token. I am about to create a twitter account on which I will set up my campaign. The project is still in an construction phase, that\'s why we don\'t want to bring out the idea yet.
+
+What kind of services does your company offer, I have several questions;
+
+- Can you contact an influencer to make a post about our project?
+- Do you have a standard pricing list for your services, eq. how much for 1 twitter post on an influencers page with 100K followers? 
+- Can you help us to get more followers in a short time?
+
+Please contact me on my E-mail adress, I\'m looking forward to your information.
+
+Kind regards,
+Herald Bonswani
+            [NAME] => Herald Bonswani
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => dynamiteduo03@proton.me
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => +61236590394
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Walneshia atkins
+    [telegram] => 2253729311
+    [email] => mz.atkins99@gmail.com
+    [message] => 
+    [is-banner-review-block] => no
+    [user-country] => Hong Kong
+)
+
+
+2026-02-06 21:05:25   ->   mz.atkins99@gmail.com
+mz.atkins99@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Hong Kong
+            [TITLE] => Walneshia atkins - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => 
+            [NAME] => Walneshia atkins
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mz.atkins99@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 2253729311
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1118007635.1770411889
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Jehan Chu
+    [telegram] => @jehanchuu
+    [email] => support@infokenetic.capital
+    [message] => Kenetic Capital, upcoming Web3 AI security product.
+We built a risk detection platform that supports emerging L1/L2 ecosystems , designed to secure transactions in real time.
+In dev for 24 months. Features include multichain support and proprietary AI for transaction security (tested by 150+ users in beta).
+Interested in liquidity integration or bridge partnerships ahead of mainnet launch.
+
+Jehan Chu
+
+
+Contact telegram: @jehanchuu
+    [user-country] => Pakistan
+)
+
+
+2026-02-08 19:14:17   ->   support@infokenetic.capital
+support@infokenetic.capital
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Pakistan
+            [TITLE] => Jehan Chu - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Kenetic Capital, upcoming Web3 AI security product.
+We built a risk detection platform that supports emerging L1/L2 ecosystems , designed to secure transactions in real time.
+In dev for 24 months. Features include multichain support and proprietary AI for transaction security (tested by 150+ users in beta).
+Interested in liquidity integration or bridge partnerships ahead of mainnet launch.
+
+Jehan Chu
+
+
+Contact telegram: @jehanchuu
+            [NAME] => Jehan Chu
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => support@infokenetic.capital
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @jehanchuu
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1114288853.1770577166
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Zhanerke 
+    [telegram] => @zhanerke_tleu
+    [email] => tleu.zhanerke@flawless.group
+    [message] => Hello,
+
+My name is Zhanerke, and I represent FlawlessMLM — a software development company specializing in custom platforms for direct sales and network marketing businesses. You can learn more about us here:
+https://flawlessmlm.com￼
+
+We are currently looking for a partner to manage our presence on Reddit. Our goal is to build organic visibility for the brand through relevant discussions, posts, and community engagement in appropriate subreddits.
+
+We are interested in a full-cycle approach, including:
+	•	content planning
+	•	posting from appropriate accounts
+	•	participation in discussions
+	•	brand mentions where relevant
+	•	overall Reddit community management
+
+Could you please share:
+	1.	Your approach to Reddit management
+	2.	Typical monthly packages and pricing
+	3.	Examples of similar clients or case studies
+	4.	The expected scope of work per month (posts, comments, etc.)
+
+Looking forward to your reply.
+
+Best regards,
+Zhanerke
+FlawlessMLM
+    [user-country] => Pakistan
+)
+
+
+2026-02-09 10:37:37   ->   tleu.zhanerke@flawless.group
+tleu.zhanerke@flawless.group
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Pakistan
+            [TITLE] => Zhanerke  - icoda.io (en)
+            [ASSIGNED_BY_ID] => 135
+            [COMMENTS] => Hello,
+
+My name is Zhanerke, and I represent FlawlessMLM — a software development company specializing in custom platforms for direct sales and network marketing businesses. You can learn more about us here:
+https://flawlessmlm.com￼
+
+We are currently looking for a partner to manage our presence on Reddit. Our goal is to build organic visibility for the brand through relevant discussions, posts, and community engagement in appropriate subreddits.
+
+We are interested in a full-cycle approach, including:
+	•	content planning
+	•	posting from appropriate accounts
+	•	participation in discussions
+	•	brand mentions where relevant
+	•	overall Reddit community management
+
+Could you please share:
+	1.	Your approach to Reddit management
+	2.	Typical monthly packages and pricing
+	3.	Examples of similar clients or case studies
+	4.	The expected scope of work per month (posts, comments, etc.)
+
+Looking forward to your reply.
+
+Best regards,
+Zhanerke
+FlawlessMLM
+            [NAME] => Zhanerke 
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => tleu.zhanerke@flawless.group
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @zhanerke_tleu
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1416792627.1770633294
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Kantonirina Mickaël TAFITASOA
+    [telegram] => 0344114060
+    [email] => kantonirinamickaeltafitasoa@gmail.com
+    [message] => Je suis intéressé 
+    [user-country] => United States
+)
+
+
+2026-02-09 16:01:59   ->   kantonirinamickaeltafitasoa@gmail.com
+kantonirinamickaeltafitasoa@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - Kantonirina Mickaël TAFITASOA - icoda.io (en)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => Je suis intéressé 
+            [NAME] => Kantonirina Mickaël TAFITASOA
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => kantonirinamickaeltafitasoa@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 0344114060
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 831809048.1770652795
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Kantonirina Mickaël TAFITASOA
+    [telegram] => 0344114060
+    [email] => kantonirinamickaeltafitasoa@gmail.com
+    [message] => Je suis intéressé 
+    [is-banner-review-block] => no
+    [user-country] => Iran
+)
+
+
+2026-02-09 16:03:00   ->   kantonirinamickaeltafitasoa@gmail.com
+kantonirinamickaeltafitasoa@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Iran
+            [TITLE] => Kantonirina Mickaël TAFITASOA - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => Je suis intéressé 
+            [NAME] => Kantonirina Mickaël TAFITASOA
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => kantonirinamickaeltafitasoa@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 0344114060
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 831809048.1770652795
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => daniel hagen
+    [telegram] => @silentmover7
+    [email] => daniel@endocare.cc
+    [message] => would like a quote to increase our X following organically.
+    [is-banner-review-block] => no
+    [user-country] => Iran
+)
+
+
+2026-02-10 00:12:34   ->   daniel@endocare.cc
+daniel@endocare.cc
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Iran
+            [TITLE] => daniel hagen - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => would like a quote to increase our X following organically.
+            [NAME] => daniel hagen
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => daniel@endocare.cc
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @silentmover7
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1149075265.1770682222
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => shubham Chopra
+    [telegram] => 8968290928
+    [email] => choprashubham619@gmail.com
+    [message] => need marketing for my presale project 
+    [is-banner-review-block] => no
+    [user-country] => Iran
+)
+
+
+2026-02-10 06:35:20   ->   choprashubham619@gmail.com
+choprashubham619@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Iran
+            [TITLE] => shubham Chopra - icoda.io (en)
+            [ASSIGNED_BY_ID] => 135
+            [COMMENTS] => need marketing for my presale project 
+            [NAME] => shubham Chopra
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => choprashubham619@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 8968290928
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1341948821.1770705282
+        )
+
+)
+
+
+Array
+(
+    [industry] => Blockchain and Cryptocurrency Projects
+    [other_industry] => 
+    [achieve] => Boost Sales
+    [other_achieve] => ukkyu
+    [country] => Global
+    [other_country] => 
+    [service] => Array
+        (
+            [0] => Expert Recommendations: Let ICODA experts decide
+        )
+
+    [long] => 3 months
+    [other_long] => 
+    [project-name] => egreenvolt
+    [name] => taylor
+    [email] => mytaylor2025@gmail.com
+    [telegram] => nNA
+    [message] => https://egreenvolt.com/  WAHT PRESALE FOR THIS MY MAIN GOAL IS FUND RAISING
+    [lang-source] => en
+    [is_calculator] => 1
+    [user-country] => United States
+)
+
+
+2026-02-10 06:41:13   ->   mytaylor2025@gmail.com
+mytaylor2025@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => United States
+            [TITLE] => USA - taylor - icoda.io (en)
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => 
+
+ Project Name: egreenvolt
+
+ Industry: Blockchain and Cryptocurrency Projects
+
+ Achieve: Boost Sales
+
+ Country: Global
+
+ Service: Expert Recommendations: Let ICODA experts decide
+
+ Long: 3 months
+
+Additional Information: 
+https://egreenvolt.com/  WAHT PRESALE FOR THIS MY MAIN GOAL IS FUND RAISING
+            [NAME] => taylor
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mytaylor2025@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => nNA
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1341948821.1770705282
+        )
+
+)
+
+
+Array
+(
+    [lang-source] => en
+    [name] => Arunkumar 
+    [telegram] => 9840644439
+    [email] => arun.kumar@mplgaming.com
+    [message] => 
+    [is-banner-review-block] => no
+    [user-country] => Germany
+)
+
+
+2026-02-10 16:33:41   ->   arun.kumar@mplgaming.com
+arun.kumar@mplgaming.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Germany
+            [TITLE] => Arunkumar  - icoda.io (en)
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => 
+            [NAME] => Arunkumar 
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => arun.kumar@mplgaming.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 9840644439
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 2104417755.1770740281
+        )
+
+)
+
+
+Array
+(
+    [industry] => Blockchain and Cryptocurrency Projects
+    [other_industry] => 
+    [achieve] => Increase Brand Awareness
+    [other_achieve] => 
+    [country] => Global
+    [other_country] => 
+    [service] => Array
+        (
+            [0] => Expert Recommendations: Let ICODA experts decide
+        )
+
+    [long] => 1 month
+    [other_long] => 
+    [project-name] => test
+    [name] => tes
+    [email] => test34@gmail.com
+    [telegram] => test
+    [message] => 
+    [lang-source] => en
+    [is_calculator] => 1
+    [user-country] => Ukraine
+)
+
+
+2026-02-10 19:55:26   ->   test34@gmail.com
+test34@gmail.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [ADDRESS_COUNTRY] => Ukraine
+            [TITLE] => tes - icoda.io (en)
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => 
+
+ Project Name: test
+
+ Industry: Blockchain and Cryptocurrency Projects
+
+ Achieve: Increase Brand Awareness
+
+ Country: Global
+
+ Service: Expert Recommendations: Let ICODA experts decide
+
+ Long: 1 month
+
+Additional Information: 
+
+            [NAME] => tes
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test34@gmail.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => test
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From site icoda.io
+            [SOURCE_ID] => WEB
+            [UF_CRM_1684321525495] => 1125545492.1766236717
+        )
+
+)
+
+

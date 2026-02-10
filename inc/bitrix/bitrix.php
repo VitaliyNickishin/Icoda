@@ -87,7 +87,7 @@ function send_lead_to_bitrix($resource = '')
                     $testLog['state'] = 'state_6';
                 }
             } else {
-                $responsible_users = array( '39', '99', '177', '179', '135' );
+                $responsible_users = array( '39', '99', '179', '135' );
                 $last_responsible_user_id = get_option('last_responsible_bitrix_user_id');
                 $add_periodical_users = get_option('bitrix_add_periodical_users');
                 $add_periodical_users = !empty($add_periodical_users) ? true : false;

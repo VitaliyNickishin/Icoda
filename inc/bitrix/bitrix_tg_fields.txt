@@ -37428,3 +37428,356 @@ Can we discuss this?
 )
 
 
+@Alphapars
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => Alphapars - телеграм
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Gm team 
+
+I hope you’re doing well. I’ve been active in the Web3 space for over 5 years, working across content production and marketing for multiple crypto and Web3 projects.
+
+I’m reaching out because I’d like to work with @icoda_io. I believe I can add value to your team, especially in Turkey focused marketing and local growth. I have a strong understanding of the Turkish crypto community, KOL ecosystem, and local market dynamics, and I can help execute global campaigns effectively at the local level.
+
+I’d be happy to have a brief conversation if you think there could be a mutual fit.
+
+Best regards,
+            [NAME] => Alphapars
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Alphapars
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From telegram
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+@veronikaICP
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => Veronika ICP | AIS - телеграм
+            [ASSIGNED_BY_ID] => 135
+            [COMMENTS] => Добрый вечер🙌🏼 
+Меня зовут Ника, я представляю проект iGaming Charity Project 
+Мы создаем новостные дайджесты в 10+ каналах в благотворительных целях )
+
+Подскажите, пожалуйста, с кем из вашей команды я могу обсудить  рекламные размещения в медиа?)
+            [NAME] => Veronika ICP | AIS
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @veronikaICP
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From telegram
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+@Oriole_Insights
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => ORIk - телеграм
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => ORIk | Oriole Insights, [30.01.2026 18:35]
+Hi, ICODA Team! 
+I’m ORIk, Head of BD at Oriole Insights, I’ll keep this short and to the point to respect your time. 
+
+Oriole Insights is a crypto-focused prediction markets platform and marketing layer built around community sentiment, expectations, and reputation.
+
+I’m reaching out to explore potential partnership opportunities.
+
+From a collaboration perspective, I see Oriole Insights working as a complementary marketing and content layer for your current and future clients, particularly crypto projects at pre-TGE and early growth stages.
+
+Would be great to connect and have a quick chat to see if there’s alignment and how we could potentially work together.
+
+ORIk | Oriole Insights, [02.02.2026 15:49]
+Sure, at a high level, we see Oriole Insights as an additional engagement and content layer ICODA can plug into selected client campaigns. 
+
+Since we’re a prediction markets platform, our core strength is activating communities around key milestones (pre-TGE, launches, listings, narrative moments) by launching prediction markets that measure and drive real market sentiment.
+
+In practice, this works well alongside broader GTM or PR efforts: using our platform mechanics + producing and distributing high-quality, narrative-driven content through our own socials.
+
+If helpful, I’m happy to share our deck where we clearly outline the service flow we’ve already used with projects, along with concrete collaboration cases)
+
+ORIk | Oriole Insights, [02.02.2026 18:29]
+https://drive.google.com/file/d/1AafHbraoryeZqSO16W6t85dJ_rxl1Q9y/view?usp=sharing
+
+Would be great to hear your thoughts on this partnership model, does this look like something that could fit into your client campaigns?
+            [NAME] => ORIk
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Oriole_Insights
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From telegram
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+@nommdxb
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => Nomm - телеграм
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => Nomm, [03.02.2026 14:42]
+Hi there
+
+Nomm, [03.02.2026 14:42]
+We are currently running a Research Peptide Store in the UAE and my FB Ads account was banned right after ad creation. I would like to know if your products help with that, and if there is any guidance included?
+            [NAME] => Nomm
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @nommdxb
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From telegram
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+@sara_fertch
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => Sara - телеграм
+            [ASSIGNED_BY_ID] => 179
+            [COMMENTS] => Hi! ☺️
+
+My name is Sara, I work with iGaming brands (casino, betting platforms) and collaborate with content creators through direct partnerships and agencies.
+I came across your agency and wanted to quickly check — do you currently work with creators who are open to iGaming / casino collaborations?
+
+At the moment, we’re specifically looking for creators with audiences from DE and HU.
+
+If yes, I’d be happy to share the formats and cooperation models we usually work with and see if there’s a fit.
+
+Thanks!
+            [NAME] => Sara
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @sara_fertch
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From telegram
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+@Sonia_sharklink
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => Sonya SharkLink - телеграм
+            [ASSIGNED_BY_ID] => 177
+            [COMMENTS] => Sonya SharkLink, [05.02.2026 3:43]
+Hello!
+
+Sonya SharkLink, [05.02.2026 3:43]
+My name is Sonya, I'm a manager from Sharklink - an agency that works with affiliate marketing in the IGaming area. 300+ GEOs, 500+ advertisers, 2000+ offers.
+Currently we're open to new SEO collaborations — working on CPA, RevShare, Hybrid, and Spend models. We're interested in discussing possible cooperation with you.
+ 
+Let's connect,
+Sonya
+            [NAME] => Sonya SharkLink
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Sonia_sharklink
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From telegram
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+@Mulejust
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => Mule - телеграм
+            [ASSIGNED_BY_ID] => 39
+            [COMMENTS] => Mule, [07.02.2026 4:52]
+hi team , nice to meet you. I am PR manager of the https://coindepo.com  We want to check if it is possible to make video review with CryptoJebb on YT  - https://www.youtube.com/@CryptoJebb if you have contacts with him. We want according to this brief a separate video - brief for the video you can check here https://docs.google.com/document/d/12E-Zfpl4JkoOU5SsuVgiv2kyYZy8iNwDTCEStZ00caA/edit?tab=t.0
+
+Mule, [07.02.2026 4:53]
+Please share available options and prices, sincerely
+
+Mule, [07.02.2026 4:56]
+Also we want to check if Coin Bureau can make some integration or review about Coindepo https://www.youtube.com/@CoinBureau
+            [NAME] => Mule
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Mulejust
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From telegram
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+@swiftaicoin
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => swift aicoin - телеграм
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => Hi,
+We are a new crypto project currently in the presale stage and have not officially launched yet. We are looking for an experienced crypto marketing agency that can help us promote our project and reach as wide an audience as possible. We are particularly interested in marketing support on X (formerly Twitter), Telegram, and TikTok.
+After extensive research, we came across your agency and noticed many strong recommendations and positive feedback about your work. We would love to learn more about the services you provide and the marketing packages you offer.
+Our project focuses on enabling transactions within the SWIFT system using AI technology.
+We would greatly appreciate more information about how you can support our project, as well as details about your pricing and available packages.
+Kind regards,
+Swiftaicoin
+            [NAME] => swift aicoin
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @swiftaicoin
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From telegram
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+@Bo77F
+Array
+(
+    [FIELDS] => Array
+        (
+            [UTM_SOURCE] => telegram
+            [TITLE] => - - телеграм
+            [ASSIGNED_BY_ID] => 135
+            [COMMENTS] => Bo Banking protocol, [07.02.2026 15:29]
+Hey.. hau u duing there
+
+Bo Banking protocol, [07.02.2026 15:29]
+I heve som question..
+
+Bo Banking protocol, [07.02.2026 15:30]
+For your service crypto marketing
+
+Bo Banking protocol, [07.02.2026 15:30]
+Thanks..Salvatore
+
+Bo Banking protocol, [08.02.2026 13:35]
+Gm
+
+Bo Banking protocol, [08.02.2026 13:36]
+I nid to talk with u.  YOUR EXPERT.
+
+Bo Banking protocol, [08.02.2026 13:37]
+I heve two project.  Two to share
+
+Bo Banking protocol, [08.02.2026 13:38]
+First one is .. coint project. Promotion
+
+Bo Banking protocol, [08.02.2026 13:39]
+Marketing.
+
+Bo Banking protocol, [08.02.2026 13:39]
+Let me know wen u are.  Ivabel
+
+Bo Banking protocol, [08.02.2026 13:39]
+Your window 🪟.. EU or USA
+            [NAME] => -
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Bo77F
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From telegram
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+

@@ -16644,3 +16644,572 @@ Marketing budget per month $50,000 - $75,000
 )
 
 
+Array
+(
+    [name] => Cheng
+    [email] => pc@shawik.com
+    [message] => how to run AI for SEO, what we can expect after use AI 
+    [telegram] => 0061468333328
+)
+
+
+2026-02-02 00:19:38   ->   pc@shawik.com
+pc@shawik.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Cheng - calendly
+            [ASSIGNED_BY_ID] => 135
+            [COMMENTS] => how to run AI for SEO, what we can expect after use AI 
+            [NAME] => Cheng
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => pc@shawik.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 0061468333328
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From calendly
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [name] => Andrew Magid
+    [email] => a@absinthelabs.xyz
+    [message] => We work with agencies like Serotonin, Flight3, and Beluga on their mid funnel, making sure the traffic they're driving actually converts without the pain of needing to coordinate with each client's team
+
+I'm genuinely just trying to learn how your team thinks about maximizing marketing roi and what that looks like with your clients. Happy to share what's been working for the agencies we partner with in return
+
+here's some details about us:
+1. x: https://x.com/absinthenetwork. linkedin: https://www.linkedin.com/company/absinthenetwork/ 
+
+some campaigns we developed and ran:
+• https://airdrop.aethir.com - Aethir (751k x followers)
+• https://ambassador.vechain.org/home - vechain (626k
+x followers)
+• https://points.concrete.xyz/home - concrete (112k x followers)
+    [telegram] => wormcoffee
+)
+
+
+2026-02-02 01:36:06   ->   a@absinthelabs.xyz
+a@absinthelabs.xyz
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Andrew Magid - calendly
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => We work with agencies like Serotonin, Flight3, and Beluga on their mid funnel, making sure the traffic they're driving actually converts without the pain of needing to coordinate with each client's team
+
+I'm genuinely just trying to learn how your team thinks about maximizing marketing roi and what that looks like with your clients. Happy to share what's been working for the agencies we partner with in return
+
+here's some details about us:
+1. x: https://x.com/absinthenetwork. linkedin: https://www.linkedin.com/company/absinthenetwork/ 
+
+some campaigns we developed and ran:
+• https://airdrop.aethir.com - Aethir (751k x followers)
+• https://ambassador.vechain.org/home - vechain (626k
+x followers)
+• https://points.concrete.xyz/home - concrete (112k x followers)
+            [NAME] => Andrew Magid
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => a@absinthelabs.xyz
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => wormcoffee
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From calendly
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [name] => Mariq Marzuki
+    [email] => mariq@investati.com
+    [message] => We would like to propose and discuss possible low churn Strategic Partnership between your agency and our flagship engine www.investati.com
+    [telegram] => markmarzk
+)
+
+
+2026-02-02 14:38:35   ->   mariq@investati.com
+mariq@investati.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Mariq Marzuki - calendly
+            [ASSIGNED_BY_ID] => 135
+            [COMMENTS] => We would like to propose and discuss possible low churn Strategic Partnership between your agency and our flagship engine www.investati.com
+            [NAME] => Mariq Marzuki
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mariq@investati.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => markmarzk
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From calendly
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [name] => Rebecca
+    [email] => zhangxinyue@ngd.neo.org
+    [message] => I'm Rebecca from Neo Blockchain, reaching our to explore potential collaboration. At Neo, we’re facing a PR situation and are seeking professional advice and support. You have a strong reputation in the industry, and we believe you might have constructive strategies to help us navigate the negativity and set things right.
+
+This would be a focused engagement around reputation management and response strategy, with a dedicated budget allocated. We’d like to explore whether this is something you’d be open to discussing.
+    [telegram] => @Kristinekrs
+)
+
+
+2026-02-03 03:21:27   ->   zhangxinyue@ngd.neo.org
+zhangxinyue@ngd.neo.org
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Rebecca - calendly
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => I'm Rebecca from Neo Blockchain, reaching our to explore potential collaboration. At Neo, we’re facing a PR situation and are seeking professional advice and support. You have a strong reputation in the industry, and we believe you might have constructive strategies to help us navigate the negativity and set things right.
+
+This would be a focused engagement around reputation management and response strategy, with a dedicated budget allocated. We’d like to explore whether this is something you’d be open to discussing.
+            [NAME] => Rebecca
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => zhangxinyue@ngd.neo.org
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Kristinekrs
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From calendly
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [name] => Mariq Marzuki
+    [email] => mariq@investati.com
+    [message] => We would like to propose and discuss possible low churn Strategic Partnership between your agency and our flagship engine www.investati.com
+    [telegram] => markmarzk
+)
+
+
+2026-02-03 13:56:49   ->   mariq@investati.com
+mariq@investati.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Mariq Marzuki - calendly
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => We would like to propose and discuss possible low churn Strategic Partnership between your agency and our flagship engine www.investati.com
+            [NAME] => Mariq Marzuki
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => mariq@investati.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => markmarzk
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From calendly
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [name] => Razan Osman
+    [email] => r.kamal@ethrainvest.com
+    [message] => We are lanuching a new coin 
+    [telegram] => 00971545552908
+)
+
+
+2026-02-03 14:16:47   ->   r.kamal@ethrainvest.com
+r.kamal@ethrainvest.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Razan Osman - calendly
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => We are lanuching a new coin 
+            [NAME] => Razan Osman
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => r.kamal@ethrainvest.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 00971545552908
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From calendly
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [name] => Rushdy Averroes
+    [email] => rushdaverroes@getbabb.com
+    [message] => We are gearing up with an IEO round and we would like to discuss your services 
+    [telegram] => 00447827963046
+)
+
+
+2026-02-04 13:45:28   ->   rushdaverroes@getbabb.com
+rushdaverroes@getbabb.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Rushdy Averroes - calendly
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => We are gearing up with an IEO round and we would like to discuss your services 
+            [NAME] => Rushdy Averroes
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => rushdaverroes@getbabb.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => 00447827963046
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From calendly
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [name] => Oleh Vavryk
+    [email] => oleg@vavryk.com
+    [message] => 1. На какой стадии находится проект?
+Проект Cell Life Token (CLT) находится на финальной стадии подготовки к запуску.
+На данный момент полностью готово:
+•	Whitepaper v8.0
+•	смарт контракты (внедрены и протестированы)
+•	платформа пресейла: https://presale.cell-life.eu/
+•	подключённые платёжные шлюзы (криптовалюта + банковские карты)
+•	полный рабочий процесс покупки токена
+•	интеграция токена с экосистемой Cell Life
+•	токенизация реальных физических продуктов (БАДов)
+Единственный оставшийся шаг — аудит CERTIK.
+После него мы готовы сразу запускать маркетинг и продажи.
+2. Это существующий бизнес или стартап?
+Это существующий бизнес, который работает уже 3 года.
+Наш официальный сайт: https://cell-life.pl/
+Компания успешно продаёт свои БАДы, имеет стабильную клиентскую базу и растущие продажи.
+Сейчас мы расширяем линейку ещё на 200 новых продуктов.
+3. Наше новое направление — Dr. Cell Life
+Мы запускаем направление Dr. Cell Life, в рамках которого:
+•	клиент делает комплексную диагностику по скану ладони (алгоритм и ПО — на финальной стадии разработки),
+•	получает персональные рекомендации,
+•	и далее — подбор необходимых БАДов из нашей линейки.
+Диагностика будет стоить символическую сумму, чтобы привлечь массовый поток клиентов.
+После запуска мы планируем масштабировать это направление через франшизу по всей Польше и Европе.
+Для этого нам необходим капитал, и мы выбрали путь токенизации, чтобы привлечь средства современным, прозрачным и гибким способом.
+Нам также сообщили, что до 2,5 млн евро в Польше можно привлекать без получения лицензии MiCA, что делает модель ещё более удобной.
+4. Второе направление — токенизация бриллиантов
+У нас есть ещё один проект:
+DiamondX — продажа и токенизация бриллиантов
+•	бизнес работает 25 лет,
+•	высокая маржинальность,
+•	стабильные продажи,
+•	полностью готовая инфраструктура.
+Для масштабирования нам необходимо привлечь минимум 20 млн евро.
+Мы рассматриваем ICODA как потенциального стратегического партнёра и по этому направлению тоже.
+5. Что для нас сейчас приоритетно
+На данном этапе приоритет №1:
+Маркетинг и продажи токена CLT
+Так как:
+•	токенизация готова,
+•	смарт контракты работают,
+•	пресейл функционирует,
+•	остался только CERTIK.
+Нам нужен партнёр, который сможет:
+•	разработать стратегию запуска,
+•	организовать продажи токена,
+•	привлечь инвесторов,
+•	запустить PR, инфлюенсеров, комьюнити,
+•	обеспечить рост и узнаваемость проекта.
+6. Условия сотрудничества
+Мы открыты к индивидуальному обсуждению.
+Модель оплаты будет зависеть от:
+•	опыта,
+•	результатов предыдущих проектов,
+•	объёмов привлечённых инвестиций,
+•	сроков и бюджета кампаний.
+Готовы обсудить разные форматы:
+фикс + KPI, success fee, агентская модель, долгосрочное партнёрство.
+7. Предлагаем созвониться
+Мы считаем, что лучше всего будет обсудить всё голосом, познакомиться и подробно рассказать о проекте.
+
+    [telegram] => @trionfante
+)
+
+
+2026-02-06 05:52:18   ->   oleg@vavryk.com
+oleg@vavryk.com
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Oleh Vavryk - calendly
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => 1. На какой стадии находится проект?
+Проект Cell Life Token (CLT) находится на финальной стадии подготовки к запуску.
+На данный момент полностью готово:
+•	Whitepaper v8.0
+•	смарт контракты (внедрены и протестированы)
+•	платформа пресейла: https://presale.cell-life.eu/
+•	подключённые платёжные шлюзы (криптовалюта + банковские карты)
+•	полный рабочий процесс покупки токена
+•	интеграция токена с экосистемой Cell Life
+•	токенизация реальных физических продуктов (БАДов)
+Единственный оставшийся шаг — аудит CERTIK.
+После него мы готовы сразу запускать маркетинг и продажи.
+2. Это существующий бизнес или стартап?
+Это существующий бизнес, который работает уже 3 года.
+Наш официальный сайт: https://cell-life.pl/
+Компания успешно продаёт свои БАДы, имеет стабильную клиентскую базу и растущие продажи.
+Сейчас мы расширяем линейку ещё на 200 новых продуктов.
+3. Наше новое направление — Dr. Cell Life
+Мы запускаем направление Dr. Cell Life, в рамках которого:
+•	клиент делает комплексную диагностику по скану ладони (алгоритм и ПО — на финальной стадии разработки),
+•	получает персональные рекомендации,
+•	и далее — подбор необходимых БАДов из нашей линейки.
+Диагностика будет стоить символическую сумму, чтобы привлечь массовый поток клиентов.
+После запуска мы планируем масштабировать это направление через франшизу по всей Польше и Европе.
+Для этого нам необходим капитал, и мы выбрали путь токенизации, чтобы привлечь средства современным, прозрачным и гибким способом.
+Нам также сообщили, что до 2,5 млн евро в Польше можно привлекать без получения лицензии MiCA, что делает модель ещё более удобной.
+4. Второе направление — токенизация бриллиантов
+У нас есть ещё один проект:
+DiamondX — продажа и токенизация бриллиантов
+•	бизнес работает 25 лет,
+•	высокая маржинальность,
+•	стабильные продажи,
+•	полностью готовая инфраструктура.
+Для масштабирования нам необходимо привлечь минимум 20 млн евро.
+Мы рассматриваем ICODA как потенциального стратегического партнёра и по этому направлению тоже.
+5. Что для нас сейчас приоритетно
+На данном этапе приоритет №1:
+Маркетинг и продажи токена CLT
+Так как:
+•	токенизация готова,
+•	смарт контракты работают,
+•	пресейл функционирует,
+•	остался только CERTIK.
+Нам нужен партнёр, который сможет:
+•	разработать стратегию запуска,
+•	организовать продажи токена,
+•	привлечь инвесторов,
+•	запустить PR, инфлюенсеров, комьюнити,
+•	обеспечить рост и узнаваемость проекта.
+6. Условия сотрудничества
+Мы открыты к индивидуальному обсуждению.
+Модель оплаты будет зависеть от:
+•	опыта,
+•	результатов предыдущих проектов,
+•	объёмов привлечённых инвестиций,
+•	сроков и бюджета кампаний.
+Готовы обсудить разные форматы:
+фикс + KPI, success fee, агентская модель, долгосрочное партнёрство.
+7. Предлагаем созвониться
+Мы считаем, что лучше всего будет обсудить всё голосом, познакомиться и подробно рассказать о проекте.
+
+            [NAME] => Oleh Vavryk
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => oleg@vavryk.com
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @trionfante
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From calendly
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
+Array
+(
+    [name] => Вячеслав Игоревич Мусякаев
+    [email] => admin@vprognoze.ru
+    [message] => аудит сайта
+    [telegram] => @Vprognozeorg
+)
+
+
+2026-02-10 15:56:15   ->   admin@vprognoze.ru
+admin@vprognoze.ru
+Array
+(
+    [FIELDS] => Array
+        (
+            [TITLE] => Вячеслав Игоревич Мусякаев - calendly
+            [ASSIGNED_BY_ID] => 99
+            [COMMENTS] => аудит сайта
+            [NAME] => Вячеслав Игоревич Мусякаев
+            [EMAIL] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => admin@vprognoze.ru
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [PHONE] => Array
+                (
+                    [0] => Array
+                        (
+                            [VALUE] => @Vprognozeorg
+                            [VALUE_TYPE] => WORK
+                        )
+
+                )
+
+            [STATUS_ID] => UC_PIZGE5
+            [SOURCE_DESCRIPTION] => From calendly
+            [SOURCE_ID] => WEB
+        )
+
+)
+
+
