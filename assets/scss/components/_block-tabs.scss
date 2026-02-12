@@ -93,19 +93,25 @@
         @extend .d-flex;
         @extend .align-items-center;
         &-icon {
+          @extend .text-primary;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 40px;
           height: 40px;
           margin-right: 1rem;
+          border-radius: 8px;
+          background: rgba(60, 97, 226, 0.2);
           @include mediaMin(992) {
             width: 48px;
             height: 48px;
           }
           svg {
-            width: 40px;
-            height: 40px;
+            width: 20px;
+            height: 20px;
             @include mediaMin(992) {
-              width: 48px;
-              height: 48px;
+              width: 24px;
+              height: 24px;
             }
           }
         }
