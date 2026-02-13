@@ -20,7 +20,7 @@ $boxes = $box_content['box_info'] ?? [];
 
                 <?php foreach ($boxes as $box): ?>
                     <div class="col col-xl-3 px-2">
-                        <a href="<?php echo esc_url($box['box_link']['url'] ?? '#'); ?>" class="box-card card-has-rotate-arrow">
+                        <a href="<?php echo !empty($box['box_link']) ? $box['box_link'] : '#'; ?>" class="box-card card-has-rotate-arrow">
 
                             <?php if (!empty($box['box_icon'])): ?>
                                 <div class="box-icon">
