@@ -22,13 +22,12 @@ $block_content = get_field('block_content');
                 <div class="col-12 col-lg-4 offset-lg-2 mt-3 pt-3 px-0">
                     <div class="slider-llm custom-slider">
                         <?php foreach ($block_content['slider'] as $slider): ?>
-                            <div
-                                class="slider-image">
+                            <a href="<?php echo !empty($slider['link']) ? $slider['link'] : '#'; ?>" class="slider-image">
                                 <picture>
-                                    <img src="<?php echo $slider['image']['url']; ?>" alt="<?php echo $slider['title']; ?>" />
+                                    <img loading="lazy" src="<?php echo $slider['image']['url']; ?>" alt="<?php echo $slider['title']; ?>" />
                                 </picture>
                                 <p class="fw-semibold slider-title mt-2 mb-2 pb-1"><?php echo $slider['title']; ?></p>
-                            </div>
+                            </a>
                         <?php endforeach; ?>
                     </div>
                     
