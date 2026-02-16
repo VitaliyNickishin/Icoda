@@ -93,15 +93,11 @@
                                                     </button>
 
                                                     <ul class="dropdown-custom-menu">
-                                                        <li data-value="<?php echo $resources['file_third_resource_first_option']['url']; ?>">
-                                                            <?php echo $resources['text_third_resource_first_option']; ?>
-                                                        </li>
-                                                        <li data-value="<?php echo $resources['file_third_resource_second_option']['url']; ?>">
-                                                            <?php echo $resources['text_third_resource_second_option']; ?>
-                                                        </li>
-                                                        <li data-value="<?php echo $resources['file_third_resource_third_option']['url']; ?>">
-                                                            <?php echo $resources['text_third_resource_third_option']; ?>
-                                                        </li>
+                                                        <?php foreach ($resources['dropdown_list'] as $list): ?>
+                                                            <li data-value="<?php echo $list['file_item']['url']; ?>">
+                                                                <?php echo $list['text_item']; ?>
+                                                            </li>
+                                                        <?php endforeach; ?>
                                                     </ul>                                     
                                                 </div>
 
