@@ -23,6 +23,10 @@
     'ar' => 'بولندا، فروتسواف، 50-202، شارع <br/>Księcia Witolda، رقم 49، الشقة 15',
     'ja' => 'ポーランド、ヴロツワフ、50-202、<br/>Księcia Witolda 通り、49番、15号室',
  ];
+
+ $addresses2 = [
+    'en' => 'United States, Bellevue, WA, 98004-6424 <br />35 112th Ave NE, Apt 420',
+ ];
 ?>
 
 <footer class="footer section section-9">
@@ -81,6 +85,7 @@
                                 <div class="wr-media-list">
                                     <a href="<?php echo get_permalink(icl_object_id(2908, 'page', 1, ICL_LANGUAGE_CODE)); ?>" class="ttl"><?php _e('Contact Us', 'icoda'); ?></a>
                                     <p><?php echo !empty($addresses[ICL_LANGUAGE_CODE]) ? $addresses[ICL_LANGUAGE_CODE] : $addresses['en']; ?></p>
+                                    <p><?php echo !empty($addresses2[ICL_LANGUAGE_CODE]) ? $addresses2[ICL_LANGUAGE_CODE] : $addresses2['en']; ?></p>
                                     <ul class="media-list">
                                         <li><a class="icon-ico-media-1" target="_blank" href="https://www.linkedin.com/company/icoda-ico-marketing-solutions/"></a></li>
                                         <li><a class="icon-ico-media-2" target="_blank" href="https://www.facebook.com/icodaagency/"></a></li>
@@ -136,7 +141,6 @@
         </div>
         <div class="modal-default-body">
             <div class="section-text">
-                <p class="ttl2"><?php _e('Generic privacy policy template', 'icoda'); ?></p>
                 <p><?php _e('This privacy policy ("policy") will help you understand how Global Digital Consulting LLC uses and protects the data you provide to us when you visit and use https://icoda.io ("website", "service").', 'icoda'); ?></p>
                 <p><?php _e('We reserve the right to change this policy at any given time, of which you will be promptly updated. If you want to make sure that you are up to date with the latest changes, we advise you to frequently visit this page.', 'icoda'); ?></p>
             </div>
@@ -264,6 +268,17 @@
     <canvas id="congrats-confetti" width="300" height="150"></canvas>
 </div>
 
+<div id="success-get-file" class="modal-default success-get-file">
+    <a href="#" class="modal-close"><i class="icon-ico-close"></i></a>
+    <div class="text-center">
+        <div class="wr-ico-check">
+            <i class="icon-ico-check"></i>
+        </div>
+        <p class="ttl"><?php _e('Thank you!', 'icoda'); ?></p>
+        <p><?php _e('Your request has been sent successfully! Check your mailbox!', 'icoda'); ?></p>
+    </div>
+</div>
+
 <!-- Modal Video-->
 <div class="modal fade bd-example-modal-xl modal-video modal-normal" id="videoModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -285,6 +300,9 @@
 <?php get_template_part('template-parts/inline-css'); ?>
 
 <script src="https://widget.clutch.co/static/js/widget.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/js/intlTelInput.min.js"></script>
+
 <script>
   function aload(t){"use strict";var e="data-aload";return t=t||window.document.querySelectorAll("["+e+"]"),void 0===t.length&&(t=[t]),[].forEach.call(t,function(t){t["LINK"!==t.tagName?"src":"href"]=t.getAttribute(e),t.removeAttribute(e)}),t}
   // Onload
@@ -293,7 +311,7 @@ window.onload = function () {
 };
 </script>
 
-<?php if(is_front_page() || is_singular('post') || is_page_template('template-pages/template-calculator.php') || is_page_template('template-parts/tpl-events.php')) : ?>
+<?php if(is_front_page() || is_singular('post') || is_singular('page') || is_page_template('template-pages/template-calculator.php') || is_page_template('template-parts/tpl-events.php')) : ?>
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <?php endif; ?>
 

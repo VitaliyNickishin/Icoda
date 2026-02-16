@@ -54,7 +54,8 @@ $front_page_id = get_option('page_on_front');
                                 <input type="text" name="telegram" class="form-control req" placeholder="<?php echo __('WhatsApp / Telegram', 'icoda'); ?>" required>
                             </div>
                             <div class="col-12 col-md-6">
-                                <input id="intlTel" type="tel" name="phone" inputmode="numeric" pattern="[0-9+ ]*" class="form-control req" placeholder="<?php echo __('Phone number', 'icoda'); ?>" required>
+                                <input id="intlTel" type="tel" name="phone" class="form-control intlTel" required>
+                                <span class="phone-error hide"></span>
                             </div>
                             <div class="col-12">
                                 <input name="email" class="form-control req" placeholder="<?php echo __('Email', 'icoda'); ?>" required>
@@ -77,14 +78,6 @@ $front_page_id = get_option('page_on_front');
         </div>
     </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/js/intlTelInput.min.js"></script>
-<script>
-  const input = document.querySelector("#intlTel");
-  window.intlTelInput(input, {
-    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/js/utils.js"),
-  });
-</script>
 
 <?php get_template_part('template-parts/sections/meet-up', '', ['need_post_id' => $front_page_id]); ?>
 

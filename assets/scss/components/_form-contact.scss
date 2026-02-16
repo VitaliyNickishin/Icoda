@@ -5,6 +5,7 @@
   @include mediaMax(767) {
     padding-bottom: 110px;
   }
+  // &-inner,
   .row {
     padding: 66px 86px 52px 80px;
 
@@ -17,7 +18,25 @@
       padding-right: 0;
       padding-bottom: 28px;
     }
-
+  }
+  .iti__globe .iti__globe-svg {
+    fill: $white;
+  }
+  .iti__arrow {
+    border-top: 4px solid $white;
+  }
+  .intlTel {
+    color: $white;
+    &:focus {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+  .iti {
+    width: 100%;
+  }
+  .iti__selected-country-primary {
+    padding-bottom: 10px;
   }
 
   .col-top {
@@ -27,7 +46,7 @@
   }
 
   .container {
-    background: #3C61E2;
+    background: #3c61e2;
     border-radius: 4px;
   }
 
@@ -35,15 +54,15 @@
     margin-bottom: 13px;
     width: 150px;
     font-size: 24px;
-    color: #18232F;
+    color: #18232f;
   }
 
   .text {
     padding: 27px 32px 24px;
     width: 384px;
     max-width: 100%;
-    background: #FFFFFF;
-    border: 1px solid #F9F9F9;
+    background: #ffffff;
+    border: 1px solid #f9f9f9;
     box-sizing: border-box;
     box-shadow: 0px 20px 16px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
@@ -58,17 +77,17 @@
     p {
       position: relative;
       font-size: 14px;
-      color: #18232F;
+      color: #18232f;
       max-width: 316px;
       line-height: 17px;
       padding-bottom: 30px;
 
       &:after {
-        content: '';
+        content: "";
         display: inline-block;
         width: 49px;
         height: 0px;
-        border: 1px solid #3C61E2;
+        border: 1px solid #3c61e2;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -84,6 +103,7 @@
     }
 
     input {
+      // margin-bottom: 40px;
       width: 100%;
       background: transparent;
       color: #fff;
@@ -92,6 +112,10 @@
       font-size: 16px;
       padding-bottom: 15px;
       line-height: 19px;
+      border-radius: 0;
+      &:focus {
+        border-color: #80bdff;
+      }
 
       &::placeholder {
         color: #fff;
@@ -109,38 +133,17 @@
       color: red;
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -35px;
       font-size: 13px;
       line-height: normal;
       min-height: 27px;
     }
   }
 
-  .first-row {
-    .input-wrap {
-      width: 33%;
-      padding-right: 17px;
-      &:last-child {
-        padding-right: 0;
-      }
-      @include mediaMax(767) {
-        width: 100%;
-        padding-right: 0;
-      }
-    }
-    @include mediaMax(767) {
-      flex-direction: column;
-    }
-    input {
-      margin-bottom: 40px;
-    }
-
-  }
-
   .btn {
-    margin-top: 33px;
+    margin-top: 10px;
     background-color: #fff;
-    color: #3C61E2;
+    color: #3c61e2;
     font-size: 15px;
     letter-spacing: normal;
 
@@ -149,7 +152,7 @@
     }
 
     &:hover {
-      background-color: darken($color: #fff, $amount: 20%)
+      background-color: darken($color: #fff, $amount: 20%);
     }
 
     &.btn-default {
@@ -172,7 +175,7 @@
 
 .form-group {
   position: relative;
-  margin-bottom: 0;
+  margin-bottom: 40px;
   &.focused {
     .form-label {
       visibility: visible;
@@ -193,4 +196,16 @@
     transition: transform 0.15s ease-in-out;
     visibility: hidden;
   }
+}
+.phone-error {
+  color: $danger;
+  font-size: 12px;
+}
+
+.hide {
+  @extend .d-none;
+}
+
+input.error {
+  border-color: $danger;
 }
