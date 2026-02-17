@@ -282,8 +282,14 @@ function the_breadcrumbs()
 
             $cats = get_the_category();
             $cat = ! empty( $cats ) ? $cats[0] : false;
+            if(!empty($_GET['test_deb'])) {
+                echo "<pre>";
+                var_dump($cats);
+                echo "</pre>";
+                die;
+            }
             if( !empty( $cat ) ) {
-                $res .= '<li class="breadcrumb-item"><a href="' . get_category_link($cat->term_id) . '">' . $cat->name . '</a></li>';
+                $res .= '<li class="breadcrumb-item"><a href="' . get_term_link( $cat->term_id, 'category' ) . '">' . $cat->name . '</a></li>';
             }
 
 
@@ -532,6 +538,12 @@ function icoda_styles()
             $assets_uri . '/js/iframe.js',
             array('jquery'), '', true
         );
+
+        wp_enqueue_script(
+            'icoda-book',
+            $assets_uri . '/js/book.js',
+            array('jquery'), '', true
+        );
     }
 
     if( is_page_template('template-parts/tpl-events.php') ) {
@@ -592,6 +604,12 @@ function icoda_styles()
     wp_enqueue_script(
         'drawsvg',
         $assets_uri . '/js/jquery.drawsvg.min.js',
+        array('jquery'), '', true
+    );
+
+    wp_enqueue_script(
+        'get_file_form',
+        $assets_uri . '/js/get-file-form.js',
         array('jquery'), '', true
     );
 }
@@ -916,6 +934,48 @@ function icoda_share_count_ajax_handler() {
 add_action( 'wp_ajax_share_count', 'icoda_share_count_ajax_handler' ); // wp_ajax_{action}
 add_action( 'wp_ajax_nopriv_share_count', 'icoda_share_count_ajax_handler' ); // wp_ajax_nopriv_{action}
 
+function get_file_from_block_ajax_handler() {
+    if(!empty($_POST['email'])){
+        $open_text_tag = '<p style="font-family: \'Mulish\', sans-serif; font-size: 18px; color: #26363E; line-height: 100%;">'; 
+        $ff_settings = get_field('icoda_get_file_form_details', 'option');
+        
+        $mail_content = $ff_settings['email_content'];
+        $mail_content = array_map('trim', explode("\n", $mail_content));
+        $mail_content = $open_text_tag . implode('</p>'. $open_text_tag, $mail_content) . '</p>';
+        
+        $headers = array(
+            'content-type: text/html',
+        );
+
+        $attachments = [];
+        if(!empty($ff_settings['file'])) {
+            $mail_file_path = get_attached_file($ff_settings['file']['ID']);
+            if(!empty($mail_file_path)) {
+                $attachments = array( $mail_file_path );
+            }
+        }
+
+        $stylesheet_directory_uri = get_stylesheet_directory_uri();
+        $email_body_to_user = file_get_contents(get_stylesheet_directory() . '/template-parts/emails/get-file.php');
+        $email_body_to_user = str_replace('*|YEAR|*', date('Y'), $email_body_to_user);
+        $email_body_to_user = str_replace('*|MAIL_SVG|*', $stylesheet_directory_uri . '/template-parts/emails/icons/logo-icoda-3.png', $email_body_to_user);
+        $email_body_to_user = str_replace('*|MAIL_CONTENT|*', $mail_content, $email_body_to_user);
+
+        if(!empty($ff_settings['link_for_button']) && !empty($ff_settings['link_for_button']['url'])) {
+            $email_body_to_user = str_replace('*|MAIL_BTN|*', '<a href="'.$ff_settings['link_for_button']['url'].'" style="display: block; max-width: 100%; max-width: 255px; margin-top: 45px; margin-right: auto; margin-left: auto; padding: 23px 20px; background: #3C61E2; border-radius: 3px; font-family: \'Mulish\', sans-serif; font-weight: 700; font-size: 15px; color: #fff; text-align: center; text-decoration: none; line-height: 100%; border-radius: 3px; box-sizing: border-box;">'.$ff_settings['link_for_button']['title'].'</a>', $email_body_to_user);
+        }
+
+        $res_mail_to_user_send = wp_mail($_POST['email'], $ff_settings['email_subject'], $email_body_to_user, $headers, $attachments);
+
+        wp_send_json_success([
+            'res_mail_to_user_send' => $res_mail_to_user_send,
+        ]);
+    }
+    wp_send_json_error();
+}
+add_action( 'wp_ajax_get_file_from_block', 'get_file_from_block_ajax_handler' ); // wp_ajax_{action}
+add_action( 'wp_ajax_nopriv_get_file_from_block', 'get_file_from_block_ajax_handler' ); // wp_ajax_nopriv_{action}
+
 function icoda_count_views() {
     $post_id = get_the_ID();
     $current_views = get_post_meta($post_id, 'views_count', true);
@@ -973,6 +1033,7 @@ include_once get_template_directory() . '/inc/export-strings.php';
 include_once get_template_directory() . '/inc/bitrix/bitrix.php';
 include_once get_template_directory() . '/inc/api-v1.php';
 include_once get_template_directory() . '/inc/export-posts.php';
+include_once get_template_directory() . '/inc/xmoney.php';
 
 
 add_action('admin_menu', 'icoda_spam_request_settings', 1);
