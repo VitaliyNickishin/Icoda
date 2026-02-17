@@ -574,6 +574,18 @@ add_action('acf/init', function () {
             'align' => array('full', 'wide', 'center')
         ),
     ));
+    acf_register_block(array(
+        'name'              => 'post-hero-ai',
+        'title'             => __('Post Hero AI'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('header','hero', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
 
     acf_register_block(array(
         'name'              => 'post-background-cases',
