@@ -128,8 +128,6 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <?php endif; ?>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/css/intlTelInput.css">
-
   <?php wp_head(); ?>
 </head>
 

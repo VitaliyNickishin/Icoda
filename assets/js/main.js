@@ -427,7 +427,8 @@ jQuery(document).ready(function ($) {
   if (head_user_ip_detected.length) {
     const userIP = head_user_ip_detected[0].value;
 
-    fetch(`https://icoda.io/wp-json/icoda/v1/get_ip_info`, {
+    // fetch(`https://icoda.io/wp-json/icoda/v1/get_ip_info`, {
+    fetch(`https://staging.icoda.io/wp-json/icoda/v1/get_ip_info`, {
       method: "POST",
       body: JSON.stringify({
         ip: userIP,
@@ -441,6 +442,7 @@ jQuery(document).ready(function ($) {
       })
       .then(function (data) {
         if (data && data.country) {
+          console.log("data", data);
           $('input[name="head_user_country_ip_detected"]').val(data.country);
           setCookie("user_country_ip_detected", data.country);
         }
@@ -727,6 +729,60 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  // initialise plugin
+  const initIntlTel = () => {
+    document.querySelectorAll(".intlTel").forEach((input) => {
+      const itiInstance = window.intlTelInput(input, {
+        initialCountry: "auto",
+        geoIpLookup: detectCountry,
+      });
+
+      input._iti = itiInstance;
+      console.log("input._iti", input._iti);
+    });
+  };
+
+  const detectCountry = async (success, failure) => {
+    try {
+      const res = await fetch("https://ipapi.co/json");
+      const data = await res.json();
+      success(data.country_code);
+    } catch (error) {
+      failure("us");
+    }
+  };
+
+  $.validator.addMethod(
+    "intlTelNumber",
+    function (value, element) {
+      const itiInstance = element._iti;
+      console.log("itiInstance", itiInstance);
+
+      if (!value.trim()) return false;
+      if (!itiInstance) return false;
+
+      return itiInstance.isValidNumber();
+    },
+
+    function (params, element) {
+      const itiInstance = element._iti;
+
+      if (!itiInstance) return "Invalid phone number";
+
+      const errorCode = itiInstance.getValidationError();
+
+      const errorMap = [
+        "Invalid number",
+        "Invalid country code",
+        "Too short",
+        "Too long",
+        "Invalid number",
+      ];
+
+      return errorMap[errorCode] || "Invalid phone number";
+    },
+  );
+
   // function for pages using form validation
   var formValidate = function () {
     jQuery(".form-default-desctop").validate({
@@ -736,16 +792,16 @@ jQuery(document).ready(function ($) {
           minlength: 2,
           maxlength: 50,
         },
-        telegram: {
-          required: true,
-          minlength: 2,
-          maxlength: 50,
-        },
+
         email: {
           required: true,
           email: true,
           minlength: 3,
           maxlength: 50,
+        },
+        phone: {
+          required: true,
+          intlTelNumber: true,
         },
       },
       messages: {},
@@ -757,86 +813,13 @@ jQuery(document).ready(function ($) {
           var old_text = $(form).find('button[type="submit"]').text();
           $(form).find('button[type="submit"]').text("Sending ...");
           if ($(form).data("submit") == "yes") {
-            var phoneInput = $(form).find(".intlTel")[0];
-            var errorMsg = $(form).find(".phone-error");
-            // console.log("phoneInputSubmit", phoneInput);
+            const phoneInput = form.querySelector(".intlTel");
 
             if (phoneInput && phoneInput._iti) {
-              const itiInstance = phoneInput._iti;
-              console.log("itiInstanceSubmit", itiInstance);
-
-              // itiInstance.promise.then(() => {
-              phoneInput.classList.remove("error");
-              errorMsg.addClass("hide").text("");
-
-              if (!phoneInput.value.trim()) {
-                phoneInput.classList.add("error");
-                errorMsg.text("Phone number is required").removeClass("hide");
-                return;
+              if (phoneInput._iti.isValidNumber()) {
+                phoneInput.value = phoneInput._iti.getNumber();
               }
-              if (!itiInstance.isValidNumber()) {
-                const errorMap = [
-                  "Invalid number",
-                  "Invalid country code",
-                  "Too short",
-                  "Too long",
-                  "Invalid number",
-                ];
-
-                const errorCode = itiInstance.getValidationError();
-                const message = errorMap[errorCode] || "Invalid number";
-
-                phoneInput.classList.add("error");
-                errorMsg.text(message).removeClass("hide");
-                return;
-              }
-
-              // console.log(
-              //   "selected country:",
-              //   itiInstance.getSelectedCountryData(),
-              // );
-              // console.log("raw input value:", phoneInput.value);
-              // console.log("isValidSubmit:", itiInstance.isValidNumber());
-
-              // const countryData = itiInstance.getSelectedCountryData();
-              // const fullNumber = countryData.dialCodePlus + phoneInput.value;
-
-              // const getNumber = itiInstance.getNumber();
-              // console.log("getNumber", getNumber);
-
-              // если валиден — подставляем полный номер
-              const fullNumber = itiInstance.getNumber();
-              $(form).find('.intlTel"]').val(fullNumber);
-              // });
-
-              // $(form).find(".intlTel").val(fullNumber);
-            } else {
-              console.log("ITI NOT FOUND");
             }
-
-            // var phoneInput = $(form).find("#intlTel")[0];
-
-            // if (phoneInput && phoneInput._iti) {
-            //   const itiInstance = phoneInput._iti;
-
-            //   // ждем пока utils.js и geoIP загрузятся
-            //   itiInstance.promise.then(() => {
-            //     // теперь точно работает
-            //     console.log("isValidSubmit:", itiInstance.isValidNumber());
-            //     console.log("fullNumberSubmit:", itiInstance.getNumber());
-
-            //     if (!itiInstance.isValidNumber()) {
-            //       alert("Please enter a valid phone number");
-            //       $(form).find('button[type="submit"]').prop("disabled", false);
-            //       $(form).find('button[type="submit"]').text(old_text);
-            //       return false;
-            //     }
-
-            //     $(form)
-            //       .find('input[name="phone"]')
-            //       .val(itiInstance.getNumber());
-            //   });
-            // }
 
             var utm_keys = [
               "utm_source",
@@ -925,12 +908,15 @@ jQuery(document).ready(function ($) {
                       $(this).val("").next().detach();
                     });
                   $(form).find("textarea").val("");
-                  $(form)
-                    .find("#intlTel")
-                    .on("keyup change", function () {
-                      $(this).removeClass("error");
-                      $(form).find(".phone-error").addClass("hide").text("");
+
+                  //clean number and update country code
+                  if (phoneInput && phoneInput._iti) {
+                    phoneInput._iti.setNumber("");
+                    detectCountry((countryCode) => {
+                      phoneInput._iti.setCountry(countryCode);
                     });
+                  }
+
                   setTimeout(function () {
                     $(".modal-box")
                       .animate({ opacity: 0, top: "45%" }, 200)
@@ -2330,77 +2316,3 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-
-let iti;
-
-// const initIntlTel = () => {
-//   const input = document.querySelector("#intlTel");
-//   iti = window.intlTelInput(input, {
-//     initialCountry: "auto",
-//     geoIpLookup: function (callback) {
-//       fetch("https://ipapi.co/json")
-//         .then((res) => res.json())
-//         .then((data) => callback(data.country_code))
-//         .catch(() => callback("us")); // fallback
-//     },
-//     loadUtils: () =>
-//       import("https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/js/utils.js"),
-//   });
-// };
-
-// const initIntlTel = () => {
-//   const input = document.querySelector("#intlTel");
-//   iti = window.intlTelInput(input, {
-//     initialCountry: "auto",
-//     geoIpLookup: async (success, failure) => {
-//       try {
-//         const res = await fetch("https://ipapi.co/json");
-//         const data = await res.json();
-//         success(data.country_code);
-//       } catch (error) {
-//         failure("us");
-//       }
-//     },
-//     loadUtils: () =>
-//       import("https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/js/utils.js"),
-//   });
-// };
-
-const errorMsg = document.querySelector("#error-msg");
-const validMsg = document.querySelector("#valid-msg");
-// here, the index maps to the error code returned from getValidationError - see readme
-const errorMap = [
-  "Invalid number",
-  "Invalid country code",
-  "Too short",
-  "Too long",
-  "Invalid number",
-];
-
-// initialise plugin
-const initIntlTel = () => {
-  document.querySelectorAll(".intlTel").forEach((input) => {
-    const itiInstance = window.intlTelInput(input, {
-      initialCountry: "auto",
-      geoIpLookup: async (success, failure) => {
-        try {
-          const res = await fetch("https://ipapi.co/json");
-          const data = await res.json();
-          success(data.country_code);
-        } catch (error) {
-          failure("us");
-        }
-      },
-      loadUtils: () =>
-        import("https://cdn.jsdelivr.net/npm/intl-tel-input@26.0.6/build/js/utils.js"),
-    });
-
-    input._iti = itiInstance;
-    // console.log("input._iti", input._iti);
-
-    // ждём полной загрузки utils
-    // itiInstance.promise.then(() => {
-    //   console.log("intlTel fully loaded for input", input);
-    // });
-  });
-};
