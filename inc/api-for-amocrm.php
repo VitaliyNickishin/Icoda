@@ -20,6 +20,7 @@ add_action('rest_api_init', function () {
 	register_rest_route('amo/v1', '/distribution_cold_leads', [
 		'methods'  => 'POST',
 		'callback' => 'distribution_cold_leads_callback',
+		'permission_callback' => '__return_true',
 	]);
 });
 
@@ -28,16 +29,16 @@ add_action('rest_api_init', function () {
 function telegram_lead_callback(WP_REST_Request $request)
 {
 	$lead_params = $request->get_params();
-	$lead_id = include_once get_stylesheet_directory() . "/amocrm_api/handler-tg.php";
+	// include_once get_stylesheet_directory() . "/amocrm_api/handler-tg.php";
 
-	// include_once get_stylesheet_directory() . "/inc/bitrix/bitrix-tg.php";
+	$lead_id = include_once get_stylesheet_directory() . "/inc/bitrix/bitrix-tg.php";
 
 	$response = [
 		'accepted' => 1
 	];
 	if (!empty($lead_id)) {
 		$response['lead_id'] = $lead_id;
-		$response['lead_url'] = 'https://icoda.amocrm.ru/leads/detail/' . $lead_id;
+		$response['lead_url'] = 'https://icoda.bitrix24.com/crm/lead/details/' . $lead_id . '/';
 	}
 	return json_encode($response);
 }
@@ -45,16 +46,16 @@ function telegram_lead_callback(WP_REST_Request $request)
 function telegram_bc_lead_callback(WP_REST_Request $request)
 {
 	$lead_params = $request->get_params();
-	$lead_id = include_once get_stylesheet_directory() . "/amocrm_api/handler-bc-tg.php";
+	// include_once get_stylesheet_directory() . "/amocrm_api/handler-bc-tg.php";
 
-	// include_once get_stylesheet_directory() . "/inc/bitrix/bitrix-bc-tg.php";
+	$lead_id = include_once get_stylesheet_directory() . "/inc/bitrix/bitrix-bc-tg.php";
 
 	$response = [
 		'accepted' => 1
 	];
 	if (!empty($lead_id)) {
 		$response['lead_id'] = $lead_id;
-		$response['lead_url'] = 'https://icoda.amocrm.ru/leads/detail/' . $lead_id;
+		$response['lead_url'] = 'https://icoda.bitrix24.com/crm/lead/details/' . $lead_id . '/';
 	}
 	return json_encode($response);
 }
@@ -63,10 +64,12 @@ add_action('rest_api_init', function () {
 	register_rest_route('amo/v1', '/telegram_lead', [
 		'methods'  => 'POST',
 		'callback' => 'telegram_lead_callback',
+		'permission_callback' => '__return_true',
 	]);
 
 	register_rest_route('amo/v1', '/telegram_bc_lead', [
 		'methods'  => 'POST',
 		'callback' => 'telegram_bc_lead_callback',
+		'permission_callback' => '__return_true',
 	]);
 });

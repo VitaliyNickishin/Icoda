@@ -3,7 +3,8 @@
 function accept_request_from_clone_sites_callback(WP_REST_Request $request)
 {
     $origin = get_http_origin();
-    $allowed_origins = array( 'https://icoda.io', 'https://promo2.icoda.io', 'https://promo.icoda.io', 'http://icoda.agency', 'https://icoda.agency' );
+
+    $allowed_origins = array('https://icoda.io', 'https://promo2.icoda.io', 'https://promo.icoda.io', 'https://welcome.icoda.io', 'http://icoda.agency', 'https://icoda.agency');
     if ($origin && in_array($origin, $allowed_origins)) {
         header('Access-Control-Allow-Origin: ' . esc_url_raw($origin));
         header('Access-Control-Allow-Methods: POST');
@@ -23,13 +24,13 @@ function accept_request_from_clone_sites_callback(WP_REST_Request $request)
         'message' => 'Accepted'
     );
 
-    if ( strlen($_POST["email"]) == 0 || ! is_email( $email ) ) {
+    if (strlen($_POST["email"]) == 0 || !is_email($email)) {
         return array(
             'success' => false,
             'message' => 'You aren\'t able submit form!'
         );
     }
-    
+
     $dop = '-';
 
     require_once get_stylesheet_directory() . '/PHPMailer/PHPMailerAutoload.php';
@@ -55,8 +56,6 @@ function accept_request_from_clone_sites_callback(WP_REST_Request $request)
 
 
     $mail->MsgHTML($email_body);
-
-    include_once get_stylesheet_directory() . "/amocrm_api/handler.php";
 
     $stylesheet_directory_uri = get_stylesheet_directory_uri();
     $mail_to_user = new PHPMailer(true);
@@ -92,9 +91,9 @@ function accept_request_from_clone_sites_callback(WP_REST_Request $request)
             'message' => "Message could not be sent.\nMailer Error: " . $mail->ErrorInfo
         );
     } else {
-        $request_source = ! empty( $_SERVER['HTTP_ORIGIN'] ) ? $_SERVER['HTTP_ORIGIN'] : $_SERVER['HTTP_REFERER'];
-        $request_source_parsed = parse_url( $request_source  );
-        $request_source = ! empty( $request_source_parsed['host'] ) ? $request_source_parsed['host'] : $request_source;
+        $request_source = !empty($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : $_SERVER['HTTP_REFERER'];
+        $request_source_parsed = parse_url($request_source);
+        $request_source = !empty($request_source_parsed['host']) ? $request_source_parsed['host'] : $request_source;
         $tg_body = "New request from " . $request_source . " 💪 \n";
         $tg_body .= "Name: " . $name . " \n";
         $tg_body .= "WhatsApp / Telegram: " . $telegram . " \n";
@@ -133,11 +132,16 @@ function accept_request_from_clone_sites_callback(WP_REST_Request $request)
         fwrite($fp2, $inputspace2);
         fclose($fp2);
 
-       
+
         $response = array(
             'success' => true,
             'message' => "Sended"
         );
+    }
+
+    try {
+        send_lead_to_bitrix($origin);
+    } catch (Exception $e) {
     }
     return $response;
 }
@@ -148,5 +152,6 @@ add_action('rest_api_init', function () {
     register_rest_route('icoda/v1', '/contact_us', [
         'methods'  => 'POST',
         'callback' => 'accept_request_from_clone_sites_callback',
+        'permission_callback' => '__return_true',
     ]);
 });

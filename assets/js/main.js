@@ -427,8 +427,8 @@ jQuery(document).ready(function ($) {
   if (head_user_ip_detected.length) {
     const userIP = head_user_ip_detected[0].value;
 
-    // fetch(`https://icoda.io/wp-json/icoda/v1/get_ip_info`, {
-    fetch(`https://staging.icoda.io/wp-json/icoda/v1/get_ip_info`, {
+    fetch(`https://icoda.io/wp-json/icoda/v1/get_ip_info`, {
+      // fetch(`https://staging.icoda.io/wp-json/icoda/v1/get_ip_info`, {
       method: "POST",
       body: JSON.stringify({
         ip: userIP,
@@ -738,50 +738,59 @@ jQuery(document).ready(function ($) {
       });
 
       input._iti = itiInstance;
-      console.log("input._iti", input._iti);
     });
   };
 
-  const detectCountry = async (success, failure) => {
+  const detectCountry = async (callback) => {
     try {
-      const res = await fetch("https://ipapi.co/json");
+      const userIPInput = document.querySelector(
+        'input[name="head_user_ip_detected"]',
+      );
+
+      const res = await fetch("/wp-json/icoda/v1/get_ip_info", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ip: userIPInput?.value }),
+      });
+
       const data = await res.json();
-      success(data.country_code);
+
+      callback(data.country_code?.toLowerCase() || "us");
     } catch (error) {
-      failure("us");
+      callback("us");
     }
   };
 
-  $.validator.addMethod(
-    "intlTelNumber",
-    function (value, element) {
-      const itiInstance = element._iti;
-      console.log("itiInstance", itiInstance);
+  function validateIntlTel(value, element) {
+    const itiInstance = element._iti;
 
-      if (!value.trim()) return false;
-      if (!itiInstance) return false;
+    if (!value.trim()) return false;
+    if (!itiInstance) return false;
 
-      return itiInstance.isValidNumber();
-    },
+    return itiInstance.isValidNumber();
+  }
 
-    function (params, element) {
-      const itiInstance = element._iti;
+  function getIntlTelError(params, element) {
+    const itiInstance = element._iti;
 
-      if (!itiInstance) return "Invalid phone number";
+    if (!itiInstance) return "Invalid phone number";
 
-      const errorCode = itiInstance.getValidationError();
+    const errorCode = itiInstance.getValidationError();
 
-      const errorMap = [
-        "Invalid number",
-        "Invalid country code",
-        "Too short",
-        "Too long",
-        "Invalid number",
-      ];
+    const errorMap = [
+      "Invalid number",
+      "Invalid country code",
+      "Too short",
+      "Too long",
+      "Invalid number",
+    ];
 
-      return errorMap[errorCode] || "Invalid phone number";
-    },
-  );
+    return errorMap[errorCode] || "Invalid phone number";
+  }
+
+  $.validator.addMethod("intlTelNumber", validateIntlTel, getIntlTelError);
 
   // function for pages using form validation
   var formValidate = function () {
