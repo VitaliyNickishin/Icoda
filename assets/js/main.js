@@ -127,6 +127,7 @@ var onSubmitReCaptcha = function (token) {
             jQuery(this).val("").next().detach();
           });
           $form.find("textarea").val("");
+          $form.find(".form-group").removeClass("focused");
           setTimeout(function () {
             jQuery(".modal-box")
               .animate({ opacity: 0, top: "45%" }, 200)
@@ -794,163 +795,169 @@ jQuery(document).ready(function ($) {
 
   // function for pages using form validation
   var formValidate = function () {
-    jQuery(".form-default-desctop").validate({
-      rules: {
-        "project-name": {
-          required: true,
-          minlength: 2,
-          maxlength: 100,
-        },
-        name: {
-          required: true,
-          minlength: 2,
-          maxlength: 50,
-        },
+    document.querySelectorAll(".form-default-desctop").forEach((form) => {
+      $(form).validate({
+        rules: {
+          "project-name": {
+            required: true,
+            minlength: 2,
+            maxlength: 100,
+          },
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 50,
+          },
 
-        email: {
-          required: true,
-          email: true,
-          minlength: 3,
-          maxlength: 50,
+          email: {
+            required: true,
+            email: true,
+            minlength: 3,
+            maxlength: 50,
+          },
+          phone: {
+            required: true,
+            intlTelNumber: true,
+          },
         },
-        phone: {
-          required: true,
-          intlTelNumber: true,
-        },
-      },
-      messages: {},
-      submitHandler: function (form) {
-        if ($(form).hasClass("form-with-captcha")) {
-          grecaptcha.execute();
-        } else {
-          $(form).find('button[type="submit"]').prop("disabled", true);
-          var old_text = $(form).find('button[type="submit"]').text();
-          $(form).find('button[type="submit"]').text("Sending ...");
-          if ($(form).data("submit") == "yes") {
-            const phoneInput = form.querySelector(".intlTel");
+        messages: {},
+        submitHandler: function (form) {
+          if ($(form).hasClass("form-with-captcha")) {
+            grecaptcha.execute();
+          } else {
+            $(form).find('button[type="submit"]').prop("disabled", true);
+            var old_text = $(form).find('button[type="submit"]').text();
+            $(form).find('button[type="submit"]').text("Sending ...");
+            if ($(form).data("submit") == "yes") {
+              const phoneInput = form.querySelector(".intlTel");
 
-            if (phoneInput && phoneInput._iti) {
-              if (phoneInput._iti.isValidNumber()) {
-                phoneInput.value = phoneInput._iti.getNumber();
+              if (phoneInput && phoneInput._iti) {
+                if (phoneInput._iti.isValidNumber()) {
+                  phoneInput.value = phoneInput._iti.getNumber();
+                }
               }
-            }
 
-            var utm_keys = [
-              "utm_source",
-              "utm_medium",
-              "utm_campaign",
-              "utm_content",
-              "utm_term",
-            ];
-            utm_keys.forEach((utm_key) => {
-              var selectorUtm = 'input[name="utm-' + utm_key + '"]';
-              var inputUtm = $(form).find(selectorUtm);
-              if (inputUtm.length) {
-                inputUtm.remove();
+              var utm_keys = [
+                "utm_source",
+                "utm_medium",
+                "utm_campaign",
+                "utm_content",
+                "utm_term",
+              ];
+              utm_keys.forEach((utm_key) => {
+                var selectorUtm = 'input[name="utm-' + utm_key + '"]';
+                var inputUtm = $(form).find(selectorUtm);
+                if (inputUtm.length) {
+                  inputUtm.remove();
+                }
+                var utm_value = getCookie("utm-" + utm_key);
+
+                if (
+                  (utm_value === undefined ||
+                    utm_value === null ||
+                    utm_value === "") &&
+                  jQuery('input[name="head-utm-' + utm_key + '"]').length
+                ) {
+                  utm_value = jQuery(
+                    'input[name="head-utm-' + utm_key + '"]',
+                  ).val();
+                  setCookie("utm-" + utm_key, utm_value);
+                }
+
+                if (
+                  utm_value !== undefined &&
+                  utm_value !== "" &&
+                  utm_value !== null
+                ) {
+                  $(form).append(
+                    '<input type="hidden" name="utm-' +
+                      utm_key +
+                      '" value="' +
+                      decodeURIComponent(utm_value) +
+                      '" />',
+                  );
+                }
+              });
+
+              var selectorCountry = 'input[name="user-country"]';
+              var inputCountry = $(form).find(selectorCountry);
+              if (inputCountry.length) {
+                inputCountry.remove();
               }
-              var utm_value = getCookie("utm-" + utm_key);
-
+              var user_country_ip_detected = getCookie(
+                "user_country_ip_detected",
+              );
               if (
-                (utm_value === undefined ||
-                  utm_value === null ||
-                  utm_value === "") &&
-                jQuery('input[name="head-utm-' + utm_key + '"]').length
+                (user_country_ip_detected === undefined ||
+                  user_country_ip_detected === null ||
+                  user_country_ip_detected === "") &&
+                jQuery('input[name="head_user_country_ip_detected"]').length
               ) {
-                utm_value = jQuery(
-                  'input[name="head-utm-' + utm_key + '"]',
+                user_country_ip_detected = jQuery(
+                  'input[name="head_user_country_ip_detected"]',
                 ).val();
-                setCookie("utm-" + utm_key, utm_value);
+                setCookie("user_country_ip_detected", user_country_ip_detected);
               }
-
               if (
-                utm_value !== undefined &&
-                utm_value !== "" &&
-                utm_value !== null
+                user_country_ip_detected !== undefined &&
+                user_country_ip_detected !== "" &&
+                user_country_ip_detected !== null
               ) {
                 $(form).append(
-                  '<input type="hidden" name="utm-' +
-                    utm_key +
-                    '" value="' +
-                    decodeURIComponent(utm_value) +
+                  '<input type="hidden" name="user-country" value="' +
+                    decodeURIComponent(user_country_ip_detected) +
                     '" />',
                 );
               }
-            });
+              console.log("form", $(form).serialize());
 
-            var selectorCountry = 'input[name="user-country"]';
-            var inputCountry = $(form).find(selectorCountry);
-            if (inputCountry.length) {
-              inputCountry.remove();
-            }
-            var user_country_ip_detected = getCookie(
-              "user_country_ip_detected",
-            );
-            if (
-              (user_country_ip_detected === undefined ||
-                user_country_ip_detected === null ||
-                user_country_ip_detected === "") &&
-              jQuery('input[name="head_user_country_ip_detected"]').length
-            ) {
-              user_country_ip_detected = jQuery(
-                'input[name="head_user_country_ip_detected"]',
-              ).val();
-              setCookie("user_country_ip_detected", user_country_ip_detected);
-            }
-            if (
-              user_country_ip_detected !== undefined &&
-              user_country_ip_detected !== "" &&
-              user_country_ip_detected !== null
-            ) {
-              $(form).append(
-                '<input type="hidden" name="user-country" value="' +
-                  decodeURIComponent(user_country_ip_detected) +
-                  '" />',
-              );
-            }
-            console.log("form", $(form).serialize());
-
-            $.post(
-              "/wp-content/themes/icoda/submit.php",
-              $(form).serialize(),
-              function (data) {
-                if (data == 1) {
-                  window.dataLayer = window.dataLayer || [];
-                  dataLayer.push({ event: "form-successfuly-sent" });
-                  $(form)
-                    .find(".req")
-                    .each(function () {
-                      $(this).val("").next().detach();
-                    });
-                  $(form).find("textarea").val("");
-
-                  //clean number and update country code
-                  if (phoneInput && phoneInput._iti) {
-                    phoneInput._iti.setNumber("");
-                    detectCountry((countryCode) => {
-                      phoneInput._iti.setCountry(countryCode);
-                    });
-                  }
-
-                  setTimeout(function () {
-                    $(".modal-box")
-                      .animate({ opacity: 0, top: "45%" }, 200)
-                      .css("display", "none");
-                    $("body").find(".success").css("opacity", "1").fadeIn(500);
-                    window.congratsConfetti();
+              $.post(
+                "/wp-content/themes/icoda/submit.php",
+                $(form).serialize(),
+                function (data) {
+                  if (data == 1) {
+                    window.dataLayer = window.dataLayer || [];
+                    dataLayer.push({ event: "form-successfuly-sent" });
                     $(form)
-                      .find('button[type="submit"]')
-                      .prop("disabled", false);
-                    $(form).find('button[type="submit"]').text(old_text);
-                  }, 200);
-                } else {
-                }
-              },
-            );
-            $(form).data("submit", "no");
-            $(form).removeClass("submitting-form");
+                      .find(".req")
+                      .each(function () {
+                        $(this).val("").next().detach();
+                        $(this).closest(".form-group").removeClass("focused");
+                      });
+                    $(form).find("textarea").val("");
+
+                    //clean number and update country code
+                    if (phoneInput && phoneInput._iti) {
+                      phoneInput._iti.setNumber("");
+                      detectCountry((countryCode) => {
+                        phoneInput._iti.setCountry(countryCode);
+                      });
+                    }
+
+                    setTimeout(function () {
+                      $(".modal-box")
+                        .animate({ opacity: 0, top: "45%" }, 200)
+                        .css("display", "none");
+                      $("body")
+                        .find(".success")
+                        .css("opacity", "1")
+                        .fadeIn(500);
+                      window.congratsConfetti();
+                      $(form)
+                        .find('button[type="submit"]')
+                        .prop("disabled", false);
+                      $(form).find('button[type="submit"]').text(old_text);
+                    }, 200);
+                  } else {
+                  }
+                },
+              );
+              $(form).data("submit", "no");
+              $(form).removeClass("submitting-form");
+            }
           }
-        }
-      },
+        },
+      });
     });
   };
 

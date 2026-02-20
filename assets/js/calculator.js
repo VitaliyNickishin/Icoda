@@ -11,7 +11,8 @@ jQuery(document).ready(function ($) {
       $('input[name="project-name"]').val().length < 1 ||
       $('input[name="name"]').val().length < 1 ||
       $('input[name="email"]').val().length < 1 ||
-      $('input[name="telegram"]').val().length < 1
+      $('input[name="telegram"]').val().length < 1 ||
+      $('input[name="phone"]').val().length < 1
     ) {
       return;
     }
@@ -165,7 +166,7 @@ jQuery(document).ready(function ($) {
               utm_key +
               '" value="' +
               decodeURIComponent(utm_value) +
-              '" />'
+              '" />',
           );
         }
       });
@@ -183,7 +184,7 @@ jQuery(document).ready(function ($) {
         jQuery('input[name="head_user_country_ip_detected"]').length
       ) {
         user_country_ip_detected = jQuery(
-          'input[name="head_user_country_ip_detected"]'
+          'input[name="head_user_country_ip_detected"]',
         ).val();
         setCookie("user_country_ip_detected", user_country_ip_detected);
       }
@@ -195,7 +196,7 @@ jQuery(document).ready(function ($) {
         $form.append(
           '<input type="hidden" name="user-country" value="' +
             decodeURIComponent(user_country_ip_detected) +
-            '" />'
+            '" />',
         );
       }
 
@@ -209,10 +210,14 @@ jQuery(document).ready(function ($) {
             setTimeout(function () {
               $("[data-step]").addClass("d-none");
               $('[data-step="done"]').removeClass("d-none");
+              $(".btn-prew, .btn-next, .btn-apply, .steps-nav").addClass(
+                "d-none",
+              );
+              $(".steps-box__footer").removeClass("border-top");
               $form.find('button[type="submit"]').text(old_text);
             }, 200);
           }
-        }
+        },
       );
       $form.data("submit", "no");
       $form.removeClass("submitting-form");
