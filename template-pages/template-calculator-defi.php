@@ -83,7 +83,7 @@ $calculator_data = get_field('calculator_section_3');
 				<div class="col-12">
 					<div class="steps-box d-flex">
 						<div class="steps-box__main d-flex flex-column">
-							<form id="calculator-form" data-submit="yes" class="js-validate-contact-form" novalidate>
+							<form id="calculator-form" data-submit="yes" class="form-default-desctop">
 								<div class="steps-body mt-lg-5 mt-4 pt-3 pt-lg-3 pb-3 mb-4 pb-lg-5 mb-lg-3">
 									<div data-step="1" class="step-first">
 										<p class="mb-3 pb-lg-3 step-title">

@@ -11,12 +11,7 @@
                     <div class="l-box-footer">
                         <a href="#" data-modal="#book_meeting" class="btn btn-blue open-modal"><?php echo __('Book a meeting', 'icoda'); ?></a>
                         <div class="theme-media-list">
-                            <ul class="media-list">
-                                <li><a class="icon-ico-media-1" target="_blank" href="https://www.linkedin.com/company/icoda-ico-marketing-solutions/"></a></li>
-                                <li><a class="icon-ico-media-2" target="_blank" href="https://www.facebook.com/icodaagency/"></a></li>
-                                <li><a class="icon-ico-media-3" target="_blank" href="mailto:post@icoda.io"></a></li>
-                                <li><a class="icon-ico-media-4" target="_blank" href="https://t.me/icoda"></a></li>
-                            </ul>
+                            <?php get_template_part('template-parts/_partials/contact-form'); ?>
                         </div>
                     </div>
                 </div>
@@ -35,41 +30,12 @@
     <a href="#" class="modal-close"><i class="icon-ico-close"></i></a>
 
     <div class="wr-form">
-        <form class="form-default form-default-desctop" action="submit.php" method="post">
-            <input type="hidden" name="lang-source" value="<?php echo ICL_LANGUAGE_CODE; ?>" />
-            <div class="form-default-header">
-                <p class="h4"><?php echo __('Contact Us', 'icoda'); ?></p>
-                <div class="theme-media-list">
-                    <ul class="media-list">
-                        <li><a class="icon-ico-media-1" target="_blank" href="https://www.linkedin.com/company/icoda-ico-marketing-solutions/"></a></li>
-                        <li><a class="icon-ico-media-2" target="_blank" href="https://www.facebook.com/icodaagency/"></a></li>
-                        <li><a class="icon-ico-media-3" target="_blank" href="mailto:post@icoda.io"></a></li>
-                        <li><a class="icon-ico-media-4" target="_blank" href="https://t.me/icoda"></a></li>
-                    </ul>
-                </div>
+        <div class="form-default-header">
+            <p class="h4"><?php echo __('Contact Us', 'icoda'); ?></p>
+            <div class="theme-media-list">
+                <?php get_template_part('template-parts/_partials/contact-form'); ?>
             </div>
-            <div class="form-row">
-                <div class="col-12 col-md-6">
-                    <input type="text" name="name" class="form-control req" placeholder="<?php echo __('Your name', 'icoda'); ?>" required>
-                </div>
-                <div class="col-12 col-md-6">
-                    <input type="text" name="telegram" class="form-control req" placeholder="<?php echo __('WhatsApp / Telegram', 'icoda'); ?>" required>
-                </div>
-                <div class="col-12">
-                    <input type="email" name="email" class="form-control req" placeholder="<?php echo __('Email', 'icoda'); ?>" required>
-                </div>
-                <div class="col-12">
-                    <textarea name="message" class="form-control" rows="5" placeholder="<?php _e('Text message', 'icoda'); ?>"></textarea>
-                </div>
-                <?php
-                do_action( 'anr_captcha_form_field' );
-                ?>
-                <div class="col-12">
-                    <div class="wr-btn text-right">
-                        <button type="submit" class="btn btn-blue"><?php echo __('Apply Now', 'icoda'); ?></button>
-                    </div>
-                </div>
-            </div>
-        </form>
+        </div>
+        <?php get_template_part('template-parts/_partials/contact-form'); ?>
     </div>
 </div>

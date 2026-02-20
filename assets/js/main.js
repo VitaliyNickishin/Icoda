@@ -796,6 +796,11 @@ jQuery(document).ready(function ($) {
   var formValidate = function () {
     jQuery(".form-default-desctop").validate({
       rules: {
+        "project-name": {
+          required: true,
+          minlength: 2,
+          maxlength: 100,
+        },
         name: {
           required: true,
           minlength: 2,
@@ -949,146 +954,139 @@ jQuery(document).ready(function ($) {
     });
   };
 
-  var formModalValidate = function () {
-    jQuery(".js-validate-contact-form").validate({
-      rules: {
-        "project-name": {
-          required: true,
-          minlength: 2,
-          maxlength: 100,
-        },
-        name: {
-          required: true,
-          minlength: 2,
-          maxlength: 50,
-        },
-        telegram: {
-          required: true,
-          minlength: 2,
-          maxlength: 50,
-        },
-        email: {
-          required: true,
-          email: true,
-        },
-        message: {
-          maxlength: 500,
-        },
-      },
-      messages: {
-        "project-name": {
-          required: "Project name is required",
-        },
-        name: {
-          required: "Please enter your name",
-        },
-        email: {
-          required: "Please enter your email",
-          email: "Please enter a valid email address",
-        },
-        telegram: {
-          required: "Please enter your contact",
-        },
-      },
-      errorElement: "div",
-      errorClass: "invalid-feedback",
-      highlight: function (element) {
-        $(element).addClass("is-invalid");
-      },
-      unhighlight: function (element) {
-        $(element).removeClass("is-invalid");
-      },
-      errorPlacement: function (error, element) {
-        error.insertAfter(element);
-      },
-      submitHandler: function (form) {
-        if ($(form).hasClass("form-with-captcha")) {
-          grecaptcha.execute();
-        } else {
-          $(form).find('button[type="submit"]').prop("disabled", true);
-          var old_text = $(form).find('button[type="submit"]').text();
-          $(form).find('button[type="submit"]').text("Sending ...");
-          if ($(form).data("submit") == "yes") {
-            var utm_keys = [
-              "utm_source",
-              "utm_medium",
-              "utm_campaign",
-              "utm_content",
-              "utm_term",
-            ];
-            utm_keys.forEach((utm_key) => {
-              var selectorUtm = 'input[name="utm-' + utm_key + '"]';
-              var inputUtm = $(form).find(selectorUtm);
-              if (inputUtm.length) {
-                inputUtm.remove();
-              }
-              var utm_value = getCookie("utm-" + utm_key);
+  // var formModalValidate = function () {
+  //   jQuery(".js-validate-contact-form").validate({
+  //     rules: {
+  //       "project-name": {
+  //         required: true,
+  //         minlength: 2,
+  //         maxlength: 100,
+  //       },
+  //       name: {
+  //         required: true,
+  //         minlength: 2,
+  //         maxlength: 50,
+  //       },
 
-              if (
-                (utm_value === undefined ||
-                  utm_value === null ||
-                  utm_value === "") &&
-                jQuery('input[name="head-utm-' + utm_key + '"]').length
-              ) {
-                utm_value = jQuery(
-                  'input[name="head-utm-' + utm_key + '"]',
-                ).val();
-                setCookie("utm-" + utm_key, utm_value);
-              }
+  //       email: {
+  //         required: true,
+  //         email: true,
+  //       },
+  //       message: {
+  //         maxlength: 500,
+  //       },
+  //     },
+  //     messages: {
+  //       "project-name": {
+  //         required: "Project name is required",
+  //       },
+  //       name: {
+  //         required: "Please enter your name",
+  //       },
+  //       email: {
+  //         required: "Please enter your email",
+  //         email: "Please enter a valid email address",
+  //       },
+  //     },
+  //     errorElement: "div",
+  //     errorClass: "invalid-feedback",
+  //     highlight: function (element) {
+  //       $(element).addClass("is-invalid");
+  //     },
+  //     unhighlight: function (element) {
+  //       $(element).removeClass("is-invalid");
+  //     },
+  //     errorPlacement: function (error, element) {
+  //       error.insertAfter(element);
+  //     },
+  //     submitHandler: function (form) {
+  //       if ($(form).hasClass("form-with-captcha")) {
+  //         grecaptcha.execute();
+  //       } else {
+  //         $(form).find('button[type="submit"]').prop("disabled", true);
+  //         var old_text = $(form).find('button[type="submit"]').text();
+  //         $(form).find('button[type="submit"]').text("Sending ...");
+  //         if ($(form).data("submit") == "yes") {
+  //           var utm_keys = [
+  //             "utm_source",
+  //             "utm_medium",
+  //             "utm_campaign",
+  //             "utm_content",
+  //             "utm_term",
+  //           ];
+  //           utm_keys.forEach((utm_key) => {
+  //             var selectorUtm = 'input[name="utm-' + utm_key + '"]';
+  //             var inputUtm = $(form).find(selectorUtm);
+  //             if (inputUtm.length) {
+  //               inputUtm.remove();
+  //             }
+  //             var utm_value = getCookie("utm-" + utm_key);
 
-              if (
-                utm_value !== undefined &&
-                utm_value !== "" &&
-                utm_value !== null
-              ) {
-                $(form).append(
-                  '<input type="hidden" name="utm-' +
-                    utm_key +
-                    '" value="' +
-                    decodeURIComponent(utm_value) +
-                    '" />',
-                );
-              }
-            });
+  //             if (
+  //               (utm_value === undefined ||
+  //                 utm_value === null ||
+  //                 utm_value === "") &&
+  //               jQuery('input[name="head-utm-' + utm_key + '"]').length
+  //             ) {
+  //               utm_value = jQuery(
+  //                 'input[name="head-utm-' + utm_key + '"]',
+  //               ).val();
+  //               setCookie("utm-" + utm_key, utm_value);
+  //             }
 
-            var selectorCountry = 'input[name="user-country"]';
-            var inputCountry = $(form).find(selectorCountry);
-            if (inputCountry.length) {
-              inputCountry.remove();
-            }
-            var user_country_ip_detected = getCookie(
-              "user_country_ip_detected",
-            );
-            if (
-              (user_country_ip_detected === undefined ||
-                user_country_ip_detected === null ||
-                user_country_ip_detected === "") &&
-              jQuery('input[name="head_user_country_ip_detected"]').length
-            ) {
-              user_country_ip_detected = jQuery(
-                'input[name="head_user_country_ip_detected"]',
-              ).val();
-              setCookie("user_country_ip_detected", user_country_ip_detected);
-            }
-            if (
-              user_country_ip_detected !== undefined &&
-              user_country_ip_detected !== "" &&
-              user_country_ip_detected !== null
-            ) {
-              $(form).append(
-                '<input type="hidden" name="user-country" value="' +
-                  decodeURIComponent(user_country_ip_detected) +
-                  '" />',
-              );
-            }
+  //             if (
+  //               utm_value !== undefined &&
+  //               utm_value !== "" &&
+  //               utm_value !== null
+  //             ) {
+  //               $(form).append(
+  //                 '<input type="hidden" name="utm-' +
+  //                   utm_key +
+  //                   '" value="' +
+  //                   decodeURIComponent(utm_value) +
+  //                   '" />',
+  //               );
+  //             }
+  //           });
 
-            $(form).data("submit", "no");
-            $(form).removeClass("submitting-form");
-          }
-        }
-      },
-    });
-  };
+  //           var selectorCountry = 'input[name="user-country"]';
+  //           var inputCountry = $(form).find(selectorCountry);
+  //           if (inputCountry.length) {
+  //             inputCountry.remove();
+  //           }
+  //           var user_country_ip_detected = getCookie(
+  //             "user_country_ip_detected",
+  //           );
+  //           if (
+  //             (user_country_ip_detected === undefined ||
+  //               user_country_ip_detected === null ||
+  //               user_country_ip_detected === "") &&
+  //             jQuery('input[name="head_user_country_ip_detected"]').length
+  //           ) {
+  //             user_country_ip_detected = jQuery(
+  //               'input[name="head_user_country_ip_detected"]',
+  //             ).val();
+  //             setCookie("user_country_ip_detected", user_country_ip_detected);
+  //           }
+  //           if (
+  //             user_country_ip_detected !== undefined &&
+  //             user_country_ip_detected !== "" &&
+  //             user_country_ip_detected !== null
+  //           ) {
+  //             $(form).append(
+  //               '<input type="hidden" name="user-country" value="' +
+  //                 decodeURIComponent(user_country_ip_detected) +
+  //                 '" />',
+  //             );
+  //           }
+
+  //           $(form).data("submit", "no");
+  //           $(form).removeClass("submitting-form");
+  //         }
+  //       }
+  //     },
+  //   });
+  // };
 
   var formBlock = function () {
     jQuery(".form-default-desctop").each(function () {
@@ -1109,22 +1107,22 @@ jQuery(document).ready(function ($) {
     });
   };
   //calculator pages
-  let ValidateFields = function () {
-    jQuery(".validate-fields")
-      .closest("form")
-      .find('button[type="submit"]')
-      .on("click", function (e) {
-        var $form = $(this).closest("form");
+  // let ValidateFields = function () {
+  //   jQuery(".validate-fields")
+  //     .closest("form")
+  //     .find('button[type="submit"]')
+  //     .on("click", function (e) {
+  //       var $form = $(this).closest("form");
 
-        if (!$form.valid()) {
-          e.preventDefault();
-          return false;
-        }
+  //       if (!$form.valid()) {
+  //         e.preventDefault();
+  //         return false;
+  //       }
 
-        $form.data("submit", "yes");
-        $form.addClass("submitting-form");
-      });
-  };
+  //       $form.data("submit", "yes");
+  //       $form.addClass("submitting-form");
+  //     });
+  // };
 
   //testimonials section
   $("body").on("click", ".testimonials-content", function (e) {
@@ -1150,9 +1148,9 @@ jQuery(document).ready(function ($) {
   initSliderVcs();
   initMediaSlider();
   formBlock();
-  ValidateFields();
+  // ValidateFields();
   formValidate();
-  formModalValidate();
+  // formModalValidate();
   footerAccordionMenu();
   headerFixed();
   inputOnFocus();
@@ -1416,7 +1414,7 @@ function showMobileSubmenu() {
 }
 //form contact us
 function inputOnFocus() {
-  jQuery(".form-group input").on("focus blur input", function (evt) {
+  jQuery(".form-group .form-control").on("focus blur input", function (evt) {
     let parent = jQuery(this).closest(".form-group");
 
     if (evt.type === "focus" || jQuery(this).val().length > 0) {

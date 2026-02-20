@@ -1,5 +1,5 @@
-<div class="form-row validate-fields">
-    <div class="col-12 col-md-6">
+<div class="form-row">
+    <div class="col-12">
         <input type="text" name="project-name" class="form-control" placeholder="<?php _e('Project Name', 'icoda'); ?>">
     </div>
     <div class="col-12 col-md-6">
@@ -9,7 +9,10 @@
         <input type="email" name="email" class="form-control" placeholder="<?php _e('Email', 'icoda'); ?>">
     </div>
     <div class="col-12 col-md-6">
-        <input type="text" name="telegram" class="form-control" placeholder="<?php _e('WhatsApp / Telegram', 'icoda'); ?>">
+        <input type="text" name="telegram" class="form-control" placeholder="<?php _e('Telegram', 'icoda'); ?>">
+    </div>
+    <div class="col-12 col-md-6">
+        <input id="intlTel" type="tel" name="phone" class="form-control intlTel">
     </div>
     
     <div class="col-12">

@@ -387,34 +387,11 @@ if (!empty($post_v3)) :
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-lg-8 col-xl-8">
-                                <form class="form-default request-send__form form-default-desctop" method="post">
-                                    <div class="form-default-header">
-                                        <p class="ttl"><?php _e('Send request', 'icoda'); ?></p>
-                                        <p><?php _e('to scale your business to the next level', 'icoda'); ?></p>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-12 col-md-6">
-                                            <input type="text" name="name" class="form-control req" placeholder="<?php _e('Your name', 'icoda'); ?>" required>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <input type="text" name="telegram" class="form-control req" placeholder="<?php _e('WhatsApp / Telegram', 'icoda'); ?>" required>
-                                        </div>
-                                        <div class="col-12">
-                                            <input type="email" name="email" class="form-control req" placeholder="<?php _e('Email', 'icoda'); ?>" required>
-                                        </div>
-                                        <div class="col-12">
-                                            <textarea name="message" class="form-control" rows="5" placeholder="<?php _e('Text message', 'icoda'); ?>"></textarea>
-                                        </div>
-                                        <?php
-                                        do_action('anr_captcha_form_field');
-                                        ?>
-                                        <div class="col-12">
-                                            <div class="wr-btn text-right">
-                                                <button type="submit" class="btn btn-blue"><?php _e('Apply Now', 'icoda'); ?></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                                <div class="form-default-header">
+                                    <p class="ttl"><?php _e('Send request', 'icoda'); ?></p>
+                                    <p><?php _e('to scale your business to the next level', 'icoda'); ?></p>
+                                </div>
+                                <?php get_template_part('template-parts/_partials/contact-form'); ?>
 
                             </div>
                         </div>

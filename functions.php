@@ -545,20 +545,6 @@ function icoda_styles()
             array('jquery'), '', true
         );
     }
-
-    if( is_page_template('template-parts/tpl-contact.php') ) {
-        wp_enqueue_style(
-            'icoda-intlTelInput', 
-            $assets_uri . '/sources/intl-tel-input/css/intlTelInput.min.css', 
-            [], 
-            '26.0.6'
-            );
-        wp_enqueue_script(
-            'icoda-intlTelInput',
-            $assets_uri . '/sources/intl-tel-input/js/intlTelInputWithUtils.min.js',
-            array('jquery'), '26.0.6', true
-        );
-    }
     
     if( is_page_template('template-parts/tpl-events.php') ) {
         wp_enqueue_script(
@@ -625,6 +611,17 @@ function icoda_styles()
         'get_file_form',
         $assets_uri . '/js/get-file-form.js',
         array('jquery'), '', true
+    );
+    wp_enqueue_style(
+        'icoda-intlTelInput', 
+        $assets_uri . '/sources/intl-tel-input/css/intlTelInput.min.css', 
+        [], 
+        '26.0.6'
+        );
+    wp_enqueue_script(
+        'icoda-intlTelInput',
+        $assets_uri . '/sources/intl-tel-input/js/intlTelInputWithUtils.min.js',
+        array('jquery'), '26.0.6', true
     );
 }
 

@@ -5,8 +5,7 @@
   @include mediaMax(767) {
     padding-bottom: 110px;
   }
-  // &-inner,
-  .row {
+  &-inner {
     padding: 66px 86px 52px 80px;
 
     @include mediaMax(1440) {
@@ -31,12 +30,6 @@
       background-color: transparent;
       box-shadow: none;
     }
-  }
-  .iti {
-    width: 100%;
-  }
-  .iti__selected-country-primary {
-    padding-bottom: 10px;
   }
 
   .col-top {
@@ -97,46 +90,8 @@
 
   form {
     padding-left: 20px;
-
     @include mediaMax(991) {
       padding-left: 0;
-    }
-
-    input {
-      // margin-bottom: 40px;
-      width: 100%;
-      background: transparent;
-      color: #fff;
-      border: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      font-size: 16px;
-      padding-bottom: 15px;
-      line-height: 19px;
-      border-radius: 0;
-      &:focus {
-        border-color: #80bdff;
-      }
-
-      &::placeholder {
-        color: #fff;
-      }
-      @include mediaMax(1440) {
-        font-size: 12px;
-      }
-      @include mediaMax(991) {
-        font-size: 15px;
-      }
-    }
-
-    label.error {
-      // color: $color-red;
-      color: red;
-      position: absolute;
-      left: 0;
-      bottom: -35px;
-      font-size: 13px;
-      line-height: normal;
-      min-height: 27px;
     }
   }
 
@@ -159,53 +114,4 @@
       padding: 22px 0;
     }
   }
-
-  .desktop-text {
-    @include mediaMax(449) {
-      display: none;
-    }
-  }
-
-  .mobile-text {
-    @include mediaMin(450) {
-      display: none;
-    }
-  }
-}
-
-.form-group {
-  position: relative;
-  margin-bottom: 40px;
-  &.focused {
-    .form-label {
-      visibility: visible;
-      transform: translateY(-10%);
-    }
-  }
-  .form-label {
-    position: absolute;
-    top: -25px;
-    left: 0;
-    z-index: 6;
-    font-size: 12px;
-    opacity: 0.5;
-    color: #ffffff;
-    display: inline-block;
-    padding: 0 0.5px;
-    margin: 0;
-    transition: transform 0.15s ease-in-out;
-    visibility: hidden;
-  }
-}
-.phone-error {
-  color: $danger;
-  font-size: 12px;
-}
-
-.hide {
-  @extend .d-none;
-}
-
-input.error {
-  border-color: $danger;
 }
