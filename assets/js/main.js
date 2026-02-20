@@ -443,7 +443,7 @@ jQuery(document).ready(function ($) {
       })
       .then(function (data) {
         if (data && data.country) {
-          console.log("data", data);
+          // console.log("data", data);
           $('input[name="head_user_country_ip_detected"]').val(data.country);
           setCookie("user_country_ip_detected", data.country);
         }
@@ -909,7 +909,7 @@ jQuery(document).ready(function ($) {
                     '" />',
                 );
               }
-              console.log("form", $(form).serialize());
+              // console.log("form", $(form).serialize());
 
               $.post(
                 "/wp-content/themes/icoda/submit.php",
