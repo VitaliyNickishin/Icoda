@@ -11,7 +11,8 @@ jQuery(document).ready(function ($) {
       $('input[name="project-name"]').val().length < 1 ||
       $('input[name="name"]').val().length < 1 ||
       $('input[name="email"]').val().length < 1 ||
-      $('input[name="telegram"]').val().length < 1
+      $('input[name="telegram"]').val().length < 1 ||
+      $('input[name="phone"]').val().length < 1
     ) {
       return;
     }
