@@ -46,8 +46,8 @@ $icoda_gb_book_info = get_field('icoda_gb_book_info', 'option');
 					
 				</div>
 				<div class="row mt-5 pt-3 mt-lg-0 pt-lg-0">
-					<div class="col-12 mt-5 mt-lg-0">
-						<ul class="llm-list-icons d-flex align-items-center">
+					<div class="col-12 col-lg-6 mt-5 mt-lg-0">
+						<ul class="llm-list-icons d-inline-flex align-items-center">
 							<?php foreach ($hero_section['llm_list'] as $key => $icon) : ?>
 								<li>
 									<picture>
