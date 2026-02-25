@@ -2330,3 +2330,15 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+document.querySelectorAll(".stripe-pay-btn").forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const stripeBtn = document.querySelector("#stripe-payment-hidden form a");
+
+    if (stripeBtn) {
+      stripeBtn.click();
+    }
+  });
+});

@@ -538,12 +538,6 @@ function icoda_styles()
             $assets_uri . '/js/iframe.js',
             array('jquery'), '', true
         );
-
-        wp_enqueue_script(
-            'icoda-book',
-            $assets_uri . '/js/book.js',
-            array('jquery'), '', true
-        );
     }
     
     if( is_page_template('template-parts/tpl-events.php') ) {
