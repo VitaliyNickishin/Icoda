@@ -596,6 +596,15 @@ function icoda_styles()
         ));
     }
 
+    if( is_page_template( 'template-pages/template-ai-visibility.php' ) ) {
+        wp_enqueue_script(
+            'icoda-ai-visibility',
+            $assets_uri . '/js/ai-visibility.js',
+            array('jquery'), '', true
+        );
+        
+    }
+
     wp_enqueue_script(
         'confetti',
         $assets_uri . '/js/confetti.js',

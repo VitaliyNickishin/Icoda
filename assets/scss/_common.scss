@@ -515,7 +515,17 @@ a.logo {
 
 .mx-lg-n2 {
   @include mediaMin(991) {
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+  }
+}
+.mx-n2 {
+  margin-left: -0.5rem !important;
+  margin-right: -0.5rem !important;
+}
+
+.d-lg-grid {
+  @include mediaMin(992) {
+    display: grid !important;
   }
 }

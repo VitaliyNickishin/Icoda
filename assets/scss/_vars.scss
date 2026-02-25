@@ -8,26 +8,35 @@ $color-light-gray: #e7edff;
 $color-light-white: #fafbfd;
 $main-color-text: #54658d;
 $color-red: #b62b2f;
+$gray-50: #f1f4ff;
 $gray-100: #f9fafe;
+$gray-150: #e9edf0;
 $gray-200: #d5dbf1;
 $gray-300: #f5f5fd;
 $gray-400: #c4cff6;
 $gray-500: #c5d0ec;
+$gray-600: #64748b;
 $gray-700: #5e71a3;
+
 $accent: #cb0000;
 $white: #fff;
 $black: #000;
+$orange: #fe8c3a;
 $pink: #fde8f1;
 $pink-200: #ff9ebf;
+$pink-800: #f31212;
 $pink-900: #f13574;
 $green: #22db79;
+$green-200: #07bd47;
+$yellow: #f2d516;
 
 //font
 
 $f-sto-r: "Onest-Regular", sans-serif;
-$f-sto-m: "Onest-Bold", sans-serif;
-$f-sto-sb: "Onest-SemiBold", sans-serif;
-$f-sto-bold: "Onest-ExtraBold", sans-serif;
+$f-sto-medium: "Onest-Medium", sans-serif; //500
+$f-sto-m: "Onest-Bold", sans-serif; //700
+$f-sto-sb: "Onest-SemiBold", sans-serif; //600
+$f-sto-bold: "Onest-ExtraBold", sans-serif; //800
 $f-sto-b: "Onest-Regular", sans-serif;
 
 $f-gilroy-b: "Gilroy-Bold", sans-serif;
@@ -39,3 +48,27 @@ $border-color: $gray-200;
 $separator-color: $gray-500;
 $placeholder: $gray-700;
 $bg-gray: $gray-300;
+$error-color: $pink-800;
+
+$status-colors: (
+  poor: (
+    color: $pink-800,
+    bg-soft: rgba(243, 18, 18, 0.1),
+  ),
+  fair: (
+    color: $orange,
+    bg-soft: rgba(254, 140, 58, 0.1),
+  ),
+  good: (
+    color: $yellow,
+    bg-soft: rgba(255, 193, 7, 0.1),
+  ),
+  excellent: (
+    color: $green-200,
+    bg-soft: rgba(7, 189, 71, 0.1),
+  ),
+  primary: (
+    color: $color-blue,
+    bg-soft: rgba(60, 97, 226, 0.1),
+  ),
+);

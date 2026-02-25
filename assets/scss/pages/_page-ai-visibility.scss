@@ -1,0 +1,874 @@
+.page-ai-visibility {
+  .surface {
+    border: 1px solid $gray-50;
+    background: $white;
+    box-shadow: 0 8px 8px 0 rgba(10, 74, 171, 0.02);
+    @include border-radius(4px);
+  }
+  .display-1 {
+    font-size: 2.25rem;
+    line-height: 130%;
+    @include mediaMin(992) {
+      font-size: 4rem;
+    }
+  }
+  .undertitle {
+    font-size: 1rem;
+    line-height: 130%;
+    color: $gray-600;
+    @include mediaMin(992) {
+      font-size: 1.25rem;
+    }
+  }
+  .text-default {
+    font-size: 0.875rem;
+    line-height: 130%;
+    @include mediaMin(992) {
+      font-size: 1.25rem;
+    }
+  }
+  .text-muted {
+    color: $gray-600;
+    @extend .text-default;
+  }
+}
+.section-reports {
+  .btn.btn-blue {
+    width: auto;
+    margin: auto;
+    padding: 9px 44px 9px 36px;
+    font-size: 1rem;
+    min-width: 100%;
+    @include mediaMin(576) {
+      min-width: auto;
+    }
+  }
+}
+.section-analyzer {
+  @extend .section-transition;
+  // display: grid;
+  // place-items: center;
+  // min-height: 100vh;
+
+  background-color: $white;
+  padding: 3.5rem 0;
+  @include mediaMin(992) {
+    padding: 11.5625rem 0 22.5rem;
+  }
+  &__inner {
+    margin: auto;
+    @include mediaMin(992) {
+      width: 1045px;
+    }
+  }
+  &__form {
+    padding-top: 36px;
+  }
+}
+
+.analyzer-box {
+  margin-top: 2rem;
+  padding: 2.25rem 1rem;
+
+  @include mediaMin(992) {
+    padding: 2.25rem 3.375rem;
+  }
+}
+
+.has-circle-gradient {
+  & > * {
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -200px;
+    z-index: 0;
+    filter: blur(120px);
+    opacity: 0.4;
+
+    background:
+      radial-gradient(circle at top left, #cbe4ff 0%, transparent 40%),
+      radial-gradient(circle at top right, #6198ff 0%, transparent 40%),
+      radial-gradient(circle at bottom left, #6198ff 0%, transparent 40%),
+      radial-gradient(circle at bottom right, #cbe4ff 0%, transparent 40%);
+  }
+}
+
+.form-check-url {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  @include mediaMin(992) {
+    gap: 1rem;
+    flex-direction: row;
+  }
+  .form-group {
+    margin-bottom: 0;
+    width: 100%;
+    @include mediaMin(992) {
+      width: auto;
+    }
+  }
+  input {
+    background-color: $white;
+    border: 1px solid $border-color;
+    padding: 1.125rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    @include mediaMin(992) {
+      width: 370px;
+    }
+    &.error {
+      border-color: $error-color;
+    }
+  }
+  .invalid-feedback {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    text-align: left;
+    line-height: 1.3;
+    color: $error-color;
+  }
+  .btn.btn-blue {
+    min-width: auto;
+    width: 100%;
+    @include mediaMin(992) {
+      min-width: 190px;
+      width: auto;
+    }
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.section-transition {
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.progress {
+  &-analyzing-container {
+    @extend .section-transition;
+  }
+
+  &-analyzing-text {
+    font-size: 1.25rem;
+    line-height: 130%;
+    color: $color-dark-gray;
+    @include mediaMin(992) {
+      font-size: 1.5rem;
+    }
+  }
+  &-line {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    border-radius: 100px;
+    background: $gray-150;
+  }
+  &-analyzing-step {
+    @extend .section-transition;
+    @include mediaMin(992) {
+      font-size: 0.875rem;
+    }
+  }
+  &-fill {
+    height: 100%;
+    width: 0%;
+    background-color: $color-blue;
+    @include border-radius(100px);
+    transition: width 0.3s ease;
+  }
+  &-dots {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  &-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $gray-150;
+    transition: all 0.3s ease;
+    &.active {
+      background-color: $color-blue;
+      transform: scale(1.15);
+    }
+  }
+}
+
+//2section
+.section-reports {
+  padding: 2rem 0;
+  @include mediaMin(992) {
+    padding: 4.0625rem 0;
+  }
+  @extend .section-transition;
+}
+
+.report-box {
+  padding: 0.5rem;
+  @include mediaMin(992) {
+    padding: 1.5rem;
+  }
+  &-wrapper {
+    padding: 0.5rem 0;
+    @include mediaMin(992) {
+      padding: 40px 0;
+    }
+  }
+  @include border-radius(4px);
+  border: 1px solid $gray-50;
+  background: #f9fbfd;
+  width: 100%;
+  .title {
+    font-size: 24px;
+    line-height: 130%;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    margin-bottom: 0.5rem;
+    @include mediaMin(992) {
+      font-size: 2.25rem;
+    }
+  }
+  .has-border {
+    position: relative;
+    padding-left: 1rem;
+    &:before {
+      content: "";
+      width: 4px;
+      height: 24px;
+      background-color: $color-blue;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50px;
+    }
+  }
+  // padding: 2.25rem 1rem;
+  // @include mediaMin(992) {
+  //   padding: 1.5rem;
+  // }
+}
+
+.score-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 35px;
+
+  @include mediaMin(992) {
+    padding-bottom: 50px;
+  }
+  // padding: 1rem;
+}
+
+.gauge {
+  position: relative;
+  width: 140px;
+  height: 75px;
+  text-align: center;
+  color: $color-dark-blue;
+  font-family: $f-sto-m;
+  @include mediaMin(992) {
+    width: 295px;
+    height: 190px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-bg {
+    fill: none;
+    stroke: $gray-150;
+    stroke-width: 10;
+    stroke-linecap: round;
+  }
+  &-fill {
+    fill: none;
+    stroke-width: 26;
+    stroke-linecap: round;
+    // stroke-dasharray: 345; /* длина дуга */
+    // stroke-dashoffset: 345;
+    transition: stroke-dashoffset 0.6s ease;
+  }
+  &-value {
+    margin-top: -35px;
+
+    // position: absolute;
+    // top: 55%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+
+    @include mediaMin(992) {
+      margin-top: -60px;
+      font-size: 2.875rem;
+    }
+  }
+  &-dot {
+    fill: $white;
+  }
+  &-pointer {
+    fill: currentColor;
+    transform-origin: 0 0;
+    transition: all 0.8s ease;
+  }
+  &-label {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    line-height: 1.3;
+
+    @include mediaMin(992) {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+//2report
+.overall-visibility-score {
+  .score {
+    &-wrapper {
+      margin-top: 38px;
+      position: relative;
+      width: 100%;
+      height: 10px;
+    }
+    &-track {
+      position: absolute;
+      inset: 0;
+      background: $gray-150;
+      border-radius: 20px;
+    }
+    &-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      border-radius: 20px;
+      transition:
+        width 0.4s ease,
+        background 0.3s ease;
+    }
+
+    &-dot {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      transform: translate(50%, -50%);
+      transition: transform 0.3s ease;
+    }
+    /* number under dot */
+    &-value {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: $gray-600;
+      font-size: 1rem;
+      &.is-max {
+        font-size: 1.5rem;
+        color: $color-dark-blue;
+        font-family: $f-sto-m;
+      }
+    }
+  }
+}
+
+//3report
+.key-insights {
+  .insights-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    .icon {
+      flex-shrink: 0;
+    }
+    svg {
+      // width: 36px;
+      // height: 36px;
+      @include mediaMin(992) {
+        width: 67px;
+        height: 67px;
+      }
+    }
+    .content {
+      line-height: 130%;
+    }
+    .title {
+      font-size: 1.25rem;
+      @include mediaMin(992) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+//4report
+.category-breakdown {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4px;
+    @include mediaMin(1341) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      gap: 1rem;
+    }
+  }
+  .category-box {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    @include mediaMin(1341) {
+      flex-direction: row;
+    }
+  }
+
+  .circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+    @include mediaMin(1341) {
+      width: 170px;
+      height: 170px;
+    }
+    @include media(1331, 1441) {
+      width: 160px;
+      height: 160px;
+    }
+    @include mediaMin(14441) {
+      width: 170px;
+      height: 170px;
+    }
+  }
+
+  svg {
+    transform: rotate(-90deg);
+    overflow: visible;
+  }
+
+  circle {
+    fill: none;
+    stroke-width: 16;
+  }
+
+  circle.bg {
+    stroke: $gray-150;
+  }
+
+  circle.progress {
+    stroke-linecap: round;
+    stroke-dasharray: 314; /* 2 * PI * 50 */
+    stroke-dashoffset: 314;
+    transition:
+      stroke-dashoffset 0.6s ease,
+      stroke 0.3s ease;
+  }
+  circle.marker {
+    fill: white;
+  }
+
+  .percent {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-family: $f-sto-sb;
+    color: $color-dark-blue;
+    @include mediaMin(1341) {
+      font-size: 2.25rem;
+    }
+  }
+
+  .label {
+    font-size: 14px;
+    color: $gray-600;
+    line-height: 130%;
+    @include mediaMin(1341) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+//5report
+.bot-box {
+  &-header {
+    @include mediaMin(992) {
+      display: grid;
+      grid-template-columns: repeat(3, 33.33%);
+      // gap: 1rem;
+      text-transform: uppercase;
+    }
+  }
+  .head-name {
+    &:not(:first-child) {
+      @include mediaMin(992) {
+        text-align: center;
+      }
+    }
+  }
+  &-content {
+    margin-top: 1.5rem;
+
+    @include mediaMin(992) {
+      display: grid;
+      grid-template-columns: 33.33% 66.66%;
+    }
+  }
+  &-body {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  .title {
+    font-size: 1.25rem;
+    font-family: $f-sto-medium;
+  }
+  &-footer {
+    width: 100%;
+  }
+  .result {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mediaMin(992) {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      // gap: 1.5rem;
+      text-align: center;
+      align-items: center;
+      justify-content: unset;
+      height: 100%;
+    }
+    @each $name, $data in $status-colors {
+      &.status-#{$name} {
+        .badge-status {
+          background: map-get($data, bg-soft);
+          color: map-get($data, color);
+        }
+      }
+    }
+  }
+  .score {
+    font-size: 1rem;
+    line-height: 130%;
+    font-family: $f-sto-sb;
+    @include mediaMin(992) {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+//6report
+.technical {
+  &-box-wrapper {
+    display: grid;
+    gap: 0.25rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    @include mediaMin(992) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+  &-status {
+    font-size: 0.875rem;
+    line-height: 130%;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    @include mediaMin(992) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+//7report
+.structured-data {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    @include mediaMin(992) {
+      gap: 1.5rem;
+    }
+  }
+  &-list {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    @include mediaMin(992) {
+      gap: 8px;
+    }
+  }
+  &-recommended {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    @include mediaMin(992) {
+      gap: 1rem;
+    }
+  }
+}
+
+.is-unlocked {
+  filter: blur(6px);
+}
+
+//8report
+.report-gaps {
+  &-wrapper {
+    gap: 0.25rem;
+    @include mediaMin(992) {
+      gap: 1.5rem;
+    }
+  }
+  .report-card {
+    @each $name, $data in $status-colors {
+      &.status-#{$name}:not(.status-excellent) {
+        .title,
+        .text-muted,
+        .text-default {
+          filter: blur(6px);
+        }
+      }
+    }
+  }
+}
+
+.report-card {
+  gap: 4px;
+
+  @include mediaMin(992) {
+    gap: 0.5rem;
+  }
+  &-header {
+    gap: 4px;
+  }
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    line-height: 130%;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    @include mediaMin(992) {
+      font-size: 1.5rem;
+    }
+  }
+
+  @each $name, $data in $status-colors {
+    &.status-#{$name} {
+      border-left: 4px solid map-get($data, color);
+
+      .badge-status {
+        background: map-get($data, bg-soft);
+        color: map-get($data, color);
+      }
+
+      .text-default {
+        color: map-get($data, color);
+      }
+    }
+  }
+}
+
+.btn-report {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  line-height: 130%;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  padding: 9px 0;
+  @include mediaMin(576) {
+    width: 240px;
+    max-width: 100%;
+  }
+
+  &:before {
+    content: "";
+    font-family: $f-sto-medium;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+  }
+  &-wrapper {
+    gap: 8px;
+    @include mediaMin(992) {
+      gap: 1rem;
+    }
+  }
+  &.btn-email {
+    &:before {
+      background: url(../images/message.svg) no-repeat;
+    }
+    @at-root .btn-report-wrapper & {
+      background-color: $orange;
+      color: $white;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: darken($color: $orange, $amount: 10%);
+      }
+    }
+  }
+  &.btn-download,
+  &.btn-share {
+    color: $color-blue;
+    background: transparent;
+    border: 1px solid $color-blue;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken($color: $gray-100, $amount: 10%);
+    }
+    &:before {
+      background: url(../images/download.svg) no-repeat;
+    }
+  }
+  &.btn-upload {
+    &:before {
+      background: url(../images/upload.svg) no-repeat;
+    }
+  }
+  &.btn-analyze {
+    background-color: $color-blue;
+    color: $white;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken($color: $color-blue, $amount: 10%);
+    }
+    &:before {
+      background: url(../images/analyze.svg) no-repeat;
+    }
+  }
+}
+
+//9 Recommendation
+.report-recommendation {
+  &-wrapper {
+    gap: 0.25rem;
+    @include mediaMin(992) {
+      gap: 1.5rem;
+    }
+  }
+  .report-card {
+    @each $name, $data in $status-colors {
+      &.status-poor {
+        .title,
+        .text-muted,
+        .recommendation-info {
+          filter: blur(6px);
+        }
+      }
+    }
+  }
+  .recommendation-info {
+    gap: 4px;
+    @include mediaMin(992) {
+      gap: 1.5rem;
+    }
+  }
+  .slot-info {
+    display: flex;
+    color: $color-dark-blue;
+    font-size: 0.875rem;
+    line-height: 130%;
+    gap: 8px;
+    @include mediaMin(992) {
+      font-size: 1.25rem;
+    }
+    &:before {
+      content: "";
+      font-family: $f-sto-medium;
+      text-align: center;
+      width: 24px;
+      height: 24px;
+    }
+    &.time {
+      &:before {
+        background: url(../images/clock.svg) no-repeat;
+      }
+    }
+    &.roi {
+      &:before {
+        background: url(../images/wallet.svg) no-repeat;
+      }
+    }
+    &.impact {
+      &:before {
+        background: url(../images/impact.svg) no-repeat;
+      }
+    }
+  }
+  .nav {
+    &-tabs {
+      gap: 4px;
+      @include mediaMin(992) {
+        gap: 8px;
+      }
+      .badge-status {
+        font-size: 0.875rem;
+        @include mediaMin(992) {
+          padding: 4px 8px;
+          font-size: 1.25rem;
+        }
+      }
+    }
+    &-link {
+      cursor: pointer;
+      &.active {
+        color: $white;
+        background-color: $color-blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,153 @@
+//status setting
+
+.status-dot {
+  &-list {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 130%;
+    color: $gray-600;
+    @include mediaMin(992) {
+      gap: 2.25rem;
+      font-size: 1.25rem;
+    }
+  }
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  // &_poor {
+  //   &:before {
+  //     @extend .status-poor;
+  //   }
+  // }
+  // &_fair {
+  //   &:before {
+  //     @extend .status-fair;
+  //   }
+  // }
+  // &_good {
+  //   &:before {
+  //     @extend .status-good;
+  //   }
+  // }
+  // &_excellent {
+  //   &:before {
+  //     @extend .status-excellent;
+  //   }
+  // }
+  @each $name, $data in $status-colors {
+    &_#{$name} {
+      &:before {
+        background: map-get($data, color);
+      }
+    }
+  }
+}
+// .status {
+//   &-poor {
+//     background: $pink-800;
+//     color: $pink-800;
+//   }
+//   &-fair {
+//     background: $orange;
+//     color: $orange;
+//   }
+//   &-good {
+//     background: $yellow;
+//     color: $yellow;
+//   }
+//   &-excellent {
+//     background: $green-200;
+//     color: $green-200;
+//   }
+// }
+.status {
+  @each $name, $data in $status-colors {
+    &-#{$name} {
+      background: map-get($data, color);
+      color: map-get($data, color);
+    }
+  }
+}
+
+// @mixin status-bg-poor {
+//   background: $pink-800;
+// }
+// @mixin status-bg-fair {
+//   background: $orange;
+// }
+// @mixin status-bg-good {
+//   background: $yellow;
+// }
+// @mixin status-bg-excellent {
+//   background: $green-200;
+// }
+
+.text {
+  @each $name, $data in $status-colors {
+    &-#{$name} {
+      color: map-get($data, color);
+    }
+  }
+}
+// .text {
+//   &-poor {
+//     color: $pink-800;
+//   }
+//   &-fair {
+//     color: $orange;
+//   }
+//   &-good {
+//     color: $yellow;
+//   }
+//   &-excellent {
+//     color: $green-200;
+//   }
+// }
+
+.badge-status {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  line-height: 130%;
+  font-family: $f-sto-medium;
+  text-transform: uppercase;
+  @include mediaMin(992) {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  @each $name, $data in $status-colors {
+    &_#{$name} {
+      background: map-get($data, bg-soft);
+      color: map-get($data, color);
+    }
+  }
+
+  // &_poor {
+  //   background: rgba(243, 18, 18, 0.1);
+  //   color: $pink-800;
+  // }
+  // &_fair {
+  //   background: rgba(254, 140, 58, 0.1);
+  //   color: $orange;
+  // }
+  // &_excellent {
+  //   background: rgba(7, 189, 71, 0.1);
+  //   color: $green-200;
+  // }
+  // &_primary {
+  //   background: rgba(60, 97, 226, 0.1);
+  //   color: $color-blue;
+  // }
+}
