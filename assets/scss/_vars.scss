@@ -72,3 +72,70 @@ $status-colors: (
     bg-soft: rgba(60, 97, 226, 0.1),
   ),
 );
+
+// Icons
+
+//12px,18px,24px,28px,36px
+$icon-font-sizes: (
+  "xs": 0.75rem,
+  "sm": 1.125rem,
+  "md": 1.5rem,
+  "lg": 1.75rem,
+  "xl": 2.25rem,
+) !default;
+// Custom icons
+$icon-css-classname-custom: "ci" !default;
+// $icon-font-family-custom: "icomoon" !default;
+// $icon-font-size-custom: map-get($icon-font-sizes, "md") !default;
+
+// $icons-custom-content: (
+//   "scissors": "\e900",
+//   "instagram": "\e901",
+//   "in": "\e902",
+// ) !default;
+
+//custom icons background svg
+$icon-path: "../images/icons/";
+$ci-icons: (
+  report: (
+    default: "report.svg",
+  ),
+  benchmarks: (
+    default: "benchmarks.svg",
+  ),
+  roi: (
+    default: "roi.svg",
+  ),
+  steps: (
+    default: "steps.svg",
+  ),
+  analyze: (
+    default: "analyze.svg",
+  ),
+  clock: (
+    default: "clock.svg",
+  ),
+  download: (
+    default: "download.svg",
+    hover: "download-white.svg",
+  ),
+  impact: (
+    default: "impact.svg",
+  ),
+  upload: (
+    default: "upload.svg",
+    hover: "upload-white.svg",
+  ),
+  wallet: (
+    default: "wallet.svg",
+  ),
+  message: (
+    default: "message.svg",
+  ),
+  copy: (
+    default: "copy.svg",
+  ),
+  close: (
+    default: "close.svg",
+  ),
+);

@@ -6,7 +6,7 @@
         </div>
         <div class="category-breakdown-wrapper">
             <div class="category-box surface p-3">
-                <p class="label">AI Access Control</p>
+                <p class="text-muted">AI Access Control</p>
                 <div class="category-card" data-key="aiAccess">
                     <div class="circle">
                     <svg viewBox="0 0 120 120">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="category-box surface p-3">
-                <p class="label">Content Structure</p>
+                <p class="text-muted">Content Structure</p>
                 <div class="category-card" data-key="content">
                     <div class="circle">
                     <svg viewBox="0 0 120 120">
@@ -32,7 +32,7 @@
                 </div>
             </div>
              <div class="category-box surface p-3">
-                <p class="label">Structured Data</p>
+                <p class="text-muted">Structured Data</p>
                 <div class="category-card" data-key="structured">
                     <div class="circle">
                     <svg viewBox="0 0 120 120">
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="category-box surface p-3">
-                <p class="label">Technical Infrastructure</p>
+                <p class="text-muted">Technical Infrastructure</p>
                 <div class="category-card" data-key="technical">
                     <div class="circle">
                     <svg viewBox="0 0 120 120">

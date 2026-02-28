@@ -3,7 +3,7 @@
     <div class="container px-lg-0">
         <div class="section-analyzer__inner text-center">
             <div class="analyzer-box surface">
-                <h1 class="h1 display-1 mb-lg-4 mb-2 text-primary">Is Your Website Visible to AI?</h1>
+                <h1 class="h1 title-hero mb-lg-4 mb-2 text-primary">Is Your Website Visible to AI?</h1>
                 <p class="undertitle">Discover how well your website is optimized for AI visibility and get actionable insights to improve it.</p>
                 
                 <form class="form-check-url section-analyzer__form" action="#" method="post" novalidate>
@@ -29,7 +29,7 @@
                     <div class="progress-dots"></div>
                 </div>
 
-                <div class="progress-analyzing-step text-muted mt-2">Checking robots.txt</div>
+                <div class="progress-analyzing-step mt-2">Checking robots.txt</div>
             </div>
         </div>
     </div>

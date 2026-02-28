@@ -93,12 +93,24 @@ document.addEventListener("DOMContentLoaded", () => {
       let currentStep = 0;
 
       // create dots dynamically based on steps length
-      steps.forEach((_, index) => {
-        const dot = document.createElement("div");
-        dot.classList.add("progress-dot");
-        if (index === 0) dot.classList.add("active");
-        dotsWrapper.appendChild(dot);
-      });
+      function initDots() {
+        dotsWrapper.innerHTML = "";
+
+        steps.forEach((_, index) => {
+          const dot = document.createElement("div");
+          dot.classList.add("progress-dot");
+          if (index === 0) {
+            dot.classList.add("active");
+          }
+          dotsWrapper.appendChild(dot);
+        });
+      }
+      // steps.forEach((_, index) => {
+      //   const dot = document.createElement("div");
+      //   dot.classList.add("progress-dot");
+      //   if (index === 0) dot.classList.add("active");
+      //   dotsWrapper.appendChild(dot);
+      // });
 
       function updateProgress(stepIndex) {
         const dots = container.querySelectorAll(".progress-dot");
@@ -117,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       function startProgress() {
+        initDots();
         container.classList.remove("d-none");
 
         const interval = setInterval(() => {
@@ -188,25 +201,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const dot = gauge.querySelector(".gauge-dot");
     const pointer = gauge.querySelector(".gauge-pointer");
 
-    // общая длина дуги
+    // total arc length
     const totalLength = fill.getTotalLength();
 
-    // устанавливаем dash
+    // set for dash
     fill.style.stroke = color;
     fill.style.strokeDasharray = totalLength;
     fill.style.strokeDashoffset = totalLength * (1 - value / 100);
 
-    // 🔥 получаем точку конца заполнения
+    // get the end point of filling
     const point = fill.getPointAtLength(totalLength * (value / 100));
 
     const x = point.x;
     const y = point.y;
 
-    // центрируем белую точку
+    // center the white dot
     dot.setAttribute("cx", x);
     dot.setAttribute("cy", y);
 
-    // позиция стрелки (центрируем по точке)
+    // arrow position (centered on the point)
     // const width = 2;
     // const height = 101;
 
@@ -214,18 +227,18 @@ document.addEventListener("DOMContentLoaded", () => {
     pointer.setAttribute("y", y);
     pointer.style.fill = color;
 
-    // 🔥 вычисляем направление касательной
-    const delta = 0.01; // маленький шаг
+    // we calculate the direction of the tangent
+    const delta = 0.01; // small step
     const point2 = fill.getPointAtLength(totalLength * (value / 100) - delta);
 
     const angle = Math.atan2(point.y - point2.y, point.x - point2.x);
 
     const angleDeg = (angle * 180) / Math.PI;
 
-    // поворачиваем перпендикулярно дуге
+    // turn perpendicular to the arc
     pointer.setAttribute("transform", `rotate(${angleDeg} ${x} ${y})`);
 
-    // скрываем стрелку при 100%
+    // hide the arrow at 100%
     if (value >= 100) {
       pointer.style.opacity = "0";
     }
@@ -318,6 +331,182 @@ document.addEventListener("DOMContentLoaded", () => {
   // .then(data => {
   //   setProgress(data.score);
   // });
+
+  //modal get-detailed-report and report requested
+  function initDetailedReportModal() {
+    const form = $(".form-detailed-report");
+    const emailInput = $(".input-email");
+    const sendBtn = $(".send-report");
+    const outputEmail = $(".output-email");
+
+    const modal1 = $("#get-detailed-report");
+    const modal2 = $("#report-requested");
+
+    if (!form.length) return;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    initEmailValidation(emailInput, sendBtn, emailRegex);
+
+    initFormSubmit(form, emailInput, outputEmail, modal1);
+
+    initModalSwitch(modal1, modal2);
+
+    initResetOnClose(modal2, form, emailInput, sendBtn);
+  }
+  //validate email
+  function initEmailValidation(input, button, regex) {
+    input.on("input", function () {
+      const email = input.val().trim();
+
+      const valid = regex.test(email);
+
+      button.prop("disabled", !valid);
+
+      button.toggleClass("disabled", !valid);
+    });
+  }
+  //submit email
+  function initFormSubmit(form, input, outputEmail, modal1) {
+    form.on("submit", function (e) {
+      e.preventDefault();
+      const email = input.val().trim();
+      outputEmail.text(email);
+      modal1.modal("hide");
+    });
+  }
+  // open modal report-requested
+  function initModalSwitch(modal1, modal2) {
+    modal1.on("hidden.bs.modal", function () {
+      modal2.modal("show");
+    });
+  }
+
+  function initResetOnClose(modal2, form, input, button) {
+    modal2.on("hidden.bs.modal", function () {
+      form[0].reset();
+      input.val("");
+      button.prop("disabled", true);
+      button.addClass("disabled");
+    });
+  }
+
+  // add/remove active for btn (share,download with ountline bg)
+  document.querySelectorAll(".btn-report").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      document
+        .querySelectorAll(".btn-report")
+        .forEach((b) => b.classList.remove("active"));
+      this.classList.add("active");
+    });
+    document.addEventListener("click", function (e) {
+      if (!btn.contains(e.target)) {
+        btn.classList.remove("active");
+      }
+    });
+    btn.addEventListener("blur", function () {
+      this.classList.remove("active");
+    });
+  });
+
+  initDetailedReportModal();
+  initShareSticky();
+
+  //share-sticky
+  function initShareSticky() {
+    const sticky = document.getElementById("shareSticky");
+    const shareBtn = document.querySelector(".btn-share");
+    const copyBtn = sticky.querySelector(".btn-copy");
+    const input = sticky.querySelector(".share-link");
+
+    function setShareUrl() {
+      input.value = window.location.href;
+    }
+
+    function toggleShareSticky() {
+      setShareUrl();
+      sticky.classList.toggle("active");
+    }
+
+    function closeShareSticky() {
+      sticky.classList.remove("active");
+    }
+
+    function copyShareLink() {
+      navigator.clipboard.writeText(input.value);
+
+      closeShareSticky();
+    }
+
+    function handleOutsideClick(e) {
+      if (!sticky.contains(e.target) && !shareBtn.contains(e.target)) {
+        closeShareSticky();
+      }
+    }
+
+    shareBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      toggleShareSticky();
+    });
+
+    copyBtn.addEventListener("click", copyShareLink);
+
+    document.addEventListener("click", handleOutsideClick);
+  }
+
+  //analyze another url
+  function resetAnalyze() {
+    const step1 = document.querySelector(".analyzer-step-1");
+    const step2 = document.querySelector(".analyzer-step-2");
+
+    const container = document.querySelector(".progress-analyzing-container");
+    const fill = container.querySelector(".progress-fill");
+    const dots = container.querySelectorAll(".progress-dot");
+
+    const input = document.querySelector(".site-url");
+    const button = document.querySelector(".form-check-url button");
+
+    // section return
+    step2.classList.remove("section-visible");
+    step2.classList.add("d-none");
+
+    step1.classList.remove("d-none");
+    step1.classList.remove("section-hidden");
+
+    // smoot scroll to step1
+    step1.scrollIntoView({ behavior: "smooth" });
+
+    // reset progress
+    fill.style.width = "0%";
+
+    dots.forEach((dot) => {
+      dot.classList.remove("active");
+    });
+
+    if (dots[0]) {
+      dots[0].classList.add("active");
+    }
+    // reset step
+    currentStep = 0;
+    // reset current step text
+    document.querySelector(".progress-analyzing-step").textContent =
+      "Checking robots.txt";
+
+    // hide progress
+    container.classList.add("d-none");
+    container.classList.remove("section-hidden");
+
+    // clear input site url
+    input.value = "";
+
+    // disabled btn analyze
+    button.disabled = true;
+    button.classList.add("disabled");
+  }
+
+  document
+    .querySelector(".btn-analyze")
+    .addEventListener("click", resetAnalyze);
 });
 
 // Category Breakdown
@@ -371,5 +560,3 @@ function getColor(value) {
   if (value < 85) return "#F2D516"; // yellow
   return "#07BD47"; // green
 }
-
-//next

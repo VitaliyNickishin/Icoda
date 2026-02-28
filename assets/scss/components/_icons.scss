@@ -1,0 +1,104 @@
+// stylelint-disable declaration-no-important
+
+// Custom icons fonts icomoon
+// .#{$icon-css-classname-custom} {
+//   font-style: normal;
+//   font-weight: 400;
+//   font-variant: normal;
+//   line-height: normal;
+//   text-transform: none;
+//   speak: none;
+
+//   /* Better Font Rendering =========== */
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+
+//   @each $icon, $content in $icons-custom-content {
+//     &-#{$icon}::before {
+//       content: $content;
+//     }
+//   }
+
+//   &::before {
+//     font-family: "#{$icon-font-family-custom}" !important;
+//     font-size: $icon-font-size-custom;
+//   }
+
+//   @each $size, $value in $icon-font-sizes {
+//     &-#{$size} {
+//       width: $value !important;
+//       height: $value !important;
+//       font-size: 0;
+
+//       &::before {
+//         font-size: $value !important;
+//       }
+//     }
+//   }
+// }
+
+// .icon-label {
+//   @include media-breakpoint-down(md) {
+//     width: 1rem !important;
+//     height: 1rem !important;
+
+//     &.ci::before {
+//       font-size: 1rem !important;
+//     }
+//   }
+// }
+
+.ci {
+  display: flex;
+  align-items: center;
+  @at-root .btn-report-wrapper & {
+    justify-content: center;
+    width: 100%;
+  }
+
+  gap: 10px;
+  &:before {
+    content: "";
+    display: inline-block;
+    font-family: $f-sto-medium;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    transition: background-image 0.2s ease;
+    @at-root .share-stick & {
+      width: 17px;
+      height: 17px;
+    }
+  }
+  @each $name, $icon in $ci-icons {
+    $default: map-get($icon, default);
+    $hover: map-get($icon, hover);
+
+    &-#{$name} {
+      &:before {
+        background: url("#{$icon-path}#{$default}");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      @if $hover {
+        &:hover,
+        &:focus,
+        &:focus-visible,
+        &.active,
+        &.is-active {
+          &:before {
+            background-image: url("#{$icon-path}#{$hover}");
+          }
+        }
+
+        .btn:hover &,
+        .btn.active & {
+          &:before {
+            background-image: url("#{$icon-path}#{$hover}");
+          }
+        }
+      }
+    }
+  }
+}

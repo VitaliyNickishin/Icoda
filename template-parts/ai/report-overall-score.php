@@ -10,16 +10,11 @@
                 <div class="score-card surface">
                     <div class="gauge" data-value="35" data-color="#F31212">
                         <svg viewBox="0 0 295 190">
-                            <!-- фон -->
                             <path class="gauge-bg"
                                     d="M35 155 A110 110 0 0 1 260 155" />
-                            
-                            <!-- активная дуга -->
                             <path class="gauge-fill"
-                                    d="M35 155 A110 110 0 0 1 260 155" />
-                            <!-- белая точка -->
+                                    d="M35 155 A110 110 0 0 1 260 155" />                      
                             <circle class="gauge-dot" r="4" />
-                            <!-- стрелка -->
                             <rect class="gauge-pointer"
                                 width="2"
                                 height="101"

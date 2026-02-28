@@ -220,14 +220,14 @@
                                 </div>
 
                                 <div class="recommendation-info d-flex align-items-lg-center flex-column flex-lg-row">
-                                    <div class="slot-info time">
+                                    <div class="slot-info ci ci-clock">
                                         <span><?php echo $card['time']; ?></span>
                                     </div>
-                                    <div class="slot-info roi">
+                                    <div class="slot-info ci ci-roi">
                                         <span><?php _e('ROI:', 'icoda'); ?></span>
                                         <span><?php echo $card['roi']; ?></span>
                                     </div>
-                                    <div class="slot-info impact">
+                                    <div class="slot-info ci ci-impact">
                                         <span><?php _e('Impact:', 'icoda'); ?></span>
                                         <span><?php echo $card['impact']; ?></span>
                                     </div>
@@ -246,8 +246,8 @@
         </div>
 
         <div class="content-recommendation-btn mt-1 mt-lg-4 mx-auto">
-            <button class="btn btn-blue btn-report btn-email">
-                <span><?php _e('Unlock all recommendations', 'icoda'); ?></span>
+            <button data-toggle="modal" data-target="#get-detailed-report" class="btn btn-blue btn-report">
+                <span class="ci ci-message"><?php _e('Unlock all recommendations', 'icoda'); ?></span>
             </button>
         </div>
 

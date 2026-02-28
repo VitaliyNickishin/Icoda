@@ -272,6 +272,90 @@
     </div>
 </div>
 
+<!-- Modal Get Detailed Report for page AI Visibility -->
+<div id="get-detailed-report" class="modal fade get-detailed-report" tabindex="-1" aria-labelledby="get-detailed-report" aria-hidden="true" role="dialog">
+    
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header report-box d-block">
+                <p class="title mb-2 has-border">
+                    <?php _e('Get Detailed Report', 'icoda'); ?>
+                </p>
+                <span class="undertitle">
+                    <?php _e('Enter your email to receive a comprehensive AI visibility report', 'icoda'); ?>
+                </span>
+                <button class="close" data-dismiss="modal" aria-label="Close">
+                    <i aria-hidden="true" class="ci ci-close"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body p-0">
+                <ul class="list-report d-flex flex-column mt-3">
+                    <li class="ci ci-report">
+                        <?php _e('Full analysis breakdown', 'icoda'); ?>
+                    </li>
+                    <li class="ci ci-steps">
+                        <?php _e('Step-by-step improvement guide', 'icoda'); ?>
+                    </li>
+                    <li class="ci ci-roi">
+                        <?php _e('Priority action items with ROI', 'icoda'); ?>
+                    </li>
+                    <li class="ci ci-benchmarks">
+                        <?php _e('Industry benchmarks', 'icoda'); ?>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="modal-footer p-0 mt-3 d-block border-0">
+                <form class="form-detailed-report" action="#" method="post" novalidate>
+                    <div class="form-group">
+                        <label class="mb-1 label" for="email-report">Email</label>
+                        <input id="email-report"
+                            type="text"
+                            class="form-control mb-3 input-email"
+                            placeholder="your@email.com">
+                        <!-- <div class="invalid-feedback">
+                            <?php/* _e('Failed to analyze. Please check the URL and try again.', 'icoda'); */?>
+                        </div> -->
+                    </div>
+                    
+                    <button class="btn btn-blue disabled send-report" type="submit" disabled>
+                        <?php _e('Send Report', 'icoda'); ?>
+                    </button>
+                    <div class="mt-2 text-center text-under-btn"><?php _e('No spam, ever.', 'icoda'); ?></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+   
+<!-- Modal Report requared for page AI Visibility -->
+<div id="report-requested" class="modal fade report-requested" tabindex="-1" aria-labelledby="reporRequested" aria-hidden="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header report-box d-block">
+                <p class="title mb-2 has-border">
+                    <?php _e('Report Requested!', 'icoda'); ?>
+                </p>
+                <span class="undertitle">
+                    <?php
+                        printf(
+                            esc_html__('We’ll send your report to %s shortly', 'icoda'),
+                            '<span class="output-email"></span>'
+                        );
+                        ?>
+                </span>
+            </div>
+            
+            <div class="modal-footer p-0 mt-3 d-block border-0">
+                <button data-dismiss="modal" class="btn btn-blue btn-gotit" type="button">
+                    <?php _e('Got it', 'icoda'); ?>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <?php get_template_part( 'template-parts/footer/help' ); ?>
 
 <?php wp_footer(); ?>

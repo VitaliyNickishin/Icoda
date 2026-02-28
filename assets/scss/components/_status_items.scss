@@ -6,11 +6,11 @@
     gap: 1rem;
     justify-content: center;
     font-size: 14px;
-    line-height: 130%;
+    line-height: 110%;
     color: $gray-600;
     @include mediaMin(992) {
       gap: 2.25rem;
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
   }
   display: flex;
@@ -119,12 +119,12 @@
   padding: 0.125rem 0.5rem;
   border-radius: 4px;
   font-size: 0.75rem;
-  line-height: 130%;
+  line-height: 110%;
   font-family: $f-sto-medium;
   text-transform: uppercase;
   @include mediaMin(992) {
     padding: 0.25rem 0.5rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   @each $name, $data in $status-colors {

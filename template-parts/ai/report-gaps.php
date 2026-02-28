@@ -54,8 +54,8 @@
             </div>
 
             <div class="content-gaps-btn">
-                <button class="btn btn-blue btn-report btn-email">
-                    <span><?php _e('Unlock all content gaps', 'icoda'); ?></span>
+                <button data-toggle="modal" data-target="#get-detailed-report" class="btn btn-blue btn-report">
+                    <span class="ci ci-message"><?php _e('Unlock all content gaps', 'icoda'); ?></span>
                 </button>
             </div>
         </div>

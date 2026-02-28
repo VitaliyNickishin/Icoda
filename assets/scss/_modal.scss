@@ -107,8 +107,10 @@ body.modal-open {
   }
 }
 .success {
-  background: url("../images/bg-tl-modal.jpg") left top no-repeat,
-    url("../images/bg-br-modal.jpg") right bottom no-repeat, #ffffff;
+  background:
+    url("../images/bg-tl-modal.jpg") left top no-repeat,
+    url("../images/bg-br-modal.jpg") right bottom no-repeat,
+    #ffffff;
   padding: 100px 45px 77px;
   .ttl {
     padding-top: 33px;
@@ -372,5 +374,76 @@ body.modal-open {
   a {
     color: $color-dark-blue;
     font-size: 1rem;
+  }
+}
+
+// Modal Get Detailed Report, Modal Report requared for page AI Visibility
+.get-detailed-report,
+.report-requested {
+  color: $color-dark-blue;
+
+  .modal-dialog {
+    max-width: 550px;
+  }
+  .modal-content {
+    padding: 1rem;
+    @include mediaMin(992) {
+      padding: 24px;
+    }
+  }
+
+  .report-box {
+    background-color: unset;
+    border: 0;
+    padding: 0;
+  }
+  .undertitle {
+    font-size: 1rem;
+    color: $gray-600;
+  }
+
+  .btn.btn-blue {
+    padding: 10px 0;
+    min-width: 100%;
+    font-size: 1rem;
+  }
+}
+
+.get-detailed-report {
+  color: $color-dark-blue;
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list-report {
+    gap: 15px;
+    font-size: 1rem;
+  }
+  .label {
+    font-size: 1rem;
+    line-height: 130%;
+  }
+  .form-control {
+    padding: 9px 18px;
+  }
+
+  .text-under-btn {
+    font-size: 1rem;
+    color: $gray-600;
+    line-height: 130%;
+  }
+}
+
+.report-requested {
+  .close {
+    position: relative;
+    inset: 0;
+    line-height: inherit;
+    opacity: 1;
   }
 }
