@@ -5,7 +5,7 @@
             <h2 class="title mb-lg-4 mb-2 has-border"><?php _e('Category Breakdown', 'icoda'); ?></h2>
         </div>
         <div class="category-breakdown-wrapper">
-            <div class="category-box surface p-3">
+            <div class="category-box surface p-3" data-map="cat-breakdown-ai-access">
                 <p class="text-muted">AI Access Control</p>
                 <div class="category-card" data-key="aiAccess">
                     <div class="circle">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="category-box surface p-3">
+            <div class="category-box surface p-3" data-map="cat-breakdown-content-structure">
                 <p class="text-muted">Content Structure</p>
                 <div class="category-card" data-key="content">
                     <div class="circle">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-             <div class="category-box surface p-3">
+             <div class="category-box surface p-3" data-map="cat-breakdown-structured-data">
                 <p class="text-muted">Structured Data</p>
                 <div class="category-card" data-key="structured">
                     <div class="circle">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="category-box surface p-3">
+            <div class="category-box surface p-3" data-map="cat-breakdown-technical">
                 <p class="text-muted">Technical Infrastructure</p>
                 <div class="category-card" data-key="technical">
                     <div class="circle">

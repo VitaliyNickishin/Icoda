@@ -9,6 +9,7 @@
                 <form class="form-check-url section-analyzer__form" action="#" method="post" novalidate>
                     <div class="form-group">
                         <input type="text"
+                            id="urlInput"
                             class="form-control site-url"
                             placeholder="Enter your website URL to check AI visibility">
                         <div class="invalid-feedback">

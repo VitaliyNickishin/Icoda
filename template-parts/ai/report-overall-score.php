@@ -21,7 +21,7 @@
                                 rx="2" />
                         </svg>
 
-                        <div class="gauge-value">35</div>
+                        <div class="gauge-value" data-map="ai-access-score">35</div>
                         <div class="gauge-label">AI Access</div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                                 height="101"
                                 rx="2" />
                         </svg>
-                        <div class="gauge-value">65</div>
+                        <div class="gauge-value" data-map="content-structure-score">65</div>
                         <div class="gauge-label">Content Structure</div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                                 height="101"
                                 rx="2" />
                         </svg>
-                        <div class="gauge-value">100</div>
+                        <div class="gauge-value" data-map="technical-score">100</div>
                         <div class="gauge-label">Technical Readiness</div>
                     </div>
                 </div>

@@ -6,7 +6,7 @@
         </h2>
 
         <div class="structured-data-wrapper">
-            <ul class="structured-data-list surface p-3">
+            <ul class="structured-data-list surface p-3 found-data-list">
                 <li class="badge-status badge-status_primary"><?php _e('Organization', 'icoda'); ?></li>
                 <li class="badge-status badge-status_primary"><?php _e('WebSite', 'icoda'); ?></li>
                 <li class="badge-status badge-status_primary"><?php _e('Article', 'icoda'); ?></li>
@@ -27,6 +27,8 @@
     </div>
 </div>
 
+
+<?php /* ?>
 <!-- Structured Data NOT FOUND -->
 <div class="report-box-wrapper">
     <div class="report-box structured-data">
@@ -49,3 +51,4 @@
         </div>
     </div>
 </div>
+<?php */ ?>

@@ -1,5 +1,5 @@
 <!-- Recommendations -->
-<div class="report-box-wrapper">
+<div class="report-box-wrapper" data-map="recommendations">
     <div class="report-box report-recommendation">
         <h2 class="title mb-lg-4 mb-2 has-border">
             <?php _e('Recommendations', 'icoda'); ?>
@@ -255,6 +255,7 @@
     </div>
 </div>
 
+<?php /* ?>
 <div class="report-box-wrapper">
     <div class="report-box report-recommendation">
         <h2 class="title mb-lg-4 mb-2 has-border">
@@ -274,3 +275,4 @@
         </div>
     </div>
 </div>
+<?php */ ?>

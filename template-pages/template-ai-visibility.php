@@ -42,16 +42,15 @@ $front_page_id = get_option('page_on_front');
 
 		</div>
 	</section>
-		
+
 	<div class="share-sticky" id="shareSticky">
 		<div class="container">
 			<div class="share-sticky__inner">
-				<input 
+				<input
 					type="text"
 					class="share-link"
 					value=""
-					readonly
-				>
+					readonly>
 				<button class="btn-copy btn btn-blue">
 					<span class="ci ci-copy d-md-none"></span>
 					<span class="d-none d-md-block">
@@ -63,14 +62,13 @@ $front_page_id = get_option('page_on_front');
 				<?php _e('Link expires in 30 days', 'icoda'); ?>
 			</div>
 		</div>
-		
+
 	</div>
-	
+
 
 	<?php the_content(); ?>
 
 </main>
-
 
 <?php
 get_footer(); ?>

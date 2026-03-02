@@ -6,7 +6,7 @@
                 <h2 class="title mb-lg-4 mb-2 has-border"><?php _e('Key Insights', 'icoda'); ?></h2>
             </div>
 
-            <div class="col-12 col-lg-4 px-lg-2">
+            <div class="col-12 col-lg-4 px-lg-2" data-map="insights-ai-access">
                 <div class="insights-box surface p-3">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-4 px-lg-2 mt-1 mt-lg-0">
+            <div class="col-12 col-lg-4 px-lg-2 mt-1 mt-lg-0" data-map="insights-structured-data">
                 <div class="insights-box surface p-3">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-4 px-lg-2 mt-1 mt-lg-0">
+            <div class="col-12 col-lg-4 px-lg-2 mt-1 mt-lg-0" data-map="insights-technic">
                 <div class="insights-box surface p-3">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">

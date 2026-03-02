@@ -14,7 +14,7 @@
                         <p class="head-name"><?php _e('Score', 'icoda'); ?></p>
                     </div>
                     <!-- GPTBot -->
-                    <div class="bot-box-content">
+                    <div class="bot-box-content" data-map="bot-access-gpt">
                         <div class="bot-box-body">
                             <div class="icon">
                                 <picture>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <!-- ClaudeBot -->
-                    <div class="bot-box-content">
+                    <div class="bot-box-content" data-map="bot-access-claude">
                         <div class="bot-box-body">
                             <div class="icon">
                                 <picture>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <!-- PerplexityBot -->
-                    <div class="bot-box-content">
+                    <div class="bot-box-content" data-map="bot-access-perplexity">
                         <div class="bot-box-body">
                             <div class="icon">
                                 <picture>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                     <!-- Google-Extended -->
-                    <div class="bot-box-content">
+                    <div class="bot-box-content" data-map="bot-access-google">
                         <div class="bot-box-body">
                             <div class="icon">
                                 <picture>
