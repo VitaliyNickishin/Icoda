@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //1.score-card(overall score)
-  function initGauge(gauge) {
+  function renderOverallScore(gauge) {
     const value = parseInt(gauge.dataset.score);
     const color = getColor(value);
 
@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
     valueEl.textContent = value;
   }
 
-  function updateGaugesFromApi(apiData) {
+  function updateOverallScoreFromApi(apiData) {
     document.querySelectorAll(".gauge").forEach((gauge) => {
       const key = gauge.dataset.key;
 
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const score = Math.round(apiData.categories[key].score);
       gauge.dataset.score = score;
 
-      initGauge(gauge, score);
+      renderOverallScore(gauge);
     });
   }
 
@@ -282,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   if (section) observer.observe(section);
   // }
 
-  // Overall AI Visibility Score
+  // 2. Overall AI Visibility Score
   function setProgress(value) {
     const fill = document.querySelector(".score-fill");
     const dot = document.querySelector(".score-dot");
@@ -316,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
       colorClass = "status-poor";
     } else if (percent < 70) {
       colorClass = "status-fair";
-    } else if (percent < 80) {
+    } else if (percent < 85) {
       colorClass = "status-good";
     } else {
       colorClass = "status-excellent";
@@ -330,11 +330,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // fetch('/api/score')
-  // .then(res => res.json())
-  // .then(data => {
-  //   setProgress(data.score);
-  // });
+  //4. Category Breakdown
+  function renderCategory(card) {
+    const value = parseInt(card.dataset.score);
+    const color = getColor(value);
+    const progressCircle = card.querySelector(".progress");
+    const percentText = card.querySelector(".percent");
+    const marker = card.querySelector(".marker");
+
+    const totalLength = progressCircle.getTotalLength();
+
+    // progress
+    progressCircle.style.strokeDasharray = totalLength;
+    progressCircle.style.strokeDashoffset = totalLength * (1 - value / 100);
+
+    progressCircle.style.stroke = color;
+
+    percentText.textContent = `${value}%`;
+
+    // position marker
+    const point = progressCircle.getPointAtLength(totalLength * (value / 100));
+
+    marker.setAttribute("cx", point.x);
+    marker.setAttribute("cy", point.y);
+  }
+
+  function updateCategoryFromApi(apiData) {
+    document.querySelectorAll(".category-circle").forEach((card) => {
+      const key = card.dataset.key;
+
+      if (!apiData.categories[key]) return;
+
+      const score = Math.round(apiData.categories[key].score);
+      card.dataset.score = score;
+
+      renderCategory(card);
+    });
+  }
 
   //modal get-detailed-report and report requested
   function initDetailedReportModal() {
@@ -542,7 +574,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderResults(data) {
     //1.score-card(overall score)
-    updateGaugesFromApi(data);
+    updateOverallScoreFromApi(data);
     // lazyInit(data);
 
     //2.Overall AI Visibility Score
@@ -606,19 +638,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .find(".content p")
       .text(insights[2].desc);
 
-    jQuery('[data-map="cat-breakdown-ai-access"]')
-      .find(".percent")
-      .text(`${data.categories.ai_access.score}%`);
-    jQuery('[data-map="cat-breakdown-content-structure"]')
-      .find(".percent")
-      .text(`${data.categories.content_structure.score}%`);
-    jQuery('[data-map="cat-breakdown-structured-data"]')
-      .find(".percent")
-      .text(`${data.categories.structured_data.score}%`);
-    jQuery('[data-map="cat-breakdown-technical"]')
-      .find(".percent")
-      .text(`${data.categories.technical.score}%`);
+    //4. Category Breakdown
+    updateCategoryFromApi(data);
 
+    //5. Ai Bot Access
     jQuery('[data-map="bot-access-gpt"]')
       .find(".badge-status")
       .text(data.ai_access.bots[0].status);
@@ -1309,7 +1332,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function hideLoading() {
-    document.getElementById("loadingSection").classList.add("hidden");
+    const section = document.getElementById("loadingSection");
+    if (!section) return;
+
+    console.log("loadingSection", section);
+    section.classList.add("hidden");
     if (loadingInterval) {
       clearInterval(loadingInterval);
       loadingInterval = null;
@@ -1317,8 +1344,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showError(msg) {
+    const sectionEr = document.getElementById("errorSection");
     hideLoading();
-    const el = document.getElementById("errorSection");
+    if (!sectionEr) return;
+    const el = sectionEr;
     el.textContent = msg + " (API: " + API_URL + ")";
     el.classList.remove("hidden");
   }
@@ -1348,48 +1377,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   loadSharedReport();
 });
-
-// Category Breakdown
-const API_DATA = {
-  aiAccess: 20,
-  content: 100,
-  structured: 60,
-  technical: 80,
-};
-
-/*
-fetch('/api/endpoint')
-  .then(res => res.json())
-  .then(data => initCharts(data));
-*/
-
-initCharts(API_DATA);
-
-function initCharts(data) {
-  const cards = document.querySelectorAll(".category-card");
-
-  cards.forEach((card) => {
-    const key = card.dataset.key;
-    const value = data[key];
-
-    const progressCircle = card.querySelector(".progress");
-    const percentText = card.querySelector(".percent");
-    const marker = card.querySelector(".marker");
-
-    const totalLength = progressCircle.getTotalLength();
-
-    // progress
-    progressCircle.style.strokeDasharray = totalLength;
-    progressCircle.style.strokeDashoffset = totalLength * (1 - value / 100);
-
-    progressCircle.style.stroke = getColor(value);
-
-    percentText.textContent = `${value}%`;
-
-    // position marker
-    const point = progressCircle.getPointAtLength(totalLength * (value / 100));
-
-    marker.setAttribute("cx", point.x);
-    marker.setAttribute("cy", point.y);
-  });
-}

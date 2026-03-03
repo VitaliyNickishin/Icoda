@@ -1,84 +1,44 @@
-<!-- Category Breakdown -->
+<?php
+    $category_config = [
+        'ai_access' => [
+            'label' => __('AI Access Control', 'icoda'),
+        ],
+        'content_structure' => [
+            'label' => __('Content Structure', 'icoda'),
+        ],
+        'structured_data' => [
+            'label' => __('Structured Data', 'icoda'),
+        ],
+        'technical' => [
+            'label' => __('Technical Infrastructure', 'icoda'),
+        ],
+    ];
+?>
+
 <div class="report-box-wrapper">
     <div class="report-box category-breakdown">
         <div class="col-12 px-lg-2">
             <h2 class="title mb-lg-4 mb-2 has-border"><?php _e('Category Breakdown', 'icoda'); ?></h2>
         </div>
         <div class="category-breakdown-wrapper">
-            <div class="category-box surface p-3" data-map="cat-breakdown-ai-access">
-                <p class="text-muted">AI Access Control</p>
-                <div class="category-card" data-key="aiAccess">
-                    <div class="circle">
-                    <svg viewBox="0 0 120 120">
-                        <circle class="bg" cx="60" cy="60" r="50"></circle>
-                        <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        <circle class="marker" cx="0" cy="0" r="3"></circle>
-                    </svg>
-                    <span class="percent">0%</span>
+            <?php foreach ($category_config as $key => $config): ?>
+                <div class="category-box surface p-3">
+                    <p class="text-muted"><?php echo esc_html($config['label']); ?></p>
+                    <div class="category-circle" 
+                        data-key="<?php echo esc_attr($key); ?>"
+                        data-score="0"
+                        >
+                        <div class="circle">
+                            <svg viewBox="0 0 120 120">
+                                <circle class="bg" cx="60" cy="60" r="50"></circle>
+                                <circle class="progress" cx="60" cy="60" r="50"></circle>
+                                <circle class="marker" cx="0" cy="0" r="3"></circle>
+                            </svg>
+                            <span class="percent">0%</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="category-box surface p-3" data-map="cat-breakdown-content-structure">
-                <p class="text-muted">Content Structure</p>
-                <div class="category-card" data-key="content">
-                    <div class="circle">
-                    <svg viewBox="0 0 120 120">
-                        <circle class="bg" cx="60" cy="60" r="50"></circle>
-                        <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        <circle class="marker" cx="0" cy="0" r="3"></circle>
-                    </svg>
-                    <span class="percent">0%</span>
-                    </div>
-                </div>
-            </div>
-             <div class="category-box surface p-3" data-map="cat-breakdown-structured-data">
-                <p class="text-muted">Structured Data</p>
-                <div class="category-card" data-key="structured">
-                    <div class="circle">
-                    <svg viewBox="0 0 120 120">
-                        <circle class="bg" cx="60" cy="60" r="50"></circle>
-                        <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        <circle class="marker" cx="0" cy="0" r="3"></circle>
-                    </svg>
-                    <span class="percent">0%</span>
-                    </div>
-                </div>
-            </div>
-            <div class="category-box surface p-3" data-map="cat-breakdown-technical">
-                <p class="text-muted">Technical Infrastructure</p>
-                <div class="category-card" data-key="technical">
-                    <div class="circle">
-                    <svg viewBox="0 0 120 120">
-                        <circle class="bg" cx="60" cy="60" r="50"></circle>
-                        <circle class="progress" cx="60" cy="60" r="50"></circle>
-                        <circle class="marker" cx="0" cy="0" r="3"></circle>
-                    </svg>
-                    <span class="percent">0%</span>
-                    </div>
-                </div>
-            </div>
-
-
+            <?php endforeach; ?>
         </div>
-
-        <!-- <div class="row mx-n2">
-            
-            <div class="col-6 col-lg-3 px-2">
-                
-            </div>
-            <div class="col-6 col-lg-3 px-2">
-                
-            </div>
-            <div class="col-6 col-lg-3 px-2">
-               
-            </div>
-            <div class="col-6 col-lg-3 px-2">
-                
-            </div>
-
-            
-
-            
-        </div> -->
     </div>
 </div>
