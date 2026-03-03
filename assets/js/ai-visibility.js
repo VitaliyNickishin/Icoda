@@ -194,10 +194,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //score-card(overall score)
+  const COLOR_SCALE = [
+    { max: 50, color: "#F31212" }, // red
+    { max: 70, color: "#FE8C3A" }, // orange
+    { max: 85, color: "#F2D516" }, // yellow
+    { max: 100, color: "#07BD47" }, // green
+  ];
+
+  function getColor(value) {
+    return COLOR_SCALE.find((level) => value < level.max).color;
+  }
+
+  //1.score-card(overall score)
   function initGauge(gauge) {
     const value = parseInt(gauge.dataset.score);
-    const color = gauge.dataset.color;
+    const color = getColor(value);
 
     const fill = gauge.querySelector(".gauge-fill");
     const dot = gauge.querySelector(".gauge-dot");
@@ -224,6 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const prev = fill.getPointAtLength(Math.max(progressLength - delta, 0));
 
     const angle = Math.atan2(point.y - prev.y, point.x - prev.x);
+    const percent = Math.max(0, Math.min(100, value));
+    const isEdge = percent <= 0 || percent >= 100;
 
     pointer.setAttribute("x", point.x);
     pointer.setAttribute("y", point.y);
@@ -233,7 +246,8 @@ document.addEventListener("DOMContentLoaded", () => {
       `rotate(${(angle * 180) / Math.PI} ${point.x} ${point.y})`,
     );
 
-    pointer.style.opacity = value <= 0 || value >= 100 ? "0" : "1";
+    // arrow
+    pointer.style.opacity = isEdge ? "0" : "1";
 
     valueEl.textContent = value;
   }
@@ -1378,11 +1392,4 @@ function initCharts(data) {
     marker.setAttribute("cx", point.x);
     marker.setAttribute("cy", point.y);
   });
-}
-
-function getColor(value) {
-  if (value < 50) return "#FE8C3A"; // orange
-  if (value < 70) return "#F31212"; // red
-  if (value < 85) return "#F2D516"; // yellow
-  return "#07BD47"; // green
 }

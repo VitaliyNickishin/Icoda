@@ -3,15 +3,12 @@
     $gauge_config = [
         'ai_access' => [
             'label' => __('AI Access', 'icoda'),
-            'color' => '#F31212',
         ],
         'content_structure' => [
             'label' => __('Content Structure', 'icoda'),
-            'color' => '#fe8c3a',
         ],
         'technical' => [
             'label' => __('Technical Readiness', 'icoda'),
-            'color' => '#07BD47',
         ],
     ];
 
@@ -42,7 +39,6 @@
                     <div class="score-card surface">
                         <div class="gauge"
                             data-key="<?php echo esc_attr($key); ?>"
-                            data-color="<?php echo esc_attr($config['color']); ?>"
                             data-score="0">
 
                             <svg viewBox="0 0 295 190">
