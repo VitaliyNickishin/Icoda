@@ -205,6 +205,23 @@ document.addEventListener("DOMContentLoaded", () => {
     return COLOR_SCALE.find((level) => value < level.max).color;
   }
 
+  const SCORE_STATUS_CONFIG = [
+    { limit: 50, className: "status-poor" },
+    { limit: 70, className: "status-fair" },
+    { limit: 85, className: "status-good" },
+    { limit: 100, className: "status-excellent" },
+  ];
+
+  function getStatusByScore(score) {
+    for (const item of SCORE_STATUS_CONFIG) {
+      if (score < item.limit) {
+        return item.className;
+      }
+    }
+
+    return SCORE_STATUS_CONFIG[SCORE_STATUS_CONFIG.length - 1].className;
+  }
+
   //1.score-card(overall score)
   function renderOverallScore(gauge) {
     const value = parseInt(gauge.dataset.score);
@@ -283,25 +300,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // }
 
   // 2. Overall AI Visibility Score
-  function setProgress(value) {
+  function renderOverallVisibilityScore(value) {
+    const scoreWrap = document.querySelector(".score-wrapper");
     const fill = document.querySelector(".score-fill");
-    const dot = document.querySelector(".score-dot");
     const label = document.querySelector(".score-value");
 
-    if (!fill) return;
+    if (!scoreWrap || !fill || !label) return;
 
     const percent = Math.max(0, Math.min(value, 100));
 
     fill.style.width = percent + "%";
+
     label.textContent = percent;
 
-    fill.classList.remove(
-      "status-poor",
-      "status-fair",
-      "status-good",
-      "status-excellent",
-    );
-    dot.classList.remove(
+    scoreWrap.classList.remove(
       "status-poor",
       "status-fair",
       "status-good",
@@ -309,24 +321,20 @@ document.addEventListener("DOMContentLoaded", () => {
       "is-max",
     );
 
-    // define color class based on percentage
-    let colorClass;
+    const statusClass = getStatusByScore(percent);
 
-    if (percent < 50) {
-      colorClass = "status-poor";
-    } else if (percent < 70) {
-      colorClass = "status-fair";
-    } else if (percent < 85) {
-      colorClass = "status-good";
-    } else {
-      colorClass = "status-excellent";
-    }
-
-    fill.classList.add(colorClass);
-    dot.classList.add(colorClass);
+    scoreWrap.classList.add(statusClass);
 
     if (percent === 100) {
-      label.classList.add("is-max");
+      scoreWrap.classList.add("is-max");
+    }
+  }
+
+  function updateOverallVisibilityScoreFromApi(apiData) {
+    if (!apiData.overall_score) return;
+
+    if (typeof apiData.overall_score === "number") {
+      renderOverallVisibilityScore(apiData.overall_score);
     }
   }
 
@@ -578,7 +586,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // lazyInit(data);
 
     //2.Overall AI Visibility Score
-    setProgress(data.overall_score);
+    updateOverallVisibilityScoreFromApi(data);
 
     //3.Key insights
     const icons = {

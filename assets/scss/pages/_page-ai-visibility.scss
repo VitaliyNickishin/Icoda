@@ -372,6 +372,23 @@
       position: relative;
       width: 100%;
       height: 10px;
+      border-radius: 20px;
+      background-color: transparent;
+      @each $name, $data in $status-colors {
+        &.status-#{$name} {
+          .score-fill,
+          .score-dot {
+            background: map-get($data, color);
+          }
+        }
+      }
+      &.is-max {
+        .score-value {
+          font-size: 1.5rem;
+          color: $color-dark-blue;
+          font-family: $f-sto-m;
+        }
+      }
     }
     &-track {
       position: absolute;
@@ -409,11 +426,6 @@
       transform: translateX(-50%);
       color: $gray-600;
       font-size: 1rem;
-      &.is-max {
-        font-size: 1.5rem;
-        color: $color-dark-blue;
-        font-family: $f-sto-m;
-      }
     }
   }
 }
