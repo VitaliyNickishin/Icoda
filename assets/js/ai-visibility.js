@@ -747,6 +747,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .find(".badge-status")
       .addClass(`badge-status_${resultGoogleClass}`);
 
+    //6. Technical checklist
     if (data.technical_checklist) {
       jQuery(".technical-box-wrapper").empty();
       data.technical_checklist.forEach(function (element) {
@@ -757,7 +758,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>`);
       });
     }
-
+    //7. Structured data
     if (data.structured_data.schemas_found.length) {
       jQuery(".structured-data-wrapper").find(".found-data-list").empty();
       data.structured_data.schemas_found.forEach(function (element) {
@@ -790,6 +791,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .remove();
     }
 
+    //8. Content Gaps
     if (!data.content_gaps.length) {
       jQuery(".report-gaps").hide();
     } else {
@@ -821,7 +823,7 @@ document.addEventListener("DOMContentLoaded", () => {
           `).insertBefore(jQuery(".report-gaps").find(".content-gaps-btn"));
       });
     }
-
+    //9. Recommendations
     if (!data.recommendations.length) {
       jQuery('[data-map="recommendations"]').replaceWith(
         `
@@ -953,26 +955,6 @@ document.addEventListener("DOMContentLoaded", () => {
         tabIndex++;
       }
     }
-
-    // hideLoading();
-    // document.getElementById('heroSection').classList.add('hidden');
-    // document.getElementById('resultsSection').classList.add('show');
-    // const domain = new URL(data.analyzed_url).hostname;
-    // document.getElementById('resultDomain').textContent = domain;
-    // document.getElementById('analyzedUrl').textContent = data.analyzed_url;
-    // setScore('overallScore', data.overall_score);
-    // setScore('aiAccessScore', data.categories.ai_access.score);
-    // setScore('contentScore', data.categories.content_structure.score);
-    // setScore('technicalScore', data.categories.technical.score);
-    // const mainCard = document.getElementById('mainScoreCard');
-    // mainCard.className = 'score-card main' + (data.overall_score < 65 ? ' medium' : '') + (data.overall_score < 45 ? ' poor' : '');
-    // renderInsights(data);
-    // renderBreakdown(data);
-    // renderBotAccess(data.ai_access);
-    // renderChecklist(data.technical_checklist || []);
-    // renderStructuredData(data.structured_data);
-    // renderContentGaps(data.content_gaps || []);
-    // renderRecommendations(data.recommendations || []);
   }
 
   function generateRecommendCard(element) {
@@ -1019,369 +1001,39 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  function setScore(id, score) {
-    const el = document.getElementById(id);
-    el.textContent = score;
-    el.className =
-      "score-value " + (score >= 80 ? "green" : score >= 65 ? "yellow" : "red");
-  }
+  // async function loadSharedReport() {
+  //   const id = new URLSearchParams(location.search).get("report");
+  //   if (!id) return;
+  //   showLoading();
+  //   document.getElementById("heroSection").classList.add("hidden");
+  //   try {
+  //     const res = await fetch(`${API_URL}/report/${id}`);
+  //     if (!res.ok) throw new Error("Not found or expired");
+  //     const data = await res.json();
+  //     currentData = data.report;
+  //     currentShareId = id;
+  //     renderResults(data.report);
+  //     const d = new Date(data.shared_at).toLocaleDateString("en-US", {
+  //       month: "long",
+  //       day: "numeric",
+  //       year: "numeric",
+  //       hour: "2-digit",
+  //       minute: "2-digit",
+  //     });
+  //     const days = Math.ceil(
+  //       (new Date(data.expires_at) - new Date()) / 86400000,
+  //     );
+  //     document.getElementById("sharedBannerText").textContent =
+  //       `Shared ${d} • Expires in ${days} days • ${data.view_count} views`;
+  //     document.getElementById("sharedBanner").classList.remove("hidden");
+  //   } catch (err) {
+  //     showError(err.message);
+  //   }
+  // }
 
-  function renderInsights(data) {
-    const insights = [
-      {
-        icon: data.categories.ai_access.score >= 70 ? "good" : "warning",
-        title: "AI Access Control",
-        desc:
-          data.categories.ai_access.score >= 90
-            ? "Well configured"
-            : "Minor restrictions",
-      },
-      {
-        icon: data.categories.structured_data.score >= 70 ? "good" : "warning",
-        title: "Structured Data",
-        desc:
-          data.categories.structured_data.score >= 70
-            ? "Schema markup detected"
-            : "Missing schema markup",
-      },
-      {
-        icon: data.categories.technical.score >= 70 ? "good" : "warning",
-        title: "Technical",
-        desc:
-          data.categories.technical.score >= 70
-            ? "Strong foundation"
-            : "Improvements needed",
-      },
-    ];
-    document.getElementById("insightsGrid").innerHTML = insights
-      .map(
-        (i) =>
-          `<div class="insight-item"><div class="insight-icon ${i.icon}">${i.icon === "good" ? "✓" : "!"}</div><div class="insight-text"><h4>${i.title}</h4><p>${i.desc}</p></div></div>`,
-      )
-      .join("");
-  }
-
-  function renderBreakdown(data) {
-    const cats = [
-      {
-        name: "AI Access Control",
-        score: data.categories.ai_access.score,
-      },
-      {
-        name: "Content Structure",
-        score: data.categories.content_structure.score,
-      },
-      {
-        name: "Structured Data",
-        score: data.categories.structured_data.score,
-      },
-      {
-        name: "Technical",
-        score: data.categories.technical.score,
-      },
-    ];
-    document.getElementById("breakdownList").innerHTML = cats
-      .map(
-        (c) =>
-          `<li class="breakdown-item"><span class="breakdown-name">${c.name}</span><span class="breakdown-score" style="color:${getColor(c.score)}">${c.score}/100</span></li>`,
-      )
-      .join("");
-  }
-
-  function renderBotAccess(ai) {
-    document.getElementById("botTableBody").innerHTML = ai.bots
-      .slice(0, 4)
-      .map(
-        (b) =>
-          `<tr><td><div class="bot-name">${b.bot_name}</div><div class="bot-desc">${b.description}</div></td><td><span class="status-badge ${b.status}">${b.status}</span></td><td style="font-weight:700;color:${getColor(b.access_score)}">${b.access_score}/100</td></tr>`,
-      )
-      .join("");
-  }
-
-  function renderChecklist(list) {
-    if (!list.length)
-      list = [
-        {
-          item: "HTTPS",
-          status: "pass",
-          value: "Yes",
-        },
-        {
-          item: "Sitemap",
-          status: "pass",
-          value: "Found",
-        },
-        {
-          item: "llms.txt",
-          status: "info",
-          value: "Not found",
-        },
-      ];
-    document.getElementById("checklistItems").innerHTML = list
-      .map(
-        (c) =>
-          `<li class="checklist-item"><div class="checklist-left"><div class="check-icon ${c.status}">${c.status === "pass" ? "✓" : c.status === "fail" ? "✗" : "i"}</div><span>${c.item}</span></div><span class="checklist-value">${c.value}</span></li>`,
-      )
-      .join("");
-  }
-
-  function renderStructuredData(sd) {
-    document.getElementById("schemaTags").innerHTML = (sd.schemas_found || [])
-      .length
-      ? sd.schemas_found
-          .map((s) => `<span class="schema-tag">${s.type}</span>`)
-          .join("")
-      : '<span style="color:var(--grey)">No structured data</span>';
-    document.getElementById("schemaMissing").innerHTML = (
-      sd.recommended_missing || []
-    ).length
-      ? '<span style="font-size:13px;color:var(--grey);margin-right:8px">Recommended:</span>' +
-        sd.recommended_missing
-          .map((m) => `<span class="schema-missing-tag">+ ${m}</span>`)
-          .join("")
-      : "";
-  }
-
-  function renderContentGaps(gaps) {
-    const card = document.getElementById("contentGapsCard");
-    if (!gaps.length) {
-      card.classList.add("hidden");
-      return;
-    }
-    card.classList.remove("hidden");
-    document.getElementById("contentGaps").innerHTML = gaps
-      .map(
-        (g) =>
-          `<div class="gap-item"><div class="gap-header"><span class="gap-title">${g.title}</span><span class="gap-impact ${g.impact}">${g.impact}</span></div><div class="gap-desc">${g.description}</div><div class="gap-action">→ ${g.action}</div></div>`,
-      )
-      .join("");
-  }
-
-  function renderRecommendations(recs) {
-    allRecs = recs;
-    document.getElementById("recHighCount").textContent = recs.filter(
-      (r) => r.priority === "high",
-    ).length;
-    document.getElementById("recQuickCount").textContent = recs.filter(
-      (r) => r.difficulty === "easy",
-    ).length;
-    document.getElementById("recTotalCount").textContent = recs.length;
-    renderRecList(recs);
-  }
-
-  function renderRecList(recs) {
-    if (!recs.length) {
-      document.getElementById("recList").innerHTML =
-        '<div style="text-align:center;padding:40px;color:var(--grey)"><div style="font-size:48px">🎉</div><h3 style="color:var(--dark)">Great Job!</h3><p>No recommendations needed.</p></div>';
-      return;
-    }
-    document.getElementById("recList").innerHTML = recs
-      .map(
-        (r) =>
-          `<div class="rec-item"><div class="rec-item-header"><span class="rec-item-title">${r.title}</span><div class="rec-item-tags"><span class="rec-tag ${r.priority}">${r.priority}</span>${r.difficulty === "easy" ? '<span class="rec-tag easy">Quick</span>' : ""}</div></div><div class="rec-item-desc">${r.description}</div><div class="rec-item-meta"><span>⏱ ${r.time_estimate}</span><span>📈 Impact: ${r.impact}/20</span><span>💰 ROI: ${r.roi_score}/10</span></div></div>`,
-      )
-      .join("");
-  }
-
-  function filterRecs(type, btn) {
-    document
-      .querySelectorAll(".rec-filter")
-      .forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-    renderRecList(
-      type === "all"
-        ? allRecs
-        : type === "high"
-          ? allRecs.filter((r) => r.priority === "high")
-          : allRecs.filter((r) => r.difficulty === "easy"),
-    );
-  }
-
-  async function shareReport() {
-    if (!currentData) return;
-    try {
-      const res = await fetch(`${API_URL}/share`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          url: currentData.url,
-          report_data: currentData,
-        }),
-      });
-      const data = await res.json();
-      currentShareId = data.id;
-      document.getElementById("shareLink").value =
-        `${location.origin}${location.pathname}?report=${data.id}`;
-      document.getElementById("shareResult").classList.remove("hidden");
-    } catch (err) {
-      alert("Failed: " + err.message);
-    }
-  }
-
-  function copyShareLink() {
-    document.getElementById("shareLink").select();
-    document.execCommand("copy");
-    alert("Copied!");
-  }
-
-  function openEmailModal() {
-    document.getElementById("emailModal").classList.remove("hidden");
-  }
-
-  function closeModal(id, e) {
-    if (e && e.target !== e.currentTarget) return;
-    document.getElementById(id).classList.add("hidden");
-  }
-
-  async function submitEmail() {
-    const email = document.getElementById("emailInput").value.trim();
-    if (!email || !email.includes("@")) return alert("Enter valid email");
-    const btn = document.getElementById("emailSubmitBtn");
-    btn.disabled = true;
-    btn.textContent = "Sending...";
-    try {
-      await fetch(`${API_URL}/email-report`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          url: currentData?.url,
-          report_id: currentShareId,
-        }),
-      });
-      document.getElementById("confirmedEmail").textContent = email;
-      document.getElementById("emailModal").classList.add("hidden");
-      document.getElementById("emailSuccessModal").classList.remove("hidden");
-      document.getElementById("emailInput").value = "";
-    } catch (err) {
-      alert("Failed");
-    } finally {
-      btn.disabled = false;
-      btn.textContent = "Send Report";
-    }
-  }
-
-  async function loadSharedReport() {
-    const id = new URLSearchParams(location.search).get("report");
-    if (!id) return;
-    showLoading();
-    document.getElementById("heroSection").classList.add("hidden");
-    try {
-      const res = await fetch(`${API_URL}/report/${id}`);
-      if (!res.ok) throw new Error("Not found or expired");
-      const data = await res.json();
-      currentData = data.report;
-      currentShareId = id;
-      renderResults(data.report);
-      const d = new Date(data.shared_at).toLocaleDateString("en-US", {
-        month: "long",
-        day: "numeric",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-      const days = Math.ceil(
-        (new Date(data.expires_at) - new Date()) / 86400000,
-      );
-      document.getElementById("sharedBannerText").textContent =
-        `Shared ${d} • Expires in ${days} days • ${data.view_count} views`;
-      document.getElementById("sharedBanner").classList.remove("hidden");
-    } catch (err) {
-      showError(err.message);
-    }
-  }
-
-  let loadingInterval = null;
-  let currentStage = 0;
-
-  function showLoading() {
-    document.getElementById("loadingSection").classList.remove("hidden");
-    document.getElementById("errorSection").classList.add("hidden");
-    document.getElementById("resultsSection").classList.remove("show");
-
-    // Reset stages
-    currentStage = 0;
-    document.querySelectorAll(".stage").forEach((s) => {
-      s.classList.remove("active", "done");
-      s.querySelector(".stage-icon").textContent = "○";
-    });
-
-    // Start stage animation
-    updateStage();
-    loadingInterval = setInterval(() => {
-      if (currentStage < 5) {
-        document
-          .querySelector(`.stage[data-stage="${currentStage}"]`)
-          .classList.remove("active");
-        document
-          .querySelector(`.stage[data-stage="${currentStage}"]`)
-          .classList.add("done");
-        document.querySelector(
-          `.stage[data-stage="${currentStage}"] .stage-icon`,
-        ).textContent = "";
-        currentStage++;
-        updateStage();
-      }
-    }, 600);
-  }
-
-  function updateStage() {
-    const stage = document.querySelector(
-      `.stage[data-stage="${currentStage}"]`,
-    );
-    if (stage) {
-      stage.classList.add("active");
-      stage.querySelector(".stage-icon").textContent = "●";
-    }
-  }
-
-  function hideLoading() {
-    const section = document.getElementById("loadingSection");
-    if (!section) return;
-
-    console.log("loadingSection", section);
-    section.classList.add("hidden");
-    if (loadingInterval) {
-      clearInterval(loadingInterval);
-      loadingInterval = null;
-    }
-  }
-
-  function showError(msg) {
-    const sectionEr = document.getElementById("errorSection");
-    hideLoading();
-    if (!sectionEr) return;
-    const el = sectionEr;
-    el.textContent = msg + " (API: " + API_URL + ")";
-    el.classList.remove("hidden");
-  }
-
-  function resetToHome() {
-    history.pushState({}, "", location.pathname);
-    document.getElementById("heroSection").classList.remove("hidden");
-    document.getElementById("resultsSection").classList.remove("show");
-    document.getElementById("sharedBanner").classList.add("hidden");
-    document.getElementById("shareResult").classList.add("hidden");
-    document.getElementById("errorSection").classList.add("hidden");
-    currentData = currentShareId = null;
-  }
-
-  function toggleCard(id) {
-    const el = document.getElementById(id);
-    el.style.display = el.style.display === "none" ? "block" : "none";
-  }
-
-  function getColor(s) {
-    return s >= 80 ? "var(--green)" : s >= 65 ? "var(--yellow)" : "var(--red)";
-  }
-
-  jQuery("section-analyzer__form").on("submit", function (e) {
-    e.preventDefault();
-    analyze();
-  });
-  loadSharedReport();
+  // jQuery("section-analyzer__form").on("submit", function (e) {
+  //   e.preventDefault();
+  //   analyze();
+  // });
+  // loadSharedReport();
 });
