@@ -74,7 +74,7 @@
                                                 <span class="book-price fw-semibold">
                                                     $<?php echo $resources['price']; ?>
                                                 </span>
-                                                <button data-get-book type="button" class="btn btn-blue btn-get-book">
+                                                <button type="button" class="btn btn-blue stripe-pay-btn">
                                                     <?php echo $resources['button_text_for_price']; ?>
                                                 </button>
                                             </div>
