@@ -1000,6 +1000,14 @@ function icoda_count_views() {
     }
     update_post_meta($post_id, 'views_count', $current_views);
 }
+function icoda_global_stripe_button() {
+    ?>
+    <div id="stripe-payment-hidden" style="display:none;">
+        <?php echo do_shortcode('[wpecpp id="209914"]'); ?>
+    </div>
+    <?php
+}
+add_action('wp_footer', 'icoda_global_stripe_button');
 /*
 add_filter('wp_footer', function () {
     ?>
