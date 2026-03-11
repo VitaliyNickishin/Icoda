@@ -9,4 +9,235 @@
       font-size: 28px;
     }
   }
+  &-email {
+    padding-top: 3.25rem;
+    &.banner-large {
+      padding-top: 0;
+      .banner-title {
+        @include mediaMin(991) {
+          font-size: 2rem;
+        }
+      }
+      .block-banner-email__inner {
+        @include mediaMin(991) {
+          overflow: hidden;
+          grid-template-areas: "image content";
+          grid-template-columns: 262px minmax(0, 522px);
+          place-items: center;
+          gap: 3.375rem;
+          padding: 2rem;
+        }
+      }
+      // .banner-with-gradient {
+      //   background:
+      //     radial-gradient(
+      //       500px circle at 100% 0%,
+      //       rgba(57, 70, 244, 0.1) 0%,
+      //       rgba(57, 70, 244, 0.1) 0%,
+      //       transparent 35%
+      //     ),
+      //     radial-gradient(
+      //       500px circle at 100% 100%,
+      //       rgba(255, 57, 123, 0.35) 0%,
+      //       rgba(255, 57, 123, 0.15) 0%,
+      //       transparent 100%
+      //     );
+
+      //   @include mediaMin(991) {
+      //     position: absolute;
+      //     right: 0;
+      //     bottom: 0;
+      //     left: auto;
+      //     top: 0;
+      //     background: none;
+      //     background-color: $bg-gray;
+      //     width: 400px;
+      //     height: 100%;
+      //     &:after,
+      //     &:before {
+      //       content: "";
+      //       position: absolute;
+      //       bottom: 0;
+      //       z-index: 0;
+      //     }
+      //     //blue gradient
+      //     &:before {
+      //       background: rgba(57, 70, 244, 0.4);
+      //       filter: blur(150px);
+      //       width: 300px;
+      //       height: 300px;
+      //       right: 0;
+      //       @include mediaMin(991) {
+      //         right: 150px;
+      //       }
+      //     }
+      //     //pink gradient
+      //     &:after {
+      //       background: rgba(255, 57, 123, 0.4);
+      //       filter: blur(150px);
+      //       width: 100px;
+      //       height: 200px;
+      //       @include mediaMin(991) {
+      //         width: 300px;
+      //         height: 300px;
+      //         right: 0;
+      //       }
+      //     }
+      //   }
+      // }
+      .block-banner-email__form {
+        @include mediaMin(991) {
+          flex-direction: row;
+        }
+      }
+      .block-banner-email__image {
+        margin-top: -182px;
+        @include mediaMin(991) {
+          margin: 0;
+        }
+      }
+    }
+    &__inner {
+      position: relative;
+      padding: 132px 18px 32px;
+      border-radius: 20px;
+      background: $bg-gray;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      gap: 0;
+      @include mediaMin(991) {
+        grid-template-columns: minmax(0, 522px) 262px;
+        align-items: start;
+        grid-template-areas: "content image";
+        gap: 0;
+        padding: 32px 20px 32px 32px;
+      }
+      @include mediaMin(1341) {
+        padding: 32px 48px 32px 60px;
+        gap: 3.75rem;
+      }
+    }
+    .banner-with-gradient {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      border-radius: 20px;
+      background: url(../images/bg-gradient-mobile.png) 100% 100% no-repeat;
+      background-size: cover;
+      @include mediaMin(768) {
+        background: url(../images/bg-gradient-desktop.png) 100% 100% no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .banner-title {
+      font-size: 1.25rem;
+      line-height: 110%;
+      font-family: $f-sto-m;
+      color: $color-blue;
+      @include mediaMin(991) {
+        font-size: 1.5rem;
+      }
+    }
+    .banner-description {
+      font-size: 0.9375rem;
+      color: $color-dark-blue;
+      line-height: 150%;
+      text-align: center;
+      @include mediaMin(991) {
+        font-size: 1rem;
+        text-align: unset;
+      }
+    }
+
+    &__image {
+      grid-area: image;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      margin: -184px auto;
+      max-width: 166px;
+      @include mediaMin(991) {
+        max-width: 252px;
+        margin-top: -98px;
+        margin-left: auto;
+      }
+    }
+    .banner-img,
+    svg {
+      position: absolute;
+      inset: 0;
+    }
+    .banner-img {
+      border-radius: 50%;
+      max-width: 146px;
+      aspect-ratio: 1 / 1;
+      border: 2px solid $border-color;
+      background-color: $white;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      @include mediaMin(991) {
+        max-width: 227px;
+      }
+    }
+    img {
+      width: 136px;
+      @include mediaMin(991) {
+        width: 204px;
+      }
+    }
+    text {
+      font-size: 16px;
+      letter-spacing: 1px;
+      fill: $color-blue;
+      text-transform: uppercase;
+      @include mediaMin(991) {
+        font-size: 15px;
+      }
+    }
+    .circle-text {
+      position: absolute;
+      inset: 0;
+    }
+    &__content {
+      grid-area: content;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      @include mediaMin(991) {
+        text-align: unset;
+        // width: 505px;
+      }
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      @include mediaMin(1341) {
+        flex-direction: row;
+      }
+    }
+    .form-group {
+      width: 100%;
+      height: 48px;
+      @include mediaMin(991) {
+        height: 100%;
+      }
+    }
+    .form-control {
+      padding: 0.6875rem 1rem;
+      color: $color-dark-blue;
+    }
+    .btn.btn-blue {
+      min-width: auto;
+      padding: 14px 40px;
+      line-height: 115%;
+      margin: auto;
+    }
+  }
 }

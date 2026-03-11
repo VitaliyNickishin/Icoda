@@ -522,6 +522,18 @@ add_action('acf/init', function () {
             'align' => array('full', 'wide', 'center')
         ),
     ));
+    acf_register_block(array(
+        'name'              => 'icoda-banner-email',
+        'title'             => __('Banner with email'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('email', 'banner', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
 
     acf_register_block(array(
         'name'              => 'icoda-perelinks',

@@ -184,7 +184,7 @@
       }
     }
   }
-  .block-banner {
+  .block-banner:not(.block-banner-email) {
     @include mediaMin(992) {
       position: relative;
 
