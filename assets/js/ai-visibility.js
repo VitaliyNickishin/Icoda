@@ -412,11 +412,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   //submit email
   function initFormSubmit(form, input, outputEmail, modal1) {
-    form.on("submit", function (e) {
+    form.on("submit", async function (e) {
       e.preventDefault();
       const email = input.val().trim();
-      outputEmail.text(email);
-      modal1.modal("hide");
+
+      if (!email || !email.includes('@')) return alert('Enter valid email');
+      const btn = jQuery('.btn.send-report');
+      btn.prop('disabled', true);
+      btn.text('Sending...');
+      try {
+        const res = await fetch(API_URL`${}/email-report`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            url: currentData?.url || currentData?.analyzed_url,
+            report_id: currentShareId,
+            report_data: currentData  // Include full report data for PDF generation
+          })
+        });
+        
+        outputEmail.text(email);
+        modal1.modal("hide");
+      
+      } catch (err) { alert('Failed to send: ' + err.message); }
+      finally {
+        btn.prop('disabled', false);
+        btn.text('Send Report');
+      }
     });
   }
   // open modal report-requested
@@ -999,6 +1022,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </div>
     `;
+  }
+
+  jQuery('body').on('click', '.btn-download', downloadPDF);
+  async function downloadPDF(event) {
+    event.preventDefault();
+    if (!currentData) return alert('No report data');
+    try {
+      const res = await fetch(`${API_URL}/generate-pdf`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: currentData.url || currentData.analyzed_url, report_data: currentData })
+      });
+      if (!res.ok) throw new Error('Failed to generate PDF');
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `AI_Visibility_Report.pdf`;
+      a.click();
+      window.URL.revokeObjectURL(url);
+    } catch (err) { alert('Failed: ' + err.message); }
   }
 
   // async function loadSharedReport() {
