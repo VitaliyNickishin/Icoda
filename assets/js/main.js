@@ -1182,6 +1182,7 @@ jQuery(document).ready(function ($) {
   initSlideLlm();
   initSliderFourBox();
   initIntlTel();
+  showMobileSubmenu();
 });
 var scrollToHeading = function () {
   $(".table-of-content").on("click", "a", function () {
@@ -1388,19 +1389,13 @@ function initMegaMenu() {
     }
   });
 }
-//sleder Resent cases new mobile
-$(window).on("load resize", function () {
-  if ($(window).width() < 991) {
-    showMobileSubmenu();
-  }
-});
 
 // show mobile submenu
 function showMobileSubmenu() {
   jQuery('[data-action="arrow"]').on("click", function (e) {
     e.preventDefault();
 
-    const parent = jQuery(this).parent();
+    const parent = jQuery(this).closest(".menu-item");
     const subMenu = parent.children(".sub-menu"); // <ul>
 
     if (parent.hasClass("opened")) {
