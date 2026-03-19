@@ -74,8 +74,11 @@
     }
     @at-root .section-hero-book & {
       padding: 1rem 8px 1rem;
-      height: 56px;
+      height: 49px;
       // line-height: 1.5;
+    }
+    @at-root .block-banner & {
+      height: 49px;
     }
   }
   &-action {
@@ -90,43 +93,8 @@
     .btn.btn-blue {
       padding: 1rem;
       min-width: auto;
+      line-height: 1;
       @include border-radius(0 4px 4px 0);
-    }
-
-    //stripe
-    .wpecpp {
-      &-container {
-        width: auto;
-      }
-      &-form {
-        height: 100%;
-        .wpecpp-stripe-button-container {
-          margin-top: 0;
-          height: 100%;
-          .wpecpp-stripe-button {
-            display: flex;
-            padding: 0;
-            margin-bottom: 0;
-            background-image: none;
-            box-shadow: none;
-            height: 100%;
-            span {
-              padding: 1rem;
-              font-family: $f-sto-r;
-              background-color: $color-blue;
-              background-image: none;
-              border-color: $color-blue;
-              font-size: 15px;
-              height: 56px;
-              // line-height: 1.5;
-              @include border-radius(0 4px 4px 0);
-              &:before {
-                content: none;
-              }
-            }
-          }
-        }
-      }
     }
   }
 }

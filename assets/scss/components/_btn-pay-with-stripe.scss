@@ -1,0 +1,38 @@
+//stripe
+.wpecpp {
+  &-container {
+    width: auto;
+  }
+  &-form {
+    height: 100%;
+    .wpecpp-stripe-button-container {
+      margin-top: 0;
+      height: 100%;
+      .wpecpp-stripe-button {
+        display: flex;
+        padding: 0;
+        margin-bottom: 0;
+        background-image: none;
+        box-shadow: none;
+        // height: 100%;
+        span {
+          padding: 1rem;
+          font-family: $f-sto-r;
+          background-color: $color-blue;
+          background-image: none;
+          border-color: $color-blue;
+          font-size: 15px;
+          height: 49px;
+          @include border-radius(0 4px 4px 0);
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+  &-payment-message {
+    font-size: 0.625rem;
+    line-height: 110%;
+  }
+}
