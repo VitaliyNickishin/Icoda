@@ -136,9 +136,9 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                   </ul>
                  </li>
                  
-                 <!-- <li class="sub-menu-col third-col"> -->
-                  <?php /* get_template_part('template-parts/_partials/book-info'); */?>
-                 <!-- </li> -->
+                 <li class="sub-menu-col third-col">
+                  <?php get_template_part('template-parts/_partials/book-info'); ?>
+                 </li>
                  
               </ul>
 
@@ -187,12 +187,12 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                 <li class="sub-menu-col third-col">
                   <ul class="sub-menu-media">
                     <li>
-                      <div class="media-logo d-flex" title="Top Crypto Marketing Agency 2025">
+                      <div class="media-logo d-flex" title="Top Crypto Marketing Agency 2026">
                         <picture>
-                            <img data-src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Top Crypto Marketing Agency 2025" src="/wp-content/uploads/2024/11/clutch-logo.svg" class=" lazyloaded">
+                            <img data-src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Top Crypto Marketing Agency 2026" src="/wp-content/uploads/2024/11/clutch-logo.svg" class=" lazyloaded">
                         </picture>
                         <span class="media-title">
-                          <?php _e('Top Crypto Marketing Agency 2025', 'icoda'); ?>
+                          <?php _e('Top Crypto Marketing Agency 2026', 'icoda'); ?>
                         </span>
                       </div>
                     </li>

@@ -15,6 +15,11 @@
         justify-content: flex-end;
       }
     }
+    @at-root .mega-menu & {
+      img {
+        box-shadow: 5px 5px 15px 5px #ccc;
+      }
+    }
   }
   &-quote {
     position: static;
