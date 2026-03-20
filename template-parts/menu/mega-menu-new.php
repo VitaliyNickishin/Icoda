@@ -137,7 +137,7 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                  </li>
                  
                  <li class="sub-menu-col third-col">
-                  <?php get_template_part('template-parts/_partials/book-info'); ?>
+                  <?php get_template_part('template-parts/_partials/book-info', null, ['is_mega_menu' => true]); ?>
                  </li>
                  
               </ul>

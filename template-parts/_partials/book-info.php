@@ -1,5 +1,7 @@
 <?php
 $icoda_gb_book_info = get_field('icoda_gb_book_info', 'option');
+$is_mega_menu = $args['is_mega_menu'] ?? false;
+$button_url = empty($icoda_gb_book_info['link_to_book_page']) ? '#' : $icoda_gb_book_info['link_to_book_page'];
 ?>
 <div class="book-info position-relative">
 							
@@ -19,7 +21,13 @@ $icoda_gb_book_info = get_field('icoda_gb_book_info', 'option');
     </div>
     <div class="book-quote">
         <p class="quote position-relative"><?php echo $icoda_gb_book_info['book_quote']; ?></p>
-        <?php get_template_part('template-parts/_partials/book-price'); ?>
+        <?php if ($is_mega_menu): ?>
+            <a href="<?php echo $button_url; ?>" class="btn btn-blue mt-2">
+                <?php echo $icoda_gb_book_info['button_text']; ?>
+            </a>
+        <?php else: ?>
+            <?php get_template_part('template-parts/_partials/book-price'); ?>
+        <?php endif; ?>
     </div>
 
 </div>
