@@ -825,6 +825,24 @@ jQuery(document).ready(function ($) {
           if ($(form).hasClass("form-with-captcha")) {
             grecaptcha.execute();
           } else {
+
+            if($(form).hasClass("block-banner-email__form")) {
+              if($(form).find('input[name="page_url"]').length) {
+                  $(form).find('input[name="page_url"]').val(window.location.href);
+              } else {
+                  $(form).append('<input type="hidden" name="page_url" value="" />');
+                  $(form).find('input[name="page_url"]').val(window.location.href);
+              }
+
+              const formName = $(form).closest('.block-banner-email__content').find('.banner-title').text();
+              if($(form).find('input[name="form_name"]').length) {
+                  $(form).find('input[name="form_name"]').val(formName);
+              } else {
+                  $(form).append('<input type="hidden" name="form_name" value="" />');
+                  $(form).find('input[name="form_name"]').val(formName);
+              }
+            }
+
             $(form).find('button[type="submit"]').prop("disabled", true);
             var old_text = $(form).find('button[type="submit"]').text();
             $(form).find('button[type="submit"]').text("Sending ...");

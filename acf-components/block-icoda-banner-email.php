@@ -27,6 +27,8 @@ $block_banner = get_field('block_banner');
                         <button class="btn btn-blue send-email" type="submit">
                             <?php echo $block_banner['banner_btn_text']; ?>
                         </button>
+
+                        <input type="hidden" name="offer_type" value="<?php echo $block_banner['banner_offer_type'] ?? 'unset'; ?>" />
                     </form>
                 <?php else : ?>
                     <button class="btn btn-blue stripe-pay-btn" type="button">
