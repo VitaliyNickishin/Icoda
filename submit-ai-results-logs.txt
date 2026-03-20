@@ -1,0 +1,176 @@
+2026-03-16 15:23:36
+Array
+(
+    [res_email] => max+1@test.com
+    [res_mail_send] => 1
+)
+
+
+2026-03-17 09:48:38
+Array
+(
+    [res_email] => mg@icoda.io
+    [res_mail_send] => 1
+)
+
+
+2026-03-17 09:49:06
+Array
+(
+    [res_email] => glamaxi@mail.ru
+    [res_mail_send] => 1
+)
+
+
+2026-03-17 09:50:11
+Array
+(
+    [res_email] => mg@icoda.io
+    [res_mail_send] => 1
+)
+
+
+2026-03-17 09:50:20
+Array
+(
+    [res_email] => mg@icoda.io
+    [res_mail_send] => 1
+)
+
+
+2026-03-17 10:05:48
+Array
+(
+    [res_email] => glamaxi@mail.ru
+    [res_mail_send] => 1
+)
+
+
+2026-03-17 11:34:56
+Array
+(
+    [res_email] => glamaxi@mail.ru
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 05:44:26
+Array
+(
+    [res_email] => mg@icoda.io
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 11:03:16
+Array
+(
+    [res_email] => mg@icoda.io
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 11:07:47
+Array
+(
+    [res_email] => glamaxi@mail.ru
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 11:19:31
+Array
+(
+    [res_email] => glamaxi@mail.ru
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 11:51:06
+Array
+(
+    [res_email] => glamaxi@mail.ru
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 11:59:04
+Array
+(
+    [res_email] => glamaxi@mail.ru
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 12:07:32
+Array
+(
+    [res_email] => glamaxi@mail.ru
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 13:25:30
+Array
+(
+    [res_email] => mak@icoda.io
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 13:30:00
+Array
+(
+    [res_email] => mak@icoda.io
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 13:54:48
+Array
+(
+    [res_email] => max_dev@test.com
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 13:56:25
+Array
+(
+    [res_email] => max_dev+1@test.com
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 13:57:54
+Array
+(
+    [res_email] => max_dev+2@test.com
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 14:07:54
+Array
+(
+    [res_email] => max_dev+3@test.com
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 14:13:18
+Array
+(
+    [res_email] => sha@icoda.io
+    [res_mail_send] => 1
+)
+
+
+2026-03-20 18:42:01
+Array
+(
+    [res_email] => afafddsdfd@gmial.com
+    [res_mail_send] => 1
+)
+
+
