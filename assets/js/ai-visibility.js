@@ -378,13 +378,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //modal get-detailed-report and report requested
   function initDetailedReportModal() {
+    const modal1 = $("#get-detailed-report");
+    const modal2 = $("#report-requested");
     const form = $(".form-detailed-report");
     const emailInput = $(".input-email");
     const sendBtn = $(".send-report");
     const outputEmail = $(".output-email");
-
-    const modal1 = $("#get-detailed-report");
-    const modal2 = $("#report-requested");
 
     if (!form.length) return;
 
@@ -392,9 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initEmailValidation(emailInput, sendBtn, emailRegex);
 
-    initFormSubmit(form, emailInput, outputEmail, modal1);
-
-    initModalSwitch(modal1, modal2);
+    initFormSubmit(form, emailInput, outputEmail, modal1, modal2);
 
     initResetOnClose(modal2, form, emailInput, sendBtn);
   }
@@ -411,15 +408,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   //submit email
-  function initFormSubmit(form, input, outputEmail, modal1) {
+  function initFormSubmit(form, input) {
     form.on("submit", async function (e) {
       e.preventDefault();
       const email = input.val().trim();
+      const modal1 = $("#get-detailed-report");
+      const modal2 = $("#report-requested");
+      const btn = $(".btn.send-report");
+      const outputEmail = $(".output-email");
 
-      if (!email || !email.includes("@")) return alert("Enter valid email");
-      const btn = jQuery(".btn.send-report");
-      btn.prop("disabled", true);
-      btn.text("Sending...");
+      btn.prop("disabled", true).text("Sending...");
+
+      // setTimeout(() => {
+      //   modal1.modal("hide");
+      // }, 2000);
+
       try {
         const res = await fetch(`${API_URL}/email-report`, {
           method: "POST",
@@ -432,35 +435,35 @@ document.addEventListener("DOMContentLoaded", () => {
           }),
         });
 
-        sendDataToBitrix(email, currentData, outputEmail, modal1);
+        const apiResponse = await res.json();
+        console.log("apiResponse:", apiResponse);
+
+        if (!apiResponse.success) {
+          throw new Error("API failed");
+        }
+
+        await sendDataToBitrix(email, currentData, outputEmail, modal1, modal2);
       } catch (err) {
         alert("Failed to send: " + err.message);
       } finally {
-        btn.prop("disabled", false);
-        btn.text("Send Report");
+        btn.prop("disabled", false).text("Send Report");
       }
     });
   }
 
-  function sendDataToBitrix(email, data, outputEmail, modal1) {
-    $.post(
-      "/wp-content/themes/icoda/submit-ai-results.php",
-      {
-        email: email,
-        data: data,
-      },
-      function (data) {
-        outputEmail.text(email);
-        modal1.modal("hide");
-        console.log(data);
-      },
-    );
-  }
-
-  // open modal report-requested
-  function initModalSwitch(modal1, modal2) {
-    modal1.on("hidden.bs.modal", function () {
-      modal2.modal("show");
+  function sendDataToBitrix(email, data, outputEmail, modal1, modal2) {
+    return new Promise((resolve, reject) => {
+      $.post(
+        "/wp-content/themes/icoda/submit-ai-results.php",
+        { email, data },
+        function (response) {
+          outputEmail.text(email);
+          modal1.modal("hide");
+          modal2.modal("show");
+          resolve(response);
+          console.log("responseBitrix:", response);
+        },
+      ).fail(reject);
     });
   }
 
@@ -1038,7 +1041,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
     `;
   }
-
+  //btn download pdf
   jQuery("body").on("click", ".btn-download", downloadPDF);
   async function downloadPDF(event) {
     event.preventDefault();
