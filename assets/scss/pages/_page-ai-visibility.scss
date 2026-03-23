@@ -667,8 +667,18 @@
   }
 }
 
-.is-unlocked {
-  filter: blur(6px);
+.is-locked {
+  // filter: blur(6px);
+  @each $name, $data in $status-colors {
+    &.status-#{$name} {
+      .title,
+      .text-muted,
+      .text-default,
+      .recommendation-info {
+        filter: blur(6px);
+      }
+    }
+  }
 }
 
 //8report
@@ -679,17 +689,17 @@
       gap: 1.5rem;
     }
   }
-  .report-card {
-    @each $name, $data in $status-colors {
-      &.status-#{$name}:not(.status-excellent) {
-        .title,
-        .text-muted,
-        .text-default {
-          filter: blur(6px);
-        }
-      }
-    }
-  }
+  // .report-card {
+  //   @each $name, $data in $status-colors {
+  //     &.status-#{$name}:not(.status-excellent) {
+  //       .title,
+  //       .text-muted,
+  //       .text-default {
+  //         filter: blur(6px);
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .report-card {
@@ -792,17 +802,17 @@
       gap: 1.5rem;
     }
   }
-  .report-card {
-    @each $name, $data in $status-colors {
-      &.status-poor {
-        .title,
-        .text-muted,
-        .recommendation-info {
-          filter: blur(6px);
-        }
-      }
-    }
-  }
+  // .report-card {
+  //   @each $name, $data in $status-colors {
+  //     &.status-poor {
+  //       .title,
+  //       .text-muted,
+  //       .recommendation-info {
+  //         filter: blur(6px);
+  //       }
+  //     }
+  //   }
+  // }
   .recommendation-info {
     gap: 4px;
     @include mediaMin(992) {

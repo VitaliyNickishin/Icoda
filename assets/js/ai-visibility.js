@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const isValidUrl = (value) => {
-    const pattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}$/i;
+    const pattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}\/?$/i;
     // try {
     //   const url = value.startsWith("http") ? value : "https://" + value;
 
@@ -416,6 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const modal2 = $("#report-requested");
       const btn = $(".btn.send-report");
       const outputEmail = $(".output-email");
+      const isLockedCard = document.querySelectorAll(".is-locked");
 
       btn.prop("disabled", true).text("Sending...");
 
@@ -442,7 +443,14 @@ document.addEventListener("DOMContentLoaded", () => {
           throw new Error("API failed");
         }
 
-        await sendDataToBitrix(email, currentData, outputEmail, modal1, modal2);
+        await sendDataToBitrix(
+          email,
+          currentData,
+          outputEmail,
+          modal1,
+          modal2,
+          isLockedCard,
+        );
       } catch (err) {
         alert("Failed to send: " + err.message);
       } finally {
@@ -451,7 +459,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function sendDataToBitrix(email, data, outputEmail, modal1, modal2) {
+  function sendDataToBitrix(
+    email,
+    data,
+    outputEmail,
+    modal1,
+    modal2,
+    isLockedCard,
+  ) {
     return new Promise((resolve, reject) => {
       $.post(
         "/wp-content/themes/icoda/submit-ai-results.php",
@@ -460,6 +475,9 @@ document.addEventListener("DOMContentLoaded", () => {
           outputEmail.text(email);
           modal1.modal("hide");
           modal2.modal("show");
+          isLockedCard.forEach((card) => {
+            card.classList.remove("is-locked");
+          });
           resolve(response);
           console.log("responseBitrix:", response);
         },
@@ -833,11 +851,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //8. Content Gaps
+
     if (!data.content_gaps.length) {
-      jQuery(".report-gaps").hide();
+      $(".report-gaps").hide();
     } else {
-      jQuery(".report-gaps").show();
-      jQuery(".report-gaps").find(".report-card").remove();
+      $(".report-gaps").show();
+
+      $(".report-gaps").find(".report-card").remove();
       data.content_gaps.forEach(function (element) {
         let impactClass = "excellent";
         if (element.impact === "high") {
@@ -845,8 +865,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (element.impact === "medium") {
           impactClass = "fair";
         }
-        jQuery(`
-          <div class="report-card surface p-3 d-flex flex-column status-${impactClass}">
+
+        let extraClass = "";
+
+        if (impactClass !== "excellent") {
+          extraClass = "is-locked";
+        }
+        $(`
+          <div class="report-card surface p-3 d-flex flex-column status-${impactClass} ${extraClass}">
                     <div class="report-card-header d-flex flex-lg-row flex-column-reverse justify-content-lg-between align-items-lg-center">
                         <h3 class="title">${element.title}</h3>
                         <div>
@@ -861,7 +887,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
 
                 </div>
-          `).insertBefore(jQuery(".report-gaps").find(".content-gaps-btn"));
+          `).insertBefore($(".report-gaps").find(".content-gaps-btn"));
       });
     }
     //9. Recommendations
@@ -999,18 +1025,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function generateRecommendCard(element) {
+    let extraClass = "";
     let impactClass = "excellent";
     if (element.priority === "high") {
       impactClass = "poor";
+      extraClass = "is-locked";
     } else if (element.priority === "medium") {
       impactClass = "fair";
     }
+
     return `
-    <div class="report-card surface p-3 d-flex flex-column status-${impactClass}">
+    <div class="report-card surface p-3 d-flex flex-column status-${impactClass} ${extraClass}">
             <div class="report-card-header d-flex flex-lg-row flex-column-reverse justify-content-lg-between align-items-lg-center">
                 <h3 class="title">${element.title}</h3>
                 <div>
-                    <span class="badge-status">${element.difficulty}</span>
+                    <span class="badge-status">${element.priority}</span>
                 </div>
             </div>
             <div class="text-muted">
