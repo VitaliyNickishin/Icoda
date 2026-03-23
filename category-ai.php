@@ -81,9 +81,23 @@ get_header();
                             </div>
 
                             <div class="blog-card-footer">
-                                <div class="author-meta d-flex justify-content-between align-items-center">                                    
+                                <div class="author-meta">
+                                    <span class="author-name">
+                                        <?php
+                                        echo !in_array($author_id, [8, 9, 10, 6, 24, 21, 22, 28, 27, 29, 31]) ? 'ICODA' : apply_filters(
+                                            'wpml_translate_single_string',
+                                            get_the_author_meta('display_name', $author_id),
+                                            'Authors',
+                                            'display_name_' . $author_id,
+                                            ICL_LANGUAGE_CODE
+                                        );
+                                        ?>
+                                    </span>
+                                    ·
                                     <span class="date-publish"><?php echo get_the_date('F j, Y', get_the_ID()); ?></span>
                                 </div>
+
+                                <?php get_template_part('template-parts/article-card-meta-info'); ?>
                             </div>
 
                         </div>
