@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const modal2 = $("#report-requested");
       const btn = $(".btn.send-report");
       const outputEmail = $(".output-email");
-      const isLockedCard = document.querySelectorAll(".is-locked");
+      const isLockedCard = document.querySelectorAll(".report-card.is-locked");
 
       btn.prop("disabled", true).text("Sending...");
 
@@ -459,6 +459,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function unlockCards(cards) {
+    if (!cards || !cards.length) return;
+
+    cards.forEach((card) => {
+      card.classList.remove("is-locked");
+
+      // decode data
+      const title = card.dataset.title
+        ? decodeURIComponent(card.dataset.title)
+        : "";
+      const description = card.dataset.description
+        ? decodeURIComponent(card.dataset.description)
+        : "";
+
+      const action = card.dataset.action
+        ? decodeURIComponent(card.dataset.action)
+        : "";
+
+      const category = card.dataset.category
+        ? decodeURIComponent(card.dataset.category)
+        : "";
+
+      const time_estimate = card.dataset.time_estimate
+        ? decodeURIComponent(card.dataset.time_estimate)
+        : "";
+
+      const roi_score = card.dataset.roi_score
+        ? decodeURIComponent(card.dataset.roi_score)
+        : "";
+
+      const impact = card.dataset.impact
+        ? decodeURIComponent(card.dataset.impact)
+        : "";
+
+      // find elem
+      const titleEl = card.querySelector(".title");
+      const descEl = card.querySelector(".text-muted");
+      const actionEl = card.querySelector(".text-default");
+
+      const categoryEl = card.querySelector(".category");
+      const timeEstimateEl = card.querySelector(".time-estimate");
+      const roiScoreEl = card.querySelector(".roi-score");
+      const impactEl = card.querySelector(".impact-info");
+
+      // return true content
+      if (titleEl) titleEl.textContent = title;
+      if (descEl) descEl.textContent = description;
+      if (actionEl) actionEl.textContent = action;
+      if (categoryEl) categoryEl.textContent = category;
+      if (timeEstimateEl) timeEstimateEl.textContent = time_estimate;
+      if (roiScoreEl) roiScoreEl.textContent = roi_score;
+      if (impactEl) impactEl.textContent = impact;
+    });
+  }
+
   function sendDataToBitrix(
     email,
     data,
@@ -475,9 +530,7 @@ document.addEventListener("DOMContentLoaded", () => {
           outputEmail.text(email);
           modal1.modal("hide");
           modal2.modal("show");
-          isLockedCard.forEach((card) => {
-            card.classList.remove("is-locked");
-          });
+          unlockCards(isLockedCard);
           resolve(response);
           console.log("responseBitrix:", response);
         },
@@ -866,24 +919,40 @@ document.addEventListener("DOMContentLoaded", () => {
           impactClass = "fair";
         }
 
-        let extraClass = "";
+        const isLocked = impactClass !== "excellent";
 
-        if (impactClass !== "excellent") {
-          extraClass = "is-locked";
-        }
+        const title = isLocked
+          ? "Lorem ipsum dolor sit amet..."
+          : element.title;
+
+        const impact = element.impact;
+
+        const description = isLocked
+          ? "Lorem ipsum dolor sit amet..."
+          : element.description;
+
+        const action = isLocked
+          ? "Lorem ipsum dolor sit amet..."
+          : element.action;
+
+        const extraClass = isLocked ? "is-locked" : "";
         $(`
-          <div class="report-card surface p-3 d-flex flex-column status-${impactClass} ${extraClass}">
+          <div class="report-card surface p-3 d-flex flex-column status-${impactClass} ${extraClass}" 
+          data-title="${encodeURIComponent(element.title)}"
+          data-description="${encodeURIComponent(element.description)}"
+          data-action="${encodeURIComponent(element.action)}"
+          >
                     <div class="report-card-header d-flex flex-lg-row flex-column-reverse justify-content-lg-between align-items-lg-center">
-                        <h3 class="title">${element.title}</h3>
+                        <h3 class="title">${title}</h3>
                         <div>
-                            <span class="badge-status">${element.impact}</span>
+                            <span class="badge-status">${impact}</span>
                         </div>
                     </div>
                     <div class="text-muted">
-                        ${element.description}
+                        ${description}
                     </div>
                     <div class="text-default mb-0">
-                        ${element.action}
+                        ${action}
                     </div>
 
                 </div>
@@ -1025,44 +1094,68 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function generateRecommendCard(element) {
-    let extraClass = "";
     let impactClass = "excellent";
     if (element.priority === "high") {
       impactClass = "poor";
-      extraClass = "is-locked";
     } else if (element.priority === "medium") {
       impactClass = "fair";
     }
+    const isLocked = impactClass === "poor";
+
+    const title = isLocked ? "Lorem ipsum dolor sit amet..." : element.title;
+
+    const priority = element.priority;
+
+    const category = isLocked
+      ? "Lorem ipsum dolor sit amet..."
+      : element.category;
+
+    const description = isLocked
+      ? "Lorem ipsum dolor sit amet..."
+      : element.description;
+
+    const time_estimate = isLocked ? "Lorem..." : element.time_estimate;
+    const roi_score = isLocked ? "Lorem..." : element.roi_score;
+    const impact = isLocked ? "Lorem..." : element.impact;
+
+    const extraClass = isLocked ? "is-locked" : "";
 
     return `
-    <div class="report-card surface p-3 d-flex flex-column status-${impactClass} ${extraClass}">
+    <div class="report-card surface p-3 d-flex flex-column status-${impactClass} ${extraClass}"
+      data-title="${encodeURIComponent(element.title)}"
+      data-category="${encodeURIComponent(element.category)}"
+      data-description="${encodeURIComponent(element.description)}"
+      data-time-estimate="${encodeURIComponent(element.time_estimate)}"
+      data-roi-score="${encodeURIComponent(element.roi_score)}"
+      data-timpact="${encodeURIComponent(element.impact)}"
+    >
             <div class="report-card-header d-flex flex-lg-row flex-column-reverse justify-content-lg-between align-items-lg-center">
-                <h3 class="title">${element.title}</h3>
+                <h3 class="title">${title}</h3>
                 <div>
-                    <span class="badge-status">${element.priority}</span>
+                    <span class="badge-status">${priority}</span>
                 </div>
             </div>
             <div class="text-muted">
                 <div>
                     ID
-                    <span>${element.category}</span>
+                    <span class="category">${category}</span>
                 </div>
-                <div>
-                    ${element.description}
+                <div class="description">
+                    ${description}
                 </div>
             </div>
 
             <div class="recommendation-info d-flex align-items-lg-center flex-column flex-lg-row">
                 <div class="slot-info ci ci-clock">
-                    <span>${element.time_estimate}</span>
+                    <span class="time-estimate">${time_estimate}</span>
                 </div>
                 <div class="slot-info ci ci-roi">
                     <span>ROI:</span>
-                    <span>${element.roi_score}/10</span>
+                    <span class="roi-score">${roi_score}/10</span>
                 </div>
                 <div class="slot-info ci ci-impact">
                     <span>Impact:</span>
-                    <span>${element.impact}/20</span>
+                    <span class="impact-info">${impact}/20</span>
                 </div>
 
             </div>
