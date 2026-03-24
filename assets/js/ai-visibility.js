@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
     url = url.replace(/^www\./, "");
 
     // keep only domen
-    url = url.split("/")[0];
+    // url = url.split("/")[0];
 
     document.querySelectorAll(".entered-url").forEach((el) => {
       el.textContent = url;
