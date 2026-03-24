@@ -47,10 +47,6 @@
                                 <path class="gauge-fill"
                                     d="M35 155 A110 110 0 0 1 260 155" />
                                 <circle class="gauge-dot" r="4" />
-                                <rect class="gauge-pointer"
-                                    width="2"
-                                    height="101"
-                                    rx="2" />
                             </svg>
 
                             <div class="gauge-value">0</div>

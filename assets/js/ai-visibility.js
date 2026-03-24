@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const isValidUrl = (value) => {
-    const pattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}\/?$/i;
+    const pattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}(\/.*)?$/i;
     // try {
     //   const url = value.startsWith("http") ? value : "https://" + value;
 
@@ -229,7 +229,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const fill = gauge.querySelector(".gauge-fill");
     const dot = gauge.querySelector(".gauge-dot");
-    const pointer = gauge.querySelector(".gauge-pointer");
     const valueEl = gauge.querySelector(".gauge-value");
 
     const totalLength = fill.getTotalLength();
@@ -247,24 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dot.setAttribute("cx", point.x);
     dot.setAttribute("cy", point.y);
-
-    const delta = 0.01;
-    const prev = fill.getPointAtLength(Math.max(progressLength - delta, 0));
-
-    const angle = Math.atan2(point.y - prev.y, point.x - prev.x);
-    const percent = Math.max(0, Math.min(100, value));
-    const isEdge = percent <= 0 || percent >= 100;
-
-    pointer.setAttribute("x", point.x);
-    pointer.setAttribute("y", point.y);
-    pointer.style.fill = color;
-    pointer.setAttribute(
-      "transform",
-      `rotate(${(angle * 180) / Math.PI} ${point.x} ${point.y})`,
-    );
-
-    // arrow
-    pointer.style.opacity = isEdge ? "0" : "1";
 
     valueEl.textContent = value;
   }
