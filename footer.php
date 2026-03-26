@@ -314,9 +314,9 @@
                             type="text"
                             class="form-control mb-3 input-email"
                             placeholder="your@email.com">
-                        <!-- <div class="invalid-feedback">
-                            <?php/* _e('Failed to analyze. Please check the URL and try again.', 'icoda'); */?>
-                        </div> -->
+                            <!-- <div class="invalid-feedback"> -->
+                            <?php // _e('Failed to analyze. Please check the URL and try again.', 'icoda'); ?>
+                            <!-- </div> -->
                     </div>
                     
                     <button class="btn btn-blue disabled send-report" type="submit" disabled>
