@@ -42,7 +42,7 @@
     display: block;
     transition: all 0.3s;
     height: 200px;
-    @include border-radius( 1rem 1rem 0 0);
+    @include border-radius(1rem 1rem 0 0);
   }
 
   .title-wrap {
@@ -62,7 +62,7 @@
     align-items: baseline;
     transition: all 0.3s;
     flex: 1 0 auto;
-    @include border-radius( 0 0 1rem 1rem);
+    @include border-radius(0 0 1rem 1rem);
 
     span {
       transition: all 0.3s;
@@ -137,5 +137,14 @@
     @include mediaMax(991) {
       display: none;
     }
+  }
+}
+
+.authors-slider {
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    flex-grow: 0;
   }
 }

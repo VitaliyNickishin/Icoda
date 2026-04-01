@@ -825,21 +825,31 @@ jQuery(document).ready(function ($) {
           if ($(form).hasClass("form-with-captcha")) {
             grecaptcha.execute();
           } else {
-
-            if($(form).hasClass("block-banner-email__form")) {
-              if($(form).find('input[name="page_url"]').length) {
-                  $(form).find('input[name="page_url"]').val(window.location.href);
+            if ($(form).hasClass("block-banner-email__form")) {
+              if ($(form).find('input[name="page_url"]').length) {
+                $(form)
+                  .find('input[name="page_url"]')
+                  .val(window.location.href);
               } else {
-                  $(form).append('<input type="hidden" name="page_url" value="" />');
-                  $(form).find('input[name="page_url"]').val(window.location.href);
+                $(form).append(
+                  '<input type="hidden" name="page_url" value="" />',
+                );
+                $(form)
+                  .find('input[name="page_url"]')
+                  .val(window.location.href);
               }
 
-              const formName = $(form).closest('.block-banner-email__content').find('.banner-title').text();
-              if($(form).find('input[name="form_name"]').length) {
-                  $(form).find('input[name="form_name"]').val(formName);
+              const formName = $(form)
+                .closest(".block-banner-email__content")
+                .find(".banner-title")
+                .text();
+              if ($(form).find('input[name="form_name"]').length) {
+                $(form).find('input[name="form_name"]').val(formName);
               } else {
-                  $(form).append('<input type="hidden" name="form_name" value="" />');
-                  $(form).find('input[name="form_name"]').val(formName);
+                $(form).append(
+                  '<input type="hidden" name="form_name" value="" />',
+                );
+                $(form).find('input[name="form_name"]').val(formName);
               }
             }
 
@@ -1182,6 +1192,7 @@ jQuery(document).ready(function ($) {
   initMegaMenu();
   scrollVerticalMenu();
   initSliderListLeadership();
+  initSliderAuthors();
   initAccordionFaq();
   initSliderPathList();
   initSliderPathListFour();
@@ -1196,6 +1207,7 @@ jQuery(document).ready(function ($) {
   initSliderStories();
   initSliderRelatedArticles();
   initSliderRelatedArticlesRtl();
+  initSliderBlogArticles();
   initSliderTestimonials();
   initSlideLlm();
   initSliderFourBox();
@@ -1648,6 +1660,44 @@ var initSliderListLeadership = function () {
   });
 };
 
+const initSliderAuthors = () => {
+  const isMobile = $(window).width() < 991;
+
+  $(".authors-slider").each(function () {
+    const $slider = $(this);
+
+    if (isMobile) {
+      if (!$slider.hasClass("slick-initialized")) {
+        $slider.slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          swipeToSlide: $("body").hasClass("rtl") ? false : true,
+          infinite: true,
+          rtl: $("body").hasClass("rtl") ? true : false,
+          cssEase: "linear",
+          arrows: false,
+          variableWidth: true,
+          speed: 500,
+          responsive: [
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 2,
+                variableWidth: true,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      }
+    } else {
+      if ($slider.hasClass("slick-initialized")) {
+        $slider.slick("unslick");
+      }
+    }
+  });
+};
+
 //animated title section-hero
 $(window).on("load resize", function () {
   if ($(window).width() > 991) {
@@ -1912,6 +1962,7 @@ $(window).on("load resize", function () {
   initSliderHeroAiSeo();
   initBoxContentSlider();
   initSliderFourBox();
+  initSliderAuthors();
 });
 const initSliderHeroAiSeo = () => {
   if ($(".hero-slider-ai-seo").length > 0) {
@@ -1940,6 +1991,46 @@ const initSliderHeroAiSeo = () => {
       $(".hero-slider-ai-seo.slick-initialized").slick("unslick");
     }
   }
+};
+
+const initSliderBlogArticles = () => {
+  const $sliders = $(".slider-blog-articles");
+
+  if (!$sliders.length) return;
+
+  $sliders.each(function () {
+    const $slider = $(this);
+    const $controls = $slider
+      .closest(".section-blog-articles")
+      .find(".slider-control-blog-articles");
+
+    $slider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      swipeToSlide: $("body").hasClass("rtl") ? false : true,
+      infinite: true,
+      dots: false,
+      rtl: $("body").hasClass("rtl") ? true : false,
+      appendArrows: $controls,
+      speed: 500,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  });
 };
 
 const initSliderRelatedArticles = () => {

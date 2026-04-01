@@ -72,6 +72,7 @@
 @import "pages/page-book";
 @import "pages/page-ai-seo";
 @import "pages/page-ai-visibility";
+@import "pages/page-blog";
 
 //-------------templates-parts--------------------
 @import "template-parts/bc-block";
@@ -99,6 +100,7 @@
 @import "template-parts/related-articles";
 @import "template-parts/event-filters";
 @import "template-parts/section-path";
+@import "template-parts/has-content-guttenberg";
 
 //-------------components--------------------
 @import "components/article"; //second-main

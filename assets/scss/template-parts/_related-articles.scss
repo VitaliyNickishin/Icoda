@@ -71,6 +71,10 @@
       margin-left: -8px;
       margin-right: -8px;
     }
+    @at-root .page-blog & {
+      margin-left: -8px;
+      margin-right: -8px;
+    }
   }
 
   .author-article {
@@ -89,6 +93,10 @@
       padding-right: 8px;
     }
     @at-root .page-ai-seo & {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    @at-root .page-blog & {
       padding-left: 8px;
       padding-right: 8px;
     }
@@ -113,6 +121,9 @@
         margin-bottom: 0;
       }
       @at-root .page-ai-seo & {
+        margin-bottom: 0;
+      }
+      @at-root .page-blog & {
         margin-bottom: 0;
       }
       .blog-img img {
@@ -144,6 +155,11 @@
         border-top-right-radius: 8px;
         height: 194px;
       }
+      @at-root .page-blog & {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        height: 194px;
+      }
       @include mediaMax(450) {
         height: auto;
       }
@@ -160,6 +176,9 @@
         padding: 12px 8px;
       }
       @at-root .page-ai-seo & {
+        padding: 12px 8px;
+      }
+      @at-root .page-blog & {
         padding: 12px 8px;
       }
       .tags {
@@ -221,6 +240,13 @@
             color: $color-dark-blue;
             line-height: 150%;
           }
+          @at-root .page-blog & {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 20px;
+            color: $color-dark-blue;
+            line-height: 150%;
+          }
         }
       }
       .article-except {
@@ -237,6 +263,9 @@
           margin-bottom: 12px;
         }
         @at-root .page-ai-seo & {
+          margin-bottom: 12px;
+        }
+        @at-root .page-blog & {
           margin-bottom: 12px;
         }
         p {
@@ -256,6 +285,10 @@
             color: $color-dark-gray;
           }
           @at-root .page-ai-seo & {
+            line-height: 175%;
+            color: $color-dark-gray;
+          }
+          @at-root .page-blog & {
             line-height: 175%;
             color: $color-dark-gray;
           }
@@ -284,6 +317,11 @@
             color: #aabde7;
           }
           @at-root .page-ai-seo & {
+            font-size: 15px;
+            line-height: 175%;
+            color: #aabde7;
+          }
+          @at-root .page-blog & {
             font-size: 15px;
             line-height: 175%;
             color: #aabde7;

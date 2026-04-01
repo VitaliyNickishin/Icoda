@@ -190,13 +190,24 @@
   .has-image {
     @at-root .block-post-two-sliders-in-wrap & {
       @include mediaMin(992) {
-        width: 140px;
+        max-width: 140px;
         position: absolute;
         right: -62px;
         top: -40px;
       }
     }
   }
+  //removed after change second, third image in Resources slider
+  &[data-slick-index="0"],
+  &[data-slick-index="3"] {
+    img {
+      @include mediaMin(992) {
+        padding: 10px;
+        @include border-radius(15px);
+      }
+    }
+  }
+
   &-second {
     &.services-card {
       @at-root .block-post-two-sliders-in-wrap & {
