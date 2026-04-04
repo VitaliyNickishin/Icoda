@@ -32,6 +32,7 @@
 
                 <div class="progress-analyzing-step mt-2">Checking robots.txt</div>
             </div>
+            <div id="errorMessage" class="alert alert-danger mt-3 d-none"></div>
         </div>
     </div>
 </section>

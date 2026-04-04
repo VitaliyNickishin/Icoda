@@ -13,16 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const isValidUrl = (value) => {
     const pattern = /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}(\/.*)?$/i;
-    // try {
-    //   const url = value.startsWith("http") ? value : "https://" + value;
 
-    //   const parsed = new URL(url);
-
-    //   return parsed;
-    // } catch {
-    //   return false;
-    // }
-    // console.log("isValidUrl", pattern.test(value.trim()));
     return pattern.test(value.trim());
   };
 
@@ -30,14 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = form.querySelector(".site-url");
     const button = form.querySelector("button[type='submit']");
     const feedback = form.querySelector(".invalid-feedback");
-    const step1 = document.querySelector(".analyzer-step-1");
-    const step2 = document.querySelector(".analyzer-step-2");
-
     const container = document.querySelector(".progress-analyzing-container");
-    const fill = container.querySelector(".progress-fill");
-    const dotsWrapper = container.querySelector(".progress-dots");
-
-    const stepText = container.querySelector(".progress-analyzing-step");
 
     if (!input || !button || !feedback) return;
 
@@ -90,90 +74,88 @@ document.addEventListener("DOMContentLoaded", () => {
 
       updateEnteredUrl();
 
-      let currentStep = 0;
-
-      // create dots dynamically based on steps length
-      function initDots() {
-        dotsWrapper.innerHTML = "";
-
-        steps.forEach((_, index) => {
-          const dot = document.createElement("div");
-          dot.classList.add("progress-dot");
-          if (index === 0) {
-            dot.classList.add("active");
-          }
-          dotsWrapper.appendChild(dot);
-        });
-      }
-      // steps.forEach((_, index) => {
-      //   const dot = document.createElement("div");
-      //   dot.classList.add("progress-dot");
-      //   if (index === 0) dot.classList.add("active");
-      //   dotsWrapper.appendChild(dot);
-      // });
-
-      function updateProgress(stepIndex) {
-        const dots = container.querySelectorAll(".progress-dot");
-        const percent = (stepIndex / (steps.length - 1)) * 100;
-
-        fill.style.width = percent + "%";
-        stepText.textContent = steps[stepIndex];
-
-        dots.forEach((dot, index) => {
-          if (index <= stepIndex) {
-            dot.classList.add("active");
-          } else {
-            dot.classList.remove("active");
-          }
-        });
-      }
-
-      function startProgress() {
-        initDots();
-        container.classList.remove("d-none");
-
-        const interval = setInterval(() => {
-          currentStep++;
-
-          if (currentStep < steps.length) {
-            updateProgress(currentStep);
-          } else {
-            clearInterval(interval);
-            // smooth hide step1 and show step2
-            step1.classList.add("section-hidden");
-
-            setTimeout(() => {
-              console.log("Done analyzing");
-              step1.classList.add("d-none");
-
-              step2.classList.remove("d-none");
-              step2.classList.add("section-visible");
-
-              // smoot scroll to step2
-              step2.scrollIntoView({ behavior: "smooth" });
-            }, 600);
-          }
-        }, 500);
-      }
-
-      // For testing purposes, you can call startProgress() directly to see the animation without submitting the form
-      //   window.startFakeAnalyze = startProgress;
-      startProgress();
-
       runAnalyzeURL();
     });
   });
 
-  // document.addEventListener("DOMContentLoaded", () => {
-  //   const input = document.querySelector(".site-url");
-  //   const output = document.querySelector(".entered-url");
+  function updateProgress(stepIndex) {
+    const container = document.querySelector(".progress-analyzing-container");
+    const dots = container.querySelectorAll(".progress-dot");
+    const percent = (stepIndex / (steps.length - 1)) * 100;
+    const fill = container.querySelector(".progress-fill");
+    const stepText = container.querySelector(".progress-analyzing-step");
 
-  //   if (input && output) {
-  //     input.addEventListener("input", () => {
-  //       output.textContent = input.value || "yourwebsite.com";
-  //     });
-  //   }
-  // });
+    fill.style.width = percent + "%";
+    stepText.textContent = steps[stepIndex];
+
+    dots.forEach((dot, index) => {
+      if (index <= stepIndex) {
+        dot.classList.add("active");
+      } else {
+        dot.classList.remove("active");
+      }
+    });
+  }
+
+  // create dots dynamically based on steps length
+  function initDots() {
+    const container = document.querySelector(".progress-analyzing-container");
+    const dotsWrapper = container.querySelector(".progress-dots");
+    dotsWrapper.innerHTML = "";
+
+    steps.forEach((_, index) => {
+      const dot = document.createElement("div");
+      dot.classList.add("progress-dot");
+      if (index === 0) {
+        dot.classList.add("active");
+      }
+      dotsWrapper.appendChild(dot);
+    });
+  }
+
+  function tryShowResults() {
+    const step1 = document.querySelector(".analyzer-step-1");
+    const step2 = document.querySelector(".analyzer-step-2");
+
+    if (!isRequestFinished || !isProgressFinished) return;
+
+    // show step2
+    step1.classList.add("section-hidden");
+
+    setTimeout(() => {
+      step1.classList.add("d-none");
+
+      step2.classList.remove("d-none");
+      step2.classList.add("section-visible");
+
+      step2.scrollIntoView({ behavior: "smooth" });
+
+      renderResults(currentData);
+    }, 600);
+  }
+
+  function startProgress() {
+    const container = document.querySelector(".progress-analyzing-container");
+    let currentStep = 0;
+    initDots();
+    container.classList.remove("d-none");
+
+    const interval = setInterval(() => {
+      currentStep++;
+
+      if (currentStep < steps.length) {
+        updateProgress(currentStep);
+      } else {
+        clearInterval(interval);
+        setTimeout(() => {
+          console.log("Done analyzing");
+
+          isProgressFinished = true;
+          tryShowResults();
+        }, 600);
+      }
+    }, 500);
+  }
 
   function updateEnteredUrl() {
     const input = document.querySelector(".site-url");
@@ -202,7 +184,21 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   function getColor(value) {
-    return COLOR_SCALE.find((level) => value < level.max).color;
+    // console.log("score value:", value);
+    const num = Number(value);
+
+    if (isNaN(num)) {
+      console.warn("Invalid value:", value);
+      return "#ccc";
+    }
+    const found = COLOR_SCALE.find((level) => value < level.max);
+
+    if (!found) {
+      // if value greater than all max → take the last color
+      return COLOR_SCALE[COLOR_SCALE.length - 1]?.color || "#ccc";
+    }
+
+    return found.color;
   }
 
   const SCORE_STATUS_CONFIG = [
@@ -262,23 +258,6 @@ document.addEventListener("DOMContentLoaded", () => {
       renderOverallScore(gauge);
     });
   }
-
-  // function lazyInit(apiData) {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           updateGaugesFromApi(apiData);
-  //           observer.disconnect();
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.4 },
-  //   );
-
-  //   const section = document.querySelector(".overall-score");
-  //   if (section) observer.observe(section);
-  // }
 
   // 2. Overall AI Visibility Score
   function renderOverallVisibilityScore(value) {
@@ -400,10 +379,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const isLockedCard = document.querySelectorAll(".report-card.is-locked");
 
       btn.prop("disabled", true).text("Sending...");
-
-      // setTimeout(() => {
-      //   modal1.modal("hide");
-      // }, 2000);
 
       try {
         const res = await fetch(`${API_URL}/email-report`, {
@@ -648,13 +623,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const API_URL = "https://tools.icoda.io";
   let currentData = null,
     currentShareId = null,
-    allRecs = [];
+    isRequestFinished = false;
+  isProgressFinished = false;
 
   async function runAnalyzeURL() {
+    resetError();
     const url = document.getElementById("urlInput").value.trim();
     if (!url) return alert("Please enter a URL");
-    // showLoading();
+
+    const controller = new AbortController();
+    // console.log("Controller:", controller);
+    const timeout = setTimeout(() => {
+      controller.abort(); // kill the request after 8 seconds
+    }, 8000);
+
     try {
+      isRequestFinished = false;
+      isProgressFinished = false;
+
+      startProgress();
+
       const res = await fetch(`${API_URL}/analyze`, {
         method: "POST",
         headers: {
@@ -663,20 +651,65 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({
           url,
         }),
+        signal: controller.signal,
       });
+
+      clearTimeout(timeout);
+
       if (!res.ok) throw new Error(`Error: ${res.status}`);
+
       currentData = await res.json();
-      console.log(currentData);
-      renderResults(currentData);
+      isRequestFinished = true;
+
+      console.log("currentData:", currentData);
+
+      tryShowResults();
     } catch (err) {
-      showError(err.message);
+      clearTimeout(timeout);
+
+      if (err.name === "AbortError") {
+        handleTimeoutError();
+      } else {
+        showErrorApi(err.message);
+      }
     }
+  }
+
+  function showErrorApi(message) {
+    const errorBlock = document.getElementById("errorMessage");
+
+    if (!errorBlock) return alert(message);
+
+    errorBlock.textContent = message;
+    errorBlock.classList.remove("d-none");
+  }
+
+  function resetError() {
+    const errorBlock = document.getElementById("errorMessage");
+    if (errorBlock) {
+      errorBlock.textContent = "";
+      errorBlock.classList.add("d-none");
+    }
+  }
+
+  function handleTimeoutError() {
+    const containerProgress = document.querySelector(
+      ".progress-analyzing-container",
+    );
+    isRequestFinished = false;
+    isProgressFinished = false;
+
+    console.log("Request timeout");
+
+    // останавливаем UI
+    containerProgress.classList.add("d-none");
+
+    showErrorApi("Request took too long. Please try again.");
   }
 
   function renderResults(data) {
     //1.score-card(overall score)
     updateOverallScoreFromApi(data);
-    // lazyInit(data);
 
     //2.Overall AI Visibility Score
     updateOverallVisibilityScoreFromApi(data);
