@@ -78,6 +78,85 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  function updateEnteredUrl() {
+    const input = document.querySelector(".site-url");
+    if (!input) return;
+
+    let url = input.value.trim();
+
+    if (!url) return;
+
+    url = url.replace(/^https?:\/\//, "");
+    url = url.replace(/^www\./, "");
+
+    // keep only domen
+    // url = url.split("/")[0];
+
+    document.querySelectorAll(".entered-url").forEach((el) => {
+      el.textContent = url;
+    });
+  }
+
+  let currentStepAnalyze = 0,
+    progressInterval = null;
+
+  function startProgress() {
+    const container = document.querySelector(".progress-analyzing-container");
+
+    resetProgress();
+
+    container.classList.remove("d-none");
+
+    progressInterval = setInterval(() => {
+      currentStepAnalyze++;
+
+      if (currentStepAnalyze < steps.length) {
+        updateProgress(currentStepAnalyze);
+      } else {
+        clearInterval(progressInterval);
+
+        setTimeout(() => {
+          console.log("Done analyzing");
+
+          isProgressFinished = true;
+          tryShowResults();
+        }, 600);
+      }
+    }, 500);
+  }
+
+  function resetProgress() {
+    initDots();
+    const container = document.querySelector(".progress-analyzing-container");
+    const fill = container.querySelector(".progress-fill");
+    const stepText = container.querySelector(".progress-analyzing-step");
+    const dots = container.querySelectorAll(".progress-dot");
+
+    // stop the interval if it's still running
+    if (progressInterval) {
+      clearInterval(progressInterval);
+      progressInterval = null;
+    }
+
+    currentStepAnalyze = 0;
+
+    // reset progres bar
+    if (fill) fill.style.width = "0%";
+
+    // reset text
+    // if (stepText) stepText.textContent = "Checking robots.txt";
+    if (stepText) stepText.textContent = steps[0];
+
+    // reset dots
+    dots.forEach((dot, index) => {
+      dot.classList.remove("active");
+
+      if (index === 0) {
+        dot.classList.add("active");
+      }
+    });
+  }
+
   function updateProgress(stepIndex) {
     const container = document.querySelector(".progress-analyzing-container");
     const dots = container.querySelectorAll(".progress-dot");
@@ -85,15 +164,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const fill = container.querySelector(".progress-fill");
     const stepText = container.querySelector(".progress-analyzing-step");
 
-    fill.style.width = percent + "%";
-    stepText.textContent = steps[stepIndex];
+    if (!steps[stepIndex]) return;
+
+    if (fill) fill.style.width = percent + "%";
+    if (stepText) stepText.textContent = steps[stepIndex];
+
+    // dots.forEach((dot, index) => {
+    //   if (index <= stepIndex) {
+    //     dot.classList.add("active");
+    //   } else {
+    //     dot.classList.remove("active");
+    //   }
+    // });
 
     dots.forEach((dot, index) => {
-      if (index <= stepIndex) {
-        dot.classList.add("active");
-      } else {
-        dot.classList.remove("active");
-      }
+      dot.classList.toggle("active", index <= stepIndex);
     });
   }
 
@@ -132,48 +217,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       renderResults(currentData);
     }, 600);
-  }
-
-  function startProgress() {
-    const container = document.querySelector(".progress-analyzing-container");
-    let currentStep = 0;
-    initDots();
-    container.classList.remove("d-none");
-
-    const interval = setInterval(() => {
-      currentStep++;
-
-      if (currentStep < steps.length) {
-        updateProgress(currentStep);
-      } else {
-        clearInterval(interval);
-        setTimeout(() => {
-          console.log("Done analyzing");
-
-          isProgressFinished = true;
-          tryShowResults();
-        }, 600);
-      }
-    }, 500);
-  }
-
-  function updateEnteredUrl() {
-    const input = document.querySelector(".site-url");
-    if (!input) return;
-
-    let url = input.value.trim();
-
-    if (!url) return;
-
-    url = url.replace(/^https?:\/\//, "");
-    url = url.replace(/^www\./, "");
-
-    // keep only domen
-    // url = url.split("/")[0];
-
-    document.querySelectorAll(".entered-url").forEach((el) => {
-      el.textContent = url;
-    });
   }
 
   const COLOR_SCALE = [
@@ -572,8 +615,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const step2 = document.querySelector(".analyzer-step-2");
 
     const container = document.querySelector(".progress-analyzing-container");
-    const fill = container.querySelector(".progress-fill");
-    const dots = container.querySelectorAll(".progress-dot");
 
     const input = document.querySelector(".site-url");
     const button = document.querySelector(".form-check-url button");
@@ -588,21 +629,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // smoot scroll to step1
     step1.scrollIntoView({ behavior: "smooth" });
 
-    // reset progress
-    fill.style.width = "0%";
-
-    dots.forEach((dot) => {
-      dot.classList.remove("active");
-    });
-
-    if (dots[0]) {
-      dots[0].classList.add("active");
-    }
-    // reset step
-    currentStep = 0;
-    // reset current step text
-    document.querySelector(".progress-analyzing-step").textContent =
-      "Checking robots.txt";
+    resetErrorApi();
+    resetProgress();
 
     // hide progress
     container.classList.add("d-none");
@@ -616,18 +644,15 @@ document.addEventListener("DOMContentLoaded", () => {
     button.classList.add("disabled");
   }
 
-  document
-    .querySelector(".btn-analyze")
-    .addEventListener("click", resetAnalyze);
-
   const API_URL = "https://tools.icoda.io";
   let currentData = null,
     currentShareId = null,
-    isRequestFinished = false;
-  isProgressFinished = false;
+    isRequestFinished = false,
+    isProgressFinished = false;
 
   async function runAnalyzeURL() {
-    resetError();
+    resetErrorApi();
+    resetProgress();
     const url = document.getElementById("urlInput").value.trim();
     if (!url) return alert("Please enter a URL");
 
@@ -675,23 +700,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function showErrorApi(message) {
-    const errorBlock = document.getElementById("errorMessage");
-
-    if (!errorBlock) return alert(message);
-
-    errorBlock.textContent = message;
-    errorBlock.classList.remove("d-none");
-  }
-
-  function resetError() {
-    const errorBlock = document.getElementById("errorMessage");
-    if (errorBlock) {
-      errorBlock.textContent = "";
-      errorBlock.classList.add("d-none");
-    }
-  }
-
   function handleTimeoutError() {
     const containerProgress = document.querySelector(
       ".progress-analyzing-container",
@@ -699,12 +707,34 @@ document.addEventListener("DOMContentLoaded", () => {
     isRequestFinished = false;
     isProgressFinished = false;
 
+    resetProgress();
+
     console.log("Request timeout");
 
     // останавливаем UI
     containerProgress.classList.add("d-none");
 
     showErrorApi("Request took too long. Please try again.");
+  }
+
+  function showErrorApi(message) {
+    const errorBlock = document.getElementById("apiError");
+    const text = document.getElementById("apiErrorText");
+
+    if (!errorBlock) return alert(message);
+
+    text.textContent = message;
+
+    errorBlock.classList.remove("d-none");
+  }
+
+  function resetErrorApi() {
+    const errorBlock = document.getElementById("apiError");
+    const text = document.getElementById("apiErrorText");
+    if (errorBlock) {
+      text.textContent = "";
+      errorBlock.classList.add("d-none");
+    }
   }
 
   function renderResults(data) {
@@ -1203,6 +1233,12 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Failed: " + err.message);
     }
   }
+
+  /* buttons for retry and reset */
+  document.getElementById("retryBtn").addEventListener("click", runAnalyzeURL);
+  document.querySelectorAll(".btn-analyze").forEach((btn) => {
+    btn.addEventListener("click", resetAnalyze);
+  });
 
   // async function loadSharedReport() {
   //   const id = new URLSearchParams(location.search).get("report");

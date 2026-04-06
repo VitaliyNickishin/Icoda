@@ -32,7 +32,19 @@
 
                 <div class="progress-analyzing-step mt-2">Checking robots.txt</div>
             </div>
-            <div id="errorMessage" class="alert alert-danger mt-3 d-none"></div>
+            
+            <div id="apiError" class="api-error-block d-none mt-3">
+                <p id="apiErrorText" class="alert alert-danger"></p>
+
+                <div class="d-flex justify-content-center mx-lg-auto w-lg-50 gap-2 flex-column flex-md-row align-items-center">
+                    <button id="retryBtn" class="btn btn-retry btn-report"><?php _e('Retry', 'icoda'); ?></button>
+                    <button class="btn btn-report btn-analyze">
+                        <span class="ci ci-analyze"><?php _e('Analyze Another URL', 'icoda'); ?></span>
+                    </button>
+                </div>
+
+                
+            </div>
         </div>
     </div>
 </section>

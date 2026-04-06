@@ -532,3 +532,29 @@ a.logo {
     display: grid !important;
   }
 }
+
+.mx-lg-auto {
+  @include mediaMin(992) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+.mx-md-auto {
+  @include mediaMin(768) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+.w-md-50 {
+  @include mediaMin(768) {
+    width: 50% !important;
+  }
+}
+
+.w-lg-50 {
+  @include mediaMin(992) {
+    width: 50% !important;
+  }
+}

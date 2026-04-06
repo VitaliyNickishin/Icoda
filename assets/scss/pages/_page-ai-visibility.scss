@@ -41,7 +41,7 @@
     margin: auto;
     padding: 9px 44px 9px 36px;
     font-size: 1rem;
-    min-width: 110%;
+    min-width: 100%;
     font-family: $f-sto-medium;
     @include mediaMin(576) {
       min-width: auto;
@@ -742,6 +742,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   line-height: 130%;
   font-size: 1rem;
   padding: 9px 0;
@@ -749,6 +750,14 @@
     width: 240px;
     max-width: 100%;
   }
+  // @at-root .api-error-block & {
+  //   width: auto;
+  //   padding: 9px 44px 9px 36px;
+  //   font-family: $f-sto-medium;
+  //   @include mediaMin(768) {
+  //     padding: 9px 44px 9px 36px;
+  //   }
+  // }
   &-wrapper {
     gap: 8px;
     @include mediaMin(992) {
@@ -768,7 +777,8 @@
     }
   }
   &.btn-download,
-  &.btn-share {
+  &.btn-share,
+  &.btn-retry {
     color: $color-blue;
     background: transparent;
     border: 1px solid $color-blue;
