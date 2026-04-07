@@ -1555,14 +1555,6 @@ function icoda_related_articles_callback($attrs, $content = '') {
 	return ob_get_clean();
 }
 
-add_shortcode( 'icoda_blog_articles_slider', 'icoda_blog_articles_slider_callback' );
-
-function icoda_blog_articles_slider_callback($attrs, $content = '') {
-	ob_start();
-    get_template_part('template-parts/blog-articles-slider', '', $attrs);
-	return ob_get_clean();
-}
-
 function icodaRemoveEmptyParagraphs($content) {
     $content = force_balance_tags( $content );
     $content = preg_replace( '#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content );
@@ -2717,3 +2709,21 @@ function pm_wpml_copy_custom_permalink( $new_post_id, $fields, $job ) {
 	}
 }
 add_action( 'wpml_pro_translation_completed', 'pm_wpml_copy_custom_permalink', 100, 3 );
+
+
+function r4_register_blocks() {
+ 
+    // Проверяем, что функция доступна.
+    if( function_exists( 'acf_register_block_type' ) ) {
+ 
+        // Регистрируем блок 
+        acf_register_block_type(array(
+            'name'              => 'Block BAS Title',
+            'title'             => __('Block BAS Title'),
+            'description'       => __('A custom block.'),
+            'render_template'   => 'acf-components/block-icoda-blog-articles-slider.php',
+            'category'          => 'formatting',
+        ));
+    }
+}
+add_action( 'acf/init', 'r4_register_blocks' );

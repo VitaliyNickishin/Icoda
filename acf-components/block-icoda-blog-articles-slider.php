@@ -1,32 +1,27 @@
 <?php
-$title = !empty($args['title']) ? $args['title'] : __('Related articles', 'icoda');
+$bas_title = get_field('bas_title');
+$bas_description = get_field('bas_description');
+$bas_url = get_field('bas_url');
+$term = get_field('bas_taxonomy');
+
 $args_q = array(
     'posts_per_page' => 10,
     'orderby' => 'date',
     'order' => 'DESC',
 );
 
-if(!empty($args['tag'])) {
+if(!empty($term)) {
     $args_q['tax_query'] = array(
         array(
-            'taxonomy' => 'post_tag',
-            'field' => 'id',
-            'terms' => array($args['tag']),
+            'taxonomy' => 'category',
+            'field' => 'term_id',
+            'terms' => array($term->term_id),
         )
     );
 }
 
 if(is_singular( 'post' )) {
     $args_q['post__not_in'] = array(get_the_ID());
-    if(empty($args['tag'])) {
-        $args_q['tax_query'] = array(
-            array(
-                'taxonomy' => 'category',
-                'field' => 'id',
-                'terms' => array('38'),
-            )
-        );
-    }
 }
 
 $related_wp_query = new WP_Query($args_q);
@@ -37,36 +32,32 @@ if ($related_wp_query->have_posts()) :
             <div class="row">
                 <div class="col-12 mu-md-4">
                     <div class="d-flex justify-content-between">
+					<?php if (!empty($bas_title)) { ?>
                         <h2 class="h3 title mb-0">
-                            <?php echo $title; ?>
+                            <?php echo $bas_title; ?>
                         </h2>
-                        <a class="link-arrow d-flex align-items-center" href="#">
+					<?php } ?>
+						<?php if ($bas_url) { ?>
+						<?php 
+						$link_title=$bas_url['title'];
+						$link_url=$bas_url['url'];
+						$link_target = $bas_url['target'] ? $bas_url['target'] : '_self';
+						?>
+                        <a class="link-arrow d-flex align-items-center" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                             <span class="d-none d-lg-block">
-                                <?php _e('All articles', 'icoda'); ?>
+                                <?php echo esc_html( $link_title ); ?>
                             </span>
                             <span class="d-lg-none">
                                 <?php _e('All', 'icoda'); ?>
                             </span>
                         </a>
-                    </div>
-                    
-                    <!-- @todo add acf field -->
+						<?php } ?>
+                    </div>        
                     <div class="descriptions mt-3 mb-4 position-relative d-flex">
                         <div class="text">
-                            <p>Explore our Blog — a collection of real-world crypto marketing insights, case studies, and growth strategies used by
-                            leading Web3 projects.</p>
-                            <p>Explore our Blog — a collection of real-world crypto marketing insights, case studies, and growth strategies used by
-                            leading Web3 projects.</p>
-                            <p>Explore our Blog — a collection of real-world crypto marketing insights, case studies, and growth strategies used by
-                            leading Web3 projects.</p>
-                            <p>Explore our Blog — a collection of real-world crypto marketing insights, case studies, and growth strategies used by
-                            leading Web3 projects.</p>
-                            <p>Explore our Blog — a collection of real-world crypto marketing insights, case studies, and growth strategies used by
-                            leading Web3 projects.</p>
+                            <?php echo $bas_description; ?>
                         </div>
-                        <div class="slider-control slider-control-blog-articles d-none d-lg-block"></div>
-
-                        
+                        <div class="slider-control slider-control-blog-articles d-none d-lg-block"></div>     
                     </div>
                     <div class="articles-list slider-blog-articles custom-slider">
                         <?php
