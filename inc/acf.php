@@ -622,6 +622,18 @@ add_action('acf/init', function () {
             'align' => array('full', 'wide', 'center')
         ),
     ));
+    acf_register_block_type(array(
+            'name'              => 'post-blog-articles-slider',
+            'title'             => __('Post Blog Articles Slider'),
+            'description'       => __('A custom block.'),
+            'render_callback' => 'icoda_acf_block_render_callback',
+            'category'          => 'formatting',
+            'keywords'            => array('blog', 'articles', 'slider', 'icoda', 'post'),
+            'align'             => 'full',
+            'supports'          => array(
+                'align' => array('full', 'wide', 'center')
+            ),
+        ));
 
     acf_register_block(array(
         'name'              => 'post-background-cases',
