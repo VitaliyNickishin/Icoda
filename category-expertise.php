@@ -39,9 +39,6 @@ $front_page_id = get_option('page_on_front');
         </div>
 
         
-        <?php/* get_template_part('template-parts/front-page/leadership', '', ['post_id'=> 13552 ]); */?>
-    
-
         <?php echo do_shortcode('[contact-form-new]'); ?>
 
     </main>
