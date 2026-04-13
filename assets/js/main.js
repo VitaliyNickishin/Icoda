@@ -1963,6 +1963,7 @@ $(window).on("load resize", function () {
   initBoxContentSlider();
   initSliderFourBox();
   initSliderAuthors();
+  initSliderHeroServices();
 });
 const initSliderHeroAiSeo = () => {
   if ($(".hero-slider-ai-seo").length > 0) {
