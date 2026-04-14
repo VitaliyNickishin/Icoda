@@ -46,5 +46,8 @@
                 
             </div>
         </div>
+        <div class="section-analyzer__content has-content-guttenberg">
+            <?php the_content(); ?>
+        </div>
     </div>
 </section>

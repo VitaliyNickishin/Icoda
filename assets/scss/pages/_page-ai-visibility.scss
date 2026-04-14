@@ -55,9 +55,17 @@
   // min-height: 100vh;
 
   background-color: $white;
-  padding: 3.5rem 0;
+  padding-top: 3.5rem;
   @include mediaMin(992) {
-    padding: 11.5625rem 0 22.5rem;
+    padding-top: 11.5625rem;
+  }
+  &__content {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @include mediaMin(992) {
+      padding-top: 10.3125rem;
+      padding-bottom: 3rem;
+    }
   }
   &__inner {
     margin: auto;
