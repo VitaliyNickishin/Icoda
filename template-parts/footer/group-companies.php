@@ -20,6 +20,7 @@
         <a href="https://stive.ai/" target="_blank" class="logo-companies">
           <img class="img-fluid" src="/wp-content/uploads/2026/04/stive-logo.svg" alt="Stive">
         </a>
+        <p class="name h6"><?php _e('AI Visibility Services', 'icoda'); ?></p>
       </div>
       <?php /* ?>
       <div class="col col-12 col-md-3">
