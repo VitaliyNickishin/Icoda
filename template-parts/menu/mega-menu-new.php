@@ -5,6 +5,7 @@ $header_one_two = icoda_get_items_tree_menu('header-one-two-new');
 $header_two = icoda_get_items_tree_menu('header-two-new');
 $header_three_one = icoda_get_items_tree_menu('header-three-one-new');
 $header_three_two = icoda_get_items_tree_menu('header-three-two-new');
+$header_three_three = icoda_get_items_tree_menu('header-three-three-new');
 $header_four = icoda_get_items_tree_menu('header-four-new');
 $header_four_two = icoda_get_items_tree_menu('header-four-two-new');
 $header_five = icoda_get_items_tree_menu('header-five-new');
@@ -41,7 +42,7 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                   </ul>
                   
                 </li>
-                <li class="sub-menu-col second-col">
+                <li class="sub-menu-col second-col has-border-left">
                   <?php if(!empty($header_one_two) && !empty($header_one_two[0])) : ?>
                   <ul>
                     <li class="sub-menu-title"><?php _e('Brand & Reputation', 'icoda'); ?></li>
@@ -120,7 +121,7 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                       <?php endforeach; ?>
                   </ul>
                  </li>
-                 <li class="sub-menu-col second-col">
+                 <li class="sub-menu-col second-col has-border-left">
                   <ul>
                     <li class="sub-menu-title"><?php _e('Industries', 'icoda'); ?></li>
                     
@@ -135,8 +136,24 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                       <?php endforeach; ?>
                   </ul>
                  </li>
+
+                 <li class="sub-menu-col third-col has-border-left">
+                  <ul>
+                    <li class="sub-menu-title"><?php _e('Insights', 'icoda'); ?></li>
+                    
+                      <?php foreach ($header_three_three[0]->childs as $item2) : ?>
+                        <?php if (trim($item2['title']) !== '') : ?>
+
+                          <li class="menu-item">
+                            <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
+                          </li>
+
+                        <?php endif; ?>
+                      <?php endforeach; ?>
+                  </ul>
+                 </li>
                  
-                 <li class="sub-menu-col third-col">
+                 <li class="sub-menu-col fourth-col">
                   <?php get_template_part('template-parts/_partials/book-info', null, ['is_mega_menu' => true]); ?>
                  </li>
                  
@@ -172,7 +189,7 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                   </ul>
                   
                 </li>
-                <li class="sub-menu-col second-col">
+                <li class="sub-menu-col second-col has-border-left">
                   <?php if(!empty($header_four_two) && !empty($header_four_two[0])) : ?>
                   <ul>
                     <li class="sub-menu-title"><?php _e('Insights', 'icoda'); ?></li>

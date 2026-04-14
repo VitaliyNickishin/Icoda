@@ -65,6 +65,7 @@ register_nav_menus(array(
     'header-two-new' => esc_html__('Header two new', 'icoda'),
     'header-three-one-new' => esc_html__('Header three one new', 'icoda'),
     'header-three-two-new' => esc_html__('Header three two new', 'icoda'),
+    'header-three-three-new' => esc_html__('Header three three new', 'icoda'),
     'header-four-new' => esc_html__('Header four new', 'icoda'),
     'header-four-two-new' => esc_html__('Header four two new', 'icoda'),
     'header-five-new' => esc_html__('Header five new', 'icoda'),
@@ -393,6 +394,7 @@ function icoda_styles()
 
     $assets_uri = get_stylesheet_directory_uri() . '/assets';
     $scripts_version = '0000024';
+    $style_version = '0.0.1';
 
     if (!is_admin()) {
         wp_deregister_script('jquery');
@@ -402,7 +404,7 @@ function icoda_styles()
     
 
     wp_enqueue_style('icoda-fontawesome', $assets_uri . '/sources/fontawesome-all.min.css');
-    wp_enqueue_style('icoda-style-main', $assets_uri . '/css/main.css');
+    wp_enqueue_style('icoda-style-main', $assets_uri . '/css/main.css', array(), $style_version);
 
     wp_enqueue_script(
         'paginate',

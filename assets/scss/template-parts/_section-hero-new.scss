@@ -100,6 +100,8 @@
     @include mediaMin(1024) {
       opacity: 1;
       visibility: visible;
+      display: flex;
+      overflow-x: auto;
     }
   }
   .hero-slider,
