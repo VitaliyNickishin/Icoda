@@ -2,7 +2,7 @@
 $q_args = [
     'post_type' => 'event',
     'posts_per_page' => -1,
-    'orderby' => array('meta_value_num' => 'DESC'),
+    'orderby' => array('meta_value_num' => 'ASC'),
     'meta_key' => 'date_start',
     'fields' => 'ids',
 ];
@@ -16,9 +16,10 @@ if (isset($args['country']) && $args['country'] != 'any-country') {
         'value' => $args['country']
     ];
 }
+
+$dateObj = new DateTime('now', new DateTimeZone('Europe/Kyiv'));
+$start = $dateObj->format('Y-m-d 00:00:00');
 if (isset($args['date']) && $args['date'] != 'any-date') {
-    $dateObj = new DateTime('now', new DateTimeZone('Europe/Kiev'));
-    $start = $dateObj->format('Y-m-d 00:00:00');
     if ($args['date'] == 'week') {
         $dateObj->modify('+7 day');
     }
@@ -31,14 +32,13 @@ if (isset($args['date']) && $args['date'] != 'any-date') {
         'compare' => '<=',
         'type' => 'DATETIME',
     ];
-
-    $meta_query[] = [
-        'key' => 'date_end',
-        'value' => $start,
-        'compare' => '>=',
-        'type' => 'DATETIME',
-    ];
 }
+$meta_query[] = [
+    'key' => 'date_end',
+    'value' => $start,
+    'compare' => '>=',
+    'type' => 'DATETIME',
+];
 
 if (isset($args['online']) && $args['online']) {
     $meta_query[] = [
@@ -96,6 +96,9 @@ $_events = new WP_Query($q_args);
         $discount_code = get_field('discount_code', $post_event_id);
         $icoda_role = get_field('icoda_role', $post_event_id);
         $website = get_field('website', $post_event_id);
+        if(strpos($website, 'https://') === false && strpos($website, 'http://') === false) {
+            $website = '//' . $website;
+        }
         $city = get_field('city', $post_event_id);
         $country = get_field('country', $post_event_id);
         $address = array_filter([$city, $country]);
