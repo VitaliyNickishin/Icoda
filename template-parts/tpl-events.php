@@ -9,15 +9,119 @@ get_header();
     };
 </script>
 
-<?php if (!empty($_GET['show_new_events'])) : ?>
+<?php if ( true || !empty($_GET['show_new_events'])) : ?>
     <?php
+    // $top_events = new WP_Query([
+    //     'post_type' => 'event',
+    //     'posts_per_page' => 3,
+    //     'orderby' => array('meta_value_num' => 'ASC'),
+    //     'meta_key' => 'date_start',
+    //     'fields' => 'ids',
+    //     'meta_query' => [
+    //         [
+    //             'key' => 'date_start',
+    //             'value' => date('Y-m-d 00:00:00'),
+    //             'compare' => '>=',
+    //             'type' => 'DATETIME',
+    //         ]
+    //     ]
+    // ]);
     $top_events = new WP_Query([
         'post_type' => 'event',
-        'posts_per_page' => 3,
-        'orderby' => array('meta_value_num' => 'DESC'),
+        'posts_per_page' => -1,
+        'orderby' => array('meta_value_num' => 'ASC'),
         'meta_key' => 'date_start',
         'fields' => 'ids',
+        'meta_query' => [
+            [
+                'key' => 'is_top',
+                'value' => '1',
+                'compare' => '=',
+            ]
+        ]
     ]);
+    $top_events_posts = $top_events->posts;
+    
+    $dateObj = new DateTime('now', new DateTimeZone('Europe/Kyiv'));
+
+    $dateObj = new DateTime('now', new DateTimeZone('Europe/Kyiv'));
+    $todayStart = $dateObj->format('Y-m-d 00:00:00');
+    // $todayEnd = $dateObj->format('Y-m-d 23:59:59');
+    $dateObj->setTime(23, 59, 59);
+    $top_events_posts = array_filter($top_events_posts, function($topEventId) use ($dateObj) {
+        $topEventDateEnd = get_field('date_end', $topEventId);
+        $topEventDateEnd = $topEventDateEnd . ' 23:59:59';
+        $topEventDateEnd_strtotime = strtotime($topEventDateEnd);
+        if($topEventDateEnd_strtotime < $dateObj->getTimestamp()) {
+            return false;
+        }
+        return true;
+    });
+
+    $topEventsCount = 3;
+
+    if(count($top_events_posts) < $topEventsCount) {
+        $media_partner_events = new WP_Query([
+            'post_type' => 'event',
+            'posts_per_page' => -1,
+            'orderby' => array('meta_value_num' => 'ASC'),
+            'meta_key' => 'date_start',
+            'fields' => 'ids',
+            'meta_query' => [
+                [
+                    'key' => 'is_media_partner_speaker',
+                    'value' => '1',
+                    'compare' => '=',
+                ],
+                [
+                    'key' => 'date_start',
+                    'value' => $todayStart,
+                    'compare' => '>=',
+                    'type' => 'DATETIME',
+                ]
+            ]
+        ]);
+        if(!empty($media_partner_events->posts)) {
+            foreach($media_partner_events->posts as $e_post_id) {
+                $top_events_posts[] = $e_post_id;
+                if(count($top_events_posts) >= $topEventsCount) {
+                    break;
+                }
+            }
+        }
+    }
+
+    if(count($top_events_posts) < $topEventsCount) {
+        $early_events = new WP_Query([
+            'post_type' => 'event',
+            'posts_per_page' => -1,
+            'orderby' => array('meta_value_num' => 'ASC'),
+            'meta_key' => 'date_start',
+            'fields' => 'ids',
+            'meta_query' => [
+                [
+                    'key' => 'date_start',
+                    'value' => $todayStart,
+                    'compare' => '>=',
+                    'type' => 'DATETIME',
+                ]
+            ]
+        ]);
+
+        if(!empty($early_events->posts)) {
+            foreach($early_events->posts as $e_post_id) {
+                $is_media_partner_speaker = get_field('is_media_partner_speaker', $e_post_id);
+                $is_top = get_field('is_top', $e_post_id);
+                if($is_media_partner_speaker || $is_top) {
+                    continue;
+                }
+                $top_events_posts[] = $e_post_id;
+                if(count($top_events_posts) >= $topEventsCount) {
+                    break;
+                }
+            }
+        }
+    }
     ?>
     <div class="page-events">
         <section class="section mt-3 section-featured-events">
@@ -37,13 +141,14 @@ get_header();
                     </div>
                 </div>
             </div>
+            <?php if(!empty($top_events_posts)) : ?>
             <div class="section-has-bg position-relative mt-4">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="">
                                 <ul class="card-event-list">
-                                    <?php foreach ($top_events->posts as $key => $post_event_id): ?>
+                                    <?php foreach ($top_events_posts as $key => $post_event_id): ?>
                                         <?php
                                         $date_start = get_field('date_start', $post_event_id);
                                         $date_start_strtotime = strtotime($date_start);
@@ -56,11 +161,14 @@ get_header();
                                         $date_end_month = date('m', $date_end_strtotime);
                                         $date_end_day = date('d', $date_end_strtotime);
                                         $website = get_field('website', $post_event_id);
+                                        if(strpos($website, 'https://') === false && strpos($website, 'http://') === false) {
+                                            $website = '//' . $website;
+                                        }
                                         $city = get_field('city', $post_event_id);
                                         $country = get_field('country', $post_event_id);
                                         $address = array_filter([$city, $country]);
                                         if ($date_start_day == $date_end_day && $date_start_month == $date_end_month) {
-                                            $date_label = date('d F, Y');
+                                            $date_label = date('d F, Y', $date_start_strtotime);
                                         } else {
                                             $date_parts = [
                                                 'start' => date('d', $date_start_strtotime),
@@ -129,7 +237,7 @@ get_header();
                                                         </div>
                                                         <div class="col col-12 col-lg-5">
                                                             <div class="card-event__img pl-lg-4">
-                                                                <img src="<?php echo get_the_post_thumbnail_url($post_event_id); ?>" alt="<?php echo get_the_title($post_event_id); ?>" />
+                                                                <img loading="lazy" src="<?php echo get_the_post_thumbnail_url($post_event_id); ?>" alt="<?php echo get_the_title($post_event_id); ?>" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -143,6 +251,7 @@ get_header();
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
         </section>
 
         <section class="section section-all-events my-5 py-lg-2">
@@ -190,7 +299,7 @@ get_header();
                         </div>
                         <div class="col-12 col-lg-5">
                             <div class="section-worldwide__img">
-                                <img src="<?php echo $meet_block['image']['url']; ?>" alt="<?php echo $meet_block['image']['alt']; ?>" />
+                                <img loading="lazy" src="<?php echo $meet_block['image']['url']; ?>" alt="<?php echo $meet_block['image']['alt']; ?>" />
                             </div>
                         </div>
                     </div>

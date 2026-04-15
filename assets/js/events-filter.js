@@ -58,6 +58,22 @@ jQuery(document).ready(function ($) {
         $.post("/wp-json/events/v1/filter", appliedFilters, function (data) {
             $("#events-container").html(data);
             showMore();
+            initReadMore();
+        });
+    }
+
+    function initReadMore() {
+        document.querySelectorAll('.undertitle-wrap').forEach(function(wrap) {
+            wrap.addEventListener('change', function(evt) {
+                console.log('undertitle-wrap - undertitle-wrap');
+                if (evt.target.classList.contains('read-more')) {
+                if (evt.target.checked) {
+                    wrap.classList.add('open');
+                } else {
+                    wrap.classList.remove('open');
+                }
+                }
+            });
         });
     }
 
