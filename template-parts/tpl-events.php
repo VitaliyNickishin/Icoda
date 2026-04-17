@@ -161,6 +161,11 @@ get_header();
                                         $date_end_month = date('m', $date_end_strtotime);
                                         $date_end_day = date('d', $date_end_strtotime);
                                         $website = get_field('website', $post_event_id);
+                                        $with_promo_code = get_field('with_promo_code', $post_event_id);
+                                        $discount_value = get_field('discount_value', $post_event_id);
+                                        $discount_code = get_field('discount_code', $post_event_id);
+                                        $isRelatedPost = get_field('is_related_post', $post_event_id);
+                                        $linkRelatedPost = get_field('link_related_post', $post_event_id);
                                         if(strpos($website, 'https://') === false && strpos($website, 'http://') === false) {
                                             $website = '//' . $website;
                                         }
@@ -220,24 +225,46 @@ get_header();
                                                                 </div>
                                                             </div>
                                                             <div class="card-event__footer pt-1 pt-lg-0 mt-2">
-                                                                <div class="card-event__btn d-flex">
-                                                                    <?php if (!empty($website)): ?>
-                                                                        <a href="<?php echo $website; ?>" class="btn btn-blue btn-visit-website" target="_blank">
-                                                                            <?php echo _e('Visit website', 'icoda') ?>
-                                                                        </a>
+                                                                <div class="gap-2 d-flex flex-column flex-md-row align-items-md-center justify-content-md-between">
+                                                                    <?php if (!empty($website) || $isRelatedPost) : ?>
+                                                                        <div class="d-flex gap-2">
+                                                                            <?php if (!empty($website)): ?>
+                                                                                <a href="<?php echo $website; ?>" 
+                                                                                    class="btn btn-blue btn-visit-website" 
+                                                                                    target="_blank">
+                                                                                    <?php echo _e('Grab your spot', 'icoda') ?>
+                                                                                </a>
+                                                                            <?php endif; ?>
+                                                                            <?php if ($isRelatedPost && !empty($linkRelatedPost)): ?>
+                                                                                <a
+                                                                                    class="btn btn-read-review d-flex align-items-center justify-content-center btn-outline-blue"
+                                                                                    href="<?php echo $linkRelatedPost['url']; ?>" 
+                                                                                    target="_blank"
+                                                                                    >
+                                                                                    <?php echo __('Read our review', 'icoda'); ?>
+                                                                                </a>
+                                                                            <?php endif; ?>
+                                                                        </div>
                                                                     <?php endif; ?>
-                                                                    <a
-                                                                        class="btn btn-book-meeting d-flex align-items-center justify-content-center btn-outline-blue"
-                                                                        href="#"
-                                                                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cqrf-wpr-bt6/talk-to-our-expert'});return false;">
-                                                                        <?php echo __('Book A Meeting', 'icoda'); ?>
-                                                                    </a>
+                                                                                                                                              
+                                                                    <?php if ($with_promo_code): ?>
+                                                                        <div class="btn-copy-code">
+                                                                            <div class="referral-field">
+                                                                                <span class="referral-label">
+                                                                                    <?php echo $discount_value; ?>
+                                                                                </span>
+                                                                                <span class="referral-code"><?php echo $discount_code; ?></span>
+                                                                            </div>
+                                                                            <button type="button" class="btn-copy referral-copy"><?php _e('Copy', 'icoda'); ?></button>
+                                                                        </div>
+                                                                    <?php endif; ?>
+                                                                        
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col col-12 col-lg-5">
                                                             <div class="card-event__img pl-lg-4">
-                                                                <img loading="lazy" src="<?php echo get_the_post_thumbnail_url($post_event_id); ?>" alt="<?php echo get_the_title($post_event_id); ?>" />
+                                                                <img src="<?php echo get_the_post_thumbnail_url($post_event_id); ?>" alt="<?php echo get_the_title($post_event_id); ?>" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -284,7 +311,7 @@ get_header();
                 <div class="container">
                     <div class="row flex-column-reverse flex-lg-row align-items-lg-center">
                         <div class="offset-lg-1 col-lg-5 mt-4 mt-lg-0">
-                            <h2 class="section-title mb-2 pb-1 fw-semibold">
+                            <h2 class="section-title mb-2 pb-1">
                                 <?php echo $meet_block['title']; ?>
                             </h2>
                             <p class="undertitle"><?php echo $meet_block['text']; ?></p>
@@ -299,10 +326,133 @@ get_header();
                         </div>
                         <div class="col-12 col-lg-5">
                             <div class="section-worldwide__img">
-                                <img loading="lazy" src="<?php echo $meet_block['image']['url']; ?>" alt="<?php echo $meet_block['image']['alt']; ?>" />
+                                <img src="<?php echo $meet_block['image']['url']; ?>" alt="<?php echo $meet_block['image']['alt']; ?>" />
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-two-logo-sliders my-5">
+        <?php
+            $slidersLogo = get_field('ratings');
+        ?>
+            <div class="container">
+                <div class="row">
+                   <?php/* if (!empty($slidersLogo)) : */?>
+
+                        <div class="col-12 pr-0">
+                            <h2 class="section-title mb-4">
+                                <?php echo _e('Our partners', 'icoda') ?>
+                            </h2>
+                            
+                                <div class="logos-row logos-row__left">
+                                    <div class="logos-track">
+                                    
+                                            <div
+                                                class="media-logo">
+                                                <picture>
+                                                    <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
+                                                </picture>
+                                                <span class="media-title">
+                                                    <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="media-logo">
+                                                <picture>
+                                                    <img src="/wp-content/uploads/2024/11/trustpilot-logo.svg" alt="Trustpilot" />
+                                                </picture>
+                                                <span class="media-title">
+                                                    <?php echo _e('Top Rated Trustpilot Agency', 'icoda') ?>
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="media-logo">
+                                                <picture>
+                                                    <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
+                                                </picture>
+                                                <span class="media-title">
+                                                    <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="media-logo">
+                                                <picture>
+                                                    <img src="/wp-content/uploads/2024/11/trustpilot-logo.svg" alt="Trustpilot" />
+                                                </picture>
+                                                <span class="media-title">
+                                                    <?php echo _e('Top Rated Trustpilot Agency', 'icoda') ?>
+                                                </span>
+                                            </div>
+                                            <div
+                                                class="media-logo">
+                                                <picture>
+                                                    <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
+                                                </picture>
+                                                <span class="media-title">
+                                                    <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
+                                                </span>
+                                            </div>
+                                        
+
+                                    </div>
+                                </div>
+
+                                <div class="logos-row logos-row__right mt-4">
+                                    <div class="logos-track">
+                                        <div
+                                            class="media-logo">
+                                            <picture>
+                                                <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
+                                            </picture>
+                                            <span class="media-title">
+                                                <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
+                                            </span>
+                                        </div>
+                                        <div
+                                            class="media-logo">
+                                            <picture>
+                                                <img src="/wp-content/uploads/2024/11/trustpilot-logo.svg" alt="Trustpilot" />
+                                            </picture>
+                                            <span class="media-title">
+                                                <?php echo _e('Top Rated Trustpilot Agency', 'icoda') ?>
+                                            </span>
+                                        </div>
+                                        <div
+                                            class="media-logo">
+                                            <picture>
+                                                <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
+                                            </picture>
+                                            <span class="media-title">
+                                                <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
+                                            </span>
+                                        </div>
+                                        <div
+                                            class="media-logo">
+                                            <picture>
+                                                <img src="/wp-content/uploads/2024/11/trustpilot-logo.svg" alt="Trustpilot" />
+                                            </picture>
+                                            <span class="media-title">
+                                                <?php echo _e('Top Rated Trustpilot Agency', 'icoda') ?>
+                                            </span>
+                                        </div>
+                                        <div
+                                            class="media-logo">
+                                            <picture>
+                                                <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
+                                            </picture>
+                                            <span class="media-title">
+                                                <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    <?php/* endif; */?>
+
                 </div>
             </div>
         </section>

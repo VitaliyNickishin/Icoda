@@ -5,7 +5,7 @@
         "https://www.facebook.com/sharer/sharer.php?u=" +
           encodeURIComponent(url),
         "facebooksharedialog",
-        "width=626,height=436"
+        "width=626,height=436",
       );
       addShare();
     }
@@ -23,7 +23,7 @@
         "https://www.linkedin.com/sharing/share-offsite/?url=" +
           encodeURIComponent(url),
         "",
-        "width=626,height=436"
+        "width=626,height=436",
       );
       addShare();
     }
@@ -99,27 +99,6 @@
       }, 800);
     }
 
-    /* copy referral code for overview table */
-    let area = document.createElement("textarea");
-    document.body.appendChild(area);
-    area.style.display = "none";
-
-    let content = document.querySelectorAll(".referral-code");
-    let copy = document.querySelectorAll(".referral-copy");
-
-    for (let i = 0; i < copy.length; i++) {
-      copy[i].addEventListener("click", function () {
-        area.style.display = "block";
-        area.value = content[i].innerHTML.toUpperCase();
-        area.select();
-        document.execCommand("copy");
-        area.style.display = "none";
-
-        this.innerHTML = "Copied";
-        setTimeout(() => (this.innerHTML = "Copy"), 2000);
-      });
-    }
-
     /* Table of content for single post */
     const $tableOfContent = jQuery(".table-of-content .list-table");
     let $headings = [];
@@ -127,12 +106,12 @@
     if (!$tableOfContent.hasClass("is-overwritten")) {
       if (jQuery(".new-blog-post-main-content").length) {
         $headings = jQuery(".new-blog-post-main-content").find(
-          "h1:not(.exclude-title-from-table), h2:not(.exclude-title-from-table), h3:not(.exclude-title-from-table), h4:not(.exclude-title-from-table), h5:not(.exclude-title-from-table), h6:not(.exclude-title-from-table)"
+          "h1:not(.exclude-title-from-table), h2:not(.exclude-title-from-table), h3:not(.exclude-title-from-table), h4:not(.exclude-title-from-table), h5:not(.exclude-title-from-table), h6:not(.exclude-title-from-table)",
         );
         addLink = true;
       } else {
         $headings = jQuery(".article-main-content").find(
-          "h1, h2, h3, h4, h5, h6"
+          "h1, h2, h3, h4, h5, h6",
         );
       }
 
@@ -247,7 +226,7 @@
 
     function get_UID() {
       return String(
-        Date.now().toString(32) + Math.random().toString(16)
+        Date.now().toString(32) + Math.random().toString(16),
       ).replace(/\./g, "");
     }
   });

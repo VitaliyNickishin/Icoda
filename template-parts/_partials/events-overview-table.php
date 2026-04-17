@@ -96,6 +96,8 @@ $_events = new WP_Query($q_args);
         $discount_code = get_field('discount_code', $post_event_id);
         $icoda_role = get_field('icoda_role', $post_event_id);
         $website = get_field('website', $post_event_id);
+        $isRelatedPost = get_field('is_related_post', $post_event_id);
+        $linkRelatedPost = get_field('link_related_post', $post_event_id);
         if(strpos($website, 'https://') === false && strpos($website, 'http://') === false) {
             $website = '//' . $website;
         }
@@ -131,7 +133,7 @@ $_events = new WP_Query($q_args);
         ?>
 
 
-        <div class="overview-table d-flex position-realative mt-2 overview-table--item icoda-hidden">
+        <div class="overview-table position-realative mt-2 overview-table--item d-none">
 
             <div class="overview-table__content pl-0 w-100">
 
@@ -224,19 +226,22 @@ $_events = new WP_Query($q_args);
                             <?php endif; ?>
 
 
-                            <div class="d-flex card-event__btn">
+                            <div class="d-flex gap-2 justify-content-lg-end">
 
                                 <?php if (!empty($website)): ?>
                                     <a href="<?php echo $website; ?>" class="btn btn-blue btn-visit-website" target="_blank">
-                                        <?php echo _e('Visit website', 'icoda') ?>
+                                        <?php echo _e('Grab your spot', 'icoda') ?>
                                     </a>
                                 <?php endif; ?>
-                                <a
-                                    class="btn btn-book-meeting d-flex align-items-center justify-content-center btn-outline-blue"
-                                    href="#"
-                                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/d/cqrf-wpr-bt6/talk-to-our-expert'});return false;">
-                                    <?php echo __('Book A Meeting', 'icoda'); ?>
-                                </a>
+                                <?php if ($isRelatedPost && !empty($linkRelatedPost)): ?>
+                                    <a
+                                        class="btn btn-read-review d-flex align-items-center justify-content-center btn-outline-blue"
+                                        href="<?php echo $linkRelatedPost['url']; ?>" 
+                                        target="_blank"
+                                        >
+                                        <?php echo __('Read our review', 'icoda'); ?>
+                                    </a>
+                                <?php endif; ?>
 
                             </div>
                         </div>

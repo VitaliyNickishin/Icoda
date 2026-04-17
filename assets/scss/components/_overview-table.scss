@@ -1,198 +1,197 @@
 .overview-table {
-    padding: 1rem 1.125rem;
-    border: 2px solid $border-color;
-    @include border-radius(.75rem);
-    background: rgba(255, 255, 255, 0.80);
-    backdrop-filter: blur(4px);
-    color: $color-dark-blue;
-    @at-root .section-featured-events & {
-        padding: 0;
-        border: 0;
-        background: transparent;
-        backdrop-filter: none;
+  padding: 1rem 1.125rem;
+  border: 2px solid $border-color;
+  @include border-radius(0.75rem);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  color: $color-dark-blue;
+  @at-root .section-featured-events & {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+  }
+  &.top {
+    border-color: $green;
+    .badge:not(.badge-body) {
+      background-color: $green;
+      color: $white;
     }
-    &.top {
-        border-color: $green;
-        .badge:not(.badge-body) {
-            background-color: $green;
-            color: $white;
-        }
+  }
+  &.low {
+    border-color: $pink-200;
+    .badge:not(.badge-body) {
+      background-color: $pink-200;
     }
-    &.low {
-        border-color: $pink-200;
-        .badge:not(.badge-body) {
-            background-color: $pink-200;
-        }
+  }
+  .position {
+    @extend .fw-semibold;
+    @extend .position-absolute;
+    top: -12px;
+    left: 18px;
+    @at-root .rtl & {
+      left: auto;
+      right: 18px;
     }
-    .position {
-        @extend .fw-semibold;
-        @extend .position-absolute;
-        top: -12px;
-        left: 18px;
-        @at-root .rtl & {
-            left: auto;
-            right: 18px;
-        }
+  }
+  .sponsored {
+    @extend .position-absolute;
+    right: 18px;
+    bottom: -14px;
+    @at-root .rtl & {
+      right: auto;
+      left: 18px;
     }
-    .sponsored {
-        @extend .position-absolute;
-        right: 18px;
-        bottom: -14px;
-        @at-root .rtl & {
-            right: auto;
-            left: 18px;
-        }
-        &.badge {
-            background-color: $white;
-            color: $green;
-            border: 2px solid $green;
-        }
+    &.badge {
+      background-color: $white;
+      color: $green;
+      border: 2px solid $green;
     }
-    .has-rank {
-        .rank {
-            display: block;
-        }
+  }
+  .has-rank {
+    .rank {
+      display: block;
     }
-    &__content {
+  }
+  &__content {
+    @include mediaMin(992) {
+      padding-left: 1.5rem;
+    }
+    @at-root .rtl & {
+      padding-right: 1.5rem;
+      padding-left: 0;
+    }
+  }
+  &__logo {
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid $border-color;
+    height: 100%;
+  }
+  &__title {
+    line-height: 140%;
+    @include mediaMin(992) {
+      line-height: 150%;
+    }
+  }
+  &__btn {
+    gap: 8px;
+  }
+
+  &__body {
+    font-size: 0.875rem;
+    .column {
+      &:not(:first-child) {
+        margin-top: 12px;
         @include mediaMin(992) {
-            padding-left: 1.5rem;
-        }
-        @at-root .rtl & {
-            padding-right: 1.5rem;
+          margin-top: 0;
+          padding-left: 20px;
+          border-left: 1px solid $border-color;
+          @at-root .rtl & {
+            padding-right: 20px;
             padding-left: 0;
+            border-right: 1px solid $border-color;
+            border-left: 0;
+          }
         }
-    }
-    &__logo {
-        padding: 1rem;
-        border-radius: 12px;
-        border: 1px solid $border-color;
-        height: 100%;
-    }
-    &__title {
-        line-height: 140%;
+      }
+      &:first-child {
         @include mediaMin(992) {
-            line-height: 150%;
+          width: 31%;
         }
-    }
-    &__btn {
-        gap: 8px;
-    }
-    
-    &__body {
-        font-size: .875rem;
-        .column {
-            &:not(:first-child) {
-                margin-top: 12px;
-                @include mediaMin(992) {
-                    margin-top: 0;
-                    padding-left: 20px;
-                    border-left: 1px solid $border-color;
-                    @at-root .rtl & {
-                        padding-right: 20px;
-                        padding-left: 0;
-                        border-right: 1px solid $border-color;
-                        border-left: 0;
-                    }
-                }
-            }
-            &:first-child {
-                @include mediaMin(992) {
-                    width: 31%;
-                }
-            }
-            &:nth-child(2) {
-                @include mediaMin(992) {
-                    width: 43%;
-                }
-            }
-            &:last-child {
-                @include mediaMin(992) {
-                    width: 26%;
-                }
-            }
-        }
-        .badge {
-            background: $gray-400;
-            color: $color-dark-blue;
-        }
-    }
-    .title {
-        font-size: 1.125rem;
-        color: $color-blue;
-        &-second {
-            font-size: 12px;
-            color: $color-dark-gray;
-            @extend .fw-semibold;
-            line-height: 110%;
-        }
-    }
-    .badge-list {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0;
-        padding: 0;
-        gap: 8px;
+      }
+      &:nth-child(2) {
         @include mediaMin(992) {
-            gap: 4px;
+          width: 43%;
         }
-    }
-    .description {
-        line-height: 110%;
-    }
-    .hot {
-        &:after {
-            content: '';
-            display: inline-flex;
-            margin-left: 4px;
-            background-image: url("../images/hot.png");
-            width: 13px;
-            height: 13px;
-            background-size: 100%;
+      }
+      &:last-child {
+        @include mediaMin(992) {
+          width: 26%;
         }
-        
-    }
-    .has-cup {
-        &:before {
-            content: '';
-            margin-right: 4px;
-            background-image: url("../images/cup.png");
-            width: 13px;
-            height: 13px;
-            background-size: 100%;
-        }
-        
+      }
     }
     .badge {
-        padding: 4px 8px;
-        font-size: 14px;
-        line-height: 110%;
-        @include border-radius(4px);
-        background: $gray-400;
-        color: $color-dark-blue;
-        width: auto;
-        height: auto;
-        &-role {
-            background: $pink-900;
-            color: $white;
-        }
+      background: $gray-400;
+      color: $color-dark-blue;
     }
-    .rank {
-        display: none;
+  }
+  .title {
+    font-size: 1.125rem;
+    color: $color-blue;
+    &-second {
+      font-size: 12px;
+      color: $color-dark-gray;
+      @extend .fw-semibold;
+      line-height: 110%;
     }
-    .btn.btn-blue,
-    .btn-book-meeting {
-        padding: 13px 20px;
-        min-width: auto;
-        height: auto;
-        align-self: flex-start;
-        font-size: 12px;
-        @include mediaMax(991) {
-            @at-root .section-overview-table & {
-                padding: 11px;
-                @include border-radius(6px);
-                flex-shrink: 0;
-            }
-            
-        }
+  }
+  .badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 8px;
+    @include mediaMin(992) {
+      gap: 4px;
     }
+  }
+  .description {
+    line-height: 110%;
+  }
+  .hot {
+    &:after {
+      content: "";
+      display: inline-flex;
+      margin-left: 4px;
+      background-image: url("../images/hot.png");
+      width: 13px;
+      height: 13px;
+      background-size: 100%;
+    }
+  }
+  .has-cup {
+    &:before {
+      content: "";
+      margin-right: 4px;
+      background-image: url("../images/cup.png");
+      width: 13px;
+      height: 13px;
+      background-size: 100%;
+    }
+  }
+  .badge {
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 110%;
+    @include border-radius(4px);
+    background: $gray-400;
+    color: $color-dark-blue;
+    width: auto;
+    height: auto;
+    &-role {
+      background: $pink-900;
+      color: $white;
+    }
+  }
+  .rank {
+    display: none;
+  }
+  .btn.btn-blue,
+  .btn-book-meeting,
+  .btn-read-review {
+    padding: 13px 20px;
+    min-width: auto;
+    height: auto;
+    align-self: flex-start;
+    font-size: 12px;
+
+    @include mediaMax(991) {
+      @at-root .section-overview-table & {
+        padding: 11px;
+        @include border-radius(6px);
+        flex-shrink: 0;
+      }
+    }
+  }
 }

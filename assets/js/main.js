@@ -1178,6 +1178,27 @@ jQuery(document).ready(function ($) {
     });
   });
 
+  /* copy referral code for overview table */
+  let area = document.createElement("textarea");
+  document.body.appendChild(area);
+  area.style.display = "none";
+
+  let content = document.querySelectorAll(".referral-code");
+  let copy = document.querySelectorAll(".referral-copy");
+
+  for (let i = 0; i < copy.length; i++) {
+    copy[i].addEventListener("click", function () {
+      area.style.display = "block";
+      area.value = content[i].innerHTML.toUpperCase();
+      area.select();
+      document.execCommand("copy");
+      area.style.display = "none";
+
+      this.innerHTML = "Copied";
+      setTimeout(() => (this.innerHTML = "Copy"), 2000);
+    });
+  }
+
   initSliderFeatured();
   initServiceSlider();
   initSliderVcs();
@@ -1213,6 +1234,8 @@ jQuery(document).ready(function ($) {
   initSliderFourBox();
   initIntlTel();
   showMobileSubmenu();
+  // initSliderTwoLogosFirst();
+  // initSliderTwoLogosSecond();
 });
 var scrollToHeading = function () {
   $(".table-of-content").on("click", "a", function () {
@@ -1958,6 +1981,56 @@ const initSliderHeroServices = () => {
     $(".hero-slider-services.slick-initialized").slick("unslick");
   }
 };
+
+const initSliderTwoLogosFirst = () => {
+  $(".slider-two-logos-first").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    infinite: true,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 4000,
+    cssEase: "linear",
+    rtl: $("body").hasClass("rtl") ? true : false,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+};
+
+const initSliderTwoLogosSecond = () => {
+  $(".slider-two-logos-second").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    infinite: true,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 4000,
+    cssEase: "linear",
+    // rtl: false,
+    // rtl: true,
+    // rtl: $("body").hasClass("rtl") ? false : true,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+};
 $(window).on("load resize", function () {
   initSliderHeroAiSeo();
   initBoxContentSlider();
@@ -2447,3 +2520,46 @@ document.querySelectorAll(".stripe-pay-btn").forEach((btn) => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // initMarquee(".logos-row__left", 0.5);
+  // initMarquee(".logos-row__right", -0.5); // в другую сторону
+  document.querySelectorAll(".logos-track").forEach((track) => {
+    track.innerHTML += track.innerHTML + track.innerHTML;
+    const items = track.children;
+    let width = 0;
+    // считаем ширину ПЕРВОЙ половины
+    for (let i = 0; i < items.length / 2; i++) {
+      console.log("items", items);
+      width += items[i].offsetWidth;
+      console.log("widht", width);
+      console.log("items[i].offsetWidth:", items[i].offsetWidth);
+    }
+    track.style.setProperty("--track-width", `${width}px`);
+  });
+});
+
+// const initMarquee = (rowSelector, speed = 0.5) => {
+//   const row = document.querySelector(rowSelector);
+//   const track = row.querySelector(".logos-track");
+
+//   let position = 0;
+
+//   const step = () => {
+//     position -= speed;
+
+//     const first = track.firstElementChild;
+//     const firstWidth = first.offsetWidth + 24; // gap
+
+//     if (Math.abs(position) >= firstWidth) {
+//       track.appendChild(first);
+//       position += firstWidth;
+//     }
+
+//     track.style.transform = `translateX(${position}px)`;
+
+//     requestAnimationFrame(step);
+//   };
+
+//   step();
+// };
