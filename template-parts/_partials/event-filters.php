@@ -28,7 +28,7 @@ $topics = get_terms([
         </button>
         <div class="event-filters d-none d-lg-flex mt-2 mt-lg-0">
             <div class="event-filters-dropdowns d-lg-flex">
-                <!-- @todo after choose .selected-item add class .active to .dropdown-list -->
+                
                 <div class="dropdown-list" data-key="country">
                     <label class="for-dropdown event-filters-button has-drop-arrow">
                         <input class="checkbox" type="checkbox" name="dropdown">
@@ -119,72 +119,9 @@ $topics = get_terms([
                     </div>
                 </div>
 
-                <div class="dropdown-list" data-key="topic">
-                    <label class="for-dropdown event-filters-button">
-                        <input class="checkbox" type="checkbox" name="dropdown">
-                        <div class="selected event-filters-selected">
-                            <span class="event-filters-button-name">
-                                <?php _e('Selected Value', 'icoda'); ?>
-                            </span>
-                            <a href="#" class="reset-events-dropdown">
-                                <img class="close-icon" src="<?php echo $template_directory_uri; ?>/assets/images/close-icon.svg" alt="Remove filter" />
-                            </a>
-                        </div>
-
-                        <div class="selected-default">
-                            <span class="event-filters-button-name">
-                                <?php _e('Topics', 'icoda'); ?>
-                            </span>
-                            <img class="arrow-select" src="<?php echo $template_directory_uri; ?>/assets/images/drop-arrow.svg" alt="Drop arrow" />
-                        </div>
-                    </label>
-                    <div class="section-dropdown event-filters-dropdown">
-
-                        <a href="#" class="select-item " data-value="any-topic" data-name="<?php _e('Any topics', 'icoda'); ?>">
-                            <div class="select-wrapper">
-                                <div class="select-name">
-                                    <span class="country-name"><?php _e('Any topics', 'icoda'); ?></span>
-                                </div>
-                            </div>
-                        </a>
-
-                        <?php foreach ($topics as $t): ?>
-                            <a href="#" class="select-item " data-value="<?php echo $t->term_id; ?>" data-name="<?php echo $t->name; ?>">
-                                <div class="select-wrapper">
-                                    <div class="select-name">
-                                        <span class="country-name"><?php echo $t->name; ?></span>
-                                    </div>
-                                </div>
-                            </a>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-
-
             </div>
 
-            <div class="ml-lg-4 mt-2 mt-lg-0 event-filters-togglers w-100 d-lg-flex justify-content-between">
-
-                <label class="toggler-wrapper flex-lg-row flex-row-reverse">
-                    <div class="toggler" data-href="#" data-filter="online">
-                        <input type="checkbox" class="toggler-status" name="online">
-                        <div class="rounded-full"></div>
-                    </div>
-                    <span class="toggler-name ml-lg-2 mr-2 mr-lg-0">
-                        <?php _e('Online', 'icoda'); ?>
-                    </span>
-                </label>
-
-                <label class="toggler-wrapper flex-lg-row flex-row-reverse">
-                    <div class="toggler" data-href="#" data-filter="with_promocode">
-                        <input type="checkbox" class="toggler-status" name="with_promocode">
-                        <div class="rounded-full"></div>
-                    </div>
-                    <span class="toggler-name ml-lg-2 mr-2 mr-lg-0">
-                        <?php _e('With promo codes', 'icoda'); ?>
-                    </span>
-                </label>
-            </div>
+            
         </div>
     </div>
 </form>

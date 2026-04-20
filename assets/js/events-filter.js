@@ -1,16 +1,20 @@
 jQuery(document).ready(function ($) {
-  const $onlineCheckbox = $('[name="online"]');
-  const $withPromocodeCheckbox = $('[name="with_promocode"]');
-
   const appliedFilters = {};
 
-  $onlineCheckbox.on("change", function (event) {
-    appliedFilters["online"] = event.target.checked ? 1 : 0;
-    filterRun();
-  });
+  $(".nav-link").on("click", function () {
+    let topics = $(this).attr("data-topics").trim();
 
-  $withPromocodeCheckbox.on("change", function (event) {
-    appliedFilters["with_promocode"] = event.target.checked ? 1 : 0;
+    if (topics === "all" || topics === '"all"') {
+      delete appliedFilters["topic"];
+    } else {
+      try {
+        topics = JSON.parse(topics.trim());
+        appliedFilters["topic"] = topics;
+      } catch (e) {
+        console.error("JSON parse error:", topics);
+      }
+    }
+
     filterRun();
   });
 
@@ -39,7 +43,7 @@ jQuery(document).ready(function ($) {
     $dropList.find('input[type="checkbox"]').prop("checked", false);
     filterRun();
   });
-
+  //button show more
   $("body").on("click", ".section-all-events__show-more", function (event) {
     showMore();
   });
@@ -53,7 +57,14 @@ jQuery(document).ready(function ($) {
   }
 
   function filterRun() {
-    $.post("/wp-json/events/v1/filter", appliedFilters, function (data) {
+    const data = { ...appliedFilters };
+    console.log("Applied filters: data", data);
+
+    if (Array.isArray(data.topic)) {
+      data.topic = JSON.stringify(data.topic);
+      console.log("data.topic json", data.topic);
+    }
+    $.post("/wp-json/events/v1/filter", data, function (data) {
       $("#events-container").html(data);
       showMore();
       initReadMore();
@@ -77,13 +88,15 @@ jQuery(document).ready(function ($) {
 
   function showMore() {
     let showed = 0;
-    $('.overview-table--item:not(".showed")').each(function () {
-      if (showed < 3) {
-        $(this).removeClass("d-none");
-        $(this).addClass("showed");
-      }
-      showed++;
-    });
+    $('#events-container .overview-table--item:not(".showed")').each(
+      function () {
+        if (showed < 3) {
+          $(this).removeClass("d-none");
+          $(this).addClass("showed");
+        }
+        showed++;
+      },
+    );
     updateShowMore();
   }
 

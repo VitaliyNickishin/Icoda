@@ -164,6 +164,40 @@
       }
     }
   }
+  .nav {
+    @include mediaMin(992) {
+      justify-content: center;
+    }
+    &-tabs {
+      gap: 4px;
+      border-bottom: 0;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      @include mediaMax(768) {
+        margin-right: -15px;
+        padding-right: 15px;
+      }
+    }
+
+    &-link {
+      display: flex;
+      padding: 10px 24px;
+      color: $color-blue;
+      font-family: $f-sto-sb;
+      cursor: pointer;
+      @include border-radius(4px);
+      background-color: transparent;
+      border: 1px solid $color-blue;
+      flex-shrink: 0;
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: $color-blue;
+        border-color: $color-blue;
+        color: $white;
+      }
+    }
+  }
 }
 
 .undertitle-wrap {

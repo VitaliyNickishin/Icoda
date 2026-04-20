@@ -55,9 +55,23 @@ if (isset($args['with_promocode']) && $args['with_promocode']) {
 }
 
 if (isset($args['topic']) && $args['topic'] != 'any-topic') {
+
+    $topics = $args['topic'];
+
+    if ($topics === 'all') {
+        $topics = null;
+    }
+
+    if (is_string($topics)) {
+        $decoded = json_decode($topics, true);
+        if (json_last_error() === JSON_ERROR_NONE) {
+            $topics = $decoded;
+        }
+    }
+
     $tax_query[] = [
         'taxonomy' => 'events_cat',
-        'terms' => [$args['topic']],
+        'terms' => is_array($topics) ? $topics : [$topics],
         'field' => 'term_id',
     ];
 }

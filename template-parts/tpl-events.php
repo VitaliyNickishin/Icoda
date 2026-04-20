@@ -281,6 +281,27 @@ get_header();
             <?php endif; ?>
         </section>
 
+        <?php
+            $block_tabs['nav_tabs'] = [
+                [
+                    'nav_tab_title' => 'All events',
+                    'topics' => 'all'
+                ],
+                [
+                    'nav_tab_title' => 'Crypto & Web3',
+                    'topics' => [945,941,951,1003,956,955,959,954,950]
+                ],
+                [
+                    'nav_tab_title' => 'AI & Tech',
+                    'topics' => [942,964,965,947]
+                ],
+                [
+                    'nav_tab_title' => 'iGaming',
+                    'topics' => [962,963,949,943,1056]
+                ]
+            ];
+        ?>
+
         <section class="section section-all-events my-5 py-lg-2">
             <div class="container">
                 <div class="row">
@@ -289,14 +310,42 @@ get_header();
                             <?php echo get_field('events_tpl_title_2'); ?>
                         </h2>
 
-                        <?php get_template_part('template-parts/_partials/event-filters'); ?>
+                        <nav>
+                            <div class="nav nav-tabs border-0 mb-2 mb-lg-4" id="nav-tab" role="tablist">
+                                <?php if (!empty($block_tabs['nav_tabs'])) : ?>
+                                    <?php foreach ($block_tabs['nav_tabs'] as $index => $nav_tab) : ?>
+                                        <button 
+                                            class="nav-link <?php if ($index === 0) : ?>active<?php endif; ?>" 
+                                            id="nav-<?php echo $index; ?>-tab" 
+                                            data-toggle="tab" 
+                                            data-target="#nav-<?php echo $index; ?>" 
+                                            type="button" role="tab" 
+                                            aria-controls="nav-<?php echo $index; ?>" 
+                                            aria-selected="true"
+                                            data-topics='<?php echo json_encode($nav_tab['topics']); ?>'
+                                            >
+                                            <?php echo $nav_tab['nav_tab_title']; ?>
+                                        </button>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+                        </nav>
 
-                        <div class="mt-3 mt-lg-4 pt-lg-0 pt-1" id="events-container">
-                            <?php get_template_part('template-parts/_partials/events-overview-table'); ?>
-                        </div>
+                        <div class="tab-content" id="nav-tabContent">
+                            
+                                <div class="tab-pane fade show active">
 
-                        <div class="text-center mt-lg-4 mt-3 pt-1 pt-lg-0 section-all-events__show-more" style="display: none;">
-                            <a href="#" class="btn btn-blue btn-show-el"><?php echo __('Show more', 'icoda'); ?></a>
+                                    <?php get_template_part('template-parts/_partials/event-filters'); ?>
+
+                                    <div class="mt-3 mt-lg-4 pt-lg-0 pt-1" id="events-container">
+                                        <?php get_template_part('template-parts/_partials/events-overview-table'); ?>
+                                    </div>
+
+                                    <div class="text-center mt-lg-4 mt-3 pt-1 pt-lg-0 section-all-events__show-more" style="display: none;">
+                                        <a href="#" class="btn btn-blue btn-show-el"><?php echo __('Show more', 'icoda'); ?></a>
+                                    </div>
+                                </div>
+                           
                         </div>
                     </div>
                 </div>
