@@ -385,122 +385,60 @@ get_header();
 
         <section class="section section-two-logo-sliders my-5">
         <?php
-            $slidersLogo = get_field('ratings');
+            $revers_sliders = get_field('revers_sliders');
+            $section_title = get_field('section_title');
+            $first_slider = get_field('first_slider');
+            $second_slider = get_field('second_slider');
+            $cta_text = get_field('cta_text');
         ?>
             <div class="container">
                 <div class="row">
-                   <?php/* if (!empty($slidersLogo)) : */?>
+                   <?php if (!empty($first_slider)) : ?>
 
-                        <div class="col-12 pr-0">
-                            <h2 class="section-title mb-4">
-                                <?php echo _e('Our partners', 'icoda') ?>
-                            </h2>
+                        <div class="col-12 px-0">
+                            <?php if (!empty($section_title)): ?>
+                                <h2 class="section-title mb-4 px-3">
+                                    <?php echo esc_html($section_title); ?>
+                                </h2>
+                            <?php endif; ?>
                             
-                                <div class="logos-row logos-row__left">
-                                    <div class="logos-track">
-                                    
-                                            <div
-                                                class="media-logo">
-                                                <picture>
-                                                    <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
-                                                </picture>
-                                                <span class="media-title">
-                                                    <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
-                                                </span>
-                                            </div>
-                                            <div
-                                                class="media-logo">
-                                                <picture>
-                                                    <img src="/wp-content/uploads/2024/11/trustpilot-logo.svg" alt="Trustpilot" />
-                                                </picture>
-                                                <span class="media-title">
-                                                    <?php echo _e('Top Rated Trustpilot Agency', 'icoda') ?>
-                                                </span>
-                                            </div>
-                                            <div
-                                                class="media-logo">
-                                                <picture>
-                                                    <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
-                                                </picture>
-                                                <span class="media-title">
-                                                    <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
-                                                </span>
-                                            </div>
-                                            <div
-                                                class="media-logo">
-                                                <picture>
-                                                    <img src="/wp-content/uploads/2024/11/trustpilot-logo.svg" alt="Trustpilot" />
-                                                </picture>
-                                                <span class="media-title">
-                                                    <?php echo _e('Top Rated Trustpilot Agency', 'icoda') ?>
-                                                </span>
-                                            </div>
-                                            <div
-                                                class="media-logo">
-                                                <picture>
-                                                    <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
-                                                </picture>
-                                                <span class="media-title">
-                                                    <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
-                                                </span>
-                                            </div>
-                                        
-
-                                    </div>
+                            <div class="logos-row logos-row__left">
+                                <div class="logos-track">
+                                    <?php foreach ($first_slider as $key => $slide): ?>
+                                        <div
+                                            class="media-logo">
+                                            <picture>
+                                                <img src="<?php echo $slide['slide_image']['url']; ?>" alt="<?php echo $slide['slide_title']; ?>" width="160" height="160" />
+                                            </picture>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
+                            </div>
 
+                            <?php if (!empty($second_slider)): ?>
                                 <div class="logos-row logos-row__right mt-4">
                                     <div class="logos-track">
+                                        <?php foreach ($second_slider as $key => $slide): ?>
                                         <div
                                             class="media-logo">
                                             <picture>
-                                                <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
+                                                <img src="<?php echo $slide['slide_image']['url']; ?>" alt="<?php echo $slide['slide_title']; ?>" width="160" height="160" />
                                             </picture>
-                                            <span class="media-title">
-                                                <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
-                                            </span>
                                         </div>
-                                        <div
-                                            class="media-logo">
-                                            <picture>
-                                                <img src="/wp-content/uploads/2024/11/trustpilot-logo.svg" alt="Trustpilot" />
-                                            </picture>
-                                            <span class="media-title">
-                                                <?php echo _e('Top Rated Trustpilot Agency', 'icoda') ?>
-                                            </span>
-                                        </div>
-                                        <div
-                                            class="media-logo">
-                                            <picture>
-                                                <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
-                                            </picture>
-                                            <span class="media-title">
-                                                <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
-                                            </span>
-                                        </div>
-                                        <div
-                                            class="media-logo">
-                                            <picture>
-                                                <img src="/wp-content/uploads/2024/11/trustpilot-logo.svg" alt="Trustpilot" />
-                                            </picture>
-                                            <span class="media-title">
-                                                <?php echo _e('Top Rated Trustpilot Agency', 'icoda') ?>
-                                            </span>
-                                        </div>
-                                        <div
-                                            class="media-logo">
-                                            <picture>
-                                                <img src="/wp-content/uploads/2024/11/clutch-logo.svg" alt="Clutch" />
-                                            </picture>
-                                            <span class="media-title">
-                                                <?php echo _e('Top Digital Strategy Company', 'icoda') ?>
-                                            </span>
-                                        </div>
+                                    <?php endforeach; ?>
                                     </div>
                                 </div>
-                            
+                            <?php endif; ?>
                         </div>
-                    <?php/* endif; */?>
+
+                        <?php if (!empty($cta_text)): ?>
+                            <div class="col-12 mt-4 text-center">
+                                <a href="#" data-modal="#callback" class="btn btn-blue open-modal">
+                                    <?php echo $cta_text; ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                    <?php endif; ?>
 
                 </div>
             </div>

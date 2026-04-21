@@ -444,8 +444,26 @@ label[for^="read-more-"] {
     // width: max-content;
     gap: 24px;
 
-    @include mediaMax(768px) {
+    @include mediaMax(768) {
       // animation-duration: 30s; /* медленнее */
+    }
+    .lazyload,
+    .lazyloading {
+      opacity: 1;
+    }
+    .media-logo {
+      justify-content: center;
+      @include mediaMax(768) {
+        padding: 8px;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    img {
+      @include mediaMax(768) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 

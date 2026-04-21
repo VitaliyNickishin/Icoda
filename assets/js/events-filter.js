@@ -58,11 +58,11 @@ jQuery(document).ready(function ($) {
 
   function filterRun() {
     const data = { ...appliedFilters };
-    console.log("Applied filters: data", data);
+    // console.log("Applied filters: data", data);
 
     if (Array.isArray(data.topic)) {
       data.topic = JSON.stringify(data.topic);
-      console.log("data.topic json", data.topic);
+      // console.log("data.topic json", data.topic);
     }
     $.post("/wp-json/events/v1/filter", data, function (data) {
       $("#events-container").html(data);
@@ -74,7 +74,6 @@ jQuery(document).ready(function ($) {
   function initReadMore() {
     document.querySelectorAll(".undertitle-wrap").forEach(function (wrap) {
       wrap.addEventListener("change", function (evt) {
-        console.log("undertitle-wrap - undertitle-wrap");
         if (evt.target.classList.contains("read-more")) {
           if (evt.target.checked) {
             wrap.classList.add("open");
