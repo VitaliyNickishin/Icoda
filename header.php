@@ -74,9 +74,7 @@
   </script>
   <!-- /Yandex.Metrika counter -->
 
-  <script async src="https://app.popkit.club/pixel-webhook/1da4d441703fbf313f40238f43b0e044"></script>
 
-  
   <?php get_template_part('template-parts/schemas/general'); ?>
   <?php get_template_part('template-parts/schemas/faq'); ?>
   <?php
@@ -162,6 +160,14 @@
     <?php else : ?>
       <a href="<?php the_field('telegram_link-all_lang', 'option'); ?>" target="_blank" class="link-telegram-fix pulse"><i class="icon-ico-media-4"></i></a>
     <?php endif; ?>
+
+    <div class="push-banner" id="pushBanner">
+      <a href="<?php echo esc_url( home_url('/ai-visibility/') ); ?>" target="_blank" class="link-push-ai-tools">
+        <?php echo __('Check if your brand is visible to AI Search', 'icoda'); ?>
+      </a>
+
+      <button class="push-banner-close" id="pushBannerClose">✕</button>
+    </div>
 
     <header data-header class="header navbar navbar-light btco-hover-menu">
       <div class="container">

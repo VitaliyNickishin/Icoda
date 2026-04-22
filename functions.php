@@ -1737,6 +1737,10 @@ function icoda_body_class_filter( $classes ) {
         $classes[] = 'service-v2';
     }
 
+    if(stripos( $_SERVER['REQUEST_URI'], '/services/' ) !== false) {
+        $classes[] = 'is-service-page';
+    }
+
 	return $classes;
 }
 

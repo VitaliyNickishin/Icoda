@@ -2522,13 +2522,11 @@ document.querySelectorAll(".stripe-pay-btn").forEach((btn) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // initMarquee(".logos-row__left", 0.5);
-  // initMarquee(".logos-row__right", -0.5); // в другую сторону
   document.querySelectorAll(".logos-track").forEach((track) => {
     track.innerHTML += track.innerHTML + track.innerHTML;
     const items = track.children;
     let width = 0;
-    // считаем ширину ПЕРВОЙ половины
+    // count half width of slider
     for (let i = 0; i < items.length / 2; i++) {
       console.log("items", items);
       width += items[i].offsetWidth;
@@ -2539,27 +2537,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// const initMarquee = (rowSelector, speed = 0.5) => {
-//   const row = document.querySelector(rowSelector);
-//   const track = row.querySelector(".logos-track");
+document.addEventListener("DOMContentLoaded", function () {
+  const banner = document.getElementById("pushBanner");
+  const closeBtn = document.getElementById("pushBannerClose");
+  const isServicePage = document.body.classList.contains("is-service-page");
+  // const isClosed = localStorage.getItem("pushBannerClosed") === "true";
 
-//   let position = 0;
+  if (!banner || !closeBtn) return;
 
-//   const step = () => {
-//     position -= speed;
-
-//     const first = track.firstElementChild;
-//     const firstWidth = first.offsetWidth + 24; // gap
-
-//     if (Math.abs(position) >= firstWidth) {
-//       track.appendChild(first);
-//       position += firstWidth;
-//     }
-
-//     track.style.transform = `translateX(${position}px)`;
-
-//     requestAnimationFrame(step);
-//   };
-
-//   step();
-// };
+  if (isServicePage) {
+    setTimeout(() => {
+      if (banner) {
+        banner.classList.add("show");
+      }
+    }, 5000);
+  }
+  closeBtn.addEventListener("click", () => {
+    banner.classList.remove("show");
+    // localStorage.setItem("pushBannerClosed", "true");
+  });
+});
