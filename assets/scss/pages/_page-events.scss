@@ -460,9 +460,9 @@ label[for^="read-more-"] {
       }
     }
     img {
+      height: auto;
       @include mediaMax(768) {
         width: 100%;
-        height: auto;
       }
     }
   }

@@ -2528,10 +2528,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let width = 0;
     // count half width of slider
     for (let i = 0; i < items.length / 2; i++) {
-      console.log("items", items);
       width += items[i].offsetWidth;
-      console.log("widht", width);
-      console.log("items[i].offsetWidth:", items[i].offsetWidth);
     }
     track.style.setProperty("--track-width", `${width}px`);
   });
