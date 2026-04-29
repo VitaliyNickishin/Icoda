@@ -2537,12 +2537,14 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const banner = document.getElementById("pushBanner");
   const closeBtn = document.getElementById("pushBannerClose");
-  const isServicePage = document.body.classList.contains("is-service-page");
+  const isMarketingPage = document.body.classList.contains(
+    "is-ai-marketing-page",
+  );
   // const isClosed = localStorage.getItem("pushBannerClosed") === "true";
 
   if (!banner || !closeBtn) return;
 
-  if (isServicePage) {
+  if (isMarketingPage) {
     setTimeout(() => {
       if (banner) {
         banner.classList.add("show");
