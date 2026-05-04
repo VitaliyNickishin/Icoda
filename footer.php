@@ -71,13 +71,10 @@
 
                                     <div class="footer-list">
                                         <?php the_view('menu__footer', ['location' => 'footer-right-down']); ?>
+                                        <div class="mt-3">
+                                            <?php the_view('menu__footer', ['location' => 'footer-right-down-2']); ?>
+                                        </div>
                                     </div>
-
-                                    <?php /* ?>
-                                    <div class="footer-list">
-                                        <?php the_view('menu__footer', ['location' => 'footer-right-down-2']); ?>
-                                    </div>
-                                    <?php */ ?>
 
                                 </div>
                             </div>

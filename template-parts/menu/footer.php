@@ -3,8 +3,18 @@ $menu = icoda_get_items_tree_menu($args['location']);
 
 $show_only_first_item = false;
 $show_only_first_item_big = false;
+
 if ( $args['location'] == 'footer-right-down-2') {
-    $show_only_first_item = true;
+    echo '<ul>';
+    if (!empty($menu[0]->childs)) {
+        foreach ($menu[0]->childs as $item) {
+            $title = ($item['title'] !== "#") ? $item['title'] : '';
+            echo "<li><a href=\"{$item['url']}\">$title</a></li>";
+        }
+    }
+    echo '</ul>';
+
+    return;
 }
 
 if ($args['location'] == 'footer-center-down' || $args['location'] == 'footer-left' || $args['location'] == 'footer-two-two' || $args['location'] == 'footer-center' || $args['location'] == 'footer-right-up' || $args['location'] == 'footer-right-down' ) {
