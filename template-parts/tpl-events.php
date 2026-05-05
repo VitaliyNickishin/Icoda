@@ -44,7 +44,6 @@ get_header();
     
     $dateObj = new DateTime('now', new DateTimeZone('Europe/Kyiv'));
 
-    $dateObj = new DateTime('now', new DateTimeZone('Europe/Kyiv'));
     $todayStart = $dateObj->format('Y-m-d 00:00:00');
     // $todayEnd = $dateObj->format('Y-m-d 23:59:59');
     $dateObj->setTime(23, 59, 59);
@@ -142,6 +141,14 @@ get_header();
                 </div>
             </div>
             <?php if(!empty($top_events_posts)) : ?>
+                <?php
+                    usort($top_events_posts, function($a, $b) {
+                    $dateA = strtotime(get_field('date_start', $a));
+                    $dateB = strtotime(get_field('date_start', $b));
+
+                    return $dateA <=> $dateB;
+                });
+                ?>
             <div class="section-has-bg position-relative mt-4">
                 <div class="container">
                     <div class="row">

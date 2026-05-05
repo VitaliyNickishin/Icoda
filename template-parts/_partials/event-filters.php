@@ -48,6 +48,7 @@ $topics = get_terms([
                             <img class="arrow-select" src="<?php echo $template_directory_uri; ?>/assets/images/drop-arrow.svg" alt="Drop arrow" />
                         </div>
                     </label>
+                    <!-- descktop -->
                     <div class="section-dropdown event-filters-dropdown">
 
                         <div class="dropdown-list-wrapper">
@@ -70,7 +71,7 @@ $topics = get_terms([
                         </div>
                     </div>
                 </div>
-
+                <!-- mobile -->
                 <div class="dropdown-list" data-key="date">
                     <label class="for-dropdown event-filters-button has-drop-arrow">
                         <input class="checkbox" type="checkbox" name="dropdown">
