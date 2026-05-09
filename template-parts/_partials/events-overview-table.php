@@ -33,12 +33,15 @@ if (isset($args['date']) && $args['date'] != 'any-date') {
         'type' => 'DATETIME',
     ];
 }
+
+$dateEndCompare = empty($args['previous']) ? '>=' : '<';
 $meta_query[] = [
     'key' => 'date_end',
     'value' => $start,
-    'compare' => '>=',
+    'compare' => $dateEndCompare,
     'type' => 'DATETIME',
 ];
+
 
 if (isset($args['online']) && $args['online']) {
     $meta_query[] = [

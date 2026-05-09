@@ -57,6 +57,7 @@ get_header();
         return true;
     });
 
+
     $topEventsCount = 3;
 
     if(count($top_events_posts) < $topEventsCount) {
@@ -305,6 +306,12 @@ get_header();
                 [
                     'nav_tab_title' => 'iGaming',
                     'topics' => [962,963,949,943,1056]
+                ],
+                [
+                    'nav_tab_title' => 'Previous events',
+                    'topics' => 'previous',
+                    'is_previous' => true
+                    
                 ]
             ];
         ?>
@@ -329,7 +336,8 @@ get_header();
                                             type="button" role="tab" 
                                             aria-controls="nav-<?php echo $index; ?>" 
                                             aria-selected="true"
-                                            data-topics='<?php echo json_encode($nav_tab['topics']); ?>'
+                                            data-topics='<?php echo json_encode($nav_tab['topics'] ?? []); ?>'
+                                            data-previous="<?php echo !empty($nav_tab['is_previous']) ? 'true' : 'false'; ?>"
                                             >
                                             <?php echo $nav_tab['nav_tab_title']; ?>
                                         </button>
