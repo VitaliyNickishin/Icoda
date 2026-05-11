@@ -1,47 +1,22 @@
 jQuery(document).ready(function ($) {
   const appliedFilters = {};
 
-  // $(".nav-link").on("click", function () {
-  //   let topics = $(this).attr("data-topics").trim();
-
-  //   if (topics === "all" || topics === '"all"') {
-  //     delete appliedFilters["topic"];
-  //   } else {
-  //     try {
-  //       topics = JSON.parse(topics.trim());
-  //       appliedFilters["topic"] = topics;
-  //     } catch (e) {
-  //       console.error("JSON parse error:", topics);
-  //     }
-  //   }
-
-  //   filterRun();
-  // });
-
-  // $(".nav-link").on("click", function () {
-  //   let topics = $(this).data("topics");
-  //   console.log("topics:", topics);
-
-  //   if (topics === "all") {
-  //     delete appliedFilters["topic"];
-  //   } else {
-  //     appliedFilters["topic"] = topics;
-  //   }
-
-  //   console.log("appliedFilters:", appliedFilters);
-
-  //   filterRun();
-  // });
   $(".nav-link").on("click", function () {
     let topics = $(this).attr("data-topics")?.trim();
     let isPrevious = $(this).attr("data-previous");
+    let section = $(this).parents(".section-all-events");
+    const dateDropdown = section.find(
+      ".event-filters-dropdowns [data-key='date']",
+    );
 
     delete appliedFilters["previous"];
 
     if (isPrevious === "true") {
       delete appliedFilters["topic"];
       appliedFilters["previous"] = true;
+      dateDropdown.addClass("d-none");
     } else {
+      dateDropdown.removeClass("d-none");
       if (topics === "all" || topics === '"all"') {
         delete appliedFilters["topic"];
       } else {
@@ -97,11 +72,8 @@ jQuery(document).ready(function ($) {
 
   function filterRun() {
     const data = { ...appliedFilters };
-    console.log("Applied filters: data", data);
-
     if (Array.isArray(data.topic)) {
       data.topic = JSON.stringify(data.topic);
-      console.log("data.topic json", data.topic);
     }
     $.post("/wp-json/events/v1/filter", data, function (data) {
       // console.log("send post request:", data);

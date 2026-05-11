@@ -309,7 +309,6 @@ get_header();
                 ],
                 [
                     'nav_tab_title' => 'Previous events',
-                    'topics' => 'previous',
                     'is_previous' => true
                     
                 ]
