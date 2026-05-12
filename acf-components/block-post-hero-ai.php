@@ -27,7 +27,9 @@ $hero_section = get_field('hero_section');
                 </div>
                 
                 <div class="col-12 col-lg-5 mt-5 mt-lg-0 d-flex align-items-center flex-column justify-content-center align-self-end">
-                    <div class="bg-wrap"></div>
+                    <?php if (!empty($hero_section['has_image_background'])) : ?>
+                        <div class="bg-wrap d-lg-block d-none" style="background-image: url(<?php echo $hero_section['has_image_background']; ?>);"></div>
+                    <?php endif; ?>
 
                     <?php if (!empty($hero_section['llm_list'])) : ?>
                         <ul class="llm-list-icons">

@@ -29,21 +29,14 @@
     gap: 6px;
   }
   .bg-wrap {
-    @include mediaMin(992) {
-      &::before {
-        content: "";
-        position: absolute;
-        background-repeat: no-repeat;
-        background-image: url("../images/bg-ai-seo.png");
-        background-size: contain;
-        right: -75px;
-        bottom: -120px;
-        width: 638px;
-        height: 416px;
-        display: block;
-        z-index: -1;
-      }
-    }
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -75px;
+    bottom: -120px;
+    width: 638px;
+    height: 416px;
+    z-index: -1;
     img {
       @include mediaMax(991) {
         width: 160px;
