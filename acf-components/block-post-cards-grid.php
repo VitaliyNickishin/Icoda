@@ -33,14 +33,17 @@ $bg_color = !empty($cards_grid['has_background_color'])
                 <?php if (!empty($cards_grid['cards_list'])) : ?>
                     <ul class="card-list mt-4 mt-lg-3 pt-lg-3">
                         <?php foreach ($cards_grid['cards_list'] as $card) : ?>
+                            <?php
+                                $link_url = !empty($card['link']) ? $card['link'] : '#';
+                            ?>
                             <li
                                 class="serv-box">
                                 <?php if (!empty($card['image']['url'])) : ?>
-                                    <div class="img">
+                                    <a href="<?php echo esc_url($link_url); ?>" class="card-logo" target="_blank">
                                         <picture>
                                             <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['title']; ?>" />
                                         </picture>
-                                    </div>
+                                    </a>
                                 <?php endif; ?>
 
                                 <?php if (!empty($card['title'])) : ?>
