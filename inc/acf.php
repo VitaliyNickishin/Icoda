@@ -152,6 +152,43 @@ add_action('acf/init', function () {
     ));
 
     acf_register_block(array(
+        'name'              => 'post-cards-grid',
+        'title'             => __('Post Cards Grid'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('grid', 'icoda', 'cards', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-nav-sticky',
+        'title'             => __('Post Nav Sticky'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('nav', 'icoda', 'sticky', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-banner-action',
+        'title'             => __('Post Banner Action'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('banner', 'icoda', 'action', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+
+    acf_register_block(array(
         'name'              => 'icoda-portfolio-logotypes-banxe',
         'title'             => __('Logotypes Banxe'),
         'description'       => __(''),
@@ -589,6 +626,18 @@ add_action('acf/init', function () {
     acf_register_block(array(
         'name'              => 'post-hero-ai',
         'title'             => __('Post Hero AI'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('header','hero', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-hero-general',
+        'title'             => __('Post Hero General'),
         'description'       => __(''),
         'render_callback' => 'icoda_acf_block_render_callback',
         'category'            => 'icoda-posts',

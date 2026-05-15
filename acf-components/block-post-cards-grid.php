@@ -1,0 +1,59 @@
+<?php
+$cards_grid = get_field('cards_grid');
+$has_bg = !empty($cards_grid['is_background_color']);
+$bg_color = !empty($cards_grid['has_background_color'])
+    ? $cards_grid['has_background_color']
+    : '#f4f6f9';
+?>
+<section class="section section-cards-grid py-5 <?php echo $has_bg ? '' : 'bg-white'; ?>" 
+    <?php if ($has_bg) : ?>
+        style="background-color: <?php echo esc_attr($bg_color); ?>;"
+    <?php endif; ?>>
+    <div class="container">
+        <div class="row py-lg-4">
+            <div class="col-12 col-lg-6">
+                <p class="abovetitle mb-1 text-primary">
+                    <?php echo $cards_grid['above_title']; ?>
+                </p>
+                <h2 class="h2 mb-3 section-title">
+                    <?php echo $cards_grid['title']; ?>
+                </h2>
+                <p class="subtitle">
+                    <?php echo $cards_grid['subtitle']; ?>
+                </p>
+            </div>
+            
+            <div class="col-12">
+               
+                <?php if (!empty($cards_grid['cards_list'])) : ?>
+                    <ul class="card-list mt-4 mt-lg-3 pt-lg-3">
+                        <?php foreach ($cards_grid['cards_list'] as $card) : ?>
+                            <li
+                                class="serv-box">
+                                <?php if (!empty($card['image']['url'])) : ?>
+                                    <div class="img">
+                                        <picture>
+                                            <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['title']; ?>" />
+                                        </picture>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (!empty($card['title'])) : ?>
+                                    <h3 class="title">
+                                        <?php echo $card['title']; ?>
+                                    </h3>
+                                <?php endif; ?>
+                                <?php if (!empty($card['description'])) : ?>
+                                    <span class="description">
+                                        <?php echo $card['description']; ?>
+                                    </span>
+                                <?php endif; ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+    
+</section>

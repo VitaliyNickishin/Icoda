@@ -1,0 +1,83 @@
+.section-banner-action {
+  .section-title {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+    font-family: $f-sto-bold;
+    color: $white;
+    @include mediaMin(992) {
+      font-size: 2.5rem;
+      line-height: 46px;
+      letter-spacing: -0.01em;
+    }
+  }
+  .subtitle {
+    font-size: 0.9375rem;
+    line-height: 24px;
+    color: $white;
+    @include mediaMin(992) {
+      font-size: 1.0625rem;
+      line-height: 28px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    @include mediaMin(992) {
+      min-width: 320px;
+      width: auto;
+    }
+  }
+  .btn-modal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 28px;
+    background: rgb(255, 255, 255);
+    color: rgb(60, 97, 226);
+    border-radius: 4px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 180ms;
+    &:hover {
+      .has-arrow {
+        &:after {
+          transform: translateX(4px);
+        }
+      }
+    }
+  }
+  .has-arrow {
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 10px;
+      background-image: url("../images/arrow-more.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateX(0);
+      transition: transform 180ms;
+    }
+  }
+  .btn-second {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 17px 28px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition:
+      background 180ms,
+      border-color 180ms;
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 1);
+    }
+  }
+}

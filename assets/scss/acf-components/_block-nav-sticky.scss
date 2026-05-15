@@ -1,0 +1,37 @@
+.block-nav-sticky {
+  padding: 8px 0;
+  border-top: 1px solid #e0e3ee;
+  border-bottom: 1px solid rgb(224, 227, 238);
+  background: $white;
+  position: sticky;
+  top: 51px;
+  z-index: 50;
+  overflow-x: auto;
+  @include mediaMin(992) {
+    top: 101px;
+  }
+  .label {
+    font-size: 12px;
+    font-family: $f-sto-bold;
+    letter-spacing: 0.08em;
+    color: $color-dark-gray;
+    white-space: nowrap;
+  }
+  .nav-link {
+    font-size: 14px;
+    font-family: $f-sto-medium;
+    color: $main-color-text;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 100px;
+    white-space: nowrap;
+    transition:
+      background 180ms,
+      color 180ms;
+    background: transparent;
+    &:hover {
+      color: $color-blue;
+      background-color: rgba(197, 208, 236, 0.3);
+    }
+  }
+}

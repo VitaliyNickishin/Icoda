@@ -1,0 +1,18 @@
+.section-hero-general {
+  .section-title {
+    font-size: 2.125rem;
+    line-height: 40px;
+    letter-spacing: 0.35px;
+    @include mediaMin(992) {
+      font-size: 54px;
+      line-height: 58px;
+      color: $color-blue;
+    }
+  }
+  .cases-box {
+    width: 100%;
+    @include mediaMin(768) {
+      width: auto;
+    }
+  }
+}

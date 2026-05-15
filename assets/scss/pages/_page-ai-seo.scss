@@ -99,8 +99,8 @@
     line-height: 115%;
   }
 }
-
-.page-ai-seo {
+.page-ai-seo,
+.section-hero-general {
   .with-gradient {
     //blue gradient
     &:after {
@@ -129,6 +129,9 @@
       }
     }
   }
+}
+
+.page-ai-seo {
   // Adjustments for two-column content blocks
   .block-content-two-columns {
     @extend .my-lg-4;

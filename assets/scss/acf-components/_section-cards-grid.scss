@@ -1,0 +1,58 @@
+.section-cards-grid {
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+    gap: 12px;
+    @include mediaMin(992) {
+      grid-template-columns: repeat(4, minmax(0px, 1fr));
+      gap: 16px;
+    }
+    .subtitle {
+      font-size: 16px;
+      line-height: 26px;
+      color: rgb(84, 101, 141);
+      text-wrap: pretty;
+    }
+  }
+  .serv-box {
+    background: rgb(255, 255, 255);
+    padding: 1rem 1.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-height: 196px;
+    @include mediaMin(992) {
+      padding: 1.75rem 1.625rem;
+    }
+    .img {
+      // height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      height: 44px;
+      width: auto;
+      max-width: 160px;
+      display: block;
+      object-fit: contain;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      color: rgb(45, 52, 77);
+      letter-spacing: -0.015em;
+      margin: 0px;
+      text-align: center;
+    }
+    .description {
+      font-size: 14px;
+      line-height: 22px;
+      color: rgb(84, 101, 141);
+      margin: 0px;
+      text-align: left;
+      text-wrap: pretty;
+    }
+  }
+}

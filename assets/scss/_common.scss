@@ -5,9 +5,9 @@ body {
 .section {
   position: relative;
 }
-.wrap {
-  overflow: hidden;
-}
+// .wrap {
+//   overflow: hidden;
+// }
 
 .section-content {
   h1 {
@@ -551,7 +551,8 @@ a.logo {
 .box-feedback,
 .block-video-content,
 .block-content-two-columns,
-.block-content-slider {
+.block-content-slider,
+.section-cards-grid {
   .section-title {
     font-size: 1.5rem; //24px;
     font-family: $f-sto-m;
