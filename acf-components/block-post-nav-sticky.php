@@ -15,15 +15,13 @@ $nav_sticky = get_field('nav_sticky');
                     <ul class="d-flex">
                         <?php foreach ($nav_sticky['nav_list'] as $link) : ?>
                             <?php
-                                    $link_url = !empty($link['link']['url']) ? $link['link']['url'] : '#';
-                                    $link_target = !empty($link['link']['target']) ? $link['link']['target'] : '_self';
-                                ?>
+                                $link_url = !empty($link['link_anchor']) ? $link['link_anchor'] : '#';
+                            ?>
                             <li>
                                 <a href="<?php echo esc_url($link_url); ?>" 
                                 class="nav-link"
-                                target="<?php echo esc_attr($link_target); ?>"
                                 >
-                                    <?php echo $link['link']['title']; ?>
+                                    <?php echo $link['link_title']; ?>
                                 </a>
                             </li>
                         <?php endforeach; ?>

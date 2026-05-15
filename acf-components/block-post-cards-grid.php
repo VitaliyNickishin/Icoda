@@ -1,11 +1,16 @@
 <?php
 $cards_grid = get_field('cards_grid');
+$id_section = !empty($cards_grid['id_section']) ? $cards_grid['id_section'] : '';
 $has_bg = !empty($cards_grid['is_background_color']);
 $bg_color = !empty($cards_grid['has_background_color'])
     ? $cards_grid['has_background_color']
     : '#f4f6f9';
 ?>
-<section class="section section-cards-grid py-5 <?php echo $has_bg ? '' : 'bg-white'; ?>" 
+<section 
+    <?php if ($id_section) : ?>
+        id="<?php echo esc_attr($id_section); ?>"
+    <?php endif; ?>
+    class="section section-cards-grid py-5 <?php echo $has_bg ? '' : 'bg-white'; ?>" 
     <?php if ($has_bg) : ?>
         style="background-color: <?php echo esc_attr($bg_color); ?>;"
     <?php endif; ?>>
