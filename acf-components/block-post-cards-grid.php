@@ -37,13 +37,19 @@ $bg_color = !empty($cards_grid['has_background_color'])
                                 $link_url = !empty($card['link']) ? $card['link'] : '#';
                             ?>
                             <li
-                                class="serv-box">
+                                class="card-list-item serv-box">
                                 <?php if (!empty($card['image']['url'])) : ?>
-                                    <a href="<?php echo esc_url($link_url); ?>" class="card-logo" target="_blank">
-                                        <picture>
-                                            <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['title']; ?>" />
-                                        </picture>
-                                    </a>
+                                    <?php if (!empty($card['link'])) : ?>
+                                        <a href="<?php echo esc_url($link_url); ?>" target="_blank">
+                                    <?php endif; ?>
+                                        <span class="card-logo">
+                                            <picture>
+                                                <img src="<?php echo $card['image']['url']; ?>" alt="<?php echo $card['title']; ?>" />
+                                            </picture>
+                                        </span>
+                                    <?php if (!empty($card['link'])) : ?>
+                                        </a>
+                                    <?php endif; ?>
                                 <?php endif; ?>
 
                                 <?php if (!empty($card['title'])) : ?>
@@ -55,6 +61,21 @@ $bg_color = !empty($cards_grid['has_background_color'])
                                     <span class="description">
                                         <?php echo $card['description']; ?>
                                     </span>
+                                <?php endif; ?>
+                                <?php if (!empty($card['link_bottom_text'])) : ?>
+                                    <?php if (!empty($card['link_bottom'])) : ?>
+                                        <a href="<?php echo esc_url($card['link_bottom']); ?>" class="card-link-bottom" target="_blank">
+                                    <?php endif; ?>
+                                        <span class="card-text-bottom">
+                                            <?php echo $card['link_bottom_text']; ?>
+                                            <?php if (!empty($card['link_bottom'])) : ?>
+                                                <i class="has-arrow"></i>
+                                            <?php endif; ?>
+                                        </span>
+                                        
+                                    <?php if (!empty($card['link_bottom'])) : ?>
+                                        </a>
+                                    <?php endif; ?>
                                 <?php endif; ?>
                             </li>
                         <?php endforeach; ?>

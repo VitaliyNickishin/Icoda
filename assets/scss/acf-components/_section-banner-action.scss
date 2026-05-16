@@ -46,19 +46,7 @@
       }
     }
   }
-  .has-arrow {
-    &:after {
-      content: "";
-      display: inline-block;
-      width: 12px;
-      height: 10px;
-      background-image: url("../images/arrow-more.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      transform: translateX(0);
-      transition: transform 180ms;
-    }
-  }
+
   .btn-second {
     display: inline-flex;
     align-items: center;

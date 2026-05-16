@@ -1,4 +1,14 @@
 .section-cards-grid {
+  .subtitle {
+    font-size: 15px;
+    line-height: 24px;
+    color: $main-color-text;
+    text-wrap: pretty;
+    @include mediaMin(992) {
+      font-size: 1rem;
+      line-height: 26px;
+    }
+  }
   .card-list {
     display: grid;
     grid-template-columns: repeat(1, minmax(0px, 1fr));
@@ -7,53 +17,87 @@
       grid-template-columns: repeat(4, minmax(0px, 1fr));
       gap: 16px;
     }
-    .subtitle {
-      font-size: 16px;
-      line-height: 26px;
-      color: rgb(84, 101, 141);
-      text-wrap: pretty;
-    }
-  }
-  .serv-box {
-    background: rgb(255, 255, 255);
-    padding: 1rem 1.125rem;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    min-height: 196px;
-    @include mediaMin(992) {
-      padding: 1.75rem 1.625rem;
-    }
-    .card-logo {
-      // height: 56px;
+    &-item {
+      background: rgb(255, 255, 255);
+      padding: 1rem 1.125rem;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        height: 44px;
-        width: auto;
-        max-width: 160px;
-        display: block;
-        object-fit: contain;
+      flex-direction: column;
+      min-height: 196px;
+      @include mediaMin(992) {
+        padding: 1.75rem 1.625rem;
+      }
+      .card-logo {
+        // height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: 44px;
+          width: auto;
+          max-width: 160px;
+          display: block;
+          object-fit: contain;
+        }
+      }
+
+      .title {
+        margin-top: 0.875rem;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: rgb(45, 52, 77);
+        letter-spacing: -0.015em;
+        margin-bottom: 0px;
+        @include mediaMin(992) {
+          margin-top: 1rem;
+        }
+        @at-root .page-partners & {
+          text-align: center;
+        }
+        @at-root .page-awards & {
+          min-height: 3rem;
+        }
+      }
+      .description {
+        margin-top: 0.875rem;
+        font-size: 14px;
+        line-height: 22px;
+        color: $main-color-text;
+        text-align: left;
+        text-wrap: pretty;
+        @include mediaMin(992) {
+          margin-top: 1rem;
+        }
+
+        @at-root .page-awards & {
+          line-height: 1rem;
+          font-size: 0.6875rem;
+          text-transform: uppercase;
+        }
       }
     }
-
-    .title {
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 24px;
-      color: rgb(45, 52, 77);
-      letter-spacing: -0.015em;
-      margin: 0px;
-      text-align: center;
-    }
-    .description {
-      font-size: 14px;
-      line-height: 22px;
-      color: rgb(84, 101, 141);
-      margin: 0px;
-      text-align: left;
-      text-wrap: pretty;
+  }
+  .card-link-bottom,
+  .card-text-bottom {
+    margin-top: 0.25rem;
+    font-family: $f-sto-sb;
+    color: $color-blue;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .card-link-bottom {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: text-decoration 180ms;
+    &:hover {
+      text-decoration: underline;
+      .has-arrow {
+        &:after {
+          transform: translateX(4px);
+        }
+      }
     }
   }
 }

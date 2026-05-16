@@ -124,6 +124,20 @@ a.logo {
   }
 }
 
+.has-arrow {
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 10px;
+    background-image: url("../images/arrow-more.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(0);
+    transition: transform 180ms;
+  }
+}
+
 .label-list {
   display: flex;
   flex: 1 0 400px;
