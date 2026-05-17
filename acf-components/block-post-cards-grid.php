@@ -17,15 +17,21 @@ $bg_color = !empty($cards_grid['has_background_color'])
     <div class="container">
         <div class="row py-lg-4">
             <div class="col-12 col-lg-6">
-                <p class="abovetitle mb-1 text-primary">
-                    <?php echo $cards_grid['above_title']; ?>
-                </p>
-                <h2 class="h2 mb-3 section-title">
-                    <?php echo $cards_grid['title']; ?>
-                </h2>
-                <p class="subtitle">
-                    <?php echo $cards_grid['subtitle']; ?>
-                </p>
+                <?php if (!empty($cards_grid['above_title'])) : ?>
+                    <p class="abovetitle mb-1 text-primary">
+                        <?php echo $cards_grid['above_title']; ?>
+                    </p>
+                <?php endif; ?>
+                <?php if (!empty($cards_grid['title'])) : ?>
+                    <h2 class="h2 mb-3 section-title">
+                        <?php echo $cards_grid['title']; ?>
+                    </h2>
+                <?php endif; ?>
+                <?php if (!empty($cards_grid['subtitle'])) : ?>
+                    <p class="subtitle">
+                        <?php echo $cards_grid['subtitle']; ?>
+                    </p>
+                <?php endif; ?>
             </div>
             
             <div class="col-12">
