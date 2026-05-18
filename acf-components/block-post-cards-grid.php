@@ -75,7 +75,8 @@ $bg_color = !empty($cards_grid['has_background_color'])
                                         <span class="card-text-bottom">
                                             <?php echo $card['link_bottom_text']; ?>
                                             <?php if (!empty($card['link_bottom'])) : ?>
-                                                <i class="has-arrow"></i>
+                                                <!-- <i class="has-arrow"></i> -->
+                                                 <i class="fas fa-long-arrow-alt-right arrow-long"></i>
                                             <?php endif; ?>
                                         </span>
                                         

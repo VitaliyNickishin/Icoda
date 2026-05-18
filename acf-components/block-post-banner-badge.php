@@ -44,7 +44,7 @@ $bg_color = !empty($banner_action['has_background_color'])
                     <div class="section-banner-badge__btn mt-3 pb-lg-2 pb-1">
                         <a href="#" data-modal="#callback" class="btn btn-blue btn-modal open-modal">
                             <?php echo $banner_badge['btn_text']; ?>
-                            <i class="arrow">→</i>
+                            <i class="fas fa-long-arrow-alt-right arrow-long"></i>
                         </a>
                     </div>
                 <?php endif; ?>

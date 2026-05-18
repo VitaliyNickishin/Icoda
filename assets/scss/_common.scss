@@ -137,6 +137,11 @@ a.logo {
     transition: transform 180ms;
   }
 }
+//fas fa-long-arrow-alt-right
+.arrow-long {
+  transform: translateX(0);
+  transition: transform 180ms;
+}
 
 .label-list {
   display: flex;

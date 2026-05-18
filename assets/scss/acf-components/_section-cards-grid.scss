@@ -93,10 +93,8 @@
     transition: text-decoration 180ms;
     &:hover {
       text-decoration: underline;
-      .has-arrow {
-        &:after {
-          transform: translateX(4px);
-        }
+      .arrow-long {
+        transform: translateX(4px);
       }
     }
   }

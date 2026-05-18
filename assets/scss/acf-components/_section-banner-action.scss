@@ -39,10 +39,8 @@
     text-decoration: none;
     transition: background 180ms;
     &:hover {
-      .has-arrow {
-        &:after {
-          transform: translateX(4px);
-        }
+      .arrow-long {
+        transform: translateX(4px);
       }
     }
   }

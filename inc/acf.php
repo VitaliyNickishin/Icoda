@@ -164,6 +164,18 @@ add_action('acf/init', function () {
         ),
     ));
     acf_register_block(array(
+        'name'              => 'post-cards-grid-review',
+        'title'             => __('Post Cards Grid Review'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('grid', 'icoda', 'cards', 'post', 'review'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
         'name'              => 'post-nav-sticky',
         'title'             => __('Post Nav Sticky'),
         'description'       => __(''),

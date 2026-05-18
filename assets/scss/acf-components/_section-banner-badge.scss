@@ -76,12 +76,9 @@
     // font-size: 15px;
     // text-decoration: none;
     // transition: background 180ms;
-    .arrow {
-      transform: translateX(0);
-      transition: transform 180ms;
-    }
+
     &:hover {
-      .arrow {
+      .arrow-long {
         transform: translateX(4px);
       }
     }

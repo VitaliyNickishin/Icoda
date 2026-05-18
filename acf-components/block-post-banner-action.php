@@ -30,7 +30,7 @@ $bg_color = !empty($banner_action['has_background_color'])
                             <?php if (!empty($banner_action['btn_text_modal'])) : ?>
                                 <a href="#" data-modal="#callback" class="btn btn-modal open-modal">
                                     <?php echo $banner_action['btn_text_modal']; ?>
-                                    <i class="has-arrow"></i>
+                                    <i class="fas fa-long-arrow-alt-right arrow-long"></i>
                                 </a>
                             <?php endif; ?>
                             
@@ -46,7 +46,8 @@ $bg_color = !empty($banner_action['has_background_color'])
                                     target="<?php echo esc_attr($btn_target); ?>"
                                 >
                                     <?php echo $btn_link['title']; ?>
-                                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 12px;"></i>
+                                    <i class="fas fa-external-link-alt" style="font-size: 12px;"></i>
+                                    <!-- <i class="far fa-external-link-alt" style="font-size: 12px;"></i> -->
                                 </a>
                             <?php endif; ?>
                         </div>
