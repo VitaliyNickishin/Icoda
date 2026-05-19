@@ -176,6 +176,18 @@ add_action('acf/init', function () {
         ),
     ));
     acf_register_block(array(
+        'name'              => 'post-grid-logos',
+        'title'             => __('Post Grid Logos'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('grid', 'icoda', 'logos', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
         'name'              => 'post-nav-sticky',
         'title'             => __('Post Nav Sticky'),
         'description'       => __(''),
