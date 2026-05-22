@@ -36,13 +36,14 @@ $bg_color = !empty($cards_grid['has_background_color'])
                 <?php if (!empty($cards_grid['cards_list'])) : ?>
                     <ul class="card-list mt-4 mt-lg-3 pt-lg-3">
                         <?php foreach ($cards_grid['cards_list'] as $card) : ?>
-                            <?php
-                                $link_url = !empty($card['link']) ? $card['link'] : '#';
-                            ?>
+                            
                             <li
                                 class="card-list-item serv-box">
                                 <?php if (!empty($card['link'])) : ?>
-                                    <a href="<?php echo esc_url($link_url); ?>" class="card-item" target="_blank">
+                                    <a href="<?php echo esc_url($card['link']); ?>" 
+                                        class="card-item" 
+                                        target="_blank"
+                                        >
                                         <?php else : ?>
                                     <div class="card-item">
                                 <?php endif; ?>           
@@ -74,13 +75,16 @@ $bg_color = !empty($cards_grid['has_background_color'])
                                         </div>
                                         <div class="card-item-bottom">
                                             <div class="stars">
-                                                <span aria-hidden="true" style="display: inline-flex; gap: 3px;"><i class="fas fa-star" style="color: rgb(239, 64, 53); font-size: 14px;"></i><i class="fas fa-star" style="color: rgb(239, 64, 53); font-size: 14px;"></i><i class="fas fa-star" style="color: rgb(239, 64, 53); font-size: 14px;"></i><i class="fas fa-star" style="color: rgb(239, 64, 53); font-size: 14px;"></i><i class="fas fa-star" style="color: rgb(239, 64, 53); font-size: 14px;"></i></span>
+                                                <?php for ($i = 0; $i < 5; $i++) : ?>
+                                                    <i class="fas fa-star"></i>
+                                                <?php endfor; ?>
                                             </div>
                                             <div class="reviews-info">
                                                 <?php if (!empty($card['reviews_info'])) : ?>
                                                     <?php echo $card['reviews_info']; ?>
-                                                    <i class="fas fa-long-arrow-alt-right arrow-long"></i>
-                                                    <!-- <span aria-hidden="true">→</span> -->
+                                                    <?php if (!empty($card['link'])) : ?>
+                                                        <i class="fas fa-long-arrow-alt-right arrow-long"></i>
+                                                    <?php endif; ?>
                                                 <?php endif; ?>
                                             </div>
                                             

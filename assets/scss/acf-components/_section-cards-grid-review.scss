@@ -25,19 +25,64 @@
       grid-template-columns: repeat(3, minmax(0px, 1fr));
       gap: 16px;
     }
+    &-item {
+      &:nth-child(odd) {
+        background: rgb(15, 17, 22);
+        .name,
+        .rating,
+        .reviews-info {
+          color: $white;
+        }
+        .card-item {
+          color: $white;
+        }
+        .fa-star {
+          color: rgb(239, 64, 53);
+        }
+        .rating-total {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+      &:nth-child(even) {
+        .card-item {
+          border-color: rgb(232, 220, 183);
+          background: #fbf6e8;
+        }
+        .name,
+        .rating {
+          color: $color-dark-blue;
+        }
+        .reviews-info,
+        .fa-long-arrow-alt-right {
+          color: #7a5a18;
+        }
+        .fa-star {
+          color: #c99b2d;
+        }
+        .rating-total {
+          color: rgba(45, 52, 77, 0.45);
+        }
+      }
+    }
   }
   .card-item {
     display: block;
-    background: rgb(15, 17, 22);
     border-width: medium;
     border-style: none;
     border-color: currentcolor;
-    border-image: initial;
     border-radius: 14px;
     padding: 20px 22px;
     text-decoration: none;
     box-shadow: rgba(45, 52, 77, 0.04) 0px 1px 0px;
     min-height: 116px;
+    .stars {
+      display: inline-flex;
+      gap: 3px;
+    }
+    .fa-star {
+      font-size: 0.875rem;
+    }
+
     &:hover {
       .arrow-long {
         transform: translateX(4px);
@@ -52,7 +97,6 @@
         font-family: $f-sto-bold;
         font-size: 24px;
         line-height: 1;
-        color: $white;
         letter-spacing: -0.015em;
       }
       .rating {
@@ -60,13 +104,12 @@
         font-family: $f-sto-bold;
         font-size: 30px;
         line-height: 1;
-        color: $white;
+
         white-space: nowrap;
         &-first {
-          letter-spacing: -0.15em;
+          margin-right: -7px;
         }
         &-total {
-          color: rgba(255, 255, 255, 0.5);
           font-family: $f-sto-m;
         }
       }
@@ -77,6 +120,7 @@
       gap: 14px;
       .reviews-info {
         font-family: $f-sto-m;
+        text-transform: uppercase;
         font-size: 12px;
         letter-spacing: 0.14em;
         color: $white;

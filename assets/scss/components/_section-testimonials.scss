@@ -33,7 +33,7 @@
         flex-direction: column;
       }
     }
-    
+
     @include mediaMax(400) {
       width: 320px;
     }
@@ -55,15 +55,14 @@
 
   .slider-default-item-body {
     margin-top: 10px;
+    min-height: 71px;
   }
-
 }
 
 .section-6 {
   &.section-testimonials {
     @include mediaMin(550) {
       padding-bottom: 120px;
-
     }
   }
 }
@@ -73,4 +72,3 @@
     padding-top: 80px;
   }
 }
-

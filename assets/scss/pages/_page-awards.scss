@@ -1,0 +1,25 @@
+.page-awards {
+  .section-6.section-testimonials {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    background-color: $color-light-blue;
+    @include mediaMin(992) {
+      padding-bottom: 5rem;
+    }
+  }
+  .btn {
+    padding: 14px 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    @include mediaMin(992) {
+      padding: 16px 56px;
+    }
+    &:hover {
+      .arrow-long {
+        transform: translateX(4px);
+      }
+    }
+  }
+}
