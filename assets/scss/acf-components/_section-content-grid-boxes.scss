@@ -1,0 +1,102 @@
+.section-content-grid-boxes {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    align-items: start;
+    border: 1px solid $border-color;
+    border-radius: 1rem;
+    padding: 2rem 1.375rem;
+    @include mediaMin(992) {
+      border-radius: 20px;
+      padding: 48px;
+      grid-template-columns: minmax(320px, 480px) 1fr;
+      gap: 64px;
+    }
+    &.has-bg-gradient {
+      background: linear-gradient(
+        135deg,
+        rgb(238, 242, 254) 0%,
+        rgb(247, 240, 244) 100%
+      );
+    }
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    @include mediaMin(992) {
+      font-size: 2rem;
+      line-height: 46px;
+    }
+  }
+  .subtitle {
+    font-size: 0.9375rem;
+    line-height: 24px;
+    color: $main-color-text;
+    text-wrap: pretty;
+    @include mediaMin(992) {
+      font-size: 1.0625rem;
+      line-height: 28px;
+    }
+  }
+
+  .card-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    @include mediaMin(992) {
+      grid-template-columns: repeat(2, minmax(0px, 1fr));
+      gap: 16px;
+    }
+    &-item {
+      background: rgb(255, 255, 255);
+      padding: 1.375rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 170px;
+      @include mediaMin(992) {
+        min-height: 194px;
+      }
+      .card-logo {
+        padding: 7px;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: rgb(238, 242, 253);
+        color: rgb(60, 97, 226);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+        img {
+          height: 15px;
+          width: 100%;
+          display: block;
+          object-fit: contain;
+        }
+      }
+
+      .title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: rgb(45, 52, 77);
+        letter-spacing: -0.015em;
+        margin-bottom: 0px;
+      }
+      .description {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 22px;
+        color: $main-color-text;
+        text-align: left;
+        text-wrap: pretty;
+      }
+    }
+  }
+}
