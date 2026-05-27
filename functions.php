@@ -471,6 +471,7 @@ function icoda_styles()
         $assets_uri . '/js/fontfaceobserver.js',
         array('jquery'), '', true
     );
+    
 
     wp_register_script('main', $assets_uri.'/js/main.js', array('jquery'), $scripts_version, ['strategy'=> 'defer', 'in_footer' => true]);
     wp_localize_script( 'main', 'icoda_main_params', array(
@@ -627,6 +628,13 @@ function icoda_styles()
         'icoda-intlTelInput',
         $assets_uri . '/sources/intl-tel-input/js/intlTelInputWithUtils.min.js',
         array('jquery'), '26.0.6', true
+    );
+    wp_enqueue_script(
+        'clutch-widget',
+        'https://widget.clutch.co/static/js/widget.js',
+        [],
+        null,
+        true
     );
 }
 
@@ -2712,3 +2720,22 @@ function pm_wpml_copy_custom_permalink( $new_post_id, $fields, $job ) {
 }
 add_action( 'wpml_pro_translation_completed', 'pm_wpml_copy_custom_permalink', 100, 3 );
 
+function clutch_widget_testimonials_shortcode() {
+    ob_start();
+    ?>
+    <div
+        class="clutch-widget clutch-widget-testimonials"
+        data-url="https://widget.clutch.co"
+        data-widget-type="12"
+        data-height="375"
+        data-nofollow="false"
+        data-expandifr="true"
+        data-scale="100"
+        data-reviews="225989,452168,440110,426663,425192,421017,418658,414548,406889,400797,400207,384622"
+        data-clutchcompany-id="695144">
+    </div>
+    <?php
+
+    return ob_get_clean();
+}
+add_shortcode('clutch_widget_testimonials', 'clutch_widget_testimonials_shortcode');
