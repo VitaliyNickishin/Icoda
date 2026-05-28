@@ -200,6 +200,18 @@ add_action('acf/init', function () {
         ),
     ));
     acf_register_block(array(
+        'name'              => 'post-table-compare',
+        'title'             => __('Post Table Compare'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('table', 'icoda', 'compare', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
         'name'              => 'post-nav-sticky',
         'title'             => __('Post Nav Sticky'),
         'description'       => __(''),
