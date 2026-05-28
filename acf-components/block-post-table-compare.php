@@ -12,6 +12,18 @@ $has_bg_inner = !empty($table_compare['is_background_color_inner']);
 $bg_color_inner = !empty($table_compare['has_background_color_inner'])
     ? $table_compare['has_background_color_inner']
     : '#f4f6f9';
+
+$column_header = !empty($table_compare['column_header'])
+? $table_compare['column_header']
+: 'Dimension';
+
+$column_header_first = !empty($table_compare['column_header_first'])
+    ? $table_compare['column_header_first']
+    : 'Header column first';
+
+$column_header_second = !empty($table_compare['column_header_second'])
+    ? $table_compare['column_header_second']
+    : 'Header column second';
 ?>
 <section 
     class="section section-table-compare py-5 <?php echo $has_bg ? '' : 'bg-white'; ?>" 
@@ -36,26 +48,17 @@ $bg_color_inner = !empty($table_compare['has_background_color_inner'])
         <?php endif; ?>
 
         <?php if (!empty($table_compare['table_rows'])) : ?>
-
             <div class="mt-4">
-
                 <!-- Desktop -->
                 <div class="tbl-desktop d-none d-lg-block">
-
                     <div class="tbl-header">
                         <div class="tbl-header__dimension">
-                            <?php echo !empty($table_compare['column_header']) 
-                                ? esc_html($table_compare['column_header']) 
-                                : __('Dimension', 'icoda'); ?>
+                            <?php echo esc_html($column_header); ?>
                         </div>
-
                         <div class="tbl-header__first">
                             <span>
-                                <?php echo !empty($table_compare['column_header_first']) 
-                                ? esc_html($table_compare['column_header_first']) 
-                                : __('Header column first', 'icoda'); ?>
+                                <?php echo esc_html($column_header_first); ?>
                             </span>
-
                             <?php if (!empty($table_compare['column_header_label_first'])) : ?>
                                 <span class="tbl-header__divider"></span>
                                 <span class="tbl-header__label">
@@ -63,12 +66,9 @@ $bg_color_inner = !empty($table_compare['has_background_color_inner'])
                                 </span>
                             <?php endif; ?>
                         </div>
-
                         <div class="tbl-header__second">
                             <span>
-                                <?php echo !empty($table_compare['column_header_second']) 
-                                ? esc_html($table_compare['column_header_second']) 
-                                : __('Header column second', 'icoda'); ?>
+                                <?php echo esc_html($column_header_second); ?>
                             </span>
                             <?php if (!empty($table_compare['column_header_label_second'])) : ?>
                                 <span class="tbl-header__divider"></span>
@@ -78,51 +78,35 @@ $bg_color_inner = !empty($table_compare['has_background_color_inner'])
                             <?php endif; ?>
                         </div>
                     </div>
-
                     <?php foreach ($table_compare['table_rows'] as $index => $row) : ?>
-
                         <?php
                         $is_odd = $index % 2 === 1;
                         ?>
-
                         <div class="tbl-row <?php echo $is_odd ? 'is-odd' : ''; ?>">
-
                             <div class="tbl-row__dimension">
                                 <?php echo esc_html($row['dimension']); ?>
                             </div>
-
                             <div class="tbl-row__first">
                                 <?php echo esc_html($row['first_column']); ?>
                             </div>
-
                             <div class="tbl-row__second">
                                 <?php echo esc_html($row['second_column']); ?>
                             </div>
-
                         </div>
-
                     <?php endforeach; ?>
-
                 </div>
 
                 <!-- Mobile -->
                 <div class="tbl-mobile d-lg-none d-grid gap-3">
-
                     <?php foreach ($table_compare['table_rows'] as $row) : ?>
-
                         <div class="tbl-card">
-
                             <div class="tbl-card__title">
                                 <?php echo esc_html($row['dimension']); ?>
                             </div>
-
                             <div class="tbl-card__first">
-
                                 <div class="tbl-card__label-wrap">
                                     <span class="tbl-card__label tbl-card__label--ai">
-                                        <?php echo !empty($table_compare['column_header_first']) 
-                                            ? esc_html($table_compare['column_header_first']) 
-                                            : __('Header column first', 'icoda'); ?>
+                                        <?php echo esc_html($column_header_first); ?>
                                     </span>
                                     <?php if (!empty($table_compare['column_header_label_first'])) : ?>
                                         <span class="tbl-card__sub">
@@ -130,20 +114,14 @@ $bg_color_inner = !empty($table_compare['has_background_color_inner'])
                                         </span>
                                     <?php endif; ?>
                                 </div>
-
                                 <div class="tbl-card__text">
                                     <?php echo esc_html($row['first_column']); ?>
                                 </div>
-
                             </div>
-
                             <div class="tbl-card__second">
-
                                 <div class="tbl-card__label-wrap">
                                     <span class="tbl-card__label tbl-card__label--second">
-                                        <?php echo !empty($table_compare['column_header_second']) 
-                                            ? esc_html($table_compare['column_header_second']) 
-                                            : __('Header column second', 'icoda'); ?>
+                                        <?php echo esc_html($column_header_second); ?>
                                     </span>
                                     <?php if (!empty($table_compare['column_header_label_second'])) : ?>
                                         <span class="tbl-card__sub tbl-card__sub--second">
@@ -151,23 +129,14 @@ $bg_color_inner = !empty($table_compare['has_background_color_inner'])
                                         </span>
                                     <?php endif; ?>
                                 </div>
-
                                 <div class="tbl-card__text tbl-card__text--second">
                                     <?php echo esc_html($row['second_column']); ?>
                                 </div>
-
                             </div>
-
                         </div>
-
                     <?php endforeach; ?>
-
                 </div>
-
             </div>
-
         <?php endif; ?>
-        
     </div>
-    
 </section>
