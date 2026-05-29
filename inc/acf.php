@@ -988,6 +988,18 @@ add_action('acf/init', function () {
         ),
     ));
     acf_register_block(array(
+        'name'              => 'post-tabs-content-grid',
+        'title'             => __('Post Tabs Content Grid'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('tabs', 'grid', 'content', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
         'name'              => 'post-slider-four-box',
         'title'             => __('Post Slider Four Box'),
         'description'       => __(''),
