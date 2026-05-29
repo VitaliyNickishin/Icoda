@@ -8,10 +8,6 @@ $has_bg = !empty($table_compare['is_background_color']);
 $bg_color = !empty($table_compare['has_background_color'])
     ? $table_compare['has_background_color']
     : '#f4f6f9';
-$has_bg_inner = !empty($table_compare['is_background_color_inner']);
-$bg_color_inner = !empty($table_compare['has_background_color_inner'])
-    ? $table_compare['has_background_color_inner']
-    : '#f4f6f9';
 
 $column_header = !empty($table_compare['column_header'])
 ? $table_compare['column_header']
@@ -42,13 +38,13 @@ $column_header_second = !empty($table_compare['column_header_second'])
             </h2>
         <?php endif; ?>
         <?php if (!empty($table_compare['subtitle'])) : ?>
-            <p class="subtitle pb-lg-3">
+            <p class="subtitle">
                 <?php echo $table_compare['subtitle']; ?>
             </p>
         <?php endif; ?>
 
         <?php if (!empty($table_compare['table_rows'])) : ?>
-            <div class="mt-4">
+            <div class="tbl-info mt-4">
                 <!-- Desktop -->
                 <div class="tbl-desktop d-none d-lg-block">
                     <div class="tbl-header">

@@ -212,6 +212,18 @@ add_action('acf/init', function () {
         ),
     ));
     acf_register_block(array(
+        'name'              => 'post-table-info',
+        'title'             => __('Post Table Info'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('table', 'icoda', 'info', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
         'name'              => 'post-nav-sticky',
         'title'             => __('Post Nav Sticky'),
         'description'       => __(''),
