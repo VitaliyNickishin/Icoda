@@ -131,7 +131,7 @@ get_header();
 
 
 
-            </div>ю
+            </div>
         </section>
     <?php endif; ?>
 
@@ -155,6 +155,8 @@ get_header();
     <?php endif; ?>
 
     <?php get_template_part('template-parts/sections/meet-up'); ?>
+
+    <?php get_template_part('acf-components/block-post-faq'); ?>
 
     <?php if (get_field('section_contact_us_show') == true) : ?>
         <?php get_template_part('template-parts/sections/contact-us'); ?>
