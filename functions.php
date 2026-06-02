@@ -1739,7 +1739,7 @@ function icoda_body_class_filter( $classes ) {
         $classes[] = 'service-v2';
     }
 
-    $ai_marketing_pages = [210885,156343,195617,197738,195598,217920,195631,195623];
+    $ai_marketing_pages = [210885,156343,195617,197738,195598,217920,195631,195623,222440,224577];
 
     if (is_single($ai_marketing_pages)) {
         $classes[] = 'is-ai-marketing-page';
