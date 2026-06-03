@@ -42,13 +42,19 @@ $meta_query[] = [
     'type' => 'DATETIME',
 ];
 
+if (isset($args['previous'])) {
+    $q_args['meta_key'] = 'date_end';
+    $q_args['orderby']  = 'meta_value';
+    $q_args['order']    = 'DESC';
+} 
 
-if (isset($args['online']) && $args['online']) {
-    $meta_query[] = [
-        'key' => 'online',
-        'value' => $args['online']
-    ];
-}
+
+// if (isset($args['online']) && $args['online']) {
+//     $meta_query[] = [
+//         'key' => 'online',
+//         'value' => $args['online']
+//     ];
+// }
 
 if (isset($args['with_promocode']) && $args['with_promocode']) {
     $meta_query[] = [
