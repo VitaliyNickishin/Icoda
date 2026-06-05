@@ -366,6 +366,9 @@ get_header();
             </div>
         </section>
 
+        <?php get_template_part('template-parts/sections/map-global'); ?>
+
+        <?php /*
         <?php
         $meet_block = get_field('meet_block');
         ?>
@@ -396,6 +399,7 @@ get_header();
                 </div>
             </div>
         </section>
+        */ ?>
 
         <section class="section section-two-logo-sliders my-5">
         <?php
