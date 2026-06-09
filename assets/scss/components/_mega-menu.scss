@@ -113,6 +113,17 @@
         }
       }
     }
+    &.new > a::after {
+      content: "New";
+      display: inline-block;
+      margin-left: 8px;
+      padding: 4px 6px;
+      font-size: 12px;
+      background: $color-blue;
+      color: $white;
+      border-radius: 4px;
+      line-height: 110%;
+    }
   }
   .sub-menu {
     @include mediaMin(992) {

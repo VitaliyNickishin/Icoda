@@ -31,9 +31,14 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                   <ul>
                     <li class="sub-menu-title"><?php _e('Growth & promotion', 'icoda'); ?></li>
                       <?php foreach ($header_one[$item['ID']]->childs as $item2) : ?>
+                        <?php
+                          $classes = !empty($item2['classes'])
+                              ? implode(' ', $item2['classes'])
+                              : 'menu-item';
+                        ?>
                         <?php if (trim($item2['title']) !== '') : ?>
 
-                          <li class="menu-item">
+                          <li class="<?php echo esc_attr($classes); ?>">
                             <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
                           </li>
 
@@ -47,7 +52,12 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                   <ul>
                     <li class="sub-menu-title"><?php _e('Brand & Reputation', 'icoda'); ?></li>
                     <?php foreach ($header_one_two[0]->childs as $key_2 => $item_2) : ?>
-                        <li class="menu-item">
+                      <?php
+                          $classes = !empty($item2['classes'])
+                              ? implode(' ', $item2['classes'])
+                              : 'menu-item';
+                        ?>
+                        <li class="<?php echo esc_attr($classes); ?>">
                           <a href="<?php echo $item_2['url']; ?>"><?php echo $item_2['title']; ?></a>
                         </li>
                     <?php endforeach; ?>
@@ -74,9 +84,14 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                  <li class="sub-menu-col first-col">
                   <ul>
                       <?php foreach ($header_two[$item['ID']]->childs as $item2) : ?>
+                        <?php
+                          $classes = !empty($item2['classes'])
+                              ? implode(' ', $item2['classes'])
+                              : 'menu-item';
+                        ?>
                       <?php if (trim($item2['title']) !== '') : ?>
 
-                        <li class="menu-item">
+                        <li class="<?php echo esc_attr($classes); ?>">
                           <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
                         </li>
 
@@ -111,9 +126,14 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                   <ul>
                     <li class="sub-menu-title"><?php _e('Services', 'icoda'); ?></li>
                       <?php foreach ($header_three_one[$item['ID']]->childs as $item2) : ?>
+                        <?php
+                          $classes = !empty($item2['classes'])
+                              ? implode(' ', $item2['classes'])
+                              : 'menu-item';
+                          ?>
                         <?php if (trim($item2['title']) !== '') : ?>
 
-                          <li class="menu-item">
+                          <li class="<?php echo esc_attr($classes); ?>">
                             <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
                           </li>
 
@@ -126,9 +146,14 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                     <li class="sub-menu-title"><?php _e('Industries', 'icoda'); ?></li>
                     
                       <?php foreach ($header_three_two[0]->childs as $item2) : ?>
+                        <?php
+                          $classes = !empty($item2['classes'])
+                              ? implode(' ', $item2['classes'])
+                              : 'menu-item';
+                        ?>
                         <?php if (trim($item2['title']) !== '') : ?>
 
-                          <li class="menu-item">
+                          <li class="<?php echo esc_attr($classes); ?>">
                             <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
                           </li>
 
@@ -142,9 +167,14 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                     <li class="sub-menu-title"><?php _e('Insights', 'icoda'); ?></li>
                     
                       <?php foreach ($header_three_three[0]->childs as $item2) : ?>
+                        <?php
+                          $classes = !empty($item2['classes'])
+                              ? implode(' ', $item2['classes'])
+                              : 'menu-item';
+                        ?>
                         <?php if (trim($item2['title']) !== '') : ?>
 
-                          <li class="menu-item">
+                          <li class="<?php echo esc_attr($classes); ?>">
                             <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
                           </li>
 
@@ -178,9 +208,14 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                   <ul>
                     <li class="sub-menu-title"><?php _e('Info', 'icoda'); ?></li>
                       <?php foreach ($header_four[$item['ID']]->childs as $item2) : ?>
+                        <?php
+                          $classes = !empty($item2['classes'])
+                              ? implode(' ', $item2['classes'])
+                              : 'menu-item';
+                        ?>
                         <?php if (trim($item2['title']) !== '') : ?>
 
-                          <li class="menu-item">
+                          <li class="<?php echo esc_attr($classes); ?>">
                             <a href="<?php echo $item2['url']; ?>"><?php echo $item2['title']; ?></a>
                           </li>
 
@@ -194,7 +229,12 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                   <ul>
                     <li class="sub-menu-title"><?php _e('Insights', 'icoda'); ?></li>
                     <?php foreach ($header_four_two[0]->childs as $key_2 => $item_2) : ?>
-                        <li class="menu-item">
+                        <?php
+                          $classes = !empty($item_2['classes'])
+                              ? implode(' ', $item_2['classes'])
+                              : 'menu-item';
+                        ?>
+                        <li class="<?php echo esc_attr($classes); ?>">
                           <a href="<?php echo $item_2['url']; ?>"><?php echo $item_2['title']; ?></a>
                         </li>
                     <?php endforeach; ?>
@@ -235,8 +275,13 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
             
 
         <?php foreach ($header_five[0]->childs as $key => $item) : ?>
+          <?php
+            $classes = !empty($item['classes'])
+                ? implode(' ', $item['classes'])
+                : 'menu-item';
+          ?>
 
-          <li class="menu-item">
+          <li class="<?php echo esc_attr($classes); ?>">
             <a href="<?php echo $item['url']; ?>"><?php echo $item['title']; ?></a>
             
 
