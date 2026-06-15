@@ -366,7 +366,69 @@ get_header();
             </div>
         </section>
 
-        <?php get_template_part('template-parts/sections/map-global'); ?>
+        <?php
+            $media_partners = get_field('media_partners');
+            $media_partners_grid = $media_partners['grid_items'];
+            $grid_groups = array_chunk($media_partners_grid, 3);
+            $btn_link = $media_partners['btn_link_secondary'];
+            $btn_url = !empty($btn_link['url']) ? $btn_link['url'] : '#';
+            $btn_target = !empty($btn_link['target']) ? $btn_link['target'] : '_self';
+        ?>
+        <section class="section section-media-partners py-lg-4">
+            
+                <div class="container">
+                    <div class="container">
+                        <div class="mp-top">
+                            <h2 class="section-title mb-2 pb-1">
+                                <?php echo $media_partners['title']; ?>
+                            </h2>
+                        </div>
+                        <div class="mp-bottom">
+                            <div class="mp-left">
+                                <div class="description"><?php echo $media_partners['description']; ?></div>
+                                
+                                <?php if (!empty($media_partners['btn_text_modal']) || !empty($media_partners['btn_text_second'])) : ?>
+                                    <div class="section-media-partners__btn d-flex flex-column flex-sm-row mt-4 mt-lg-4 pt-lg-2 gap-3">
+                                        <?php if (!empty($media_partners['btn_text_modal'])) : ?>
+                                            <a href="#" data-modal="#callback" class="btn btn-blue open-modal">
+                                                <?php echo $media_partners['btn_text_modal']; ?>
+                                            </a>
+                                        <?php endif; ?>
+                                        
+                                        <?php if (!empty($btn_link)) : ?>
+                                            
+                                            <a class="btn d-flex align-items-center justify-content-center btn-outline-blue gap-2 btn-second" 
+                                                href="<?php echo esc_url($btn_url); ?>" 
+                                                target="<?php echo esc_attr($btn_target); ?>"
+                                            >
+                                                <?php echo $btn_link['title']; ?>
+                                                <i class="fas fa-long-arrow-alt-right arrow-long"></i>
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="mp-right">
+                                
+                                <?php if (!empty($media_partners_grid)) : ?>
+                                    <div class="cases-box mp-stats-grid">
+                                        <?php foreach ($grid_groups as $items_grid) : ?>
+                                            <?php foreach ($items_grid as $item_grid) : ?>
+                                                <div class="serv-box <?php echo count($items_grid) == 1 ? 'mp-stat-wide' : ''; ?>">
+                                                    <span class="number"><?php echo $item_grid['value']; ?></span>
+                                                    <p class="text"><?php echo $item_grid['text']; ?></p>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+                                
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            
+        </section>
 
         <?php /*
         <?php
@@ -461,6 +523,8 @@ get_header();
                 </div>
             </div>
         </section>
+
+        <?php get_template_part('template-parts/sections/map-global'); ?>
 
         <div class="mt-5 pt-lg-2">
             <?php get_template_part('template-parts/related-articles', '', ['title' => get_field('related_articles_title')]); ?>
