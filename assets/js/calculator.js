@@ -29,7 +29,7 @@ jQuery(document).ready(function ($) {
       return false;
     }
 
-    if (currentStep === 6) {
+    if (currentStep === 7) {
       $(".btn-apply").addClass("d-none");
       $(".btn-next").removeClass("d-none");
     }
@@ -60,7 +60,7 @@ jQuery(document).ready(function ($) {
   });
 
   $("body").on("click", ".btn-next", function () {
-    if (currentStep === 6) {
+    if (currentStep === 7) {
       return false;
     } else {
       if (currentStep === 1) {
@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
       $("[data-step]").addClass("d-none");
       $('[data-step="' + currentStep + '"]').removeClass("d-none");
       updateStepsCounter();
-      if (currentStep === 6) {
+      if (currentStep === 7) {
         $(".btn-next").addClass("d-none");
         $(".btn-apply").removeClass("d-none");
       }

@@ -54,6 +54,8 @@ $calculator_data = get_field('calculator_section_3');
 								<div class="step-circle" data-step-nav="7">7</div>
 								<div class="step-line"></div>
 								<div class="step-circle" data-step-nav="8">8</div>
+								<div class="step-line"></div>
+								<div class="step-circle" data-step-nav="9">9</div>
 
 							</div>
 					</div>
@@ -215,8 +217,24 @@ $calculator_data = get_field('calculator_section_3');
 									</div>
 									<div data-step="8" class="step-eight d-none">
 										<p class="mb-3 pb-lg-3 step-title">
-											<span class="text-primary mr-2">8.</span>
-											<?php echo $calculator_data['step_8_title']; ?>
+											<span class="text-primary mr-2">8.</span><?php echo $calculator_data['step_8_title']; ?>
+										</p>
+										<ul>
+											<?php foreach( $calculator_data['step_8_options'] as $key => $item_data ) : ?>
+												<li class="col-12 col-md-9 px-0">
+													<div class="custom-checkbox">
+														<input type="checkbox" id="step_8_<?php echo ($key + 1); ?>" class="checkbox" name="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
+														<label for="step_8_<?php echo ($key + 1); ?>"><?php echo $item_data['text']; ?></label>
+													</div>
+												</li>
+											<?php endforeach; ?>
+											
+										</ul>
+									</div>
+									<div data-step="9" class="step-nine d-none">
+										<p class="mb-3 pb-lg-3 step-title">
+											<span class="text-primary mr-2">9.</span>
+											<?php echo $calculator_data['step_9_title']; ?>
 										</p>
 										<div class="form-default">
 											<?php get_template_part('template-parts/_partials/contact-form-validate-fields'); ?>
