@@ -87,7 +87,7 @@ function send_lead_to_bitrix($resource = '')
                     $testLog['state'] = 'state_6';
                 }
             } else {
-                $responsible_users = array( '39', '99', '179', '135' );
+                $responsible_users = array( '39', '99', '135', '179' );
                 $last_responsible_user_id = get_option('last_responsible_bitrix_user_id');
                 $add_periodical_users = get_option('bitrix_add_periodical_users');
                 $add_periodical_users = !empty($add_periodical_users) ? true : false;
@@ -153,7 +153,15 @@ function send_lead_to_bitrix($resource = '')
         } elseif (!empty($_POST['telegram'])) {
             $title = $_POST['telegram'] . ' - icoda.io';
         }
-        $title .= ' (' . $lang_prefix . ')';
+        
+        if(!empty($_POST['offer_type'])) {
+            $title .= ' PROMO FORM';
+        }
+        
+        if(!empty($lang_prefix)) {
+            $title .= ' (' . $lang_prefix . ')';
+        }
+
         if (!empty($resource)) {
             if (!empty($_POST['name'])) {
                 $title = $_POST['name'] . ' - ' . parse_url($resource, PHP_URL_HOST);
@@ -219,6 +227,20 @@ function send_lead_to_bitrix($resource = '')
 
         if(!empty($_POST['is-banner-review-block']) && $_POST['is-banner-review-block'] === 'yes') {
             $message = "LISTING \n\n" . $message;
+        }
+
+        $promo_form_data = [];
+        if(!empty($_POST['offer_type'])) {
+            $promo_form_data[] = "Offer Type: " . $_POST['offer_type'];
+        }
+        if(!empty($_POST['form_name'])) {
+            $promo_form_data[] = "Form Name: " . $_POST['form_name'];
+        }
+        if(!empty($_POST['page_url'])) {
+            $promo_form_data[] = "Page URL: " . $_POST['page_url'];
+        }
+        if(!empty($promo_form_data)) {
+            $message .= "\n" . implode("\n", $promo_form_data);
         }
 
         $bitrix_fields['FIELDS']['COMMENTS'] = $message;
@@ -370,6 +392,101 @@ function send_calendly_lead_to_bitrix($data, $owner = false)
     }
 }
 
+function send_ai_results_lead_to_bitrix($data)
+{
+    file_put_contents(__DIR__ . '/bitrix_ai_results_fields.txt', print_r($data, true), FILE_APPEND);
+    file_put_contents(__DIR__ . '/bitrix_ai_results_fields.txt', "\n\n", FILE_APPEND);
+
+    try {
+        $bitrix_url = 'https://icoda.bitrix24.com/rest/59/yd1pw1c6t2m5ffnc/crm.lead.add.json?';
+
+        $bitrix_ai_results_fields = [
+            'FIELDS' => []
+        ];
+
+        $utm_keys = array('utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term');
+        $utm_fields = array('utm_source' => 'UTM_SOURCE', 'utm_medium' => 'UTM_MEDIUM', 'utm_campaign' => 'UTM_CAMPAIGN', 'utm_content' => 'UTM_CONTENT', 'utm_term' => 'UTM_TERM');
+        foreach ($utm_keys as $row) {
+            $utm_name = 'utm-' . $row;
+            if (!empty($data[$utm_name])) {
+                $bitrix_ai_results_fields['FIELDS'][$utm_fields[$row]] =  $data[$utm_name];
+            }
+        }
+
+        $title = 'Заявка с AI Tool';
+        if (!empty($data['name'])) {
+            $title = $data['name'] . ' - AI Tool';
+        } elseif (!empty($data['telegram'])) {
+            $title = $data['telegram'] . ' - AI Tool';
+        }
+
+        $bitrix_ai_results_fields['FIELDS']['TITLE'] = $title;
+        $bitrix_ai_results_fields['FIELDS']['ASSIGNED_BY_ID'] = icoda_get_responsive_user('ai_results_last_responsible_bitrix_user_id');
+
+        $bitrix_ai_results_fields['FIELDS']['NAME'] = $data['name'];
+        $bitrix_ai_results_fields['FIELDS']['EMAIL'] = [[
+            'VALUE' => (!empty($data['email']) ? $data['email'] : $data['email_mob']),
+            'VALUE_TYPE' => 'WORK'
+
+        ]];
+
+        $bitrix_ai_results_fields['FIELDS']['COMMENTS'] = 'Analyzed URL: '. $data['data']['data']['analyzed_url'];
+
+        $bitrix_ai_results_fields['FIELDS']['SOURCE_DESCRIPTION'] = 'From AI Tool';
+        $bitrix_ai_results_fields['FIELDS']['SOURCE_ID'] = 'WEB';
+
+        file_put_contents(__DIR__ . '/bitrix_ai_results_fields.txt', print_r(date('Y-m-d H:i:s') .  '   ->   ' . $data['email'], true), FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_results_fields.txt', "\n", FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_results_fields.txt', print_r($data['email'], true), FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_results_fields.txt', "\n", FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_results_fields.txt', print_r($bitrix_ai_results_fields, true), FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_results_fields.txt', "\n\n", FILE_APPEND);
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $bitrix_url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($bitrix_ai_results_fields));
+        $responseBody = curl_exec($ch);
+        curl_close($ch);
+
+
+        file_put_contents(__DIR__ . '/bitrix_ai_requests.txt', print_r(date('Y-m-d H:i:s') .  '   ->   ' . $data['email'], true), FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_requests.txt', "\n", FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_requests.txt', print_r($bitrix_url . http_build_query($bitrix_ai_results_fields), true), FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_requests.txt', "\n\n", FILE_APPEND);
+
+        file_put_contents(__DIR__ . '/bitrix_ai_results.txt', print_r(date('Y-m-d H:i:s') .  '   ->   ' . $data['email'], true), FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_results.txt', "\n", FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_results.txt', print_r($responseBody, true), FILE_APPEND);
+        file_put_contents(__DIR__ . '/bitrix_ai_results.txt', "\n\n", FILE_APPEND);
+    } catch (Exception $e) {
+        file_put_contents(__DIR__ . '/bitrix_ai_results.txt', "\n\n" . $e->getMessage(), FILE_APPEND);
+    }
+}
+
+function icoda_get_responsive_user($last_responsive_user_id_option_key) {
+    $responsible_users = array( '39', '99', '135', '179' );
+    $last_responsible_user_id = get_option($last_responsive_user_id_option_key);
+    if (empty($last_responsible_user_id) || !in_array($last_responsible_user_id, $responsible_users)) {
+        $last_responsible_user_id = $responsible_users[0];
+    } else {
+        foreach ($responsible_users as $key => $responsible_user_id) {
+            if ($last_responsible_user_id == $responsible_user_id) {
+                if (isset($responsible_users[$key + 1])) {
+                    $last_responsible_user_id = $responsible_users[$key + 1];
+                } else {
+                    $last_responsible_user_id = $responsible_users[0];
+                }
+                break;
+            }
+        }
+    }
+    if (empty($last_responsible_user_id)) {
+        $last_responsible_user_id = $responsible_users[0];
+    }
+    update_option($last_responsive_user_id_option_key, $last_responsible_user_id);
+    return $last_responsible_user_id;
+}
 
 add_action('template_redirect', function () {
     if (!empty($_GET['test_get_leads'])) {
