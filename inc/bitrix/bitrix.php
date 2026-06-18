@@ -221,6 +221,18 @@ function send_lead_to_bitrix($resource = '')
                 $questions_content .= "\n\n Long: " .  $_POST['long'];
             }
         }
+        if(!empty($_POST['start'])) {
+            $questions_content .= "\n\n Start: " .  $_POST['start'];
+        }
+        if(!empty($_POST['tvl'])) {
+            $questions_content .= "\n\n TVL: " .  $_POST['tvl'];
+        }
+        if(!empty($_POST['goal'])) {
+            $questions_content .= "\n\n Goal: " .  $_POST['goal'];
+        }
+        if(!empty($_POST['timeline'])) {
+            $questions_content .= "\n\n Timeline: " .  $_POST['timeline'];
+        }
         if(!empty($questions_content)) {
             $message = $questions_content . "\n\nAdditional Information: \n" . $message;
         }

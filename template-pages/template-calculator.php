@@ -90,16 +90,16 @@ $calculator_data = get_field('calculator_section_3');
 											<?php foreach( $calculator_data['step_1_options'] as $key => $item_data ) : ?>
 												<li>
 													<div class="custom-checkbox">
-														<input type="checkbox" id="step_1_<?php echo ($key + 1); ?>" class="checkbox" name="step_1_<?php echo ($key + 1); ?>" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
+														<input type="checkbox" id="step_1_<?php echo ($key + 1); ?>" class="checkbox" name="industry" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
 														<label for="step_1_<?php echo ($key + 1); ?>"><?php echo $item_data['text']; ?></label>
 													</div>
 												</li>
 											<?php endforeach; ?>
 											<li>
 												<div class="custom-checkbox">
-													<input type="checkbox" id="step_1_other" class="checkbox" name="step_1_other" value="other" />
+													<input type="checkbox" id="step_1_other" class="checkbox" name="industry" value="other" />
 													<label for="step_1_other">
-														<textarea id="txta_1" class="form-control" name="other" rows="1" value="" placeholder="<?php _e('Other (Please specify)', 'icoda'); ?>"></textarea>
+														<textarea id="txta_1" class="form-control" name="other_industry" rows="1" value="" placeholder="<?php _e('Other (Please specify)', 'icoda'); ?>"></textarea>
 													</label>
 													
 												</div>
@@ -115,14 +115,14 @@ $calculator_data = get_field('calculator_section_3');
 											<?php foreach( $calculator_data['step_2_options'] as $key => $item_data ) : ?>
 												<li class="col-12 col-md-6">
 													<div class="custom-checkbox">
-														<input type="checkbox" id="step_2_<?php echo ($key + 1); ?>" class="checkbox" name="step_2_<?php echo ($key + 1); ?>" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
+														<input type="checkbox" id="step_2_<?php echo ($key + 1); ?>" class="checkbox" name="achieve" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
 														<label for="step_2_<?php echo ($key + 1); ?>"><?php echo $item_data['text']; ?></label>
 													</div>
 												</li>
 											<?php endforeach; ?>
 											<li class="col-12 col-md-6">
 												<div class="custom-checkbox">
-													<input type="checkbox" id="step_2_ohter" class="checkbox" name="step_2_other" value="other" />
+													<input type="checkbox" id="step_2_ohter" class="checkbox" name="other_achieve" value="other" />
 													<label for="step_2_ohter">
 														<textarea id="txta_2" class="form-control" name="other" rows="1" value="" placeholder="<?php _e('Other (Please specify)', 'icoda'); ?>"></textarea>
 													</label>
@@ -139,16 +139,16 @@ $calculator_data = get_field('calculator_section_3');
 											<?php foreach( $calculator_data['step_3_options'] as $key => $item_data ) : ?>
 												<li class="col-12 col-md-6">
 													<div class="custom-checkbox">
-														<input type="checkbox" id="step_3_<?php echo ($key + 1); ?>" class="checkbox" name="step_3_<?php echo ($key + 1); ?>" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
+														<input type="checkbox" id="step_3_<?php echo ($key + 1); ?>" class="checkbox" name="country" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
 														<label for="step_3_<?php echo ($key + 1); ?>"><?php echo $item_data['text']; ?></label>
 													</div>
 												</li>
 											<?php endforeach; ?>
 											<li class="col-12 col-md-6">
 												<div class="custom-checkbox">
-													<input type="checkbox" id="step_3_other" class="checkbox" name="step_3_other" value="other" />
+													<input type="checkbox" id="step_3_other" class="checkbox" name="country" value="other" />
 													<label for="step_3_other">
-														<textarea id="txta_3" class="form-control" name="other" rows="1" value="" placeholder="<?php _e('Other (Please specify)', 'icoda'); ?>"></textarea>
+														<textarea id="txta_3" class="form-control" name="other_country" rows="1" value="" placeholder="<?php _e('Other (Please specify)', 'icoda'); ?>"></textarea>
 													</label>
 												</div>
 											</li>
@@ -163,7 +163,7 @@ $calculator_data = get_field('calculator_section_3');
 											<?php foreach( $calculator_data['step_4_options'] as $key => $item_data ) : ?>
 												<li class="col-12 col-md-6">
 													<div class="custom-checkbox">
-														<input type="checkbox" id="step_4_<?php echo ($key + 1); ?>" class="checkbox multi-choise" name="step_4_<?php echo ($key + 1); ?>" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
+														<input type="checkbox" id="step_4_<?php echo ($key + 1); ?>" class="checkbox multi-choise" name="service[]" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
 														<label for="step_4_<?php echo ($key + 1); ?>"><?php echo $item_data['text']; ?></label>
 													</div>
 												</li>
@@ -179,16 +179,16 @@ $calculator_data = get_field('calculator_section_3');
 											<?php foreach( $calculator_data['step_5_options'] as $key => $item_data ) : ?>
 												<li class="col-12 col-md-6">
 													<div class="custom-checkbox">
-														<input type="checkbox" id="step_5_<?php echo ($key + 1); ?>" class="checkbox" name="step_5_<?php echo ($key + 1); ?>" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
+														<input type="checkbox" id="step_5_<?php echo ($key + 1); ?>" class="checkbox" name="long" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
 														<label for="step_5_<?php echo ($key + 1); ?>"><?php echo $item_data['text']; ?></label>
 													</div>
 												</li>
 											<?php endforeach; ?>
 											<li class="col-12 col-md-6">
 												<div class="custom-checkbox">
-													<input type="checkbox" id="step_5_other" class="checkbox" name="step_5_other" value="other" />
+													<input type="checkbox" id="step_5_other" class="checkbox" name="long" value="other" />
 													<label for="step_5_other">
-														<textarea id="txta_5" class="form-control" name="other" rows="1" value="" placeholder="<?php _e('Other (Please specify)', 'icoda'); ?>"></textarea>
+														<textarea id="txta_5" class="form-control" name="other_long" rows="1" value="" placeholder="<?php _e('Other (Please specify)', 'icoda'); ?>"></textarea>
 													</label>
 												</div>
 											</li>
@@ -203,7 +203,7 @@ $calculator_data = get_field('calculator_section_3');
 											<?php foreach( $calculator_data['step_6_options'] as $key => $item_data ) : ?>
 												<li>
 													<div class="custom-checkbox">
-														<input type="checkbox" id="step_6_<?php echo ($key + 1); ?>" class="checkbox" name="step_6_<?php echo ($key + 1); ?>" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
+														<input type="checkbox" id="step_6_<?php echo ($key + 1); ?>" class="checkbox" name="start" value="<?php echo !empty( $item_data['value_for_sale'] ) ? $item_data['value_for_sale'] : $item_data['text']; ?>" <?php checked(($key === 0)); ?>/>
 														<label for="step_6_<?php echo ($key + 1); ?>"><?php echo $item_data['text']; ?></label>
 													</div>
 												</li>
