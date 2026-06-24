@@ -4,11 +4,16 @@ $template_directory_uri = get_template_directory_uri();
 function icoda_select_all_locations()
 {
     global $wpdb;
-    $values = $wpdb->get_results("SELECT meta_value FROM $wpdb->postmeta as wppm JOIN $wpdb->posts as wpp on wpp.ID = wppm.post_id where wpp.post_type='event' AND wppm.meta_key='country'");
-
-    $values = array_map(function ($v) {
-        return $v->meta_value;
-    }, $values);
+    
+    $values = $wpdb->get_col("SELECT DISTINCT wppm.meta_value
+        FROM {$wpdb->postmeta} AS wppm
+        JOIN {$wpdb->posts} AS wpp ON wpp.ID = wppm.post_id
+        WHERE wpp.post_type = 'event'
+        AND wpp.post_status = 'publish'
+        AND wppm.meta_key = 'country'
+        AND wppm.meta_value != ''
+        ORDER BY wppm.meta_value ASC
+    ");
 
     return $values;
 }
