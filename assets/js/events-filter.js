@@ -273,29 +273,9 @@ function formatRangeLong(ev) {
     sy
   );
 }
-// function shortDesc(t, limit = 110) {
-//   if (t.length <= limit) return t;
-//   let s = t.slice(0, limit);
-//   return s.slice(0, s.lastIndexOf(" ")) + "…";
-// }
-// function rolesFor(ev) {
-//   if (ev.media_partner) return [{ t: "Media Partner", c: "role-media" }];
-//   if (ev.featured) return [{ t: "Exhibiting", c: "role-exhibit" }];
-//   return [{ t: "Listed", c: "role-listed" }];
-// }
-
-/* ---------- filtering ---------- */
-// function filtersActive() {
-//   return (
-//     state.search.trim() !== "" ||
-//     state.category !== "All" ||
-//     state.region !== "All"
-//   );
-// }
 
 function filterEvents() {
   const q = state.search.trim().toLowerCase();
-  console.log("q:", q);
 
   return EVENTS.filter((ev) => {
     if (state.category !== "All" && !ev.categories.includes(state.category))
@@ -337,70 +317,11 @@ function getEventDatesForMonth(list, year, month) {
   return map;
 }
 
-/* ---------- badge / tag builders ---------- */
-// function badgesHTML(ev) {
-//   return "";
-// }
 function tagsHTML(ev) {
   return ev.categories
     .map((c) => `<span class="topic-pill">${c}</span>`)
     .join("");
 }
-
-/* ---------- card builders ---------- */
-// function gridCard(ev, idx, big) {
-//   return `<article class="ev-card${big ? " feat-big" : ""}" data-idx="${idx}">
-//     <div class="ev-media"><div class="ev-badges">${badgesHTML(ev)}</div></div>
-//     <div class="ev-body">
-//       <div class="ev-meta">
-//         <span class="mi"><i class="far fa-calendar"></i>${formatRange(ev)}</span>
-//         <span class="mi"><i class="fas fa-map-marker-alt"></i>${ev.location}, ${ev.country}</span>
-//       </div>
-//       <h3 class="ev-title">${ev.title}</h3>
-//       <p class="ev-desc">${ev.description}</p>
-//       <div class="ev-tags">${tagsHTML(ev)}</div>
-//       <div class="ev-foot">
-//         <span class="ev-details">Details <i class="fas fa-long-arrow-alt-right arrow-long"></i></span>
-//         <span style="font-size:12px;font-weight:600;color:var(--text-tertiary);">${ev.region}</span>
-//       </div>
-//     </div>
-//   </article>`;
-// }
-// function listCard(ev, idx) {
-//   const t = ev.description;
-//   const needs = t.length > 110;
-//   const topics = ev.categories
-//     .map((c) => `<span class="topic-pill">${c}</span>`)
-//     .join("");
-//   const roles = rolesFor(ev)
-//     .map((r) => `<span class="role-pill ${r.c}">${r.t}</span>`)
-//     .join("");
-//   const disc = ev.discount_codes.length
-//     ? `
-//         <div class="lc-discount">
-//           <div class="lc-disc-info"><span class="lc-disc-label">Promo code</span><span class="lc-disc-code">${ev.discount_codes[0]}</span></div>
-//           <button class="lc-copy" data-code="${ev.discount_codes[0]}">Copy</button>
-//         </div>`
-//     : "";
-//   return `<article class="lc" data-idx="${idx}">
-//     <div class="lc-top">
-//       <div class="lc-left">
-//         <h3 class="lc-title">${ev.title}</h3>
-//         <p class="lc-desc"><span class="lc-desc-text">${shortDesc(t)}</span>${needs ? ` <button class="lc-readmore">Read more</button>` : ""}</p>
-//       </div>
-//       <div class="lc-actions">${disc}
-//         <a class="btn btn-primary lc-grab" href="${ev.url}" target="_blank" rel="noopener">Grab your spot</a>
-//         <button class="btn btn-outline lc-review" data-idx="${idx}">Read our review</button>
-//       </div>
-//     </div>
-//     <div class="lc-meta">
-//       <div class="lc-field"><div class="lc-flabel">Date</div><div class="lc-fval">${formatRangeLong(ev)}</div></div>
-//       <div class="lc-field"><div class="lc-flabel">Location</div><div class="lc-fval">${ev.location}, ${ev.country}</div></div>
-//       <div class="lc-field"><div class="lc-flabel">Topics</div><div class="lc-fval lc-pills">${topics}</div></div>
-//       <div class="lc-field"><div class="lc-flabel">iCODA Role</div><div class="lc-fval lc-pills">${roles}</div></div>
-//     </div>
-//   </article>`;
-// }
 
 /* ---------- grouping by month ---------- */
 function groupByMonth(list) {
@@ -440,120 +361,17 @@ function render() {
     if (e.key === "Escape" && overlay.classList.contains("open")) closeModal();
   });
 
-  // results bar
-  // document.getElementById("resultsCount").innerHTML =
-  //   `Showing <strong>${list.length}</strong> ${list.length === 1 ? "event" : "events"}` +
-  //   (active ? ` · filtered` : ` for 2026–2027`);
-  // document.getElementById("clearFilters").classList.toggle("show", active);
-
   // single page: calendar + featured + full conference list, all on same filtered data
   renderCalendar(list);
-  // renderFeatured(active);
-  // renderList(list);
-  var container = document.querySelector(".card-event-list");
-  console.log("container:", container);
+
+  const container = document.querySelector(".card-event-list");
   container.addEventListener("click", function (e) {
     var item = e.target.closest(".card-event[data-index]");
-    console.log("item:", item);
-    if (item) openModal(evIndex(list[+item.getAttribute("data-index")]));
-    console.log("list:", list);
+    const index = Number(item.dataset.index);
+    // if (item) openModal(evIndex(list[+item.getAttribute("data-index")]));
+    if (item) openModal(evIndex(list[index]));
   });
 }
-
-// function renderFeatured(active) {
-//   const wrap = document.getElementById("featuredWrap");
-//   if (active) {
-//     wrap.style.display = "none";
-//     wrap.innerHTML = "";
-//     return;
-//   }
-//   const feat = EVENTS.filter((e) => e.featured)
-//     .sort((a, b) => parseDate(a.start) - parseDate(b.start))
-//     .slice(0, 3);
-//   if (!feat.length) {
-//     wrap.style.display = "none";
-//     return;
-//   }
-//   wrap.style.display = "block";
-//   const banner = feat[0];
-//   const rowsHTML = feat
-//     .map((ev) => {
-//       const disc = ev.discount_codes.length
-//         ? `<div class="lc-discount"><div class="lc-disc-info"><span class="lc-disc-label">Promo code</span><span class="lc-disc-code">${ev.discount_codes[0]}</span></div><button class="lc-copy" data-code="${ev.discount_codes[0]}">Copy</button></div>`
-//         : "";
-//       return `<div class="ft-event">
-//       <div class="ft-event-head">
-//         <div style="display:flex;align-items:center;">
-//           <span class="ft-date">${formatRangeLong(ev)}</span>
-//           <span class="ft-sep">|</span>
-//           <span class="ft-loc">${ev.location}, ${ev.country}</span>
-//         </div>
-//         <span class="topic-pill">${ev.categories[0]}</span>
-//       </div>
-//       <h3 class="ft-title">${ev.title}</h3>
-//       <div class="ft-foot">
-//         <div class="ft-buttons">
-//           <a class="btn btn-primary btn-sm" href="${ev.url}" target="_blank" rel="noopener">Grab your spot</a>
-//           <button class="btn btn-outline btn-sm lc-review" data-idx="${evIndex(ev)}">Read our review</button>
-//         </div>
-//         ${disc}
-//       </div>
-//     </div>`;
-//     })
-//     .join("");
-//   wrap.innerHTML = `
-//     <div class="ft-section">
-//       <div class="ft-list">${rowsHTML}</div>
-//       <div class="ft-banner">
-//         <div class="ft-banner-bg"></div>
-//         <div class="ft-banner-content">
-//           <div class="ft-banner-tag">${banner.categories[0]} · ${banner.region}</div>
-//           <div class="ft-banner-name">${banner.title.toUpperCase()}</div>
-//           <div class="ft-banner-info">${formatRangeLong(banner)} · ${banner.location.toUpperCase()}</div>
-//           ${banner.discount_codes.length ? `<div class="ft-banner-code"><i class="fa fa-tag" style="font-size:11px;"></i> PROMO CODE: ${banner.discount_codes[0]}</div>` : ""}
-//         </div>
-//       </div>
-//     </div>`;
-// }
-
-// function renderList(list) {
-//   const view = document.getElementById("listView");
-//   if (!list.length) {
-//     view.innerHTML = emptyHTML();
-//     return;
-//   }
-//   const groups = groupByMonth(list);
-//   const visible = groups.slice(0, state.visibleMonths);
-//   const remaining = groups.length - visible.length;
-//   let html = visible
-//     .map(
-//       (g) => `
-//     <section class="month-group" id="mgl-${g.year}-${g.month}">
-//       <div class="month-head"><h3>${MONTHS[g.month]} ${g.year}</h3><span class="mh-count">${g.events.length} ${g.events.length === 1 ? "event" : "events"}</span></div>
-//       <div class="list-rows">${g.events.map((ev) => listCard(ev, evIndex(ev))).join("")}</div>
-//     </section>`,
-//     )
-//     .join("");
-//   if (remaining > 0) {
-//     const nextN = Math.min(3, remaining);
-//     const leftEvs = groups
-//       .slice(state.visibleMonths)
-//       .reduce((a, g) => a + g.events.length, 0);
-//     html += `<div class="show-more-row">
-//       <button class="btn btn-outline show-more-btn">Show ${nextN} more month${nextN > 1 ? "s" : ""} <i class="fa fa-chevron-down" style="font-size:11px;"></i></button>
-//       <span class="show-more-hint">${remaining} more month${remaining > 1 ? "s" : ""} · ${leftEvs} events remaining</span>
-//     </div>`;
-//   }
-//   view.innerHTML = html;
-//   view.querySelector(".show-more-btn")?.addEventListener("click", () => {
-//     state.visibleMonths += 3;
-//     // renderList(filterEvents());
-//   });
-// }
-
-// function emptyHTML() {
-//   return `<div class="empty-state"><i class="far fa-calendar-alt"></i><h3>No events match your filters</h3><p>Try a different category, region, or search term.</p></div>`;
-// }
 
 /* ---------- CALENDAR ---------- */
 function renderCalendar(list) {
@@ -729,8 +547,9 @@ function openModal(idx) {
   const realBanner = ev.modal_banner;
   const bannerSrc = realBanner || emptyBanner;
   const heroGrad = catGrads[ev.categories[0]] || catGrads.Crypto;
-  const discHTML = ev.discount_codes
-    ? `
+  const discHTML =
+    ev.with_promo_code && ev.discount_codes
+      ? `
     <p class="modal-section-label">Discount code</p>
     <div class="discount-row">
       
@@ -742,7 +561,7 @@ function openModal(idx) {
         <button class="lc-copy modal-copy" data-code="${ev.discount_codes}">Copy</button>
       </div>
     </div>`
-    : "";
+      : "";
 
   // Build modal hero
   const heroImgHTML = `

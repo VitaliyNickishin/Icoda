@@ -1,0 +1,301 @@
+/* Compact calendar wrapper (event page sidebar) */
+.calendar-block {
+  flex: 0 0 auto;
+  width: 100%;
+  @include mediaMin(768) {
+    max-width: 360px;
+  }
+}
+.cal-wrap {
+  background: #fff;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  padding: 20px;
+}
+.cal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.cal-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: $color-dark-blue;
+  letter-spacing: -0.2px;
+}
+.cal-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cal-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid $border-color;
+  background: #fff;
+  color: $color-dark-blue;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 150ms ease;
+  cursor: pointer;
+}
+.cal-arrow:hover {
+  border-color: $color-blue;
+  color: $color-blue;
+  background: #eef2fd;
+}
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  margin-bottom: 6px;
+}
+.cal-weekdays span {
+  text-align: center;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-dark-gray;
+  padding: 3px 0;
+}
+.cal-grid-mask {
+  overflow: hidden;
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  transition:
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.32s ease;
+}
+.cal-grid.slide-left {
+  transform: translateX(-4%);
+  opacity: 0;
+}
+.cal-grid.slide-right {
+  transform: translateX(4%);
+  opacity: 0;
+}
+
+.cal-cell {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: #f4f6f9;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  transition: all 150ms ease;
+}
+.cal-cell.has-events {
+  cursor: pointer;
+  background: #eef2fd;
+  border-color: $border-color;
+}
+.cal-cell.has-events .cal-daynum {
+  color: $color-blue;
+  font-weight: 700;
+}
+.cal-cell.has-events:hover {
+  border-color: $color-blue;
+  box-shadow: 0 2px 8px 0 rgba(8, 34, 101, 0.07);
+  transform: translateY(-1px);
+}
+.cal-cell.outside {
+  background: transparent;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.cal-cell.today {
+  background: $color-blue;
+  border-color: $color-blue;
+}
+.cal-cell.today .cal-daynum {
+  color: $white;
+}
+.cal-cell.today .cal-overflow {
+  color: rgba(255, 255, 255, 0.85);
+}
+.cal-cell.selected {
+  border-color: $color-blue;
+  border-width: 1.5px;
+  box-shadow: 0 0 0 3px rgba(60, 97, 226, 0.14);
+}
+
+.cal-daynum {
+  font-size: 11px;
+  font-weight: 600;
+  color: $color-dark-blue;
+  line-height: 1;
+}
+.cal-dots {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+.cal-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cal-overflow {
+  font-size: 8px;
+  font-weight: 700;
+  color: $main-color-text;
+  line-height: 1;
+}
+
+.cal-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e7edff;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cal-legend {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.cal-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  font-weight: 600;
+  color: $main-color-text;
+}
+.back-today {
+  font-size: 11px;
+  font-weight: 700;
+  color: $color-blue;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 150ms ease;
+  line-height: 36px; /* vertically centered in footer area */
+}
+.back-today:hover {
+  color: #2e50c4;
+}
+
+/* Day panel */
+.day-panel {
+  margin-top: 12px;
+  background: #f4f6f9;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.3s ease;
+  &.open {
+    max-height: 600px;
+    opacity: 1;
+    padding: 16px 20px;
+  }
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: $color-dark-blue;
+      margin: 0;
+      line-height: 1.35;
+    }
+  }
+  &-close {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    background: #fff;
+    color: $main-color-text;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 150ms ease;
+    flex-shrink: 0;
+    cursor: pointer;
+    &:hover {
+      color: $color-blue;
+      border-color: $color-blue;
+    }
+  }
+}
+
+.mini-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mini-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    transform 150ms ease;
+  &:hover {
+    border-color: $color-blue;
+    transform: translateX(2px);
+  }
+}
+
+.mini-info {
+  flex: 1;
+  min-width: 0;
+  h5 {
+    font-size: 13px;
+    font-weight: 700;
+    color: $color-dark-blue;
+    margin: 0 0 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  p {
+    font-size: 11px;
+    color: $main-color-text;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.mini-arrow {
+  color: $color-blue;
+  font-size: 11px;
+  flex-shrink: 0;
+}
