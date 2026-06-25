@@ -36,13 +36,26 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
                     </div>
                 </div>
                 <div class="author-meta col-9">
-                    <?php
+                    <?php                    
                     $fname = get_the_author_meta('first_name');
+                    $acf_fname_user_id = 'acf-fname--user_' . $curauth->ID;
+                    do_action('wpml_register_single_string', 'Authors', $acf_fname_user_id, $fname);
+                    $fname = apply_filters('wpml_translate_single_string', $fname, 'Authors', $acf_fname_user_id);
+
                     $lname = get_the_author_meta('last_name');
+                    $acf_lname_user_id = 'acf-lname--user_' . $curauth->ID;
+                    do_action('wpml_register_single_string', 'Authors', $acf_lname_user_id, $lname);
+                    $lname = apply_filters('wpml_translate_single_string', $lname, 'Authors', $acf_lname_user_id);
+                    
+                    
+                    $position = get_the_author_meta('position');
+                    $acf_position_user_id = 'acf-position--user_' . $curauth->ID;
+                    do_action('wpml_register_single_string', 'Authors', $acf_position_user_id, $position);
+                    $position = apply_filters('wpml_translate_single_string', $position, 'Authors', $acf_position_user_id);
                     ?>
                     <h1 class="author-name"><?php echo $fname . ' ' . $lname; ?></h1>
                     <div class="position">
-                        <p><?php the_author_meta('position'); ?></p>
+                        <p><?php echo $position; ?></p>
                     </div>
 
                     <div class="additional-meta-items">
@@ -173,7 +186,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
                 array(
                     'taxonomy' => 'category',
                     'field' => 'id',
-                    'terms' => array('38'),
+                    'terms' => array('38', '1028'),
                 )
             ),
         );
