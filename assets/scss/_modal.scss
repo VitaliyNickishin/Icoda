@@ -40,7 +40,8 @@ body.modal-open {
     align-items: flex-start;
   }
   .ttl {
-    font: 32px/42px $f-sto-r;
+    font-family: $f-sto-m;
+    font-size: 32px;
     color: $color-dark-blue;
     padding: 0;
   }

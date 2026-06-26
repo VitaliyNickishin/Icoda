@@ -41,8 +41,8 @@
                 </div>
             <?php else : ?>
                 <div class="input-wrap form-group">
-                    <label for="telegram" class="form-label"><?php _e('Text message', 'icoda'); ?></label>
-                    <textarea name="message" class="form-control req" rows="5" placeholder="<?php _e('Text message', 'icoda'); ?>"></textarea>
+                    <label for="telegram" class="form-label"><?php _e('Tell us about your project', 'icoda'); ?></label>
+                    <textarea name="message" class="form-control req" rows="5" placeholder="<?php _e('Tell us about your project', 'icoda'); ?>"></textarea>
                 </div>
             <?php endif; ?>
         </div>
@@ -51,7 +51,7 @@
         ?>
         <div class="col-12">
             <div class="wr-btn text-center text-lg-right">
-                <button type="submit" class="btn btn-blue"><?php echo __('Apply Now', 'icoda'); ?></button>
+                <button type="submit" class="btn btn-blue"><?php echo __('Send request', 'icoda'); ?></button>
             </div>
         </div>
     </div>

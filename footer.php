@@ -222,8 +222,8 @@
     <a href="#" class="modal-close"><i class="icon-ico-close"></i></a>
     
     <div class="form-default-header">
-        <p class="ttl"><?php _e('Send request', 'icoda'); ?></p>
-        <p><?php _e('to scale your business to the next level', 'icoda'); ?></p>
+        <p class="ttl"><?php _e('Talk to Our Team', 'icoda'); ?></p>
+        <p><?php _e('We\'ll review your project and reach out within 24 hours.<br>No spam. No cold calls.', 'icoda'); ?></p>
     </div>
 
     <?php get_template_part('template-parts/_partials/contact-form'); ?>

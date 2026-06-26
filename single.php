@@ -388,8 +388,8 @@ if (!empty($post_v3)) :
                         <div class="row">
                             <div class="col-12 col-lg-8 col-xl-8">
                                 <div class="form-default-header">
-                                    <p class="ttl"><?php _e('Send request', 'icoda'); ?></p>
-                                    <p><?php _e('to scale your business to the next level', 'icoda'); ?></p>
+                                    <p class="ttl"><?php _e('Talk to Our Team', 'icoda'); ?></p>
+                                    <p><?php _e('We\'ll review your project and reach out within 24 hours.<br>No spam. No cold calls.', 'icoda'); ?></p>
                                 </div>
                                 <?php get_template_part('template-parts/_partials/contact-form'); ?>
 
