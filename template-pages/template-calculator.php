@@ -244,7 +244,7 @@ $calculator_data = get_field('calculator_section_3');
 											</svg>
 										</button>
 
-										<button type="submit" class="btn btn-outline-blue btn-apply ml-auto d-none"><?php echo __('Apply now', 'icoda'); ?></button>
+										<button type="submit" class="btn btn-outline-blue btn-apply ml-auto d-none"><?php echo __('Get My Estimate', 'icoda'); ?></button>
 									</div>
 								</div>
 
