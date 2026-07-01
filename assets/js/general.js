@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
     function (event) {
       event.preventDefault();
       maybeAutoSubmitTagsFilters();
-    }
+    },
   );
 
   function maybeAutoSubmitTagsFilters() {
@@ -68,12 +68,12 @@ jQuery(document).ready(function ($) {
             "scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove",
             function () {
               $("html, body").stop();
-            }
+            },
           );
 
           $("html, body").animate({ scrollTop: sectionPos }, 800, function () {
             $("html, body").off(
-              "scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove"
+              "scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove",
             );
           });
 
@@ -91,7 +91,7 @@ jQuery(document).ready(function ($) {
   var initParallax = function () {
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
+        navigator.userAgent,
       )
     ) {
     } else {
@@ -427,7 +427,7 @@ jQuery(document).ready(function ($) {
           .find(".embed-responsive-item")
           .attr(
             "src",
-            $videoSrc + "?amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1"
+            $videoSrc + "?amp;showinfo=0&amp;modestbranding=1&amp;autoplay=1",
           );
       });
       $(".modal-video").on("hide.bs.modal", function () {
@@ -539,33 +539,6 @@ jQuery(document).ready(function ($) {
         }
       },
     });
-  });
-
-  //sleder Resent cases new mobile
-  $(window).on("load resize", function () {
-    if ($(window).width() < 991) {
-      if (jQuery(".case-new-slider:not(.slick-initialized)").length > 0) {
-        $(".case-new-slider:not(.slick-initialized)").slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          variableWidth: true,
-          speed: 500,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-              },
-            },
-          ],
-        });
-      }
-    } else {
-      if (jQuery(".case-new-slider.slick-initialized").length > 0) {
-        $(".case-new-slider.slick-initialized").slick("unslick");
-      }
-    }
   });
 
   $(window).on("load resize", function () {
