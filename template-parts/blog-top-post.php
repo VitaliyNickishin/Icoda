@@ -10,7 +10,7 @@
         // $excerpt = mb_strimwidth($excerpt, 0, 100, "...");
         ?>
         <div class="col-12 mb-lg-5 mb-3">
-            <a href="<?php echo get_the_permalink($top_post->ID); ?>" class="article-card article-card-full d-flex">
+            <a href="<?php echo get_the_permalink($top_post->ID); ?>" class="article-card-top d-flex">
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <?php if (has_post_thumbnail($top_post)) : ?>
@@ -23,15 +23,15 @@
                                 $alt_text = get_the_title($top_post->ID);
                             }
                             ?>
-                            <div class="article-card__img">
+                            <div class="article-card-top__img">
                                 <img src="<?php echo $featured_img_url; ?>" alt="<?php echo $alt_text; ?>">
                             </div>
 
                         <?php endif; ?>
                     </div>
                     <div class="col-12 col-lg-6 d-flex flex-column justify-content-between">
-                        <div class="article-card-content">
-                            <div class="article-card-meta d-sm-flex justify-content-sm-between align-items-sm-center mt-3 mt-lg-0 mb-2 pb-0 mb-lg-4 pb-lg-1">
+                        <div class="article-card-top-content">
+                            <div class="article-card-top-meta d-sm-flex justify-content-sm-between align-items-sm-center mt-3 mt-lg-0 mb-2 pb-0 mb-lg-4 pb-lg-1">
                                 <div class="author-meta">
                                     <span class="author-name">
                                         <?php

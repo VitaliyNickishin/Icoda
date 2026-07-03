@@ -1,56 +1,139 @@
 .article-card {
+  &-top {
+    @include border-radius(10px);
+    background: #f8f9ff;
+    padding: 5px 5px 30px;
+    @include mediaMin(576) {
+      padding: 1.25rem;
+    }
     .title {
-        line-height: 130%;
-        @include mediaMin(768) {
-            font-size: 2.25rem;
-        }
+      line-height: 130%;
+      @include mediaMin(768) {
+        font-size: 2.25rem;
+      }
     }
     img {
-        @include border-radius(10px);
+      @include border-radius(10px);
     }
     .excerpt {
-        color: $color-dark-gray;
-        line-height: 140%;
-        font-size: 15px;
-        @include mediaMin(992) {
-            font-size: 1rem;
-            line-height: 165%;
-        }
+      color: $color-dark-gray;
+      line-height: 140%;
+      font-size: 15px;
+      @include mediaMin(992) {
+        font-size: 1.125rem;
+        line-height: 165%;
+      }
     }
     &-content,
     .btn-wrap {
-        @include mediaMax(576) {
-            padding: 0 1rem;
-        }
+      @include mediaMax(576) {
+        padding: 0 1rem;
+      }
     }
-    
+
     .btn.btn-blue {
-        min-width: 120px;
-        @include mediaMin(992) {
-            min-width: 150px;
-        }
+      min-width: 120px;
+      @include mediaMin(992) {
+        min-width: 150px;
+      }
     }
     &-meta {
+      font-size: 15px;
+      color: #aabde7;
+      // @at-root .archive & {
+      //     @include mediaMin(992) {
+      //         margin-bottom: 1.875rem;
+      //     }
+      // }
+    }
+  }
+
+  //general styles for article card (page authors...)
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: auto;
+
+    @include mediaMin(992) {
+      height: 180px;
+    }
+    @include mediaMin(1340) {
+      height: 230px;
+    }
+    @include mediaMin(1440) {
+      height: 260px;
+    }
+  }
+  .title {
+    @extend .fw-semibold;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    @include mediaMin(992) {
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+    }
+  }
+  &-body {
+    padding: 12px 8px;
+    .tags {
+      ul {
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      a {
+        @include border-radius(3px);
+        background-color: $color-light-blue;
+        font-size: 12px;
+        color: $color-dark-blue;
+        padding: 6px 8px;
+        display: inline-flex;
+        line-height: 100%;
+        @include mediaMax(1340) {
+          font-size: 9px;
+        }
+        @include mediaMax(991) {
+          font-size: 8px;
+        }
+      }
+    }
+    .title {
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 140%;
+      color: #383737;
+      a {
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 20px;
+        color: $color-dark-blue;
+        line-height: 150%;
+        @extend .fw-semibold;
+      }
+    }
+    .excerpt {
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 150%;
+    }
+    .date {
+      display: flex;
+      align-items: center;
+      p {
         font-size: 15px;
+        line-height: 175%;
         color: #aabde7;
-        // @at-root .archive & {
-        //     @include mediaMin(992) {
-        //         margin-bottom: 1.875rem;
-        //     } 
-        // }
+      }
+      .dote {
+        display: inline-block;
+        margin: 0 7px;
+        vertical-align: middle;
+        width: 3px;
+        height: 3px;
+        background-color: #aabde7;
+        @include border-radius(50%);
+      }
     }
-    &-full {
-        @include border-radius(10px);
-        background: #F8F9FF;
-        padding: 5px 5px 30px;
-        @include mediaMin(576) {
-            padding: 1.25rem;
-        }
-        .excerpt {
-            @include mediaMin(992) {
-                font-size: 1.125rem;
-                line-height: 165%;
-            }
-        }
-    }
+  }
 }
