@@ -470,7 +470,7 @@ $assets_uri . '/js/calculator-defi.js',
 array('jquery'), '', true
 );
 }
-if( is_page_template('template-pages/template-book.php') ) {
+if( is_page_template('template-pages/template-book.php') || is_author() ) {
 wp_enqueue_script(
 'icoda-iframe',
 $assets_uri . '/js/iframe.js',
@@ -819,6 +819,37 @@ die; // here we exit the script and even no wp_reset_query() required!
 }
 add_action( 'wp_ajax_loadmore', 'icoda_loadmore_ajax_handler' ); // wp_ajax_{action}
 add_action( 'wp_ajax_nopriv_loadmore', 'icoda_loadmore_ajax_handler' ); // wp_ajax_nopriv_{action}
+
+function icoda_loadmore_author_ajax_handler() {
+
+    $args = [
+        'post_type'      => 'post',
+        'post_status'    => 'publish',
+        'posts_per_page' => 12,
+        'paged'          => $_POST['page'] + 1,
+        'author'         => absint($_POST['author']),
+        'tax_query'      => [
+            [
+                'taxonomy' => 'category',
+                'field'    => 'id',
+                'terms'    => [38, 1028],
+            ]
+        ]
+    ];
+
+    $query = new WP_Query($args);
+
+    while ($query->have_posts()) {
+        $query->the_post();
+
+        get_template_part('template-parts/article-card');
+    }
+
+    wp_die();
+}
+add_action('wp_ajax_loadmore_author', 'icoda_loadmore_author_ajax_handler');
+add_action('wp_ajax_nopriv_loadmore_author', 'icoda_loadmore_author_ajax_handler');
+
 function icoda_share_count_ajax_handler() {
 if(!empty($_POST['id'])){
 $post_id = absint($_POST['id']);

@@ -541,6 +541,58 @@ jQuery(document).ready(function ($) {
     });
   });
 
+  jQuery(document).on("click", ".load-more-author a", function (event) {
+    event.preventDefault();
+
+    var button = jQuery(this);
+    var buttonContainer = button.closest(".load-more-author");
+
+    var currentPage = parseInt(buttonContainer.data("page"), 10);
+    var maxPage = parseInt(buttonContainer.data("max"), 10);
+    var currentAuthor = buttonContainer.data("author");
+
+    jQuery.ajax({
+      url: icoda_loadmore_params.ajaxurl,
+      type: "POST",
+      data: {
+        action: "loadmore_author",
+        author: currentAuthor,
+        page: currentPage,
+      },
+
+      beforeSend: function () {
+        button.text(icoda_loadmore_params.btn_text_loading);
+        button.prop("disabled", true);
+      },
+
+      success: function (response) {
+        button.text(icoda_loadmore_params.btn_text);
+        button.prop("disabled", false);
+
+        if (response) {
+          buttonContainer.before(jQuery(response).hide().fadeIn(300));
+
+          currentPage++;
+
+          buttonContainer.data("page", currentPage);
+
+          if (currentPage >= maxPage) {
+            buttonContainer.remove();
+          }
+        } else {
+          buttonContainer.remove();
+        }
+      },
+
+      error: function () {
+        button.text(icoda_loadmore_params.btn_text);
+        button.prop("disabled", false);
+
+        alert("Error loading posts.");
+      },
+    });
+  });
+
   $(window).on("load resize", function () {
     if ($(window).width() < 991) {
       //slider post templates (fb, instagram)

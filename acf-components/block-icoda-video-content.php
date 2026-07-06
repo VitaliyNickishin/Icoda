@@ -11,27 +11,29 @@ $content_set = get_field('content_set');
                         <div id="player-1"></div>
 
                         <div
-                            class="poster"
+                            class="video-trigger"
                             data-id="player-1"
                             data-video="<?php echo $video_set['video_code']; ?>"
                         >
-                            <div class="poster-img">
-                            <picture>
-                                <source srcset="<?php echo $video_set['poster_mobile']['url']; ?>" media="(max-width: 600px)" />
-                                <img 
-                                    data-src="<?php echo $video_set['poster_desktop']['url']; ?>" 
-                                    alt="<?php echo $video_set['poster_alt']; ?>" 
-                                    src="<?php echo $video_set['poster_desktop']['url']; ?>" 
-                                    class="lazyloaded poster-image"
-                                    width="515" height="314"
-                                    >
-                            </picture>
-                            </div>
-                            
-                            <div class="play-icon">
-                            <picture>
-                                <img src="<?php echo $video_set['icon_play']['url']; ?>" alt="Play" />
-                            </picture>
+                            <div class="poster">
+                                <div class="poster-img">
+                                    <picture>
+                                        <source srcset="<?php echo $video_set['poster_mobile']['url']; ?>" media="(max-width: 600px)" />
+                                        <img 
+                                            data-src="<?php echo $video_set['poster_desktop']['url']; ?>" 
+                                            alt="<?php echo $video_set['poster_alt']; ?>" 
+                                            src="<?php echo $video_set['poster_desktop']['url']; ?>" 
+                                            class="lazyloaded poster-image"
+                                            width="515" height="314"
+                                            >
+                                    </picture>
+                                </div>
+                                
+                                <div class="play-icon">
+                                    <picture>
+                                        <img src="<?php echo $video_set['icon_play']['url']; ?>" alt="Play" />
+                                    </picture>
+                                </div>
                             </div>
                         </div>
                     </div>
