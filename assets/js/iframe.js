@@ -22,9 +22,11 @@ $(document).on("click", ".video-trigger", function (e) {
     videoId: videoID,
 
     playerVars: {
-      controls: 0,
-      showinfo: 0,
-      disablekb: 1,
+      controls: 1,
+      fs: 1,
+      disablekb: 0,
+      modestbranding: 1,
+      iv_load_policy: 3,
       rel: 0,
       playsinline: 1,
       origin: window.location.origin,
