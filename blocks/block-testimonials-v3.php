@@ -31,8 +31,8 @@ if (!block_rows('row') && empty($general_testimonials)) {
             }
             ?>
             <?php if ($title) : ?>
-                <div class="col-12">
-                    <p class="h3"><?php echo $title; ?></p>
+                <div class="col-9 col-md-12">
+                    <p class="h3 title"><?php echo $title; ?></p>
                 </div>
             <?php endif; ?>
 

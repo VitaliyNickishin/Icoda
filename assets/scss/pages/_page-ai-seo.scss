@@ -179,7 +179,14 @@
         width: auto;
       }
     }
+    .slider-control {
+      top: 3px;
+      @include mediaMin(992) {
+        top: 13px;
+      }
+    }
   }
+
   .block-banner:not(.block-banner-email) {
     @include mediaMin(992) {
       position: relative;
