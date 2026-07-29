@@ -23,7 +23,7 @@ $front_page_id = get_option('page_on_front');
 					<div class="content">
 						<h1 class="h4"><?php the_title(); ?></h1>
 						<div class="description">
-							<?php the_field('about_us_content'); ?>
+							<?php echo get_field('about_us_content'); ?>
 						</div>
 						<div class="btn-wrap mt-4">
 							<a href="#" data-modal="#callback" class="btn btn-blue open-modal"><?php echo __('Contact us', 'icoda'); ?></a>
@@ -55,11 +55,11 @@ $front_page_id = get_option('page_on_front');
 			?>
 			<div class="list-leadership-desktop">
 				<div class="row list-leadership">
-					<?php foreach (get_field('section_7-new_list-en', $front_page_id) as $item) : $count++; ?>
+					<?php foreach (get_field('section_7-new_list-en', $front_page_id) as $item) : ?>
 						<div class="col-lg-3">
 							<div class="list-leadership-item">
 
-								<div class="leadership-item-avatar" data-bg="<?php echo $item['image']; ?>"></div>
+								<div class="leadership-item-avatar" data-bg="<?php echo $item['image']; ?>" style="background-image:url(<?php echo $item['image']; ?>);"></div>
 								<div class="leadership-item-des">
 									<div class="title-wrap d-flex justify-content-between w-100">
 										<span class="h6"><?= $item['name']; ?></span>
@@ -81,11 +81,11 @@ $front_page_id = get_option('page_on_front');
 			<div class="list-leadership-mobile">
 				<div class="list-leadership">
 					<div class="leadership-slider custom-slider">
-						<?php foreach (get_field('section_7-new_list-en', $front_page_id) as $item) : $count++; ?>
+						<?php foreach (get_field('section_7-new_list-en', $front_page_id) as $item) : ?>
 
 							<div class="list-leadership-item">
 
-								<div class="leadership-item-avatar" data-bg="<?php echo $item['image']; ?>"></div>
+								<div class="leadership-item-avatar" data-bg="<?php echo $item['image']; ?>" style="background-image:url(<?php echo $item['image']; ?>);"></div>
 								<div class="leadership-item-des">
 									<div class="title-wrap d-flex justify-content-between w-100">
 										<span class="h6"><?= $item['name']; ?></span>
@@ -209,6 +209,8 @@ $front_page_id = get_option('page_on_front');
 			</div>
 		</div>
 	</section>
+
+	<?php the_content(); ?>
 
 	<?php get_template_part('template-parts/sections/meet-up', '', ['need_post_id' => $front_page_id]); ?>
 
