@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="list-leadership">
-            <div class="row authors-slider custom-slide pl-2 pl-lg-0 mx-lg-n2">
+            <div class="row authors-slider custom-slider pl-2 pl-lg-0 mx-lg-n2">
                 <?php if(!empty($authors['list_authors'])) : ?>
                     <?php foreach ($authors['list_authors'] as $item) : ?>
                         <div class="col col-lg-3 px-2">

@@ -200,6 +200,18 @@ add_action('acf/init', function () {
         ),
     ));
     acf_register_block(array(
+        'name'              => 'post-title-grid-boxes',
+        'title'             => __('Post Title Grid Boxes'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('grid', 'icoda', 'title', 'boxes', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
         'name'              => 'post-table-compare',
         'title'             => __('Post Table Compare'),
         'description'       => __(''),
@@ -242,6 +254,30 @@ add_action('acf/init', function () {
         'render_callback' => 'icoda_acf_block_render_callback',
         'category'            => 'icoda-posts',
         'keywords'            => array('banner', 'icoda', 'action', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-banner-action-under-section',
+        'title'             => __('Post Banner Action Under Section'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('banner', 'icoda', 'action', 'post', 'section', 'under'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-media-slider',
+        'title'             => __('Post Media Slider'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('media', 'icoda', 'slider', 'post', 'section', 'under'),
         'align'             => 'full',
         'supports'          => array(
             'align' => array('full', 'wide', 'center')
@@ -769,6 +805,30 @@ add_action('acf/init', function () {
         ),
     ));
     acf_register_block(array(
+        'name'              => 'post-box-content-slider',
+        'title'             => __('Post Box Content Slider'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('content', 'box', 'slider', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-content-slider-edit-box',
+        'title'             => __('Post Content Slider Edit Box'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('content', 'edit', 'box', 'slider', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
         'name'              => 'post-services',
         'title'             => __('Post Services'),
         'description'       => __(''),
@@ -804,6 +864,31 @@ add_action('acf/init', function () {
             'align' => array('full', 'wide', 'center')
         ),
     ));
+    acf_register_block(array(
+        'name'              => 'post-leadership',
+        'title'             => __('Post Leadership'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('leadership', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-logos-slider-infinite',
+        'title'             => __('Post Logos Slider Infinite'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('logos', 'slider', 'infinite', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    
     acf_register_block(array(
         'name'              => 'post-challenge',
         'title'             => __('Post Challenge'),

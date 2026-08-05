@@ -1,0 +1,50 @@
+.section-leadership {
+  padding: 40px 0;
+  @at-root .page-about & {
+    padding-bottom: 0;
+  }
+  @include mediaMin(991) {
+    padding: 56px 0;
+    @at-root .page-about & {
+      padding-bottom: 0;
+    }
+  }
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    @include mediaMin(992) {
+      font-size: 2rem;
+      line-height: 46px;
+    }
+  }
+  .descriptions {
+    font-size: 0.9375rem;
+    line-height: 24px;
+    color: $main-color-text;
+    text-wrap: pretty;
+  }
+  .slick-list {
+    display: flex;
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .list-leadership-item {
+    width: 275px;
+    @include mediaMin(992) {
+      width: auto;
+    }
+  }
+  .wr-control {
+    position: relative;
+    top: 10px;
+    right: 0;
+    flex-shrink: 0;
+  }
+}

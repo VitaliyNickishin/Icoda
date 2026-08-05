@@ -1,4 +1,45 @@
 .section-banner-action {
+  &-under-section {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid $border-color;
+      border-radius: 0.75rem;
+      padding: 2rem 2.5rem;
+      flex-wrap: wrap;
+      &.has-bg-gradient {
+        background: linear-gradient(
+          135deg,
+          rgb(238, 242, 254) 0%,
+          rgb(247, 240, 244) 100%
+        );
+      }
+    }
+    .abovetitle {
+      color: $color-dark-blue;
+      font-size: 1rem;
+    }
+    .title {
+      color: $color-dark-blue;
+      font-size: 1.25rem;
+      line-height: 20px;
+    }
+    .undertitle {
+      color: $text-muted;
+      font-size: 0.875rem;
+      line-height: 20px;
+    }
+    .section-banner-action__btn {
+      @include mediaMin(992) {
+        min-width: auto;
+      }
+      .btn.btn-blue {
+        min-width: auto;
+        padding: 15px 24px;
+      }
+    }
+  }
   .section-title {
     font-size: 1.75rem;
     line-height: 2.125rem;

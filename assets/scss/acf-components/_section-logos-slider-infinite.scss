@@ -1,0 +1,57 @@
+.section-logos-slider-infinite {
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    @include mediaMin(992) {
+      font-size: 2rem;
+      line-height: 46px;
+    }
+  }
+  .blur-box {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 40px;
+    pointer-events: none;
+    @include mediaMin(992) {
+      width: 80px;
+    }
+    filter: blur(10px);
+    &-left {
+      left: 0px;
+      background: linear-gradient(to right, rgb(255, 255, 255), transparent);
+    }
+    &-right {
+      right: 0px;
+      background: linear-gradient(to left, rgb(255, 255, 255), transparent);
+    }
+  }
+  .slick-list {
+    display: flex;
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .media-logo {
+    padding: 14px 22px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mediaMin(992) {
+      width: 200px;
+    }
+    img {
+      width: auto;
+    }
+    &.has-white-font {
+      background-color: $border-color;
+    }
+  }
+}

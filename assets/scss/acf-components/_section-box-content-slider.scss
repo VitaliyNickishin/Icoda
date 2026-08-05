@@ -1,0 +1,177 @@
+.section-box-content-slider {
+  padding: 40px 0;
+  @at-root .page-about & {
+    padding-bottom: 0;
+  }
+  @include mediaMin(991) {
+    padding: 56px 0;
+    @at-root .page-about & {
+      padding-bottom: 0;
+    }
+  }
+  .service-card {
+    width: calc(100vw - 64px);
+    flex-shrink: 0;
+    border-radius: 12px;
+    padding: 24px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background: $white;
+    border: 1px solid $border-color;
+    transition:
+      opacity 0.3s,
+      background 0.3s;
+    margin-bottom: 0;
+    height: auto;
+    @include mediaMin(576) {
+      padding: 36px 32px 32px;
+      width: 420px;
+    }
+    .service-num {
+      position: absolute;
+      top: -10px;
+      right: -4px;
+      font-size: 120px;
+      font-weight: 900;
+      line-height: 1;
+      pointer-events: none;
+      font-family: $f-sto-bold;
+      color: #eef2fd;
+    }
+    .service-eyebrow {
+      color: $color-blue;
+    }
+    .service-name {
+      color: $color-dark-blue;
+    }
+    .service-desc {
+      color: $text-muted;
+    }
+    .tag {
+      border: 1px solid $border-color;
+      color: $text-muted;
+      background: #fff;
+    }
+    &.slick-current {
+      background: $color-blue;
+      border: 1px solid $color-blue;
+      .service-num {
+        color: rgba(255, 255, 255, 0.1);
+      }
+      .service-eyebrow {
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .service-name {
+        color: #fff;
+      }
+      .service-desc {
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .tag {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.85);
+        background: transparent;
+      }
+    }
+  }
+  .service-cta-card {
+    background: rgb(255, 255, 255);
+    border: 1.5px dashed $border-color;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    opacity: 1;
+    flex-shrink: 0;
+    width: calc(100vw - 64px);
+    @include mediaMin(576) {
+      width: 520px;
+    }
+    @include mediaMin(768) {
+      width: 700px;
+    }
+    @include mediaMin(991) {
+      width: 1060px;
+    }
+    @include mediaMin(1340) {
+      width: 1180px;
+    }
+    .service-name {
+      font-size: 26px;
+    }
+    &.slick-current {
+      .cta-service-card {
+        border-color: $white;
+      }
+    }
+  }
+  .cta-service-card {
+    &:hover {
+      .arrow-long {
+        transform: translateX(4px);
+      }
+    }
+  }
+  .service-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+
+  .service-name {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .service-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0 0 24px;
+    flex: 1;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .tag {
+    padding: 5px 13px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    @include mediaMin(992) {
+      font-size: 2rem;
+      line-height: 46px;
+    }
+  }
+  .description {
+    font-size: 0.9375rem;
+    line-height: 24px;
+    color: $main-color-text;
+    text-wrap: pretty;
+  }
+  .slick-track {
+    display: flex;
+    gap: 1rem;
+  }
+  .wr-control {
+    position: relative;
+    top: 10px;
+    right: 0;
+  }
+}

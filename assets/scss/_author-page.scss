@@ -203,6 +203,12 @@
       }
     }
   }
+  .custom-slider {
+    @include mediaMin(991) {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 
   .section-author-videos {
     .article-card {

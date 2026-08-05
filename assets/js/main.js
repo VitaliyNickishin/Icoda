@@ -1213,6 +1213,7 @@ jQuery(document).ready(function ($) {
   initMegaMenu();
   scrollVerticalMenu();
   initSliderListLeadership();
+  initSliderLeaderships();
   initSliderAuthors();
   initSliderCaseNew();
   initAccordionFaq();
@@ -1227,14 +1228,17 @@ jQuery(document).ready(function ($) {
   initSliderServicesList();
   initSliderServicesGrid();
   initSliderStories();
+  initSliderLogosInfinite();
   initSliderRelatedArticles();
   initSliderRelatedArticlesRtl();
   initSliderBlogArticles();
   initSliderTestimonials();
   initSlideLlm();
+  initSliderEditBox();
   initSliderFourBox();
   initIntlTel();
   showMobileSubmenu();
+  initSliderBoxContent();
   // initSliderTwoLogosFirst();
   // initSliderTwoLogosSecond();
 });
@@ -1722,6 +1726,38 @@ var initSliderListLeadership = function () {
     ],
   });
 };
+const initSliderLeaderships = () => {
+  if ($(".leaderships-slider").length > 0) {
+    $(".leaderships-slider").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      swipeToSlide: $("body").hasClass("rtl") ? false : true,
+      variableWidth: false,
+      rtl: $("body").hasClass("rtl") ? true : false,
+      appendArrows: $(".wr-control-leadership"),
+      speed: 500,
+      cssEase: "linear",
+      infinite: true,
+      responsive: [
+        // {
+        //   breakpoint: 991,
+        //   settings: {
+        //     slidesToShow: 3,
+        //     slidesToScroll: 1,
+        //   },
+        // },
+        {
+          breakpoint: 991,
+          settings: {
+            variableWidth: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  }
+};
 
 const initSliderAuthors = () => {
   const isMobile = $(window).width() < 991;
@@ -2078,6 +2114,9 @@ $(window).on("load resize", function () {
   initSliderAuthors();
   initSliderCaseNew();
   initSliderHeroServices();
+  initSliderServicesList();
+  initSliderServicesGrid();
+  initSliderStories();
 });
 const initSliderHeroAiSeo = () => {
   if ($(".hero-slider-ai-seo").length > 0) {
@@ -2231,6 +2270,30 @@ const initSliderServicesList = () => {
     });
   } else {
     $(".slider-services-list.slick-initialized").slick("unslick");
+  }
+};
+const initSliderBoxContent = () => {
+  if (jQuery(".slider-box-content").length > 0) {
+    $(".slider-box-content").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      swipeToSlide: $("body").hasClass("rtl") ? false : true,
+      infinite: true,
+      variableWidth: true,
+      rtl: $("body").hasClass("rtl") ? true : false,
+      appendArrows: $(".wr-control-box-content"),
+      speed: 500,
+      cssEase: "linear",
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
   }
 };
 
@@ -2449,6 +2512,33 @@ const initSliderStories = () => {
     $(".slider-stories.slick-initialized").slick("unslick");
   }
 };
+const initSliderLogosInfinite = () => {
+  if (jQuery(".slider-logos-infinite").length > 0) {
+    $(".slider-logos-infinite").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      swipeToSlide: $("body").hasClass("rtl") ? false : true,
+      variableWidth: true,
+      rtl: $("body").hasClass("rtl") ? true : false,
+      appendArrows: false,
+      autoplay: true,
+      autoplaySpeed: 0,
+      speed: 8000,
+      cssEase: "linear",
+      infinite: true,
+      pauseOnHover: true,
+      responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  }
+};
 
 const initSlideLlm = () => {
   if (jQuery(".slider-llm").length > 0) {
@@ -2458,6 +2548,25 @@ const initSlideLlm = () => {
       swipeToSlide: $("body").hasClass("rtl") ? false : true,
       appendArrows: $(".arrow-control-llm"),
       dots: true,
+      infinite: true,
+      variableWidth: false,
+      rtl: $("body").hasClass("rtl") ? true : false,
+      cssEase: "linear",
+      speed: 500,
+    });
+  }
+};
+const initSliderEditBox = () => {
+  if ($(".slider-edit-box").length > 0) {
+    $(".slider-edit-box").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      swipeToSlide: $("body").hasClass("rtl") ? false : true,
+      appendArrows: false,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 6000,
+      fade: true,
       infinite: true,
       variableWidth: false,
       rtl: $("body").hasClass("rtl") ? true : false,

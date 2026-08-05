@@ -8,6 +8,9 @@
       line-height: 58px;
       color: $color-blue;
     }
+    @at-root .page-about & {
+      color: $color-dark-blue;
+    }
   }
   .cases-box {
     width: 100%;

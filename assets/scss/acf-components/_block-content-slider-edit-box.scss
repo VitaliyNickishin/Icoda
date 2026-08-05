@@ -1,0 +1,141 @@
+//block banner (btn with price)
+.block-content-slider-edit-box {
+  color: $color-dark-blue;
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-family: $f-sto-m;
+    color: $color-dark-blue;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    @include mediaMin(992) {
+      font-size: 2rem;
+      line-height: 46px;
+    }
+  }
+
+  .card-item {
+    display: block;
+    border-width: medium;
+    border-style: none;
+    border-color: currentcolor;
+    border-radius: 14px;
+    padding: 20px 22px;
+    text-decoration: none;
+    box-shadow: rgba(45, 52, 77, 0.04) 0px 1px 0px;
+    // min-height: 116px;
+    &--transparent {
+      background: transparent;
+    }
+    &--dark {
+      background: rgb(15, 17, 22);
+      .name,
+      .rating,
+      .reviews-info {
+        color: $white;
+      }
+      .card-item {
+        color: $white;
+      }
+      .fa-star {
+        color: rgb(239, 64, 53);
+      }
+      .rating-total {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &--light {
+      border-color: rgb(232, 220, 183);
+      background: #fbf6e8;
+      .name,
+      .rating {
+        color: $color-dark-blue;
+      }
+      .reviews-info,
+      .fa-long-arrow-alt-right {
+        color: #7a5a18;
+      }
+      .fa-star {
+        color: #c99b2d;
+      }
+      .rating-total {
+        color: rgba(45, 52, 77, 0.45);
+      }
+    }
+    .stars {
+      display: inline-flex;
+      gap: 3px;
+    }
+    .fa-star {
+      font-size: 0.875rem;
+    }
+
+    &:hover {
+      .arrow-long {
+        transform: translateX(4px);
+      }
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .name {
+        font-family: $f-sto-bold;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: -0.015em;
+        margin-bottom: 0;
+      }
+      .rating {
+        margin-left: auto;
+        font-family: $f-sto-bold;
+        font-size: 30px;
+        line-height: 1;
+
+        white-space: nowrap;
+        &-first {
+          margin-right: -7px;
+        }
+        &-total {
+          font-family: $f-sto-m;
+        }
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 10px;
+      .reviews-info {
+        font-family: $f-sto-m;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+  .card-logo {
+    max-width: 60px;
+  }
+
+  .slick-dots {
+    bottom: -26px;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  .btn-arrow {
+    padding: 15px 24px;
+    @include mediaMin(992) {
+      width: fit-content;
+    }
+    &:hover .arrow-long {
+      transform: translateX(4px);
+    }
+  }
+}
