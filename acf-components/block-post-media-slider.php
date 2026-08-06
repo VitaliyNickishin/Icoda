@@ -20,7 +20,7 @@
                 
             </div>
         </div>
-        <div class="col-12 col-right">
+        <div class="col-12 pr-0">
             <div class="wr-slider">
                 <div class="slider-media custom-slider">
                     <?php foreach ($media_slider['items'] as $media_slider_item) : ?>

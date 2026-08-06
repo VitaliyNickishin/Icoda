@@ -120,6 +120,10 @@
   }
   .card-logo {
     max-width: 60px;
+    flex-shrink: 0;
+  }
+  .slick-list {
+    overflow: initial;
   }
 
   .slick-dots {

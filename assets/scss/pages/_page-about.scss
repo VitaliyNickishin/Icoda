@@ -1,43 +1,9 @@
 .page-about {
-  .section-team,
-  .section-partners,
-  .section-media {
-    padding-top: 120px;
-    @include mediaMax(991) {
-      padding-top: 60px;
-    }
-  }
-
-  .section-team {
-    .under-title {
-      max-width: 730px;
-      margin-bottom: 60px;
-    }
-  }
-
-  .meet-up {
-    padding-top: 200px;
-    @include mediaMax(767) {
-      padding-top: 60px;
-    }
-  }
-
-  .form-contact {
-    padding-top: 50px;
-    padding-bottom: 120px;
-    @include mediaMax(767) {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-
-  .col-right {
-    @include mediaMax(767) {
-      padding-right: 0;
-    }
-  }
-  //redesign
   .section-testimonials {
+    padding-top: 0;
+    @include mediaMin(992) {
+      padding-top: 50px;
+    }
     .title {
       font-size: 1.5rem;
       line-height: 1.875rem;
@@ -54,6 +20,12 @@
       @include mediaMin(768) {
         top: -35px;
       }
+    }
+  }
+  .section-faq-service {
+    margin-top: 70px;
+    @include mediaMin(992) {
+      margin-top: 60px;
     }
   }
 }

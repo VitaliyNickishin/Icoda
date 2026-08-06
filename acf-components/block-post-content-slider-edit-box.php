@@ -22,7 +22,7 @@
                         </p>
                     <?php endif; ?>
                     <?php if (!empty($btn_link)) : ?>
-                        <a class="mt-4 btn d-flex align-items-center justify-content-center btn-outline-blue gap-2 btn-arrow" 
+                        <a class="d-lg-flex d-none mt-4 btn align-items-center justify-content-center btn-outline-blue gap-2 btn-arrow" 
                             href="<?php echo esc_url($btn_url); ?>" 
                             target="<?php echo esc_attr($btn_target); ?>"
                         >
@@ -32,7 +32,7 @@
                     <?php endif; ?>
                     
                 </div>
-                <div class="col-12 col-lg-6 offset-lg-1 mt-3 pt-3">
+                <div class="col-12 col-lg-6 offset-lg-1 mt-lg-3 pt-3">
                     <div class="slider-edit-box custom-slider">
                         <?php foreach ($block_content['slider'] as $slider): ?>
                             <?php
@@ -103,6 +103,17 @@
                             </li>
                         <?php endforeach; ?>
                     </div>
+                </div>
+                <div class="col-12">
+                    <?php if (!empty($btn_link)) : ?>
+                        <a class="d-lg-none mt-5 btn d-flex align-items-center justify-content-center btn-outline-blue gap-2 btn-arrow" 
+                            href="<?php echo esc_url($btn_url); ?>" 
+                            target="<?php echo esc_attr($btn_target); ?>"
+                        >
+                            <?php echo $btn_link['title']; ?>
+                            <i class="fas fa-long-arrow-alt-right arrow-long"></i>
+                        </a>
+                    <?php endif; ?>
                 </div>
                 
             

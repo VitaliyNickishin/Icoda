@@ -1212,7 +1212,6 @@ jQuery(document).ready(function ($) {
   inputOnFocus();
   initMegaMenu();
   scrollVerticalMenu();
-  initSliderListLeadership();
   initSliderLeaderships();
   initSliderAuthors();
   initSliderCaseNew();
@@ -1710,22 +1709,6 @@ const initSliderCaseNew = () => {
 //   }
 // });
 
-//leadership-slider mobile
-var initSliderListLeadership = function () {
-  $(".page-about .leadership-slider ").slick({
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          appendArrows: jQuery(".wr-control-leadership"),
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-};
 const initSliderLeaderships = () => {
   if ($(".leaderships-slider").length > 0) {
     $(".leaderships-slider").slick({
@@ -1739,18 +1722,11 @@ const initSliderLeaderships = () => {
       cssEase: "linear",
       infinite: true,
       responsive: [
-        // {
-        //   breakpoint: 991,
-        //   settings: {
-        //     slidesToShow: 3,
-        //     slidesToScroll: 1,
-        //   },
-        // },
         {
           breakpoint: 991,
           settings: {
             variableWidth: true,
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
           },
         },

@@ -3,19 +3,17 @@
 ?>
 <section class="section section-leadership">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="d-flex justify-content-between">
-                    <h2 class="h3 section-title mb-0">
-                        <?php echo $leadership['title']; ?>
-                    </h2>
-                    <div class="wr-control wr-control-leadership"></div>
-                </div>
-                <div class="descriptions mt-1 mb-lg-4">
-                    <?php echo $leadership['descriptions']; ?>
-                </div>
-            </div>
+        
+        <div class="d-flex justify-content-between">
+            <h2 class="h3 section-title mb-0">
+                <?php echo $leadership['title']; ?>
+            </h2>
+            <div class="wr-control wr-control-leadership"></div>
         </div>
+        <div class="descriptions mt-1 mb-lg-4">
+            <?php echo $leadership['descriptions']; ?>
+        </div>
+            
         <div class="list-leadership">
             <div class="leaderships-slider custom-slider">
                 <?php if(!empty($leadership['list_leadership'])) : ?>
