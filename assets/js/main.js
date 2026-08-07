@@ -2407,7 +2407,7 @@ const initSliderTestimonials = () => {
         {
           breakpoint: 550,
           settings: {
-            dots: true,
+            dots: false,
             arrows: true,
           },
         },
