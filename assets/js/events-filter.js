@@ -369,7 +369,7 @@ function render() {
     var item = e.target.closest(".card-event[data-index]");
     const index = Number(item.dataset.index);
     // if (item) openModal(evIndex(list[+item.getAttribute("data-index")]));
-    if (item) openModal(evIndex(list[index + 1]));
+    if (item) openModal(evIndex(list[index]));
   });
 }
 
