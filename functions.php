@@ -528,7 +528,7 @@ if( is_page_template( 'template-pages/template-ai-visibility.php' ) ) {
 wp_enqueue_script(
 'icoda-ai-visibility',
 $assets_uri . '/js/ai-visibility.js',
-array('jquery'), '', true
+array('jquery'), '2.0.0', true
 );
 }
 wp_enqueue_script(
@@ -566,6 +566,17 @@ true
 );
 }
 add_action('wp_enqueue_scripts', 'icoda_styles');
+function icoda_ai_visibility_inline_css() {
+if ( ! is_page_template( 'template-pages/template-ai-visibility.php' ) ) {
+return;
+}
+$css_path = get_stylesheet_directory() . '/assets/css/ai-visibility-2.0.css';
+if ( ! file_exists( $css_path ) ) {
+return;
+}
+echo '<style id="icoda-ai-visibility-inline">' . file_get_contents( $css_path ) . '</style>';
+}
+add_action('wp_head', 'icoda_ai_visibility_inline_css', 20);
 function icoda_loadmore_ajax_handler(){
 // prepare our arguments for the query
 $args = json_decode( stripslashes( $_POST['query'] ), true );
