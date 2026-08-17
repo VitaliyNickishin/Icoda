@@ -100,7 +100,8 @@
 
                                 <div class="icoda-clutch-widget">
                                     <a href="https://clutch.co/profile/icoda-digital-agency" target="_blank">
-                                    <iframe width="135" height="135" src="https://shareables.clutch.co/share/badges/695144/42033?utm_source=clutch_top_company_badge&utm_medium=image_embed" title="Top Clutch Crypto Marketing 2025"></iframe>
+                                    <!-- <iframe width="135" height="135" src="https://shareables.clutch.co/share/badges/695144/42033?utm_source=clutch_top_company_badge&utm_medium=image_embed" title="Top Clutch Crypto Marketing 2025"></iframe> -->
+                                        <iframe width="135" height="135" src="https://clutch.co/share/badges/695144/131108?utm_source=clutch_award_badge&utm_medium=image_embed" title="Global Award Spring 2025"></iframe>
                                     </a>
                                 </div>
                             </div>
@@ -358,6 +359,7 @@
 <?php wp_footer(); ?>
 
 <?php get_template_part('template-parts/inline-css'); ?>
+<!-- <script src="https://widget.clutch.co/static/js/widget.js"></script> -->
 
 <script>
   function aload(t){"use strict";var e="data-aload";return t=t||window.document.querySelectorAll("["+e+"]"),void 0===t.length&&(t=[t]),[].forEach.call(t,function(t){t["LINK"!==t.tagName?"src":"href"]=t.getAttribute(e),t.removeAttribute(e)}),t}
