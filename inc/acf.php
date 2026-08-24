@@ -1108,6 +1108,44 @@ add_action('acf/init', function () {
             'align' => array('full', 'wide', 'center')
         ),
     ));
+    acf_register_block(array(
+        'name'               => 'post-network-proof',
+        'title'              => __('Post Network Proof'),
+        'description'        => __(''),
+        'render_callback'  => 'icoda_acf_block_render_callback',
+        'category'             => 'icoda-posts',
+        'keywords'             => array('network', 'stats', 'outlets', 'icoda'),
+        'align'              => 'full',
+        'supports'           => array(
+            'align'  => array('full', 'wide', 'center')
+        ),
+    ));
+
+    acf_register_block(array(
+        'name'               => 'post-full-cycle',
+        'title'              => __('Post Full Cycle'),
+        'description'        => __(''),
+        'render_callback'  => 'icoda_acf_block_render_callback',
+        'category'             => 'icoda-posts',
+        'keywords'             => array('steps', 'process', 'cycle', 'icoda'),
+        'align'              => 'full',
+        'supports'           => array(
+            'align'  => array('full', 'wide', 'center')
+        ),
+    ));
+
+    acf_register_block(array(
+        'name'               => 'post-packages',
+        'title'              => __('Post Packages'),
+        'description'        => __(''),
+        'render_callback'  => 'icoda_acf_block_render_callback',
+        'category'             => 'icoda-posts',
+        'keywords'             => array('packages', 'pricing', 'plans', 'icoda'),
+        'align'              => 'full',
+        'supports'           => array(
+            'align'  => array('full', 'wide', 'center')
+        ),
+    ));
 });
 
 function icoda_acf_block_render_callback($block, $content = '', $is_preview = false, $post_id = 0, $wp_block = false, $context = false)

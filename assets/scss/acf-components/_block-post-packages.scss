@@ -1,0 +1,196 @@
+// Block: Post Packages
+.section-packages {
+    .section-title {
+        margin: 0;
+        font-family: Onest-Bold, sans-serif;
+        font-size: 1.5rem;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+        color: #2d344d;
+        text-wrap: balance;
+    }
+
+    .subtitle {
+        margin: 12px 0 0;
+        max-width: 720px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #54658d;
+        text-wrap: pretty;
+    }
+
+    // Bootstrap's py-* utilities are !important, so the column spacing is owned
+    // here. Below lg the cards stack and the "Most popular" badge overhangs the
+    // card top by 13px - this padding keeps it clear of the card above.
+    .pk-col {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .pk-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 28px 24px;
+        border: 1px solid #d5dbf1;
+        border-radius: 16px;
+        background: #fff;
+
+        .btn {
+            min-width: 0;
+            width: 100%;
+            margin-top: 24px;
+            padding: 14px 20px;
+            font-size: 15px;
+        }
+    }
+
+    .pk-card-featured {
+        border: 1.5px solid #3c61e2;
+        box-shadow: 0 4px 20px 0 rgba(8, 34, 101, 0.15);
+    }
+
+    .pk-badge {
+        position: absolute;
+        top: -13px;
+        left: 24px;
+        padding: 5px 12px;
+        border-radius: 100px;
+        background: #3c61e2;
+        font-family: Onest-SemiBold, sans-serif;
+        font-size: 12px;
+        line-height: 1.4;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .pk-name {
+        font-family: Onest-Bold, sans-serif;
+        font-size: 1.3125rem;
+        line-height: 130%;
+        color: #18232f;
+    }
+
+    .pk-tagline {
+        margin-top: 8px;
+        font-size: 15px;
+        line-height: 22px;
+        color: #54658d;
+        text-wrap: pretty;
+    }
+
+    .pk-list {
+        flex: 1 1 auto;
+        margin: 22px 0 0;
+        padding: 22px 0 0;
+        border-top: 1px solid #e7edff;
+        list-style: none;
+
+        // Two flex children only: the tick pseudo-element and the span. Without
+        // the span an inline link in the text becomes a third flex item and
+        // picks up the gap a second time.
+        li {
+            display: flex;
+            gap: 10px;
+            font-size: 15px;
+            line-height: 22px;
+            color: #2d344d;
+            text-wrap: pretty;
+
+            + li {
+                margin-top: 12px;
+            }
+
+            > span {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+
+            &:before {
+                content: "";
+                flex: 0 0 18px;
+                width: 18px;
+                height: 18px;
+                margin-top: 2px;
+                background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath fill='none' stroke='%2307bd47' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M4 9.4l3.3 3.3L14 5.8'/%3E%3C/svg%3E") no-repeat 50% / 18px 18px;
+            }
+        }
+    }
+
+    .pk-more {
+        margin-top: 20px;
+        padding: 24px;
+        border: 1px solid #d5dbf1;
+        border-radius: 16px;
+        background: #f8f9ff;
+
+        .btn {
+            display: block;
+            width: 100%;
+            min-width: 0;
+            margin-top: 16px;
+            padding: 14px 28px;
+            font-size: 15px;
+        }
+    }
+
+    .pk-more-title {
+        font-family: Onest-SemiBold, sans-serif;
+        font-size: 1.1875rem;
+        line-height: 130%;
+        color: #18232f;
+    }
+
+    .pk-more-text {
+        margin-top: 6px;
+        font-size: 15px;
+        line-height: 24px;
+        color: #54658d;
+        text-wrap: pretty;
+    }
+
+    @media screen and (min-width: 992px) {
+        .subtitle {
+            font-size: 1rem;
+            line-height: 26px;
+        }
+
+        .pk-col {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .pk-tagline {
+            min-height: 44px;
+        }
+
+        .pk-more {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 24px;
+            padding: 28px 32px;
+
+            .btn {
+                display: inline-block;
+                flex: 0 0 auto;
+                width: auto;
+                margin-top: 0;
+                white-space: nowrap;
+            }
+        }
+
+        .pk-more-text {
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+}
