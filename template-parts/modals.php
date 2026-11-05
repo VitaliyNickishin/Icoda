@@ -1,12 +1,22 @@
-<div data-conference data-conference-id="022" class="bg-transparent modal-default modal-conference p-lg-0" data-show="no" <?php /* ?>data-for-lang="ru" data-current-lang="<?php echo ICL_LANGUAGE_CODE; ?>"<?php */ ?>>
+<style>
+    @media screen and (max-width: 600px) {
+        .hide-from-six-hundreed {
+            display: none;
+        }
+        .img-top img {
+            max-height: 430px;
+        }
+    }
+</style>
+<div data-conference data-conference-id="028" class="bg-transparent modal-default modal-conference p-lg-0" data-show="yes" <?php /* ?>data-for-lang="ru" data-current-lang="<?php echo ICL_LANGUAGE_CODE; ?>"<?php */ ?>>
     <a href="#" class="modal-close">
         <i class="icon-ico-close"></i>
     </a>
     <div class="col-12 px-0">
         <div class="img-top">
             <picture>
-              <source srcset="/wp-content/uploads/2025/01/Icegaming.png" media="(max-width: 600px)" />
-              <img src="/wp-content/uploads/2025/01/Icegaming.png" alt="Sigma Europe" width="700" height="350">
+              <source srcset="/wp-content/uploads/2026/11/photo_2026-11-05_19-03-34.jpg" media="(max-width: 600px)" />
+              <img src="/wp-content/uploads/2026/11/photo_2026-11-05_19-03-34.jpg" alt="BlockchainLife" width="700" height="350">
             </picture>
         </div>
     </div>
@@ -18,18 +28,19 @@
                     <?php
                     // wp-content/uploads/2023/09/javidan.png" alt="Javidan Akhmadzada">
                     // wp-content/uploads/2023/05/serg-conf-2.png" alt="Sergey"  Sergey Nelyubin  CFO
-                    // /wp-content/uploads/2023/06/Vlad-team.png
+                    // /wp-content/uploads/2023/06/Vlad-team.png Vlad Pivnev CEO
                     // /wp-content/uploads/2023/06/luis.png
+                    // /wp-content/uploads/2026/11/Victor.jpg Victor Smith CBDO
                     ?>
-                    <img src="/wp-content/uploads/2023/06/Vlad-team.png" alt="Vlad Pivnev" width="70" height="70">
+                    <img src="/wp-content/uploads/2026/11/Victor.jpg" alt="Victor" width="70" height="70">
                 </div>
                 <div class="info text-white text-center mt-2">
-                    <p class="name"><strong><?php _e('Vlad Pivnev', 'icoda'); ?></strong></p>
-                    <p class="position">CEO</p>
+                    <p class="name"><strong><?php _e('Victor Smith', 'icoda'); ?></strong></p>
+                    <p class="position">CBDO</p>
                 </div>
             </div>
-            <div class="align-self-center">
-                <p class="h3 text-white title my-3 my-lg-0"><?php _e('Meet Us at the <br/>ICE Barcelona', 'icoda'); ?></p>
+            <div class="align-self-center hide-from-six-hundreed">
+                <p class="h3 text-white title my-3 my-lg-0"><?php _e('BlockchainLife 2026<br/>Dubai', 'icoda'); ?></p>
             </div>
         </div>
         <a href="#" class="btn btn-blue bg-white text-dark modal-conference-btn-cookie open-modal" data-modal="#callback"><?php _e('Let\'s meet', 'icoda'); ?></a>

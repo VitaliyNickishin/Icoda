@@ -946,6 +946,20 @@ jQuery(document).ready(function ($) {
                   if (data == 1) {
                     window.dataLayer = window.dataLayer || [];
                     dataLayer.push({ event: "form-successfuly-sent" });
+                    // заявка (модалка #callback или форма на странице) ->
+                    // следующим экраном Calendly в модалке
+                    var calendlyLead = !$(form).is(
+                      "#calculator-form, .block-banner-email__form",
+                    )
+                      ? {
+                          name: $(form).find('input[name="name"]').val(),
+                          email: $(form).find('input[name="email"]').val(),
+                          lang: $(form).find('input[name="lang-source"]').val(),
+                          source: $(form).closest("#callback").length
+                            ? "callback_modal"
+                            : "page_form",
+                        }
+                      : null;
                     $(form)
                       .find(".req")
                       .each(function () {
@@ -963,14 +977,25 @@ jQuery(document).ready(function ($) {
                     }
 
                     setTimeout(function () {
-                      $(".modal-box")
-                        .animate({ opacity: 0, top: "45%" }, 200)
-                        .css("display", "none");
-                      $("body")
-                        .find(".success")
-                        .css("opacity", "1")
-                        .fadeIn(500);
-                      window.congratsConfetti();
+                      if (
+                        !(
+                          calendlyLead &&
+                          window.icodaCalendlyStep &&
+                          window.icodaCalendlyStep(
+                            calendlyLead,
+                            calendlyLead.source,
+                          )
+                        )
+                      ) {
+                        $(".modal-box")
+                          .animate({ opacity: 0, top: "45%" }, 200)
+                          .css("display", "none");
+                        $("body")
+                          .find(".success")
+                          .css("opacity", "1")
+                          .fadeIn(500);
+                        window.congratsConfetti();
+                      }
                       $(form)
                         .find('button[type="submit"]')
                         .prop("disabled", false);
@@ -2304,8 +2329,8 @@ const initSliderServicesGrid = () => {
 };
 
 const initSliderPathList = () => {
-  if (jQuery(".slider-path-list").length > 0) {
-    $(".slider-path-list").slick({
+  $(".slider-path-list").each(function () {
+    $(this).slick({
       slidesToShow: 4,
       slidesToScroll: 1,
       swipeToSlide: $("body").hasClass("rtl") ? false : true,
@@ -2313,7 +2338,7 @@ const initSliderPathList = () => {
       variableWidth: true,
       rtl: $("body").hasClass("rtl") ? true : false,
       adaptiveHeight: true,
-      appendArrows: $(".arrow-control-path"),
+      appendArrows: $(this).closest("section").find(".arrow-control-path"),
       speed: 500,
       cssEase: "linear",
       responsive: [
@@ -2326,12 +2351,12 @@ const initSliderPathList = () => {
         },
       ],
     });
-  }
+  });
 };
 //block-post-two-sliders-in-wrap (first)
 const initSliderPathListFour = () => {
-  if (jQuery(".slider-path-list-four").length > 0) {
-    $(".slider-path-list-four").slick({
+  $(".slider-path-list-four").each(function () {
+    $(this).slick({
       slidesToShow: 3,
       slidesToScroll: 1,
       swipeToSlide: $("body").hasClass("rtl") ? false : true,
@@ -2339,12 +2364,12 @@ const initSliderPathListFour = () => {
       variableWidth: true,
       rtl: $("body").hasClass("rtl") ? true : false,
       adaptiveHeight: true,
-      appendArrows: $(".arrow-control-path"),
+      appendArrows: $(this).closest("section").find(".arrow-control-path"),
       speed: 500,
       cssEase: "linear",
       responsive: [
         {
-          breakpoint: 576,
+          breakpoint: 1441,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -2352,7 +2377,7 @@ const initSliderPathListFour = () => {
         },
       ],
     });
-  }
+  });
 };
 //block-post-two-sliders-in-wrap (second)
 const initSliderPathListSecond = () => {
@@ -2810,3 +2835,215 @@ function initRotatingWords() {
     }, 1820);
   });
 }
+
+/* Calendly после заявки: модалка #callback, формы на странице, калькулятор (11.2026) */
+(function ($) {
+  var CALENDLY_URL = "https://calendly.com/d/cqrf-wpr-bt6/talk-to-our-expert";
+  var WIDGET_JS = "https://assets.calendly.com/assets/external/widget.js";
+  var WIDGET_CSS = "https://assets.calendly.com/assets/external/widget.css";
+
+  // [заголовок, текст, ссылка «пропустить», кнопка-запасной вариант, текст для калькулятора]
+  var texts = {
+    en: ["Thank you! Request received", "We'll reply within 24 hours. To talk sooner, pick a time for a 30-minute call with our team.", "No thanks, I'll wait for your reply", "Open the calendar", "To talk sooner, pick a time for a 30-minute call with our team."],
+    ru: ["Спасибо! Заявка получена", "Мы ответим в течение 24 часов. Чтобы поговорить раньше, выберите время для 30-минутного звонка с нашей командой.", "Спасибо, дождусь ответа", "Открыть календарь", "Чтобы поговорить раньше, выберите время для 30-минутного звонка с нашей командой."],
+    es: ["¡Gracias! Solicitud recibida", "Le responderemos en 24 horas. Para hablar antes, elija un horario para una llamada de 30 minutos con nuestro equipo.", "No, gracias, esperaré su respuesta", "Abrir el calendario", "Para hablar antes, elija un horario para una llamada de 30 minutos con nuestro equipo."],
+    de: ["Vielen Dank! Anfrage erhalten", "Wir antworten innerhalb von 24 Stunden. Wenn Sie früher sprechen möchten, wählen Sie einen Termin für ein 30-minütiges Gespräch mit unserem Team.", "Nein danke, ich warte auf Ihre Antwort", "Kalender öffnen", "Wenn Sie früher sprechen möchten, wählen Sie einen Termin für ein 30-minütiges Gespräch mit unserem Team."],
+    fr: ["Merci ! Demande reçue", "Nous vous répondrons sous 24 heures. Pour échanger plus tôt, choisissez un créneau pour un appel de 30 minutes avec notre équipe.", "Non merci, j'attends votre réponse", "Ouvrir le calendrier", "Pour échanger plus tôt, choisissez un créneau pour un appel de 30 minutes avec notre équipe."],
+    it: ["Grazie! Richiesta ricevuta", "Le risponderemo entro 24 ore. Per parlarne prima, scelga un orario per una chiamata di 30 minuti con il nostro team.", "No grazie, attendo la vostra risposta", "Apri il calendario", "Per parlarne prima, scelga un orario per una chiamata di 30 minuti con il nostro team."],
+    pt: ["Obrigado! Pedido recebido", "Responderemos no prazo de 24 horas. Para falar mais cedo, escolha um horário para uma chamada de 30 minutos com a nossa equipa.", "Não, obrigado, aguardo a vossa resposta", "Abrir o calendário", "Para falar mais cedo, escolha um horário para uma chamada de 30 minutos com a nossa equipa."],
+    ar: ["شكرًا لك! تم استلام طلبك", "سنرد عليك خلال 24 ساعة. للتحدث في وقت أقرب، اختر موعدًا لمكالمة مدتها 30 دقيقة مع فريقنا.", "لا شكرًا، سأنتظر ردكم", "افتح التقويم", "للتحدث في وقت أقرب، اختر موعدًا لمكالمة مدتها 30 دقيقة مع فريقنا."],
+    ja: ["ありがとうございます。お問い合わせを受け付けました", "24時間以内にご連絡します。お急ぎの場合は、ご都合のよい時間を選んで30分の通話をご予約ください。", "メールでの返信を待ちます", "カレンダーを開く", "お急ぎの場合は、ご都合のよい時間を選んで30分の通話をご予約ください。"],
+    ko: ["감사합니다! 요청이 접수되었습니다", "24시간 이내에 답변드리겠습니다. 더 빨리 이야기하시려면 원하는 시간을 선택해 30분 통화를 예약하세요.", "괜찮습니다, 답변을 기다리겠습니다", "캘린더 열기", "더 빨리 이야기하시려면 원하는 시간을 선택해 30분 통화를 예약하세요."],
+    zh: ["谢谢！已收到您的请求", "我们将在 24 小时内回复。如想更快沟通，请选择时间，与我们的团队进行 30 分钟通话。", "不用了，我等你们的回复", "打开日历", "如想更快沟通，请选择时间，与我们的团队进行 30 分钟通话。"],
+  };
+
+  // источник активного календаря — уходит параметром во все события
+  var activeSource = null;
+
+  var pickTexts = function (lang) {
+    lang = (lang || document.documentElement.lang || "en").toLowerCase();
+    return texts[lang] || texts[lang.split(/[-_]/)[0]] || texts.en;
+  };
+
+  var push = function (event) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: event, calendly_source: activeSource });
+  };
+
+  var cookieVal = function (name) {
+    var v = getCookie(name);
+    try {
+      return v ? decodeURIComponent(v) : undefined;
+    } catch (e) {
+      return v;
+    }
+  };
+
+  // widget.js подключён не на всех шаблонах (нет на /blog/) — догружаем
+  var loadCalendly = function (done, fail) {
+    if (window.Calendly && window.Calendly.initInlineWidget) return done();
+    if (!$('link[href="' + WIDGET_CSS + '"]').length) {
+      $("head").append('<link rel="stylesheet" href="' + WIDGET_CSS + '">');
+    }
+    if (!document.querySelector('script[src="' + WIDGET_JS + '"]')) {
+      var script = document.createElement("script");
+      script.src = WIDGET_JS;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    var waited = 0;
+    var timer = setInterval(function () {
+      waited += 100;
+      if (window.Calendly && window.Calendly.initInlineWidget) {
+        clearInterval(timer);
+        done();
+      } else if (waited >= 6000) {
+        clearInterval(timer);
+        fail();
+      }
+    }, 100);
+  };
+
+  // showDetails: на широком блоке (калькулятор на десктопе) Calendly с деталями события
+  // рисует две колонки вместо узкой карточки
+  var mountWidget = function (widget, lead, t, showDetails) {
+    loadCalendly(
+      function () {
+        // имя, email и UTM — параметрами URL: опции prefill/utm
+        // текущий widget.js теряет (пустые utm превращаются в "undefined")
+        var params = {
+          hide_event_type_details: showDetails ? 0 : 1,
+          hide_gdpr_banner: 1,
+          primary_color: "3c61e2",
+          name: lead.name,
+          email: lead.email,
+        };
+        ["source", "medium", "campaign", "content", "term"].forEach(function (k) {
+          params["utm_" + k] = cookieVal("utm-utm_" + k);
+        });
+        var query = Object.keys(params)
+          .filter(function (k) {
+            return params[k];
+          })
+          .map(function (k) {
+            return k + "=" + encodeURIComponent(params[k]);
+          })
+          .join("&");
+        $(widget).empty();
+        window.Calendly.initInlineWidget({
+          url: CALENDLY_URL + "?" + query,
+          parentElement: widget,
+        });
+      },
+      function () {
+        // виджет не загрузился (блокировщик и т. п.) — ссылка на календарь
+        $(widget)
+          .addClass("is-fallback")
+          .html('<a class="btn btn-blue" target="_blank" rel="noopener"></a>')
+          .find("a")
+          .attr("href", CALENDLY_URL)
+          .text(t[3]);
+      },
+    );
+  };
+
+  var reset = function () {
+    var $box = $("#callback");
+    $box.removeClass("is-calendly-step").find(".calendly-step").remove();
+    $box.children(".form-default-header, form").show();
+  };
+
+  // экран с календарём в модалке #callback; если модалка закрыта
+  // (заявка из формы на странице) — открывает её
+  window.icodaCalendlyStep = function (lead, source) {
+    var $box = $("#callback");
+    if (!$box.length) return false;
+    var t = pickTexts(lead.lang);
+
+    reset();
+    var $step = $(
+      '<div class="calendly-step">' +
+        '<div class="calendly-step__head">' +
+        '<div class="wr-ico-check"><i class="icon-ico-check"></i></div>' +
+        '<p class="ttl"></p><p class="calendly-step__text"></p>' +
+        "</div>" +
+        '<div class="calendly-step__widget"><div class="calendly-step__loader"></div></div>' +
+        '<a href="#" class="calendly-step__skip"></a>' +
+        "</div>",
+    );
+    $step.find(".ttl").text(t[0]);
+    $step.find(".calendly-step__text").text(t[1]);
+    $step.find(".calendly-step__skip").text(t[2]);
+    $box.children(".form-default-header, form").hide();
+    $box.addClass("is-calendly-step").append($step);
+
+    if (!$box.is(":visible")) {
+      $("body").css("overflow", "hidden");
+      if (
+        !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent,
+        )
+      ) {
+        $("body").addClass("modal-open");
+      }
+      $("#overlay").fadeIn(400, function () {
+        $box
+          .css({ display: "block", transform: "translate(-50%, -50%)" })
+          .animate({ opacity: 1, top: "50%" }, 200);
+      });
+    }
+
+    activeSource = source || "callback_modal";
+    push("calendly_step_shown");
+    mountWidget($step.find(".calendly-step__widget")[0], lead, t);
+    return true;
+  };
+
+  // календарь внутри блока на странице (финальный шаг калькулятора)
+  window.icodaCalendlyInline = function (container, lead, source) {
+    var $container = $(container);
+    if (!$container.length) return false;
+    var t = pickTexts(lead.lang);
+
+    $container.find(".calendly-step").remove();
+    var $step = $(
+      '<div class="calendly-step calendly-step--inline">' +
+        '<p class="calendly-step__text"></p>' +
+        '<div class="calendly-step__widget"><div class="calendly-step__loader"></div></div>' +
+        "</div>",
+    );
+    $step.find(".calendly-step__text").text(t[4]);
+    $container.append($step);
+
+    activeSource = source || "inline";
+    push("calendly_step_shown");
+    mountWidget(
+      $step.find(".calendly-step__widget")[0],
+      lead,
+      t,
+      window.matchMedia("(min-width: 992px)").matches,
+    );
+    return true;
+  };
+
+  $(document).on("click", ".calendly-step__skip", function (e) {
+    e.preventDefault();
+    $("#callback .modal-close").trigger("click");
+  });
+
+  // после закрытия модалки вернуть форму
+  $(document).on("click", "#callback .modal-close, #overlay", function () {
+    if ($("#callback").hasClass("is-calendly-step")) setTimeout(reset, 400);
+  });
+  $(document).on("click", '.open-modal[data-modal="#callback"]', reset);
+
+  window.addEventListener("message", function (e) {
+    if (e.origin !== "https://calendly.com" || !e.data || !e.data.event) return;
+    if (!activeSource || !$(".calendly-step").length) return;
+    if (e.data.event === "calendly.date_and_time_selected") {
+      push("calendly_time_selected");
+    } else if (e.data.event === "calendly.event_scheduled") {
+      push("calendly_event_scheduled");
+    }
+  });
+})(jQuery);
