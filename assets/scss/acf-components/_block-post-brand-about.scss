@@ -1,0 +1,51 @@
+.block-post-brand-about {
+  padding: 2.5rem 0;
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .tag {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: $color-blue;
+    margin-bottom: 1rem;
+  }
+  .lede {
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+    line-height: 1.5;
+    color: $main-color-text;
+  }
+  .badges {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1.4rem;
+  }
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #fff;
+    border: 1px solid $border-color;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $color-dark-blue;
+  }
+  .badge img {
+    height: 20px;
+    width: auto;
+  }
+  @media (max-width: 900px) {
+    .about {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+}

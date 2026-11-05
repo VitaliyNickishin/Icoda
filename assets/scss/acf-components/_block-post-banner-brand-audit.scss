@@ -1,0 +1,39 @@
+.block-post-banner-brand-audit {
+  padding: 2.5rem 0;
+  .closing {
+    background: linear-gradient(135deg, #3c61e2, #7c5ce6);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .closing .section-title {
+    color: #fff;
+    max-width: 40rem;
+    margin: 0 auto 1rem;
+  }
+  .closing p {
+    color: #dfe6ff;
+    max-width: 34rem;
+    margin: 0 auto 1.8rem;
+  }
+  .closing .btn {
+    background: #fff;
+    color: $color-blue;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1.9rem;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    min-width: 148px;
+    transition: background 0.2s;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background: $color-light-gray;
+    }
+  }
+}

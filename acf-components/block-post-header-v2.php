@@ -1,11 +1,14 @@
     <?php
     $background_image_1 = get_field('background_image_1');
     $background_image_2 = get_field('background_image_2');
+    $hero_image = get_field('hero_image');
     $items = get_field('items');
     $ratings = get_field('ratings');
     $has_gradient = get_field('has_gradient');
     $mobile_gradient = get_field('mobile_gradient');
     $desktop_gradient = get_field('desktop_gradient');
+    $post_header_v2_title = get_field('post_header_v2_title');
+    $post_header_v2_subtitle = get_field('post_header_v2_subtitle');
     ?>
 
     <section class="section section-hero-new section-hero-new-service">
@@ -15,43 +18,54 @@
                     <div class="col-sm-12 col-lg-7 pr-lg-0">
                         <h1 class="h1 mb-3 mb-lg-4 title">
                             <span class="title-gradient">
-                                <?php the_field('post_header_v2_title'); ?>
+                                <?php echo $post_header_v2_title; ?>
                             </span>
 
                         </h1>
                         <p class="subtitle">
-                            <?php the_field('post_header_v2_subtitle'); ?>
+                            <?php echo $post_header_v2_subtitle; ?>
                         </p>
                         <div class="mt-4 pt-2">
-                            <?php get_template_part('template-parts/_partials/btn-hero'); ?>
+                            <?php get_template_part('template-parts/_partials/btn-hero', '', ['button_1_text' => get_field('button_1_text'), 'button_1_link' => get_field('button_1_link'), 'button_2_text' => get_field('button_2_text')]); ?>
                         </div>
 
                     </div>
 
                     <div class="col-12 col-lg-5">
-                        <div class="bg-wrap position-relative d-flex flex-column align-items-center mt-5 pt-4 mt-lg-0 pt-lg-0">
-                            <?php if (!empty($background_image_1)) : ?>
+
+                        <?php if (!empty($hero_image)) : ?>
+                            <div class="section-hero-new__image">
                                 <picture>
-                                    <img class="bg-image-1" src="<?php echo $background_image_1['url']; ?>" alt="<?php echo $background_image_1['alt']; ?>" />
+                                    <img class="hero-image" src="<?php echo $hero_image['url']; ?>" alt="hero image" />
                                 </picture>
-                            <?php endif; ?>
+                            </div>
+                            
+                        <?php endif; ?>
 
-                            <?php if (!empty($items)) : ?>
-                                <?php foreach ($items as $item_data) : ?>
-                                    <div class="serv-box">
-                                        <span class="number"><?php echo $item_data['value']; ?></span>
-                                        <p><?php echo $item_data['text']; ?></p>
-                                    </div>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
+                        <?php if (!empty($background_image_1) || !empty($background_image_2) || !empty($items)) : ?>
+                            <div class="bg-wrap position-relative d-flex flex-column align-items-center mt-5 pt-4 mt-lg-0 pt-lg-0">
+                                <?php if (!empty($background_image_1)) : ?>
+                                    <picture>
+                                        <img class="bg-image-1" src="<?php echo $background_image_1['url']; ?>" alt="<?php echo $background_image_1['alt']; ?>" />
+                                    </picture>
+                                <?php endif; ?>
 
-                            <?php if (!empty($background_image_2)) : ?>
-                                <picture>
-                                    <img class="bg-image-2" src="<?php echo $background_image_2['url']; ?>" alt="<?php echo $background_image_2['alt']; ?>" />
-                                </picture>
-                            <?php endif; ?>
+                                <?php if (!empty($items)) : ?>
+                                    <?php foreach ($items as $item_data) : ?>
+                                        <div class="serv-box">
+                                            <span class="number"><?php echo $item_data['value']; ?></span>
+                                            <p><?php echo $item_data['text']; ?></p>
+                                        </div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
 
-                        </div>
+                                <?php if (!empty($background_image_2)) : ?>
+                                    <picture>
+                                        <img class="bg-image-2" src="<?php echo $background_image_2['url']; ?>" alt="<?php echo $background_image_2['alt']; ?>" />
+                                    </picture>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
                     </div>
 
                     <?php if (!empty($ratings)) : ?>

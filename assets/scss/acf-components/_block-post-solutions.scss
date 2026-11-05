@@ -1,0 +1,177 @@
+.block-post-solutions {
+  padding: 2.5rem 0;
+  position: relative;
+  .tag {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: $color-blue;
+    margin-bottom: 1rem;
+  }
+  .pv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2.5rem;
+    border: 1px solid $border-color;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: $white;
+    box-shadow: 0 24px 50px -30px rgba(45, 52, 77, 0.25);
+    @include mediaMax(760) {
+      grid-template-columns: 1fr;
+    }
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.35rem 1.6rem;
+      font-weight: 500;
+      font-size: 1.05rem;
+      border-top: 1px solid $color-light-gray;
+      position: relative;
+      transition: background 0.2s;
+      &:nth-child(3) {
+        @include mediaMax(760) {
+          border-top: 0;
+        }
+      }
+    }
+    &-p {
+      background: #fdf4f3;
+      color: $color-dark-blue;
+      padding-left: 2.2rem !important;
+      @include mediaMax(760) {
+        border-top: 1px solid $border-color;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 7px;
+        background: #e5484d;
+        opacity: var(--sev, 1);
+      }
+      svg circle {
+        fill: #e5484d;
+      }
+    }
+    &-n {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #e5484d;
+      opacity: 0.9;
+      min-width: 1.6rem;
+    }
+    &-s {
+      background: #eef2ff;
+      color: $color-blue;
+      border-left: 1px solid $border-color;
+      font-weight: 600;
+      @include mediaMax(760) {
+        border-left: 0;
+        border-top: 0;
+        padding-left: 2.2rem !important;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: -14px;
+        top: 50%;
+        width: 28px;
+        height: 28px;
+        margin-top: -14px;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid $border-color;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233c61e2' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M6 12h12M13 7l5 5-5 5'/></svg>");
+        background-size: 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 2;
+        @include mediaMax(760) {
+          left: 1.2rem;
+          top: -14px;
+          margin-top: 0;
+        }
+      }
+      svg circle {
+        fill: $color-blue;
+      }
+    }
+    svg {
+      width: 26px;
+      height: 26px;
+      flex: none;
+    }
+    &-h {
+      border-top: 0 !important;
+      padding: 1.4rem 1.6rem !important;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      @include mediaMax(760) {
+        display: none;
+      }
+      small {
+        display: block;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: $color-dark-gray;
+        margin-top: 0.15rem;
+      }
+    }
+    &-hp {
+      background: #f9e6e5;
+      color: $color-dark-blue;
+      padding-left: 2.2rem !important;
+      &::before {
+        display: none;
+      }
+    }
+    &-hs {
+      background: #dfe6ff;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.2rem !important;
+      &::before {
+        display: none;
+      }
+      .logo-svg {
+        height: 34px;
+        width: auto;
+        color: $color-dark-blue;
+      }
+      small {
+        color: $color-blue;
+      }
+    }
+    &-hp svg {
+      width: 34px;
+      height: 34px;
+    }
+    &-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.6rem;
+      p {
+        margin: 0;
+        color: $main-color-text;
+      }
+    }
+  }
+
+  .pv-p:hover,
+  .pv-p:hover + .pv-s {
+    background: $white;
+  }
+}

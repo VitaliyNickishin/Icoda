@@ -84,7 +84,7 @@
     }
     &-has-children {
       > .sub-menu {
-        gap: 32px;
+        gap: 30px;
         justify-content: center;
         @include mediaMax(991) {
           gap: 24px;
@@ -113,28 +113,25 @@
         }
       }
     }
-    &.new > a::after {
-      content: "New";
-      display: inline-block;
-      margin-left: 8px;
+    &.new > a::after,
+    &.upgraded > a::after {
+      display: inline-flex;
+      align-items: center;
       padding: 4px 6px;
       font-size: 12px;
-      background: $color-blue;
-      color: $white;
       border-radius: 4px;
       line-height: 110%;
+      color: $white;
+      align-self: flex-start;
+    }
+    &.new > a::after {
+      content: "New";
+      background: $color-blue;
     }
     &.upgraded > a::after {
       content: "Upgraded";
-      display: inline-block;
-      margin-left: 8px;
-      padding: 4px 6px;
-      font-size: 12px;
       text-transform: uppercase;
       background: $orange;
-      color: $white;
-      border-radius: 4px;
-      line-height: 110%;
     }
   }
   .sub-menu {
@@ -162,6 +159,11 @@
       }
     }
     .menu-item {
+      a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
       @include mediaMax(991) {
         font-size: 15px;
       }
@@ -172,7 +174,7 @@
       }
     }
     ul {
-      padding: 0 32px;
+      padding: 0 0 0 32px;
     }
     .has-border-left {
       @include mediaMin(992) {

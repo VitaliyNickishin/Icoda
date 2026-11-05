@@ -1238,6 +1238,7 @@ jQuery(document).ready(function ($) {
   initIntlTel();
   showMobileSubmenu();
   initSliderBoxContent();
+  initRotatingWords();
   // initSliderTwoLogosFirst();
   // initSliderTwoLogosSecond();
 });
@@ -2014,6 +2015,7 @@ const initSliderHeroServices = () => {
       slidesToShow: 2,
       slidesToScroll: 1,
       swipeToSlide: true,
+      arrows: false,
       infinite: true,
       variableWidth: true,
       cssEase: "linear",
@@ -2682,3 +2684,129 @@ document.addEventListener("DOMContentLoaded", function () {
     // localStorage.setItem("pushBannerClosed", "true");
   });
 });
+
+function initRotatingWords() {
+  const words = [
+    "clone",
+    "fake",
+    "rogue affiliate",
+    "typosquat",
+    "phishing page",
+    "parasite page",
+    "mirror",
+  ];
+
+  const rw = document.getElementById("rw");
+
+  if (!rw) return;
+
+  const rot = rw.parentNode;
+  const h1 = rot.closest("h1");
+
+  if (!rot || !h1) return;
+
+  const probe = document.createElement("span");
+
+  probe.style.cssText = `
+    position: absolute;
+    visibility: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+  `;
+
+  rot.appendChild(probe);
+
+  const widths = {};
+
+  function measure() {
+    // Measure every word
+    words.forEach(function (word) {
+      probe.textContent = word;
+      widths[word] = probe.getBoundingClientRect().width;
+    });
+
+    /*
+     * Find the tallest possible layout across all words.
+     * This prevents the content below the heading from jumping.
+     */
+    const currentWord = rw.textContent.trim();
+
+    let maxHeight = 0;
+
+    h1.style.minHeight = "";
+    rot.style.transition = "none";
+
+    words.forEach(function (word) {
+      rw.textContent = word;
+      rot.style.width = widths[word] + "px";
+
+      maxHeight = Math.max(maxHeight, h1.offsetHeight);
+    });
+
+    // Restore current word
+    rw.textContent = currentWord;
+    rot.style.width = widths[currentWord] + "px";
+
+    h1.style.minHeight = maxHeight + "px";
+
+    // Force reflow
+    void rot.offsetWidth;
+
+    rot.style.transition = "";
+  }
+
+  // Wait until fonts are loaded
+  const ready =
+    document.fonts && document.fonts.ready
+      ? document.fonts.ready
+      : Promise.resolve();
+
+  ready.then(function () {
+    measure();
+
+    // Recalculate dimensions on resize
+    let resizeTimeout;
+
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimeout);
+
+      resizeTimeout = setTimeout(function () {
+        measure();
+      }, 150);
+    });
+
+    // Respect user's reduced-motion preference
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    let index = 0;
+
+    setInterval(function () {
+      index = (index + 1) % words.length;
+
+      const nextWord = words[index];
+
+      rw.classList.remove("is-in");
+      rw.classList.add("is-out");
+
+      setTimeout(function () {
+        rw.classList.remove("is-out");
+        rw.classList.add("is-pre");
+
+        rw.textContent = nextWord;
+        rot.style.width = widths[nextWord] + "px";
+
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            rw.classList.remove("is-pre");
+            rw.classList.add("is-in");
+          });
+        });
+      }, 280);
+    }, 1820);
+  });
+}

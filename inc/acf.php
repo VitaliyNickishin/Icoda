@@ -188,6 +188,78 @@ add_action('acf/init', function () {
         ),
     ));
     acf_register_block(array(
+        'name'              => 'post-logos-two-rows',
+        'title'             => __('Post Logos Two Rows'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('grid', 'icoda', 'logos', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-solutions',
+        'title'             => __('Post Solution'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('solutions', 'post', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-steps-card',
+        'title'             => __('Post Steps Card'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('steps', 'card', 'post', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-case-animaton',
+        'title'             => __('Post Case Animation'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('case', 'animation', 'post', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-brand-about',
+        'title'             => __('Post Brand About'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('brand', 'about', 'post', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-banner-brand-audit',
+        'title'             => __('Post Brand Audit Banner'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('brand', 'audit', 'banner', 'post', 'icoda'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
         'name'              => 'post-content-grid-boxes',
         'title'             => __('Post Content Grid Boxes'),
         'description'       => __(''),
@@ -242,6 +314,18 @@ add_action('acf/init', function () {
         'render_callback' => 'icoda_acf_block_render_callback',
         'category'            => 'icoda-posts',
         'keywords'            => array('nav', 'icoda', 'sticky', 'post'),
+        'align'             => 'full',
+        'supports'          => array(
+            'align' => array('full', 'wide', 'center')
+        ),
+    ));
+    acf_register_block(array(
+        'name'              => 'post-banner-numbers',
+        'title'             => __('Post Banner Numbers'),
+        'description'       => __(''),
+        'render_callback' => 'icoda_acf_block_render_callback',
+        'category'            => 'icoda-posts',
+        'keywords'            => array('banner', 'icoda', 'numbers', 'post'),
         'align'             => 'full',
         'supports'          => array(
             'align' => array('full', 'wide', 'center')

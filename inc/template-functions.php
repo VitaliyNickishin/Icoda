@@ -45,7 +45,7 @@ function icoda_captcha()
 		echo '<script src="https://www.google.com/recaptcha/api.js?onload=onloadReCaptchaInvisible&render=explicit" async defer></script>';
 	}
 }
-add_action('wp_footer', 'icoda_captcha');
+// add_action('wp_footer', 'icoda_captcha');
 
 
 
@@ -108,6 +108,31 @@ function icoda_get_items_tree_menu($location)
     if (has_nav_menu($location)) {
 
         $locations = get_nav_menu_locations();
+		// $current_lang = apply_filters('wpml_current_language', null);
+
+		// error_log('========== MENU DEBUG ==========');
+		// error_log('LANG: ' . $current_lang);
+		// error_log('LOCATION: ' . $location);
+		// error_log('MENU ID: ' . ($locations[$location] ?? 'NOT FOUND'));
+
+		// if (isset($locations[$location])) {
+		// 	$menu = wp_get_nav_menu_object($locations[$location]);
+
+		// 	error_log('MENU NAME: ' . ($menu ? $menu->name : 'NOT FOUND'));
+
+		// 	$menu_items = wp_get_nav_menu_items($menu);
+
+		// 	if ($menu_items) {
+		// 		foreach ($menu_items as $debug_item) {
+		// 			error_log(
+		// 				'ITEM: ID=' . $debug_item->ID .
+		// 				' | TITLE=' . $debug_item->title .
+		// 				' | URL=' . $debug_item->url
+		// 			);
+		// 		}
+		// 	}
+		// }
+
         $m_items = array();
 
         if (isset($locations[$location])) {

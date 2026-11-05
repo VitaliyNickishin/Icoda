@@ -48,13 +48,13 @@ $header_five = icoda_get_items_tree_menu('header-five-new');
                   
                 </li>
                 <li class="sub-menu-col second-col has-border-left">
-                  <?php if(!empty($header_one_two) && !empty($header_one_two[0])) : ?>
+                  <?php if(isset($header_one_two) && !empty($header_one_two[0])) : ?>
                   <ul>
                     <li class="sub-menu-title"><?php _e('Brand & Reputation', 'icoda'); ?></li>
                     <?php foreach ($header_one_two[0]->childs as $key_2 => $item_2) : ?>
                       <?php
-                          $classes = !empty($item2['classes'])
-                              ? implode(' ', $item2['classes'])
+                          $classes = !empty($item_2['classes'])
+                              ? implode(' ', $item_2['classes'])
                               : 'menu-item';
                         ?>
                         <li class="<?php echo esc_attr($classes); ?>">
